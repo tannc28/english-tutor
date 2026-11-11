@@ -19,6 +19,11 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Cuối tuần: Weekly Test + Talk Time (T7), nhắc học (CN). Không dồn bài khi Tân lỡ.
 - Không sao chép nguyên văn nội dung có bản quyền vào repo; lưu link + câu hỏi + tóm tắt.
 
+## Quyền với repo (Tân cho phép 11/11/2026)
+- Claude có **toàn quyền** trên repo này: được commit và **push thẳng lên `main`**, không cần tạo nhánh riêng hay PR.
+- Nếu phiên được giao một nhánh `claude/...`, vẫn đẩy kết quả vào `main` (fast-forward/merge) để `main` luôn là bản mới nhất.
+- Commit message ngắn, rõ nội dung (VD: `Lesson 2026-11-12 main: reading + listening`).
+
 ## Cấu trúc thư mục
 ```
 CLAUDE.md                  ← file này
