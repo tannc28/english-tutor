@@ -362,6 +362,7 @@ table.days tr.next td{background:var(--accent-soft)}
       const loc = store.get("draft:"+id);
       if (!loc || (c.savedAt||"") > (loc.savedAt||"")){
         store.set("draft:"+id, c);
+        if (c.log && c.log.v === 1){ act = c.log; act.sessions.push({s:nowS(), e:nowS()}); }
         if (!document.activeElement?.closest?.(".book")) renderLesson();
         setSave("ok", c.savedAt, "Đã lấy bản lưu trên mây");
       } else setSave("ok", loc.savedAt);
@@ -489,7 +490,68 @@ table.days tr.next td{background:var(--accent-soft)}
     return "Tự động lưu đang bật";
   }
   function setSave(k, at, msg){ saveState = {k, at:at||saveState.at, msg:msg||""}; const el = $("#save-st"); if (el){ el.textContent = saveLabel(); el.dataset.k = k; el.title = saveTitle(); el.setAttribute("aria-label", saveTitle()); } }
-  function saveLocal(l){ const d = {...collect(l), savedAt:new Date().toISOString()}; store.set("draft:"+l.id, d); return d; }
+  // ---- Nhật ký quá trình làm bài (cho gia sư phân tích hành vi). Chỉ số tổng hợp, không ghi từng phím.
+  //   sessions: các phiên làm bài [{s,e}] (giây kể từ lúc mở bài lần đầu) → biết nghỉ giữa chừng
+  //   parts[pi].ms: thời gian thực sự làm/đọc ở mỗi phần (chỉ đếm khi đang tương tác & trang đang mở)
+  //   q[qid]: first (giây lần đầu chạm), ms (thời gian chú ý), edits (số lần sửa), changes (đổi đáp án trắc nghiệm: from→to, t)
+  //   listen[pi]: plays, rates, revealAt (giây hiện lời), answeredBeforeReveal (số câu của phần đã trả lời trước khi xem lời)
+  let act = null, actLastInput = 0, actCurQ = null, actTick = null, actDirty = false, actLesson = null;
+  const nowS = () => act ? Math.round((Date.now() - act.t0)/1000) : 0;
+  function initActivity(l, saved){
+    actLesson = l;
+    act = (saved && saved.v === 1) ? saved : {v:1, t0:Date.now(), sessions:[], parts:{}, q:{}, listen:{}};
+    act.sessions.push({s:nowS(), e:nowS()});
+    clearInterval(actTick);
+    actTick = setInterval(() => {
+      if (!act || document.hidden) return;
+      const active = Date.now() - actLastInput < 45000;
+      const ss = act.sessions[act.sessions.length-1]; if (ss) ss.e = nowS();
+      if (!active) return;
+      const on = document.querySelector(".toc a.on")?.id?.replace("toc-","");
+      if (on != null){ const k = on; act.parts[k] = act.parts[k] || {ms:0}; act.parts[k].ms += 5000; }
+      if (actCurQ){ const r = act.q[actCurQ] = act.q[actCurQ] || {first:nowS(), ms:0, edits:0}; r.ms += 5000; }
+      actDirty = true;
+      if (actLesson && !subs[actLesson.id]) saveLocal(actLesson);
+    }, 5000);
+  }
+  function actPoke(){ actLastInput = Date.now(); }
+  function actInput(ev){
+    if (!act) return; actPoke();
+    const box = ev.target?.closest?.(".q"); if (!box) return;
+    const qid = box.id.replace(/^qb-/,""); actCurQ = qid;
+    const r = act.q[qid] = act.q[qid] || {first:nowS(), ms:0, edits:0};
+    if (ev.target.type === "radio" && ev.type !== "change") return;
+    if (ev.target.type !== "radio" && ev.type === "change") return;
+    r.edits++;
+    if (ev.target.type === "radio" && ev.type === "change"){
+      r.changes = r.changes || [];
+      if (r.last != null && r.last !== ev.target.value) r.changes.push({t:nowS(), from:r.last, to:ev.target.value});
+      r.last = ev.target.value; if (r.changes.length > 12) r.changes.shift();
+    }
+    actDirty = true;
+  }
+  function actListen(pi, kind, rate){
+    if (!act) return; actPoke();
+    const r = act.listen[pi] = act.listen[pi] || {plays:0, rates:[]};
+    if (kind === "play"){ r.plays++; r.rates.push(rate); if (r.rates.length > 10) r.rates.shift(); }
+    if (kind === "reveal" && r.revealAt == null){
+      r.revealAt = nowS();
+      const p = actLesson?.parts?.[pi], a = actLesson ? collect(actLesson).answers : {};
+      r.answeredBeforeReveal = (p?.questions||[]).filter(q => (a[q.id]||"").trim()).length + "/" + (p?.questions||[]).length;
+    }
+    actDirty = true;
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (!act) return;
+    if (document.hidden){ const ss = act.sessions[act.sessions.length-1]; if (ss) ss.e = nowS(); if (actLesson) saveLocal(actLesson); }
+    else act.sessions.push({s:nowS(), e:nowS()});
+  });
+  document.addEventListener("focusin", ev => { const box = ev.target?.closest?.(".q"); if (box && act){ actCurQ = box.id.replace(/^qb-/,""); actPoke(); const r = act.q[actCurQ] = act.q[actCurQ] || {first:nowS(), ms:0, edits:0}; } });
+  document.addEventListener("scroll", actPoke, {passive:true});
+  document.addEventListener("pointerdown", actPoke, {passive:true});
+  setInterval(() => { if (actDirty && actLesson && !subs[actLesson.id]){ actDirty = false; saveLocal(actLesson); if (saveState.k !== "saving") cloudSave(actLesson); } }, 60000);
+
+  function saveLocal(l){ const d = {...collect(l), log:act, savedAt:new Date().toISOString()}; store.set("draft:"+l.id, d); return d; }
   function scheduleCloud(l){ pendingL = l; setSave("dirty"); clearTimeout(cloudTimer); cloudTimer = setTimeout(() => cloudSave(l), 2000); }
   async function cloudSave(l, manual){
     clearTimeout(cloudTimer);
@@ -582,12 +644,13 @@ table.days tr.next td{background:var(--accent-soft)}
       </div>`;
 
     if (!locked){
-      main.oninput = main.onchange = () => { saveLocal(l); updateProgress(l); scheduleCloud(l); };
+      main.oninput = main.onchange = ev => { actInput(ev); saveLocal(l); updateProgress(l); scheduleCloud(l); };
       $("#save-now")?.addEventListener("click", () => { saveLocal(l); cloudSave(l, true); });
       $("#submit").addEventListener("click", () => submit(l));
     } else { main.oninput = main.onchange = null; }
     updateProgress(l);
     bindToc();
+    if (!locked && actLesson?.id !== l.id) initActivity(l, (store.get("draft:"+l.id)||{}).log);
     bindPlayers(l);
     bindRecorders(l);
     $("#edit")?.addEventListener("click", () => { main.dataset.editing = "1"; renderLesson(); });
@@ -616,9 +679,10 @@ table.days tr.next td{background:var(--accent-soft)}
     document.querySelectorAll(".player").forEach(box => {
       const key = box.dataset.key, p = (l.parts||[])[Number(box.dataset.pi)];
       const play = box.querySelector(".pl-play"), stop = box.querySelector(".pl-stop"), msg = box.querySelector(".pl-msg");
-      box.querySelector(".pl-tx").addEventListener("click", e => { reveal[key] = !reveal[key]; box.querySelector(".transcript").hidden = !reveal[key]; e.target.textContent = reveal[key]?"Ẩn lời":"Hiện lời (transcript)"; });
+      box.querySelector(".pl-tx").addEventListener("click", e => { if (!reveal[key]) actListen(box.dataset.pi, "reveal"); reveal[key] = !reveal[key]; box.querySelector(".transcript").hidden = !reveal[key]; e.target.textContent = reveal[key]?"Ẩn lời":"Hiện lời (transcript)"; });
       play.addEventListener("click", () => {
         const rate = Number(box.querySelector(".pl-sel").value)||0.9;
+        actListen(box.dataset.pi, "play", rate);
         const lines = p.listen.map((x,i) => ({text:String(x.text).slice(0,2000), voice:x.voice||"buttery", rate, language:"en", id:"l"+i}));
         getTts().then(t => {
           if (!t){ msg.hidden = false; msg.textContent = "Thiết bị này chưa đọc thành tiếng được (thử Chrome hoặc app Claude trên máy tính). Tạm thời Tân đọc phần lời nhé."; return; }
@@ -673,7 +737,8 @@ table.days tr.next td{background:var(--accent-soft)}
     if (!data.feedback.difficulty){ msg.innerHTML = '<div class="banner warn">Chọn độ khó (1–5) ở phần Feedback rồi nộp nhé.</div>'; $("#fb-h")?.scrollIntoView({behavior:"smooth",block:"center"}); return; }
     if (!db){ msg.innerHTML = '<div class="banner bad">Chưa kết nối được nơi lưu bài. Mở trang trên claude.ai khi đã đăng nhập rồi thử lại.</div>'; return; }
     btn.disabled = true; btn.innerHTML = "⏳<span class=\"bl\"> Đang nộp…</span>";
-    const rec = {lessonId:l.id, ...data, submittedAt:new Date().toISOString()};
+    if (act){ const ss = act.sessions[act.sessions.length-1]; if (ss) ss.e = nowS(); }
+    const rec = {lessonId:l.id, ...data, log:act, submittedAt:new Date().toISOString()};
     const diag = {at:new Date().toISOString()};
     const savePromise = db.doc("submissions/"+l.id).set(rec);
     // Báo gia sư ngay trong cú bấm (Send to Claude cần thao tác gần đây của người xem)

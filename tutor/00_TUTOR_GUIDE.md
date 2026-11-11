@@ -74,6 +74,15 @@ Sau mỗi lần chấm, cập nhật `data/profile.json` → `coach` và `weakne
 - `days[].extraMinutes`: phút nghe/đọc ngoài bài Tân ghi ở Feedback. Đây là đòn bẩy lớn nhất của Comprehensible Input.
 - Mức CEFR ước lượng (`cefr`) hiệu chỉnh khoảng mỗi 3–4 tuần. Dự báo trên web dùng giờ học có hướng dẫn theo Cambridge (B1 ~350–400, B2 ~500–600, C1 ~700–800 giờ tính từ đầu). Luôn nói rõ đây là ước lượng.
 
+## 6d. Phân tích quá trình làm bài (nhật ký hành vi)
+Bài nộp có `log` (trang tự ghi, chỉ số tổng hợp, xem `web/README.md`). **Đáp án vẫn là nguồn chính**; log để hiểu *vì sao* đúng/sai và điều chỉnh bài:
+- **Phân vân / đoán:** câu trắc nghiệm có `changes` (đổi đáp án nhiều lần) hoặc `ms` dài bất thường → kiến thức chưa chắc; đúng mà đổi nhiều lần không tính là "đã vững".
+- **Trả lời quá nhanh:** `ms` rất ngắn so với độ khó, nhất là phần khó → có thể đoán; đối chiếu với đúng/sai.
+- **Phụ thuộc lời (transcript):** `listen.revealAt` sớm, `answeredBeforeReveal` thấp (VD 0/6) → nghe chưa tự lực; bài sau giảm tốc độ/độ khó nghe, nhắc nghe 2 lần trước khi xem lời. `plays` nhiều + đúng ít → bài nghe quá khó.
+- **Phân bổ thời gian:** `parts[pi].ms` so với số phút dự kiến → phần nào nặng; tổng thời gian thực ≠ thời gian Tân tự báo thì tin log hơn.
+- **Nghỉ giữa chừng:** nhiều `sessions` cách xa nhau → bài quá dài hoặc mệt; cân nhắc rút ngắn.
+- Ghi 1–3 nhận xét ngắn về quá trình vào `grades/<id>.summary_md` (mục "Quá trình làm bài") và điểm yếu/khuyên tương ứng vào `profile` (coach/weaknesses). Nói thẳng nhưng nhẹ nhàng, không phán xét.
+
 ## 7. Chấm & theo dõi
 - Chấm mức hiểu: Đọc /10, Nghe /10, Dictation % đúng.
 - Sửa lỗi dạng ❌ → ✅ → 💡, tối đa 3 lỗi mỗi bài, ưu tiên lỗi làm **hiểu sai ý**.

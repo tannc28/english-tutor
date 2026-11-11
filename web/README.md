@@ -16,7 +16,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 | `profile.json` | Hồ sơ học sinh = Learner model: `cefr{overall,listening,reading,vocab,grammar}`, `levels{…}`, `strengths[]`, `weaknesses[]`, `interests[]`, `habits`, `teacher_md`, `focus_md`, `decisions[{date,text}]`, `story`, `chunk_bank[]`, `pronunciation[]`, `orientation[]`, `week`, `streak`, `coach{summary_md, weekly_target_hours, target_why, recommendations[{title,why,how}]}`; `weaknesses` là object `{area, detail, evidence, plan}` |
 | `lessons/<id>.json` | Nội dung bài: `{intro_md, parts:[{kind, title, md, listen?:[{who, voice:"buttery|airy|glassy|rounded", text≤2000}], rate?:0.8–1.1, questions:[{id, q, type:"text|short|choice|dictation|recording", options?, placeholder?, read?}]}]}` |
 | `grades/<id>.json` | `{score:"Nghe 7/10 · Đọc 8/10 · …", summary_md, answers_md, next_md, gradedAt}` |
-| `submissions/<id>.json` | Bản chép bài làm của Tân (từ DB web) |
+| `submissions/<id>.json` | Bản chép bài làm của Tân (từ DB web), gồm `log` = nhật ký quá trình: `sessions[{s,e}]` (giây từ lúc mở bài), `parts{pi:{ms}}` (thời gian tương tác mỗi phần), `q{qid:{first, ms, edits, changes[{t,from,to}]}}`, `listen{pi:{plays, rates[], revealAt, answeredBeforeReveal}}` |
 | `keys/<id>.json` | Đáp án trắc nghiệm, **không** publish |
 
 - **id**: `YYYY-MM-DD-day` (Day 1 giữ id cũ `2026-11-11-main`). Danh sách trên web sắp theo id giảm dần, hiển thị "Ngày N".
@@ -38,7 +38,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 ## Quy trình CHẤM (khi có comment "📥 Nộp bài <id>" hoặc job dự phòng)
 1. `git pull`. Nếu `data/grades/<id>.json` đã có → không chấm lại.
 2. `ArtifactData get submissions/<id>` (+ `data/lessons/<id>.json`, `data/keys/<id>.json`). Có câu `recording` → lấy asset, chấm phát âm (`tools/speech/README.md`), xong xoá asset.
-3. Chấm theo Tutor Guide. Ghi `data/submissions/<id>.json` (bản chép), `data/grades/<id>.json`; cập nhật `data/days.json` (status `graded`, `listenPct`, `readPct`, `difficulty`, `minutesActual`, `extraMinutes` = feedback.extra, `note` ngắn) và `data/profile.json` (cefr/levels, strengths, weaknesses, interests, teacher_md, focus_md, decisions, chunk_bank, streak, updatedAt, **coach**, weaknesses có bằng chứng – xem Tutor Guide 6c).
+3. Chấm theo Tutor Guide; đọc thêm `log` để phân tích quá trình (Tutor Guide 6d). Ghi `data/submissions/<id>.json` (bản chép), `data/grades/<id>.json`; cập nhật `data/days.json` (status `graded`, `listenPct`, `readPct`, `difficulty`, `minutesActual`, `extraMinutes` = feedback.extra, `note` ngắn) và `data/profile.json` (cefr/levels, strengths, weaknesses, interests, teacher_md, focus_md, decisions, chunk_bank, streak, updatedAt, **coach**, weaknesses có bằng chứng – xem Tutor Guide 6c).
 4. `python3 tools/sync.py` → commit + push → publish (như trên) → `ArtifactData delete inbox/<id>`.
 5. Trả lời trong thread comment + resolve (nếu đến qua comment), hoặc 1–2 dòng trong chat.
 
