@@ -27,6 +27,8 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 ## Web lớp học
 - Bài được đăng lên web https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (DB của artifact). Tân làm và bấm **Nộp bài** → Routine "Tân nộp bài (web)" đánh thức phiên → chấm, ghi `grades/<id>`, cập nhật tiến độ.
 - Schema & luồng: `web/README.md`. Mọi bài vẫn lưu bản markdown trong `lessons/`.
+- `index.html` chỉ là giao diện; bài/điểm nằm trong DB. **Không list cả collection lớn** – chỉ `get` theo id, việc tồn lấy từ `inbox`.
+- Bài nộp đến phiên dưới dạng comment "📥 Nộp bài <id>" (Send to Claude): chấm → trả lời + resolve thread.
 
 ## Cấu trúc thư mục
 ```

@@ -146,7 +146,23 @@ button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid va
     set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
   };
 
-  let db = null, lessons = [], subs = {}, grades = {}, current = null;
+  // lessons/<id> = metadata nhẹ cho danh sách; lessonBodies/<id> = nội dung, chỉ tải bài đang mở.
+  // submissions/grades chỉ theo dõi đúng bài đang mở → trang không phình khi có hàng trăm bài.
+  let db = null, lessons = [], subs = {}, grades = {}, bodies = {}, current = null, unsubCur = [];
+  async function loadBody(id){
+    if (bodies[id]) return;
+    bodies[id] = {loading:true};
+    try { const s = await db.doc("lessonBodies/"+id).get(); bodies[id] = s.data() || {parts:[]}; }
+    catch(e){ bodies[id] = {parts:[], intro_md:"Không tải được nội dung bài ("+(e?.code||"lỗi")+"). Tải lại trang thử nhé."}; }
+    if (current === id) renderLesson();
+  }
+  function watchCurrent(){
+    unsubCur.forEach(u => { try { u(); } catch {} }); unsubCur = [];
+    if (!db || !current) return;
+    const id = current;
+    unsubCur.push(db.doc("submissions/"+id).onSnapshot(s => { const d = s.data(); if (d) subs[id] = d; else delete subs[id]; if (current===id && !$("#main").dataset.editing) renderLesson(); }));
+    unsubCur.push(db.doc("grades/"+id).onSnapshot(s => { const d = s.data(); const before = JSON.stringify(grades[id]||null); if (d) grades[id] = d; else delete grades[id]; if (current===id && JSON.stringify(grades[id]||null)!==before) renderLesson(); }));
+  }
 
   function fmtDate(d){
     if (!d) return "";
@@ -196,7 +212,12 @@ button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid va
 
   function renderLesson(){
     const main = $("#main");
-    const l = lessons.find(x => x.id === current);
+    const meta = lessons.find(x => x.id === current);
+    if (meta && !meta.parts && (!bodies[meta.id] || bodies[meta.id].loading)){
+      main.innerHTML = `<div class="empty"><h2>${esc(meta.title||"Bài học")}</h2><p>Đang mở bài…</p></div>`;
+      loadBody(meta.id); return;
+    }
+    const l = meta ? {...meta, ...(meta.parts ? {} : bodies[meta.id])} : null;
     if (!l){
       main.innerHTML = lessons.length ? `<div class="empty"><h2>Chọn một bài bên trái</h2><p>Bài mới nhất nằm trên cùng.</p></div>`
         : `<div class="empty"><h2>Sổ bài đang trống</h2><p>Bài đầu tiên, <b>Day 1 – Đánh giá đầu vào</b>, sẽ xuất hiện ở đây lúc 18:55 tối nay. Bài mới đến lúc 08:15 và 18:55 các ngày T2–T6, 09:40 thứ 7, 10:15 chủ nhật. Tân làm lúc nào tiện, xong bấm <b>Nộp bài</b>.</p></div>`;
@@ -291,6 +312,7 @@ button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid va
       return;
     }
     subs[l.id] = rec; delete $("#main").dataset.editing;
+    try { db.doc("inbox/"+l.id).set({lessonId:l.id, submittedAt:rec.submittedAt}); } catch {}
     try { db.doc("lessons/"+l.id).update({status:"submitted"}); } catch {}
     renderList(); renderLesson();
     const m2 = $("#msg");
@@ -329,6 +351,7 @@ button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid va
     const h = decodeURIComponent(location.hash.slice(1));
     current = lessons.some(l => l.id === h) ? h : (lessons[0]?.id || null);
     delete $("#main").dataset.editing;
+    watchCurrent();
     renderList(); renderLesson();
   }
   window.addEventListener("hashchange", route);
@@ -343,12 +366,6 @@ button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid va
       lessons = s.docs.map(d => ({id:d.id, ...d.data()}));
       if (first){ first = false; route(); } else { renderList(); if (!document.activeElement?.closest?.(".sheet")) renderLesson(); }
     }, e => { $("#list").innerHTML = `<p class="note">Không đọc được danh sách bài (${esc(e.code)}).</p>`; });
-    db.collection("submissions").onSnapshot(s => { subs = {}; s.docs.forEach(d => subs[d.id] = d.data()); renderList(); });
-    db.collection("grades").onSnapshot(s => {
-      const before = JSON.stringify(grades[current]||null);
-      grades = {}; s.docs.forEach(d => grades[d.id] = d.data());
-      renderList(); if (JSON.stringify(grades[current]||null) !== before) renderLesson();
-    });
     db.doc("meta/progress").onSnapshot(s => {
       const p = s.data() || {};
       if (p.phase) $("#s-phase").textContent = p.phase;

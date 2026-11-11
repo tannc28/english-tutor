@@ -12,16 +12,21 @@ Nguồn trang: `web/index.html`. Muốn cập nhật trang thì publish lại fi
 3. Gia sư chấm → ghi `grades/<id>`, set `lessons/<id>.status="graded"`, cập nhật `meta/progress` + Progress Log, push `main`. Kết quả hiện ngay trên web.
 4. Nếu trang không tự báo được (thiếu quyền connector), Tân nhắn "nộp bài <id>" trong phiên chat; gia sư đọc `submissions/<id>` bằng ArtifactData.
 
-## Schema (ghi bằng ArtifactData)
-- **id**: `YYYY-MM-DD-<walk|main|weekly|sunday>` (chỉ chữ, số, gạch ngang). Danh sách sắp xếp theo `id` giảm dần.
-- `lessons/<id>`:
-  ```json
-  {"id":"2026-11-11-main","date":"2026-11-11","type":"main","title":"Day 1 – Đánh giá đầu vào",
-   "minutes":50,"status":"open","intro_md":"...",
-   "parts":[{"kind":"Reading","title":"...","md":"markdown (bài đọc để trong > blockquote; chunk dùng <mark>)",
-             "questions":[{"id":"r1","q":"câu hỏi","type":"text|short|choice|dictation","options":["A","B"],"placeholder":"..."}]}]}
-  ```
-  Phần FEEDBACK bắt buộc (độ khó 1–5, chỗ khó nhất, số phút) do trang tự thêm, không cần ghi vào `parts`.
-- `submissions/<id>`: `{lessonId, answers:{qid:text}, feedback:{difficulty, hardest, minutes}, submittedAt}` (trang ghi).
-- `grades/<id>`: `{score:"Reading 7/10 · Listening 6/10 · Dictation 80%", summary_md, answers_md, next_md, gradedAt}`.
-- `meta/progress`: `{phase:"1 · Input", week, streak, next, updatedAt}`.
+## Schema (ghi bằng ArtifactData) – thiết kế để không phình khi có hàng trăm bài
+Nguyên tắc: **không bao giờ list/query cả collection lớn** (`lessonBodies`, `submissions`, `grades`) vào context. Chỉ `get` đúng 1 doc theo id. Việc cần làm lấy từ `inbox` (nhỏ, chỉ chứa bài chưa chấm).
+
+| Collection | Ai ghi | Nội dung | Kích thước |
+|---|---|---|---|
+| `lessons/<id>` | gia sư | metadata cho danh sách: `{id,date,type,title,minutes,status}` (status: open → submitted → graded) | ~200 B/bài |
+| `lessonBodies/<id>` | gia sư | `{intro_md, parts:[...]}` – trang chỉ tải khi mở bài | vài KB/bài |
+| `submissions/<id>` | trang | `{lessonId, answers:{qid:text}, feedback:{difficulty,hardest,minutes}, submittedAt, notify}` | |
+| `inbox/<id>` | trang tạo, gia sư **xoá sau khi chấm** | `{lessonId, submittedAt}` = hàng đợi bài chưa chấm | rỗng khi đã chấm hết |
+| `grades/<id>` | gia sư | `{score, summary_md, answers_md, next_md, gradedAt}` | |
+| `meta/progress` | gia sư | `{phase, week, streak, next, updatedAt}` | 1 doc |
+
+- **id**: `YYYY-MM-DD-<walk|main|weekly|sunday>` (chữ, số, gạch ngang). Danh sách sắp theo `id` giảm dần.
+- `parts[]`: `{kind:"Reading|Listening|Connect it|…", title, md, questions:[{id, q, type:"text|short|choice|dictation", options?, placeholder?}]}`. Bài đọc để trong `>` blockquote, chunk dùng `<mark>`. Feedback bắt buộc do trang tự thêm.
+- **Đăng bài** = 1 batch: `set lessons/<id>` (metadata) + `set lessonBodies/<id>` (nội dung).
+- **Chấm bài** = `get submissions/<id>` + `get lessonBodies/<id>` → batch: `set grades/<id>`, `update lessons/<id> {status:"graded"}`, `delete inbox/<id>`, `update meta/progress`.
+- **Tìm bài chưa chấm** = `list inbox` (chỉ vài doc nhỏ).
+- Bài thử cũ (`*-test*`) để nội dung ngay trong `lessons/<id>`; trang vẫn đọc được (tương thích ngược).
