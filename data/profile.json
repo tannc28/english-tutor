@@ -210,5 +210,41 @@
     "how": "Cứ không chắc là bấm 🤔 và ghi vài chữ."
    }
   ]
+ },
+ "schedule": {
+  "note": "Đề xuất 11/11, chờ Tân xác nhận giờ cụ thể",
+  "weekday": [
+   {
+    "slot": "Sáng",
+    "time": null,
+    "min": 30,
+    "what": "Phần nghe của bài hôm nay"
+   },
+   {
+    "slot": "Tối",
+    "time": null,
+    "min": 75,
+    "what": "Bài trên web + nghe/đọc thêm"
+   }
+  ],
+  "weekend": [
+   {
+    "slot": "Sáng",
+    "time": null,
+    "min": 90,
+    "what": "Bài trong ngày (T7: + nhìn lại tuần)"
+   },
+   {
+    "slot": "Chiều",
+    "time": null,
+    "min": 90,
+    "what": "Nghe/xem tự do theo sở thích"
+   }
+  ],
+  "calendar": {
+   "calendarId": "nguyencongtan1002@gmail.com",
+   "colorId": "9",
+   "prefix": "📚 English · "
+  }
  }
 }
