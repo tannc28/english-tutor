@@ -173,8 +173,13 @@ textarea:disabled,input:disabled{opacity:.8}
 .opts{display:grid;gap:8px}
 .opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);cursor:pointer}
 .opt input{margin-top:4px;accent-color:var(--accent)}
-.opt-other span{color:var(--ink-2)}
-.other-note{margin-top:2px}
+.unsure-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:4px;padding-top:10px;border-top:1px dashed var(--line);font-size:.82rem;color:var(--ink-3)}
+.unsure{position:relative;display:inline-flex;cursor:pointer}
+.unsure input{position:absolute;opacity:0;pointer-events:none}
+.unsure span{padding:4px 10px;border-radius:999px;border:1px dashed var(--ink-3);color:var(--ink-2);font-weight:500}
+.unsure input:checked+span{border-style:solid;border-color:var(--warn);background:var(--warn-soft);color:var(--warn)}
+.unsure input:focus-visible+span{outline:2px solid var(--accent);outline-offset:1px}
+.other-note{font-size:.88rem}
 .linkbtn{justify-self:start;font:inherit;font-size:.82rem;color:var(--ink-3);background:none;border:0;padding:2px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .linkbtn:hover{color:var(--ink)}
 .opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
@@ -404,9 +409,12 @@ table.days tr.next td{background:var(--accent-soft)}
       const isOther = typeof val === "string" && val.startsWith("Khác: ");
       const note = isOther ? val.slice(6) : "";
       return `<div class="opts" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}
-        <label class="opt opt-other"><input type="radio" name="${id}" id="${id}-other" value="__other" ${isOther?"checked":""} ${dis}><span>✏️ Khác / không chắc…</span></label>
-        <input type="text" class="other-note" id="${id}-note" placeholder="Ghi rõ: phân vân giữa đáp án nào, chưa hiểu chỗ nào…" value="${esc(note)}" ${isOther?"":"hidden"} ${dis}>
-        ${dis ? "" : `<button type="button" class="linkbtn opt-clear" data-q="${esc(q.id)}">Bỏ chọn</button>`}
+        <div class="unsure-row">
+          <span class="unsure-hint">Không chọn được?</span>
+          <label class="unsure"><input type="radio" name="${id}" id="${id}-other" value="__other" ${isOther?"checked":""} ${dis}><span>🤔 Mình không chắc</span></label>
+          ${dis ? "" : `<button type="button" class="linkbtn opt-clear" data-q="${esc(q.id)}">Bỏ chọn</button>`}
+        </div>
+        <input type="text" class="other-note" id="${id}-note" placeholder="Ghi cho gia sư: phân vân giữa đáp án nào, chưa hiểu chỗ nào… (không bắt buộc)" value="${esc(note)}" ${isOther?"":"hidden"} ${dis}>
       </div>`;
     }
     if (q.type === "recording"){
