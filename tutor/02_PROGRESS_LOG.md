@@ -34,6 +34,11 @@ Web lớp học: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (schema: `web
 
 - 11/11/2026 (chiều): Đổi sang **tiếng Anh phổ thông là chính (mục tiêu C1), IT là phụ**; phương pháp **Comprehensible Input**. Tutor Guide v3, Roadmap v3.
 
+## Pronunciation (từ bản thu, tools/speech)
+| Ngày | Bản thu | Dễ nghe % | Khớp âm vị % | Tốc độ (từ/phút) | 3 lỗi ưu tiên | Ghi chú ngữ điệu |
+|---|---|---|---|---|---|---|
+| (chưa có) | | | | | | |
+
 ## Weak points (lỗi lặp lại)
 - (chưa có – điền sau bài đánh giá đầu vào)
 

@@ -188,7 +188,10 @@ Theo `tutor/00_TUTOR_GUIDE.md` mục 8:
 - Mỗi chunk mới vào **Chunk Bank** với lịch ôn 1–3–7–14 ngày. Chunk đến hạn sẽ xuất hiện ở phần warm-up / Walk Pack.
 - **Feedback bắt buộc** (độ khó, chỗ khó nhất, thời gian) dùng để chỉnh độ khó, độ dài, nguồn của bài sau. Thứ 7 có Weekly Test + feedback tuần để chỉnh Roadmap.
 
-### 6.4 Talk Time và hỏi đáp
+### 6.4 Phát âm & ngữ điệu (thử nghiệm)
+Claude không nghe được âm thanh. Bộ công cụ mã nguồn mở trong `tools/speech/` nghe hộ: Whisper xem từ có dễ nghe không, wav2vec2 + espeak-ng tìm âm bị mất hoặc sai (nhất là âm cuối), Praat đo ngữ điệu, tốc độ và ngắt nghỉ. Tân thu âm bằng điện thoại và tải lên thư mục `recordings/` trên GitHub. Gia sư chạy bộ chấm rồi nhận xét. Chi tiết và giới hạn: `tools/speech/README.md`.
+
+### 6.5 Talk Time và hỏi đáp
 
 Tân nhắn trực tiếp vào phiên chính: hỏi lại bài, nhờ giải thích, hoặc nói chuyện tiếng Anh (Talk Time thứ 7). Phiên giữ toàn bộ ngữ cảnh. Thông tin cần nhớ lâu thì gia sư ghi vào Progress Log.
 

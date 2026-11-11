@@ -33,7 +33,9 @@ def asr(wav, ref_text):
     from faster_whisper import WhisperModel
     model = WhisperModel(os.environ.get("WHISPER_MODEL", "small.en"), device="cpu", compute_type="int8")
     # Không đưa câu mẫu vào prompt: muốn biết máy nghe "thật" ra gì
-    segs, _ = model.transcribe(wav, language="en", word_timestamps=True, beam_size=5, vad_filter=False,
+    import soundfile as sf, numpy as np
+    audio, _sr = sf.read(wav, dtype="float32")  # đưa mảng trực tiếp, tránh lỗi tương thích PyAV
+    segs, _ = model.transcribe(np.asarray(audio), language="en", word_timestamps=True, beam_size=5, vad_filter=False,
                                condition_on_previous_text=False)
     words = []
     for s in segs:
