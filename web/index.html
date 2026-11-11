@@ -68,6 +68,10 @@ body.focus .top,body.focus .track,body.focus .tabs,body.focus .shelf{display:non
 body.focus .layout{grid-template-columns:minmax(0,1fr);margin-top:0}
 /* Workbook toolbar + table of contents */
 .toolbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+@media (max-width:640px){.tbtn .bl{display:none}.toolbar .ttl{max-width:22ch}.dock .info{display:none}.save-st{order:5}}
+.save-st{font-size:.78rem;color:var(--ink-3);white-space:nowrap;max-width:46ch;overflow:hidden;text-overflow:ellipsis}
+.save-st[data-k="local"]{color:var(--warn)}
+.save-st[data-k="ok"]{color:var(--ok)}
 .toolbar .grow{flex:1;min-width:140px;display:flex;align-items:center;gap:10px}
 .toolbar .ttl{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:38ch}
 .tbtn{font:inherit;font-size:.86rem;font-weight:600;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;white-space:nowrap}
@@ -349,6 +353,15 @@ table.days tr.next td{background:var(--accent-soft)}
     if (!current) return;
     const id = current, meta = lessons.find(l => l.id === id);
     if (meta?.status === "graded" && !grades[id]) getJSON("data/grades/"+encodeURIComponent(id)+".json").then(g => { grades[id] = g; if (current===id) renderLesson(); }).catch(()=>{});
+    if (db) db.doc("drafts/"+id).get().then(snap => {
+      const c = snap.data(); if (!c || current !== id || subs[id]) return;
+      const loc = store.get("draft:"+id);
+      if (!loc || (c.savedAt||"") > (loc.savedAt||"")){
+        store.set("draft:"+id, c);
+        if (!document.activeElement?.closest?.(".book")) renderLesson();
+        setSave("ok", c.savedAt, "Đã lấy bản lưu trên mây");
+      } else setSave("ok", loc.savedAt);
+    }).catch(() => {});
     if (db) unsubCur.push(db.doc("submissions/"+id).onSnapshot(s => { const d = s.data(); if (d) subs[id] = d; else delete subs[id]; if (current===id && !$("#main").dataset.editing) renderLesson(); }));
   }
 
@@ -458,6 +471,32 @@ table.days tr.next td{background:var(--accent-soft)}
     </div>`;
   }
 
+  // ---- Lưu tiến trình: luôn lưu trên máy (tức thì) + tự động lưu lên mây (DB, 2 giây sau khi ngừng gõ) + nút Lưu.
+  let saveState = {k:"idle", at:null, msg:""}, cloudTimer = null, pendingL = null;
+  const hhmm = t => t ? new Date(t).toLocaleTimeString("vi-VN", {hour:"2-digit", minute:"2-digit", second:"2-digit"}) : "";
+  function saveLabel(){
+    const s = saveState;
+    if (s.k === "saving") return "☁️ Đang lưu…";
+    if (s.k === "ok") return `☁️ Đã lưu ${hhmm(s.at)}`;
+    if (s.k === "local") return `💻 Lưu trên máy ${hhmm(s.at)} · chờ lên mây`;
+    if (s.k === "dirty") return "✏️ Sắp tự lưu…";
+    return "☁️ Tự động lưu";
+  }
+  function setSave(k, at, msg){ saveState = {k, at:at||saveState.at, msg:msg||""}; const el = $("#save-st"); if (el){ el.textContent = saveLabel(); el.dataset.k = k; el.title = k==="local" ? `Chưa lên mây (${saveState.msg||"mất mạng?"}); bài vẫn an toàn trên máy này, trang tự thử lại khi có mạng.` : (msg||""); } }
+  function saveLocal(l){ const d = {...collect(l), savedAt:new Date().toISOString()}; store.set("draft:"+l.id, d); return d; }
+  function scheduleCloud(l){ pendingL = l; setSave("dirty"); clearTimeout(cloudTimer); cloudTimer = setTimeout(() => cloudSave(l), 2000); }
+  async function cloudSave(l, manual){
+    clearTimeout(cloudTimer);
+    const d = store.get("draft:"+l.id) || saveLocal(l);
+    if (!db){ setSave("local", d.savedAt, "chưa kết nối"); return; }
+    setSave("saving");
+    try { await db.doc("drafts/"+l.id).set(d); pendingL = null; setSave("ok", d.savedAt, manual ? "Đã lưu" : ""); }
+    catch(e){ pendingL = l; setSave("local", d.savedAt, e?.code || (navigator.onLine === false ? "mất mạng" : "lỗi")); }
+  }
+  window.addEventListener("online", () => { if (pendingL) cloudSave(pendingL); });
+  setInterval(() => { if (pendingL && saveState.k === "local") cloudSave(pendingL); }, 30000);
+  window.addEventListener("pagehide", () => { if (pendingL) cloudSave(pendingL); });
+
   function renderLesson(){
     const main = $("#main");
     const meta = lessons.find(x => x.id === current);
@@ -480,9 +519,10 @@ table.days tr.next td{background:var(--accent-soft)}
     const tocItems = (l.parts||[]).map((p,pi)=>`<a href="#" data-go="part-${pi}" id="toc-${pi}"><span class="n">${pi+1}</span><span class="t">${esc(p.kind||p.title||"Phần "+(pi+1))}</span><span class="c" id="tocc-${pi}"></span></a>`).join("") + `<a href="#" data-go="part-fb" id="toc-fb"><span class="n">✓</span><span class="t">Feedback & Nộp</span><span class="c"></span></a>`;
     main.innerHTML = `
       <div class="toolbar">
-        <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Hiện/ẩn danh sách bài">☰ Danh sách</button>
-        <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Ẩn mọi thứ trừ bài làm">🎯 Tập trung</button>
+        <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Hiện/ẩn danh sách bài">☰<span class="bl"> Danh sách</span></button>
+        <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Ẩn mọi thứ trừ bài làm">🎯<span class="bl"> Tập trung</span></button>
         <div class="grow"><span class="ttl">${esc(l.title||"")}</span>${nQ && !grade ? `<div class="bar" style="flex:1;min-width:80px"><i id="pbar2" style="width:0%"></i></div><span class="note mono" id="plab2">0/${nQ}</span>` : ""}</div>
+        ${!locked ? `<span class="save-st" id="save-st" aria-live="polite">${esc(saveLabel())}</span><button class="tbtn" id="save-now" type="button" title="Lưu ngay lên mây">💾<span class="bl"> Lưu</span></button>` : ""}
       </div>
       <div class="bookgrid">
       <div class="bookcol">
@@ -532,14 +572,15 @@ table.days tr.next td{background:var(--accent-soft)}
       <div class="dock">
         ${grade ? `<span class="info">✅ Bài đã được chấm. Xem kết quả ở đầu bài.</span>`
           : locked ? `<span class="info">Đã nộp lúc ${esc(new Date(sub.submittedAt).toLocaleString("vi-VN"))} · gia sư đang chấm</span><button class="ghost" id="edit">Sửa và nộp lại</button>`
-          : `<span class="info">Nháp tự lưu trên máy này.</span><button class="primary" id="submit">Nộp bài</button>`}
+          : `<span></span><button class="primary" id="submit">Nộp bài</button>`}
       </div>
       </div>
       <nav class="toc" aria-label="Mục lục bài"><span class="label lbl">Mục lục</span>${tocItems}</nav>
       </div>`;
 
     if (!locked){
-      main.oninput = main.onchange = () => { store.set("draft:"+l.id, collect(l)); updateProgress(l); };
+      main.oninput = main.onchange = () => { saveLocal(l); updateProgress(l); scheduleCloud(l); };
+      $("#save-now")?.addEventListener("click", () => { saveLocal(l); cloudSave(l, true); });
       $("#submit").addEventListener("click", () => submit(l));
     } else { main.oninput = main.onchange = null; }
     updateProgress(l);
@@ -607,7 +648,7 @@ table.days tr.next td{background:var(--accent-soft)}
           const up = await assets.upload(new Blob([b64], {type:"text/plain"}), {type:"text/plain"});
           hid.value = JSON.stringify({asset:up.id, enc:"base64", mime:f.type||"", name:f.name||"recording", size:f.size, at:new Date().toISOString()});
           st.textContent = `✅ Đã tải lên: ${f.name||"bản thu"} (${Math.round(f.size/1024)} KB). Nhớ bấm Nộp bài khi xong.`;
-          store.set("draft:"+l.id, collect(l)); updateProgress(l);
+          saveLocal(l); updateProgress(l); cloudSave(l);
         } catch(e){
           st.textContent = {too_large:"File quá lớn, thu ngắn lại nhé.", not_granted:"Cần bấm Cho phép để trang lưu file.", unavailable:"Thiết bị này chưa lưu file được."}[e?.code] || `Chưa tải lên được (${e?.code||"lỗi"}). Thử lại nhé.`;
         }
@@ -652,6 +693,7 @@ table.days tr.next td{background:var(--accent-soft)}
       return;
     }
     subs[l.id] = rec; delete $("#main").dataset.editing;
+    try { db.doc("drafts/"+l.id).delete(); } catch {}
     try { db.doc("inbox/"+l.id).set({lessonId:l.id, submittedAt:rec.submittedAt}); } catch {}
     renderList(); renderLesson();
     const m2 = $("#msg");

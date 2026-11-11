@@ -6,7 +6,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 - Mọi thứ gia sư viết (bài, điểm, hồ sơ, tiến độ) nằm trong **`data/`** của repo, dạng JSON.
 - Web **chỉ hiển thị**: `web/index.html` được publish kèm các file `data/*.json` (đọc bằng `fetch` tương đối).
 - `tutor/02_PROGRESS_LOG.md` được **sinh tự động** từ `data/` bằng `python3 tools/sync.py`. Không sửa tay.
-- Database của artifact **chỉ dùng để nhận bài nộp** (`submissions/<id>`, `inbox/<id>`). Khi chấm, bài nộp được chép vào `data/submissions/`.
+- Database của artifact **chỉ giữ dữ liệu Tân nhập**: bài nộp (`submissions/<id>`, `inbox/<id>`) và **nháp đang làm** (`drafts/<id>`, chỉ chủ sở hữu đọc/ghi; trang tự lưu 2 giây sau khi ngừng gõ + nút 💾 Lưu; bản trên máy luôn lưu tức thì; mở bài lấy bản mới hơn giữa máy và mây; xoá khi nộp). Khi chấm, bài nộp được chép vào `data/submissions/`.
 → Sửa một chỗ (JSON trong `data/`), chạy `sync.py`, push, publish. Không có hai bản để lệch nhau.
 
 ## Cấu trúc `data/`
@@ -48,4 +48,4 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 - Trang ghi kết quả báo vào `submissions/<id>.notify` để chẩn đoán.
 
 ## Quyền của trang
-`db` (chỉ `submissions`, `inbox`), `comments` (Send to Claude), `mcp` → Claude Code Remote `fire_trigger`, `assets` (bản thu âm base64), `tts` (đọc bài nghe), `user`.
+`db` (`submissions`, `inbox`, `drafts`), `comments` (Send to Claude), `mcp` → Claude Code Remote `fire_trigger`, `assets` (bản thu âm base64), `tts` (đọc bài nghe), `user`.
