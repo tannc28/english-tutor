@@ -282,6 +282,7 @@ button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid va
       const r = await c.sendToClaude({anchor, text:`📥 Nộp bài ${l.id} – gia sư chấm giúp mình (bài làm trong submissions/${l.id})`});
       diag.thread = r?.threadId || ""; return true;
     })().catch(e => { diag.cCode = e?.code||""; diag.cMsg = String(e?.message||e||"").slice(0,300); return false; });
+    sentPromise = Promise.race([sentPromise, new Promise(r => setTimeout(() => { diag.cTimeout = true; r(false); }, 8000))]);
     try {
       await savePromise;
     } catch(e){
