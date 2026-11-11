@@ -127,6 +127,7 @@ Mọi collection đều chỉ chủ sở hữu (Tân) mới được ghi. Gia s�
 - `comments`: gửi bình luận "Send to Claude", là đường báo chính.
 - `mcp` → `Claude Code Remote` / `fire_trigger`: đường báo dự phòng.
 - `user`: biết ai đang xem trang.
+- `assets`: kho file của trang, dùng để lưu bản thu âm (dạng base64).
 - `tts`: đọc bài nghe thành tiếng. Có trên Chrome và app Claude máy tính. App điện thoại có thể chưa hỗ trợ; khi đó trang cho xem lời thay thế.
 
 ## 6. Các luồng chính
@@ -189,7 +190,7 @@ Theo `tutor/00_TUTOR_GUIDE.md` mục 8:
 - **Feedback bắt buộc** (độ khó, chỗ khó nhất, thời gian) dùng để chỉnh độ khó, độ dài, nguồn của bài sau. Thứ 7 có Weekly Test + feedback tuần để chỉnh Roadmap.
 
 ### 6.4 Phát âm & ngữ điệu (thử nghiệm)
-Claude không nghe được âm thanh. Bộ công cụ mã nguồn mở trong `tools/speech/` nghe hộ: Whisper xem từ có dễ nghe không, wav2vec2 + espeak-ng tìm âm bị mất hoặc sai (nhất là âm cuối), Praat đo ngữ điệu, tốc độ và ngắt nghỉ. Tân thu âm bằng điện thoại và tải lên thư mục `recordings/` trên GitHub. Gia sư chạy bộ chấm rồi nhận xét. Chi tiết và giới hạn: `tools/speech/README.md`.
+Claude không nghe được âm thanh. Bộ công cụ mã nguồn mở trong `tools/speech/` nghe hộ: Whisper xem từ có dễ nghe không, wav2vec2 + espeak-ng tìm âm bị mất hoặc sai (nhất là âm cuối), Praat đo ngữ điệu, tốc độ và ngắt nghỉ. Tân thu âm **ngay trên web** (nút 🎙️ mở trình ghi âm của điện thoại). Bản thu được lưu vào kho file của trang, gia sư lấy về, chạy bộ chấm rồi nhận xét trong phần kết quả. Chi tiết và giới hạn: `tools/speech/README.md`.
 
 ### 6.5 Talk Time và hỏi đáp
 

@@ -59,7 +59,7 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 - **CN:** nhắc học thân thiện, tóm tắt tuần, gợi ý 1 "Sunday Input" thật (video/podcast dễ, 20–30') để nghe cho vui.
 
 ## 6b. Phát âm & ngữ điệu
-- Phase 1: input là chính. Shadowing + **1 bản thu đọc to mỗi tuần** (60–90 giây, gồm đoạn văn + cặp từ dễ lẫn) để theo dõi.
+- Phase 1: input là chính. Shadowing + **1 bản thu đọc to mỗi tuần** (60–90 giây, gồm đoạn văn + cặp từ dễ lẫn) để theo dõi. Đưa vào bài dưới dạng câu hỏi `type: "recording"` (Tân thu âm ngay trên web), thường ở Weekly check.
 - Chấm bằng `tools/speech/assess.py` (xem `tools/speech/README.md`). Chỉ kết luận lỗi khi **lặp lại ở nhiều từ/nhiều lần**. Ưu tiên lỗi làm người nghe hiểu sai: âm cuối, th/s/sh, i dài/ngắn, trọng âm từ.
 - Ghi vào Progress Log mục *Pronunciation*: % dễ nghe, % khớp âm vị, 3 lỗi ưu tiên, tốc độ, ngữ điệu cuối câu. So sánh theo thời gian.
 - Gợi ý kết hợp: app chấm phát âm (ELSA Speak) và 1 buổi với giáo viên/người bản xứ mỗi 2–4 tuần từ Phase 2.
