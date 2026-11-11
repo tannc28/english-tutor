@@ -33,7 +33,7 @@
   --paper:#1b1f27; --paper-line:#2b303b; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.25); color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1200px;margin:0 auto;padding-block:20px 120px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:none;margin:0 auto;padding-block:20px 120px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .mono{font-family:var(--f-mono)}
 .label{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 
@@ -61,7 +61,36 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15p
 
 
 /* Layout */
-.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;margin-top:20px;align-items:start}
+.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;margin-top:20px;align-items:start}
+body.shelf-off .layout{grid-template-columns:minmax(0,1fr)}
+body.shelf-off .shelf{display:none}
+body.focus .top,body.focus .track,body.focus .tabs,body.focus .shelf{display:none}
+body.focus .layout{grid-template-columns:minmax(0,1fr);margin-top:0}
+/* Workbook toolbar + table of contents */
+.toolbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.toolbar .grow{flex:1;min-width:140px;display:flex;align-items:center;gap:10px}
+.toolbar .ttl{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:38ch}
+.tbtn{font:inherit;font-size:.86rem;font-weight:600;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;white-space:nowrap}
+.tbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.bookgrid{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:20px;align-items:start}
+.bookcol{min-width:0;display:flex;flex-direction:column;gap:16px}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 72px);display:flex;flex-direction:column;gap:4px;padding:12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;max-height:calc(100vh - 100px);overflow:auto}
+.toc a{display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:8px;align-items:center;padding:7px 8px;border-radius:8px;color:var(--ink-2);text-decoration:none;font-size:.86rem}
+.toc a:hover{background:var(--sunk)}
+.toc a.on{background:var(--accent-soft);color:var(--ink)}
+.toc .n{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;font-family:var(--f-mono);font-size:.74rem;background:var(--sunk);border:1px solid var(--line)}
+.toc a.full .n{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.toc .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toc .c{font-family:var(--f-mono);font-size:.72rem;color:var(--ink-3)}
+.part,.fb{scroll-margin-top:calc(var(--tbh,64px) + 16px)}
+@media (max-width:1100px){
+  .bookgrid{grid-template-columns:minmax(0,1fr)}
+  .toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--tbh,64px) + 6px);z-index:5;flex-direction:row;overflow-x:auto;max-height:none;padding:6px;order:-1}
+  .toc .lbl{display:none}
+  .toc a{grid-template-columns:24px auto;flex:none}
+  .toc a .t{display:none}
+  .part,.fb{scroll-margin-top:calc(var(--tbh,64px) + 64px)}
+}
 @media (max-width:880px){.layout{grid-template-columns:minmax(0,1fr)}}
 
 /* Shelf */
@@ -104,7 +133,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15p
 .part .kind{color:var(--accent)}
 @media (max-width:520px){.part{grid-template-columns:minmax(0,1fr)}.step{grid-row:auto;width:30px;height:30px;font-size:.85rem}}
 
-.md{max-width:70ch;min-width:0}
+.md{max-width:86ch;min-width:0}
 .md p,.md li{margin:.55em 0}
 .md ul,.md ol{padding-left:1.3em}
 .md h4{margin:1.2em 0 .3em;font-size:.95rem}
@@ -262,7 +291,7 @@ table.days tr.next td{background:var(--accent-soft)}
 
   <div class="layout" id="view-lessons">
     <nav class="shelf" aria-label="Danh sách bài">
-      <div class="shelf-head"><span class="label">Bài học</span><span class="note" id="count"></span></div>
+      <div class="shelf-head"><span class="label">Bài học <span class="note" id="count"></span></span><button class="tbtn" id="shelf-hide" type="button" title="Thu gọn danh sách">⟨ Thu gọn</button></div>
       <div id="list"><p class="note">Đang tải bài…</p></div>
     </nav>
     <main class="book" id="main">
@@ -380,11 +409,40 @@ table.days tr.next td{background:var(--accent-soft)}
   }
   function updateProgress(l){
     const qs = allQs(l); if (!qs.length) return;
-    const a = collect(l).answers; let n = 0;
-    qs.forEach(q => { const done = !!(a[q.id]||"").trim(); if (done) n++; document.getElementById("qb-"+q.id)?.classList.toggle("done", done); });
-    const bar = $("#pbar"), lab = $("#plab");
-    if (bar) bar.style.width = Math.round(n/qs.length*100) + "%";
-    if (lab) lab.textContent = `${n}/${qs.length} câu`;
+    const answers = collect(l).answers; let n = 0;
+    qs.forEach(q => { const done = !!(answers[q.id]||"").trim(); if (done) n++; document.getElementById("qb-"+q.id)?.classList.toggle("done", done); });
+    const w = Math.round(n/qs.length*100) + "%";
+    ["#pbar","#pbar2"].forEach(sel => { const b = $(sel); if (b) b.style.width = w; });
+    if ($("#plab")) $("#plab").textContent = `${n}/${qs.length} câu`;
+    if ($("#plab2")) $("#plab2").textContent = `${n}/${qs.length}`;
+    (l.parts||[]).forEach((p,pi) => {
+      const pq = p.questions||[], el = $("#tocc-"+pi), a = $("#toc-"+pi);
+      if (!el || !pq.length) return;
+      const k = pq.filter(q => (answers[q.id]||"").trim()).length;
+      el.textContent = `${k}/${pq.length}`; a.classList.toggle("full", k === pq.length);
+    });
+  }
+  // ---- Mục lục, thu gọn danh sách, chế độ tập trung
+  const prefs = store.get("prefs") || {};
+  if (prefs.shelfOff) document.body.classList.add("shelf-off");
+  if (prefs.focus) document.body.classList.add("focus");
+  function setPref(k, on, cls){ prefs[k] = on; store.set("prefs", prefs); document.body.classList.toggle(cls, on); }
+  let tocObs = null;
+  function bindToc(){
+    const tb = document.querySelector(".toolbar"); if (tb) document.documentElement.style.setProperty("--tbh", tb.offsetHeight + "px");
+    $("#tg-shelf")?.addEventListener("click", e => { const off = !document.body.classList.contains("shelf-off"); setPref("shelfOff", off, "shelf-off"); if (!off) setPref("focus", false, "focus"); syncToggles(); });
+    $("#tg-focus")?.addEventListener("click", () => { setPref("focus", !document.body.classList.contains("focus"), "focus"); syncToggles(); });
+    document.querySelectorAll(".toc a[data-go]").forEach(a => a.addEventListener("click", ev => { ev.preventDefault(); document.getElementById(a.dataset.go)?.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"}); }));
+    tocObs?.disconnect();
+    if ("IntersectionObserver" in window){
+      tocObs = new IntersectionObserver(es => { es.forEach(en => { if (en.isIntersecting){ const id = en.target.id.replace("part-",""); document.querySelectorAll(".toc a").forEach(x => x.classList.toggle("on", x.id === "toc-"+id)); } }); }, {rootMargin:"-90px 0px -60% 0px"});
+      document.querySelectorAll(".part,.fb").forEach(sec => tocObs.observe(sec));
+    }
+  }
+  $("#shelf-hide")?.addEventListener("click", () => { setPref("shelfOff", true, "shelf-off"); syncToggles(); });
+  function syncToggles(){
+    $("#tg-shelf")?.setAttribute("aria-pressed", String(!document.body.classList.contains("shelf-off") && !document.body.classList.contains("focus")));
+    $("#tg-focus")?.setAttribute("aria-pressed", String(document.body.classList.contains("focus")));
   }
 
   function emptyView(){
@@ -419,7 +477,15 @@ table.days tr.next td{background:var(--accent-soft)}
     let qn = 0;
     const scores = String(grade?.score||"").split(/\s*·\s*/).filter(Boolean);
 
+    const tocItems = (l.parts||[]).map((p,pi)=>`<a href="#" data-go="part-${pi}" id="toc-${pi}"><span class="n">${pi+1}</span><span class="t">${esc(p.kind||p.title||"Phần "+(pi+1))}</span><span class="c" id="tocc-${pi}"></span></a>`).join("") + `<a href="#" data-go="part-fb" id="toc-fb"><span class="n">✓</span><span class="t">Feedback & Nộp</span><span class="c"></span></a>`;
     main.innerHTML = `
+      <div class="toolbar">
+        <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Hiện/ẩn danh sách bài">☰ Danh sách</button>
+        <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Ẩn mọi thứ trừ bài làm">🎯 Tập trung</button>
+        <div class="grow"><span class="ttl">${esc(l.title||"")}</span>${nQ && !grade ? `<div class="bar" style="flex:1;min-width:80px"><i id="pbar2" style="width:0%"></i></div><span class="note mono" id="plab2">0/${nQ}</span>` : ""}</div>
+      </div>
+      <div class="bookgrid">
+      <div class="bookcol">
       <section class="card hero t-${esc(l.type)}">
         <span class="kind">${esc(TYPE_LABEL[l.type]||"Bài học")} · ${esc(fmtDate(l.date))}</span>
         <h2>${esc(l.title||"Bài học")}</h2>
@@ -439,7 +505,7 @@ table.days tr.next td{background:var(--accent-soft)}
           ${grade.next_md?`<div class="md">${md(grade.next_md)}</div>`:""}
         </section>` : ""}
       ${(l.parts||[]).map((p,pi) => `
-        <section class="card part">
+        <section class="card part" id="part-${pi}">
           <span class="step" aria-hidden="true">${pi+1}</span>
           ${p.kind?`<span class="kind">${esc(p.kind)}</span>`:""}
           <h3>${esc(p.title||"")}</h3>
@@ -453,7 +519,7 @@ table.days tr.next td{background:var(--accent-soft)}
               </div>`).join("")}</div>` : ""}
           </div>
         </section>`).join("")}
-      <section class="fb" aria-labelledby="fb-h">
+      <section class="fb" id="part-fb" aria-labelledby="fb-h">
         <h3 id="fb-h">📝 Feedback cuối bài</h3>
         <div class="fl"><span>Độ khó của bài</span>
           <div class="scale" role="radiogroup" aria-label="Độ khó">${[1,2,3,4,5].map(n=>`<label><input type="radio" name="fb-diff" id="fb-diff-${n}" value="${n}" ${fb.difficulty==n?"checked":""} ${locked?"disabled":""}><span>${n}</span></label>`).join("")}</div>
@@ -467,6 +533,9 @@ table.days tr.next td{background:var(--accent-soft)}
         ${grade ? `<span class="info">✅ Bài đã được chấm. Xem kết quả ở đầu bài.</span>`
           : locked ? `<span class="info">Đã nộp lúc ${esc(new Date(sub.submittedAt).toLocaleString("vi-VN"))} · gia sư đang chấm</span><button class="ghost" id="edit">Sửa và nộp lại</button>`
           : `<span class="info">Nháp tự lưu trên máy này.</span><button class="primary" id="submit">Nộp bài</button>`}
+      </div>
+      </div>
+      <nav class="toc" aria-label="Mục lục bài"><span class="label lbl">Mục lục</span>${tocItems}</nav>
       </div>`;
 
     if (!locked){
@@ -474,6 +543,7 @@ table.days tr.next td{background:var(--accent-soft)}
       $("#submit").addEventListener("click", () => submit(l));
     } else { main.oninput = main.onchange = null; }
     updateProgress(l);
+    bindToc();
     bindPlayers(l);
     bindRecorders(l);
     $("#edit")?.addEventListener("click", () => { main.dataset.editing = "1"; renderLesson(); });
