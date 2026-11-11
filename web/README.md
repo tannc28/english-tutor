@@ -37,8 +37,9 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 
 ## Lịch Google Calendar
 - Connector Google Calendar (tài khoản của Tân). Connector **không tạo được calendar mới** → dùng lịch **Personal** (`calendarId` = email chính), sự kiện tên bắt đầu **"📚 English · "**, `colorId: "9"`. Nếu Tân tự tạo lịch "English", chuyển sang dùng `calendarId` của lịch đó (`list_calendars`).
-- **Khi RA BÀI:** tạo/cập nhật sự kiện học của hôm nay theo khung giờ trong `profile.schedule` (nếu có), mô tả HTML: tên bài, các phần + phút, mục tiêu hôm nay, link web. Không trùng lặp: tìm sự kiện "📚 English" cùng ngày trước khi tạo.
-- **Khi CHẤM xong:** cập nhật sự kiện của ngày đó: thêm "✅" vào tên, mô tả = kết quả ngắn + điểm cần ôn + giờ học thực (từ log).
+- Các buổi học là **chuỗi sự kiện lặp lại** (id trong `profile.schedule.calendar.recurring`). **Không tạo sự kiện mới mỗi ngày.**
+- **Khi RA BÀI:** cập nhật **phiên bản của hôm nay** trong chuỗi (`list_events` hôm nay, lọc "📚 English" → `update_event` đúng id của phiên bản đó): tên = `📚 English · Day N – <tên bài> (sáng/tối)`, mô tả HTML: phần cần làm ở buổi đó + số phút + mục tiêu + link web.
+- **Khi CHẤM xong:** cập nhật phiên bản buổi tối (cuối tuần: buổi bài 9:00) của ngày đó: thêm "✅" vào tên, mô tả = kết quả ngắn + điểm cần ôn + giờ học thực (từ log).
 - Dùng `notificationLevel: "NONE"`; nhắc 10 phút trước cho buổi sắp tới (`overrideReminders` popup 10).
 
 ## Quy trình CHẤM (khi có comment "📥 Nộp bài <id>" hoặc job dự phòng)

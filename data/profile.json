@@ -70,6 +70,10 @@
   {
    "date": "2026-11-11",
    "text": "Tân đặt mục tiêu B2 trong 3 tháng, ưu tiên input. Theo giờ học Cambridge (B1/B1+ → B2 ~100–250 giờ; nghe đang B1 nên lấy cận trên) → mục tiêu 15 giờ/tuần (~2 giờ/ngày), bài 60–75', còn lại là nghe tự do."
+  },
+  {
+   "date": "2026-11-11",
+   "text": "Chốt lịch học tuần (ngủ 23:30, dậy 7:15): T2–T6 7:45–8:25 nghe + 20:30–21:20 đọc; T7–CN 9:00–10:30 bài, 14:30–16:00 nghe tự do, 20:00–21:00 phim. Bài ngày thường chia rõ phần sáng (nghe ~40') và tối (đọc ~50')."
   }
  ],
  "story": {
@@ -187,7 +191,7 @@
  "coach": {
   "summary_md": "**B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.\n\n**Mục tiêu B2 sau 3 tháng (~giữa tháng 2/2027):** cần khoảng **150–250 giờ** input tập trung, tức **~15 giờ/tuần (~2 giờ/ngày)**. Đọc đã gần B2. Phần lớn số giờ nên dành cho **nghe**, vì nghe đang ở B1.",
   "weekly_target_hours": 15,
-  "target_why": "để lên B2 trong ~3 tháng: khoảng 60–75 phút bài + 60 phút nghe/đọc thêm (chủ yếu NGHE) mỗi ngày",
+  "target_why": "ngày thường 1,5 giờ (7:45 nghe 40' + 20:30 đọc 50'), cuối tuần 4 giờ → ~15,5 giờ/tuần, đủ cho mục tiêu B2 sau ~3 tháng",
   "recommendations": [
    {
     "title": "Nghe 3 bước, mỗi bài nghe",
@@ -212,39 +216,51 @@
   ]
  },
  "schedule": {
-  "note": "Đề xuất 11/11, chờ Tân xác nhận giờ cụ thể",
+  "sleep": "23:30",
+  "wake_weekday": "07:15",
+  "wake_weekend": "~08:00",
+  "note": "Chốt 11/11: ngày thường 1,5 giờ (sáng nghe 40' + tối đọc 50', nghe lại khi đi bộ 8:30–9:00 là phần thêm); cuối tuần 4 giờ (bài 90' + nghe tự do 90' + phim 60'). Tổng ~15,5 giờ/tuần.",
   "weekday": [
    {
-    "slot": "Sáng",
-    "time": null,
-    "min": 30,
-    "what": "Phần nghe của bài hôm nay"
+    "time": "07:45–08:25",
+    "min": 40,
+    "what": "Phần NGHE của bài hôm nay"
    },
    {
-    "slot": "Tối",
-    "time": null,
-    "min": 75,
-    "what": "Bài trên web + nghe/đọc thêm"
+    "time": "20:30–21:20",
+    "min": 50,
+    "what": "Phần ĐỌC + feedback + nộp"
    }
   ],
   "weekend": [
    {
-    "slot": "Sáng",
-    "time": null,
+    "time": "09:00–10:30",
     "min": 90,
-    "what": "Bài trong ngày (T7: + nhìn lại tuần)"
+    "what": "Bài trong ngày (T7 + nhìn lại tuần)"
    },
    {
-    "slot": "Chiều",
-    "time": null,
+    "time": "14:30–16:00",
     "min": 90,
-    "what": "Nghe/xem tự do theo sở thích"
+    "what": "Nghe tự do (podcast/YouTube)"
+   },
+   {
+    "time": "20:00–21:00",
+    "min": 60,
+    "what": "Phim/series phụ đề tiếng Anh"
    }
   ],
   "calendar": {
    "calendarId": "nguyencongtan1002@gmail.com",
    "colorId": "9",
-   "prefix": "📚 English · "
+   "prefix": "📚 English · ",
+   "recurring": {
+    "weekday_morning": "81ggmpg1ai520hq692lf0dd5ds",
+    "weekday_evening": "7f72ovg5d59onuiqu6t2n87160",
+    "weekend_lesson": "j0ruj0rl5p7v1mpsrdjojagm6o",
+    "weekend_listening": "32a4snrd0bui87f78u3imn9bks",
+    "weekend_film": "sgqecuqrnte24q0vke1fhkq9r8"
+   },
+   "day1_event": "bsi90bucrjchpm19nd7bdttm0c"
   }
  }
 }

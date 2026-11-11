@@ -11,9 +11,9 @@
 - Thời lượng: 45–60 phút mỗi ngày, cộng khoảng 15 phút nghe khi đi bộ buổi sáng.
 
 ## 2. Lịch
-- **05:55 mỗi ngày:** gia sư đăng **đủ bài của cả ngày** (một bài/ngày, gồm phần nghe lúc đi bộ + bài chính). Tân làm lúc nào tiện, nộp trên web.
-- Nếu bài hôm trước chưa nộp: **không ra bài mới**, chỉ nhắc nhẹ (không dồn bài).
-- Thứ 7: bài có thêm phần nhìn lại tuần + câu hỏi feedback tuần. Muốn trò chuyện tiếng Anh thì nhắn trong chat bất cứ lúc nào.
+- **05:55 mỗi ngày:** gia sư đăng **đủ bài của cả ngày**. Bài ngày thường chia rõ **phần sáng (nghe, ~40')** và **phần tối (đọc + feedback + nộp, ~50')**. Cuối tuần: bài ~90' + gợi ý nghe tự do và phim.
+- Lịch học của Tân (`profile.schedule`, có trên Google Calendar): T2–T6 7:45–8:25 và 20:30–21:20; T7–CN 9:00–10:30, 14:30–16:00, 20:00–21:00. Ngủ 23:30, không học nặng sát giờ ngủ.
+- Nếu bài hôm trước chưa nộp: **không ra bài mới**, chỉ nhắc nhẹ (không dồn bài). Muốn trò chuyện tiếng Anh thì nhắn trong chat bất cứ lúc nào.
 
 ## 3. Phương pháp chính: Comprehensible Input (CI)
 Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắc khi hiểu được thông điệp**. Vì vậy cần **thật nhiều input chuẩn, ở mức vừa đủ hiểu** (i+1): hiểu gần hết, chỉ một phần nhỏ mới. Ngữ pháp và từ vựng chủ yếu tự đến qua tiếp xúc lặp lại, không qua học thuộc quy tắc.

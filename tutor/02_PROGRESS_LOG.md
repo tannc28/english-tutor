@@ -26,7 +26,7 @@
 - [Đọc] **Xử lý câu dài còn chậm (hiểu được nhưng tốn nhiều thời gian)** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Nhiều đọc rộng B1+ dễ hơn để tăng tốc; đọc kỹ chỉ 1 đoạn/ngày
 - [Từ nối & cụm] **Từ nối tương phản/nhượng bộ và cụm động từ cố định** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
 
-**Mục tiêu thời gian:** 15 giờ/tuần (để lên B2 trong ~3 tháng: khoảng 60–75 phút bài + 60 phút nghe/đọc thêm (chủ yếu NGHE) mỗi ngày)
+**Mục tiêu thời gian:** 15 giờ/tuần (ngày thường 1,5 giờ (7:45 nghe 40' + 20:30 đọc 50'), cuối tuần 4 giờ → ~15,5 giờ/tuần, đủ cho mục tiêu B2 sau ~3 tháng)
 
 **Bức tranh hiện tại:** **B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.
 
@@ -52,6 +52,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-11 | Ngày 1 = đánh giá toàn diện ~85' (nghe/đọc A2→C1, từ vựng theo tần suất, ngữ pháp & từ nối, viết, sở thích) vì chưa có dữ liệu. |
 | 2026-11-11 | Chấm Ngày 1 → B1+ (đọc ~B2, nghe ~B1). Ngày 2: nghe A2+/B1 0.85× theo 3 bước, đọc B1+/B2, từ nối tương phản + cụm V-ing, chủ đề AI/tâm lý, ~60', full English (Tân yêu cầu). |
 | 2026-11-11 | Tân đặt mục tiêu B2 trong 3 tháng, ưu tiên input. Theo giờ học Cambridge (B1/B1+ → B2 ~100–250 giờ; nghe đang B1 nên lấy cận trên) → mục tiêu 15 giờ/tuần (~2 giờ/ngày), bài 60–75', còn lại là nghe tự do. |
+| 2026-11-11 | Chốt lịch học tuần (ngủ 23:30, dậy 7:15): T2–T6 7:45–8:25 nghe + 20:30–21:20 đọc; T7–CN 9:00–10:30 bài, 14:30–16:00 nghe tự do, 20:00–21:00 phim. Bài ngày thường chia rõ phần sáng (nghe ~40') và tối (đọc ~50'). |
 
 ## Lịch sử ngày học
 | Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |
