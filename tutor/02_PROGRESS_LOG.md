@@ -6,7 +6,8 @@
 - Phase: 1 – INPUT (nghe + đọc). Tuần hiện tại: 1
 - Mức hiểu mục tiêu: đọc rộng ~98%, đọc kỹ ~95%, nghe dễ hơn đọc (chưa xác định – chờ Day 1)
 - Truyện dài kỳ: "Hope Street" (Nam, 28, chuyển tới Manchester; Margaret – Flat 1; Mr Patel – chủ nhà). Đã có: Tập 1 The Key
-- Bài tiếp theo: **Day 1 – Đánh giá đầu vào** – ĐÃ ĐĂNG sớm (lessons/2026-11-11-main): nghe dễ (dialogue Linh–Sam), Hope Street tập 1, đọc kỹ "forgetting curve", nghe khó (sleep talk), câu hỏi sở thích
+- Bài tiếp theo: **Day 1 – Đánh giá đầu vào toàn diện (~85')** – ĐÃ ĐĂNG (lessons/2026-11-11-main), 10 phần, 64 câu: nghe A2–B1 / B2 / C1, đọc B1 (Hope Street tập 1) / B1+–B2 / C1, từ vựng 15 câu theo tần suất (v1–3 ~1–2k, v4–6 ~3k, v7–9 ~5k, v10–12 ~8k, v13–15 ~10k+), ngữ pháp & từ nối 12 câu (A2→C1), viết 100–150 từ, sở thích + thói quen tiếp xúc tiếng Anh. Đáp án trắc nghiệm: ArtifactData `keys/2026-11-11-main`.
+- Sau khi chấm Day 1: ghi mức CEFR ước lượng từng kỹ năng, % hiểu từng mức, vốn từ ước lượng, và đặt mức bài cho tuần 1–2 + chủ đề theo sở thích.
 - Chuỗi ngày học (streak): 0
 - Lịch: 4 Routine lặp cố định gửi về phiên Code chính (xem bên dưới). Mốc kế tiếp: 18:55 T4 11/11 – Bài chính
 

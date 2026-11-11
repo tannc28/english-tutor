@@ -22,6 +22,7 @@ Nguyên tắc: **không bao giờ list/query cả collection lớn** (`lessonBod
 | `submissions/<id>` | trang | `{lessonId, answers:{qid:text}, feedback:{difficulty,hardest,minutes}, submittedAt, notify}` | |
 | `inbox/<id>` | trang tạo, gia sư **xoá sau khi chấm** | `{lessonId, submittedAt}` = hàng đợi bài chưa chấm | rỗng khi đã chấm hết |
 | `grades/<id>` | gia sư | `{score, summary_md, answers_md, next_md, gradedAt}` | |
+| `keys/<id>` | gia sư | đáp án trắc nghiệm (trang không tải) | |
 | `meta/progress` | gia sư | `{phase, week, streak, next, updatedAt}` | 1 doc |
 
 - **id**: `YYYY-MM-DD-<walk|main|weekly|sunday>` (chữ, số, gạch ngang). Danh sách sắp theo `id` giảm dần.
