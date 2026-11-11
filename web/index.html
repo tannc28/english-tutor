@@ -285,34 +285,34 @@ table.days tr.next td{background:var(--accent-soft)}
 <div class="wrap">
   <header class="top">
     <div class="brand">
-      <div class="label">B1 → C1 · Tiếng Anh phổ thông · Comprehensible Input · Gia sư Claude</div>
-      <h1>Lớp tiếng Anh của Tân</h1>
+      <div class="label">B1 → C1 · General English · Comprehensible Input · Tutor: Claude</div>
+      <h1>Tân's English Class</h1>
     </div>
     <div class="stats">
-      <div class="stat"><span class="label">Tuần</span><b id="s-week">1</b></div>
-      <div class="stat"><span class="label">Streak</span><b><span id="s-streak">0</span> ngày</b></div>
-      <div class="stat"><span class="label">Đã chấm</span><b id="s-done">0</b></div>
+      <div class="stat"><span class="label">Week</span><b id="s-week">1</b></div>
+      <div class="stat"><span class="label">Streak</span><b><span id="s-streak">0</span> <span id="s-streak-u">days</span></b></div>
+      <div class="stat"><span class="label">Graded</span><b id="s-done">0</b></div>
     </div>
   </header>
 
-  <section class="track" aria-label="Chặng đường CEFR"><div class="ph"><span class="nm"><b>Chặng đường tới C1</b> – <span id="cefr-now">mức hiện tại: chờ đánh giá Ngày 1</span></span><div class="segs cefr" id="cefr"></div></div></section>
+  <section class="track" aria-label="CEFR journey"><div class="ph"><span class="nm"><b>Road to C1</b> – <span id="cefr-now">current level: waiting for Day 1 assessment</span></span><div class="segs cefr" id="cefr"></div></div></section>
 
-  <nav class="tabs" aria-label="Mục">
-    <a href="#" class="tab" data-view="lessons">📚 Bài học</a>
-    <a href="#ho-so" class="tab" data-view="profile">👤 Hồ sơ</a>
-    <a href="#tien-do" class="tab" data-view="progress">📈 Tiến độ</a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#" class="tab" data-view="lessons">📚 Lessons</a>
+    <a href="#ho-so" class="tab" data-view="profile">👤 Profile</a>
+    <a href="#tien-do" class="tab" data-view="progress">📈 Progress</a>
   </nav>
 
   <section id="view-profile" class="view" hidden></section>
   <section id="view-progress" class="view" hidden></section>
 
   <div class="layout" id="view-lessons">
-    <nav class="shelf" aria-label="Danh sách bài">
-      <div class="shelf-head"><span class="label">Bài học <span class="note" id="count"></span></span><button class="tbtn" id="shelf-hide" type="button" title="Thu gọn danh sách">⟨ Thu gọn</button></div>
-      <div id="list"><p class="note">Đang tải bài…</p></div>
+    <nav class="shelf" aria-label="Lesson list">
+      <div class="shelf-head"><span class="label">Lessons <span class="note" id="count"></span></span><button class="tbtn" id="shelf-hide" type="button" title="Collapse list">⟨ Collapse</button></div>
+      <div id="list"><p class="note">Loading lessons…</p></div>
     </nav>
     <main class="book" id="main">
-      <div class="card empty"><div class="label">Đang mở vở…</div></div>
+      <div class="card empty"><div class="label">Opening…</div></div>
     </main>
   </div>
 </div>
@@ -322,8 +322,8 @@ table.days tr.next td{background:var(--accent-soft)}
 <script>
 (() => {
   const TRIGGER_ID = "trig_01AN7RrytvZ5BmXiymy5Ym5M";
-  const TYPE_LABEL = {day:"Bài trong ngày", walk:"Walk Pack", main:"Bài chính", weekly:"Nhìn lại tuần", sunday:"Chủ nhật", test:"Bài thử"};
-  const STATUS_LABEL = {open:"Chưa làm", submitted:"Đã nộp", graded:"Đã chấm"};
+  const TYPE_LABEL = {day:"Daily lesson", walk:"Walk Pack", main:"Main lesson", weekly:"Weekly review", sunday:"Sunday", test:"Test"};
+  const STATUS_LABEL = {open:"Not started", submitted:"Submitted", graded:"Graded"};
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const md = s => {
@@ -351,14 +351,14 @@ table.days tr.next td{background:var(--accent-soft)}
   function renderTrack(){
     const cur = String(profile?.cefr?.overall || "").trim(), ci = LEVELS.indexOf(cur);
     $("#cefr").innerHTML = LEVELS.map((lv,i) => `<span class="seg ${ci>=0 && i<ci?"done":i===ci?"now":""}">${lv}</span>`).join("");
-    if (cur) $("#cefr-now").textContent = `mức hiện tại (ước lượng): ${cur}`;
+    if (cur) $("#cefr-now").textContent = `current level (estimate): ${cur}`;
   }
 
   async function loadBody(id){
     if (bodies[id]) return;
     bodies[id] = {loading:true};
     try { bodies[id] = await getJSON("data/lessons/"+encodeURIComponent(id)+".json"); }
-    catch(e){ bodies[id] = {parts:[], intro_md:"Không tải được nội dung bài ("+(e?.code||"lỗi")+"). Tải lại trang thử nhé."}; }
+    catch(e){ bodies[id] = {parts:[], intro_md:"Couldn't load this lesson ("+(e?.code||"error")+"). Please reload the page."}; }
     if (current === id) renderLesson();
   }
   function watchCurrent(){
@@ -373,7 +373,7 @@ table.days tr.next td{background:var(--accent-soft)}
         store.set("draft:"+id, c);
         if (c.log && c.log.v === 1){ act = c.log; act.sessions.push(newSession()); }
         if (!document.activeElement?.closest?.(".book")) renderLesson();
-        setSave("ok", c.savedAt, "Đã lấy bản lưu trên mây");
+        setSave("ok", c.savedAt, "Loaded your cloud save");
       } else setSave("ok", loc.savedAt);
     }).catch(() => {});
     if (db) unsubCur.push(db.doc("submissions/"+id).onSnapshot(s => { const d = s.data(); if (d) subs[id] = d; else delete subs[id]; if (current===id && !$("#main").dataset.editing) renderLesson(); }));
@@ -382,22 +382,22 @@ table.days tr.next td{background:var(--accent-soft)}
   function fmtDate(d){
     if (!d) return "";
     const [y,m,dd] = d.split("-");
-    const wd = ["Chủ nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"][new Date(d+"T12:00:00").getDay()];
+    const wd = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][new Date(d+"T12:00:00").getDay()];
     return `${wd}, ${dd}/${m}`;
   }
   function statusOf(l){ return (l.status==="graded" || grades[l.id]) ? "graded" : (subs[l.id] ? "submitted" : (l.status || "open")); }
 
   function renderList(){
     const el = $("#list");
-    $("#count").textContent = lessons.length ? `${lessons.length} bài` : "";
+    $("#count").textContent = lessons.length ? `${lessons.length} lesson${lessons.length===1?"":"s"}` : "";
     $("#s-done").textContent = lessons.filter(l => statusOf(l)==="graded").length;
-    if (!lessons.length){ el.innerHTML = '<p class="note">Chưa có bài nào.</p>'; return; }
+    if (!lessons.length){ el.innerHTML = '<p class="note">No lessons yet.</p>'; return; }
     el.innerHTML = lessons.map(l => {
       const st = statusOf(l);
       return `<button class="item t-${esc(l.type)}" data-id="${esc(l.id)}" aria-current="${current===l.id}">
-        <span class="row"><span class="kind">${l.dayNo?`Ngày ${esc(l.dayNo)}`:esc(TYPE_LABEL[l.type]||l.type||"Bài")}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
-        <span class="t">${esc(l.title || "Bài học")}</span>
-        <span class="note">${esc(fmtDate(l.date))}${l.minutes?` · ~${esc(l.minutes)} phút`:""}</span>
+        <span class="row"><span class="kind">${l.dayNo?`Day ${esc(l.dayNo)}`:esc(TYPE_LABEL[l.type]||l.type||"Lesson")}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
+        <span class="t">${esc(l.title || "Lesson")}</span>
+        <span class="note">${esc(fmtDate(l.date))}${l.minutes?` · ~${esc(l.minutes)} min`:""}</span>
       </button>`;
     }).join("");
     el.querySelectorAll(".item").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.id; }));
@@ -406,15 +406,15 @@ table.days tr.next td{background:var(--accent-soft)}
   function qInput(q, val, locked){
     const id = "q-" + q.id, dis = locked ? "disabled" : "";
     if (q.type === "choice" && Array.isArray(q.options)){
-      const isOther = typeof val === "string" && val.startsWith("Khác: ");
-      const note = isOther ? val.slice(6) : "";
+      const isOther = typeof val === "string" && /^(Khác|Unsure): /.test(val);
+      const note = isOther ? val.replace(/^(Khác|Unsure): /,"") : "";
       return `<div class="opts" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}
         <div class="unsure-row">
-          <span class="unsure-hint">Không chọn được?</span>
-          <label class="unsure"><input type="radio" name="${id}" id="${id}-other" value="__other" ${isOther?"checked":""} ${dis}><span>🤔 Mình không chắc</span></label>
-          ${dis ? "" : `<button type="button" class="linkbtn opt-clear" data-q="${esc(q.id)}">Bỏ chọn</button>`}
+          <span class="unsure-hint">Can't choose?</span>
+          <label class="unsure"><input type="radio" name="${id}" id="${id}-other" value="__other" ${isOther?"checked":""} ${dis}><span>🤔 I'm not sure</span></label>
+          ${dis ? "" : `<button type="button" class="linkbtn opt-clear" data-q="${esc(q.id)}">Clear</button>`}
         </div>
-        <input type="text" class="other-note" id="${id}-note" placeholder="Ghi cho gia sư: phân vân giữa đáp án nào, chưa hiểu chỗ nào… (không bắt buộc)" value="${esc(note)}" ${isOther?"":"hidden"} ${dis}>
+        <input type="text" class="other-note" id="${id}-note" placeholder="Note for your tutor: which options you're torn between, what's unclear… (optional)" value="${esc(note)}" ${isOther?"":"hidden"} ${dis}>
       </div>`;
     }
     if (q.type === "recording"){
@@ -422,14 +422,14 @@ table.days tr.next td{background:var(--accent-soft)}
       return `<div class="rec" data-qid="${esc(q.id)}">
         ${q.read ? `<div class="md"><blockquote>${md(q.read)}</blockquote></div>` : ""}
         <input type="hidden" id="${id}" value="${esc(val||"")}">
-        ${locked ? "" : `<label class="ghost rec-pick">🎙️ ${info?"Thu lại / chọn file khác":"Thu âm hoặc chọn file ghi âm"}<input type="file" accept="audio/*,video/mp4,video/webm,.m4a,.mp3,.wav,.aac,.ogg,.3gp,.amr" capture hidden></label>`}
-        <span class="note rec-st">${info ? `✅ Đã tải lên: ${esc(info.name||"bản thu")} (${Math.round((info.size||0)/1024)} KB)` : "Chưa có bản thu"}</span>
+        ${locked ? "" : `<label class="ghost rec-pick">🎙️ ${info?"Re-record / choose another file":"Record or choose an audio file"}<input type="file" accept="audio/*,video/mp4,video/webm,.m4a,.mp3,.wav,.aac,.ogg,.3gp,.amr" capture hidden></label>`}
+        <span class="note rec-st">${info ? `✅ Uploaded: ${esc(info.name||"recording")} (${Math.round((info.size||0)/1024)} KB)` : "No recording yet"}</span>
         <audio class="rec-au" controls hidden></audio>
       </div>`;
     }
-    if (q.type === "short") return `<input type="text" id="${id}" value="${esc(val||"")}" placeholder="${esc(q.placeholder||"Trả lời ngắn")}" ${dis}>`;
+    if (q.type === "short") return `<input type="text" id="${id}" value="${esc(val||"")}" placeholder="${esc(q.placeholder||"Short answer")}" ${dis}>`;
     const cls = q.type === "dictation" ? "dict" : "";
-    return `<textarea id="${id}" class="${cls}" placeholder="${esc(q.placeholder||(q.type==="dictation"?"Gõ lại đúng những gì nghe được…":"Câu trả lời của Tân…"))}" ${dis}>${esc(val||"")}</textarea>`;
+    return `<textarea id="${id}" class="${cls}" placeholder="${esc(q.placeholder||(q.type==="dictation"?"Type exactly what you hear…":"Your answer…"))}" ${dis}>${esc(val||"")}</textarea>`;
   }
 
   function allQs(l){ const out = []; (l.parts||[]).forEach(p => (p.questions||[]).forEach(q => out.push(q))); return out; }
@@ -439,7 +439,7 @@ table.days tr.next td{background:var(--accent-soft)}
       if (q.type === "choice"){
         const c = document.querySelector(`input[name="q-${CSS.escape(q.id)}"]:checked`);
         if (!c) answers[q.id] = "";
-        else if (c.value === "__other"){ const n = (document.getElementById(`q-${q.id}-note`)?.value || "").trim(); answers[q.id] = "Khác: " + (n || "(không chắc)"); }
+        else if (c.value === "__other"){ const n = (document.getElementById(`q-${q.id}-note`)?.value || "").trim(); answers[q.id] = "Unsure: " + (n || "(no note)"); }
         else answers[q.id] = c.value;
       }
       else { const e = document.getElementById("q-"+q.id); answers[q.id] = e ? e.value : ""; }
@@ -454,7 +454,7 @@ table.days tr.next td{background:var(--accent-soft)}
     qs.forEach(q => { const done = !!(answers[q.id]||"").trim(); if (done) n++; document.getElementById("qb-"+q.id)?.classList.toggle("done", done); });
     const w = Math.round(n/qs.length*100) + "%";
     ["#pbar","#pbar2"].forEach(sel => { const b = $(sel); if (b) b.style.width = w; });
-    if ($("#plab")) $("#plab").textContent = `${n}/${qs.length} câu`;
+    if ($("#plab")) $("#plab").textContent = `${n}/${qs.length} questions`;
     if ($("#plab2")) $("#plab2").textContent = `${n}/${qs.length}`;
     (l.parts||[]).forEach((p,pi) => {
       const pq = p.questions||[], el = $("#tocc-"+pi), a = $("#toc-"+pi);
@@ -488,29 +488,29 @@ table.days tr.next td{background:var(--accent-soft)}
 
   function emptyView(){
     return `<div class="card empty">
-      <div class="label">Sổ bài</div>
-      <h2>${lessons.length ? "Chọn một bài để bắt đầu" : "Chưa có bài nào"}</h2>
-      <p>Mỗi sáng gia sư đăng đủ bài của ngày, điều chỉnh theo kết quả và feedback hôm trước. Tân làm lúc nào tiện, xong bấm <b>Nộp bài</b>; khoảng một phút sau điểm và nhận xét hiện ngay tại đây.</p>
+      <div class="label">Lessons</div>
+      <h2>${lessons.length ? "Choose a lesson to start" : "No lessons yet"}</h2>
+      <p>Every morning your tutor posts the day's lesson, adjusted to yesterday's results and feedback. Do it whenever suits you, then press <b>Submit</b>; about a minute later your score and feedback appear right here.</p>
       <div class="sched">
-        <div style="--tc:var(--main)"><b>06:00 mỗi ngày</b>Gia sư đăng đủ bài của ngày</div>
-        <div style="--tc:var(--walk)"><b>Lúc nào tiện</b>Tân làm, bấm Nộp bài</div>
-        <div style="--tc:var(--weekly)"><b>~1 phút sau</b>Điểm + nhận xét hiện ở đây</div>
+        <div style="--tc:var(--main)"><b>06:00 daily</b>New lesson posted</div>
+        <div style="--tc:var(--walk)"><b>Any time</b>Do it, press Submit</div>
+        <div style="--tc:var(--weekly)"><b>~1 min later</b>Score + feedback here</div>
       </div>
     </div>`;
   }
 
   // ---- Lưu tiến trình: luôn lưu trên máy (tức thì) + tự động lưu lên mây (DB, 2 giây sau khi ngừng gõ) + nút Lưu.
   let saveState = {k:"idle", at:null, msg:""}, cloudTimer = null, pendingL = null;
-  const hhmm = t => t ? new Date(t).toLocaleTimeString("vi-VN", {hour:"2-digit", minute:"2-digit", second:"2-digit"}) : "";
+  const hhmm = t => t ? new Date(t).toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", second:"2-digit"}) : "";
   // Trạng thái lưu chỉ là 1 biểu tượng nhỏ; chi tiết nằm ở tooltip (title).
   function saveLabel(){ return {saving:"⏳", ok:"☁️", local:"⚠️", dirty:"✏️"}[saveState.k] || "☁️"; }
   function saveTitle(){
     const s = saveState;
-    if (s.k === "saving") return "Đang lưu lên mây…";
-    if (s.k === "ok") return `Đã lưu lên mây lúc ${hhmm(s.at)}`;
-    if (s.k === "local") return `Đã lưu trên máy lúc ${hhmm(s.at)}, chưa lên mây (${s.msg||"mất mạng?"}). Trang sẽ tự thử lại.`;
-    if (s.k === "dirty") return "Có thay đổi, sắp tự lưu";
-    return "Tự động lưu đang bật";
+    if (s.k === "saving") return "Saving to the cloud…";
+    if (s.k === "ok") return `Saved to the cloud at ${hhmm(s.at)}`;
+    if (s.k === "local") return `Saved on this device at ${hhmm(s.at)}, not in the cloud yet (${s.msg||"offline?"}). Will retry automatically.`;
+    if (s.k === "dirty") return "Changes pending, autosaving soon";
+    return "Autosave is on";
   }
   function setSave(k, at, msg){ saveState = {k, at:at||saveState.at, msg:msg||""}; const el = $("#save-st"); if (el){ el.textContent = saveLabel(); el.dataset.k = k; el.title = saveTitle(); el.setAttribute("aria-label", saveTitle()); } }
   // ---- Nhật ký quá trình làm bài (cho gia sư phân tích hành vi). Chỉ số tổng hợp, không ghi từng phím.
@@ -524,7 +524,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const ua = navigator.userAgent || "", w = Math.min(screen.width||0, screen.height||0) || innerWidth;
     const kind = /iPad|Tablet/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? "tablet" : (/Mobi|iPhone|Android/i.test(ua) ? "phone" : "computer");
     const os = /iPhone|iPad|iPod/.test(ua) ? "iOS" : /Android/.test(ua) ? "Android" : /Mac/.test(ua) ? "macOS" : /Windows/.test(ua) ? "Windows" : /Linux/.test(ua) ? "Linux" : "?";
-    const app = /Claude/i.test(ua) ? "app Claude" : "trình duyệt";
+    const app = /Claude/i.test(ua) ? "Claude app" : "browser";
     return {kind, os, app, vw:innerWidth};
   }
   const newSession = () => ({s:nowS(), e:nowS(), at:new Date().toISOString(), ...devInfo()});
@@ -587,10 +587,10 @@ table.days tr.next td{background:var(--accent-soft)}
   async function cloudSave(l, manual){
     clearTimeout(cloudTimer);
     const d = store.get("draft:"+l.id) || saveLocal(l);
-    if (!db){ setSave("local", d.savedAt, "chưa kết nối"); return; }
+    if (!db){ setSave("local", d.savedAt, "not connected"); return; }
     setSave("saving");
-    try { await db.doc("drafts/"+l.id).set(d); pendingL = null; setSave("ok", d.savedAt, manual ? "Đã lưu" : ""); }
-    catch(e){ pendingL = l; setSave("local", d.savedAt, e?.code || (navigator.onLine === false ? "mất mạng" : "lỗi")); }
+    try { await db.doc("drafts/"+l.id).set(d); pendingL = null; setSave("ok", d.savedAt, manual ? "Saved" : ""); }
+    catch(e){ pendingL = l; setSave("local", d.savedAt, e?.code || (navigator.onLine === false ? "offline" : "error")); }
   }
   window.addEventListener("online", () => { if (pendingL) cloudSave(pendingL); });
   setInterval(() => { if (pendingL && saveState.k === "local") cloudSave(pendingL); }, 30000);
@@ -600,7 +600,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const main = $("#main");
     const meta = lessons.find(x => x.id === current);
     if (meta && !meta.parts && (!bodies[meta.id] || bodies[meta.id].loading)){
-      main.innerHTML = `<div class="card hero t-${esc(meta.type)}"><span class="kind">${esc(TYPE_LABEL[meta.type]||"Bài học")}</span><h2>${esc(meta.title||"Bài học")}</h2><p class="note">Đang mở bài…</p></div>`;
+      main.innerHTML = `<div class="card hero t-${esc(meta.type)}"><span class="kind">${esc(TYPE_LABEL[meta.type]||"Lesson")}</span><h2>${esc(meta.title||"Lesson")}</h2><p class="note">Opening lesson…</p></div>`;
       loadBody(meta.id); return;
     }
     const l = meta ? {...meta, ...(meta.parts ? {} : bodies[meta.id])} : null;
@@ -615,35 +615,35 @@ table.days tr.next td{background:var(--accent-soft)}
     let qn = 0;
     const scores = String(grade?.score||"").split(/\s*·\s*/).filter(Boolean);
 
-    const tocItems = (l.parts||[]).map((p,pi)=>`<a href="#" data-go="part-${pi}" id="toc-${pi}"><span class="n">${pi+1}</span><span class="t">${esc(p.kind||p.title||"Phần "+(pi+1))}</span><span class="c" id="tocc-${pi}"></span></a>`).join("") + `<a href="#" data-go="part-fb" id="toc-fb"><span class="n">✓</span><span class="t">Feedback & Nộp</span><span class="c"></span></a>`;
+    const tocItems = (l.parts||[]).map((p,pi)=>`<a href="#" data-go="part-${pi}" id="toc-${pi}"><span class="n">${pi+1}</span><span class="t">${esc(p.kind||p.title||"Part "+(pi+1))}</span><span class="c" id="tocc-${pi}"></span></a>`).join("") + `<a href="#" data-go="part-fb" id="toc-fb"><span class="n">✓</span><span class="t">Feedback & submit</span><span class="c"></span></a>`;
     main.innerHTML = `
       <div class="toolbar">
-        <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Hiện/ẩn danh sách bài">☰<span class="bl"> Danh sách</span></button>
-        <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Ẩn mọi thứ trừ bài làm">🎯<span class="bl"> Tập trung</span></button>
+        <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Show/hide lesson list">☰<span class="bl"> Lessons</span></button>
+        <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Hide everything except the lesson">🎯<span class="bl"> Focus</span></button>
         <div class="grow"><span class="ttl">${esc(l.title||"")}</span>${nQ && !grade ? `<div class="bar" style="flex:1;min-width:80px"><i id="pbar2" style="width:0%"></i></div><span class="note mono" id="plab2">0/${nQ}</span>` : ""}</div>
-        ${grade ? `<span class="save-st" data-k="ok">✅ Đã chấm · xem kết quả đầu bài</span>`
-          : locked ? `<span class="save-st">Đã nộp ${esc(new Date(sub.submittedAt).toLocaleString("vi-VN"))} · đang chấm</span><button class="tbtn" id="edit" type="button">Sửa & nộp lại</button>`
-          : `<span class="save-st" id="save-st" role="status" title="${esc(saveTitle())}" aria-label="${esc(saveTitle())}">${esc(saveLabel())}</span><button class="tbtn" id="save-now" type="button" title="Lưu ngay lên mây">💾<span class="bl"> Lưu</span></button><button class="primary sm" id="submit" type="button" title="Nộp bài">📤<span class="bl"> Nộp bài</span></button>`}
+        ${grade ? `<span class="save-st" data-k="ok">✅ Graded · see results at the top</span>`
+          : locked ? `<span class="save-st">Submitted ${esc(new Date(sub.submittedAt).toLocaleString("en-GB"))} · being graded</span><button class="tbtn" id="edit" type="button">Edit & resubmit</button>`
+          : `<span class="save-st" id="save-st" role="status" title="${esc(saveTitle())}" aria-label="${esc(saveTitle())}">${esc(saveLabel())}</span><button class="tbtn" id="save-now" type="button" title="Save to the cloud now">💾<span class="bl"> Save</span></button><button class="primary sm" id="submit" type="button" title="Submit">📤<span class="bl"> Submit</span></button>`}
       </div>
       <div id="msg"></div>
       <div class="bookgrid">
       <div class="bookcol">
       <section class="card hero t-${esc(l.type)}">
-        <span class="kind">${esc(TYPE_LABEL[l.type]||"Bài học")} · ${esc(fmtDate(l.date))}</span>
-        <h2>${esc(l.title||"Bài học")}</h2>
+        <span class="kind">${esc(TYPE_LABEL[l.type]||"Lesson")} · ${esc(fmtDate(l.date))}</span>
+        <h2>${esc(l.title||"Lesson")}</h2>
         <div class="meta">
-          ${l.minutes?`<span class="dot">⏱ ~${esc(l.minutes)} phút</span>`:""}
-          <span class="dot">${(l.parts||[]).length} phần · ${nQ} câu</span>
+          ${l.minutes?`<span class="dot">⏱ ~${esc(l.minutes)} min</span>`:""}
+          <span class="dot">${(l.parts||[]).length} parts · ${nQ} questions</span>
           <span class="pill ${st}">${STATUS_LABEL[st]}</span>
         </div>
-        ${nQ && !grade ? `<div class="progress"><div class="bar"><i id="pbar" style="width:0%"></i></div><span class="note mono" id="plab">0/${nQ} câu</span></div>` : ""}
+        ${nQ && !grade ? `<div class="progress"><div class="bar"><i id="pbar" style="width:0%"></i></div><span class="note mono" id="plab">0/${nQ} questions</span></div>` : ""}
         ${l.intro_md ? `<div class="md intro">${md(l.intro_md)}</div>` : ""}
       </section>
-      ${grade ? `<section class="card grade" aria-label="Kết quả chấm">
-          <span class="label">Kết quả · gia sư đã chấm</span>
+      ${grade ? `<section class="card grade" aria-label="Results">
+          <span class="label">Results · graded by your tutor</span>
           ${scores.length?`<div class="score">${scores.map(s=>`<span>${esc(s)}</span>`).join("")}</div>`:""}
           <div class="md">${md(grade.summary_md)}</div>
-          ${grade.answers_md?`<details><summary>Đáp án & sửa lỗi</summary><div class="md">${md(grade.answers_md)}</div></details>`:""}
+          ${grade.answers_md?`<details><summary>Answers & corrections</summary><div class="md">${md(grade.answers_md)}</div></details>`:""}
           ${grade.next_md?`<div class="md">${md(grade.next_md)}</div>`:""}
         </section>` : ""}
       ${(l.parts||[]).map((p,pi) => `
@@ -662,16 +662,16 @@ table.days tr.next td{background:var(--accent-soft)}
           </div>
         </section>`).join("")}
       <section class="fb" id="part-fb" aria-labelledby="fb-h">
-        <h3 id="fb-h">📝 Feedback cuối bài</h3>
-        <div class="fl"><span>Độ khó của bài</span>
-          <div class="scale" role="radiogroup" aria-label="Độ khó">${[1,2,3,4,5].map(n=>`<label><input type="radio" name="fb-diff" id="fb-diff-${n}" value="${n}" ${fb.difficulty==n?"checked":""} ${locked?"disabled":""}><span>${n}</span></label>`).join("")}</div>
-          <div class="scale-cap"><span>quá dễ</span><span>quá khó</span></div></div>
-        <label class="fl" for="fb-hard"><span>Chỗ khó hiểu nhất</span><textarea id="fb-hard" placeholder="Câu nào, đoạn nào, từ nào làm Tân bí?" ${locked?"disabled":""}>${esc(fb.hardest||"")}</textarea></label>
-        <label class="fl" for="fb-min"><span>Thời gian làm bài này (phút)</span><input type="number" id="fb-min" min="0" inputmode="numeric" value="${esc(fb.minutes||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
-        <label class="fl" for="fb-extra"><span>Ngoài bài, hôm nay Tân nghe/đọc tiếng Anh thêm bao nhiêu phút? <span class="note">(phim, podcast, YouTube, truyện… – không bắt buộc)</span></span><input type="number" id="fb-extra" min="0" inputmode="numeric" value="${esc(fb.extra||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
+        <h3 id="fb-h">📝 Your feedback</h3>
+        <div class="fl"><span>How hard was this lesson?</span>
+          <div class="scale" role="radiogroup" aria-label="Difficulty">${[1,2,3,4,5].map(n=>`<label><input type="radio" name="fb-diff" id="fb-diff-${n}" value="${n}" ${fb.difficulty==n?"checked":""} ${locked?"disabled":""}><span>${n}</span></label>`).join("")}</div>
+          <div class="scale-cap"><span>too easy</span><span>too hard</span></div></div>
+        <label class="fl" for="fb-hard"><span>What was hardest to understand?</span><textarea id="fb-hard" placeholder="Which question, paragraph or word got you stuck?" ${locked?"disabled":""}>${esc(fb.hardest||"")}</textarea></label>
+        <label class="fl" for="fb-min"><span>Time spent on this lesson (minutes)</span><input type="number" id="fb-min" min="0" inputmode="numeric" value="${esc(fb.minutes||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
+        <label class="fl" for="fb-extra"><span>Extra English today outside this lesson (minutes)? <span class="note">(films, podcasts, YouTube, stories… – optional)</span></span><input type="number" id="fb-extra" min="0" inputmode="numeric" value="${esc(fb.extra||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
       </section>
       </div>
-      <nav class="toc" aria-label="Mục lục bài"><span class="label lbl">Mục lục</span>${tocItems}</nav>
+      <nav class="toc" aria-label="Lesson contents"><span class="label lbl">Contents</span>${tocItems}</nav>
       </div>`;
 
     if (!locked){
@@ -700,13 +700,13 @@ table.days tr.next td{background:var(--accent-soft)}
     const lines = p.listen.map(x => `<p>${x.who?`<b>${esc(x.who)}:</b> `:""}${esc(x.text)}</p>`).join("");
     return `<div class="player" data-key="${esc(key)}" data-pi="${pi}">
       <div class="pl-row">
-        <button class="primary pl-play" type="button">▶ Nghe</button>
-        <button class="ghost pl-stop" type="button" hidden>■ Dừng</button>
-        <label class="pl-rate">Tốc độ <select class="pl-sel">${[0.8,0.9,1,1.1].map(r=>`<option value="${r}" ${r==(p.rate||0.9)?"selected":""}>${r}×</option>`).join("")}</select></label>
-        <span class="note pl-n">Đã nghe ${n} lần</span>
+        <button class="primary pl-play" type="button">▶ Listen</button>
+        <button class="ghost pl-stop" type="button" hidden>■ Stop</button>
+        <label class="pl-rate">Speed <select class="pl-sel">${[0.8,0.9,1,1.1].map(r=>`<option value="${r}" ${r==(p.rate||0.9)?"selected":""}>${r}×</option>`).join("")}</select></label>
+        <span class="note pl-n">Played ${n}×</span>
       </div>
       <div class="note pl-msg" hidden></div>
-      <button class="ghost pl-tx" type="button">${open?"Ẩn lời":"Hiện lời (transcript)"}</button>
+      <button class="ghost pl-tx" type="button">${open?"Hide transcript":"Show transcript"}</button>
       <div class="md transcript" ${open?"":"hidden"}>${lines}</div>
     </div>`;
   }
@@ -714,18 +714,18 @@ table.days tr.next td{background:var(--accent-soft)}
     document.querySelectorAll(".player").forEach(box => {
       const key = box.dataset.key, p = (l.parts||[])[Number(box.dataset.pi)];
       const play = box.querySelector(".pl-play"), stop = box.querySelector(".pl-stop"), msg = box.querySelector(".pl-msg");
-      box.querySelector(".pl-tx").addEventListener("click", e => { if (!reveal[key]) actListen(box.dataset.pi, "reveal"); reveal[key] = !reveal[key]; box.querySelector(".transcript").hidden = !reveal[key]; e.target.textContent = reveal[key]?"Ẩn lời":"Hiện lời (transcript)"; });
+      box.querySelector(".pl-tx").addEventListener("click", e => { if (!reveal[key]) actListen(box.dataset.pi, "reveal"); reveal[key] = !reveal[key]; box.querySelector(".transcript").hidden = !reveal[key]; e.target.textContent = reveal[key]?"Hide transcript":"Show transcript"; });
       play.addEventListener("click", () => {
         const rate = Number(box.querySelector(".pl-sel").value)||0.9;
         actListen(box.dataset.pi, "play", rate);
         const lines = p.listen.map((x,i) => ({text:String(x.text).slice(0,2000), voice:x.voice||"buttery", rate, language:"en", id:"l"+i}));
         getTts().then(t => {
-          if (!t){ msg.hidden = false; msg.textContent = "Thiết bị này chưa đọc thành tiếng được (thử Chrome hoặc app Claude trên máy tính). Tạm thời Tân đọc phần lời nhé."; return; }
+          if (!t){ msg.hidden = false; msg.textContent = "This device can't play the audio (try Chrome or the Claude desktop app). For now, read the transcript."; return; }
           playingKey = key; play.hidden = true; stop.hidden = false; msg.hidden = true;
           t.speak(lines, {rate, language:"en"}).then(() => {
             plays[key] = (plays[key]||0)+1; store.set("plays", plays);
-            box.querySelector(".pl-n").textContent = `Đã nghe ${plays[key]} lần`;
-          }).catch(e => { if (e?.code && e.code!=="stopped"){ msg.hidden = false; msg.textContent = e.code==="rate_limited" ? "Đã nghe nhiều quá trong giờ này, đợi một lúc rồi nghe tiếp nhé." : "Chưa phát được ("+e.code+")."; } })
+            box.querySelector(".pl-n").textContent = `Played ${plays[key]}×`;
+          }).catch(e => { if (e?.code && e.code!=="stopped"){ msg.hidden = false; msg.textContent = e.code==="rate_limited" ? "Listening limit reached for this hour – please wait a bit and try again." : "Couldn't play ("+e.code+")."; } })
            .finally(() => { if (playingKey===key){ playingKey=null; } play.hidden = false; stop.hidden = true; });
         });
       });
@@ -740,38 +740,38 @@ table.days tr.next td{background:var(--accent-soft)}
       const st = box.querySelector(".rec-st"), au = box.querySelector(".rec-au"), hid = box.querySelector('input[type=hidden]');
       inp.addEventListener("change", async () => {
         const f = inp.files && inp.files[0]; if (!f) return;
-        if (f.size > 14*1024*1024){ st.textContent = "File quá lớn (tối đa ~14 MB). Thu ngắn lại khoảng 1–2 phút nhé."; return; }
+        if (f.size > 14*1024*1024){ st.textContent = "File too large (max ~14 MB). Please record 1–2 minutes."; return; }
         try { au.src = URL.createObjectURL(f); au.hidden = false; } catch {}
-        st.textContent = "Đang tải bản thu lên…";
+        st.textContent = "Uploading recording…";
         try {
           const assets = await claude.use("assets");
-          if (!assets){ st.textContent = "Trang chưa có quyền lưu file trên thiết bị này. Mở trang trên claude.ai khi đã đăng nhập."; return; }
+          if (!assets){ st.textContent = "This page can't store files on this device. Open it on claude.ai while signed in."; return; }
           const b64 = await new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(",")[1]||""); r.onerror = rej; r.readAsDataURL(f); });
           const up = await assets.upload(new Blob([b64], {type:"text/plain"}), {type:"text/plain"});
           hid.value = JSON.stringify({asset:up.id, enc:"base64", mime:f.type||"", name:f.name||"recording", size:f.size, at:new Date().toISOString()});
-          st.textContent = `✅ Đã tải lên: ${f.name||"bản thu"} (${Math.round(f.size/1024)} KB). Nhớ bấm Nộp bài khi xong.`;
+          st.textContent = `✅ Uploaded: ${f.name||"recording"} (${Math.round(f.size/1024)} KB). Remember to press Submit when done.`;
           saveLocal(l); updateProgress(l); cloudSave(l);
         } catch(e){
-          st.textContent = {too_large:"File quá lớn, thu ngắn lại nhé.", not_granted:"Cần bấm Cho phép để trang lưu file.", unavailable:"Thiết bị này chưa lưu file được."}[e?.code] || `Chưa tải lên được (${e?.code||"lỗi"}). Thử lại nhé.`;
+          st.textContent = {too_large:"File too large – record a shorter clip.", not_granted:"Press Allow so the page can store the file.", unavailable:"This device can't store files yet."}[e?.code] || `Upload failed (${e?.code||"error"}). Please try again.`;
         }
       });
     });
   }
 
   function summaryText(l, data){
-    const lines = [`Bài: ${l.id} – ${l.title||""}`];
+    const lines = [`Lesson: ${l.id} – ${l.title||""}`];
     let n = 0;
-    allQs(l).forEach(q => { lines.push(`${++n}. [${q.id}] ${q.q}\n→ ${data.answers[q.id]||"(bỏ trống)"}`); });
-    lines.push(`FEEDBACK: độ khó ${data.feedback.difficulty}/5 · khó nhất: ${data.feedback.hardest||"-"} · thời gian: ${data.feedback.minutes||"-"} phút`);
+    allQs(l).forEach(q => { lines.push(`${++n}. [${q.id}] ${q.q}\n→ ${data.answers[q.id]||"(blank)"}`); });
+    lines.push(`FEEDBACK: difficulty ${data.feedback.difficulty}/5 · hardest: ${data.feedback.hardest||"-"} · time: ${data.feedback.minutes||"-"} min`);
     return lines.join("\n").slice(0, 60000);
   }
 
   async function submit(l){
     const msg = $("#msg"), btn = $("#submit");
     const data = collect(l);
-    if (!data.feedback.difficulty){ msg.innerHTML = '<div class="banner warn">Chọn độ khó (1–5) ở phần Feedback rồi nộp nhé.</div>'; $("#fb-h")?.scrollIntoView({behavior:"smooth",block:"center"}); return; }
-    if (!db){ msg.innerHTML = '<div class="banner bad">Chưa kết nối được nơi lưu bài. Mở trang trên claude.ai khi đã đăng nhập rồi thử lại.</div>'; return; }
-    btn.disabled = true; btn.innerHTML = "⏳<span class=\"bl\"> Đang nộp…</span>";
+    if (!data.feedback.difficulty){ msg.innerHTML = '<div class="banner warn">Please rate the difficulty (1–5) in the feedback section, then submit.</div>'; $("#fb-h")?.scrollIntoView({behavior:"smooth",block:"center"}); return; }
+    if (!db){ msg.innerHTML = '<div class="banner bad">Can\'t reach the answer store. Open this page on claude.ai while signed in, then try again.</div>'; return; }
+    btn.disabled = true; btn.innerHTML = "⏳<span class=\"bl\"> Submitting…</span>";
     if (act){ const ss = act.sessions[act.sessions.length-1]; if (ss) ss.e = nowS(); }
     const rec = {lessonId:l.id, ...data, log:act, submittedAt:new Date().toISOString()};
     const diag = {at:new Date().toISOString()};
@@ -784,15 +784,15 @@ table.days tr.next td{background:var(--accent-soft)}
       const st = await c.canSendToClaude(); diag.canSend = st;
       if (st !== "available") return false;
       const anchor = await c.anchorFor(document.querySelector(".hero"));
-      const r = await c.sendToClaude({anchor, text:`📥 Nộp bài ${l.id} – gia sư chấm giúp mình (bài làm trong submissions/${l.id})`});
+      const r = await c.sendToClaude({anchor, text:`📥 Submitted ${l.id} – please grade (answers in submissions/${l.id})`});
       diag.thread = r?.threadId || ""; return true;
     })().catch(e => { diag.cCode = e?.code||""; diag.cMsg = String(e?.message||e||"").slice(0,300); return false; });
     sentPromise = Promise.race([sentPromise, new Promise(r => setTimeout(() => { diag.cTimeout = true; r(false); }, 8000))]);
     try {
       await savePromise;
     } catch(e){
-      btn.disabled = false; btn.innerHTML = "📤<span class=\"bl\"> Nộp bài</span>";
-      msg.innerHTML = `<div class="banner bad">Chưa lưu được bài (${esc(e?.code||"lỗi")}). Bài nháp vẫn còn trên máy, bấm Nộp bài lần nữa.</div>`;
+      btn.disabled = false; btn.innerHTML = "📤<span class=\"bl\"> Submit</span>";
+      msg.innerHTML = `<div class="banner bad">Couldn't submit (${esc(e?.code||"error")}). Your draft is still saved – press Submit again.</div>`;
       return;
     }
     subs[l.id] = rec; delete $("#main").dataset.editing;
@@ -800,7 +800,7 @@ table.days tr.next td{background:var(--accent-soft)}
     try { db.doc("inbox/"+l.id).set({lessonId:l.id, submittedAt:rec.submittedAt}); } catch {}
     renderList(); renderLesson();
     const m2 = $("#msg");
-    m2.innerHTML = '<div class="banner ok">Đã nộp. Đang báo gia sư…</div>';
+    m2.innerHTML = '<div class="banner ok">Submitted. Notifying your tutor…</div>';
     const text = summaryText(l, data);
     let notified = await sentPromise, reason = "";
     diag.via = notified ? "comments" : "";
@@ -812,52 +812,52 @@ table.days tr.next td{background:var(--accent-soft)}
         const r = await mcp.callTool("Claude Code Remote", "fire_trigger", {trigger_id:TRIGGER_ID, text});
         diag.result = JSON.stringify(r?.payload ?? r ?? null).slice(0,300); notified = true;
       }
-      else reason = "trang chưa có quyền gọi gia sư";
+      else reason = "the page can't reach the tutor yet";
     } catch(e){
       diag.code = e?.code||""; diag.message = String(e?.message||e||"").slice(0,800);
-      reason = {not_in_manifest:"Tân chưa cho phép trang gọi Claude Code Remote", approval_required:"cần Tân bấm Cho phép", server_not_connected:"chưa kết nối Claude Code Remote", blocked_by_policy:"tổ chức chặn công cụ này"}[e?.code] || (e?.code||"lỗi không rõ");
+      reason = {not_in_manifest:"Claude Code Remote not allowed for this page", approval_required:"press Allow", server_not_connected:"Claude Code Remote not connected", blocked_by_policy:"blocked by your organization"}[e?.code] || (e?.code||"unknown error");
     }
     diag.ok = notified;
     try { await db.doc("submissions/"+l.id).update({notify:diag}); } catch {}
-    if (notified) m2.innerHTML = '<div class="banner ok">Đã nộp và đã báo gia sư. Kết quả sẽ hiện ở đầu bài khi chấm xong (thường khoảng 1 phút).</div>';
+    if (notified) m2.innerHTML = '<div class="banner ok">Submitted and your tutor has been notified. Results will appear at the top when graded (usually about a minute).</div>';
     else {
-      m2.innerHTML = `<div class="banner warn">Bài đã lưu, nhưng chưa tự báo được gia sư (${esc(reason)}). Nhắn <b>"nộp bài ${esc(l.id)}"</b> trong phiên chat là gia sư sẽ chấm.</div>`;
+      m2.innerHTML = `<div class="banner warn">Saved, but your tutor couldn't be notified automatically (${esc(reason)}). Send <b>"submitted ${esc(l.id)}"</b> in the chat and it will be graded.</div>`;
     }
   }
 
   // ---- Hồ sơ & Tiến độ (meta/profile + stats/<lessonId>: vài trăm byte mỗi ngày)
   let profile = null, stats = [];
   const pct = v => (v==null || v==="") ? "–" : `${Math.round(Number(v))}%`;
-  const li = a => (a&&a.length) ? `<ul class="list">${a.map(x=>`<li>${inline(String(x))}</li>`).join("")}</ul>` : `<p class="note">Chưa có dữ liệu.</p>`;
+  const li = a => (a&&a.length) ? `<ul class="list">${a.map(x=>`<li>${inline(String(x))}</li>`).join("")}</ul>` : `<p class="note">No data yet.</p>`;
   function renderProfile(){
     const v = $("#view-profile"), p = profile || {};
     const c = p.cefr || {};
     const lv = (k, label) => `<div class="tile"><span class="label">${label}</span><b>${esc(c[k]||"–")}</b>${p.levels?.[k]?`<span class="sub">${esc(p.levels[k])}</span>`:""}</div>`;
     v.innerHTML = `
       <section class="card sec">
-        <span class="label">Hồ sơ học sinh${p.updatedAt?` · cập nhật ${esc(new Date(p.updatedAt).toLocaleDateString("vi-VN"))}`:""}</span>
-        <h2>Tân · mục tiêu tiếng Anh phổ thông C1</h2>
-        ${!profile ? `<p class="note">Hồ sơ sẽ có sau khi gia sư chấm bài đánh giá đầu vào (Ngày 1).</p>` : ""}
-        <div class="tiles">${lv("overall","Tổng thể (ước lượng)")}${lv("listening","Nghe")}${lv("reading","Đọc")}${lv("vocab","Từ vựng")}${lv("grammar","Ngữ pháp & từ nối")}</div>
+        <span class="label">Student profile${p.updatedAt?` · updated ${esc(new Date(p.updatedAt).toLocaleDateString("en-GB"))}`:""}</span>
+        <h2>Tân · goal: C1 general English</h2>
+        ${!profile ? `<p class="note">Your profile appears after the Day 1 assessment is graded.</p>` : ""}
+        <div class="tiles">${lv("overall","Overall (estimate)")}${lv("listening","Listening")}${lv("reading","Reading")}${lv("vocab","Vocabulary")}${lv("grammar","Grammar & linking")}</div>
       </section>
-      ${p.teacher_md ? `<section class="card sec"><span class="label">Giáo viên nhận xét</span><div class="md">${md(p.teacher_md)}</div></section>` : ""}
+      ${p.teacher_md ? `<section class="card sec"><span class="label">Tutor's comments</span><div class="md">${md(p.teacher_md)}</div></section>` : ""}
       <div class="cols">
-        <section class="card sec"><span class="label">Điểm mạnh</span>${li(p.strengths)}</section>
-        <section class="card sec"><span class="label">Cần cải thiện</span>${li(p.weaknesses)}</section>
+        <section class="card sec"><span class="label">Strengths</span>${li(p.strengths)}</section>
+        <section class="card sec"><span class="label">To improve</span>${li(p.weaknesses)}</section>
       </div>
       <div class="cols">
-        <section class="card sec"><span class="label">Sở thích (để chọn input)</span>${p.interests?.length?`<div class="chips">${p.interests.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div>`:`<p class="note">Chưa có dữ liệu.</p>`}${p.habits?`<p class="note">${esc(p.habits)}</p>`:""}</section>
-        <section class="card sec"><span class="label">Đang tập trung</span>${p.focus_md?`<div class="md">${md(p.focus_md)}</div>`:`<p class="note">Chưa có dữ liệu.</p>`}</section>
+        <section class="card sec"><span class="label">Interests (to choose input)</span>${p.interests?.length?`<div class="chips">${p.interests.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div>`:`<p class="note">No data yet.</p>`}${p.habits?`<p class="note">${esc(p.habits)}</p>`:""}</section>
+        <section class="card sec"><span class="label">Current focus</span>${p.focus_md?`<div class="md">${md(p.focus_md)}</div>`:`<p class="note">No data yet.</p>`}</section>
       </div>
-      ${(p.decisions||[]).length ? `<section class="card sec"><span class="label">Vì sao bài lại như vậy (nhật ký quyết định)</span>
-        <div class="tblwrap"><table class="days"><thead><tr><th>Ngày</th><th>Quyết định</th></tr></thead><tbody>
+      ${(p.decisions||[]).length ? `<section class="card sec"><span class="label">Why the lessons look like this (decision log)</span>
+        <div class="tblwrap"><table class="days"><thead><tr><th>Date</th><th>Decision</th></tr></thead><tbody>
         ${p.decisions.slice().reverse().map(d=>`<tr><td class="num">${esc(d.date||"")}</td><td>${inline(d.text||"")}</td></tr>`).join("")}
         </tbody></table></div></section>` : ""}`;
   }
   function chartSvg(rows){
     const W = 720, H = 240, L = 40, R = 70, T = 14, B = 30, iw = W-L-R, ih = H-T-B;
     const n = rows.length, x = i => L + (n<=1 ? iw/2 : i*iw/(n-1)), y = v => T + ih - (v/100)*ih;
-    const ser = [{k:"readPct", name:"Đọc", c:"var(--s-read)"},{k:"listenPct", name:"Nghe", c:"var(--s-listen)"}];
+    const ser = [{k:"readPct", name:"Reading", c:"var(--s-read)"},{k:"listenPct", name:"Listening", c:"var(--s-listen)"}];
     let g = [0,25,50,75,100].map(v=>`<line class="grid" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text class="axis" x="${L-8}" y="${y(v)+4}" text-anchor="end">${v}%</text>`).join("");
     const step = Math.max(1, Math.ceil(n/8));
     g += rows.map((r,i)=> (i%step===0||i===n-1) ? `<text class="axis" x="${x(i)}" y="${H-8}" text-anchor="middle">N${esc(r.dayNo||i+1)}</text>` : "").join("");
@@ -872,16 +872,16 @@ table.days tr.next td{background:var(--accent-soft)}
     labs.sort((a,b)=>a.yy-b.yy); for (let i=1;i<labs.length;i++) if (labs[i].yy-labs[i-1].yy<14) labs[i].yy = labs[i-1].yy+14;
     g += labs.map(l=>`<text class="dlab" x="${l.xx+8}" y="${l.yy+4}">${esc(l.t)}</text>`).join("");
     g += `<line class="xh" id="xh" x1="0" x2="0" y1="${T}" y2="${T+ih}" visibility="hidden"/><rect id="hit" x="${L}" y="${T}" width="${iw}" height="${ih}" fill="transparent"/>`;
-    return {svg:`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Mức hiểu nghe và đọc theo ngày">${g}</svg>`, x, W, n};
+    return {svg:`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Listening and reading comprehension by day">${g}</svg>`, x, W, n};
   }
   // Giờ học có hướng dẫn tích luỹ từ con số 0 (Cambridge English, ước lượng). B1+/B2+ là nội suy.
   const LEVEL_HOURS = {"A2":[180,200],"B1":[350,400],"B1+":[425,500],"B2":[500,600],"B2+":[600,700],"C1":[700,800]};
   // Diễn giải ngắn từ khung tự đánh giá CEFR (Council of Europe) – điều Tân làm được khi đạt mức đó.
   const CAN_DO = {
-    "B1+":"Nghe hiểu ý chính phần lớn podcast cho người học và hội thoại đời thường rõ ràng; đọc truyện graded và bài viết đời sống đơn giản mà ít phải đoán.",
-    "B2":"Theo được phần lớn tin tức, phim và series nói giọng chuẩn; đọc báo, blog, bài phân tích về chủ đề quen thuộc; nói chuyện tự nhiên với người bản xứ về nhiều chủ đề mà hai bên không quá vất vả.",
-    "B2+":"Xem phim/podcast bản xứ ít cần phụ đề; đọc sách thường (không graded) khá thoải mái; bắt đầu hiểu hàm ý, giọng điệu, đùa nhẹ.",
-    "C1":"Hiểu lời nói dài, nhanh, không theo cấu trúc rõ ràng; xem phim gần như không cần phụ đề; đọc tài liệu dài, phức tạp; dùng tiếng Anh linh hoạt cho công việc, học tập, xã hội – đủ nền để chuyển sang tiếng Anh chuyên ngành IT."};
+    "B1+":"Follow the main points of most learner podcasts and clear everyday conversations; read graded stories and simple everyday articles with little guessing.",
+    "B2":"Understand most news, films and series in standard accents; read articles, blogs and analysis on familiar topics; talk naturally with native speakers on many topics without strain on either side.",
+    "B2+":"Watch native films and podcasts with few subtitles; read ordinary (ungraded) books fairly comfortably; start catching implications, tone and light humour.",
+    "C1":"Understand long, fast, loosely structured speech; watch films with almost no subtitles; read long, complex texts; use English flexibly for work, study and social life – a solid base for specialist IT English."};
   const ORDER = ["A2","B1","B1+","B2","B2+","C1"];
   let paceChoice = null;
   function weekKey(d){ const t = new Date(d+"T12:00:00"); const day = (t.getDay()+6)%7; t.setDate(t.getDate()-day); return t.toISOString().slice(0,10); }
@@ -907,17 +907,17 @@ table.days tr.next td{background:var(--accent-soft)}
       return {lv, need, months:[m(need[0]), m(need[1])]};
     });
     const wkBars = (() => {
-      if (!wk.length) return `<p class="note">Chưa có tuần nào. Số giờ = thời gian làm bài + thời gian nghe/đọc thêm Tân ghi ở Feedback.</p>`;
+      if (!wk.length) return `<p class="note">No weeks yet. Hours = lesson time + extra listening/reading you log in the feedback.</p>`;
       const show = wk.slice(-10), W = 720, H = 180, L = 36, R = 10, T = 12, B = 26, iw = W-L-R, ih = H-T-B;
       const mx = Math.max(target*1.2, ...show.map(k=>weeks[k]))||1, bw = Math.min(46, iw/show.length - 10);
       const y = h => T + ih - h/mx*ih;
       let g = [0, Math.round(mx/2), Math.round(mx)].map(h=>`<line class="grid" x1="${L}" x2="${W-R}" y1="${y(h)}" y2="${y(h)}"/><text class="axis" x="${L-6}" y="${y(h)+4}" text-anchor="end">${h}h</text>`).join("");
-      g += `<line x1="${L}" x2="${W-R}" y1="${y(target)}" y2="${y(target)}" stroke="var(--ink-3)" stroke-dasharray="4 4"/><text class="axis" x="${W-R}" y="${y(target)-5}" text-anchor="end">mục tiêu ${target}h</text>`;
+      g += `<line x1="${L}" x2="${W-R}" y1="${y(target)}" y2="${y(target)}" stroke="var(--ink-3)" stroke-dasharray="4 4"/><text class="axis" x="${W-R}" y="${y(target)-5}" text-anchor="end">target ${target}h</text>`;
       show.forEach((k,i) => { const cx = L + (i+0.5)*iw/show.length, h = weeks[k], top = y(h);
-        g += `<path d="M${cx-bw/2},${T+ih} V${top+4} q0,-4 4,-4 H${cx+bw/2-4} q4,0 4,4 V${T+ih} Z" fill="var(--s-read)"><title>Tuần từ ${k}: ${h.toFixed(1)} giờ</title></path>`;
+        g += `<path d="M${cx-bw/2},${T+ih} V${top+4} q0,-4 4,-4 H${cx+bw/2-4} q4,0 4,4 V${T+ih} Z" fill="var(--s-read)"><title>Week of ${k}: ${h.toFixed(1)} h</title></path>`;
         g += `<text class="axis" x="${cx}" y="${H-8}" text-anchor="middle">${k.slice(8,10)}/${k.slice(5,7)}</text>`;
         if (i === show.length-1) g += `<text class="dlab" x="${cx}" y="${top-6}" text-anchor="middle">${h.toFixed(1)}h</text>`; });
-      return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Số giờ học mỗi tuần">${g}</svg></div>`;
+      return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Study hours per week">${g}</svg></div>`;
     })();
     const weak = (P.weaknesses||[]).map(w => typeof w === "string" ? {area:"", detail:w} : w);
     const recs = coach.recommendations || [];
@@ -925,51 +925,51 @@ table.days tr.next td{background:var(--accent-soft)}
     const nextLv = proj[0]?.lv;
     v.innerHTML = `
       <section class="card sec">
-        <span class="label">Bức tranh hiện tại</span>
-        ${coach.summary_md ? `<div class="md">${md(coach.summary_md)}</div>` : `<p class="note">Gia sư sẽ viết tóm tắt sau khi chấm Ngày 1.</p>`}
+        <span class="label">Where you are now</span>
+        ${coach.summary_md ? `<div class="md">${md(coach.summary_md)}</div>` : `<p class="note">Your tutor will write a summary after grading Day 1.</p>`}
         <div class="tiles">
-          <div class="tile"><span class="label">Mức tổng thể</span><b>${esc(cur||"B1?")}</b><span class="sub">${cur?"gia sư ước lượng":"tự đánh giá, chờ Ngày 1"}</span></div>
-          <div class="tile"><span class="label">Đã học</span><b>${rows.length} ngày</b><span class="sub">${totalH.toFixed(1)} giờ (bài + input thêm)</span></div>
-          <div class="tile"><span class="label">Hiểu khi nghe · gần đây</span><b>${pct(recent("listenPct"))}</b><span class="sub">cả khoá ${pct(avg("listenPct"))}</span></div>
-          <div class="tile"><span class="label">Hiểu khi đọc · gần đây</span><b>${pct(recent("readPct"))}</b><span class="sub">cả khoá ${pct(avg("readPct"))}</span></div>
+          <div class="tile"><span class="label">Overall level</span><b>${esc(cur||"B1?")}</b><span class="sub">${cur?"tutor's estimate":"self-assessed, waiting for Day 1"}</span></div>
+          <div class="tile"><span class="label">Studied</span><b>${rows.length} day${rows.length===1?"":"s"}</b><span class="sub">${totalH.toFixed(1)} h (lessons + extra input)</span></div>
+          <div class="tile"><span class="label">Listening comprehension · recent</span><b>${pct(recent("listenPct"))}</b><span class="sub">all-time ${pct(avg("listenPct"))}</span></div>
+          <div class="tile"><span class="label">Reading comprehension · recent</span><b>${pct(recent("readPct"))}</b><span class="sub">all-time ${pct(avg("readPct"))}</span></div>
         </div>
       </section>
       <section class="card sec">
-        <span class="label">Gia sư khuyên để tiến nhanh hơn</span>
-        ${recs.length ? `<div class="recs">${recs.map(r=>`<div class="rec-card"><b>${esc(r.title||"")}</b>${r.why?`<p class="note">Vì sao: ${inline(r.why)}</p>`:""}${r.how?`<p>${inline(r.how)}</p>`:""}</div>`).join("")}</div>` : `<p class="note">Chưa có.</p>`}
+        <span class="label">Tutor's tips to improve faster</span>
+        ${recs.length ? `<div class="recs">${recs.map(r=>`<div class="rec-card"><b>${esc(r.title||"")}</b>${r.why?`<p class="note">Why: ${inline(r.why)}</p>`:""}${r.how?`<p>${inline(r.how)}</p>`:""}</div>`).join("")}</div>` : `<p class="note">None yet.</p>`}
       </section>
         <section class="card sec">
-          <span class="label">Thời gian học mỗi tuần</span>
+          <span class="label">Study time per week</span>
           ${wkBars}
-          <p class="note">Mục tiêu hiện tại: <b>${target} giờ/tuần</b>${coach.target_why?` – ${inline(coach.target_why)}`:""}. Trung bình 4 tuần gần nhất: <b>${measured!=null?measured.toFixed(1)+" giờ":"–"}</b>.</p>
+          <p class="note">Current target: <b>${target} h/week</b>${coach.target_why?` – ${inline(coach.target_why)}`:""}. Average over the last 4 weeks: <b>${measured!=null?measured.toFixed(1)+" h":"–"}</b>.</p>
         </section>
         <section class="card sec">
-          <span class="label">Đang yếu gì & kế hoạch</span>
-          ${weak.length ? `<div class="weak">${weak.map(w=>`<div class="weak-item">${w.area?`<span class="pill">${esc(w.area)}</span>`:""}<div><b>${inline(w.detail||"")}</b>${w.evidence?`<p class="note">Dấu hiệu: ${inline(w.evidence)}</p>`:""}${w.plan?`<p>→ ${inline(w.plan)}</p>`:""}</div></div>`).join("")}</div>` : `<p class="note">Chưa có.</p>`}
+          <span class="label">Weak spots & plan</span>
+          ${weak.length ? `<div class="weak">${weak.map(w=>`<div class="weak-item">${w.area?`<span class="pill">${esc(w.area)}</span>`:""}<div><b>${inline(w.detail||"")}</b>${w.evidence?`<p class="note">Evidence: ${inline(w.evidence)}</p>`:""}${w.plan?`<p>→ ${inline(w.plan)}</p>`:""}</div></div>`).join("")}</div>` : `<p class="note">None yet.</p>`}
         </section>
       <section class="card sec">
-        <span class="label">Dự báo tới C1</span>
-        <div class="pace">Nếu Tân học
-          <select id="pace-sel" class="pl-sel">${[3,5,7,9,12,15].concat([pace]).filter((x,i,a)=>a.indexOf(x)===i).sort((a,b)=>a-b).map(h=>`<option value="${h}" ${h==pace?"selected":""}>${h} giờ/tuần</option>`).join("")}</select>
-          ${paceChoice==null ? `<span class="note">(${measured!=null?"theo nhịp đo được 4 tuần gần nhất":"theo mục tiêu, chưa đủ dữ liệu đo"})</span>` : ""}
+        <span class="label">Forecast to C1</span>
+        <div class="pace">If you study
+          <select id="pace-sel" class="pl-sel">${[3,5,7,9,12,15].concat([pace]).filter((x,i,a)=>a.indexOf(x)===i).sort((a,b)=>a-b).map(h=>`<option value="${h}" ${h==pace?"selected":""}>${h} h/week</option>`).join("")}</select>
+          ${paceChoice==null ? `<span class="note">(${measured!=null?"your measured pace, last 4 weeks":"your target – not enough data yet"})</span>` : ""}
         </div>
-        <div class="tblwrap"><table class="days"><thead><tr><th>Mức</th><th>Còn khoảng</th><th>Ước tính</th><th>Khi đạt, Tân làm được</th></tr></thead><tbody>
-          ${proj.map(p=>`<tr class="${p.lv===nextLv?"next":""}"><td class="num"><b>${esc(p.lv)}</b></td><td class="num">${p.need[0]}–${p.need[1]} giờ</td><td class="num">~${p.months[0]===p.months[1]?p.months[0]:p.months[0]+"–"+p.months[1]} tháng</td><td>${esc(CAN_DO[p.lv]||"")}</td></tr>`).join("")}
+        <div class="tblwrap"><table class="days"><thead><tr><th>Level</th><th>Still needed</th><th>Estimate</th><th>At this level you can</th></tr></thead><tbody>
+          ${proj.map(p=>`<tr class="${p.lv===nextLv?"next":""}"><td class="num"><b>${esc(p.lv)}</b></td><td class="num">${p.need[0]}–${p.need[1]} h</td><td class="num">~${p.months[0]===p.months[1]?p.months[0]:p.months[0]+"–"+p.months[1]} months</td><td>${esc(CAN_DO[p.lv]||"")}</td></tr>`).join("")}
         </tbody></table></div>
-        <p class="note">Cách tính: số giờ học có hướng dẫn mà Cambridge English ước lượng cho mỗi cấp CEFR (B1 ~350–400 → B2 ~500–600 → C1 ~700–800 giờ tính từ đầu; B1+/B2+ là nội suy), chia cho số giờ/tuần. Đây là <b>ước lượng thô</b>: tiến độ thật phụ thuộc chất lượng và lượng input. Nghe/đọc thêm ngoài bài thường rút ngắn đáng kể. Gia sư hiệu chỉnh lại mức hiện tại khoảng mỗi 3–4 tuần.</p>
+        <p class="note">How it's calculated: Cambridge English's guided learning hours per CEFR level (B1 ~350–400 → B2 ~500–600 → C1 ~700–800 hours from zero; B1+/B2+ interpolated), divided by your hours per week. This is a <b>rough estimate</b>: real progress depends on the amount and quality of input, and extra listening/reading usually shortens it a lot. Your tutor recalibrates your level every 3–4 weeks.</p>
       </section>
       <section class="card sec">
-        <span class="label">Mức hiểu theo ngày (gia sư đánh giá)</span>
-        ${ch ? `<div class="legend"><span><i style="background:var(--s-read)"></i>Đọc</span><span><i style="background:var(--s-listen)"></i>Nghe</span></div>
+        <span class="label">Comprehension by day (tutor's assessment)</span>
+        ${ch ? `<div class="legend"><span><i style="background:var(--s-read)"></i>Reading</span><span><i style="background:var(--s-listen)"></i>Listening</span></div>
           <div class="chart" id="chart">${ch.svg}<div class="tip" id="tip" hidden></div></div>
-          <p class="note">Mục tiêu theo Comprehensible Input: bài đọc/nghe rộng hiểu khoảng 90–98%. Thấp hơn thì gia sư hạ mức, cao và dễ quá thì nâng mức.</p>`
-          : `<p class="note">Biểu đồ sẽ hiện khi có bài đầu tiên được chấm.</p>`}
+          <p class="note">Comprehensible Input target: understand about 90–98% of extensive reading/listening. Lower → your tutor eases the level; higher and too easy → it goes up.</p>`
+          : `<p class="note">The chart appears once your first lesson is graded.</p>`}
       </section>
       <section class="card sec">
-        <span class="label">Đánh giá từng ngày</span>
-        ${rows.length ? `<div class="tblwrap"><table class="days"><thead><tr><th>Ngày</th><th>Bài</th><th>Nghe</th><th>Đọc</th><th>Độ khó</th><th>Phút (bài + thêm)</th><th>Giáo viên nhận xét</th></tr></thead><tbody>
+        <span class="label">Day-by-day assessment</span>
+        ${rows.length ? `<div class="tblwrap"><table class="days"><thead><tr><th>Day</th><th>Lesson</th><th>Listening</th><th>Reading</th><th>Difficulty</th><th>Minutes (lesson + extra)</th><th>Tutor's note</th></tr></thead><tbody>
           ${rows.slice().reverse().map(r=>`<tr data-id="${esc(r.lessonId)}"><td class="num">N${esc(r.dayNo||"")} · ${esc(fmtDate(r.date))}</td><td>${esc(r.title||"")}</td><td class="num">${pct(r.listenPct)}</td><td class="num">${pct(r.readPct)}</td><td class="num">${r.difficulty?esc(r.difficulty)+"/5":"–"}</td><td class="num">${esc(r.minutesActual||"–")}${r.extraMinutes?" + "+esc(r.extraMinutes):""}</td><td>${inline(r.note||"")}</td></tr>`).join("")}
-          </tbody></table></div>` : `<p class="note">Chưa có ngày nào được chấm.</p>`}
+          </tbody></table></div>` : `<p class="note">No graded days yet.</p>`}
       </section>`;
     v.querySelectorAll("tr[data-id]").forEach(tr => tr.addEventListener("click", () => { location.hash = tr.dataset.id; }));
     $("#pace-sel").addEventListener("change", e => { paceChoice = Number(e.target.value); renderProgress(); });
@@ -981,7 +981,7 @@ table.days tr.next td{background:var(--accent-soft)}
         const row = rows[bi], px = ch.x(bi);
         xh.setAttribute("x1",px); xh.setAttribute("x2",px); xh.setAttribute("visibility","visible");
         tip.hidden = false; tip.style.left = (px/ch.W*r.width)+"px"; tip.style.top = "40px";
-        tip.innerHTML = `<b>Ngày ${esc(row.dayNo||bi+1)} · ${esc(fmtDate(row.date))}</b><div><span class="sw" style="background:var(--s-read)"></span>Đọc ${pct(row.readPct)}</div><div><span class="sw" style="background:var(--s-listen)"></span>Nghe ${pct(row.listenPct)}</div>`;
+        tip.innerHTML = `<b>Day ${esc(row.dayNo||bi+1)} · ${esc(fmtDate(row.date))}</b><div><span class="sw" style="background:var(--s-read)"></span>Reading ${pct(row.readPct)}</div><div><span class="sw" style="background:var(--s-listen)"></span>Listening ${pct(row.listenPct)}</div>`;
       };
       const hide = () => { tip.hidden = true; xh.setAttribute("visibility","hidden"); };
       svg.querySelector("#hit").addEventListener("pointermove", move);
@@ -1016,9 +1016,9 @@ table.days tr.next td{background:var(--accent-soft)}
       profile = prof && Object.keys(prof).length ? prof : null;
       $("#s-done").textContent = stats.length;
       if (profile?.week != null){ week = Number(profile.week)||1; $("#s-week").textContent = week; }
-      if (profile?.streak != null) $("#s-streak").textContent = profile.streak;
+      if (profile?.streak != null){ $("#s-streak").textContent = profile.streak; $("#s-streak-u").textContent = Number(profile.streak) === 1 ? "day" : "days"; }
       renderTrack();
-    } catch(e){ $("#list").innerHTML = `<p class="note">Không tải được danh sách bài (${esc(e?.code||"lỗi")}). Tải lại trang thử nhé.</p>`; }
+    } catch(e){ $("#list").innerHTML = `<p class="note">Couldn't load the lesson list (${esc(e?.code||"error")}). Please reload.</p>`; }
     route();
     // 2) Database chỉ để nộp bài
     db = window.claude?.use ? await claude.use("db").catch(() => null) : null;

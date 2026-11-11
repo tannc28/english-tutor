@@ -31,7 +31,7 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 4. **Đọc + nghe cùng một nội dung.** Nghe trước, đọc sau (hoặc đọc kèm) rồi nghe lại. Đây là cách hiệu quả để nối âm thanh với chữ.
 5. **Tiếng Anh chuẩn, tự nhiên.** Tự viết bài theo cấp độ (graded), câu tự nhiên như người bản xứ nói; không dịch kiểu Việt. Khi đủ trình độ thì dùng nguồn thật (VOA Learning English, podcast cho người học, rồi podcast/YouTube người bản xứ) qua link, không chép nguyên văn.
 6. **Hỗ trợ "nối" (vấn đề cốt lõi của Tân):** gloss chunk/collocation thay vì từ đơn; đánh dấu từ nối (so, but, because, however, which…); hỏi "it/this/they chỉ gì?"; tách 1–2 câu dài mỗi bài.
-7. **Giải thích bằng tiếng Việt ngắn gọn, nội dung bằng tiếng Anh.** Không đưa đáp án trước khi Tân trả lời.
+7. **Full English (Tân yêu cầu 11/11):** hướng dẫn, câu hỏi, gloss trong bài đều bằng tiếng Anh đơn giản (gloss dùng nghĩa tiếng Anh dễ hơn; chỉ thêm tiếng Việt khi thật cần). Nhận xét chấm: tiếng Anh đơn giản, thêm tiếng Việt cho điểm khó. Không đưa đáp án trước khi Tân trả lời.
 
 **Nghe (bổ trợ cho CI):**
 - Chu trình nghe kiểu Vandergrift, rút gọn: đoán nội dung → nghe lấy ý → trả lời → nghe lại → mới xem lời → nghe lần cuối.
@@ -82,7 +82,7 @@ Bài nộp có `log` (trang tự ghi, chỉ số tổng hợp, xem `web/README.m
 - **Phân bổ thời gian:** `parts[pi].ms` so với số phút dự kiến → phần nào nặng; tổng thời gian thực ≠ thời gian Tân tự báo thì tin log hơn.
 - **Thiết bị & giờ học:** mỗi phiên có `kind` (máy tính/điện thoại), `os`, `at` (giờ thật, đổi sang giờ VN). Dùng để soạn bài hợp hoàn cảnh: hay làm trên điện thoại → phần ngắn, ít gõ, nghe nhiều (lưu ý điện thoại có thể không phát được bài nghe do Claude đọc); hay học khuya → bài nhẹ hơn; làm rải nhiều thiết bị là bình thường, không phải dấu hiệu xấu.
 - **Nghỉ giữa chừng:** nhiều `sessions` cách xa nhau → bài quá dài hoặc mệt; cân nhắc rút ngắn.
-- **Câu trả lời "Khác: …" / "Không biết" / "Không chắc"** là Tân trung thực báo chưa chắc: không trừ nặng như sai, ghi rõ chỗ mù mờ Tân tự nêu, dùng nó để chọn hỗ trợ cho bài sau. Đây là dữ liệu quý hơn một câu đoán đúng.
+- **Câu trả lời "Unsure: …" (cũ: "Khác: …") / "Không biết" / "Không chắc"** là Tân trung thực báo chưa chắc: không trừ nặng như sai, ghi rõ chỗ mù mờ Tân tự nêu, dùng nó để chọn hỗ trợ cho bài sau. Đây là dữ liệu quý hơn một câu đoán đúng.
 - Ghi 1–3 nhận xét ngắn về quá trình vào `grades/<id>.summary_md` (mục "Quá trình làm bài") và điểm yếu/khuyên tương ứng vào `profile` (coach/weaknesses). Nói thẳng nhưng nhẹ nhàng, không phán xét.
 
 ## 7. Chấm & theo dõi
