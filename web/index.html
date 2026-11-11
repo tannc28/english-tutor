@@ -371,7 +371,7 @@ table.days tr.next td{background:var(--accent-soft)}
       const loc = store.get("draft:"+id);
       if (!loc || (c.savedAt||"") > (loc.savedAt||"")){
         store.set("draft:"+id, c);
-        if (c.log && c.log.v === 1){ act = c.log; act.sessions.push({s:nowS(), e:nowS()}); }
+        if (c.log && c.log.v === 1){ act = c.log; act.sessions.push(newSession()); }
         if (!document.activeElement?.closest?.(".book")) renderLesson();
         setSave("ok", c.savedAt, "Đã lấy bản lưu trên mây");
       } else setSave("ok", loc.savedAt);
@@ -520,10 +520,18 @@ table.days tr.next td{background:var(--accent-soft)}
   //   listen[pi]: plays, rates, revealAt (giây hiện lời), answeredBeforeReveal (số câu của phần đã trả lời trước khi xem lời)
   let act = null, actLastInput = 0, actCurQ = null, actTick = null, actDirty = false, actLesson = null;
   const nowS = () => act ? Math.round((Date.now() - act.t0)/1000) : 0;
+  function devInfo(){
+    const ua = navigator.userAgent || "", w = Math.min(screen.width||0, screen.height||0) || innerWidth;
+    const kind = /iPad|Tablet/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? "tablet" : (/Mobi|iPhone|Android/i.test(ua) ? "phone" : "computer");
+    const os = /iPhone|iPad|iPod/.test(ua) ? "iOS" : /Android/.test(ua) ? "Android" : /Mac/.test(ua) ? "macOS" : /Windows/.test(ua) ? "Windows" : /Linux/.test(ua) ? "Linux" : "?";
+    const app = /Claude/i.test(ua) ? "app Claude" : "trình duyệt";
+    return {kind, os, app, vw:innerWidth};
+  }
+  const newSession = () => ({s:nowS(), e:nowS(), at:new Date().toISOString(), ...devInfo()});
   function initActivity(l, saved){
     actLesson = l;
     act = (saved && saved.v === 1) ? saved : {v:1, t0:Date.now(), sessions:[], parts:{}, q:{}, listen:{}};
-    act.sessions.push({s:nowS(), e:nowS()});
+    act.sessions.push(newSession());
     clearInterval(actTick);
     actTick = setInterval(() => {
       if (!act || document.hidden) return;
@@ -567,7 +575,7 @@ table.days tr.next td{background:var(--accent-soft)}
   document.addEventListener("visibilitychange", () => {
     if (!act) return;
     if (document.hidden){ const ss = act.sessions[act.sessions.length-1]; if (ss) ss.e = nowS(); if (actLesson) saveLocal(actLesson); }
-    else act.sessions.push({s:nowS(), e:nowS()});
+    else act.sessions.push(newSession());
   });
   document.addEventListener("focusin", ev => { const box = ev.target?.closest?.(".q"); if (box && act){ actCurQ = box.id.replace(/^qb-/,""); actPoke(); const r = act.q[actCurQ] = act.q[actCurQ] || {first:nowS(), ms:0, edits:0}; } });
   document.addEventListener("scroll", actPoke, {passive:true});
