@@ -283,13 +283,22 @@ button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid va
     m2.innerHTML = '<div class="note">Đang báo gia sư…</div>';
     const text = summaryText(l, data);
     let notified = false, reason = "";
+    const diag = {at:new Date().toISOString()};
     try {
       const mcp = await claude.use("mcp");
-      if (mcp){ await mcp.callTool("Claude Code Remote", "fire_trigger", {trigger_id:TRIGGER_ID, text}); notified = true; }
+      diag.mcp = !!mcp;
+      if (mcp){
+        try { const lt = await mcp.listTools("Claude Code Remote"); diag.tools = JSON.stringify(lt).slice(0,1500); } catch(e){ diag.listErr = (e?.code||"")+" "+(e?.message||"").slice(0,300); }
+        const r = await mcp.callTool("Claude Code Remote", "fire_trigger", {trigger_id:TRIGGER_ID, text});
+        diag.result = JSON.stringify(r?.payload ?? r ?? null).slice(0,800); notified = true;
+      }
       else reason = "trang chưa có quyền gọi gia sư";
     } catch(e){
+      diag.code = e?.code||""; diag.message = String(e?.message||e||"").slice(0,800);
       reason = {not_in_manifest:"Tân chưa cho phép trang gọi Claude Code Remote", approval_required:"cần Tân bấm Cho phép", server_not_connected:"chưa kết nối Claude Code Remote", blocked_by_policy:"tổ chức chặn công cụ này"}[e?.code] || (e?.code||"lỗi không rõ");
     }
+    diag.ok = notified;
+    try { await db.doc("submissions/"+l.id).update({notify:diag}); } catch {}
     if (notified) m2.innerHTML = '<div class="banner ok">Đã nộp và đã báo gia sư. Kết quả sẽ hiện ngay trên trang này khi chấm xong.</div>';
     else {
       m2.innerHTML = `<div class="banner warn">Bài đã lưu, nhưng chưa tự báo được gia sư (${esc(reason)}). Nhắn <b>"nộp bài ${esc(l.id)}"</b> trong phiên chat là gia sư sẽ chấm.</div>
