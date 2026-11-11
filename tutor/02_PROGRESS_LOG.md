@@ -23,6 +23,7 @@ Web lớp học: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (schema: `web
 | Ngày | Bài | Điểm | Feedback của Tân | Ghi chú |
 |---|---|---|---|---|
 | 11/11/2026 (T4) | Walk Pack sáng (chạy thử) | – | – | Giới thiệu chunk Tuần 1: work as a…, be responsible for…, work on…, so, because, but. Câu hỏi: "What do you do at work, and why did you choose IT?" |
+| 11/11/2026 (T4) | Bài thử web (không tính TB) | Reading 9/10 · Dictation 75% | Độ khó 2/5, 4 phút, "không có chỗ khó" | Hiểu đúng quy chiếu *it*. Lỗi output: cụm danh từ (api payment → payment API), every day/everyday, "use 2 days" → it took… / spend |
 
 ## Thay đổi định hướng
 - 11/11/2026: Tân yêu cầu tập trung INPUT (reading + listening thật kỹ, hiểu hết) trước, OUTPUT (speaking/writing) ở phase sau. Bắt buộc feedback mỗi bài; Talk Time cuối tuần; CN nhắc học. Mọi bài diễn ra trong 1 phiên Claude Code chính.
@@ -36,6 +37,10 @@ Web lớp học: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (schema: `web
 | work as a … | làm (vị trí) … | 11/11 | 12/11 | new |
 | be responsible for … | chịu trách nhiệm về … | 11/11 | 12/11 | new |
 | work on … | làm (dự án/tính năng) … | 11/11 | 12/11 | new |
+| it takes sb + time | tốn (ai) bao lâu | 11/11 | 12/11 | new |
+| spend + time (on) | dành thời gian | 11/11 | 12/11 | new |
+| every day / everyday | mỗi ngày / thường ngày (tính từ) | 11/11 | 12/11 | new |
+| payment API (cụm danh từ) | bổ nghĩa đứng trước | 11/11 | 12/11 | new |
 
 ## Due for review
-- 12/11: work as a…, be responsible for…, work on…
+- 12/11: work as a…, be responsible for…, work on…, it takes sb + time, spend + time, every day, payment API
