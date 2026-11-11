@@ -5,7 +5,7 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: Chỉ INPUT (nghe + đọc). Output/phát âm chỉ khi Tân muốn.
-- Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/1 ngày
+- Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/2 ngày
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
 - Cập nhật hồ sơ: 2026-11-11T21:45:00+07:00
 
@@ -56,30 +56,32 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-11 | Chốt lịch học tuần (ngủ 23:30, dậy 7:15): T2–T6 7:45–8:25 nghe + 20:30–21:20 đọc; T7–CN 9:00–10:30 bài, 14:30–16:00 nghe tự do, 20:00–21:00 phim. Bài ngày thường chia rõ phần sáng (nghe ~40') và tối (đọc ~50'). |
 | 2026-11-11 | Tân muốn học tối 2 giờ và nghe thêm chủ động → buổi tối 20:30–22:30 (bài 60' + nghe tự do 50'), mục tiêu 21 giờ/tuần; tạo thư viện nghe đã kiểm tra link (data/resources.json, tab 🎧 Listen) chia 3 tầng theo trình độ; ngày bận/rảnh Tân báo để chỉnh. |
 | 2026-11-11 | Tân không xem phim/series → input nghe chỉ YouTube + podcast; buổi tối cuối tuần đổi thành YouTube/podcast. Thêm tab 📅 Plan (List/Calendar) với bài nghe gia sư chọn mỗi ngày (data/plan.json) + nút Apple Podcasts cho iPhone. |
+| 2026-11-12 | Ngày 2: nghe chậm 0.85× theo 3 bước (hội thoại Hope Street + bài nói 'first-night effect' – cùng chủ đề giấc ngủ), đọc rộng Hope Street tập 2 (dễ, ~400 từ), đọc kỹ B1+/B2 về AI 'hallucination' (sở thích + từ nối yet/rather/however/even though/until…though), 6 câu nhận diện although/unless/rather + be used to/suggest + V-ing trong câu mới. Full English. ~100'. |
 
 ## Lịch sử ngày học
 | Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |
 |---|---|---|---|---|---|---|---|---|
 | N1 · 2026-11-11 | Day 1 – Đánh giá đầu vào toàn diện | graded | 60% | 88% | 3 | 90 | – | Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k |
+| N2 · 2026-11-12 | Day 2 – Sleep, cafés and chatbots | open | – | – | – | – | – |  |
 
 ## Truyện dài kỳ: Hope Street
-- Nhân vật: Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà)
-- Đã có: Tập 1 – The Key (Ngày 1)
+- Nhân vật: Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà); Jess (quán cà phê đầu phố, tóc đỏ ngắn); Claire (quản lý của Nam, kính xám)
+- Đã có: Tập 1 – The Key (Ngày 1); Tập 2 – The Café on the Corner (Ngày 2): Jess (quán cà phê), Claire (quản lý)
 
 ## Chunk Bank (gặp lại trong input mới theo lịch 1–3–7–14 ngày)
 | Chunk | Nghĩa | Học | Gặp lại | Trạng thái |
 |---|---|---|---|---|
-| work as a … | làm (vị trí) … | 2026-11-11 | 2026-11-12 | new |
-| be responsible for … | chịu trách nhiệm về … | 2026-11-11 | 2026-11-12 | new |
-| work on … | làm (việc gì / dự án) | 2026-11-11 | 2026-11-12 | new |
-| it takes sb + time | tốn (ai) bao lâu | 2026-11-11 | 2026-11-12 | new |
-| spend + time (on) | dành thời gian | 2026-11-11 | 2026-11-12 | new |
-| every day / everyday | mỗi ngày / thường ngày (tính từ) | 2026-11-11 | 2026-11-12 | new |
-| although + mệnh đề (≠ unless) | mặc dù (≠ trừ khi) | 2026-11-11 | 2026-11-12 | new |
-| be used to + V-ing | quen với việc… | 2026-11-11 | 2026-11-12 | new |
-| suggest + V-ing | gợi ý làm gì | 2026-11-11 | 2026-11-12 | new |
-| rather than / Rather, … | thay vì / đúng hơn là | 2026-11-11 | 2026-11-12 | new |
-| in other words | nói cách khác | 2026-11-11 | 2026-11-12 | new |
+| work as a … | làm (vị trí) … | 2026-11-11 | 2026-11-15 | seen x2 |
+| be responsible for … | chịu trách nhiệm về … | 2026-11-11 | 2026-11-15 | seen x2 |
+| work on … | làm (việc gì / dự án) | 2026-11-11 | 2026-11-15 | seen x2 |
+| it takes sb + time | tốn (ai) bao lâu | 2026-11-11 | 2026-11-15 | seen x2 |
+| spend + time (on) | dành thời gian | 2026-11-11 | 2026-11-15 | seen x2 |
+| every day / everyday | mỗi ngày / thường ngày (tính từ) | 2026-11-11 | 2026-11-15 | seen x2 |
+| although + mệnh đề (≠ unless) | mặc dù (≠ trừ khi) | 2026-11-11 | 2026-11-15 | seen x2 |
+| be used to + V-ing | quen với việc… | 2026-11-11 | 2026-11-15 | seen x2 |
+| suggest + V-ing | gợi ý làm gì | 2026-11-11 | 2026-11-15 | seen x2 |
+| rather than / Rather, … | thay vì / đúng hơn là | 2026-11-11 | 2026-11-15 | seen x2 |
+| in other words | nói cách khác | 2026-11-11 | 2026-11-15 | seen x2 |
 | seize upon sth | vồ lấy, tận dụng ngay | 2026-11-11 | 2026-11-14 | new |
 | pack it in | bỏ cuộc | 2026-11-11 | 2026-11-14 | new |
 

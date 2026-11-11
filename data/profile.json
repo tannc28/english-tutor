@@ -82,13 +82,18 @@
   {
    "date": "2026-11-11",
    "text": "Tân không xem phim/series → input nghe chỉ YouTube + podcast; buổi tối cuối tuần đổi thành YouTube/podcast. Thêm tab 📅 Plan (List/Calendar) với bài nghe gia sư chọn mỗi ngày (data/plan.json) + nút Apple Podcasts cho iPhone."
+  },
+  {
+   "date": "2026-11-12",
+   "text": "Ngày 2: nghe chậm 0.85× theo 3 bước (hội thoại Hope Street + bài nói 'first-night effect' – cùng chủ đề giấc ngủ), đọc rộng Hope Street tập 2 (dễ, ~400 từ), đọc kỹ B1+/B2 về AI 'hallucination' (sở thích + từ nối yet/rather/however/even though/until…though), 6 câu nhận diện although/unless/rather + be used to/suggest + V-ing trong câu mới. Full English. ~100'."
   }
  ],
  "story": {
   "title": "Hope Street",
-  "characters": "Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà)",
+  "characters": "Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà); Jess (quán cà phê đầu phố, tóc đỏ ngắn); Claire (quản lý của Nam, kính xám)",
   "episodes": [
-   "Tập 1 – The Key (Ngày 1)"
+   "Tập 1 – The Key (Ngày 1)",
+   "Tập 2 – The Café on the Corner (Ngày 2): Jess (quán cà phê), Claire (quản lý)"
   ]
  },
  "chunk_bank": [
@@ -96,78 +101,78 @@
    "chunk": "work as a …",
    "meaning": "làm (vị trí) …",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "be responsible for …",
    "meaning": "chịu trách nhiệm về …",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "work on …",
    "meaning": "làm (việc gì / dự án)",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "it takes sb + time",
    "meaning": "tốn (ai) bao lâu",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "spend + time (on)",
    "meaning": "dành thời gian",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "every day / everyday",
    "meaning": "mỗi ngày / thường ngày (tính từ)",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "although + mệnh đề (≠ unless)",
    "meaning": "mặc dù (≠ trừ khi)",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "be used to + V-ing",
    "meaning": "quen với việc…",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "suggest + V-ing",
    "meaning": "gợi ý làm gì",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "rather than / Rather, …",
    "meaning": "thay vì / đúng hơn là",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "in other words",
    "meaning": "nói cách khác",
    "learned": "2026-11-11",
-   "next": "2026-11-12",
-   "status": "new"
+   "next": "2026-11-15",
+   "status": "seen x2"
   },
   {
    "chunk": "seize upon sth",
