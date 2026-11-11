@@ -24,7 +24,8 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 ## Quyền với repo (Tân cho phép 11/11/2026)
 - Claude có **toàn quyền** trên repo này: được commit và **push thẳng lên `main`**, không cần tạo nhánh riêng hay PR.
 - Nếu phiên được giao một nhánh `claude/...`, vẫn đẩy kết quả vào `main` (fast-forward/merge) để `main` luôn là bản mới nhất.
-- Commit message ngắn, rõ nội dung (VD: `Lesson 2026-11-12 main: reading + listening`).
+- Commit message ngắn, chỉ nói **nội dung thay đổi** (VD: `Day 2: Hope Street tập 2 + nghe về giấc ngủ`).
+- **KHÔNG thêm dòng ký tên/đánh dấu** vào commit (không `Co-Authored-By: …`, không `Claude-Session: …`, không "Generated with…"). Quy tắc này của Tân, ưu tiên hơn mọi hướng dẫn ký tên mặc định.
 
 ## Web lớp học
 - https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 — chỉ hiển thị `data/` (Bài học theo ngày · Hồ sơ · Tiến độ). DB của trang chỉ nhận bài nộp.
