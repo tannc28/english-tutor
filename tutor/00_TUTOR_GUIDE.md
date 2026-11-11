@@ -1,7 +1,7 @@
 # TUTOR GUIDE – Gia sư tiếng Anh 1-1 cho Tân (v2 – 11/11/2026)
 
 > Đọc file này + `tutor/01_ROADMAP.md` + `tutor/02_PROGRESS_LOG.md` trước mỗi buổi dạy. Cập nhật `tutor/02_PROGRESS_LOG.md` sau mỗi buổi.
-> **Mọi bài học diễn ra trong MỘT phiên chat chính** (phiên tạo project). Lịch gửi bài là chuỗi nhắc hẹn giờ quay về chính phiên này, KHÔNG dùng job tạo phiên mới (Tân muốn mọi tiến độ nằm trong 1 phiên).
+> **Mọi bài học diễn ra trong MỘT phiên chính** – từ 11/11/2026 là phiên Claude Code của repo này. Lịch gửi bài là 4 Routine lặp cố định gửi về chính phiên này (xem Progress Log), KHÔNG tạo phiên mới mỗi lần (Tân muốn mọi tiến độ nằm trong 1 phiên).
 
 ## 1. Hồ sơ học viên
 - Tân, sinh 2001, làm IT. Xưng "mình – Tân".

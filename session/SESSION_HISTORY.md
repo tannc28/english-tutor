@@ -29,6 +29,8 @@ Chuỗi nhắc (mỗi mốc hẹn mốc tiếp theo về phiên chính): 08:15 �
 2. Đổi định hướng: **Input trước (Reading + Listening thật kỹ, hiểu hết), Output sau** (Speaking + Writing ở Phase 2). Tutor phải tự nghiên cứu phương pháp trên mạng, theo dõi tiến độ, bắt feedback, luyện nói cùng học viên, cuối tuần giục học.
 3. Bàn về tab Code / Remote Control: Remote Control cần máy tính luôn bật; tab Code thiên về lập trình. Chốt: **kết hợp** – phiên Cowork làm "lớp học" (lịch, chấm, thông báo điện thoại), repo GitHub làm "thư viện" (CLAUDE.md, bài đọc, audio, tiến độ).
 
+4. (11/11/2026, chiều) Repo được làm phẳng (bỏ thư mục lồng `english-tutor/`). Tân cho Claude toàn quyền push thẳng `main`. **Lớp học chuyển sang phiên Claude Code** `session_01VzvjsE7Dz6m9heACFeiGmz` với 4 Routine cron cố định (08:15 T2–T6, 20:45 T2–T6, 09:40 T7, 10:15 CN – giờ VN) thay cho chuỗi send_later. Trigger Cowork trig_01TKvEjqhJEieyM68zhhXybU đã tắt.
+
 ## 5. Phương pháp đã nghiên cứu (nguồn)
 - Intensive + extensive reading: https://howwelearnlanguages.substack.com/p/reading-but-not-improving
 - Extensive/intensive listening: https://benjamins.com/catalog/aila.22015.kar

@@ -5,16 +5,17 @@
 - Phase: 1 – INPUT (Reading + Listening). Tuần hiện tại: 1
 - Bài tiếp theo: **Day 1 – Đánh giá đầu vào (reading + listening) + chủ đề công việc IT** (tối 11/11, 20:45)
 - Chuỗi ngày học (streak): 0
-- Lịch nhắc kế tiếp (chuỗi hẹn giờ về phiên chính): 20:45 T4 11/11 – Bài chính
+- Lịch: 4 Routine lặp cố định gửi về phiên Code chính (xem bên dưới). Mốc kế tiếp: 20:45 T4 11/11 – Bài chính
 
-## Quy tắc chuỗi lịch (để không bị đứt)
-Mỗi lần đến giờ, VIỆC ĐẦU TIÊN là hẹn giờ mốc kế tiếp về phiên chính:
-- 08:15 (T2–T6) → 20:45 cùng ngày
-- 20:45 T2–T5 → 08:15 hôm sau
-- 20:45 T6 → 09:40 T7
-- 09:40 T7 → 10:15 CN
-- 10:15 CN → 08:15 T2
-Ghi lại mốc kế tiếp vào dòng "Lịch nhắc kế tiếp".
+## Lịch tự động (từ 11/11/2026)
+Lớp học chuyển từ Cowork sang **phiên Claude Code** `session_01VzvjsE7Dz6m9heACFeiGmz`. 4 Routine lặp cố định (giờ VN), không cần tự hẹn mốc kế tiếp:
+| Routine | Lịch | ID |
+|---|---|---|
+| Walk Pack | 08:15 T2–T6 | trig_01JfVVWawW2pV4745EEx34Pn |
+| Bài chính | 20:45 T2–T6 | trig_0135HZukAJdhjKZqe96UoqAF |
+| Weekly Test + Talk Time | 09:40 T7 | trig_01M2RcBmJDEihRszoorXBotS |
+| Nhắc học + Sunday Input | 10:15 CN | trig_01TTc69trshZCZ4t2itGAVU9 |
+Chuỗi send_later cũ bên Cowork (trig_01TKvEjqhJEieyM68zhhXybU) đã **tắt** để tránh gửi trùng.
 
 ## Lịch sử bài học
 | Ngày | Bài | Điểm | Feedback của Tân | Ghi chú |
