@@ -68,7 +68,9 @@ body.focus .top,body.focus .track,body.focus .tabs,body.focus .shelf{display:non
 body.focus .layout{grid-template-columns:minmax(0,1fr);margin-top:0}
 /* Workbook toolbar + table of contents */
 .toolbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
-@media (max-width:640px){.tbtn .bl{display:none}.toolbar .ttl{max-width:22ch}.dock .info{display:none}.save-st{order:5}}
+@media (max-width:640px){.tbtn .bl,#submit .bl{display:none}.toolbar .ttl{display:none}.toolbar{gap:6px 8px;padding:8px}div.toolbar>.grow{min-width:0}div.toolbar .grow .bar{min-width:36px!important}.tbtn{padding:7px 10px}.dock .info{display:none}}
+#msg{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--tbh,64px) + 8px);z-index:6}
+#msg:empty{display:none}
 .dock-btns{display:flex;gap:10px;margin-left:auto}
 .save-st{font-size:.78rem;color:var(--ink-3);white-space:nowrap;max-width:46ch;overflow:hidden;text-overflow:ellipsis}
 .save-st[data-k="local"]{color:var(--warn)}
@@ -189,6 +191,7 @@ textarea:disabled,input:disabled{opacity:.8}
 .dock{position:sticky;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:5;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:space-between;padding:12px 14px 12px 18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
 .dock .info{font-size:.88rem;color:var(--ink-2)}
 button.primary{font:inherit;font-weight:600;padding:11px 22px;border-radius:10px;border:0;background:var(--accent);color:var(--on-accent);cursor:pointer}
+button.primary.sm{padding:7px 16px;font-size:.88rem}
 button.primary:disabled{opacity:.5;cursor:not-allowed}
 button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
 .banner{padding:12px 16px;border-radius:10px;font-size:.92rem}
@@ -475,15 +478,17 @@ table.days tr.next td{background:var(--accent-soft)}
   // ---- Lưu tiến trình: luôn lưu trên máy (tức thì) + tự động lưu lên mây (DB, 2 giây sau khi ngừng gõ) + nút Lưu.
   let saveState = {k:"idle", at:null, msg:""}, cloudTimer = null, pendingL = null;
   const hhmm = t => t ? new Date(t).toLocaleTimeString("vi-VN", {hour:"2-digit", minute:"2-digit", second:"2-digit"}) : "";
-  function saveLabel(){
+  // Trạng thái lưu chỉ là 1 biểu tượng nhỏ; chi tiết nằm ở tooltip (title).
+  function saveLabel(){ return {saving:"⏳", ok:"☁️", local:"⚠️", dirty:"✏️"}[saveState.k] || "☁️"; }
+  function saveTitle(){
     const s = saveState;
-    if (s.k === "saving") return "☁️ Đang lưu…";
-    if (s.k === "ok") return `☁️ Đã lưu ${hhmm(s.at)}`;
-    if (s.k === "local") return `💻 Lưu trên máy ${hhmm(s.at)} · chờ lên mây`;
-    if (s.k === "dirty") return "✏️ Sắp tự lưu…";
-    return "☁️ Tự động lưu";
+    if (s.k === "saving") return "Đang lưu lên mây…";
+    if (s.k === "ok") return `Đã lưu lên mây lúc ${hhmm(s.at)}`;
+    if (s.k === "local") return `Đã lưu trên máy lúc ${hhmm(s.at)}, chưa lên mây (${s.msg||"mất mạng?"}). Trang sẽ tự thử lại.`;
+    if (s.k === "dirty") return "Có thay đổi, sắp tự lưu";
+    return "Tự động lưu đang bật";
   }
-  function setSave(k, at, msg){ saveState = {k, at:at||saveState.at, msg:msg||""}; const el = $("#save-st"); if (el){ el.textContent = saveLabel(); el.dataset.k = k; el.title = k==="local" ? `Chưa lên mây (${saveState.msg||"mất mạng?"}); bài vẫn an toàn trên máy này, trang tự thử lại khi có mạng.` : (msg||""); } }
+  function setSave(k, at, msg){ saveState = {k, at:at||saveState.at, msg:msg||""}; const el = $("#save-st"); if (el){ el.textContent = saveLabel(); el.dataset.k = k; el.title = saveTitle(); el.setAttribute("aria-label", saveTitle()); } }
   function saveLocal(l){ const d = {...collect(l), savedAt:new Date().toISOString()}; store.set("draft:"+l.id, d); return d; }
   function scheduleCloud(l){ pendingL = l; setSave("dirty"); clearTimeout(cloudTimer); cloudTimer = setTimeout(() => cloudSave(l), 2000); }
   async function cloudSave(l, manual){
@@ -523,7 +528,11 @@ table.days tr.next td{background:var(--accent-soft)}
         <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Hiện/ẩn danh sách bài">☰<span class="bl"> Danh sách</span></button>
         <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Ẩn mọi thứ trừ bài làm">🎯<span class="bl"> Tập trung</span></button>
         <div class="grow"><span class="ttl">${esc(l.title||"")}</span>${nQ && !grade ? `<div class="bar" style="flex:1;min-width:80px"><i id="pbar2" style="width:0%"></i></div><span class="note mono" id="plab2">0/${nQ}</span>` : ""}</div>
+        ${grade ? `<span class="save-st" data-k="ok">✅ Đã chấm · xem kết quả đầu bài</span>`
+          : locked ? `<span class="save-st">Đã nộp ${esc(new Date(sub.submittedAt).toLocaleString("vi-VN"))} · đang chấm</span><button class="tbtn" id="edit" type="button">Sửa & nộp lại</button>`
+          : `<span class="save-st" id="save-st" role="status" title="${esc(saveTitle())}" aria-label="${esc(saveTitle())}">${esc(saveLabel())}</span><button class="tbtn" id="save-now" type="button" title="Lưu ngay lên mây">💾<span class="bl"> Lưu</span></button><button class="primary sm" id="submit" type="button" title="Nộp bài">📤<span class="bl"> Nộp bài</span></button>`}
       </div>
+      <div id="msg"></div>
       <div class="bookgrid">
       <div class="bookcol">
       <section class="card hero t-${esc(l.type)}">
@@ -568,12 +577,6 @@ table.days tr.next td{background:var(--accent-soft)}
         <label class="fl" for="fb-min"><span>Thời gian làm bài này (phút)</span><input type="number" id="fb-min" min="0" inputmode="numeric" value="${esc(fb.minutes||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
         <label class="fl" for="fb-extra"><span>Ngoài bài, hôm nay Tân nghe/đọc tiếng Anh thêm bao nhiêu phút? <span class="note">(phim, podcast, YouTube, truyện… – không bắt buộc)</span></span><input type="number" id="fb-extra" min="0" inputmode="numeric" value="${esc(fb.extra||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
       </section>
-      <div id="msg"></div>
-      <div class="dock">
-        ${grade ? `<span class="info">✅ Bài đã được chấm. Xem kết quả ở đầu bài.</span>`
-          : locked ? `<span class="info">Đã nộp lúc ${esc(new Date(sub.submittedAt).toLocaleString("vi-VN"))} · gia sư đang chấm</span><button class="ghost" id="edit">Sửa và nộp lại</button>`
-          : `<span class="save-st" id="save-st" aria-live="polite">${esc(saveLabel())}</span><span class="dock-btns"><button class="ghost" id="save-now" type="button" title="Lưu ngay lên mây">💾 Lưu</button><button class="primary" id="submit">Nộp bài</button></span>`}
-      </div>
       </div>
       <nav class="toc" aria-label="Mục lục bài"><span class="label lbl">Mục lục</span>${tocItems}</nav>
       </div>`;
@@ -669,7 +672,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const data = collect(l);
     if (!data.feedback.difficulty){ msg.innerHTML = '<div class="banner warn">Chọn độ khó (1–5) ở phần Feedback rồi nộp nhé.</div>'; $("#fb-h")?.scrollIntoView({behavior:"smooth",block:"center"}); return; }
     if (!db){ msg.innerHTML = '<div class="banner bad">Chưa kết nối được nơi lưu bài. Mở trang trên claude.ai khi đã đăng nhập rồi thử lại.</div>'; return; }
-    btn.disabled = true; btn.textContent = "Đang nộp…";
+    btn.disabled = true; btn.innerHTML = "⏳<span class=\"bl\"> Đang nộp…</span>";
     const rec = {lessonId:l.id, ...data, submittedAt:new Date().toISOString()};
     const diag = {at:new Date().toISOString()};
     const savePromise = db.doc("submissions/"+l.id).set(rec);
@@ -688,7 +691,7 @@ table.days tr.next td{background:var(--accent-soft)}
     try {
       await savePromise;
     } catch(e){
-      btn.disabled = false; btn.textContent = "Nộp bài";
+      btn.disabled = false; btn.innerHTML = "📤<span class=\"bl\"> Nộp bài</span>";
       msg.innerHTML = `<div class="banner bad">Chưa lưu được bài (${esc(e?.code||"lỗi")}). Bài nháp vẫn còn trên máy, bấm Nộp bài lần nữa.</div>`;
       return;
     }
