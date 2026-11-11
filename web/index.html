@@ -68,7 +68,7 @@ body.focus .top,body.focus .track,body.focus .tabs,body.focus .shelf{display:non
 body.focus .layout{grid-template-columns:minmax(0,1fr);margin-top:0}
 /* Workbook toolbar + table of contents */
 .toolbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
-@media (max-width:640px){.tbtn .bl,#submit .bl{display:none}.toolbar .ttl{display:none}.toolbar{gap:6px 8px;padding:8px}div.toolbar>.grow{min-width:0}div.toolbar .grow .bar{min-width:36px!important}.tbtn{padding:7px 10px}.dock .info{display:none}}
+@media (max-width:640px){nav.tabs{gap:2px;width:100%}nav.tabs .tab{padding:8px 6px;flex:1;text-align:center}nav.tabs .tab:not([aria-current="page"]) .tl{display:none}.tbtn .bl,#submit .bl{display:none}.toolbar .ttl{display:none}.toolbar{gap:6px 8px;padding:8px}div.toolbar>.grow{min-width:0}div.toolbar .grow .bar{min-width:36px!important}.tbtn{padding:7px 10px}.dock .info{display:none}}
 #msg{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--tbh,64px) + 8px);z-index:6}
 #msg:empty{display:none}
 .dock-btns{display:flex;gap:10px;margin-left:auto}
@@ -281,6 +281,31 @@ table.days tr.next td{background:var(--accent-soft)}
 .lib-h a{font-weight:600;color:var(--accent);text-decoration:none}
 .lib-h a:hover{text-decoration:underline}
 .lib .md{max-width:none;font-size:.9rem}
+.plan-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.seg2{display:flex;gap:6px}
+.calhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
+.calgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.calw{font-family:var(--f-mono);font-size:.68rem;color:var(--ink-3);text-align:center;padding:4px 0;text-transform:uppercase}
+.calc{min-height:64px;display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:6px;border:1px solid var(--line);border-radius:8px;background:var(--sunk);color:var(--ink);font:inherit;cursor:pointer;text-align:left}
+.calc.out{opacity:.45}
+.calc.today{border-color:var(--accent)}
+.calc.sel{box-shadow:0 0 0 2px var(--accent);background:var(--accent-soft)}
+.calc .cd{font-family:var(--f-mono);font-size:.8rem}
+.calc .cb{font-size:.68rem;padding:1px 5px;border-radius:6px;background:var(--surface);border:1px solid var(--line);white-space:nowrap}
+.calc .cb.graded{border-color:var(--ok);color:var(--ok)}.calc .cb.open{border-color:var(--warn);color:var(--warn)}
+@media (max-width:520px){.calc{min-height:52px;padding:4px}.calc .cb{font-size:.6rem;padding:0 3px}}
+.dayc.is-today{border-color:var(--accent)}
+.slots{display:flex;flex-wrap:wrap;gap:6px}
+.slot{font-size:.8rem;padding:4px 10px;border-radius:999px;background:var(--sunk);border:1px solid var(--line);color:var(--ink-2)}
+.slot b{font-family:var(--f-mono);font-weight:500;color:var(--ink)}
+.plan-les{display:flex;gap:8px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:10px;color:var(--ink);text-decoration:none;font-weight:600}
+.plan-les:hover{border-color:var(--accent)}
+.plan-listen{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.pli{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--sunk);display:flex;flex-direction:column;gap:4px}
+.pli-h{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.pli .md{max-width:none;font-size:.88rem}
+.pli-b{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.pli-b .tbtn{text-decoration:none;font-size:.8rem;padding:5px 10px}
 .rec{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
 .rec .md{width:100%}
 .rec-pick{display:inline-flex;align-items:center;gap:6px;font-weight:600;padding:10px 16px;border-radius:10px;border:1px solid var(--accent);color:var(--accent);background:var(--surface);cursor:pointer}
@@ -311,15 +336,17 @@ table.days tr.next td{background:var(--accent-soft)}
   <section class="track" aria-label="CEFR journey"><div class="ph"><span class="nm"><b>Road to C1</b> – <span id="cefr-now">current level: waiting for Day 1 assessment</span></span><div class="segs cefr" id="cefr"></div></div></section>
 
   <nav class="tabs" aria-label="Sections">
-    <a href="#" class="tab" data-view="lessons">📚 Lessons</a>
-    <a href="#ho-so" class="tab" data-view="profile">👤 Profile</a>
-    <a href="#tien-do" class="tab" data-view="progress">📈 Progress</a>
-    <a href="#nghe" class="tab" data-view="listen">🎧 Listen</a>
+    <a href="#" class="tab" data-view="lessons">📚<span class="tl"> Lessons</span></a>
+    <a href="#ho-so" class="tab" data-view="profile">👤<span class="tl"> Profile</span></a>
+    <a href="#tien-do" class="tab" data-view="progress">📈<span class="tl"> Progress</span></a>
+    <a href="#ke-hoach" class="tab" data-view="plan">📅<span class="tl"> Plan</span></a>
+    <a href="#nghe" class="tab" data-view="listen">🎧<span class="tl"> Listen</span></a>
   </nav>
 
   <section id="view-profile" class="view" hidden></section>
   <section id="view-progress" class="view" hidden></section>
   <section id="view-listen" class="view" hidden></section>
+  <section id="view-plan" class="view" hidden></section>
 
   <div class="layout" id="view-lessons">
     <nav class="shelf" aria-label="Lesson list">
@@ -691,7 +718,7 @@ table.days tr.next td{background:var(--accent-soft)}
           <div class="scale-cap"><span>too easy</span><span>too hard</span></div></div>
         <label class="fl" for="fb-hard"><span>What was hardest to understand?</span><textarea id="fb-hard" placeholder="Which question, paragraph or word got you stuck?" ${locked?"disabled":""}>${esc(fb.hardest||"")}</textarea></label>
         <label class="fl" for="fb-min"><span>Time spent on this lesson (minutes)</span><input type="number" id="fb-min" min="0" inputmode="numeric" value="${esc(fb.minutes||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
-        <label class="fl" for="fb-extra"><span>Extra English today outside this lesson (minutes)? <span class="note">(films, podcasts, YouTube, stories… – optional)</span></span><input type="number" id="fb-extra" min="0" inputmode="numeric" value="${esc(fb.extra||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
+        <label class="fl" for="fb-extra"><span>Extra English today outside this lesson (minutes)? <span class="note">(YouTube, podcasts, reading… – optional)</span></span><input type="number" id="fb-extra" min="0" inputmode="numeric" value="${esc(fb.extra||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
       </section>
       </div>
       <nav class="toc" aria-label="Lesson contents"><span class="label lbl">Contents</span>${tocItems}</nav>
@@ -1024,10 +1051,73 @@ table.days tr.next td{background:var(--accent-soft)}
           <div class="lib-h"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a><span class="pill">${esc(it.type||"")}</span></div>
           <div class="note">${esc(it.topics||"")}</div>
           <div class="md">${inline(it.why||"")}</div>
-          ${it.alt?`<a class="note" href="${esc(it.alt)}" target="_blank" rel="noopener">Also on YouTube ↗</a>`:""}
+          <div class="pli-b">${it.apple?`<a class="tbtn" href="${esc(it.apple)}" target="_blank" rel="noopener">🎙 Apple Podcasts</a>`:""}${it.alt?`<a class="tbtn" href="${esc(it.alt)}" target="_blank" rel="noopener">▶ YouTube</a>`:""}</div>
         </div>`).join("")}</div></section>`).join("")}`;
   }
+  // ---- 📅 Plan: lịch theo ngày = bài (days.json) + bài nghe gia sư chọn (plan.json) + khung giờ (profile.schedule)
+  let planData = null, planMode = (store.get("prefs")||{}).planMode || "calendar", planSel = null, planMonth = null;
+  const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+  const todayStr = () => ymd(new Date());
+  function dayInfo(ds){
+    const les = lessons.filter(l => l.date === ds);
+    const pl = planData?.days?.[ds] || null;
+    const dow = new Date(ds+"T12:00:00").getDay();
+    const sch = profile?.schedule ? ((dow===0||dow===6) ? profile.schedule.weekend : profile.schedule.weekday) || [] : [];
+    return {les, pl, sch, dow};
+  }
+  const listenBtns = it => [it.apple?`<a class="tbtn" href="${esc(it.apple)}" target="_blank" rel="noopener">🎙 Apple Podcasts</a>`:"", it.youtube?`<a class="tbtn" href="${esc(it.youtube)}" target="_blank" rel="noopener">▶ YouTube</a>`:"", it.url?`<a class="tbtn" href="${esc(it.url)}" target="_blank" rel="noopener">Open ↗</a>`:"", it.transcript?`<a class="tbtn" href="${esc(it.transcript)}" target="_blank" rel="noopener">📄 Transcript</a>`:""].join("");
+  const SLOT = {walk:"🚶 Walk", morning:"🌅 Morning", evening:"🌙 Evening", weekend:"🗓 Weekend", any:"⏱ Anytime"};
+  function dayCard(ds){
+    const {les, pl, sch} = dayInfo(ds), isToday = ds === todayStr();
+    const d = new Date(ds+"T12:00:00");
+    return `<section class="card sec dayc ${isToday?"is-today":""}">
+      <div class="dayc-h"><h2>${d.toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"short"})}${isToday?' <span class="pill submitted">Today</span>':""}</h2></div>
+      ${sch.length?`<div class="slots">${sch.map(b=>`<span class="slot"><b>${esc(b.time||"")}</b> ${esc(b.what||"")}</span>`).join("")}</div>`:""}
+      ${les.length ? les.map(l=>{const st=statusOf(l); return `<a class="plan-les" href="#${esc(l.id)}"><span class="pill ${st}">${STATUS_LABEL[st]}</span> 📘 ${l.dayNo?`Day ${esc(l.dayNo)} – `:""}${esc(l.title||"Lesson")}${l.minutes?` · ~${esc(l.minutes)} min`:""}</a>`;}).join("") : `<p class="note">${ds >= todayStr() ? "📘 Lesson appears here at 05:55 that day." : "No lesson this day."}</p>`}
+      ${pl?.note?`<div class="md">${md(pl.note)}</div>`:""}
+      ${(pl?.listen||[]).length ? `<div class="plan-listen">${pl.listen.map(it=>`<div class="pli">
+          <div class="pli-h"><span class="note mono">${esc(SLOT[it.slot]||it.slot||"")}${it.time?" · "+esc(it.time):""}${it.minutes?" · "+esc(it.minutes)+" min":""}</span>${it.level?`<span class="pill">${esc(it.level)}</span>`:""}</div>
+          <b>${esc(it.title||"")}</b><span class="note">${esc(it.source||"")}</span>
+          ${it.why?`<div class="md">${inline(it.why)}</div>`:""}
+          <div class="pli-b">${listenBtns(it)}</div></div>`).join("")}</div>` : (ds >= todayStr() ? `<p class="note">🎧 Listening picks are added each morning. Meanwhile, use the 🎧 Listen library.</p>` : "")}
+    </section>`;
+  }
+  function calendarGrid(){
+    const base = planMonth || new Date(); const y = base.getFullYear(), m = base.getMonth();
+    const first = new Date(y, m, 1), start = new Date(first); start.setDate(1 - ((first.getDay()+6)%7));
+    const cells = []; for (let i=0;i<42;i++){ const d = new Date(start); d.setDate(start.getDate()+i); cells.push(d); }
+    const t = todayStr();
+    return `<div class="calhead"><button class="tbtn" id="cal-prev" type="button">‹</button><b>${first.toLocaleDateString("en-GB",{month:"long", year:"numeric"})}</b><button class="tbtn" id="cal-next" type="button">›</button></div>
+      <div class="calgrid">${["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(w=>`<div class="calw">${w}</div>`).join("")}
+      ${cells.map(d=>{ const ds = ymd(d), {les, pl} = dayInfo(ds); const st = les[0] ? statusOf(les[0]) : "";
+        return `<button type="button" class="calc ${d.getMonth()!==m?"out":""} ${ds===t?"today":""} ${ds===planSel?"sel":""}" data-ds="${ds}">
+          <span class="cd">${d.getDate()}</span>
+          ${les[0]?`<span class="cb ${st}">📘${les[0].dayNo?" D"+esc(les[0].dayNo):""}</span>`:""}
+          ${(pl?.listen||[]).length?`<span class="cb">🎧${pl.listen.length}</span>`:""}
+        </button>`;}).join("")}</div>`;
+  }
+  async function renderPlan(){
+    const v = $("#view-plan");
+    if (!planData){ try { planData = await getJSON("data/plan.json"); } catch { planData = {days:{}}; } }
+    planSel = planSel || todayStr();
+    const toggle = `<div class="seg2"><button type="button" class="tbtn" data-pm="calendar" aria-pressed="${planMode==="calendar"}">📅 Calendar</button><button type="button" class="tbtn" data-pm="list" aria-pressed="${planMode==="list"}">☰ List</button></div>`;
+    if (planMode === "calendar"){
+      v.innerHTML = `<section class="card sec"><div class="plan-top"><span class="label">Your days</span>${toggle}</div>${calendarGrid()}</section>${dayCard(planSel)}`;
+    } else {
+      const t = todayStr(), set = new Set([t]);
+      lessons.forEach(l => set.add(l.date)); Object.keys(planData.days||{}).forEach(k => set.add(k));
+      for (let i=1;i<=2;i++){ const d = new Date(); d.setDate(d.getDate()+i); set.add(ymd(d)); }
+      const all = [...set].sort(), up = all.filter(x => x >= t), past = all.filter(x => x < t).reverse();
+      v.innerHTML = `<section class="card sec"><div class="plan-top"><span class="label">Your days</span>${toggle}</div></section>${up.map(dayCard).join("")}${past.length?`<div class="label" style="margin-top:8px">Earlier</div>${past.map(dayCard).join("")}`:""}`;
+    }
+    v.querySelectorAll("[data-pm]").forEach(b => b.addEventListener("click", () => { planMode = b.dataset.pm; const pr = store.get("prefs")||{}; pr.planMode = planMode; store.set("prefs", pr); renderPlan(); }));
+    v.querySelectorAll(".calc").forEach(b => b.addEventListener("click", () => { planSel = b.dataset.ds; renderPlan(); }));
+    $("#cal-prev")?.addEventListener("click", () => { const b = planMonth || new Date(); planMonth = new Date(b.getFullYear(), b.getMonth()-1, 1); renderPlan(); });
+    $("#cal-next")?.addEventListener("click", () => { const b = planMonth || new Date(); planMonth = new Date(b.getFullYear(), b.getMonth()+1, 1); renderPlan(); });
+  }
   function showView(name){
+    $("#view-plan").hidden = name!=="plan";
+    if (name==="plan") renderPlan();
     $("#view-listen").hidden = name!=="listen";
     if (name==="listen") renderListen();
     $("#view-lessons").hidden = name!=="lessons"; $("#view-profile").hidden = name!=="profile"; $("#view-progress").hidden = name!=="progress";
@@ -1041,6 +1131,7 @@ table.days tr.next td{background:var(--accent-soft)}
     if (h === "ho-so"){ showView("profile"); return; }
     if (h === "tien-do"){ showView("progress"); return; }
     if (h === "nghe"){ showView("listen"); return; }
+    if (h === "ke-hoach"){ showView("plan"); return; }
     showView("lessons");
     current = lessons.some(l => l.id === h) ? h : (lessons[0]?.id || null);
     delete $("#main").dataset.editing;

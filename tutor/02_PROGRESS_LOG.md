@@ -39,7 +39,7 @@
 - **Tận dụng giờ làm việc** – Câu nào Claude trả lời mà Tân không hiểu, chép lại và dán vào ô ghi chú cuối bài. Mình sẽ dùng làm bài đọc kỹ.
 - **Giữ thói quen ghi 'không chắc'** – Cứ không chắc là bấm 🤔 và ghi vài chữ.
 
-**Thói quen tiếp xúc tiếng Anh:** Làm việc cả ngày, chat với Claude bằng tiếng Anh để code (nhiều chỗ chưa hiểu; gấp thì chuyển tiếng Việt). Thời gian rảnh hay lướt TikTok/FB; muốn chuyển sang podcast/YouTube tiếng Anh. Input thêm ngoài bài ngày 11/11: 0 phút.
+**Thói quen tiếp xúc tiếng Anh:** Làm việc cả ngày, chat với Claude bằng tiếng Anh để code (nhiều chỗ chưa hiểu; gấp thì chuyển tiếng Việt). Thời gian rảnh hay lướt TikTok/FB; muốn chuyển sang podcast/YouTube tiếng Anh. Input thêm ngoài bài ngày 11/11: 0 phút. **Không thích phim/series** – chỉ YouTube và podcast.
 
 **Giáo viên nhận xét:**
 
@@ -55,6 +55,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-11 | Tân đặt mục tiêu B2 trong 3 tháng, ưu tiên input. Theo giờ học Cambridge (B1/B1+ → B2 ~100–250 giờ; nghe đang B1 nên lấy cận trên) → mục tiêu 15 giờ/tuần (~2 giờ/ngày), bài 60–75', còn lại là nghe tự do. |
 | 2026-11-11 | Chốt lịch học tuần (ngủ 23:30, dậy 7:15): T2–T6 7:45–8:25 nghe + 20:30–21:20 đọc; T7–CN 9:00–10:30 bài, 14:30–16:00 nghe tự do, 20:00–21:00 phim. Bài ngày thường chia rõ phần sáng (nghe ~40') và tối (đọc ~50'). |
 | 2026-11-11 | Tân muốn học tối 2 giờ và nghe thêm chủ động → buổi tối 20:30–22:30 (bài 60' + nghe tự do 50'), mục tiêu 21 giờ/tuần; tạo thư viện nghe đã kiểm tra link (data/resources.json, tab 🎧 Listen) chia 3 tầng theo trình độ; ngày bận/rảnh Tân báo để chỉnh. |
+| 2026-11-11 | Tân không xem phim/series → input nghe chỉ YouTube + podcast; buổi tối cuối tuần đổi thành YouTube/podcast. Thêm tab 📅 Plan (List/Calendar) với bài nghe gia sư chọn mỗi ngày (data/plan.json) + nút Apple Podcasts cho iPhone. |
 
 ## Lịch sử ngày học
 | Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |

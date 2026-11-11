@@ -1,0 +1,53 @@
+{
+ "_note": "Kế hoạch nghe theo ngày (tab 📅 Plan). Job 05:55 thêm/cập nhật ngày hôm nay. Chỉ dùng link đã kiểm tra.",
+ "days": {
+  "2026-11-12": {
+   "note": "Day 2. Listening theme: **sleep & feelings** – connects to the sleep talk in Day 1 (same topic = easier).",
+   "listen": [
+    {
+     "slot": "walk",
+     "time": "08:30",
+     "title": "What should you eat for a better night's sleep?",
+     "source": "6 Minute English · BBC",
+     "minutes": 7,
+     "level": "Tier 1",
+     "apple": "https://podcasts.apple.com/us/podcast/what-should-you-eat-for-a-better-nights-sleep/id262026947?i=1000797598235",
+     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+     "why": "Same topic as your Day 1 sleep talk, but slower. Listen twice on the walk."
+    },
+    {
+     "slot": "evening",
+     "time": "21:40",
+     "title": "Why does heartbreak hurt so much?",
+     "source": "6 Minute English · BBC",
+     "minutes": 7,
+     "level": "Tier 1",
+     "apple": "https://podcasts.apple.com/us/podcast/why-does-heartbreak-hurt-so-much/id262026947?i=1000792546642",
+     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+     "why": "Psychology. Listen → read the transcript on the BBC page → listen again."
+    },
+    {
+     "slot": "evening",
+     "time": "22:00",
+     "title": "Is rejection good for us?",
+     "source": "6 Minute English · BBC",
+     "minutes": 6,
+     "level": "Tier 1",
+     "apple": "https://podcasts.apple.com/us/podcast/is-rejection-good-for-us/id262026947?i=1000790323044",
+     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+     "why": "Psychology again – same speakers, similar words, so it gets easier."
+    },
+    {
+     "slot": "evening",
+     "time": "22:15",
+     "title": "Any Psych2Go video (5–10 min)",
+     "source": "Psych2Go · YouTube",
+     "minutes": 10,
+     "level": "Tier 2",
+     "youtube": "https://www.youtube.com/@Psych2go",
+     "why": "English subtitles on. Pick a title that interests you."
+    }
+   ]
+  }
+ }
+}

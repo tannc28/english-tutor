@@ -106,7 +106,7 @@ def main():
         f.write("\n".join(L) + "\n")
 
     # ---- Danh sách file xuất bản kèm web (không có keys/)
-    files = {"data/days.json": "data/days.json", "data/profile.json": "data/profile.json", "data/resources.json": "data/resources.json"}
+    files = {"data/days.json": "data/days.json", "data/profile.json": "data/profile.json", "data/resources.json": "data/resources.json", "data/plan.json": "data/plan.json"}
     for sub in ("lessons", "grades", "submissions"):
         for fn in sorted(os.listdir(D(sub))):
             if fn.endswith(".json"):

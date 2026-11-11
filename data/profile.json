@@ -55,7 +55,7 @@
   "Khoa học",
   "Thể thao"
  ],
- "habits": "Làm việc cả ngày, chat với Claude bằng tiếng Anh để code (nhiều chỗ chưa hiểu; gấp thì chuyển tiếng Việt). Thời gian rảnh hay lướt TikTok/FB; muốn chuyển sang podcast/YouTube tiếng Anh. Input thêm ngoài bài ngày 11/11: 0 phút.",
+ "habits": "Làm việc cả ngày, chat với Claude bằng tiếng Anh để code (nhiều chỗ chưa hiểu; gấp thì chuyển tiếng Việt). Thời gian rảnh hay lướt TikTok/FB; muốn chuyển sang podcast/YouTube tiếng Anh. Input thêm ngoài bài ngày 11/11: 0 phút. **Không thích phim/series** – chỉ YouTube và podcast.",
  "teacher_md": "Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá nhiều** (~B1). Khoảng cách này rất điển hình ở người học qua sách, chữ và công việc. Tin tốt là Tân đã có sẵn vốn từ, nên chỉ cần **nghe nhiều thứ dễ** để tai bắt kịp mắt. Đây là phần tiến bộ nhanh nhất nếu đều đặn. Tân trả lời trung thực từng chỗ không chắc, nhờ vậy mình đánh giá được rất chính xác.",
  "focus_md": "**Mục tiêu B2 (~8–12 tuần).** Ngày thường: 7:45 nghe 40', 20:30–21:30 bài, 21:40–22:30 nghe tự do (tab 🎧 Listen). Cuối tuần 4 giờ. **Nghe tranh thủ mọi lúc**, ghi số phút vào ô cuối bài. Bận/rảnh thì báo để gia sư chỉnh bài.",
  "decisions": [
@@ -78,6 +78,10 @@
   {
    "date": "2026-11-11",
    "text": "Tân muốn học tối 2 giờ và nghe thêm chủ động → buổi tối 20:30–22:30 (bài 60' + nghe tự do 50'), mục tiêu 21 giờ/tuần; tạo thư viện nghe đã kiểm tra link (data/resources.json, tab 🎧 Listen) chia 3 tầng theo trình độ; ngày bận/rảnh Tân báo để chỉnh."
+  },
+  {
+   "date": "2026-11-11",
+   "text": "Tân không xem phim/series → input nghe chỉ YouTube + podcast; buổi tối cuối tuần đổi thành YouTube/podcast. Thêm tab 📅 Plan (List/Calendar) với bài nghe gia sư chọn mỗi ngày (data/plan.json) + nút Apple Podcasts cho iPhone."
   }
  ],
  "story": {
@@ -233,29 +237,39 @@
    {
     "time": "07:45–08:25",
     "min": 40,
-    "what": "Phần NGHE của bài hôm nay"
+    "what": "Morning: today's listening"
    },
    {
-    "time": "20:30–22:30",
-    "min": 120,
-    "what": "20:30–21:30 bài (đọc + feedback + nộp); 21:40–22:30 nghe tự do (tab Listen)"
+    "time": "08:30",
+    "min": 15,
+    "what": "Walk: re-listen"
+   },
+   {
+    "time": "20:30–21:30",
+    "min": 60,
+    "what": "Lesson: reading + submit"
+   },
+   {
+    "time": "21:40–22:30",
+    "min": 50,
+    "what": "Free listening (Plan picks)"
    }
   ],
   "weekend": [
    {
     "time": "09:00–10:30",
     "min": 90,
-    "what": "Bài trong ngày (T7 + nhìn lại tuần)"
+    "what": "Weekend lesson"
    },
    {
     "time": "14:30–16:00",
     "min": 90,
-    "what": "Nghe tự do (podcast/YouTube)"
+    "what": "Free listening"
    },
    {
     "time": "20:00–21:00",
     "min": 60,
-    "what": "Phim/series phụ đề tiếng Anh"
+    "what": "YouTube / podcast"
    }
   ],
   "calendar": {

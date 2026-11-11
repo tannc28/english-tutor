@@ -18,6 +18,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 | `grades/<id>.json` | `{score, summary_md, answers_md, next_md, gradedAt, items:{qid:{verdict:"correct|partial|wrong|unsure|skipped", note_md}}}` – `items` hiện dưới từng câu (bắt buộc, Tutor Guide 6e) |
 | `submissions/<id>.json` | Bản chép bài làm của Tân (từ DB web; được publish để bài đã chấm luôn hiện câu trả lời), gồm `log` = nhật ký quá trình: `sessions[{s,e,at,kind,os,app,vw}]` (giây từ lúc mở bài; `at` giờ bắt đầu thật (UTC); `kind` computer/phone/tablet, `os`, `app` (đoán từ trình duyệt), `vw` bề rộng màn hình), `parts{pi:{ms}}` (thời gian tương tác mỗi phần), `q{qid:{first, ms, edits, changes[{t,from,to}]}}`, `listen{pi:{plays, rates[], revealAt, answeredBeforeReveal}}` |
 | `keys/<id>.json` | Đáp án trắc nghiệm, **không** publish |
+| `plan.json` | Bài nghe gia sư chọn theo ngày (tab 📅 Plan): `{days:{"YYYY-MM-DD":{note, listen:[{slot:"walk|morning|evening|weekend|any", time, title, source, minutes, level, apple?, youtube?, url?, transcript?, why}]}}}` – job 05:55 thêm ngày hôm nay |
 | `resources.json` | Thư viện nghe tự do (tab 🎧 Listen): `{how_md, tiers:[{name, level, note, items:[{name, type, url, alt?, topics, why}]}]}` – chỉ link đã kiểm tra |
 
 - **id**: `YYYY-MM-DD-day` (Day 1 giữ id cũ `2026-11-11-main`). Danh sách trên web sắp theo id giảm dần, hiển thị "Ngày N".

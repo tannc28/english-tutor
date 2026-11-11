@@ -1,6 +1,6 @@
 {
  "_note": "Thư viện nghe tự do – gia sư cập nhật theo trình độ/sở thích. Mọi link đã kiểm tra tồn tại ngày 2026-11-11.",
- "how_md": "**How to use (Comprehensible Input):**\n- Pick the **easiest tier where you understand about 70–80% with English subtitles**. Too hard = noise, not learning.\n- **Focused listening** (eyes on screen, subtitles on) counts most. **Background listening** while walking, waiting or working is a bonus — best with things you've already watched once.\n- **Re-watch** favourites. The 2nd and 3rd time is where your ears catch up with your eyes.\n- Don't pause for every word. Follow the story or idea.\n- Log your minutes in the lesson feedback box (\"Extra English today\"). Tell your tutor which ones you like — the library will grow around them.",
+ "how_md": "**How to use (Comprehensible Input):**\n- Pick the **easiest tier where you understand about 70–80% with English subtitles**. Too hard = noise, not learning. (YouTube and podcasts only – no films/series needed.)\n- **Focused listening** (eyes on screen, subtitles on) counts most. **Background listening** while walking, waiting or working is a bonus — best with things you've already watched once.\n- **Re-watch** favourites. The 2nd and 3rd time is where your ears catch up with your eyes.\n- Don't pause for every word. Follow the story or idea.\n- Log your minutes in the lesson feedback box (\"Extra English today\"). Tell your tutor which ones you like — the library will grow around them.\n- **On iPhone:** podcast cards have an **Apple Podcasts** button – tap it to open the Podcasts app (subscribe once, then episodes download for walks).",
  "tiers": [
   {
    "name": "Tier 1 · Easy – start here",
@@ -13,7 +13,8 @@
      "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
      "alt": "https://www.youtube.com/@bbclearningenglish",
      "topics": "Everyday topics, science, tech, psychology",
-     "why": "6-minute episodes, two hosts, **free transcripts**. Perfect for listen → read → listen again."
+     "why": "6-minute episodes, two hosts, **free transcripts**. Perfect for listen → read → listen again.",
+     "apple": "https://podcasts.apple.com/us/podcast/6-minute-english/id262026947"
     },
     {
      "name": "VOA Learning English",
@@ -36,7 +37,8 @@
      "url": "https://www.allearsenglish.com/",
      "alt": "https://www.youtube.com/@AllEarsEnglishPodcast",
      "topics": "Conversation, culture, phrases",
-     "why": "Friendly American conversation, around B1–B2. Good for background listening."
+     "why": "Friendly American conversation, around B1–B2. Good for background listening.",
+     "apple": "https://podcasts.apple.com/us/podcast/all-ears-english-podcast/id751574016"
     },
     {
      "name": "Speak English With Vanessa",
@@ -79,14 +81,8 @@
      "url": "https://teacherluke.co.uk/",
      "alt": "https://www.youtube.com/@lukesenglishpodcast",
      "topics": "Everything, British English",
-     "why": "Long, chatty episodes by an English teacher – great for long walks once Tier 1 feels easy."
-    },
-    {
-     "name": "Learn English With TV Series",
-     "type": "YouTube",
-     "url": "https://www.youtube.com/@LearnEnglishWithTVSeries",
-     "topics": "Films & series",
-     "why": "Real scenes, then explained – a bridge to watching shows."
+     "why": "Long, chatty episodes by an English teacher – great for long walks once Tier 1 feels easy.",
+     "apple": "https://podcasts.apple.com/us/podcast/lukes-english-podcast-learn-british-english-with-luke/id312059190"
     },
     {
      "name": "Binging with Babish",
@@ -142,7 +138,8 @@
      "type": "Podcast + YouTube",
      "url": "https://www.youtube.com/@hardfork",
      "topics": "Tech & AI news",
-     "why": "Two journalists chatting about tech every week. Native speed – a great long-term goal."
+     "why": "Two journalists chatting about tech every week. Native speed – a great long-term goal.",
+     "apple": "https://podcasts.apple.com/us/podcast/hard-fork/id1528594034"
     },
     {
      "name": "Veritasium",

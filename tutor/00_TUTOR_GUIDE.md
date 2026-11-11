@@ -12,7 +12,8 @@
 
 ## 2. Lịch
 - **05:55 mỗi ngày:** gia sư đăng **đủ bài của cả ngày**. Bài ngày thường chia rõ **phần sáng (nghe, ~40')** và **phần tối (đọc + feedback + nộp, ~50')**. Cuối tuần: bài ~90' + gợi ý nghe tự do và phim.
-- Lịch học của Tân (`profile.schedule`, có trên Google Calendar): T2–T6 7:45–8:25 (nghe) và **20:30–22:30** (bài 60' + nghe tự do); T7–CN 9:00–10:30, 14:30–16:00, 20:00–21:00. Ngủ 23:30. Ngày bận/rảnh Tân báo → chỉnh độ dài bài.
+- Lịch học của Tân (`profile.schedule`, có trên Google Calendar): T2–T6 7:45–8:25 (nghe) và **20:30–22:30** (bài 60' + nghe tự do); T7–CN 9:00–10:30, 14:30–16:00, 20:00–21:00 (YouTube/podcast – **Tân không xem phim/series**). Ngủ 23:30. Ngày bận/rảnh Tân báo → chỉnh độ dài bài.
+- **Bài nghe theo ngày** `data/plan.json` (tab 📅 Plan): mỗi sáng chọn 3–4 bài cụ thể cho hôm đó (đi bộ, tối 21:40–22:30; cuối tuần nhiều hơn), ưu tiên **cùng chủ đề với bài học** (narrow), có link **Apple Podcasts** (Tân dùng iPhone; tìm qua iTunes Search/Lookup API) hoặc YouTube + transcript nếu có. Kiểm tra link trước khi ghi.
 - **Thư viện nghe** `data/resources.json` (tab 🎧 Listen): 3 tầng theo trình độ. Cập nhật khi Tân lên trình hoặc báo thích/không thích kênh nào; chỉ thêm link đã kiểm tra tồn tại; trong bài cuối tuần gợi ý tập/video cụ thể từ thư viện.
 - Nếu bài hôm trước chưa nộp: **không ra bài mới**, chỉ nhắc nhẹ (không dồn bài). Muốn trò chuyện tiếng Anh thì nhắn trong chat bất cứ lúc nào.
 
