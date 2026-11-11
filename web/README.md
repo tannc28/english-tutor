@@ -5,7 +5,10 @@ Nguồn trang: `web/index.html`. Muốn cập nhật trang thì publish lại fi
 
 ## Luồng làm việc
 1. Đến giờ, Routine gửi tin vào phiên chính → gia sư soạn bài, ghi vào DB (`lessons/<id>`) + lưu file `lessons/` trong repo.
-2. Tân mở web, làm bài lúc nào tiện, bấm **Nộp bài** → trang lưu `submissions/<id>` và gọi `fire_trigger` của Routine "Tân nộp bài (web)" (`trig_01AN7RrytvZ5BmXiymy5Ym5M`), kèm toàn bộ câu trả lời.
+2. Tân mở web, làm bài lúc nào tiện, bấm **Nộp bài** → trang lưu `submissions/<id>` rồi báo gia sư:
+   - Cách chính: **Send to Claude** (comment ở đầu bài, nội dung `📥 Nộp bài <id> …`) → đánh thức phiên chính (phiên đang theo dõi artifact). Gia sư chấm, trả lời trong thread comment bằng ArtifactComments.
+   - Dự phòng: `fire_trigger` của Routine "Tân nộp bài (web)" (`trig_01AN7RrytvZ5BmXiymy5Ym5M`). Lưu ý: lượt này chạy **ngoài** transcript phiên chính và không push repo → lần chạy lịch kế tiếp phải đồng bộ điểm từ `grades/` vào Progress Log.
+   - Trang ghi kết quả báo vào `submissions/<id>.notify` (via, canSend, mã lỗi) để chẩn đoán.
 3. Gia sư chấm → ghi `grades/<id>`, set `lessons/<id>.status="graded"`, cập nhật `meta/progress` + Progress Log, push `main`. Kết quả hiện ngay trên web.
 4. Nếu trang không tự báo được (thiếu quyền connector), Tân nhắn "nộp bài <id>" trong phiên chat; gia sư đọc `submissions/<id>` bằng ArtifactData.
 

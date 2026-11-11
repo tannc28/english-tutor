@@ -269,8 +269,21 @@ button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid va
     if (!db){ msg.innerHTML = '<div class="banner bad">Chưa kết nối được nơi lưu bài. Mở trang trên claude.ai khi đã đăng nhập rồi thử lại.</div>'; return; }
     btn.disabled = true; msg.innerHTML = '<div class="note">Đang nộp…</div>';
     const rec = {lessonId:l.id, ...data, submittedAt:new Date().toISOString()};
+    const diag = {at:new Date().toISOString()};
+    const savePromise = db.doc("submissions/"+l.id).set(rec);
+    // Báo gia sư ngay trong cú bấm (Send to Claude cần thao tác gần đây của người xem)
+    let sentPromise = (async () => {
+      const c = await claude.use("comments");
+      diag.comments = !!c;
+      if (!c) return false;
+      const st = await c.canSendToClaude(); diag.canSend = st;
+      if (st !== "available") return false;
+      const anchor = await c.anchorFor(document.querySelector(".lesson-head"));
+      const r = await c.sendToClaude({anchor, text:`📥 Nộp bài ${l.id} – gia sư chấm giúp mình (bài làm trong submissions/${l.id})`});
+      diag.thread = r?.threadId || ""; return true;
+    })().catch(e => { diag.cCode = e?.code||""; diag.cMsg = String(e?.message||e||"").slice(0,300); return false; });
     try {
-      await db.doc("submissions/"+l.id).set(rec);
+      await savePromise;
     } catch(e){
       btn.disabled = false;
       msg.innerHTML = `<div class="banner bad">Chưa lưu được bài (${esc(e?.code||"lỗi")}). Bài nháp vẫn còn trên máy, bấm Nộp bài lần nữa.</div>`;
@@ -282,12 +295,13 @@ button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid va
     const m2 = $("#msg");
     m2.innerHTML = '<div class="note">Đang báo gia sư…</div>';
     const text = summaryText(l, data);
-    let notified = false, reason = "";
-    const diag = {at:new Date().toISOString()};
-    try {
+    let notified = await sentPromise, reason = "";
+    diag.via = notified ? "comments" : "";
+    if (!notified) try {
       const mcp = await claude.use("mcp");
       diag.mcp = !!mcp;
       if (mcp){
+        diag.via = "fire_trigger";
         try { const lt = await mcp.listTools("Claude Code Remote"); diag.tools = JSON.stringify(lt).slice(0,1500); } catch(e){ diag.listErr = (e?.code||"")+" "+(e?.message||"").slice(0,300); }
         const r = await mcp.callTool("Claude Code Remote", "fire_trigger", {trigger_id:TRIGGER_ID, text});
         diag.result = JSON.stringify(r?.payload ?? r ?? null).slice(0,800); notified = true;
