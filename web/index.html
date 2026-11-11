@@ -171,6 +171,10 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
 .pl-sel{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 .transcript{width:100%;padding:14px 18px;background:var(--paper);border:1px solid var(--paper-line);border-radius:10px;font-family:var(--f-read);line-height:1.8}
 .transcript p{margin:.4em 0}
+.rec{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.rec .md{width:100%}
+.rec-pick{display:inline-flex;align-items:center;gap:6px;font-weight:600;padding:10px 16px;border-radius:10px;border:1px solid var(--accent);color:var(--accent);background:var(--surface);cursor:pointer}
+.rec-au{width:100%;max-width:420px}
 .empty{padding:36px clamp(16px,3.5vw,36px)}
 .empty h2{margin:6px 0 8px;font-size:1.3rem}
 .empty p{color:var(--ink-2);max-width:62ch}
@@ -289,6 +293,16 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
     if (q.type === "choice" && Array.isArray(q.options)){
       return `<div class="opts" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}</div>`;
     }
+    if (q.type === "recording"){
+      let info = null; try { info = val ? JSON.parse(val) : null; } catch {}
+      return `<div class="rec" data-qid="${esc(q.id)}">
+        ${q.read ? `<div class="md"><blockquote>${md(q.read)}</blockquote></div>` : ""}
+        <input type="hidden" id="${id}" value="${esc(val||"")}">
+        ${locked ? "" : `<label class="ghost rec-pick">🎙️ ${info?"Thu lại / chọn file khác":"Thu âm hoặc chọn file ghi âm"}<input type="file" accept="audio/*,video/mp4,video/webm,.m4a,.mp3,.wav,.aac,.ogg,.3gp,.amr" capture hidden></label>`}
+        <span class="note rec-st">${info ? `✅ Đã tải lên: ${esc(info.name||"bản thu")} (${Math.round((info.size||0)/1024)} KB)` : "Chưa có bản thu"}</span>
+        <audio class="rec-au" controls hidden></audio>
+      </div>`;
+    }
     if (q.type === "short") return `<input type="text" id="${id}" value="${esc(val||"")}" placeholder="${esc(q.placeholder||"Trả lời ngắn")}" ${dis}>`;
     const cls = q.type === "dictation" ? "dict" : "";
     return `<textarea id="${id}" class="${cls}" placeholder="${esc(q.placeholder||(q.type==="dictation"?"Gõ lại đúng những gì nghe được…":"Câu trả lời của Tân…"))}" ${dis}>${esc(val||"")}</textarea>`;
@@ -402,6 +416,7 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
     } else { main.oninput = main.onchange = null; }
     updateProgress(l);
     bindPlayers(l);
+    bindRecorders(l);
     $("#edit")?.addEventListener("click", () => { main.dataset.editing = "1"; renderLesson(); });
   }
 
@@ -443,6 +458,31 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
         });
       });
       stop.addEventListener("click", () => getTts().then(t => t?.stop().catch(()=>{})));
+    });
+  }
+
+  // ---- Thu âm: điện thoại ghi âm/chọn file → mã hoá base64 → lưu vào kho file của trang (text/plain nhận mọi định dạng).
+  function bindRecorders(l){
+    document.querySelectorAll(".rec").forEach(box => {
+      const inp = box.querySelector('input[type=file]'); if (!inp) return;
+      const st = box.querySelector(".rec-st"), au = box.querySelector(".rec-au"), hid = box.querySelector('input[type=hidden]');
+      inp.addEventListener("change", async () => {
+        const f = inp.files && inp.files[0]; if (!f) return;
+        if (f.size > 14*1024*1024){ st.textContent = "File quá lớn (tối đa ~14 MB). Thu ngắn lại khoảng 1–2 phút nhé."; return; }
+        try { au.src = URL.createObjectURL(f); au.hidden = false; } catch {}
+        st.textContent = "Đang tải bản thu lên…";
+        try {
+          const assets = await claude.use("assets");
+          if (!assets){ st.textContent = "Trang chưa có quyền lưu file trên thiết bị này. Mở trang trên claude.ai khi đã đăng nhập."; return; }
+          const b64 = await new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(",")[1]||""); r.onerror = rej; r.readAsDataURL(f); });
+          const up = await assets.upload(new Blob([b64], {type:"text/plain"}), {type:"text/plain"});
+          hid.value = JSON.stringify({asset:up.id, enc:"base64", mime:f.type||"", name:f.name||"recording", size:f.size, at:new Date().toISOString()});
+          st.textContent = `✅ Đã tải lên: ${f.name||"bản thu"} (${Math.round(f.size/1024)} KB). Nhớ bấm Nộp bài khi xong.`;
+          store.set("draft:"+l.id, collect(l)); updateProgress(l);
+        } catch(e){
+          st.textContent = {too_large:"File quá lớn, thu ngắn lại nhé.", not_granted:"Cần bấm Cho phép để trang lưu file.", unavailable:"Thiết bị này chưa lưu file được."}[e?.code] || `Chưa tải lên được (${e?.code||"lỗi"}). Thử lại nhé.`;
+        }
+      });
     });
   }
 

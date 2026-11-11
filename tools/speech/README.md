@@ -3,9 +3,13 @@
 Claude không nghe được âm thanh trực tiếp. Bộ công cụ mã nguồn mở này "nghe hộ", rồi gia sư đọc kết quả và nhận xét.
 
 ## Luồng
-1. Tân thu âm (app ghi âm trên điện thoại, .m4a/.mp3/.wav), **đọc to đúng đoạn mẫu** trong bài.
-2. Tải file lên repo: github.com/tannc28/english-tutor → thư mục `recordings/` → *Add file → Upload files*. Tên file: `YYYY-MM-DD_<mã-bài>.m4a`.
-3. Nhắn gia sư "đã thu âm" (hoặc nộp bài trên web). Gia sư: `git pull` → `bash tools/speech/setup.sh` (lần đầu mỗi phiên/máy) → chạy `assess.py` → viết nhận xét vào bài + Progress Log (mục Pronunciation).
+**Mọi thứ trên web (cách chính):**
+1. Bài có câu hỏi `type: "recording"` (kèm `read`: đoạn cần đọc). Tân bấm **🎙️ Thu âm hoặc chọn file ghi âm**: điện thoại mở trình ghi âm hoặc cho chọn file (m4a/mp3/wav/webm/3gp…).
+2. Trang mã hoá file thành base64, tải lên **kho file của artifact** dưới dạng `text/plain` (kho chỉ nhận mp4/webm/văn bản, nên base64 nhận được mọi định dạng), rồi lưu vào câu trả lời: `{"asset":"<id>","enc":"base64","mime":…,"name":…,"size":…}`.
+3. Tân bấm Nộp. Gia sư: `get submissions/<id>` → lấy `asset` → `Artifact read` (url web, `path` = asset id, `out_dir` = scratchpad) → `base64 -d file.txt > rec.m4a` → `bash tools/speech/setup.sh` (lần đầu mỗi máy) → `~/.speechenv/bin/python tools/speech/assess.py rec.m4a "<đoạn read>"` → ghi nhận xét vào `grades/<id>` + Progress Log (mục Pronunciation). Chấm xong thì **xoá asset** (`Artifact delete` với `path` = id) để kho gọn; bản thu không lưu vào repo.
+4. Đã kiểm thử trọn vòng 11/11/2026: tải lên → tải về → giải mã ra file giống hệt bản gốc → chấm chạy đúng.
+
+*Dự phòng:* tải file lên thư mục `recordings/` của repo trên GitHub.
 
 ## Đo được gì
 | Lớp | Công cụ | Cho biết |
@@ -23,7 +27,7 @@ Claude không nghe được âm thanh trực tiếp. Bộ công cụ mã nguồn
 - Không thay được tai giáo viên. Không chấm được "độ hay", cảm xúc, độ tự nhiên tổng thể.
 - Trọng âm từ/câu chỉ có chỉ báo thô (cường độ). Ngữ điệu cuối câu là dấu hiệu thô.
 - Model nhận dạng âm vị có thể sai, nhất là với âm thanh nhiễu → thu âm nơi yên tĩnh, điện thoại cách miệng ~20 cm.
-- Trang web không ghi âm được (claude.ai chưa cấp quyền micro cho trang), nên phải tải file lên GitHub.
+- Trang web không ghi âm trực tiếp được (claude.ai chưa cấp quyền micro cho trang), nên ghi âm bằng trình ghi âm của điện thoại rồi chọn file ngay trên trang.
 
 ## Nguồn
 - OpenPronounce (wav2vec2 + espeak, cùng hướng tiếp cận): https://github.com/Halleck45/OpenPronounce
