@@ -2,5 +2,6 @@
  "data/days.json": "data/days.json",
  "data/profile.json": "data/profile.json",
  "data/lessons/2026-11-11-main.json": "data/lessons/2026-11-11-main.json",
- "data/grades/2026-11-11-main.json": "data/grades/2026-11-11-main.json"
+ "data/grades/2026-11-11-main.json": "data/grades/2026-11-11-main.json",
+ "data/submissions/2026-11-11-main.json": "data/submissions/2026-11-11-main.json"
 }

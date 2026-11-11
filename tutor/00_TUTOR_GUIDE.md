@@ -85,6 +85,12 @@ Bài nộp có `log` (trang tự ghi, chỉ số tổng hợp, xem `web/README.m
 - **Câu trả lời "Unsure: …" (cũ: "Khác: …") / "Không biết" / "Không chắc"** là Tân trung thực báo chưa chắc: không trừ nặng như sai, ghi rõ chỗ mù mờ Tân tự nêu, dùng nó để chọn hỗ trợ cho bài sau. Đây là dữ liệu quý hơn một câu đoán đúng.
 - Ghi 1–3 nhận xét ngắn về quá trình vào `grades/<id>.summary_md` (mục "Quá trình làm bài") và điểm yếu/khuyên tương ứng vào `profile` (coach/weaknesses). Nói thẳng nhưng nhẹ nhàng, không phán xét.
 
+## 6e. Nhận xét TỪNG CÂU (bắt buộc)
+- Mỗi câu hỏi phải có mục trong `grades/<id>.items[qid] = {verdict: correct|partial|wrong|unsure|skipped, note_md}`; trang hiện ngay dưới câu đó.
+- `note_md` (tiếng Anh đơn giản, thêm tiếng Việt khi cần): đúng/sai **vì sao**, **dẫn chứng câu trong bài/bài nghe**, cách hiểu đúng, lỗi diễn đạt (✏️), mẹo (💡) để lần sau tự làm được. Câu đúng cũng giải thích ngắn tại sao đúng; câu "không chắc"/bỏ qua thì đưa đáp án + giải thích.
+- `summary_md` = bức tranh tổng; `answers_md` = 2–3 điều quan trọng nhất. Không chấm chung chung.
+- **Không kết luận từ công cụ tự động khi chất lượng đầu vào kém** (VD bản thu nhỏ/nhiễu): bỏ kết quả và nói rõ.
+
 ## 7. Chấm & theo dõi
 - Chấm mức hiểu: Đọc /10, Nghe /10, Dictation % đúng.
 - Sửa lỗi dạng ❌ → ✅ → 💡, tối đa 3 lỗi mỗi bài, ưu tiên lỗi làm **hiểu sai ý**.

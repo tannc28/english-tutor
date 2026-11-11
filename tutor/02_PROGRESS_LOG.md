@@ -25,7 +25,6 @@
 - [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's' → Nghe dễ (A2+/B1, 0.85×) theo 3 bước: nghe → nghe + đọc lời → nghe lại không lời; chính tả từng phần tập trung dạng yếu/nối âm
 - [Đọc] **Xử lý câu dài còn chậm (hiểu được nhưng tốn nhiều thời gian)** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Nhiều đọc rộng B1+ dễ hơn để tăng tốc; đọc kỹ chỉ 1 đoạn/ngày
 - [Từ nối & cụm] **Từ nối tương phản/nhượng bộ và cụm động từ cố định** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
-- [Phát âm (ghi nhận, chưa luyện)] **Mất âm cuối t/d/k/s/z; ship/sheep; th** – dấu hiệu: Bản thu 11/11: máy nhận ~50% từ; mất âm cuối ở hàng chục từ → Chưa luyện riêng (đang tập trung input); shadowing nhẹ câu ngắn trong bài nghe
 
 **Mục tiêu thời gian:** 9 giờ/tuần (khoảng 50 phút làm bài + 25 phút nghe/đọc thêm mỗi ngày)
 
@@ -78,9 +77,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | pack it in | bỏ cuộc | 2026-11-11 | 2026-11-14 | new |
 
 ## Pronunciation (bản thu, tools/speech – chỉ khi Tân muốn)
-| Ngày | Dễ nghe % | Khớp âm vị % | Từ/phút | Lỗi ưu tiên | Ngữ điệu |
-|---|---|---|---|---|---|
-| 2026-11-11 | ~53% (máy nhận đúng từ) | không tin cậy trên bản thu này | 96 | mất âm cuối t/d/k/s/z; ship≈sheep; three→free | giọng có lên xuống (biên độ rộng), đọc từng từ, nhiều chỗ ngắt |
+(chưa có)
 
 ## Thay đổi định hướng
 - 11/11: Tập trung INPUT trước, OUTPUT sau; feedback bắt buộc mỗi bài.
@@ -90,3 +87,4 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 - 11/11: GitHub (data/) là nguồn dữ liệu duy nhất; web chỉ hiển thị; DB chỉ nhận bài nộp.
 - 11/11: Tab Tiến độ thành bảng huấn luyện: lời khuyên, giờ học/tuần vs mục tiêu, điểm yếu + kế hoạch, dự báo tới C1 (giờ Cambridge), làm được gì ở mỗi mức; Feedback thêm ô phút nghe/đọc ngoài bài.
 - 11/11 (sau Ngày 1): Tân yêu cầu **câu hỏi + giao diện toàn tiếng Anh** (full English).
+- 11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items).

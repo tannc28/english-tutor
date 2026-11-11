@@ -105,9 +105,9 @@ def main():
     with open(os.path.join(ROOT, "tutor", "02_PROGRESS_LOG.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(L) + "\n")
 
-    # ---- Danh sách file xuất bản kèm web (không có keys/ và submissions/)
+    # ---- Danh sách file xuất bản kèm web (không có keys/)
     files = {"data/days.json": "data/days.json", "data/profile.json": "data/profile.json"}
-    for sub in ("lessons", "grades"):
+    for sub in ("lessons", "grades", "submissions"):
         for fn in sorted(os.listdir(D(sub))):
             if fn.endswith(".json"):
                 files[f"data/{sub}/{fn}"] = f"data/{sub}/{fn}"

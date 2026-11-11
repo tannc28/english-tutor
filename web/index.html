@@ -268,6 +268,13 @@ table.days tr[data-id]:hover td{background:var(--sunk)}
 .weak-item p{margin:.3em 0 0}
 .pace{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 table.days tr.next td{background:var(--accent-soft)}
+.qfb{border-left:4px solid var(--line);background:var(--surface);border-radius:0 10px 10px 0;padding:10px 14px;display:flex;flex-direction:column;gap:4px}
+.qfb .md{max-width:none}.qfb .md p{margin:.35em 0}
+.qfb-h{font-weight:600;font-size:.86rem}
+.qfb.v-correct{border-color:var(--ok)}.qfb.v-correct .qfb-h{color:var(--ok)}
+.qfb.v-partial,.qfb.v-unsure{border-color:var(--warn)}.qfb.v-partial .qfb-h,.qfb.v-unsure .qfb-h{color:var(--warn)}
+.qfb.v-wrong{border-color:var(--bad)}.qfb.v-wrong .qfb-h{color:var(--bad)}
+.qfb.v-skipped{border-color:var(--ink-3)}.qfb.v-skipped .qfb-h{color:var(--ink-3)}
 .rec{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
 .rec .md{width:100%}
 .rec-pick{display:inline-flex;align-items:center;gap:6px;font-weight:600;padding:10px 16px;border-radius:10px;border:1px solid var(--accent);color:var(--accent);background:var(--surface);cursor:pointer}
@@ -366,6 +373,7 @@ table.days tr.next td{background:var(--accent-soft)}
     if (!current) return;
     const id = current, meta = lessons.find(l => l.id === id);
     if (meta?.status === "graded" && !grades[id]) getJSON("data/grades/"+encodeURIComponent(id)+".json").then(g => { grades[id] = g; if (current===id) renderLesson(); }).catch(()=>{});
+    if (meta?.status === "graded" && !subs[id]) getJSON("data/submissions/"+encodeURIComponent(id)+".json").then(sb => { if (!subs[id]){ subs[id] = sb; if (current===id) renderLesson(); } }).catch(()=>{});
     if (db) db.doc("drafts/"+id).get().then(snap => {
       const c = snap.data(); if (!c || current !== id || subs[id]) return;
       const loc = store.get("draft:"+id);
@@ -409,11 +417,11 @@ table.days tr.next td{background:var(--accent-soft)}
       const isOther = typeof val === "string" && /^(Khác|Unsure): /.test(val);
       const note = isOther ? val.replace(/^(Khác|Unsure): /,"") : "";
       return `<div class="opts" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}
-        <div class="unsure-row">
+        ${dis && !isOther ? "" : `<div class="unsure-row">
           <span class="unsure-hint">Can't choose?</span>
           <label class="unsure"><input type="radio" name="${id}" id="${id}-other" value="__other" ${isOther?"checked":""} ${dis}><span>🤔 I'm not sure</span></label>
           ${dis ? "" : `<button type="button" class="linkbtn opt-clear" data-q="${esc(q.id)}">Clear</button>`}
-        </div>
+        </div>`}
         <input type="text" class="other-note" id="${id}-note" placeholder="Note for your tutor: which options you're torn between, what's unclear… (optional)" value="${esc(note)}" ${isOther?"":"hidden"} ${dis}>
       </div>`;
     }
@@ -596,6 +604,12 @@ table.days tr.next td{background:var(--accent-soft)}
   setInterval(() => { if (pendingL && saveState.k === "local") cloudSave(pendingL); }, 30000);
   window.addEventListener("pagehide", () => { if (pendingL) cloudSave(pendingL); });
 
+  const VERDICT = {correct:["✅","Correct"], partial:["◐","Partly right"], wrong:["❌","Not quite"], unsure:["🤔","You weren't sure"], skipped:["⏭","Skipped"]};
+  function fbItem(grade, qid){
+    const it = grade?.items?.[qid]; if (!it) return "";
+    const [ic, lab] = VERDICT[it.verdict] || ["💬","Note"];
+    return `<div class="qfb v-${esc(it.verdict||"note")}"><span class="qfb-h">${ic} ${lab}</span><div class="md">${md(it.note_md||"")}</div></div>`;
+  }
   function renderLesson(){
     const main = $("#main");
     const meta = lessons.find(x => x.id === current);
@@ -658,6 +672,7 @@ table.days tr.next td{background:var(--accent-soft)}
               <div class="q" id="qb-${esc(q.id)}">
                 <label class="qt" for="q-${esc(q.id)}"><span class="qn">✍️ ${++qn}</span><span class="qx">${inline(q.q)}</span></label>
                 ${qInput(q, ans[q.id], locked)}
+                ${fbItem(grade, q.id)}
               </div>`).join("")}</div>` : ""}
           </div>
         </section>`).join("")}

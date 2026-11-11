@@ -46,12 +46,6 @@
    "detail": "Từ nối tương phản/nhượng bộ và cụm động từ cố định",
    "evidence": "g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means)",
    "plan": "Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày"
-  },
-  {
-   "area": "Phát âm (ghi nhận, chưa luyện)",
-   "detail": "Mất âm cuối t/d/k/s/z; ship/sheep; th",
-   "evidence": "Bản thu 11/11: máy nhận ~50% từ; mất âm cuối ở hàng chục từ",
-   "plan": "Chưa luyện riêng (đang tập trung input); shadowing nhẹ câu ngắn trong bài nghe"
   }
  ],
  "interests": [
@@ -174,16 +168,7 @@
    "status": "new"
   }
  ],
- "pronunciation": [
-  {
-   "date": "2026-11-11",
-   "intelligibility": "~53% (máy nhận đúng từ)",
-   "phoneme": "không tin cậy trên bản thu này",
-   "wpm": 96,
-   "issues": "mất âm cuối t/d/k/s/z; ship≈sheep; three→free",
-   "prosody": "giọng có lên xuống (biên độ rộng), đọc từng từ, nhiều chỗ ngắt"
-  }
- ],
+ "pronunciation": [],
  "orientation": [
   "11/11: Tập trung INPUT trước, OUTPUT sau; feedback bắt buộc mỗi bài.",
   "11/11: Tiếng Anh PHỔ THÔNG là chính (mục tiêu C1), IT là phụ; phương pháp Comprehensible Input.",
@@ -191,7 +176,8 @@
   "11/11: 1 job duy nhất 06:00 mỗi ngày ra đủ bài của ngày; lớp chia theo ngày; có Hồ sơ + Tiến độ trên web.",
   "11/11: GitHub (data/) là nguồn dữ liệu duy nhất; web chỉ hiển thị; DB chỉ nhận bài nộp.",
   "11/11: Tab Tiến độ thành bảng huấn luyện: lời khuyên, giờ học/tuần vs mục tiêu, điểm yếu + kế hoạch, dự báo tới C1 (giờ Cambridge), làm được gì ở mỗi mức; Feedback thêm ô phút nghe/đọc ngoài bài.",
-  "11/11 (sau Ngày 1): Tân yêu cầu **câu hỏi + giao diện toàn tiếng Anh** (full English)."
+  "11/11 (sau Ngày 1): Tân yêu cầu **câu hỏi + giao diện toàn tiếng Anh** (full English).",
+  "11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items)."
  ],
  "coach": {
   "summary_md": "**B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.",
