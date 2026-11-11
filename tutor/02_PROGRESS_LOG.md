@@ -2,8 +2,11 @@
 
 ## Trạng thái hiện tại
 - Bắt đầu: 11/11/2026 (Thứ 4)
-- Phase: 1 – INPUT (Reading + Listening). Tuần hiện tại: 1
-- Bài tiếp theo: **Day 1 – Đánh giá đầu vào (reading + listening) + chủ đề công việc IT** (ra bài 18:55 tối 11/11, làm trên web)
+- Mục tiêu: tiếng Anh PHỔ THÔNG B1 → C1 (Comprehensible Input). IT là phụ cho tới C1.
+- Phase: 1 – INPUT (nghe + đọc). Tuần hiện tại: 1
+- Mức hiểu mục tiêu: đọc rộng ~98%, đọc kỹ ~95%, nghe dễ hơn đọc (chưa xác định – chờ Day 1)
+- Truyện dài kỳ: "Hope Street" (Nam, 28, chuyển tới Manchester; Margaret – Flat 1; Mr Patel – chủ nhà). Đã có: Tập 1 The Key
+- Bài tiếp theo: **Day 1 – Đánh giá đầu vào** – ĐÃ ĐĂNG sớm (lessons/2026-11-11-main): nghe dễ (dialogue Linh–Sam), Hope Street tập 1, đọc kỹ "forgetting curve", nghe khó (sleep talk), câu hỏi sở thích
 - Chuỗi ngày học (streak): 0
 - Lịch: 4 Routine lặp cố định gửi về phiên Code chính (xem bên dưới). Mốc kế tiếp: 18:55 T4 11/11 – Bài chính
 
@@ -27,6 +30,8 @@ Web lớp học: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (schema: `web
 
 ## Thay đổi định hướng
 - 11/11/2026: Tân yêu cầu tập trung INPUT (reading + listening thật kỹ, hiểu hết) trước, OUTPUT (speaking/writing) ở phase sau. Bắt buộc feedback mỗi bài; Talk Time cuối tuần; CN nhắc học. Mọi bài diễn ra trong 1 phiên Claude Code chính.
+
+- 11/11/2026 (chiều): Đổi sang **tiếng Anh phổ thông là chính (mục tiêu C1), IT là phụ**; phương pháp **Comprehensible Input**. Tutor Guide v3, Roadmap v3.
 
 ## Weak points (lỗi lặp lại)
 - (chưa có – điền sau bài đánh giá đầu vào)

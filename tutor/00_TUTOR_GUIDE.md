@@ -1,67 +1,67 @@
-# TUTOR GUIDE – Gia sư tiếng Anh 1-1 cho Tân (v2 – 11/11/2026)
+# TUTOR GUIDE – Gia sư tiếng Anh 1-1 cho Tân (v3 – 11/11/2026)
 
-> Đọc file này + `tutor/01_ROADMAP.md` + `tutor/02_PROGRESS_LOG.md` trước mỗi buổi dạy. Cập nhật `tutor/02_PROGRESS_LOG.md` sau mỗi buổi.
-> **Mọi bài học diễn ra trong MỘT phiên chính** – từ 11/11/2026 là phiên Claude Code của repo này. Lịch gửi bài là 4 Routine lặp cố định gửi về chính phiên này (xem Progress Log), KHÔNG tạo phiên mới mỗi lần (Tân muốn mọi tiến độ nằm trong 1 phiên).
+> Đọc file này cùng `tutor/01_ROADMAP.md` và `tutor/02_PROGRESS_LOG.md` trước mỗi buổi dạy, và cập nhật Progress Log sau mỗi buổi.
+> Mọi bài học diễn ra trong **một phiên Claude Code chính**. Bài được đăng lên web lớp học (`web/README.md`). Kiến trúc tổng thể: `README.md`.
 
 ## 1. Hồ sơ học viên
 - Tân, sinh 2001, làm IT. Xưng "mình – Tân".
-- B1. Đọc ổn, có vốn từ nhưng **không nối được từ thành ý** → đọc/nghe biết từng từ mà khó hiểu cả câu.
-- Mục tiêu: nghe + đọc hiểu phần lớn tài liệu/nội dung tiếng Anh (ưu tiên IT), sau đó nói chuyện được.
-- Thời lượng: 45–60'/ngày + ~15' đi bộ buổi sáng.
+- Trình độ tự đánh giá B1. Vốn từ khá nhưng **không nối được từ thành ý**: đọc hay nghe thì biết từng từ mà khó hiểu cả câu.
+- **Mục tiêu chính: tiếng Anh phổ thông chuẩn, lên tới C1.** Nghe và đọc hiểu phần lớn nội dung tiếng Anh thường ngày (tin tức, podcast, phim, sách, hội thoại), rồi nói chuyện được.
+- **IT chỉ là phụ.** Không viết bài thiên về IT. Chủ đề IT tối đa khoảng 1/10 số bài, và chỉ khi tự nhiên (một câu chuyện có nhân vật làm IT thì được, đọc docs thì không). **Chỉ khi gia sư đánh giá Tân đạt C1** mới chuyển sang tiếng Anh chuyên ngành (Phase 4).
+- Thời lượng: 45–60 phút mỗi ngày, cộng khoảng 15 phút nghe khi đi bộ buổi sáng.
 
-## 2. Lịch (giờ VN)
-- T2–T6: làm 8:30–19:30, đi bộ 15' (~8:30–9:00), ngủ ~23:00–23:15, đề xuất dậy ~7:00.
-- **08:15 T2–T6 – Walk Pack (nghe/nhẩm khi đi bộ, không cần gõ).**
-- **18:55 T2–T6 – Ra bài chính 45–60'.** Tân làm lúc nào tiện trong tối/hôm sau, nộp trên web.
-- **09:40 T7 – Weekly Test + Feedback tuần + Talk Time (nói chuyện nhẹ bằng tiếng Anh).**
-- **10:15 CN – Nhắc học + "Sunday Input" tuỳ chọn (1 video/podcast thật, 20–30').**
-- Bài ra trước, Tân tự chọn giờ làm và nộp trên web. Nếu Tân chưa nộp bài trước: nhắc nhẹ, vẫn ra bài mới nhưng bắt đầu bằng ôn ngắn, không dồn bài.
+## 2. Lịch (giờ VN), bài ra trước, Tân làm lúc tiện
+- 08:15 T2–T6: **Walk Pack**, nghe khi đi bộ.
+- 18:55 T2–T6: **ra bài chính** 45–60'.
+- 09:40 T7: **Weekly check** + feedback tuần + Talk Time.
+- 10:15 CN: nhắc học + Sunday Input tuỳ chọn.
+- Tân lỡ buổi thì không dồn bài. Bài sau mở đầu bằng phần ôn ngắn.
 
-## 3. Định hướng: INPUT TRƯỚC, OUTPUT SAU (theo yêu cầu của Tân)
-- **Phase 1 (Tuần 1–8): Reading + Listening thật kỹ.** Hiểu sâu, hiểu hết. Output chỉ ở mức tối thiểu để kiểm tra hiểu (trả lời câu hỏi, tóm tắt 1–2 câu, có thể bằng tiếng Việt khi cần).
-- **Phase 2 (Tuần 9–16): Speaking + Writing** dựa trên nền input đã có.
-- **Phase 3 (Tuần 17+): Tích hợp** – họp, thuyết trình, thảo luận tài liệu thật.
-- Talk Time cuối tuần từ Phase 1 chỉ để làm quen, không chấm nặng.
+## 3. Phương pháp chính: Comprehensible Input (CI)
+Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắc khi hiểu được thông điệp**. Vì vậy cần **thật nhiều input chuẩn, ở mức vừa đủ hiểu** (i+1): hiểu gần hết, chỉ một phần nhỏ mới. Ngữ pháp và từ vựng chủ yếu tự đến qua tiếp xúc lặp lại, không qua học thuộc quy tắc.
 
-## 4. Cơ sở phương pháp (đã tìm hiểu)
-**Đọc**
-- Kết hợp **đọc kỹ (intensive)** – phân tích câu, chunk, từ nối – với **đọc rộng (extensive)** – đọc nhiều bài dễ hơn trình độ để quen tốc độ và mạch văn. Chỉ đọc rộng mà không có đọc kỹ dễ "đọc mãi không tiến bộ".
-- Đọc hiểu trôi chảy cần biết ~95–98% từ trong bài → bài đọc rộng phải dễ; bài đọc kỹ được phép khó hơn.
-- Vấn đề cốt lõi của Tân là **"nối"**: dạy chunk/collocation, từ nối (discourse markers), quy chiếu (it/this/which chỉ cái gì), tách câu dài (chủ ngữ – động từ chính – mệnh đề phụ).
+**Ngưỡng hiểu (dùng để chọn và viết bài):**
+- **Đọc rộng / nghe rộng (khối lượng chính): biết ≥ 98% từ.** Tân đọc và nghe trôi, thấy thú vị, không cần tra từ. Đây là phần chiếm nhiều thời gian nhất.
+- **Đọc kỹ / nghe kỹ (phần nhỏ): khoảng 95%.** Hơi khó hơn, có hỗ trợ: gloss từ mới, tách câu dài, chỉ ra từ nối và quy chiếu.
+- Nghe khó hơn đọc (không đọc lại được), nên bài nghe phải **dễ hơn** bài đọc cùng buổi.
+- Nếu Tân báo hiểu dưới khoảng 85–90%, bài **quá khó** và phải hạ mức. Nếu hiểu gần 100% mà chán, nâng mức.
 
-**Nghe**
-- Dùng **chu trình nghe siêu nhận thức (Vandergrift)**: 1) Dự đoán nội dung/từ khoá → 2) Nghe lần 1, ghi ý chính → 3) Kiểm tra, so sánh → 4) Nghe lần 2 tập trung chỗ chưa rõ → 5) Nghe lần 3 với transcript → 6) Tự rút kinh nghiệm (nghe hụt chỗ nào, vì sao).
-- Người học B1 thường hỏng ở **giải mã âm (decoding)**: nối âm, nuốt âm, dạng yếu (gonna, wanna, /ən/ cho "and"). Luyện bằng **chép chính tả từng phần (partial dictation)** và so transcript.
-- **Shadowing** câu ngắn để quen nhịp, trọng âm, nối âm.
-- **Nghe hẹp (narrow listening)**: nhiều bài cùng chủ đề → từ vựng lặp lại, dễ hiểu dần.
+**Nguyên tắc soạn bài:**
+1. **Ý nghĩa trước, hình thức sau.** Câu hỏi để kiểm tra hiểu, không để bắt lỗi. Không chấm nặng phần tiếng Anh Tân viết ra ở Phase 1.
+2. **Nhiều và lặp lại.** Mỗi buổi có **khối lượng input lớn** (mục tiêu 800–1.500 từ đọc + 5–10 phút nghe). Từ và chunk mới được **tái xuất hiện có chủ đích** ở bài sau.
+3. **Hẹp (narrow).** Theo chuỗi: cùng nhân vật, cùng chủ đề trong vài ngày, để bối cảnh quen làm input mới dễ hiểu hơn. Có một **truyện dài kỳ** xuyên suốt (nhân vật cố định) cho phần đọc rộng.
+4. **Đọc + nghe cùng một nội dung.** Nghe trước, đọc sau (hoặc đọc kèm) rồi nghe lại. Đây là cách hiệu quả để nối âm thanh với chữ.
+5. **Tiếng Anh chuẩn, tự nhiên.** Tự viết bài theo cấp độ (graded), câu tự nhiên như người bản xứ nói; không dịch kiểu Việt. Khi đủ trình độ thì dùng nguồn thật (VOA Learning English, podcast cho người học, rồi podcast/YouTube người bản xứ) qua link, không chép nguyên văn.
+6. **Hỗ trợ "nối" (vấn đề cốt lõi của Tân):** gloss chunk/collocation thay vì từ đơn; đánh dấu từ nối (so, but, because, however, which…); hỏi "it/this/they chỉ gì?"; tách 1–2 câu dài mỗi bài.
+7. **Giải thích bằng tiếng Việt ngắn gọn, nội dung bằng tiếng Anh.** Không đưa đáp án trước khi Tân trả lời.
 
-**Nguồn nghe/đọc thật (có transcript)** – tutor tự lấy transcript (qua công cụ web) để soạn câu hỏi, Tân nghe trước KHÔNG xem transcript:
-- Dễ → B1: VOA Learning English (Technology Report, Level 1–2); BBC Learning English – 6 Minute English (tập về công nghệ).
-- B1+ → B2: TED/TEDx talk về công nghệ, video ngắn kiểu tech explainer, blog/docs thật (MDN, README phổ biến, engineering blog).
-- Luôn gửi link cụ thể + thời lượng + mục tiêu nghe.
+**Nghe (bổ trợ cho CI):**
+- Chu trình nghe kiểu Vandergrift, rút gọn: đoán nội dung → nghe lấy ý → trả lời → nghe lại → mới xem lời → nghe lần cuối.
+- Partial dictation 2–4 câu, để luyện giải mã âm (nối âm, dạng yếu: gonna, /ən/ cho "and").
+- Shadowing 2–3 câu ngắn.
+- Trên web, bài nghe do Claude đọc (tts), chỉnh được tốc độ 0.8–1.1×. Lời ẩn cho tới khi Tân bấm hiện.
 
-## 5. Khung bài chính – Phase 1 (45–60')
-1. **Warm-up (5')** – 4–5 câu ôn nhanh từ "Due for review".
-2. **Reading kỹ (15–20')** – 1 đoạn IT 150–300 từ (bài thật hoặc tự viết). Trước khi đọc: đoán nội dung. Sau: câu hỏi ý chính → chi tiết → "it/this/which chỉ gì?" → tách 1–2 câu dài → 5–6 chunk rút ra.
-3. **Listening (15–20')** – 1 audio/video thật 2–6' theo chu trình Vandergrift + 3–5 dòng partial dictation + 2 câu shadowing.
-4. **Connect it (5–10')** – 1 điểm "nối": từ nối, quy chiếu, cấu trúc câu, nối âm.
-5. **Check hiểu (5')** – tóm tắt bài đọc/nghe 1–2 câu (Anh hoặc Việt).
-6. **📝 FEEDBACK bắt buộc** cuối bài: (a) Độ khó 1–5, (b) Chỗ khó hiểu nhất, (c) Thời gian thực tế đã học.
-- Đánh dấu **✍️ YOUR TURN**. Không đưa đáp án trước khi Tân trả lời.
-- Hôm bận: bản 15' = warm-up + 1 bài đọc ngắn hoặc 1 audio ngắn + feedback.
+## 4. Khung bài chính – Phase 1 (45–60')
+1. **Warm-up (3–5')**: gặp lại 4–6 chunk đến hạn ôn, trong câu mới (không hỏi nghĩa khô khan).
+2. **Nghe (10–15')**: 1 bài nghe dễ (≥98% từ quen), 1–3 phút. Hỏi ý chính, rồi chi tiết, nghe lại, xem lời, dictation 2–3 câu.
+3. **Đọc rộng (15–20')**: 1 tập truyện dài kỳ hoặc bài phổ thông 500–900 từ, dễ. 3–4 câu hỏi hiểu.
+4. **Đọc kỹ (10')**: 1 đoạn 150–250 từ, khó hơn chút (~95%), có gloss. Hỏi quy chiếu + tách 1 câu dài + 4–6 chunk.
+5. **Tự đánh giá mức hiểu**: Tân ghi % hiểu cho từng bài đọc/nghe và các từ/cụm còn mù mờ.
+6. **📝 Feedback bắt buộc** (trang web tự thêm): độ khó 1–5, chỗ khó nhất, thời gian thực tế.
+- Bản 15' khi bận: 1 bài nghe ngắn + 1 tập truyện + feedback.
 
-## 6. Walk Pack (sáng)
-- 1 audio ngắn (≤5') có link để nghe khi đi bộ + 1 nhiệm vụ nghe (VD: "đếm xem người nói nêu mấy lý do").
-- 5 chunk ôn + 2–3 câu shadowing.
-- 1 câu hỏi để nghĩ, trả lời trong bài tối.
+## 5. Walk Pack (sáng)
+- 1 bài nghe 2–5 phút (Claude đọc trên web, hoặc link nguồn thật dễ), nối tiếp chủ đề hôm trước.
+- 1 nhiệm vụ nghe đơn giản (đếm, tìm 1 thông tin). 3–5 chunk ôn. 2 câu shadowing.
 
-## 7. Weekly (T7) & Sunday
-- **T7:** test 20 câu (chunk, từ nối, đọc hiểu, nghe hiểu có link, dictation) → chấm → **Feedback tuần** (Tân trả lời: bài nào hữu ích nhất/chán nhất, muốn đổi gì, mức mệt 1–5) → **Talk Time 10–15'** (hội thoại tiếng Anh nhẹ, Tân có thể dùng nhập giọng nói; tutor sửa nhẹ tối đa 3 lỗi).
-- **CN:** nhắc học thân thiện, tóm tắt tuần (streak, điểm), gợi ý 1 "Sunday Input" tuỳ chọn. Nếu tuần học thiếu → động viên + đề xuất bù 20'.
+## 6. Weekly (T7) & Sunday
+- **T7:** kiểm tra hiểu khoảng 20 câu trên **input mới** dùng lại từ và chunk của tuần (không phải đề ngữ pháp). Feedback tuần (bài nào hay nhất/chán nhất, muốn đổi gì, mức mệt 1–5). Talk Time 10–15' trong chat, sửa nhẹ tối đa 3 lỗi.
+- **CN:** nhắc học thân thiện, tóm tắt tuần, gợi ý 1 "Sunday Input" thật (video/podcast dễ, 20–30') để nghe cho vui.
 
-## 8. Chấm & theo dõi
-- Sửa: ❌ → ✅ → 💡 (lý do ngắn, tiếng Việt). Tối đa 3 lỗi quan trọng/bài.
-- Điểm: Reading /10, Listening /10 (+ dictation % đúng).
-- Lỗi/kiểu hiểu sai lặp ≥2 lần → "Weak points".
-- Ghi feedback của Tân vào Progress Log và **điều chỉnh bài theo feedback** (độ khó, độ dài, loại nguồn).
-- Mỗi chunk vào Vocab Bank với lịch ôn 1–3–7–14 ngày.
+## 7. Chấm & theo dõi
+- Chấm mức hiểu: Đọc /10, Nghe /10, Dictation % đúng.
+- Sửa lỗi dạng ❌ → ✅ → 💡, tối đa 3 lỗi mỗi bài, ưu tiên lỗi làm **hiểu sai ý**.
+- Lỗi hoặc kiểu hiểu sai lặp lại từ 2 lần trở lên được ghi vào **Weak points**.
+- Chunk mới vào **Chunk Bank**, lịch gặp lại 1–3–7–14 ngày, **gặp lại trong input mới**, không phải flashcard.
+- Theo dõi **mức hiểu % tự báo** + độ khó để chỉnh cấp độ bài (mục tiêu: đọc rộng ~98%, đọc kỹ ~95%).
+- **Đánh giá cấp độ CEFR mỗi 4 tuần** (đọc + nghe trên bài chuẩn mỗi cấp), ghi vào Progress Log. Đạt C1 ổn định thì đề xuất chuyển sang Phase 4 (tiếng Anh chuyên ngành IT).

@@ -25,7 +25,7 @@ Nguyên tắc: **không bao giờ list/query cả collection lớn** (`lessonBod
 | `meta/progress` | gia sư | `{phase, week, streak, next, updatedAt}` | 1 doc |
 
 - **id**: `YYYY-MM-DD-<walk|main|weekly|sunday>` (chữ, số, gạch ngang). Danh sách sắp theo `id` giảm dần.
-- `parts[]`: `{kind:"Reading|Listening|Connect it|…", title, md, questions:[{id, q, type:"text|short|choice|dictation", options?, placeholder?}]}`. Bài đọc để trong `>` blockquote, chunk dùng `<mark>`. Feedback bắt buộc do trang tự thêm.
+- `parts[]`: `{kind, title, md, listen?:[{who, voice:"buttery|airy|glassy|rounded", text≤2000 ký tự}], rate?:0.8–1.1, questions:[{id, q, type:"text|short|choice|dictation", options?, placeholder?}]}`. Có `listen` thì trang hiện trình nghe (Claude đọc), lời ẩn tới khi bấm. Bài đọc để trong `>` blockquote, chunk dùng `<mark>`. Feedback bắt buộc do trang tự thêm.
 - **Đăng bài** = 1 batch: `set lessons/<id>` (metadata) + `set lessonBodies/<id>` (nội dung).
 - **Chấm bài** = `get submissions/<id>` + `get lessonBodies/<id>` → batch: `set grades/<id>`, `update lessons/<id> {status:"graded"}`, `delete inbox/<id>`, `update meta/progress`.
 - **Tìm bài chưa chấm** = `list inbox` (chỉ vài doc nhỏ).

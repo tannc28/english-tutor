@@ -26,7 +26,8 @@ Lịch chạy bằng 4 Routine lặp cố định gửi về phiên chính (ID t
 1. Mọi bài học diễn ra trong **một phiên chính** (Claude Code, `session_01VzvjsE7Dz6m9heACFeiGmz`), không mở phiên mới mỗi lần. Lịch gửi bài là 4 Routine cron cố định về phiên này.
 2. Định hướng: **Input trước (Reading + Listening thật kỹ, hiểu hết), Output sau** (Speaking + Writing ở Phase 2). Tutor tự nghiên cứu phương pháp, theo dõi tiến độ, bắt feedback, luyện nói cùng học viên, cuối tuần giục học.
 3. (11/11) Đổi giờ bài tối 20:45 → 18:55 (ra bài trước, Tân tự chọn giờ làm). Làm **web lớp học** (artifact claude.ai): xem bài, nộp bài → gia sư tự chấm và lên bài tiếp.
-4. Repo GitHub là nơi lưu toàn bộ: CLAUDE.md, giáo án, bài đọc, audio, test, tiến độ. Claude có toàn quyền push thẳng `main`.
+4. (11/11 chiều) **Đổi trọng tâm:** Tân muốn học **tiếng Anh phổ thông chuẩn trước, IT là phụ**; chỉ khi đạt C1 mới học chuyên sâu IT. Phương pháp chính: **Comprehensible Input** (nạp nhiều input chuẩn, vừa đủ hiểu). Viết lại Tutor Guide v3 + Roadmap v3. Web có trình nghe (Claude đọc, chỉnh tốc độ, ẩn lời).
+5. Repo GitHub là nơi lưu toàn bộ: CLAUDE.md, giáo án, bài đọc, audio, test, tiến độ. Claude có toàn quyền push thẳng `main`.
 
 ## 5. Phương pháp đã nghiên cứu (nguồn)
 - Intensive + extensive reading: https://howwelearnlanguages.substack.com/p/reading-but-not-improving

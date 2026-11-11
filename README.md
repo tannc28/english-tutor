@@ -1,6 +1,6 @@
 # english-tutor
 
-Khoá học tiếng Anh 1-1 của Tân (B1 → B2, thiên về IT), với Claude làm gia sư. Bắt đầu ngày 11/11/2026.
+Khoá học tiếng Anh 1-1 của Tân, với Claude làm gia sư. Mục tiêu: **tiếng Anh phổ thông B1 → C1** theo phương pháp **Comprehensible Input**. IT chỉ là phụ cho tới khi đạt C1. Bắt đầu ngày 11/11/2026.
 
 File này mô tả **toàn bộ kiến trúc**: hệ thống gồm những phần nào, mỗi phần làm gì, và một bài học đi từ lúc soạn tới lúc chấm như thế nào. Cách dạy (phương pháp, khung bài) nằm ở `tutor/00_TUTOR_GUIDE.md`. Quy tắc gia sư phải theo nằm ở `CLAUDE.md`.
 
@@ -87,9 +87,9 @@ web/README.md              ← schema database + luồng nộp/chấm chi tiết
 
 | Routine | Giờ (VN) | Việc | ID |
 |---|---|---|---|
-| Walk Pack | 08:15 T2–T6 | 1 audio ngắn để nghe khi đi bộ + 5 chunk ôn + shadowing | `trig_01JfVVWawW2pV4745EEx34Pn` |
-| Bài chính | 18:55 T2–T6 | Ra bài 45–60': Reading kỹ + Listening + Connect it | `trig_0135HZukAJdhjKZqe96UoqAF` |
-| Weekly Test | 09:40 T7 | Test 20 câu + feedback tuần + mời Talk Time | `trig_01M2RcBmJDEihRszoorXBotS` |
+| Walk Pack | 08:15 T2–T6 | 1 bài nghe dễ (Claude đọc trên web) khi đi bộ + chunk ôn + shadowing | `trig_01JfVVWawW2pV4745EEx34Pn` |
+| Bài chính | 18:55 T2–T6 | Ra bài 45–60' theo Comprehensible Input: nghe dễ + đọc rộng (truyện dài kỳ) + đọc kỹ có gloss | `trig_0135HZukAJdhjKZqe96UoqAF` |
+| Weekly check | 09:40 T7 | ~20 câu kiểm tra hiểu trên input mới + feedback tuần + Talk Time | `trig_01M2RcBmJDEihRszoorXBotS` |
 | Nhắc học | 10:15 CN | Tóm tắt tuần + gợi ý Sunday Input | `trig_01TTc69trshZCZ4t2itGAVU9` |
 | Nộp bài (dự phòng) | Không có giờ, chỉ chạy khi được gọi | Chấm khi đường báo chính lỗi | `trig_01AN7RrytvZ5BmXiymy5Ym5M` |
 
@@ -103,7 +103,7 @@ web/README.md              ← schema database + luồng nộp/chấm chi tiết
 Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân mở được)
 
 Trang có hai phần tách biệt:
-- **Giao diện** (`web/index.html`): chỉ là khung hiển thị. Thêm bài mới **không** sửa file này. File chỉ sửa khi thêm tính năng hoặc sửa lỗi, rồi publish lại vào cùng link.
+- **Giao diện** (`web/index.html`): chỉ là khung hiển thị, gồm danh sách bài, vở làm bài, **trình nghe** (Claude đọc bài nghe bằng giọng đọc, chỉnh tốc độ 0.8–1.1×, lời ẩn cho tới khi bấm hiện) và thanh tiến độ. Thêm bài mới **không** sửa file này. File chỉ sửa khi thêm tính năng hoặc sửa lỗi, rồi publish lại vào cùng link.
 - **Database** (kèm theo artifact): chứa toàn bộ bài, bài nộp, điểm.
 
 ### Database
@@ -127,6 +127,7 @@ Mọi collection đều chỉ chủ sở hữu (Tân) mới được ghi. Gia s�
 - `comments`: gửi bình luận "Send to Claude", là đường báo chính.
 - `mcp` → `Claude Code Remote` / `fire_trigger`: đường báo dự phòng.
 - `user`: biết ai đang xem trang.
+- `tts`: đọc bài nghe thành tiếng. Có trên Chrome và app Claude máy tính. App điện thoại có thể chưa hỗ trợ; khi đó trang cho xem lời thay thế.
 
 ## 6. Các luồng chính
 

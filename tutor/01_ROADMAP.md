@@ -1,22 +1,30 @@
-# ROADMAP (v2) – Input trước, Output sau
+# ROADMAP (v3) – Comprehensible Input, tiếng Anh phổ thông trước
 
-## PHASE 1 – INPUT: Reading + Listening thật kỹ (Tuần 1–8)
-| Tuần | Chủ đề nội dung | Reading – trọng tâm "nối" | Listening – trọng tâm |
+Mục tiêu: **B1 → C1 tiếng Anh phổ thông**. IT chỉ là phụ cho tới khi đạt C1.
+Mốc thời gian chỉ là dự kiến. Gia sư chỉnh theo kết quả đánh giá 4 tuần một lần và theo feedback.
+
+## PHASE 1 – INPUT: nghe + đọc thật nhiều, vừa đủ hiểu (Tuần 1–8, B1 → B1+)
+| Tuần | Chủ đề (narrow, đời sống) | Trọng tâm "nối" | Nghe |
 |---|---|---|---|
-| 1 | Công việc IT, giới thiệu, đánh giá đầu vào | Từ nối cơ bản and/but/so/because; câu ghép | Đánh giá đầu vào; nhận diện từ khoá; VOA Level 1–2 |
-| 2 | Daily work, stand-up, công cụ | Quy chiếu: it/this/that/they chỉ gì | Nối âm phụ âm–nguyên âm (work_on, check_it) |
-| 3 | Đọc README & docs | Câu điều kiện if/unless/once; câu mệnh lệnh; skim/scan | Dạng yếu: to/for/and/can; partial dictation |
-| 4 | Bug, lỗi, nguyên nhân | Nguyên nhân–kết quả: due to, as a result, which leads to | Nghe giải thích quy trình/nguyên nhân |
-| 5 | Câu dài trong docs/blog | Mệnh đề quan hệ, rút gọn mệnh đề, cụm danh từ dài | Tốc độ tự nhiên; BBC 6 Minute English |
-| 6 | So sánh công nghệ | Tương phản: whereas, while, however, on the other hand | Nghe ý kiến & lập luận |
-| 7 | Blog kỹ thuật dài (500–800 từ) | Cấu trúc bài: topic sentence, signposting | Tech talk ngắn (TED/TEDx), narrow listening |
-| 8 | Tổng ôn Phase 1 + đánh giá | Đọc bài thật không hỗ trợ | Nghe talk 8–10' không transcript |
-**Mục tiêu cuối Phase 1:** đọc hiểu ~80–90% một bài blog/doc IT thật; nghe hiểu ý chính talk tech tốc độ tự nhiên, ~70% chi tiết.
+| 1 | Đánh giá đầu vào · Một ngày bình thường | and / but / so / because; câu ghép | Hội thoại chậm, rõ |
+| 2 | Gia đình, bạn bè, hàng xóm | Quy chiếu: it / this / they / that | Nối âm phụ âm–nguyên âm |
+| 3 | Ăn uống, chợ, nấu ăn | when / before / after / while | Dạng yếu: to, for, and, can |
+| 4 | Đi lại, du lịch, thời tiết · **đánh giá 4 tuần** | if / unless; câu điều kiện thường gặp | Kể chuyện ngắn |
+| 5 | Sức khoẻ, giấc ngủ, thói quen | which / who / that (mệnh đề quan hệ) | Tốc độ gần tự nhiên |
+| 6 | Tiền bạc, mua sắm, quyết định | however / although / whereas | Ý kiến và lý do |
+| 7 | Tin tức đời sống, xã hội | Cấu trúc đoạn: ý chính, ví dụ, kết | Bản tin dễ (VOA Learning English) |
+| 8 | Ôn tập + **đánh giá 8 tuần** | Đọc bài dài không hỗ trợ | Podcast cho người học, 5–10' |
+Xuyên suốt: **truyện dài kỳ** (nhân vật cố định) cho phần đọc rộng, mỗi buổi một tập.
+**Mục tiêu cuối Phase 1:** đọc thoải mái truyện và bài phổ thông mức B1+ (~98% từ quen); nghe hiểu ý chính podcast cho người học ở tốc độ tự nhiên.
 
-## PHASE 2 – OUTPUT: Speaking + Writing (Tuần 9–16)
-Stand-up & báo cáo tiến độ → mô tả bug → message/email/PR description → họp & đưa ý kiến → giải thích kỹ thuật → demo/thuyết trình → small talk/phỏng vấn → tổng ôn.
+## PHASE 2 – INPUT nhiều hơn + bắt đầu OUTPUT (Tuần 9–20, B1+ → B2)
+- Input chuyển dần sang nguồn thật: podcast cho người học → podcast/YouTube người bản xứ dễ, sách graded cấp cao, tin tức.
+- Output dựa trên input: tóm tắt lời nói/viết, kể lại, Talk Time dài hơn, viết đoạn ngắn. Sửa lỗi nhẹ, tập trung vào sự tự nhiên.
 
-## PHASE 3 – TÍCH HỢP (Tuần 17+)
-Thảo luận tài liệu thật, tóm tắt talk bằng lời nói, mock meeting, đánh giá cuối khoá so với Day 1.
+## PHASE 3 – B2 → C1 (Tuần 21+)
+- Input thật, đa dạng: phim/series có phụ đề tiếng Anh, sách, báo, podcast tốc độ tự nhiên.
+- Thảo luận, tranh luận, kể chuyện dài, viết luận ngắn.
+- Đánh giá cấp độ mỗi 4 tuần. **Đạt C1 ổn định thì chuyển Phase 4.**
 
-Roadmap được điều chỉnh theo Weekly Test + feedback của Tân.
+## PHASE 4 – Chuyên sâu IT (sau khi đạt C1)
+Docs, tech talks, họp, viết PR/email kỹ thuật, phỏng vấn, thuyết trình.
