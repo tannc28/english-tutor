@@ -28,7 +28,8 @@ Lịch chạy bằng 4 Routine lặp cố định gửi về phiên chính (ID t
 3. (11/11) Đổi giờ bài tối 20:45 → 18:55 (ra bài trước, Tân tự chọn giờ làm). Làm **web lớp học** (artifact claude.ai): xem bài, nộp bài → gia sư tự chấm và lên bài tiếp.
 4. (11/11 chiều) **Đổi trọng tâm:** Tân muốn học **tiếng Anh phổ thông chuẩn trước, IT là phụ**; chỉ khi đạt C1 mới học chuyên sâu IT. Phương pháp chính: **Comprehensible Input** (nạp nhiều input chuẩn, vừa đủ hiểu). Viết lại Tutor Guide v3 + Roadmap v3. Web có trình nghe (Claude đọc, chỉnh tốc độ, ẩn lời).
 5. (11/11 tối) Tân: **hiện tại chỉ tập trung input**; lộ trình **không cứng nhắc**, gia sư tự đánh giá sau mỗi bài/feedback để ra bài tốt nhất (thích ứng). Roadmap v4 thành "la bàn"; thêm *Learner model* + nhật ký quyết định trong Progress Log. Thu âm/phát âm: có công cụ, chỉ dùng khi Tân muốn.
-6. Repo GitHub là nơi lưu toàn bộ: CLAUDE.md, giáo án, bài đọc, audio, test, tiến độ. Claude có toàn quyền push thẳng `main`.
+6. (11/11 tối) **1 job duy nhất 05:55 mỗi ngày** ra đủ bài của ngày (xoá job Walk Pack/Weekly/CN). Web có 3 tab: Bài học theo ngày · Hồ sơ học sinh · Tiến độ. **GitHub `data/` là nguồn dữ liệu duy nhất**; web chỉ hiển thị (publish kèm trang), DB chỉ nhận bài nộp; Progress Log tự sinh bằng `tools/sync.py`. Bỏ các thư mục trùng lặp lessons/, tests/, readings/, recordings/.
+7. Repo GitHub là nơi lưu toàn bộ: CLAUDE.md, giáo án, bài đọc, audio, test, tiến độ. Claude có toàn quyền push thẳng `main`.
 
 ## 5. Phương pháp đã nghiên cứu (nguồn)
 - Intensive + extensive reading: https://howwelearnlanguages.substack.com/p/reading-but-not-improving

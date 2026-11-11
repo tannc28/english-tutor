@@ -1,6 +1,6 @@
 # ROADMAP (v4) – Định hướng mềm, thích ứng theo từng bài
 
-> Đây là **la bàn, không phải lịch trình.** Bài mỗi ngày được quyết định bởi **hồ sơ năng lực** (Learner model) trong `tutor/02_PROGRESS_LOG.md`, tức là kết quả chấm gần nhất, feedback và sở thích của Tân. Không theo bảng tuần cố định.
+> Đây là **la bàn, không phải lịch trình.** Bài mỗi ngày được quyết định bởi **hồ sơ năng lực** (Learner model) trong `data/profile.json` (xem đẹp ở tab Hồ sơ trên web), tức là kết quả chấm gần nhất, feedback và sở thích của Tân. Không theo bảng tuần cố định.
 
 ## Đích đến
 - Tiếng Anh **phổ thông** B1 → **C1**, theo **Comprehensible Input**.
@@ -9,14 +9,14 @@
 
 ## Vòng lặp thích ứng (sau MỖI bài được chấm)
 1. **Đo:** điểm hiểu từng phần, % hiểu Tân tự báo, độ khó 1–5, chỗ khó nhất, thời gian thực tế, từ chưa hiểu.
-2. **Cập nhật hồ sơ** (Progress Log → *Learner model*): mức đang vừa sức của từng kỹ năng, xu hướng, sở thích, điểm yếu, cái gì hiệu quả hay không.
+2. **Cập nhật hồ sơ** (`data/profile.json`): mức đang vừa sức của từng kỹ năng, xu hướng, sở thích, điểm yếu, cái gì hiệu quả hay không.
 3. **Quyết định bài kế tiếp:**
    - % hiểu bài rộng < ~90%, độ khó ≥ 4, hoặc quá giờ → **hạ mức / rút ngắn**.
    - % hiểu ≈ 100%, độ khó ≤ 2, Tân thấy chán → **nâng mức / dài hơn / nguồn thật hơn**.
    - Lỗi hiểu lặp lại (quy chiếu, từ nối, câu dài, âm nối…) → lồng thêm hỗ trợ đúng điểm đó vào input sau.
    - Chủ đề và nhân vật Tân thích → làm nhiều hơn (narrow input).
    - Feedback trực tiếp của Tân **luôn được ưu tiên** hơn kế hoạch cũ.
-4. **Ghi lý do** chọn bài vào Progress Log (1 dòng) để lần sau xem lại được.
+4. **Ghi lý do** chọn bài vào `profile.decisions` (1 dòng) để lần sau xem lại được.
 
 ## Mốc tham khảo (chỉ để định hướng, không bắt buộc)
 | Giai đoạn | Dấu hiệu chuyển tiếp |

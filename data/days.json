@@ -1,0 +1,19 @@
+{
+ "_note": "NGUỒN DỮ LIỆU DUY NHẤT. Sửa ở đây rồi chạy: python3 tools/sync.py",
+ "days": [
+  {
+   "id": "2026-11-11-main",
+   "date": "2026-11-11",
+   "dayNo": 1,
+   "type": "day",
+   "title": "Day 1 – Đánh giá đầu vào toàn diện",
+   "minutes": 85,
+   "status": "open",
+   "listenPct": null,
+   "readPct": null,
+   "difficulty": null,
+   "minutesActual": null,
+   "note": ""
+  }
+ ]
+}

@@ -1,33 +1,51 @@
-# Web lớp học
+# Web lớp học + quy trình dữ liệu
 
-Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân xem được)
-Nguồn trang: `web/index.html`. Muốn cập nhật trang thì publish lại file này vào đúng URL trên.
+Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân mở được)
 
-## Luồng làm việc
-1. Đến giờ, Routine gửi tin vào phiên chính → gia sư soạn bài, ghi vào DB (`lessons/<id>`) + lưu file `lessons/` trong repo.
-2. Tân mở web, làm bài lúc nào tiện, bấm **Nộp bài** → trang lưu `submissions/<id>` rồi báo gia sư:
-   - Cách chính: **Send to Claude** (comment ở đầu bài, nội dung `📥 Nộp bài <id> …`) → đánh thức phiên chính (phiên đang theo dõi artifact). **Đã kiểm chứng 11/11 (bài thử 4): tin đến phiên chính sau ~3 giây.** Gia sư chấm, ghi `grades/<id>`, rồi trả lời + resolve thread bằng ArtifactComments.
-   - Dự phòng: `fire_trigger` của Routine "Tân nộp bài (web)" (`trig_01AN7RrytvZ5BmXiymy5Ym5M`). Lưu ý: lượt này chạy **ngoài** transcript phiên chính và không push repo → lần chạy lịch kế tiếp phải đồng bộ điểm từ `grades/` vào Progress Log.
-   - Trang ghi kết quả báo vào `submissions/<id>.notify` (via, canSend, mã lỗi) để chẩn đoán.
-3. Gia sư chấm → ghi `grades/<id>`, set `lessons/<id>.status="graded"`, cập nhật `meta/progress` + Progress Log, push `main`. Kết quả hiện ngay trên web.
-4. Nếu trang không tự báo được (thiếu quyền connector), Tân nhắn "nộp bài <id>" trong phiên chat; gia sư đọc `submissions/<id>` bằng ArtifactData.
+## Nguyên tắc: GitHub là nguồn dữ liệu DUY NHẤT
+- Mọi thứ gia sư viết (bài, điểm, hồ sơ, tiến độ) nằm trong **`data/`** của repo, dạng JSON.
+- Web **chỉ hiển thị**: `web/index.html` được publish kèm các file `data/*.json` (đọc bằng `fetch` tương đối).
+- `tutor/02_PROGRESS_LOG.md` được **sinh tự động** từ `data/` bằng `python3 tools/sync.py`. Không sửa tay.
+- Database của artifact **chỉ dùng để nhận bài nộp** (`submissions/<id>`, `inbox/<id>`). Khi chấm, bài nộp được chép vào `data/submissions/`.
+→ Sửa một chỗ (JSON trong `data/`), chạy `sync.py`, push, publish. Không có hai bản để lệch nhau.
 
-## Schema (ghi bằng ArtifactData) – thiết kế để không phình khi có hàng trăm bài
-Nguyên tắc: **không bao giờ list/query cả collection lớn** (`lessonBodies`, `submissions`, `grades`) vào context. Chỉ `get` đúng 1 doc theo id. Việc cần làm lấy từ `inbox` (nhỏ, chỉ chứa bài chưa chấm).
+## Cấu trúc `data/`
+| File | Nội dung |
+|---|---|
+| `days.json` | `{days:[{id, date, dayNo, type:"day", title, minutes, status:"open|graded", listenPct, readPct, difficulty, minutesActual, note}]}`. Một entry mỗi ngày học; chỉ số do gia sư đánh giá khi chấm |
+| `profile.json` | Hồ sơ học sinh = Learner model: `cefr{overall,listening,reading,vocab,grammar}`, `levels{…}`, `strengths[]`, `weaknesses[]`, `interests[]`, `habits`, `teacher_md`, `focus_md`, `decisions[{date,text}]`, `story`, `chunk_bank[]`, `pronunciation[]`, `orientation[]`, `week`, `streak` |
+| `lessons/<id>.json` | Nội dung bài: `{intro_md, parts:[{kind, title, md, listen?:[{who, voice:"buttery|airy|glassy|rounded", text≤2000}], rate?:0.8–1.1, questions:[{id, q, type:"text|short|choice|dictation|recording", options?, placeholder?, read?}]}]}` |
+| `grades/<id>.json` | `{score:"Nghe 7/10 · Đọc 8/10 · …", summary_md, answers_md, next_md, gradedAt}` |
+| `submissions/<id>.json` | Bản chép bài làm của Tân (từ DB web) |
+| `keys/<id>.json` | Đáp án trắc nghiệm, **không** publish |
 
-| Collection | Ai ghi | Nội dung | Kích thước |
-|---|---|---|---|
-| `lessons/<id>` | gia sư | metadata cho danh sách: `{id,date,type,title,minutes,status}` (status: open → submitted → graded) | ~200 B/bài |
-| `lessonBodies/<id>` | gia sư | `{intro_md, parts:[...]}` – trang chỉ tải khi mở bài | vài KB/bài |
-| `submissions/<id>` | trang | `{lessonId, answers:{qid:text}, feedback:{difficulty,hardest,minutes}, submittedAt, notify}` | |
-| `inbox/<id>` | trang tạo, gia sư **xoá sau khi chấm** | `{lessonId, submittedAt}` = hàng đợi bài chưa chấm | rỗng khi đã chấm hết |
-| `grades/<id>` | gia sư | `{score, summary_md, answers_md, next_md, gradedAt}` | |
-| `keys/<id>` | gia sư | đáp án trắc nghiệm (trang không tải) | |
-| `meta/progress` | gia sư | `{phase, week, streak, next, updatedAt}` | 1 doc |
+- **id**: `YYYY-MM-DD-day` (Day 1 giữ id cũ `2026-11-11-main`). Danh sách trên web sắp theo id giảm dần, hiển thị "Ngày N".
+- `listen` → trang hiện trình nghe (Claude đọc, chỉnh tốc độ, lời ẩn tới khi bấm). `recording` → nút thu âm (xem `tools/speech/README.md`). Feedback bắt buộc (độ khó, chỗ khó nhất, phút) do trang tự thêm.
 
-- **id**: `YYYY-MM-DD-<walk|main|weekly|sunday>` (chữ, số, gạch ngang). Danh sách sắp theo `id` giảm dần.
-- `parts[]`: `{kind, title, md, listen?:[{who, voice:"buttery|airy|glassy|rounded", text≤2000 ký tự}], rate?:0.8–1.1, questions:[{id, q, type:"text|short|choice|dictation|recording", options?, placeholder?, read?}]}`. `recording`: hiện đoạn `read` + nút thu âm; câu trả lời là JSON trỏ tới asset base64 (xem `tools/speech/README.md`). Có `listen` thì trang hiện trình nghe (Claude đọc), lời ẩn tới khi bấm. Bài đọc để trong `>` blockquote, chunk dùng `<mark>`. Feedback bắt buộc do trang tự thêm.
-- **Đăng bài** = 1 batch: `set lessons/<id>` (metadata) + `set lessonBodies/<id>` (nội dung).
-- **Chấm bài** = `get submissions/<id>` + `get lessonBodies/<id>` → batch: `set grades/<id>`, `update lessons/<id> {status:"graded"}`, `delete inbox/<id>`, `update meta/progress`.
-- **Tìm bài chưa chấm** = `list inbox` (chỉ vài doc nhỏ).
-- Bài thử cũ (`*-test*`) để nội dung ngay trong `lessons/<id>`; trang vẫn đọc được (tương thích ngược).
+## Web có gì
+- **📚 Bài học**: danh sách theo ngày ("Ngày N"), vở làm bài, trình nghe, thu âm, nộp bài, kết quả chấm.
+- **👤 Hồ sơ**: CEFR ước lượng từng kỹ năng, giáo viên nhận xét, điểm mạnh / cần cải thiện, sở thích, đang tập trung, nhật ký quyết định ("vì sao bài lại như vậy").
+- **📈 Tiến độ**: số ngày học, streak, mức hiểu nghe/đọc (5 bài gần nhất + cả khoá), biểu đồ mức hiểu theo ngày, bảng đánh giá từng ngày.
+
+## Quy trình RA BÀI (job 05:55 mỗi ngày)
+1. `git pull`; đọc `CLAUDE.md`, file này, `tutor/00_TUTOR_GUIDE.md`, `tutor/01_ROADMAP.md`, `data/profile.json`, `data/days.json`.
+2. `ArtifactData list inbox` → nếu có bài chưa chấm: làm **Quy trình CHẤM** trước.
+3. Bài ngày gần nhất còn `status:"open"` (Tân chưa nộp) → **không ra bài mới** (không dồn bài), chỉ nhắc nhẹ.
+4. Quyết định bài hôm nay từ hồ sơ (vòng lặp thích ứng, `tutor/01_ROADMAP.md`). Ghi `data/lessons/<id>.json`, thêm entry vào `data/days.json`, thêm 1 dòng `profile.decisions`.
+5. `python3 tools/sync.py` → commit + push `main` → `Artifact publish web/index.html` với `files` = nội dung `web/publish_files.json`.
+6. Báo Tân 2–3 dòng + link + PushNotification.
+
+## Quy trình CHẤM (khi có comment "📥 Nộp bài <id>" hoặc job dự phòng)
+1. `git pull`. Nếu `data/grades/<id>.json` đã có → không chấm lại.
+2. `ArtifactData get submissions/<id>` (+ `data/lessons/<id>.json`, `data/keys/<id>.json`). Có câu `recording` → lấy asset, chấm phát âm (`tools/speech/README.md`), xong xoá asset.
+3. Chấm theo Tutor Guide. Ghi `data/submissions/<id>.json` (bản chép), `data/grades/<id>.json`; cập nhật `data/days.json` (status `graded`, `listenPct`, `readPct`, `difficulty`, `minutesActual`, `note` ngắn) và `data/profile.json` (cefr/levels, strengths, weaknesses, interests, teacher_md, focus_md, decisions, chunk_bank, streak, updatedAt).
+4. `python3 tools/sync.py` → commit + push → publish (như trên) → `ArtifactData delete inbox/<id>`.
+5. Trả lời trong thread comment + resolve (nếu đến qua comment), hoặc 1–2 dòng trong chat.
+
+## Báo bài nộp về gia sư
+- Chính: trang gửi comment **Send to Claude** "📥 Nộp bài <id>" → đánh thức phiên chính (đã kiểm chứng ~3 giây).
+- Dự phòng (sau 8 giây không gửi được): `fire_trigger` Routine `trig_01AN7RrytvZ5BmXiymy5Ym5M`.
+- Trang ghi kết quả báo vào `submissions/<id>.notify` để chẩn đoán.
+
+## Quyền của trang
+`db` (chỉ `submissions`, `inbox`), `comments` (Send to Claude), `mcp` → Claude Code Remote `fire_trigger`, `assets` (bản thu âm base64), `tts` (đọc bài nghe), `user`.

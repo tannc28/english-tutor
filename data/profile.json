@@ -1,0 +1,97 @@
+{
+ "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
+ "name": "Tân",
+ "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). IT là phụ cho tới C1.",
+ "updatedAt": "2026-11-11T09:00:00+07:00",
+ "week": 1,
+ "streak": 0,
+ "focus_now": "Chỉ INPUT (nghe + đọc). Output/phát âm chỉ khi Tân muốn.",
+ "cefr": {
+  "overall": null,
+  "listening": null,
+  "reading": null,
+  "vocab": null,
+  "grammar": null
+ },
+ "levels": {
+  "listening": "chưa đo (chờ Day 1)",
+  "reading": "chưa đo (chờ Day 1)",
+  "vocab": "chưa đo",
+  "grammar": "chưa đo",
+  "overall": "tự đánh giá B1"
+ },
+ "comprehension_target": "đọc/nghe rộng ~90–98%, đọc kỹ ~95%; nghe dễ hơn đọc",
+ "strengths": [],
+ "weaknesses": [
+  "Biết từ nhưng khó nối thành ý (từ nối, quy chiếu, câu dài) – tự báo, chờ Day 1 xác nhận"
+ ],
+ "interests": [],
+ "habits": "",
+ "teacher_md": "",
+ "focus_md": "Chờ kết quả **Ngày 1** để đặt mức vừa sức cho từng kỹ năng.",
+ "decisions": [
+  {
+   "date": "2026-11-11",
+   "text": "Ngày 1 = đánh giá toàn diện ~85' (nghe/đọc A2→C1, từ vựng theo tần suất, ngữ pháp & từ nối, viết, sở thích) vì chưa có dữ liệu."
+  }
+ ],
+ "story": {
+  "title": "Hope Street",
+  "characters": "Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà)",
+  "episodes": [
+   "Tập 1 – The Key (Ngày 1)"
+  ]
+ },
+ "chunk_bank": [
+  {
+   "chunk": "work as a …",
+   "meaning": "làm (vị trí) …",
+   "learned": "2026-11-11",
+   "next": "2026-11-12",
+   "status": "new"
+  },
+  {
+   "chunk": "be responsible for …",
+   "meaning": "chịu trách nhiệm về …",
+   "learned": "2026-11-11",
+   "next": "2026-11-12",
+   "status": "new"
+  },
+  {
+   "chunk": "work on …",
+   "meaning": "làm (việc gì / dự án)",
+   "learned": "2026-11-11",
+   "next": "2026-11-12",
+   "status": "new"
+  },
+  {
+   "chunk": "it takes sb + time",
+   "meaning": "tốn (ai) bao lâu",
+   "learned": "2026-11-11",
+   "next": "2026-11-12",
+   "status": "new"
+  },
+  {
+   "chunk": "spend + time (on)",
+   "meaning": "dành thời gian",
+   "learned": "2026-11-11",
+   "next": "2026-11-12",
+   "status": "new"
+  },
+  {
+   "chunk": "every day / everyday",
+   "meaning": "mỗi ngày / thường ngày (tính từ)",
+   "learned": "2026-11-11",
+   "next": "2026-11-12",
+   "status": "new"
+  }
+ ],
+ "pronunciation": [],
+ "orientation": [
+  "11/11: Tập trung INPUT trước, OUTPUT sau; feedback bắt buộc mỗi bài.",
+  "11/11: Tiếng Anh PHỔ THÔNG là chính (mục tiêu C1), IT là phụ; phương pháp Comprehensible Input.",
+  "11/11: Dạy thích ứng – không lộ trình cứng; mỗi bài dựa trên hồ sơ + feedback mới nhất.",
+  "11/11: 1 job duy nhất 06:00 mỗi ngày ra đủ bài của ngày; lớp chia theo ngày; có Hồ sơ + Tiến độ trên web.",
+  "11/11: GitHub (data/) là nguồn dữ liệu duy nhất; web chỉ hiển thị; DB chỉ nhận bài nộp."
+ ]
+}

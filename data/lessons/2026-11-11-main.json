@@ -1,0 +1,710 @@
+{
+ "intro_md": "Chào Tân 👋 Đây là **buổi đánh giá đầu vào toàn diện**, khoảng **85 phút**. Kết quả giúp mình đặt đúng **mức \"vừa đủ hiểu\"** cho từng kỹ năng và lên lộ trình tới C1.\n\n**Bài có 11 phần, đi từ dễ → khó:**\n\n| Phần | Kỹ năng | Mức | ~Phút |\n|---|---|---|---|\n| 1 | Nghe hội thoại | A2–B1 | 8 |\n| 2 | Đọc truyện *Hope Street* | B1 | 10 |\n| 3 | Đọc kỹ | B1+/B2 | 10 |\n| 4 | Nghe kể chuyện | B2 | 7 |\n| 5 | Đọc | C1 | 10 |\n| 6 | Nghe | C1 | 8 |\n| 7 | Từ vựng theo độ phổ biến | A2 → C2 | 6 |\n| 8 | Ngữ pháp & từ nối | A2 → C1 | 6 |\n| 9 | Viết 100–150 từ | – | 15 |\n| 10 | Đọc to (tuỳ chọn, thu âm) | Phát âm | 5 |\n| 11 | Về Tân | – | 5 |\n\n**Cách làm:**\n- Hiểu ít ở phần khó là **bình thường và có chủ đích**. Mình cần biết chỗ Tân bắt đầu đuối.\n- **Không tra từ điển, không dịch máy.** Không biết thì chọn \"Không biết\".\n- Bài nghe: bấm **▶ Nghe**, nghe 1–2 lần **trước khi** bấm \"Hiện lời\".\n- Mỗi bài đọc/nghe có câu ghi **% hiểu**: Tân ghi thật lòng nhé.\n- Có thể **chia làm 2 lần**: nháp tự lưu trên máy, quay lại làm tiếp rồi mới bấm Nộp.\n\nToàn bộ là tiếng Anh phổ thông 🙂",
+ "parts": [
+  {
+   "kind": "Nghe · dễ",
+   "title": "Coffee before work",
+   "md": "Hai đồng nghiệp **Linh** và **Sam** nói chuyện buổi sáng. Nghe 1 lần để nắm ý chính, rồi nghe lại để trả lời chi tiết. Nếu thiết bị không phát được tiếng, đọc phần lời.",
+   "listen": [
+    {
+     "who": "Linh",
+     "voice": "airy",
+     "text": "Morning, Sam! You look tired. Are you okay?"
+    },
+    {
+     "who": "Sam",
+     "voice": "rounded",
+     "text": "Morning. Yeah, I'm fine. I just didn't sleep very well. My neighbour's dog was barking until two o'clock."
+    },
+    {
+     "who": "Linh",
+     "voice": "airy",
+     "text": "Oh no. That's terrible. Do you want a coffee? I'm going to the café downstairs."
+    },
+    {
+     "who": "Sam",
+     "voice": "rounded",
+     "text": "That would be great, thanks. A large one, please. With milk, no sugar."
+    },
+    {
+     "who": "Linh",
+     "voice": "airy",
+     "text": "Sure. Have you talked to your neighbour about the dog?"
+    },
+    {
+     "who": "Sam",
+     "voice": "rounded",
+     "text": "Not yet. I've only met her once, and she seemed really nice. I don't want to start an argument."
+    },
+    {
+     "who": "Linh",
+     "voice": "airy",
+     "text": "You don't have to argue. Just tell her politely. Maybe she doesn't know it barks when she's out."
+    },
+    {
+     "who": "Sam",
+     "voice": "rounded",
+     "text": "Hmm, that's true. She works night shifts at the hospital, so she's never home in the evening."
+    },
+    {
+     "who": "Linh",
+     "voice": "airy",
+     "text": "There you go. The dog is probably lonely. Write her a friendly note."
+    },
+    {
+     "who": "Sam",
+     "voice": "rounded",
+     "text": "Good idea. I'll do it tonight. Now, about that coffee..."
+    },
+    {
+     "who": "Linh",
+     "voice": "airy",
+     "text": "Ha! I'm going, I'm going."
+    }
+   ],
+   "rate": 0.9,
+   "questions": [
+    {
+     "id": "l1",
+     "q": "Why is Sam tired?",
+     "type": "choice",
+     "options": [
+      "He worked late last night.",
+      "His neighbour's dog was barking until late.",
+      "He drank too much coffee."
+     ]
+    },
+    {
+     "id": "l2",
+     "q": "How does Sam want his coffee?",
+     "type": "short"
+    },
+    {
+     "id": "l3",
+     "q": "Why does the dog probably bark?",
+     "type": "choice",
+     "options": [
+      "It is hungry.",
+      "It is lonely because its owner works at night.",
+      "It doesn't like Sam."
+     ]
+    },
+    {
+     "id": "l4",
+     "q": "**Chép chính tả:** nghe lại và gõ đúng câu Sam nói về công việc của người hàng xóm (bắt đầu bằng *She works…*).",
+     "type": "dictation"
+    },
+    {
+     "id": "l5",
+     "q": "**Chép chính tả:** gõ đúng câu Linh đoán người hàng xóm *không biết* điều gì (bắt đầu bằng *Maybe…*).",
+     "type": "dictation"
+    },
+    {
+     "id": "l6",
+     "q": "Lần đầu (trước khi xem lời/gloss), Tân hiểu khoảng bao nhiêu %? Ghi số, VD: 70",
+     "type": "short",
+     "placeholder": "VD: 80"
+    }
+   ]
+  },
+  {
+   "kind": "Đọc rộng · truyện dài kỳ",
+   "title": "Hope Street – Tập 1: The Key",
+   "md": "Đây là tập đầu của **truyện dài kỳ** mình sẽ viết tiếp mỗi tuần. Đọc **một mạch** như đọc truyện, đừng dừng lại ở từ lạ. Những cụm <mark>tô vàng</mark> là chunk nên để ý.\n\n> Nam arrived in Manchester on a wet Sunday in October. He had two suitcases, a backpack, and a piece of paper with an address on it: *Flat 3, 14 Hope Street*.\n>\n> The taxi stopped outside a tall brick building. It looked old, but the front door was painted bright blue, and there were flowers in the window next to it. Nam paid the driver, took his bags, and stood in the rain <mark>for a moment</mark>. This was it. His new home for the next two years.\n>\n> He had a new job at a design company in the city centre, and he was going to start on Tuesday. He was excited, **but** he was also nervous. He didn't know anyone here.\n>\n> The landlord, Mr Patel, had told him on the phone that the key was \"under the plant pot by the door.\" Nam looked down. There were three plant pots. He checked the first one. Nothing. He checked the second one. Nothing again. He was lifting the third pot **when** the blue door opened.\n>\n> \"Can I help you?\" A woman in her sixties was looking at him. She was holding a cup of tea, and she didn't look very friendly.\n>\n> \"Oh — hello. Sorry. I'm Nam. I'm <mark>moving into</mark> Flat 3. Mr Patel said the key was under a plant pot.\"\n>\n> The woman looked at him, then at his suitcases, then at the rain. Suddenly she smiled.\n>\n> \"Under the plant pot? That man. He tells everyone that, and then he forgets to put it there. Come in, come in, you're <mark>soaking wet</mark>. I've got a spare key. I'm Margaret, Flat 1. I've lived here for thirty years, **so** <mark>if you need anything, just knock</mark>.\"\n>\n> Inside, the building was warm and smelled of toast. Margaret gave him the key and showed him the stairs. \"Your flat's on the second floor. The heating's <mark>a bit</mark> old, **so** if it makes a strange noise, don't worry. It always does that.\"\n>\n> Nam carried his bags up the stairs. His flat was small: one bedroom, a tiny kitchen, and a living room with a big window. From the window he could see the whole street — the wet roofs, a small shop on the corner, and a bus going past.\n>\n> He sat down on the floor, **because** there was no sofa yet, and looked around. It wasn't much. **But** it was his.\n>\n> Then the heating made a loud *BANG*, and Nam laughed for the first time that day.",
+   "questions": [
+    {
+     "id": "s1",
+     "q": "Where is Nam's new home? (city + address)",
+     "type": "short"
+    },
+    {
+     "id": "s2",
+     "q": "Why couldn't Nam find the key?",
+     "type": "choice",
+     "options": [
+      "He went to the wrong building.",
+      "Mr Patel forgot to put it there.",
+      "Margaret had taken it."
+     ]
+    },
+    {
+     "id": "s3",
+     "q": "Lúc đầu Margaret có vẻ thế nào, và thái độ của bà thay đổi ra sao? Vì sao?",
+     "type": "text"
+    },
+    {
+     "id": "s4",
+     "q": "Câu cuối *\"Nam laughed for the first time that day\"* cho thấy gì về cảm xúc của Nam suốt cả ngày hôm đó?",
+     "type": "text"
+    },
+    {
+     "id": "s5",
+     "q": "Lần đầu (trước khi xem lời/gloss), Tân hiểu khoảng bao nhiêu %? Ghi số, VD: 70",
+     "type": "short",
+     "placeholder": "VD: 80"
+    }
+   ]
+  },
+  {
+   "kind": "Đọc kỹ · khó hơn",
+   "title": "Why we forget most of what we read",
+   "md": "Bài này khó hơn một bậc. Đọc 1 lần lấy ý chính, sau đó đọc lại kỹ. Các từ nối và từ quy chiếu được **in đậm**.\n\n> Most of us have had this experience: you finish a book you really enjoyed, and a month later you can <mark>barely</mark> remember what happened in it. It is not because your memory is bad. It is because of the way memory works.\n>\n> Psychologists have known for more than a century that we forget new information surprisingly quickly **unless** we use it again. In the 1880s, the German researcher Hermann Ebbinghaus tested himself on lists of <mark>nonsense syllables</mark> and found that much of what he had learned disappeared within a day. **This pattern, which** became known as the \"forgetting curve,\" has been studied many times since.\n>\n> The good news is that the curve can be <mark>flattened</mark>. Each time we come back to an idea — by thinking about it, talking about it, or meeting it again in a different place — **it** becomes a little harder to forget. **This is why** reading the same kind of material, <mark>rather than</mark> jumping between completely different topics, helps language learners so much: the same words and phrases keep returning, and every return makes them stronger.\n>\n> <mark>In other words</mark>, remembering is less about how hard you try the first time and more about how often you meet something again.\n\n**Gloss (chỉ xem khi cần):**\n\n| Từ / cụm | Nghĩa |\n|---|---|\n| barely | hầu như không |\n| nonsense syllables | âm tiết vô nghĩa (kiểu \"zof\", \"dax\") |\n| flatten (the curve) | làm (đường cong) bớt dốc |\n| rather than | thay vì |\n| in other words | nói cách khác |",
+   "questions": [
+    {
+     "id": "r1",
+     "q": "What is the main idea of the text?",
+     "type": "choice",
+     "options": [
+      "People with bad memories forget books.",
+      "We forget new things quickly unless we meet them again.",
+      "Ebbinghaus invented a new way of reading."
+     ]
+    },
+    {
+     "id": "r2",
+     "q": "Ở đoạn 2, **\"This pattern\"** chỉ điều gì?",
+     "type": "text"
+    },
+    {
+     "id": "r3",
+     "q": "Trong *\"**it** becomes a little harder to forget\"*, **it** chỉ cái gì?",
+     "type": "short"
+    },
+    {
+     "id": "r4",
+     "q": "Tách câu dài: *\"This is why reading the same kind of material, rather than jumping between completely different topics, helps language learners so much.\"* Chủ ngữ của động từ **helps** là gì? Nói lại ý câu bằng tiếng Việt.",
+     "type": "text"
+    },
+    {
+     "id": "r5",
+     "q": "Cụm **\"In other words\"** ở đoạn cuối dùng để làm gì?",
+     "type": "choice",
+     "options": [
+      "Đưa ra một ví dụ mới",
+      "Nói lại ý chính theo cách khác, gọn hơn",
+      "Đưa ra ý trái ngược"
+     ]
+    },
+    {
+     "id": "r6",
+     "q": "Lần đầu (trước khi xem lời/gloss), Tân hiểu khoảng bao nhiêu %? Ghi số, VD: 70",
+     "type": "short",
+     "placeholder": "VD: 80"
+    }
+   ]
+  },
+  {
+   "kind": "Nghe · khó",
+   "title": "A short talk about sleep",
+   "md": "Một người kể về giấc ngủ của mình, tốc độ tự nhiên hơn. Nghe 2 lần trước khi xem lời. Mục tiêu là **nắm ý chính**, không cần hiểu từng từ.",
+   "listen": [
+    {
+     "who": "Speaker",
+     "voice": "glassy",
+     "text": "Can I tell you something about sleep that surprised me? For years, I thought I was just a bad sleeper. I'd go to bed around eleven, lie there scrolling through my phone, and somehow it would be one in the morning before I actually fell asleep. Then I'd drag myself out of bed at seven, feeling like I hadn't slept at all.\n\nWhat finally changed things wasn't a special pillow or an expensive app. It was something embarrassingly simple: I started getting up at the same time every single day, weekends included. At first it was awful, honestly. But after about two weeks, my body started to get sleepy at roughly the same time each night, without me forcing it.\n\nIt turns out our bodies run on a kind of internal clock, and that clock cares far more about when we wake up than when we go to bed. So if you're struggling to fall asleep, don't start with the evening. Start with the morning."
+    }
+   ],
+   "rate": 1,
+   "questions": [
+    {
+     "id": "b1",
+     "q": "What is the speaker's main advice?",
+     "type": "choice",
+     "options": [
+      "Buy a better pillow.",
+      "Wake up at the same time every day.",
+      "Go to bed earlier at weekends."
+     ]
+    },
+    {
+     "id": "b2",
+     "q": "What did the speaker use to do in bed before falling asleep?",
+     "type": "short"
+    },
+    {
+     "id": "b3",
+     "q": "How long did it take before things got better?",
+     "type": "short"
+    },
+    {
+     "id": "b4",
+     "q": "Lần đầu (trước khi xem lời/gloss), Tân hiểu khoảng bao nhiêu %? Ghi số, VD: 70",
+     "type": "short",
+     "placeholder": "VD: 80"
+    }
+   ]
+  },
+  {
+   "kind": "Đọc · C1",
+   "title": "The jam study",
+   "md": "Bài ở mức **C1**, câu dài và nhiều sắc thái. Hiểu được khoảng 50–60% đã là tốt. Cứ đọc và đoán, mục tiêu là tìm \"trần\" của Tân.\n\n> In 2000, two psychologists published a study that would go on to shape a generation of marketing advice. Shoppers at an upmarket supermarket in California came across a tasting table offering either six varieties of jam or twenty-four. The larger display drew more attention — around sixty percent of passers-by stopped, compared with forty percent for the smaller one — **yet** only about three percent of those who stopped at the larger table went on to buy a jar, against roughly thirty percent at the smaller one.\n>\n> The finding was <mark>seized upon</mark> as proof that too much choice paralyses us, and the phrase \"the paradox of choice\" soon entered everyday conversation. What received far less attention was what happened next. When other researchers attempted to reproduce the effect, the results were strikingly inconsistent: in some settings, abundant choice discouraged decisions; in others, it made no measurable difference, or even helped. A 2010 analysis pooling dozens of such experiments concluded that, on average, the effect was close to zero.\n>\n> None of this means the original study was wrong. **Rather**, it suggests that whether choice overwhelms us depends heavily on circumstances — how well we understand our own preferences, how easy the options are to compare, and how much is at stake. The lesson, perhaps, is less about jam than about how readily a tidy story can <mark>outrun</mark> the evidence behind it.",
+   "questions": [
+    {
+     "id": "c1",
+     "q": "What is the main point of the text?",
+     "type": "choice",
+     "options": [
+      "Too much choice always stops people from buying.",
+      "A famous finding about choice turned out to be more complicated than many believed.",
+      "Supermarkets should offer fewer products.",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "c2",
+     "q": "\"The finding was **seized upon**\": *seized upon* gần nghĩa nhất với:",
+     "type": "choice",
+     "options": [
+      "eagerly used",
+      "quickly rejected",
+      "carefully tested",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "c3",
+     "q": "Theo đoạn 3, việc nhiều lựa chọn có làm ta \"ngợp\" hay không phụ thuộc vào những yếu tố nào? Kể 2–3 yếu tố.",
+     "type": "text"
+    },
+    {
+     "id": "c4",
+     "q": "Câu cuối *\"how readily a tidy story can outrun the evidence behind it\"* nghĩa là gì? (tiếng Việt)",
+     "type": "text"
+    },
+    {
+     "id": "c5",
+     "q": "Lần đầu (trước khi xem lời/gloss), Tân hiểu khoảng bao nhiêu %? Ghi số, VD: 70",
+     "type": "short",
+     "placeholder": "VD: 60"
+    }
+   ]
+  },
+  {
+   "kind": "Nghe · C1",
+   "title": "On being a beginner again",
+   "md": "Một người kể chuyện học piano khi đã trưởng thành. Nói tự nhiên, nhiều thành ngữ. Nghe **2 lần** trước khi xem lời.",
+   "listen": [
+    {
+     "who": "Speaker",
+     "voice": "buttery",
+     "text": "I took up the piano at thirty-four, which, if you've ever tried it, you'll know is a fairly humbling experience. There's something about sitting at a keyboard, fumbling through a piece a ten-year-old could play in their sleep, that strips away whatever sense of competence you've built up at work.\n\nFor the first few months, I'll be honest, I nearly packed it in more than once. What kept me going wasn't discipline, exactly. It was noticing that the frustration came in waves, and that each wave was followed, often out of nowhere, by a small breakthrough: a passage that had been impossible on Monday suddenly falling into place by Thursday.\n\nI've come to think that being a beginner is a skill in itself, and one most adults let wither. We get good at a handful of things, and then we quietly arrange our lives so that we never have to look foolish again. Which is a shame, because the stretch where you're clumsy and slow is precisely where most of the learning happens.\n\nSo if there's something you've been putting off because you'd be terrible at it, well, yes, you probably would be. For a while. That's rather the point."
+    }
+   ],
+   "rate": 1,
+   "questions": [
+    {
+     "id": "k1",
+     "q": "What is the speaker's main message?",
+     "type": "choice",
+     "options": [
+      "Learning the piano as an adult is a waste of time.",
+      "Being a beginner is uncomfortable but valuable, and adults often avoid it.",
+      "Discipline is the most important thing in learning.",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "k2",
+     "q": "How old was the speaker when they started the piano?",
+     "type": "short"
+    },
+    {
+     "id": "k3",
+     "q": "\"I nearly **packed it in**\" means:",
+     "type": "choice",
+     "options": [
+      "I almost quit.",
+      "I almost moved house.",
+      "I almost bought a piano.",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "k4",
+     "q": "Theo người nói, điều gì giúp họ không bỏ cuộc?",
+     "type": "text"
+    },
+    {
+     "id": "k5",
+     "q": "**Chép chính tả:** gõ đúng câu bắt đầu bằng *\"I've come to think…\"*",
+     "type": "dictation"
+    },
+    {
+     "id": "k6",
+     "q": "Lần đầu (trước khi xem lời/gloss), Tân hiểu khoảng bao nhiêu %? Ghi số, VD: 70",
+     "type": "short",
+     "placeholder": "VD: 60"
+    }
+   ]
+  },
+  {
+   "kind": "Từ vựng",
+   "title": "Vốn từ theo độ phổ biến",
+   "md": "15 câu, đi từ từ rất thông dụng tới hiếm. Chọn nghĩa đúng của **từ in đậm** trong câu. **Không biết thì chọn \"Không biết\"**, đừng đoán bừa, để mình ước lượng vốn từ chính xác hơn.",
+   "questions": [
+    {
+     "id": "v1",
+     "q": "The meeting was **cancelled** because of the storm.",
+     "type": "choice",
+     "options": [
+      "bị hoãn lại",
+      "bị huỷ",
+      "bị chuyển chỗ",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v2",
+     "q": "He **borrowed** some money from his brother.",
+     "type": "choice",
+     "options": [
+      "đã cho vay",
+      "đã trả",
+      "đã vay/mượn",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v3",
+     "q": "Try to **avoid** the city centre at rush hour.",
+     "type": "choice",
+     "options": [
+      "tránh",
+      "đi qua",
+      "tìm đường tới",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v4",
+     "q": "The results were **disappointing**.",
+     "type": "choice",
+     "options": [
+      "đáng thất vọng",
+      "bất ngờ",
+      "đáng khích lệ",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v5",
+     "q": "She **admitted** that she had made a mistake.",
+     "type": "choice",
+     "options": [
+      "phủ nhận",
+      "quên mất",
+      "thừa nhận",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v6",
+     "q": "The company **reduced** its prices.",
+     "type": "choice",
+     "options": [
+      "tăng",
+      "giảm",
+      "giữ nguyên",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v7",
+     "q": "He gave a **vague** answer.",
+     "type": "choice",
+     "options": [
+      "chính xác",
+      "dài dòng",
+      "mơ hồ",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v8",
+     "q": "The town was **deserted** at night.",
+     "type": "choice",
+     "options": [
+      "vắng tanh",
+      "đông đúc",
+      "nguy hiểm",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v9",
+     "q": "She **reluctantly** agreed to help.",
+     "type": "choice",
+     "options": [
+      "vui vẻ",
+      "miễn cưỡng",
+      "ngay lập tức",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v10",
+     "q": "The minister tried to **evade** the question.",
+     "type": "choice",
+     "options": [
+      "trả lời thẳng",
+      "nhắc lại",
+      "lảng tránh",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v11",
+     "q": "His **frugal** lifestyle surprised his friends.",
+     "type": "choice",
+     "options": [
+      "tằn tiện, tiết kiệm",
+      "xa hoa",
+      "bận rộn",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v12",
+     "q": "The evidence was **scant**.",
+     "type": "choice",
+     "options": [
+      "dồi dào",
+      "ít ỏi",
+      "mới mẻ",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v13",
+     "q": "The speech was full of **platitudes**.",
+     "type": "choice",
+     "options": [
+      "số liệu",
+      "lời xúc phạm",
+      "câu sáo rỗng",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v14",
+     "q": "She **relished** the challenge.",
+     "type": "choice",
+     "options": [
+      "thích thú đón nhận",
+      "sợ hãi",
+      "né tránh",
+      "Không biết"
+     ]
+    },
+    {
+     "id": "v15",
+     "q": "He gave the report a **perfunctory** glance.",
+     "type": "choice",
+     "options": [
+      "kỹ lưỡng",
+      "qua loa, chiếu lệ",
+      "giận dữ",
+      "Không biết"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "Ngữ pháp & từ nối",
+   "title": "Chọn từ đúng",
+   "md": "12 câu, từ dễ đến khó. Chọn đáp án **nghe tự nhiên và đúng nhất**. Không chắc thì chọn \"Không chắc\".",
+   "questions": [
+    {
+     "id": "g1",
+     "q": "I've lived here ___ 2019.",
+     "type": "choice",
+     "options": [
+      "for",
+      "since",
+      "from",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g2",
+     "q": "If I ___ more time, I'd learn the guitar.",
+     "type": "choice",
+     "options": [
+      "had",
+      "have",
+      "will have",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g3",
+     "q": "The man ___ car was stolen called the police.",
+     "type": "choice",
+     "options": [
+      "who",
+      "which",
+      "whose",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g4",
+     "q": "She was exhausted; ___, she kept working.",
+     "type": "choice",
+     "options": [
+      "however",
+      "therefore",
+      "because",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g5",
+     "q": "___ it was raining, we went for a walk.",
+     "type": "choice",
+     "options": [
+      "Because",
+      "Although",
+      "Unless",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g6",
+     "q": "By the time we arrived, the film ___.",
+     "type": "choice",
+     "options": [
+      "already started",
+      "has already started",
+      "had already started",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g7",
+     "q": "I'm not used to ___ up so early.",
+     "type": "choice",
+     "options": [
+      "getting",
+      "get",
+      "got",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g8",
+     "q": "He suggested ___ a taxi.",
+     "type": "choice",
+     "options": [
+      "to take",
+      "taking",
+      "take",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g9",
+     "q": "The report, ___ was published last week, caused a lot of debate.",
+     "type": "choice",
+     "options": [
+      "which",
+      "that",
+      "what",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g10",
+     "q": "You ___ have told me earlier — I could have helped!",
+     "type": "choice",
+     "options": [
+      "must",
+      "would",
+      "should",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g11",
+     "q": "Hardly ___ sat down when the phone rang.",
+     "type": "choice",
+     "options": [
+      "had I",
+      "I had",
+      "did I",
+      "Không chắc"
+     ]
+    },
+    {
+     "id": "g12",
+     "q": "Not only ___ late, but he also forgot the tickets.",
+     "type": "choice",
+     "options": [
+      "he was",
+      "was he",
+      "he is",
+      "Không chắc"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "Viết",
+   "title": "Mẫu bài viết đầu vào",
+   "md": "Viết **100–150 từ** bằng tiếng Anh, khoảng 15 phút, **không tra cứu, không dịch máy**. Bài này chỉ để mình biết điểm xuất phát, không chấm nặng.\n\n**Đề:** *Describe a place that is important to you and explain why.*",
+   "questions": [
+    {
+     "id": "w1",
+     "q": "Your writing (100–150 words):",
+     "type": "text",
+     "placeholder": "Write here…"
+    }
+   ]
+  },
+  {
+   "kind": "Đọc to · tuỳ chọn",
+   "title": "Bản thu phát âm đầu vào",
+   "md": "Phần này **tuỳ chọn** nhưng rất có ích: mình dùng bộ chấm phát âm để tìm lỗi âm (nhất là **âm cuối**) và ngữ điệu của Tân.\n\n**Cách làm:** đọc to cả đoạn dưới đây **trong một bản thu** (khoảng 60–90 giây), ở nơi yên tĩnh, điện thoại cách miệng khoảng 20 cm. Bấm nút để mở trình ghi âm, hoặc chọn file từ app Ghi âm / Voice Memos. Đọc tự nhiên, không cần vội.",
+   "questions": [
+    {
+     "id": "a1",
+     "type": "recording",
+     "q": "Đọc to đoạn sau (đoạn văn + 2 câu hỏi + các cặp từ):",
+     "read": "Under the plant pot? That man. He tells everyone that, and then he forgets to put it there. Come in, come in, you're soaking wet. I've got a spare key. I'm Margaret, Flat 1. I've lived here for thirty years, so if you need anything, just knock.\n\nAre you okay? Do you want a coffee?\n\nship – sheep · think – sink · light – like · works – work · cold – coal · three – tree"
+    }
+   ]
+  },
+  {
+   "kind": "Về Tân",
+   "title": "Để mình soạn bài hợp với Tân",
+   "md": "Phần này không chấm điểm. Câu trả lời giúp mình chọn chủ đề Tân **thích**, vì input thú vị thì vào nhanh hơn nhiều.",
+   "questions": [
+    {
+     "id": "p1",
+     "q": "Tân thích đọc/nghe về chủ đề gì? (VD: phim, du lịch, tâm lý, thể thao, lịch sử, ẩm thực, khoa học…) Kể 3–5 thứ.",
+     "type": "text"
+    },
+    {
+     "id": "p2",
+     "q": "Liệt kê các từ/cụm trong bài hôm nay mà Tân **không hiểu** hoặc phải **đoán mò**.",
+     "type": "text"
+    },
+    {
+     "id": "p5",
+     "q": "Hiện tại Tân tiếp xúc tiếng Anh thế nào mỗi tuần (phim, YouTube, podcast, đọc, công việc…)? Khoảng bao nhiêu giờ?",
+     "type": "text"
+    },
+    {
+     "id": "p3",
+     "q": "Với Tân, cái nào khó hơn?",
+     "type": "choice",
+     "options": [
+      "Nghe khó hơn",
+      "Đọc khó hơn",
+      "Ngang nhau"
+     ]
+    }
+   ]
+  }
+ ]
+}

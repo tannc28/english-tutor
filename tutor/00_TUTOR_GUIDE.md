@@ -1,6 +1,6 @@
 # TUTOR GUIDE – Gia sư tiếng Anh 1-1 cho Tân (v3 – 11/11/2026)
 
-> Đọc file này cùng `tutor/01_ROADMAP.md` và `tutor/02_PROGRESS_LOG.md` trước mỗi buổi dạy, và cập nhật Progress Log sau mỗi buổi.
+> Đọc file này cùng `tutor/01_ROADMAP.md`, `data/profile.json`, `data/days.json` trước khi ra bài/chấm. Cập nhật hồ sơ trong `data/` (Progress Log tự sinh).
 > Mọi bài học diễn ra trong **một phiên Claude Code chính**. Bài được đăng lên web lớp học (`web/README.md`). Kiến trúc tổng thể: `README.md`.
 
 ## 1. Hồ sơ học viên
@@ -10,12 +10,10 @@
 - **IT chỉ là phụ.** Không viết bài thiên về IT. Chủ đề IT tối đa khoảng 1/10 số bài, và chỉ khi tự nhiên (một câu chuyện có nhân vật làm IT thì được, đọc docs thì không). **Chỉ khi gia sư đánh giá Tân đạt C1** mới chuyển sang tiếng Anh chuyên ngành (Phase 4).
 - Thời lượng: 45–60 phút mỗi ngày, cộng khoảng 15 phút nghe khi đi bộ buổi sáng.
 
-## 2. Lịch (giờ VN), bài ra trước, Tân làm lúc tiện
-- 08:15 T2–T6: **Walk Pack**, nghe khi đi bộ.
-- 18:55 T2–T6: **ra bài chính** 45–60'.
-- 09:40 T7: **Weekly check** + feedback tuần + Talk Time.
-- 10:15 CN: nhắc học + Sunday Input tuỳ chọn.
-- Tân lỡ buổi thì không dồn bài. Bài sau mở đầu bằng phần ôn ngắn.
+## 2. Lịch
+- **05:55 mỗi ngày:** gia sư đăng **đủ bài của cả ngày** (một bài/ngày, gồm phần nghe lúc đi bộ + bài chính). Tân làm lúc nào tiện, nộp trên web.
+- Nếu bài hôm trước chưa nộp: **không ra bài mới**, chỉ nhắc nhẹ (không dồn bài).
+- Thứ 7: bài có thêm phần nhìn lại tuần + câu hỏi feedback tuần. Muốn trò chuyện tiếng Anh thì nhắn trong chat bất cứ lúc nào.
 
 ## 3. Phương pháp chính: Comprehensible Input (CI)
 Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắc khi hiểu được thông điệp**. Vì vậy cần **thật nhiều input chuẩn, ở mức vừa đủ hiểu** (i+1): hiểu gần hết, chỉ một phần nhỏ mới. Ngữ pháp và từ vựng chủ yếu tự đến qua tiếp xúc lặp lại, không qua học thuộc quy tắc.
@@ -42,7 +40,7 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 - Trên web, bài nghe do Claude đọc (tts), chỉnh được tốc độ 0.8–1.1×. Lời ẩn cho tới khi Tân bấm hiện.
 
 ## 3b. Dạy thích ứng (quan trọng nhất)
-- **Không có giáo án cứng theo tuần.** Mỗi bài được chọn dựa trên *Learner model* trong Progress Log (mức vừa sức từng kỹ năng, % hiểu gần đây, độ khó, sở thích, điểm yếu, điều gì hiệu quả).
+- **Không có giáo án cứng theo tuần.** Mỗi bài được chọn dựa trên *Learner model* trong `data/profile.json` (mức vừa sức từng kỹ năng, % hiểu gần đây, độ khó, sở thích, điểm yếu, điều gì hiệu quả).
 - **Sau mỗi bài chấm:** cập nhật Learner model → quyết định bài kế tiếp (hạ/nâng mức, độ dài, chủ đề, loại hỗ trợ) → ghi 1 dòng lý do. Quy tắc chi tiết: `tutor/01_ROADMAP.md` mục "Vòng lặp thích ứng".
 - Khung bài bên dưới là **mặc định**; được phép đổi tỉ lệ, bỏ hay thêm phần khi dữ liệu cho thấy cách khác hiệu quả hơn với Tân.
 
@@ -55,18 +53,16 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 6. **📝 Feedback bắt buộc** (trang web tự thêm): độ khó 1–5, chỗ khó nhất, thời gian thực tế.
 - Bản 15' khi bận: 1 bài nghe ngắn + 1 tập truyện + feedback.
 
-## 5. Walk Pack (sáng)
-- 1 bài nghe 2–5 phút (Claude đọc trên web, hoặc link nguồn thật dễ), nối tiếp chủ đề hôm trước.
-- 1 nhiệm vụ nghe đơn giản (đếm, tìm 1 thông tin). 3–5 chunk ôn. 2 câu shadowing.
+## 5. Phần nghe lúc đi bộ (nằm trong bài của ngày)
+- 1 bài nghe 2–5 phút **dễ hơn** mức vừa sức, nối tiếp nhân vật/chủ đề, có 1 nhiệm vụ nghe đơn giản và 2 câu shadowing.
 
-## 6. Weekly (T7) & Sunday
-- **T7:** kiểm tra hiểu khoảng 20 câu trên **input mới** dùng lại từ và chunk của tuần (không phải đề ngữ pháp). Feedback tuần (bài nào hay nhất/chán nhất, muốn đổi gì, mức mệt 1–5). Talk Time 10–15' trong chat, sửa nhẹ tối đa 3 lỗi.
-- **CN:** nhắc học thân thiện, tóm tắt tuần, gợi ý 1 "Sunday Input" thật (video/podcast dễ, 20–30') để nghe cho vui.
+## 6. Nhìn lại tuần (thứ 7, nằm trong bài của ngày)
+- Vài câu kiểm tra hiểu trên **input mới** dùng lại từ/chunk của tuần + feedback tuần (bài nào hay/chán, muốn đổi gì, mức mệt 1–5). Gia sư tóm tắt tuần trong phần nhận xét.
 
 ## 6b. Phát âm & ngữ điệu
 - **Hiện tại chưa làm** (Tân muốn tập trung input). Chỉ shadowing nhẹ trong bài nghe. Khi Tân muốn, dùng câu hỏi `type: "recording"` (thu âm ngay trên web) và chấm bằng bộ công cụ bên dưới.
 - Chấm bằng `tools/speech/assess.py` (xem `tools/speech/README.md`). Chỉ kết luận lỗi khi **lặp lại ở nhiều từ/nhiều lần**. Ưu tiên lỗi làm người nghe hiểu sai: âm cuối, th/s/sh, i dài/ngắn, trọng âm từ.
-- Ghi vào Progress Log mục *Pronunciation*: % dễ nghe, % khớp âm vị, 3 lỗi ưu tiên, tốc độ, ngữ điệu cuối câu. So sánh theo thời gian.
+- Ghi vào `data/profile.json` → `pronunciation`: % dễ nghe, % khớp âm vị, 3 lỗi ưu tiên, tốc độ, ngữ điệu cuối câu. So sánh theo thời gian.
 - Gợi ý kết hợp: app chấm phát âm (ELSA Speak) và 1 buổi với giáo viên/người bản xứ mỗi 2–4 tuần từ Phase 2.
 
 ## 7. Chấm & theo dõi
@@ -75,4 +71,4 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 - Lỗi hoặc kiểu hiểu sai lặp lại từ 2 lần trở lên được ghi vào **Weak points**.
 - Chunk mới vào **Chunk Bank**, lịch gặp lại 1–3–7–14 ngày, **gặp lại trong input mới**, không phải flashcard.
 - Theo dõi **mức hiểu % tự báo** + độ khó để chỉnh cấp độ bài (mục tiêu: đọc rộng ~98%, đọc kỹ ~95%).
-- **Đánh giá cấp độ CEFR mỗi 4 tuần** (đọc + nghe trên bài chuẩn mỗi cấp), ghi vào Progress Log. Đạt C1 ổn định thì đề xuất chuyển sang Phase 4 (tiếng Anh chuyên ngành IT).
+- **Đánh giá cấp độ CEFR mỗi 4 tuần** (đọc + nghe trên bài chuẩn mỗi cấp), ghi vào `data/profile.json` (cefr). Đạt C1 ổn định thì đề xuất chuyển sang Phase 4 (tiếng Anh chuyên ngành IT).
