@@ -3,7 +3,7 @@
 > ⚠️ **File này được SINH TỰ ĐỘNG** từ `data/profile.json` + `data/days.json` bằng `python3 tools/sync.py`. Đừng sửa tay, hãy sửa file JSON.
 
 ## Trạng thái hiện tại
-- Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). IT là phụ cho tới C1.
+- Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: Chỉ INPUT (nghe + đọc). Output/phát âm chỉ khi Tân muốn.
 - Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/1 ngày
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
@@ -26,9 +26,11 @@
 - [Đọc] **Xử lý câu dài còn chậm (hiểu được nhưng tốn nhiều thời gian)** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Nhiều đọc rộng B1+ dễ hơn để tăng tốc; đọc kỹ chỉ 1 đoạn/ngày
 - [Từ nối & cụm] **Từ nối tương phản/nhượng bộ và cụm động từ cố định** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
 
-**Mục tiêu thời gian:** 9 giờ/tuần (khoảng 50 phút làm bài + 25 phút nghe/đọc thêm mỗi ngày)
+**Mục tiêu thời gian:** 15 giờ/tuần (để lên B2 trong ~3 tháng: khoảng 60–75 phút bài + 60 phút nghe/đọc thêm (chủ yếu NGHE) mỗi ngày)
 
 **Bức tranh hiện tại:** **B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.
+
+**Mục tiêu B2 sau 3 tháng (~giữa tháng 2/2027):** cần khoảng **150–250 giờ** input tập trung, tức **~15 giờ/tuần (~2 giờ/ngày)**. Đọc đã gần B2. Phần lớn số giờ nên dành cho **nghe**, vì nghe đang ở B1.
 
 **Gia sư khuyên:**
 - **Nghe 3 bước, mỗi bài nghe** – Nghe 1 lần không lời → nghe + đọc lời cùng lúc → nghe lại không lời. Tốc độ 0.85× khi mới nghe.
@@ -42,13 +44,14 @@
 
 Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá nhiều** (~B1). Khoảng cách này rất điển hình ở người học qua sách, chữ và công việc. Tin tốt là Tân đã có sẵn vốn từ, nên chỉ cần **nghe nhiều thứ dễ** để tai bắt kịp mắt. Đây là phần tiến bộ nhanh nhất nếu đều đặn. Tân trả lời trung thực từng chỗ không chắc, nhờ vậy mình đánh giá được rất chính xác.
 
-**Đang tập trung:** **2 tuần tới:** (1) **Nghe dễ, nghe nhiều** (A2+/B1, chậm, có lời để đối chiếu). (2) **Đọc rộng B1+** để tăng tốc. (3) **Từ nối tương phản/nhượng bộ + cụm V-ing** gặp lại mỗi ngày. Chủ đề: AI, tâm lý, khoa học. **Toàn bộ bằng tiếng Anh.**
+**Đang tập trung:** **Mục tiêu B2 trong 3 tháng.** Mỗi ngày ~2 giờ: (1) **bài trên web 60–75 phút**, nghiêng về nghe; (2) **~60 phút nghe/đọc tự do** (YouTube/podcast về AI, tâm lý, khoa học, mức dễ, có phụ đề tiếng Anh) và ghi số phút vào ô cuối bài. Đọc rộng B1+ để tăng tốc; từ nối 'lật ý' + cụm V-ing gặp lại mỗi ngày. **Toàn bộ bằng tiếng Anh.**
 
 ### Nhật ký quyết định (vì sao bài lại như vậy)
 | Ngày | Quyết định |
 |---|---|
 | 2026-11-11 | Ngày 1 = đánh giá toàn diện ~85' (nghe/đọc A2→C1, từ vựng theo tần suất, ngữ pháp & từ nối, viết, sở thích) vì chưa có dữ liệu. |
 | 2026-11-11 | Chấm Ngày 1 → B1+ (đọc ~B2, nghe ~B1). Ngày 2: nghe A2+/B1 0.85× theo 3 bước, đọc B1+/B2, từ nối tương phản + cụm V-ing, chủ đề AI/tâm lý, ~60', full English (Tân yêu cầu). |
+| 2026-11-11 | Tân đặt mục tiêu B2 trong 3 tháng, ưu tiên input. Theo giờ học Cambridge (B1/B1+ → B2 ~100–250 giờ; nghe đang B1 nên lấy cận trên) → mục tiêu 15 giờ/tuần (~2 giờ/ngày), bài 60–75', còn lại là nghe tự do. |
 
 ## Lịch sử ngày học
 | Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |
@@ -88,3 +91,4 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 - 11/11: Tab Tiến độ thành bảng huấn luyện: lời khuyên, giờ học/tuần vs mục tiêu, điểm yếu + kế hoạch, dự báo tới C1 (giờ Cambridge), làm được gì ở mỗi mức; Feedback thêm ô phút nghe/đọc ngoài bài.
 - 11/11 (sau Ngày 1): Tân yêu cầu **câu hỏi + giao diện toàn tiếng Anh** (full English).
 - 11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items).
+- 11/11: Mục tiêu B2 vào ~giữa tháng 2/2027, 15 giờ/tuần; output để sau, chỉ 'rèn giũa' khi input đủ.

@@ -336,7 +336,7 @@ table.days tr.next td{background:var(--accent-soft)}
   const md = s => {
     if (!s) return "";
     try {
-      let html = window.marked ? marked.parse(String(s)) : "<p>" + esc(s).replace(/\n/g,"<br>") + "</p>";
+      let html = window.marked ? marked.parse(String(s).replace(/(^|[^~])~(?!~)/g, "$1\\~")) : "<p>" + esc(s).replace(/\n/g,"<br>") + "</p>";
       html = html.replace(/<table/g,'<div class="tbl"><table').replace(/<\/table>/g,"</table></div>");
       html = html.replace(/<a href="http/g,'<a target="_blank" rel="noopener" href="http');
       return window.DOMPurify ? DOMPurify.sanitize(html, {ADD_ATTR:["target"]}) : esc(s);
@@ -843,7 +843,7 @@ table.days tr.next td{background:var(--accent-soft)}
   // ---- Hồ sơ & Tiến độ (meta/profile + stats/<lessonId>: vài trăm byte mỗi ngày)
   let profile = null, stats = [];
   const pct = v => (v==null || v==="") ? "–" : `${Math.round(Number(v))}%`;
-  const li = a => (a&&a.length) ? `<ul class="list">${a.map(x=>`<li>${inline(String(x))}</li>`).join("")}</ul>` : `<p class="note">No data yet.</p>`;
+  const li = a => (a&&a.length) ? `<ul class="list">${a.map(x=>`<li>${typeof x === "object" && x ? `${x.area?`<b>${esc(x.area)}:</b> `:""}${inline(x.detail||"")}${x.plan?`<div class="note">→ ${inline(x.plan)}</div>`:""}` : inline(String(x))}</li>`).join("")}</ul>` : `<p class="note">No data yet.</p>`;
   function renderProfile(){
     const v = $("#view-profile"), p = profile || {};
     const c = p.cefr || {};

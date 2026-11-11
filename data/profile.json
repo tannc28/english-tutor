@@ -1,7 +1,7 @@
 {
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
- "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). IT là phụ cho tới C1.",
+ "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
  "updatedAt": "2026-11-11T21:45:00+07:00",
  "week": 1,
  "streak": 1,
@@ -57,7 +57,7 @@
  ],
  "habits": "Làm việc cả ngày, chat với Claude bằng tiếng Anh để code (nhiều chỗ chưa hiểu; gấp thì chuyển tiếng Việt). Thời gian rảnh hay lướt TikTok/FB; muốn chuyển sang podcast/YouTube tiếng Anh. Input thêm ngoài bài ngày 11/11: 0 phút.",
  "teacher_md": "Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá nhiều** (~B1). Khoảng cách này rất điển hình ở người học qua sách, chữ và công việc. Tin tốt là Tân đã có sẵn vốn từ, nên chỉ cần **nghe nhiều thứ dễ** để tai bắt kịp mắt. Đây là phần tiến bộ nhanh nhất nếu đều đặn. Tân trả lời trung thực từng chỗ không chắc, nhờ vậy mình đánh giá được rất chính xác.",
- "focus_md": "**2 tuần tới:** (1) **Nghe dễ, nghe nhiều** (A2+/B1, chậm, có lời để đối chiếu). (2) **Đọc rộng B1+** để tăng tốc. (3) **Từ nối tương phản/nhượng bộ + cụm V-ing** gặp lại mỗi ngày. Chủ đề: AI, tâm lý, khoa học. **Toàn bộ bằng tiếng Anh.**",
+ "focus_md": "**Mục tiêu B2 trong 3 tháng.** Mỗi ngày ~2 giờ: (1) **bài trên web 60–75 phút**, nghiêng về nghe; (2) **~60 phút nghe/đọc tự do** (YouTube/podcast về AI, tâm lý, khoa học, mức dễ, có phụ đề tiếng Anh) và ghi số phút vào ô cuối bài. Đọc rộng B1+ để tăng tốc; từ nối 'lật ý' + cụm V-ing gặp lại mỗi ngày. **Toàn bộ bằng tiếng Anh.**",
  "decisions": [
   {
    "date": "2026-11-11",
@@ -66,6 +66,10 @@
   {
    "date": "2026-11-11",
    "text": "Chấm Ngày 1 → B1+ (đọc ~B2, nghe ~B1). Ngày 2: nghe A2+/B1 0.85× theo 3 bước, đọc B1+/B2, từ nối tương phản + cụm V-ing, chủ đề AI/tâm lý, ~60', full English (Tân yêu cầu)."
+  },
+  {
+   "date": "2026-11-11",
+   "text": "Tân đặt mục tiêu B2 trong 3 tháng, ưu tiên input. Theo giờ học Cambridge (B1/B1+ → B2 ~100–250 giờ; nghe đang B1 nên lấy cận trên) → mục tiêu 15 giờ/tuần (~2 giờ/ngày), bài 60–75', còn lại là nghe tự do."
   }
  ],
  "story": {
@@ -177,12 +181,13 @@
   "11/11: GitHub (data/) là nguồn dữ liệu duy nhất; web chỉ hiển thị; DB chỉ nhận bài nộp.",
   "11/11: Tab Tiến độ thành bảng huấn luyện: lời khuyên, giờ học/tuần vs mục tiêu, điểm yếu + kế hoạch, dự báo tới C1 (giờ Cambridge), làm được gì ở mỗi mức; Feedback thêm ô phút nghe/đọc ngoài bài.",
   "11/11 (sau Ngày 1): Tân yêu cầu **câu hỏi + giao diện toàn tiếng Anh** (full English).",
-  "11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items)."
+  "11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items).",
+  "11/11: Mục tiêu B2 vào ~giữa tháng 2/2027, 15 giờ/tuần; output để sau, chỉ 'rèn giũa' khi input đủ."
  ],
  "coach": {
-  "summary_md": "**B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.",
-  "weekly_target_hours": 9,
-  "target_why": "khoảng 50 phút làm bài + 25 phút nghe/đọc thêm mỗi ngày",
+  "summary_md": "**B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.\n\n**Mục tiêu B2 sau 3 tháng (~giữa tháng 2/2027):** cần khoảng **150–250 giờ** input tập trung, tức **~15 giờ/tuần (~2 giờ/ngày)**. Đọc đã gần B2. Phần lớn số giờ nên dành cho **nghe**, vì nghe đang ở B1.",
+  "weekly_target_hours": 15,
+  "target_why": "để lên B2 trong ~3 tháng: khoảng 60–75 phút bài + 60 phút nghe/đọc thêm (chủ yếu NGHE) mỗi ngày",
   "recommendations": [
    {
     "title": "Nghe 3 bước, mỗi bài nghe",
