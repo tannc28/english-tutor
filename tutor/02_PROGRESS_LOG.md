@@ -19,8 +19,18 @@
 | Ngữ pháp & từ nối | – | chưa đo |
 
 **Điểm mạnh:** chưa có
-**Cần cải thiện (weak points):** Biết từ nhưng khó nối thành ý (từ nối, quy chiếu, câu dài) – tự báo, chờ Day 1 xác nhận
 **Sở thích:** chưa có
+
+**Cần cải thiện & kế hoạch:**
+- [Đọc & nghe] **Biết từ nhưng khó nối thành ý (từ nối, quy chiếu it/this/which, câu dài)** – dấu hiệu: Tân tự báo; chờ Ngày 1 (đọc kỹ, ngữ pháp & từ nối) xác nhận → Mọi bài đọc có gloss theo chunk, in đậm từ nối và từ quy chiếu, tách 1–2 câu dài mỗi bài
+
+**Mục tiêu thời gian:** 9 giờ/tuần (khoảng 50 phút làm bài + 25 phút nghe/đọc thêm mỗi ngày)
+
+**Gia sư khuyên:**
+- **Tăng tổng lượng input ngoài bài** – Thêm 20–30 phút/ngày nghe thứ **dễ** (nghe lại bài hôm đó lúc đi bộ, podcast cho người học). Ghi số phút vào ô cuối bài để gia sư theo dõi.
+- **Nghe/đọc lại cùng một nội dung** – Nghe mỗi bài 2–3 lần trong ngày, lần cuối không nhìn lời. Đọc lại tập truyện trước khi sang tập mới.
+- **Đều mỗi ngày hơn là dồn** – Mỗi ngày một ít, kể cả hôm bận chỉ 15 phút; tránh bỏ quá 2 ngày liền.
+- **Chọn nội dung mình thật sự thích** – Ghi sở thích ở phần cuối bài Ngày 1; gia sư sẽ chọn chủ đề theo đó.
 
 **Đang tập trung:** Chờ kết quả **Ngày 1** để đặt mức vừa sức cho từng kỹ năng.
 
@@ -30,9 +40,9 @@
 | 2026-11-11 | Ngày 1 = đánh giá toàn diện ~85' (nghe/đọc A2→C1, từ vựng theo tần suất, ngữ pháp & từ nối, viết, sở thích) vì chưa có dữ liệu. |
 
 ## Lịch sử ngày học
-| Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút | Nhận xét |
-|---|---|---|---|---|---|---|---|
-| N1 · 2026-11-11 | Day 1 – Đánh giá đầu vào toàn diện | open | – | – | – | – |  |
+| Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |
+|---|---|---|---|---|---|---|---|---|
+| N1 · 2026-11-11 | Day 1 – Đánh giá đầu vào toàn diện | open | – | – | – | – | – |  |
 
 ## Truyện dài kỳ: Hope Street
 - Nhân vật: Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà)
@@ -57,3 +67,4 @@
 - 11/11: Dạy thích ứng – không lộ trình cứng; mỗi bài dựa trên hồ sơ + feedback mới nhất.
 - 11/11: 1 job duy nhất 06:00 mỗi ngày ra đủ bài của ngày; lớp chia theo ngày; có Hồ sơ + Tiến độ trên web.
 - 11/11: GitHub (data/) là nguồn dữ liệu duy nhất; web chỉ hiển thị; DB chỉ nhận bài nộp.
+- 11/11: Tab Tiến độ thành bảng huấn luyện: lời khuyên, giờ học/tuần vs mục tiêu, điểm yếu + kế hoạch, dự báo tới C1 (giờ Cambridge), làm được gì ở mỗi mức; Feedback thêm ô phút nghe/đọc ngoài bài.

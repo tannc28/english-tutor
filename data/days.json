@@ -13,7 +13,8 @@
    "readPct": null,
    "difficulty": null,
    "minutesActual": null,
-   "note": ""
+   "note": "",
+   "extraMinutes": null
   }
  ]
 }

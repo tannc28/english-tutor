@@ -65,6 +65,15 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 - Ghi vào `data/profile.json` → `pronunciation`: % dễ nghe, % khớp âm vị, 3 lỗi ưu tiên, tốc độ, ngữ điệu cuối câu. So sánh theo thời gian.
 - Gợi ý kết hợp: app chấm phát âm (ELSA Speak) và 1 buổi với giáo viên/người bản xứ mỗi 2–4 tuần từ Phase 2.
 
+## 6c. Huấn luyện (coaching) – giúp Tân hiểu chính mình và tự điều chỉnh
+Sau mỗi lần chấm, cập nhật `data/profile.json` → `coach` và `weaknesses` (hiện ở tab **Tiến độ** trên web):
+- `coach.summary_md`: 2–4 câu "bức tranh hiện tại", nói thẳng: đang ở đâu, tiến hay chững, vì sao.
+- `coach.recommendations`: tối đa 4 lời khuyên **có bằng chứng và hành động được** (title/why/how). Thay bằng lời khuyên mới khi dữ liệu thay đổi; đừng lặp lời khuyên vô ích.
+- `coach.weekly_target_hours` (+ `target_why`): mục tiêu giờ/tuần (bài + input thêm). Đề xuất tăng/giảm dựa trên giờ thực tế, mức mệt, tiến độ.
+- `weaknesses`: object `{area, detail, evidence, plan}`. Bằng chứng phải từ bài làm thật. Bỏ khi đã ổn.
+- `days[].extraMinutes`: phút nghe/đọc ngoài bài Tân ghi ở Feedback. Đây là đòn bẩy lớn nhất của Comprehensible Input.
+- Mức CEFR ước lượng (`cefr`) hiệu chỉnh khoảng mỗi 3–4 tuần. Dự báo trên web dùng giờ học có hướng dẫn theo Cambridge (B1 ~350–400, B2 ~500–600, C1 ~700–800 giờ tính từ đầu). Luôn nói rõ đây là ước lượng.
+
 ## 7. Chấm & theo dõi
 - Chấm mức hiểu: Đọc /10, Nghe /10, Dictation % đúng.
 - Sửa lỗi dạng ❌ → ✅ → 💡, tối đa 3 lỗi mỗi bài, ưu tiên lỗi làm **hiểu sai ý**.

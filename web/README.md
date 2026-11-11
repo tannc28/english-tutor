@@ -12,8 +12,8 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 ## Cấu trúc `data/`
 | File | Nội dung |
 |---|---|
-| `days.json` | `{days:[{id, date, dayNo, type:"day", title, minutes, status:"open|graded", listenPct, readPct, difficulty, minutesActual, note}]}`. Một entry mỗi ngày học; chỉ số do gia sư đánh giá khi chấm |
-| `profile.json` | Hồ sơ học sinh = Learner model: `cefr{overall,listening,reading,vocab,grammar}`, `levels{…}`, `strengths[]`, `weaknesses[]`, `interests[]`, `habits`, `teacher_md`, `focus_md`, `decisions[{date,text}]`, `story`, `chunk_bank[]`, `pronunciation[]`, `orientation[]`, `week`, `streak` |
+| `days.json` | `{days:[{id, date, dayNo, type:"day", title, minutes, status:"open|graded", listenPct, readPct, difficulty, minutesActual, extraMinutes, note}]}`. Một entry mỗi ngày học; chỉ số do gia sư đánh giá khi chấm |
+| `profile.json` | Hồ sơ học sinh = Learner model: `cefr{overall,listening,reading,vocab,grammar}`, `levels{…}`, `strengths[]`, `weaknesses[]`, `interests[]`, `habits`, `teacher_md`, `focus_md`, `decisions[{date,text}]`, `story`, `chunk_bank[]`, `pronunciation[]`, `orientation[]`, `week`, `streak`, `coach{summary_md, weekly_target_hours, target_why, recommendations[{title,why,how}]}`; `weaknesses` là object `{area, detail, evidence, plan}` |
 | `lessons/<id>.json` | Nội dung bài: `{intro_md, parts:[{kind, title, md, listen?:[{who, voice:"buttery|airy|glassy|rounded", text≤2000}], rate?:0.8–1.1, questions:[{id, q, type:"text|short|choice|dictation|recording", options?, placeholder?, read?}]}]}` |
 | `grades/<id>.json` | `{score:"Nghe 7/10 · Đọc 8/10 · …", summary_md, answers_md, next_md, gradedAt}` |
 | `submissions/<id>.json` | Bản chép bài làm của Tân (từ DB web) |
@@ -25,7 +25,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 ## Web có gì
 - **📚 Bài học**: danh sách theo ngày ("Ngày N"), vở làm bài, trình nghe, thu âm, nộp bài, kết quả chấm.
 - **👤 Hồ sơ**: CEFR ước lượng từng kỹ năng, giáo viên nhận xét, điểm mạnh / cần cải thiện, sở thích, đang tập trung, nhật ký quyết định ("vì sao bài lại như vậy").
-- **📈 Tiến độ**: số ngày học, streak, mức hiểu nghe/đọc (5 bài gần nhất + cả khoá), biểu đồ mức hiểu theo ngày, bảng đánh giá từng ngày.
+- **📈 Tiến độ** (bảng huấn luyện): bức tranh hiện tại, gia sư khuyên, giờ học mỗi tuần so với mục tiêu, đang yếu gì + kế hoạch, dự báo tới C1 (chọn giờ/tuần để xem thay đổi), làm được gì ở mỗi mức, biểu đồ mức hiểu, bảng đánh giá từng ngày.
 
 ## Quy trình RA BÀI (job 05:55 mỗi ngày)
 1. `git pull`; đọc `CLAUDE.md`, file này, `tutor/00_TUTOR_GUIDE.md`, `tutor/01_ROADMAP.md`, `data/profile.json`, `data/days.json`.
@@ -38,7 +38,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 ## Quy trình CHẤM (khi có comment "📥 Nộp bài <id>" hoặc job dự phòng)
 1. `git pull`. Nếu `data/grades/<id>.json` đã có → không chấm lại.
 2. `ArtifactData get submissions/<id>` (+ `data/lessons/<id>.json`, `data/keys/<id>.json`). Có câu `recording` → lấy asset, chấm phát âm (`tools/speech/README.md`), xong xoá asset.
-3. Chấm theo Tutor Guide. Ghi `data/submissions/<id>.json` (bản chép), `data/grades/<id>.json`; cập nhật `data/days.json` (status `graded`, `listenPct`, `readPct`, `difficulty`, `minutesActual`, `note` ngắn) và `data/profile.json` (cefr/levels, strengths, weaknesses, interests, teacher_md, focus_md, decisions, chunk_bank, streak, updatedAt).
+3. Chấm theo Tutor Guide. Ghi `data/submissions/<id>.json` (bản chép), `data/grades/<id>.json`; cập nhật `data/days.json` (status `graded`, `listenPct`, `readPct`, `difficulty`, `minutesActual`, `extraMinutes` = feedback.extra, `note` ngắn) và `data/profile.json` (cefr/levels, strengths, weaknesses, interests, teacher_md, focus_md, decisions, chunk_bank, streak, updatedAt, **coach**, weaknesses có bằng chứng – xem Tutor Guide 6c).
 4. `python3 tools/sync.py` → commit + push → publish (như trên) → `ArtifactData delete inbox/<id>`.
 5. Trả lời trong thread comment + resolve (nếu đến qua comment), hoặc 1–2 dòng trong chat.
 

@@ -23,7 +23,12 @@
  "comprehension_target": "đọc/nghe rộng ~90–98%, đọc kỹ ~95%; nghe dễ hơn đọc",
  "strengths": [],
  "weaknesses": [
-  "Biết từ nhưng khó nối thành ý (từ nối, quy chiếu, câu dài) – tự báo, chờ Day 1 xác nhận"
+  {
+   "area": "Đọc & nghe",
+   "detail": "Biết từ nhưng khó nối thành ý (từ nối, quy chiếu it/this/which, câu dài)",
+   "evidence": "Tân tự báo; chờ Ngày 1 (đọc kỹ, ngữ pháp & từ nối) xác nhận",
+   "plan": "Mọi bài đọc có gloss theo chunk, in đậm từ nối và từ quy chiếu, tách 1–2 câu dài mỗi bài"
+  }
  ],
  "interests": [],
  "habits": "",
@@ -92,6 +97,34 @@
   "11/11: Tiếng Anh PHỔ THÔNG là chính (mục tiêu C1), IT là phụ; phương pháp Comprehensible Input.",
   "11/11: Dạy thích ứng – không lộ trình cứng; mỗi bài dựa trên hồ sơ + feedback mới nhất.",
   "11/11: 1 job duy nhất 06:00 mỗi ngày ra đủ bài của ngày; lớp chia theo ngày; có Hồ sơ + Tiến độ trên web.",
-  "11/11: GitHub (data/) là nguồn dữ liệu duy nhất; web chỉ hiển thị; DB chỉ nhận bài nộp."
- ]
+  "11/11: GitHub (data/) là nguồn dữ liệu duy nhất; web chỉ hiển thị; DB chỉ nhận bài nộp.",
+  "11/11: Tab Tiến độ thành bảng huấn luyện: lời khuyên, giờ học/tuần vs mục tiêu, điểm yếu + kế hoạch, dự báo tới C1 (giờ Cambridge), làm được gì ở mỗi mức; Feedback thêm ô phút nghe/đọc ngoài bài."
+ ],
+ "coach": {
+  "summary_md": "",
+  "weekly_target_hours": 9,
+  "target_why": "khoảng 50 phút làm bài + 25 phút nghe/đọc thêm mỗi ngày",
+  "recommendations": [
+   {
+    "title": "Tăng tổng lượng input ngoài bài",
+    "why": "Theo Comprehensible Input, tốc độ tiến bộ tỉ lệ với **số giờ nghe/đọc hiểu được**; bài học chỉ là phần lõi.",
+    "how": "Thêm 20–30 phút/ngày nghe thứ **dễ** (nghe lại bài hôm đó lúc đi bộ, podcast cho người học). Ghi số phút vào ô cuối bài để gia sư theo dõi."
+   },
+   {
+    "title": "Nghe/đọc lại cùng một nội dung",
+    "why": "Lặp lại và nội dung theo chuỗi (narrow input) làm input dễ hiểu dần, từ và cụm quay lại nhiều lần nên nhớ lâu.",
+    "how": "Nghe mỗi bài 2–3 lần trong ngày, lần cuối không nhìn lời. Đọc lại tập truyện trước khi sang tập mới."
+   },
+   {
+    "title": "Đều mỗi ngày hơn là dồn",
+    "why": "Ta quên rất nhanh nếu không gặp lại (đường cong quên); tiếp xúc rải đều giữ được nhiều hơn.",
+    "how": "Mỗi ngày một ít, kể cả hôm bận chỉ 15 phút; tránh bỏ quá 2 ngày liền."
+   },
+   {
+    "title": "Chọn nội dung mình thật sự thích",
+    "why": "Thích thì nghe/đọc được nhiều hơn và tập trung hơn – chính là thêm input.",
+    "how": "Ghi sở thích ở phần cuối bài Ngày 1; gia sư sẽ chọn chủ đề theo đó."
+   }
+  ]
+ }
 }

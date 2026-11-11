@@ -61,9 +61,19 @@ def main():
     for k, name in [("overall","Tổng thể"),("listening","Nghe"),("reading","Đọc"),("vocab","Từ vựng"),("grammar","Ngữ pháp & từ nối")]:
         L.append(f"| {name} | {prof.get('cefr',{}).get(k) or '–'} | {prof.get('levels',{}).get(k,'')} |")
     L.append("")
-    for key, title in [("strengths","Điểm mạnh"),("weaknesses","Cần cải thiện (weak points)"),("interests","Sở thích")]:
+    for key, title in [("strengths","Điểm mạnh"),("interests","Sở thích")]:
         items = prof.get(key) or []
         L.append(f"**{title}:** " + ("; ".join(items) if items else "chưa có"))
+    L.append("\n**Cần cải thiện & kế hoạch:**")
+    for w in prof.get("weaknesses") or []:
+        if isinstance(w, str): L.append(f"- {w}")
+        else: L.append(f"- [{w.get('area','')}] **{w.get('detail','')}** – dấu hiệu: {w.get('evidence','')} → {w.get('plan','')}")
+    co = prof.get("coach") or {}
+    if co:
+        L.append(f"\n**Mục tiêu thời gian:** {co.get('weekly_target_hours','?')} giờ/tuần ({co.get('target_why','')})")
+        if co.get("summary_md"): L.append(f"\n**Bức tranh hiện tại:** {co['summary_md']}")
+        L.append("\n**Gia sư khuyên:**")
+        for r in co.get("recommendations", []): L.append(f"- **{r.get('title','')}** – {r.get('how','')}")
     if prof.get("habits"): L.append(f"\n**Thói quen tiếp xúc tiếng Anh:** {prof['habits']}")
     if prof.get("teacher_md"): L.append(f"\n**Giáo viên nhận xét:**\n\n{prof['teacher_md']}")
     if prof.get("focus_md"): L.append(f"\n**Đang tập trung:** {prof['focus_md']}")
@@ -71,9 +81,9 @@ def main():
     L.append("| Ngày | Quyết định |\n|---|---|")
     for x in prof.get("decisions", []): L.append(f"| {x.get('date','')} | {x.get('text','')} |")
     L.append("\n## Lịch sử ngày học")
-    L.append("| Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút | Nhận xét |\n|---|---|---|---|---|---|---|---|")
+    L.append("| Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |\n|---|---|---|---|---|---|---|---|---|")
     for d in days_sorted:
-        L.append(f"| N{d.get('dayNo','')} · {d['date']} | {d.get('title','')} | {d.get('status','')} | {pct(d.get('listenPct'))} | {pct(d.get('readPct'))} | {d.get('difficulty') or '–'} | {d.get('minutesActual') or '–'} | {d.get('note','')} |")
+        L.append(f"| N{d.get('dayNo','')} · {d['date']} | {d.get('title','')} | {d.get('status','')} | {pct(d.get('listenPct'))} | {pct(d.get('readPct'))} | {d.get('difficulty') or '–'} | {d.get('minutesActual') or '–'} | {d.get('extraMinutes') or '–'} | {d.get('note','')} |")
     st = prof.get("story") or {}
     if st:
         L.append(f"\n## Truyện dài kỳ: {st.get('title','')}")
