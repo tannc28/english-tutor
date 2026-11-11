@@ -8,22 +8,21 @@
 - Lịch: 4 Routine lặp cố định gửi về phiên Code chính (xem bên dưới). Mốc kế tiếp: 20:45 T4 11/11 – Bài chính
 
 ## Lịch tự động (từ 11/11/2026)
-Lớp học chuyển từ Cowork sang **phiên Claude Code** `session_01VzvjsE7Dz6m9heACFeiGmz`. 4 Routine lặp cố định (giờ VN), không cần tự hẹn mốc kế tiếp:
+Lớp học diễn ra trong **phiên Claude Code** `session_01VzvjsE7Dz6m9heACFeiGmz`. 4 Routine lặp cố định (giờ VN), không cần tự hẹn mốc kế tiếp:
 | Routine | Lịch | ID |
 |---|---|---|
 | Walk Pack | 08:15 T2–T6 | trig_01JfVVWawW2pV4745EEx34Pn |
 | Bài chính | 20:45 T2–T6 | trig_0135HZukAJdhjKZqe96UoqAF |
 | Weekly Test + Talk Time | 09:40 T7 | trig_01M2RcBmJDEihRszoorXBotS |
 | Nhắc học + Sunday Input | 10:15 CN | trig_01TTc69trshZCZ4t2itGAVU9 |
-Chuỗi send_later cũ bên Cowork (trig_01TKvEjqhJEieyM68zhhXybU) đã **tắt** để tránh gửi trùng.
 
 ## Lịch sử bài học
 | Ngày | Bài | Điểm | Feedback của Tân | Ghi chú |
 |---|---|---|---|---|
-| 11/11/2026 (T4) | Walk Pack sáng (chạy thử ở phiên riêng) | – | – | Giới thiệu chunk Tuần 1: work as a…, be responsible for…, work on…, so, because, but. Câu hỏi: "What do you do at work, and why did you choose IT?" |
+| 11/11/2026 (T4) | Walk Pack sáng (chạy thử) | – | – | Giới thiệu chunk Tuần 1: work as a…, be responsible for…, work on…, so, because, but. Câu hỏi: "What do you do at work, and why did you choose IT?" |
 
 ## Thay đổi định hướng
-- 11/11/2026: Tân yêu cầu tập trung INPUT (reading + listening thật kỹ, hiểu hết) trước, OUTPUT (speaking/writing) ở phase sau. Bắt buộc feedback mỗi bài; Talk Time cuối tuần; CN nhắc học. Mọi bài diễn ra trong 1 phiên chính.
+- 11/11/2026: Tân yêu cầu tập trung INPUT (reading + listening thật kỹ, hiểu hết) trước, OUTPUT (speaking/writing) ở phase sau. Bắt buộc feedback mỗi bài; Talk Time cuối tuần; CN nhắc học. Mọi bài diễn ra trong 1 phiên Claude Code chính.
 
 ## Weak points (lỗi lặp lại)
 - (chưa có – điền sau bài đánh giá đầu vào)

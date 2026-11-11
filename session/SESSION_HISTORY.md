@@ -1,6 +1,6 @@
-# SESSION HISTORY – Phiên khởi tạo (11/11/2026)
+# SESSION HISTORY – Khởi tạo khoá học (11/11/2026)
 
-Toàn bộ thông tin & quyết định từ phiên Cowork chính (Project "CTan-StudyEnglish-Tutor").
+Toàn bộ thông tin & quyết định khi thiết lập khoá học. Lớp học diễn ra trong **một phiên Claude Code duy nhất** gắn với repo này.
 
 ## 1. Yêu cầu ban đầu của Tân
 - Cần một project học tiếng Anh hằng ngày, Claude là gia sư 1-1: kiểm tra mỗi ngày, đưa bài học.
@@ -20,16 +20,12 @@ Toàn bộ thông tin & quyết định từ phiên Cowork chính (Project "CTan
 | 09:40 T7 | Weekly Test + Feedback tuần + Talk Time |
 | 10:15 CN | Nhắc học + Sunday Input tuỳ chọn |
 
-Chuỗi nhắc (mỗi mốc hẹn mốc tiếp theo về phiên chính): 08:15 → 20:45 cùng ngày; 20:45 T2–T5 → 08:15 hôm sau; 20:45 T6 → 09:40 T7; 09:40 T7 → 10:15 CN; 10:15 CN → 08:15 T2.
+Lịch chạy bằng 4 Routine lặp cố định gửi về phiên chính (ID trong `tutor/02_PROGRESS_LOG.md`).
 
 ## 4. Các quyết định & thay đổi
-1. Ban đầu tạo 3 scheduled task riêng (sáng/tối/T7) → mỗi lần chạy mở phiên mới, Tân muốn mọi thứ ở 1 phiên chính.
-   - Đã xoá: Walk Pack sáng, Weekly Test T7. Bài chính tối (trig_013QcAbzz88EmToSBkcyrgCm) không xoá được do bị từ chối quyền → đã **tắt** (disabled). Tân có thể tự xoá trong danh sách scheduled tasks.
-   - Thay bằng chuỗi send_later về phiên chính. Mốc đầu: 20:45 11/11/2026 (trig_01TKvEjqhJEieyM68zhhXybU).
-2. Đổi định hướng: **Input trước (Reading + Listening thật kỹ, hiểu hết), Output sau** (Speaking + Writing ở Phase 2). Tutor phải tự nghiên cứu phương pháp trên mạng, theo dõi tiến độ, bắt feedback, luyện nói cùng học viên, cuối tuần giục học.
-3. Bàn về tab Code / Remote Control: Remote Control cần máy tính luôn bật; tab Code thiên về lập trình. Chốt: **kết hợp** – phiên Cowork làm "lớp học" (lịch, chấm, thông báo điện thoại), repo GitHub làm "thư viện" (CLAUDE.md, bài đọc, audio, tiến độ).
-
-4. (11/11/2026, chiều) Repo được làm phẳng (bỏ thư mục lồng `english-tutor/`). Tân cho Claude toàn quyền push thẳng `main`. **Lớp học chuyển sang phiên Claude Code** `session_01VzvjsE7Dz6m9heACFeiGmz` với 4 Routine cron cố định (08:15 T2–T6, 20:45 T2–T6, 09:40 T7, 10:15 CN – giờ VN) thay cho chuỗi send_later. Trigger Cowork trig_01TKvEjqhJEieyM68zhhXybU đã tắt.
+1. Mọi bài học diễn ra trong **một phiên chính** (Claude Code, `session_01VzvjsE7Dz6m9heACFeiGmz`), không mở phiên mới mỗi lần. Lịch gửi bài là 4 Routine cron cố định về phiên này.
+2. Định hướng: **Input trước (Reading + Listening thật kỹ, hiểu hết), Output sau** (Speaking + Writing ở Phase 2). Tutor tự nghiên cứu phương pháp, theo dõi tiến độ, bắt feedback, luyện nói cùng học viên, cuối tuần giục học.
+3. Repo GitHub là nơi lưu toàn bộ: CLAUDE.md, giáo án, bài đọc, audio, test, tiến độ. Claude có toàn quyền push thẳng `main`.
 
 ## 5. Phương pháp đã nghiên cứu (nguồn)
 - Intensive + extensive reading: https://howwelearnlanguages.substack.com/p/reading-but-not-improving
@@ -40,5 +36,4 @@ Chuỗi nhắc (mỗi mốc hẹn mốc tiếp theo về phiên chính): 08:15 �
 - Nguồn nghe: VOA Learning English – Technology Report; BBC Learning English – 6 Minute English; sau đó TED/TEDx tech talks.
 
 ## 6. Nơi lưu trữ
-- Project claude.ai "CTan-StudyEnglish-Tutor": `tutor/00_TUTOR_GUIDE.md`, `tutor/01_ROADMAP.md`, `tutor/02_PROGRESS_LOG.md`.
-- Repo GitHub `tannc28/english-tutor` (bản sao + thư viện bài học).
+- Repo GitHub `tannc28/english-tutor` – nguồn duy nhất cho mọi tài liệu và tiến độ.
