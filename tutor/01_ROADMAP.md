@@ -1,30 +1,33 @@
-# ROADMAP (v3) – Comprehensible Input, tiếng Anh phổ thông trước
+# ROADMAP (v4) – Định hướng mềm, thích ứng theo từng bài
 
-Mục tiêu: **B1 → C1 tiếng Anh phổ thông**. IT chỉ là phụ cho tới khi đạt C1.
-Mốc thời gian chỉ là dự kiến. Gia sư chỉnh theo kết quả đánh giá 4 tuần một lần và theo feedback.
+> Đây là **la bàn, không phải lịch trình.** Bài mỗi ngày được quyết định bởi **hồ sơ năng lực** (Learner model) trong `tutor/02_PROGRESS_LOG.md`, tức là kết quả chấm gần nhất, feedback và sở thích của Tân. Không theo bảng tuần cố định.
 
-## PHASE 1 – INPUT: nghe + đọc thật nhiều, vừa đủ hiểu (Tuần 1–8, B1 → B1+)
-| Tuần | Chủ đề (narrow, đời sống) | Trọng tâm "nối" | Nghe |
-|---|---|---|---|
-| 1 | Đánh giá đầu vào · Một ngày bình thường | and / but / so / because; câu ghép | Hội thoại chậm, rõ |
-| 2 | Gia đình, bạn bè, hàng xóm | Quy chiếu: it / this / they / that | Nối âm phụ âm–nguyên âm |
-| 3 | Ăn uống, chợ, nấu ăn | when / before / after / while | Dạng yếu: to, for, and, can |
-| 4 | Đi lại, du lịch, thời tiết · **đánh giá 4 tuần** | if / unless; câu điều kiện thường gặp | Kể chuyện ngắn |
-| 5 | Sức khoẻ, giấc ngủ, thói quen | which / who / that (mệnh đề quan hệ) | Tốc độ gần tự nhiên |
-| 6 | Tiền bạc, mua sắm, quyết định | however / although / whereas | Ý kiến và lý do |
-| 7 | Tin tức đời sống, xã hội | Cấu trúc đoạn: ý chính, ví dụ, kết | Bản tin dễ (VOA Learning English) |
-| 8 | Ôn tập + **đánh giá 8 tuần** | Đọc bài dài không hỗ trợ | Podcast cho người học, 5–10' |
-Xuyên suốt: **truyện dài kỳ** (nhân vật cố định) cho phần đọc rộng, mỗi buổi một tập.
-**Mục tiêu cuối Phase 1:** đọc thoải mái truyện và bài phổ thông mức B1+ (~98% từ quen); nghe hiểu ý chính podcast cho người học ở tốc độ tự nhiên.
+## Đích đến
+- Tiếng Anh **phổ thông** B1 → **C1**, theo **Comprehensible Input**.
+- **Hiện tại: chỉ tập trung INPUT** (nghe + đọc thật nhiều, vừa đủ hiểu). Output, phát âm, thu âm: chỉ làm khi Tân muốn, hoặc khi hồ sơ cho thấy đã đến lúc (và hỏi Tân trước).
+- IT chỉ là phụ. Chuyên sâu IT chỉ bắt đầu khi đạt C1.
 
-## PHASE 2 – INPUT nhiều hơn + bắt đầu OUTPUT (Tuần 9–20, B1+ → B2)
-- Input chuyển dần sang nguồn thật: podcast cho người học → podcast/YouTube người bản xứ dễ, sách graded cấp cao, tin tức.
-- Output dựa trên input: tóm tắt lời nói/viết, kể lại, Talk Time dài hơn, viết đoạn ngắn. Sửa lỗi nhẹ, tập trung vào sự tự nhiên.
+## Vòng lặp thích ứng (sau MỖI bài được chấm)
+1. **Đo:** điểm hiểu từng phần, % hiểu Tân tự báo, độ khó 1–5, chỗ khó nhất, thời gian thực tế, từ chưa hiểu.
+2. **Cập nhật hồ sơ** (Progress Log → *Learner model*): mức đang vừa sức của từng kỹ năng, xu hướng, sở thích, điểm yếu, cái gì hiệu quả hay không.
+3. **Quyết định bài kế tiếp:**
+   - % hiểu bài rộng < ~90%, độ khó ≥ 4, hoặc quá giờ → **hạ mức / rút ngắn**.
+   - % hiểu ≈ 100%, độ khó ≤ 2, Tân thấy chán → **nâng mức / dài hơn / nguồn thật hơn**.
+   - Lỗi hiểu lặp lại (quy chiếu, từ nối, câu dài, âm nối…) → lồng thêm hỗ trợ đúng điểm đó vào input sau.
+   - Chủ đề và nhân vật Tân thích → làm nhiều hơn (narrow input).
+   - Feedback trực tiếp của Tân **luôn được ưu tiên** hơn kế hoạch cũ.
+4. **Ghi lý do** chọn bài vào Progress Log (1 dòng) để lần sau xem lại được.
 
-## PHASE 3 – B2 → C1 (Tuần 21+)
-- Input thật, đa dạng: phim/series có phụ đề tiếng Anh, sách, báo, podcast tốc độ tự nhiên.
-- Thảo luận, tranh luận, kể chuyện dài, viết luận ngắn.
-- Đánh giá cấp độ mỗi 4 tuần. **Đạt C1 ổn định thì chuyển Phase 4.**
+## Mốc tham khảo (chỉ để định hướng, không bắt buộc)
+| Giai đoạn | Dấu hiệu chuyển tiếp |
+|---|---|
+| Input B1 → B1+ | Đọc truyện graded B1 trôi (~98% từ quen); nghe hội thoại chậm hiểu ≥ 90% |
+| Input B1+ → B2 | Đọc bài phổ thông thật (tin, blog đời sống) ≥ 90%; nghe podcast cho người học tốc độ tự nhiên |
+| Thêm output dần | Khi Tân muốn, hoặc input B2 ổn định |
+| B2 → C1 | Phim/podcast bản xứ, sách thật; thảo luận, viết |
+| Chuyên sâu IT | Sau khi đạt C1 ổn định |
 
-## PHASE 4 – Chuyên sâu IT (sau khi đạt C1)
-Docs, tech talks, họp, viết PR/email kỹ thuật, phỏng vấn, thuyết trình.
+Đánh giá tổng quát lại khi có đủ dữ liệu (khoảng mỗi 3–4 tuần), không cần đúng lịch.
+
+## Gợi ý chủ đề đời sống (chọn theo sở thích, không theo thứ tự)
+Một ngày bình thường · gia đình, bạn bè, hàng xóm · ăn uống, nấu ăn · đi lại, du lịch · sức khoẻ, giấc ngủ · tiền bạc, mua sắm · phim, âm nhạc, thể thao · tâm lý, thói quen · tin tức đời sống · lịch sử, khoa học phổ thông. Xuyên suốt: truyện dài kỳ *Hope Street*.

@@ -41,7 +41,12 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 - Shadowing 2–3 câu ngắn.
 - Trên web, bài nghe do Claude đọc (tts), chỉnh được tốc độ 0.8–1.1×. Lời ẩn cho tới khi Tân bấm hiện.
 
-## 4. Khung bài chính – Phase 1 (45–60')
+## 3b. Dạy thích ứng (quan trọng nhất)
+- **Không có giáo án cứng theo tuần.** Mỗi bài được chọn dựa trên *Learner model* trong Progress Log (mức vừa sức từng kỹ năng, % hiểu gần đây, độ khó, sở thích, điểm yếu, điều gì hiệu quả).
+- **Sau mỗi bài chấm:** cập nhật Learner model → quyết định bài kế tiếp (hạ/nâng mức, độ dài, chủ đề, loại hỗ trợ) → ghi 1 dòng lý do. Quy tắc chi tiết: `tutor/01_ROADMAP.md` mục "Vòng lặp thích ứng".
+- Khung bài bên dưới là **mặc định**; được phép đổi tỉ lệ, bỏ hay thêm phần khi dữ liệu cho thấy cách khác hiệu quả hơn với Tân.
+
+## 4. Khung bài chính – mặc định (45–60')
 1. **Warm-up (3–5')**: gặp lại 4–6 chunk đến hạn ôn, trong câu mới (không hỏi nghĩa khô khan).
 2. **Nghe (10–15')**: 1 bài nghe dễ (≥98% từ quen), 1–3 phút. Hỏi ý chính, rồi chi tiết, nghe lại, xem lời, dictation 2–3 câu.
 3. **Đọc rộng (15–20')**: 1 tập truyện dài kỳ hoặc bài phổ thông 500–900 từ, dễ. 3–4 câu hỏi hiểu.
@@ -59,7 +64,7 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 - **CN:** nhắc học thân thiện, tóm tắt tuần, gợi ý 1 "Sunday Input" thật (video/podcast dễ, 20–30') để nghe cho vui.
 
 ## 6b. Phát âm & ngữ điệu
-- Phase 1: input là chính. Shadowing + **1 bản thu đọc to mỗi tuần** (60–90 giây, gồm đoạn văn + cặp từ dễ lẫn) để theo dõi. Đưa vào bài dưới dạng câu hỏi `type: "recording"` (Tân thu âm ngay trên web), thường ở Weekly check.
+- **Hiện tại chưa làm** (Tân muốn tập trung input). Chỉ shadowing nhẹ trong bài nghe. Khi Tân muốn, dùng câu hỏi `type: "recording"` (thu âm ngay trên web) và chấm bằng bộ công cụ bên dưới.
 - Chấm bằng `tools/speech/assess.py` (xem `tools/speech/README.md`). Chỉ kết luận lỗi khi **lặp lại ở nhiều từ/nhiều lần**. Ưu tiên lỗi làm người nghe hiểu sai: âm cuối, th/s/sh, i dài/ngắn, trọng âm từ.
 - Ghi vào Progress Log mục *Pronunciation*: % dễ nghe, % khớp âm vị, 3 lỗi ưu tiên, tốc độ, ngữ điệu cuối câu. So sánh theo thời gian.
 - Gợi ý kết hợp: app chấm phát âm (ELSA Speak) và 1 buổi với giáo viên/người bản xứ mỗi 2–4 tuần từ Phase 2.

@@ -11,6 +11,24 @@
 - Chuỗi ngày học (streak): 0
 - Lịch: 4 Routine lặp cố định gửi về phiên Code chính (xem bên dưới). Mốc kế tiếp: 18:55 T4 11/11 – Bài chính
 
+## Learner model (cập nhật sau MỖI bài chấm – nguồn quyết định bài kế tiếp)
+| Mục | Hiện tại | Cập nhật |
+|---|---|---|
+| Nghe – mức vừa sức | chưa đo (chờ Day 1) | – |
+| Đọc rộng – mức vừa sức | chưa đo | – |
+| Đọc kỹ – mức vừa sức | chưa đo | – |
+| Vốn từ ước lượng | chưa đo | – |
+| Từ nối / quy chiếu / câu dài | nghi là điểm yếu chính (tự báo) | 11/11 |
+| % hiểu gần đây (nghe / đọc) | – | – |
+| Độ khó & thời gian gần đây | – | – |
+| Sở thích chủ đề | chưa biết (Day 1 phần cuối) | – |
+| Điều hiệu quả / không hiệu quả | – | – |
+
+### Nhật ký quyết định (1 dòng / bài)
+| Ngày | Bài kế tiếp | Vì sao |
+|---|---|---|
+| 11/11 | Day 1 đánh giá toàn diện | Chưa có dữ liệu – cần đo mức vừa sức từng kỹ năng |
+
 ## Lịch tự động (từ 11/11/2026)
 Lớp học diễn ra trong **phiên Claude Code** `session_01VzvjsE7Dz6m9heACFeiGmz`. 4 Routine lặp cố định (giờ VN), không cần tự hẹn mốc kế tiếp:
 | Routine | Lịch | ID |
