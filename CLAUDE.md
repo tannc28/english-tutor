@@ -24,6 +24,10 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Nếu phiên được giao một nhánh `claude/...`, vẫn đẩy kết quả vào `main` (fast-forward/merge) để `main` luôn là bản mới nhất.
 - Commit message ngắn, rõ nội dung (VD: `Lesson 2026-11-12 main: reading + listening`).
 
+## Web lớp học
+- Bài được đăng lên web https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (DB của artifact). Tân làm và bấm **Nộp bài** → Routine "Tân nộp bài (web)" đánh thức phiên → chấm, ghi `grades/<id>`, cập nhật tiến độ.
+- Schema & luồng: `web/README.md`. Mọi bài vẫn lưu bản markdown trong `lessons/`.
+
 ## Cấu trúc thư mục
 ```
 CLAUDE.md                  ← file này
@@ -35,4 +39,5 @@ lessons/YYYY-MM-DD_<loai>.md
 readings/                  ← bài đọc (tự viết hoặc link + tóm tắt)
 audio/                     ← file audio / danh sách link nghe
 tests/                     ← weekly tests + đáp án + kết quả
+web/                       ← trang web lớp học (index.html) + schema DB
 ```

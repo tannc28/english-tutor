@@ -1,0 +1,337 @@
+<title>Lớp tiếng Anh của Tân</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<style>
+/* Layout: a study desk — lesson shelf on the left, the open notebook on the right; stacks to one column on phones. */
+:root{
+  --paper:#f5f6f8; --sheet:#ffffff; --ink:#1b2230; --muted:#5d6678; --line:#dfe3ea;
+  --accent:#2f56c9; --accent-ink:#ffffff; --marker:#ffe58a; --marker-ink:#3a2f00;
+  --ok:#1f7a4d; --ok-bg:#e3f4ea; --warn:#9a5b00; --warn-bg:#fdf0d9; --bad:#b3261e; --bad-bg:#fbe5e3;
+  --f-read:"Literata",Georgia,"Times New Roman",serif;
+  --f-ui:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e9ef; --muted:#9aa3b5; --line:#2c3341;
+  --accent:#8fa9ff; --accent-ink:#0f1422; --marker:#5a4a10; --marker-ink:#ffeeb0;
+  --ok:#7fd6a5; --ok-bg:#16302a; --warn:#f2c26b; --warn-bg:#33280f; --bad:#ff9b92; --bad-bg:#3a1d1b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e9ef; --muted:#9aa3b5; --line:#2c3341;
+  --accent:#8fa9ff; --accent-ink:#0f1422; --marker:#5a4a10; --marker-ink:#ffeeb0;
+  --ok:#7fd6a5; --ok-bg:#16302a; --warn:#f2c26b; --warn-bg:#33280f; --bad:#ff9b92; --bad-bg:#3a1d1b; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-block:20px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+h1{font-size:1.5rem;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.eyebrow{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.stats{display:flex;flex-wrap:wrap;gap:8px}
+.stat{font-family:var(--f-mono);font-size:.78rem;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--sheet);font-variant-numeric:tabular-nums}
+.stat b{font-weight:500;color:var(--accent)}
+.grid{display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;margin-top:20px}
+@media (max-width:820px){.grid{grid-template-columns:minmax(0,1fr)}}
+.shelf{display:flex;flex-direction:column;gap:6px;min-width:0}
+.shelf h2{font-size:.78rem;margin:0 0 4px;font-family:var(--f-mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.item{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:center;text-align:left;width:100%;padding:10px 12px;border:1px solid transparent;border-radius:8px;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.item:hover{background:var(--sheet);border-color:var(--line)}
+.item[aria-current="true"]{background:var(--sheet);border-color:var(--accent)}
+.item .d{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);grid-row:1;grid-column:1/3}
+.item .t{grid-column:1/3;font-weight:600;font-size:.92rem;line-height:1.3}
+.item .chips{grid-column:1/3;display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.chip{font-family:var(--f-mono);font-size:.68rem;padding:1px 7px;border-radius:4px;background:var(--paper);border:1px solid var(--line);color:var(--muted)}
+.chip.open{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.chip.submitted{background:var(--paper);color:var(--accent);border-color:var(--accent)}
+.chip.graded{background:var(--ok-bg);color:var(--ok);border-color:transparent}
+.sheet{background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:28px clamp(16px,4vw,40px);min-width:0}
+.lesson-head{display:flex;flex-direction:column;gap:6px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.lesson-head h2{margin:0;font-size:1.45rem;line-height:1.25;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--muted);font-size:.85rem}
+.part{padding:22px 0;border-bottom:1px solid var(--line)}
+.part:last-of-type{border-bottom:0}
+.part>h3{margin:0 0 10px;font-size:1.05rem;display:flex;gap:10px;align-items:baseline}
+.part>h3 .k{font-family:var(--f-mono);font-size:.7rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.md{max-width:68ch}
+.md p,.md li{margin:.5em 0}
+.md blockquote{margin:12px 0;padding:14px 18px;border-left:3px solid var(--accent);background:var(--paper);border-radius:0 8px 8px 0;font-family:var(--f-read);font-size:1.05rem;line-height:1.75}
+.md mark,.md strong em{background:var(--marker);color:var(--marker-ink);padding:0 3px;border-radius:2px;font-style:normal}
+.md a{color:var(--accent)}
+.md code{font-family:var(--f-mono);font-size:.88em;background:var(--paper);padding:1px 5px;border-radius:4px}
+.md pre{overflow-x:auto;background:var(--paper);padding:12px;border-radius:8px}
+.md .tbl{overflow-x:auto}
+.md table{border-collapse:collapse;font-size:.92rem}
+.md th,.md td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+.qs{display:flex;flex-direction:column;gap:16px;margin-top:16px}
+.q{display:flex;flex-direction:column;gap:6px}
+.q label.qt{font-weight:600}
+.q label.qt .yt{font-family:var(--f-mono);font-size:.7rem;font-weight:500;color:var(--accent);margin-right:6px;letter-spacing:.04em}
+textarea,input[type=text],input[type=number]{width:100%;box-sizing:border-box;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+textarea{min-height:76px;resize:vertical}
+textarea.mono{font-family:var(--f-mono);font-size:.9rem}
+textarea:focus,input:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+textarea:disabled,input:disabled{opacity:.75}
+.opts{display:flex;flex-direction:column;gap:6px}
+.opts label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.scale{display:flex;gap:6px;flex-wrap:wrap}
+.scale label{display:inline-flex}
+.scale input{position:absolute;opacity:0;pointer-events:none}
+.scale span{display:inline-grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);border-radius:8px;font-family:var(--f-mono);cursor:pointer;background:var(--paper)}
+.scale input:checked+span{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.scale input:focus-visible+span{outline:2px solid var(--accent);outline-offset:1px}
+.fb{margin-top:8px;padding:20px;border:1px dashed var(--accent);border-radius:10px;display:flex;flex-direction:column;gap:14px}
+.fb h3{margin:0;font-size:1rem}
+.submit-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px}
+button.primary{font:inherit;font-weight:600;padding:11px 22px;border-radius:8px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer}
+button.primary:disabled{opacity:.5;cursor:not-allowed}
+button.ghost{font:inherit;padding:9px 14px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.note{font-size:.88rem;color:var(--muted)}
+.banner{padding:12px 16px;border-radius:8px;font-size:.92rem}
+.banner.ok{background:var(--ok-bg);color:var(--ok)}
+.banner.warn{background:var(--warn-bg);color:var(--warn)}
+.banner.bad{background:var(--bad-bg);color:var(--bad)}
+.grade{margin-top:8px;margin-bottom:20px;padding:20px;border-radius:10px;background:var(--ok-bg);color:var(--ink);display:flex;flex-direction:column;gap:10px}
+.grade .score{font-family:var(--f-mono);font-size:1.1rem;color:var(--ok);font-variant-numeric:tabular-nums}
+.grade details{background:var(--sheet);border-radius:8px;padding:10px 14px}
+.grade summary{cursor:pointer;font-weight:600}
+.empty{text-align:left;padding:28px 4px;color:var(--muted);max-width:60ch}
+.empty h2{color:var(--ink);font-size:1.2rem;margin:0 0 8px}
+@media (prefers-reduced-motion:no-preference){.item,button{transition:background .15s,border-color .15s}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">B1 → B2 · Tiếng Anh cho IT</div>
+      <h1>Lớp tiếng Anh của Tân</h1>
+    </div>
+    <div class="stats" id="stats">
+      <span class="stat">Phase <b id="s-phase">1 · Input</b></span>
+      <span class="stat">Tuần <b id="s-week">1</b></span>
+      <span class="stat">Streak <b id="s-streak">0</b> ngày</span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <nav class="shelf" aria-label="Danh sách bài">
+      <h2>Bài học</h2>
+      <div id="list"><p class="note">Đang tải bài…</p></div>
+    </nav>
+    <main class="sheet" id="main">
+      <div class="empty">
+        <h2>Đang mở sổ bài…</h2>
+        <p>Bài mới được gửi lúc 08:15 (Walk Pack) và 18:55 (bài chính) các ngày T2–T6, 09:40 thứ 7 và 10:15 chủ nhật. Tân làm lúc nào cũng được, xong bấm <b>Nộp bài</b> là gia sư chấm.</p>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+<script>
+(() => {
+  const TRIGGER_ID = "trig_01AN7RrytvZ5BmXiymy5Ym5M";
+  const TYPE_LABEL = {walk:"Walk Pack", main:"Bài chính", weekly:"Weekly Test", sunday:"Chủ nhật"};
+  const STATUS_LABEL = {open:"Chưa làm", submitted:"Đã nộp", graded:"Đã chấm"};
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const md = s => {
+    if (!s) return "";
+    try {
+      let html = window.marked ? marked.parse(String(s)) : "<p>" + esc(s).replace(/\n/g,"<br>") + "</p>";
+      html = html.replace(/<table/g,'<div class="tbl"><table').replace(/<\/table>/g,"</table></div>");
+      return window.DOMPurify ? DOMPurify.sanitize(html, {ADD_ATTR:["target"]}) : esc(s);
+    } catch { return esc(s); }
+  };
+  const store = {
+    get(k){ try { return JSON.parse(localStorage.getItem(k) || "null"); } catch { return null; } },
+    set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+  };
+
+  let db = null, lessons = [], subs = {}, grades = {}, current = null;
+
+  function fmtDate(d){
+    if (!d) return "";
+    const [y,m,dd] = d.split("-");
+    const wd = ["CN","T2","T3","T4","T5","T6","T7"][new Date(d+"T12:00:00").getDay()];
+    return `${wd} · ${dd}/${m}/${y}`;
+  }
+  function statusOf(l){ return grades[l.id] ? "graded" : (subs[l.id] ? "submitted" : (l.status || "open")); }
+
+  function renderList(){
+    const el = $("#list");
+    if (!lessons.length){
+      el.innerHTML = '<p class="note">Chưa có bài nào. Bài đầu tiên (Day 1 – đánh giá đầu vào) sẽ tới lúc 18:55.</p>';
+      return;
+    }
+    el.innerHTML = lessons.map(l => {
+      const st = statusOf(l);
+      return `<button class="item" data-id="${esc(l.id)}" aria-current="${current===l.id}">
+        <span class="d">${esc(fmtDate(l.date))}</span>
+        <span class="t">${esc(l.title || "Bài học")}</span>
+        <span class="chips"><span class="chip">${esc(TYPE_LABEL[l.type]||l.type||"Bài")}</span><span class="chip ${st}">${STATUS_LABEL[st]}</span></span>
+      </button>`;
+    }).join("");
+    el.querySelectorAll(".item").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.id; }));
+  }
+
+  function qInput(q, val, locked){
+    const id = "q-" + q.id, dis = locked ? "disabled" : "";
+    if (q.type === "choice" && Array.isArray(q.options)){
+      return `<div class="opts" role="radiogroup">${q.options.map((o,i)=>`<label><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}> <span>${esc(o)}</span></label>`).join("")}</div>`;
+    }
+    if (q.type === "short") return `<input type="text" id="${id}" value="${esc(val||"")}" placeholder="${esc(q.placeholder||"")}" ${dis}>`;
+    const cls = q.type === "dictation" ? "mono" : "";
+    return `<textarea id="${id}" class="${cls}" placeholder="${esc(q.placeholder||"")}" ${dis}>${esc(val||"")}</textarea>`;
+  }
+
+  function collect(l){
+    const answers = {};
+    (l.parts||[]).forEach(p => (p.questions||[]).forEach(q => {
+      if (q.type === "choice"){ const c = document.querySelector(`input[name="q-${CSS.escape(q.id)}"]:checked`); answers[q.id] = c ? c.value : ""; }
+      else { const e = document.getElementById("q-"+q.id); answers[q.id] = e ? e.value : ""; }
+    }));
+    const diff = document.querySelector('input[name="fb-diff"]:checked');
+    const feedback = {difficulty: diff ? Number(diff.value) : null, hardest: $("#fb-hard")?.value || "", minutes: $("#fb-min")?.value || ""};
+    return {answers, feedback};
+  }
+
+  function renderLesson(){
+    const main = $("#main");
+    const l = lessons.find(x => x.id === current);
+    if (!l){
+      main.innerHTML = lessons.length ? `<div class="empty"><h2>Chọn một bài bên trái</h2><p>Bài mới nhất nằm trên cùng.</p></div>`
+        : `<div class="empty"><h2>Sổ bài đang trống</h2><p>Bài đầu tiên, <b>Day 1 – Đánh giá đầu vào</b>, sẽ xuất hiện ở đây lúc 18:55 tối nay. Bài mới đến lúc 08:15 và 18:55 các ngày T2–T6, 09:40 thứ 7, 10:15 chủ nhật. Tân làm lúc nào tiện, xong bấm <b>Nộp bài</b>.</p></div>`;
+      return;
+    }
+    const sub = subs[l.id], grade = grades[l.id];
+    const locked = !!grade || (!!sub && !main.dataset.editing);
+    const draft = store.get("draft:"+l.id) || {};
+    const ans = sub && !main.dataset.editing ? (sub.answers||{}) : {...(sub?.answers||{}), ...(draft.answers||{})};
+    const fb = sub && !main.dataset.editing ? (sub.feedback||{}) : {...(sub?.feedback||{}), ...(draft.feedback||{})};
+    let qn = 0;
+
+    main.innerHTML = `
+      <div class="lesson-head">
+        <div class="eyebrow">${esc(TYPE_LABEL[l.type]||"Bài học")} · ${esc(fmtDate(l.date))}</div>
+        <h2>${esc(l.title||"Bài học")}</h2>
+        <div class="meta">${l.minutes?`<span class="chip">~${esc(l.minutes)} phút</span>`:""}<span class="chip ${statusOf(l)}">${STATUS_LABEL[statusOf(l)]}</span></div>
+      </div>
+      ${grade ? `<section class="grade" aria-label="Kết quả chấm">
+          <div class="eyebrow">Kết quả</div>
+          ${grade.score?`<div class="score">${esc(grade.score)}</div>`:""}
+          <div class="md">${md(grade.summary_md)}</div>
+          ${grade.answers_md?`<details><summary>Đáp án & sửa lỗi</summary><div class="md">${md(grade.answers_md)}</div></details>`:""}
+          ${grade.next_md?`<div class="md">${md(grade.next_md)}</div>`:""}
+        </section>` : ""}
+      ${l.intro_md ? `<div class="md">${md(l.intro_md)}</div>` : ""}
+      ${(l.parts||[]).map(p => `
+        <section class="part">
+          <h3>${p.kind?`<span class="k">${esc(p.kind)}</span>`:""}<span>${esc(p.title||"")}</span></h3>
+          <div class="md">${md(p.md)}</div>
+          ${(p.questions||[]).length ? `<div class="qs">${p.questions.map(q => `
+            <div class="q">
+              <label class="qt" for="q-${esc(q.id)}"><span class="yt">✍️ ${++qn}</span>${md(q.q).replace(/^<p>|<\/p>\s*$/g,"")}</label>
+              ${qInput(q, ans[q.id], locked)}
+            </div>`).join("")}</div>` : ""}
+        </section>`).join("")}
+      <section class="fb" aria-labelledby="fb-h">
+        <h3 id="fb-h">📝 Feedback bắt buộc</h3>
+        <div class="q"><span class="qt"><b>Độ khó của bài</b> <span class="note">(1 = quá dễ, 5 = quá khó)</span></span>
+          <div class="scale" role="radiogroup" aria-label="Độ khó">${[1,2,3,4,5].map(n=>`<label><input type="radio" name="fb-diff" id="fb-diff-${n}" value="${n}" ${fb.difficulty==n?"checked":""} ${locked?"disabled":""}><span>${n}</span></label>`).join("")}</div></div>
+        <div class="q"><label class="qt" for="fb-hard">Chỗ khó hiểu nhất</label><textarea id="fb-hard" ${locked?"disabled":""}>${esc(fb.hardest||"")}</textarea></div>
+        <div class="q"><label class="qt" for="fb-min">Thời gian thực tế đã học (phút)</label><input type="number" id="fb-min" min="0" inputmode="numeric" value="${esc(fb.minutes||"")}" ${locked?"disabled":""} style="max-width:140px"></div>
+      </section>
+      <div class="submit-bar">
+        ${grade ? `<span class="note">Bài đã được chấm.</span>`
+          : locked ? `<span class="banner ok">Đã nộp lúc ${esc(new Date(sub.submittedAt).toLocaleString("vi-VN"))}. Gia sư đang chấm.</span><button class="ghost" id="edit">Sửa và nộp lại</button>`
+          : `<button class="primary" id="submit">Nộp bài</button><span class="note">Bản nháp được lưu tự động trên máy này.</span>`}
+      </div>
+      <div id="msg" style="margin-top:12px"></div>`;
+
+    if (!locked){
+      main.oninput = main.onchange = () => store.set("draft:"+l.id, collect(l));
+      $("#submit").addEventListener("click", () => submit(l));
+    } else { main.oninput = main.onchange = null; }
+    $("#edit")?.addEventListener("click", () => { main.dataset.editing = "1"; renderLesson(); });
+  }
+
+  function summaryText(l, data){
+    const lines = [`Bài: ${l.id} – ${l.title||""}`];
+    let n = 0;
+    (l.parts||[]).forEach(p => (p.questions||[]).forEach(q => { lines.push(`${++n}. [${q.id}] ${q.q}\n→ ${data.answers[q.id]||"(bỏ trống)"}`); }));
+    lines.push(`FEEDBACK: độ khó ${data.feedback.difficulty}/5 · khó nhất: ${data.feedback.hardest||"-"} · thời gian: ${data.feedback.minutes||"-"} phút`);
+    return lines.join("\n").slice(0, 60000);
+  }
+
+  async function submit(l){
+    const msg = $("#msg"), btn = $("#submit");
+    const data = collect(l);
+    if (!data.feedback.difficulty){ msg.innerHTML = '<div class="banner warn">Chọn độ khó (1–5) ở phần Feedback rồi nộp nhé.</div>'; return; }
+    if (!db){ msg.innerHTML = '<div class="banner bad">Chưa kết nối được nơi lưu bài. Mở trang trên claude.ai khi đã đăng nhập rồi thử lại.</div>'; return; }
+    btn.disabled = true; msg.innerHTML = '<div class="note">Đang nộp…</div>';
+    const rec = {lessonId:l.id, ...data, submittedAt:new Date().toISOString()};
+    try {
+      await db.doc("submissions/"+l.id).set(rec);
+    } catch(e){
+      btn.disabled = false;
+      msg.innerHTML = `<div class="banner bad">Chưa lưu được bài (${esc(e?.code||"lỗi")}). Bài nháp vẫn còn trên máy, bấm Nộp bài lần nữa.</div>`;
+      return;
+    }
+    subs[l.id] = rec; delete $("#main").dataset.editing;
+    try { db.doc("lessons/"+l.id).update({status:"submitted"}); } catch {}
+    renderList(); renderLesson();
+    const m2 = $("#msg");
+    m2.innerHTML = '<div class="note">Đang báo gia sư…</div>';
+    const text = summaryText(l, data);
+    let notified = false, reason = "";
+    try {
+      const mcp = await claude.use("mcp");
+      if (mcp){ await mcp.callTool("Claude Code Remote", "fire_trigger", {trigger_id:TRIGGER_ID, text}); notified = true; }
+      else reason = "trang chưa có quyền gọi gia sư";
+    } catch(e){
+      reason = {not_in_manifest:"Tân chưa cho phép trang gọi Claude Code Remote", approval_required:"cần Tân bấm Cho phép", server_not_connected:"chưa kết nối Claude Code Remote", blocked_by_policy:"tổ chức chặn công cụ này"}[e?.code] || (e?.code||"lỗi không rõ");
+    }
+    if (notified) m2.innerHTML = '<div class="banner ok">Đã nộp và đã báo gia sư. Kết quả sẽ hiện ngay trên trang này khi chấm xong.</div>';
+    else {
+      m2.innerHTML = `<div class="banner warn">Bài đã lưu, nhưng chưa tự báo được gia sư (${esc(reason)}). Nhắn <b>"nộp bài ${esc(l.id)}"</b> trong phiên chat là gia sư sẽ chấm.</div>
+        <div class="submit-bar"><button class="ghost" id="retry">Thử báo lại</button></div>`;
+      $("#retry").addEventListener("click", async () => {
+        try { const mcp = await claude.use("mcp"); await mcp.callTool("Claude Code Remote","fire_trigger",{trigger_id:TRIGGER_ID, text}); m2.innerHTML = '<div class="banner ok">Đã báo gia sư.</div>'; }
+        catch(e){ m2.querySelector(".banner").insertAdjacentHTML("beforeend", ` Vẫn chưa được (${esc(e?.code||"lỗi")}).`); }
+      });
+    }
+  }
+
+  function route(){
+    const h = decodeURIComponent(location.hash.slice(1));
+    current = lessons.some(l => l.id === h) ? h : (lessons[0]?.id || null);
+    delete $("#main").dataset.editing;
+    renderList(); renderLesson();
+  }
+  window.addEventListener("hashchange", route);
+
+  async function boot(){
+    const timer = setTimeout(() => { if (!db) $("#list").innerHTML = '<p class="note">Chưa tải được bài. Mở trang trên claude.ai khi đã đăng nhập.</p>'; }, 10000);
+    db = window.claude?.use ? await claude.use("db") : null;
+    clearTimeout(timer);
+    if (!db){ $("#list").innerHTML = '<p class="note">Chưa tải được bài. Mở trang trên claude.ai khi đã đăng nhập.</p>'; renderLesson(); return; }
+    let first = true;
+    db.collection("lessons").orderBy("id","desc").onSnapshot(s => {
+      lessons = s.docs.map(d => ({id:d.id, ...d.data()}));
+      if (first){ first = false; route(); } else { renderList(); if (!document.activeElement?.closest?.(".sheet")) renderLesson(); }
+    }, e => { $("#list").innerHTML = `<p class="note">Không đọc được danh sách bài (${esc(e.code)}).</p>`; });
+    db.collection("submissions").onSnapshot(s => { subs = {}; s.docs.forEach(d => subs[d.id] = d.data()); renderList(); });
+    db.collection("grades").onSnapshot(s => {
+      const before = JSON.stringify(grades[current]||null);
+      grades = {}; s.docs.forEach(d => grades[d.id] = d.data());
+      renderList(); if (JSON.stringify(grades[current]||null) !== before) renderLesson();
+    });
+    db.doc("meta/progress").onSnapshot(s => {
+      const p = s.data() || {};
+      if (p.phase) $("#s-phase").textContent = p.phase;
+      if (p.week != null) $("#s-week").textContent = p.week;
+      if (p.streak != null) $("#s-streak").textContent = p.streak;
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+})();
+</script>

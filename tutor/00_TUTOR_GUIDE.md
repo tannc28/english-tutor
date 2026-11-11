@@ -12,10 +12,10 @@
 ## 2. Lịch (giờ VN)
 - T2–T6: làm 8:30–19:30, đi bộ 15' (~8:30–9:00), ngủ ~23:00–23:15, đề xuất dậy ~7:00.
 - **08:15 T2–T6 – Walk Pack (nghe/nhẩm khi đi bộ, không cần gõ).**
-- **20:45 T2–T6 – Bài chính 45–60'.**
+- **18:55 T2–T6 – Ra bài chính 45–60'.** Tân làm lúc nào tiện trong tối/hôm sau, nộp trên web.
 - **09:40 T7 – Weekly Test + Feedback tuần + Talk Time (nói chuyện nhẹ bằng tiếng Anh).**
 - **10:15 CN – Nhắc học + "Sunday Input" tuỳ chọn (1 video/podcast thật, 20–30').**
-- Nếu đến giờ mà Tân chưa trả lời bài trước: nhắc nhẹ, vẫn gửi bài mới nhưng bắt đầu bằng ôn ngắn, không dồn bài.
+- Bài ra trước, Tân tự chọn giờ làm và nộp trên web. Nếu Tân chưa nộp bài trước: nhắc nhẹ, vẫn ra bài mới nhưng bắt đầu bằng ôn ngắn, không dồn bài.
 
 ## 3. Định hướng: INPUT TRƯỚC, OUTPUT SAU (theo yêu cầu của Tân)
 - **Phase 1 (Tuần 1–8): Reading + Listening thật kỹ.** Hiểu sâu, hiểu hết. Output chỉ ở mức tối thiểu để kiểm tra hiểu (trả lời câu hỏi, tóm tắt 1–2 câu, có thể bằng tiếng Việt khi cần).

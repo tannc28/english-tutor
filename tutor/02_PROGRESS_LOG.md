@@ -3,18 +3,21 @@
 ## Trạng thái hiện tại
 - Bắt đầu: 11/11/2026 (Thứ 4)
 - Phase: 1 – INPUT (Reading + Listening). Tuần hiện tại: 1
-- Bài tiếp theo: **Day 1 – Đánh giá đầu vào (reading + listening) + chủ đề công việc IT** (tối 11/11, 20:45)
+- Bài tiếp theo: **Day 1 – Đánh giá đầu vào (reading + listening) + chủ đề công việc IT** (ra bài 18:55 tối 11/11, làm trên web)
 - Chuỗi ngày học (streak): 0
-- Lịch: 4 Routine lặp cố định gửi về phiên Code chính (xem bên dưới). Mốc kế tiếp: 20:45 T4 11/11 – Bài chính
+- Lịch: 4 Routine lặp cố định gửi về phiên Code chính (xem bên dưới). Mốc kế tiếp: 18:55 T4 11/11 – Bài chính
 
 ## Lịch tự động (từ 11/11/2026)
 Lớp học diễn ra trong **phiên Claude Code** `session_01VzvjsE7Dz6m9heACFeiGmz`. 4 Routine lặp cố định (giờ VN), không cần tự hẹn mốc kế tiếp:
 | Routine | Lịch | ID |
 |---|---|---|
 | Walk Pack | 08:15 T2–T6 | trig_01JfVVWawW2pV4745EEx34Pn |
-| Bài chính | 20:45 T2–T6 | trig_0135HZukAJdhjKZqe96UoqAF |
+| Bài chính | 18:55 T2–T6 | trig_0135HZukAJdhjKZqe96UoqAF |
 | Weekly Test + Talk Time | 09:40 T7 | trig_01M2RcBmJDEihRszoorXBotS |
 | Nhắc học + Sunday Input | 10:15 CN | trig_01TTc69trshZCZ4t2itGAVU9 |
+| Tân nộp bài (web, không lịch – trang gọi) | khi bấm Nộp bài | trig_01AN7RrytvZ5BmXiymy5Ym5M |
+
+Web lớp học: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (schema: `web/README.md`).
 
 ## Lịch sử bài học
 | Ngày | Bài | Điểm | Feedback của Tân | Ghi chú |

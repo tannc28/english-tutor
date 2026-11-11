@@ -16,7 +16,7 @@ Toàn bộ thông tin & quyết định khi thiết lập khoá học. Lớp h�
 | Mốc | Nội dung |
 |---|---|
 | 08:15 T2–T6 | Walk Pack (nghe/nhẩm khi đi bộ) |
-| 20:45 T2–T6 | Bài chính 45–60' |
+| 18:55 T2–T6 | Ra bài chính 45–60' (Tân làm lúc tiện) |
 | 09:40 T7 | Weekly Test + Feedback tuần + Talk Time |
 | 10:15 CN | Nhắc học + Sunday Input tuỳ chọn |
 
@@ -25,7 +25,8 @@ Lịch chạy bằng 4 Routine lặp cố định gửi về phiên chính (ID t
 ## 4. Các quyết định & thay đổi
 1. Mọi bài học diễn ra trong **một phiên chính** (Claude Code, `session_01VzvjsE7Dz6m9heACFeiGmz`), không mở phiên mới mỗi lần. Lịch gửi bài là 4 Routine cron cố định về phiên này.
 2. Định hướng: **Input trước (Reading + Listening thật kỹ, hiểu hết), Output sau** (Speaking + Writing ở Phase 2). Tutor tự nghiên cứu phương pháp, theo dõi tiến độ, bắt feedback, luyện nói cùng học viên, cuối tuần giục học.
-3. Repo GitHub là nơi lưu toàn bộ: CLAUDE.md, giáo án, bài đọc, audio, test, tiến độ. Claude có toàn quyền push thẳng `main`.
+3. (11/11) Đổi giờ bài tối 20:45 → 18:55 (ra bài trước, Tân tự chọn giờ làm). Làm **web lớp học** (artifact claude.ai): xem bài, nộp bài → gia sư tự chấm và lên bài tiếp.
+4. Repo GitHub là nơi lưu toàn bộ: CLAUDE.md, giáo án, bài đọc, audio, test, tiến độ. Claude có toàn quyền push thẳng `main`.
 
 ## 5. Phương pháp đã nghiên cứu (nguồn)
 - Intensive + extensive reading: https://howwelearnlanguages.substack.com/p/reading-but-not-improving
