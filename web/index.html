@@ -173,6 +173,10 @@ textarea:disabled,input:disabled{opacity:.8}
 .opts{display:grid;gap:8px}
 .opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);cursor:pointer}
 .opt input{margin-top:4px;accent-color:var(--accent)}
+.opt-other span{color:var(--ink-2)}
+.other-note{margin-top:2px}
+.linkbtn{justify-self:start;font:inherit;font-size:.82rem;color:var(--ink-3);background:none;border:0;padding:2px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.linkbtn:hover{color:var(--ink)}
 .opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
 
 .fb{padding:22px clamp(16px,3.5vw,32px);display:flex;flex-direction:column;gap:16px;border:1px dashed var(--accent);background:var(--surface);border-radius:14px}
@@ -397,7 +401,13 @@ table.days tr.next td{background:var(--accent-soft)}
   function qInput(q, val, locked){
     const id = "q-" + q.id, dis = locked ? "disabled" : "";
     if (q.type === "choice" && Array.isArray(q.options)){
-      return `<div class="opts" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}</div>`;
+      const isOther = typeof val === "string" && val.startsWith("Khác: ");
+      const note = isOther ? val.slice(6) : "";
+      return `<div class="opts" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}
+        <label class="opt opt-other"><input type="radio" name="${id}" id="${id}-other" value="__other" ${isOther?"checked":""} ${dis}><span>✏️ Khác / không chắc…</span></label>
+        <input type="text" class="other-note" id="${id}-note" placeholder="Ghi rõ: phân vân giữa đáp án nào, chưa hiểu chỗ nào…" value="${esc(note)}" ${isOther?"":"hidden"} ${dis}>
+        ${dis ? "" : `<button type="button" class="linkbtn opt-clear" data-q="${esc(q.id)}">Bỏ chọn</button>`}
+      </div>`;
     }
     if (q.type === "recording"){
       let info = null; try { info = val ? JSON.parse(val) : null; } catch {}
@@ -418,7 +428,12 @@ table.days tr.next td{background:var(--accent-soft)}
   function collect(l){
     const answers = {};
     allQs(l).forEach(q => {
-      if (q.type === "choice"){ const c = document.querySelector(`input[name="q-${CSS.escape(q.id)}"]:checked`); answers[q.id] = c ? c.value : ""; }
+      if (q.type === "choice"){
+        const c = document.querySelector(`input[name="q-${CSS.escape(q.id)}"]:checked`);
+        if (!c) answers[q.id] = "";
+        else if (c.value === "__other"){ const n = (document.getElementById(`q-${q.id}-note`)?.value || "").trim(); answers[q.id] = "Khác: " + (n || "(không chắc)"); }
+        else answers[q.id] = c.value;
+      }
       else { const e = document.getElementById("q-"+q.id); answers[q.id] = e ? e.value : ""; }
     });
     const diff = document.querySelector('input[name="fb-diff"]:checked');
@@ -650,6 +665,10 @@ table.days tr.next td{background:var(--accent-soft)}
     } else { main.oninput = main.onchange = null; }
     updateProgress(l);
     bindToc();
+    main.querySelectorAll(".opts").forEach(g => {
+      g.addEventListener("change", ev => { if (ev.target.type !== "radio") return; const note = g.querySelector(".other-note"); if (note){ note.hidden = ev.target.value !== "__other"; if (!note.hidden) note.focus(); } });
+      g.querySelector(".opt-clear")?.addEventListener("click", () => { g.querySelectorAll("input[type=radio]").forEach(r => r.checked = false); const note = g.querySelector(".other-note"); if (note){ note.value = ""; note.hidden = true; } g.dispatchEvent(new Event("input", {bubbles:true})); });
+    });
     if (!locked && actLesson?.id !== l.id) initActivity(l, (store.get("draft:"+l.id)||{}).log);
     bindPlayers(l);
     bindRecorders(l);

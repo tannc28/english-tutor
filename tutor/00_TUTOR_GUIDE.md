@@ -81,6 +81,7 @@ Bài nộp có `log` (trang tự ghi, chỉ số tổng hợp, xem `web/README.m
 - **Phụ thuộc lời (transcript):** `listen.revealAt` sớm, `answeredBeforeReveal` thấp (VD 0/6) → nghe chưa tự lực; bài sau giảm tốc độ/độ khó nghe, nhắc nghe 2 lần trước khi xem lời. `plays` nhiều + đúng ít → bài nghe quá khó.
 - **Phân bổ thời gian:** `parts[pi].ms` so với số phút dự kiến → phần nào nặng; tổng thời gian thực ≠ thời gian Tân tự báo thì tin log hơn.
 - **Nghỉ giữa chừng:** nhiều `sessions` cách xa nhau → bài quá dài hoặc mệt; cân nhắc rút ngắn.
+- **Câu trả lời "Khác: …" / "Không biết" / "Không chắc"** là Tân trung thực báo chưa chắc: không trừ nặng như sai, ghi rõ chỗ mù mờ Tân tự nêu, dùng nó để chọn hỗ trợ cho bài sau. Đây là dữ liệu quý hơn một câu đoán đúng.
 - Ghi 1–3 nhận xét ngắn về quá trình vào `grades/<id>.summary_md` (mục "Quá trình làm bài") và điểm yếu/khuyên tương ứng vào `profile` (coach/weaknesses). Nói thẳng nhưng nhẹ nhàng, không phán xét.
 
 ## 7. Chấm & theo dõi
