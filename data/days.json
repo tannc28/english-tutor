@@ -8,13 +8,13 @@
    "type": "day",
    "title": "Day 1 – Đánh giá đầu vào toàn diện",
    "minutes": 85,
-   "status": "open",
-   "listenPct": null,
-   "readPct": null,
-   "difficulty": null,
-   "minutesActual": null,
-   "note": "",
-   "extraMinutes": null
+   "status": "graded",
+   "listenPct": 60,
+   "readPct": 88,
+   "difficulty": 3,
+   "minutesActual": 90,
+   "note": "Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k",
+   "extraMinutes": 0
   }
  ]
 }
