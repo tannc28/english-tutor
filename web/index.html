@@ -275,6 +275,12 @@ table.days tr.next td{background:var(--accent-soft)}
 .qfb.v-partial,.qfb.v-unsure{border-color:var(--warn)}.qfb.v-partial .qfb-h,.qfb.v-unsure .qfb-h{color:var(--warn)}
 .qfb.v-wrong{border-color:var(--bad)}.qfb.v-wrong .qfb-h{color:var(--bad)}
 .qfb.v-skipped{border-color:var(--ink-3)}.qfb.v-skipped .qfb-h{color:var(--ink-3)}
+.libgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.lib{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--sunk);display:flex;flex-direction:column;gap:6px}
+.lib-h{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.lib-h a{font-weight:600;color:var(--accent);text-decoration:none}
+.lib-h a:hover{text-decoration:underline}
+.lib .md{max-width:none;font-size:.9rem}
 .rec{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
 .rec .md{width:100%}
 .rec-pick{display:inline-flex;align-items:center;gap:6px;font-weight:600;padding:10px 16px;border-radius:10px;border:1px solid var(--accent);color:var(--accent);background:var(--surface);cursor:pointer}
@@ -308,10 +314,12 @@ table.days tr.next td{background:var(--accent-soft)}
     <a href="#" class="tab" data-view="lessons">📚 Lessons</a>
     <a href="#ho-so" class="tab" data-view="profile">👤 Profile</a>
     <a href="#tien-do" class="tab" data-view="progress">📈 Progress</a>
+    <a href="#nghe" class="tab" data-view="listen">🎧 Listen</a>
   </nav>
 
   <section id="view-profile" class="view" hidden></section>
   <section id="view-progress" class="view" hidden></section>
+  <section id="view-listen" class="view" hidden></section>
 
   <div class="layout" id="view-lessons">
     <nav class="shelf" aria-label="Lesson list">
@@ -1003,7 +1011,25 @@ table.days tr.next td{background:var(--accent-soft)}
       svg.querySelector("#hit").addEventListener("pointerleave", hide);
     }
   }
+  let resources = null;
+  async function renderListen(){
+    const v = $("#view-listen");
+    if (!resources){ v.innerHTML = '<section class="card sec"><p class="note">Loading…</p></section>'; try { resources = await getJSON("data/resources.json"); } catch(e){ v.innerHTML = '<section class="card sec"><p class="note">Couldn\'t load the library. Please reload.</p></section>'; return; } }
+    const r = resources;
+    v.innerHTML = `
+      <section class="card sec"><span class="label">Free listening library</span><h2>Listen anytime – no need to wait for a lesson</h2><div class="md">${md(r.how_md||"")}</div></section>
+      ${(r.tiers||[]).map(t => `<section class="card sec">
+        <span class="label">${esc(t.level||"")}</span><h2>${esc(t.name||"")}</h2>${t.note?`<p class="note">${esc(t.note)}</p>`:""}
+        <div class="libgrid">${(t.items||[]).map(it => `<div class="lib">
+          <div class="lib-h"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a><span class="pill">${esc(it.type||"")}</span></div>
+          <div class="note">${esc(it.topics||"")}</div>
+          <div class="md">${inline(it.why||"")}</div>
+          ${it.alt?`<a class="note" href="${esc(it.alt)}" target="_blank" rel="noopener">Also on YouTube ↗</a>`:""}
+        </div>`).join("")}</div></section>`).join("")}`;
+  }
   function showView(name){
+    $("#view-listen").hidden = name!=="listen";
+    if (name==="listen") renderListen();
     $("#view-lessons").hidden = name!=="lessons"; $("#view-profile").hidden = name!=="profile"; $("#view-progress").hidden = name!=="progress";
     document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-current", t.dataset.view===name ? "page" : "false"));
     if (name==="profile") renderProfile();
@@ -1014,6 +1040,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const h = decodeURIComponent(location.hash.slice(1));
     if (h === "ho-so"){ showView("profile"); return; }
     if (h === "tien-do"){ showView("progress"); return; }
+    if (h === "nghe"){ showView("listen"); return; }
     showView("lessons");
     current = lessons.some(l => l.id === h) ? h : (lessons[0]?.id || null);
     delete $("#main").dataset.editing;

@@ -26,13 +26,14 @@
 - [Đọc] **Xử lý câu dài còn chậm (hiểu được nhưng tốn nhiều thời gian)** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Nhiều đọc rộng B1+ dễ hơn để tăng tốc; đọc kỹ chỉ 1 đoạn/ngày
 - [Từ nối & cụm] **Từ nối tương phản/nhượng bộ và cụm động từ cố định** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
 
-**Mục tiêu thời gian:** 15 giờ/tuần (ngày thường 1,5 giờ (7:45 nghe 40' + 20:30 đọc 50'), cuối tuần 4 giờ → ~15,5 giờ/tuần, đủ cho mục tiêu B2 sau ~3 tháng)
+**Mục tiêu thời gian:** 21 giờ/tuần (ngày thường ~2h40 (7:45 nghe 40' + 20:30–22:30), cuối tuần 4 giờ, cộng nghe tranh thủ → B2 có thể sớm hơn 3 tháng (khoảng 8–12 tuần nếu giữ đều))
 
 **Bức tranh hiện tại:** **B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.
 
-**Mục tiêu B2 sau 3 tháng (~giữa tháng 2/2027):** cần khoảng **150–250 giờ** input tập trung, tức **~15 giờ/tuần (~2 giờ/ngày)**. Đọc đã gần B2. Phần lớn số giờ nên dành cho **nghe**, vì nghe đang ở B1.
+**Mục tiêu B2:** cần khoảng 150–250 giờ input tập trung. Với **~21 giờ/tuần**, ước tính **khoảng 8–12 tuần** nếu giữ đều. Phần lớn nên là **nghe** (nghe đang ở B1).
 
 **Gia sư khuyên:**
+- **Nghe tranh thủ mọi lúc – thư viện 🎧 Listen** – Mở tab **🎧 Listen**: Tier 1 dùng hằng ngày; Tier 2 theo sở thích (AI, tâm lý, khoa học, ẩm thực); Tier 3 thỉnh thoảng thử. Nghe nền khi đi bộ hoặc chờ: ưu tiên video đã xem 1 lần.
 - **Nghe 3 bước, mỗi bài nghe** – Nghe 1 lần không lời → nghe + đọc lời cùng lúc → nghe lại không lời. Tốc độ 0.85× khi mới nghe.
 - **Đổi 20 phút TikTok thành YouTube tiếng Anh về AI** – Video ngắn về AI/công nghệ cho người xem phổ thông, **bật phụ đề tiếng Anh**. Ghi số phút vào ô cuối bài.
 - **Tận dụng giờ làm việc** – Câu nào Claude trả lời mà Tân không hiểu, chép lại và dán vào ô ghi chú cuối bài. Mình sẽ dùng làm bài đọc kỹ.
@@ -44,7 +45,7 @@
 
 Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá nhiều** (~B1). Khoảng cách này rất điển hình ở người học qua sách, chữ và công việc. Tin tốt là Tân đã có sẵn vốn từ, nên chỉ cần **nghe nhiều thứ dễ** để tai bắt kịp mắt. Đây là phần tiến bộ nhanh nhất nếu đều đặn. Tân trả lời trung thực từng chỗ không chắc, nhờ vậy mình đánh giá được rất chính xác.
 
-**Đang tập trung:** **Mục tiêu B2 trong 3 tháng.** Mỗi ngày ~2 giờ: (1) **bài trên web 60–75 phút**, nghiêng về nghe; (2) **~60 phút nghe/đọc tự do** (YouTube/podcast về AI, tâm lý, khoa học, mức dễ, có phụ đề tiếng Anh) và ghi số phút vào ô cuối bài. Đọc rộng B1+ để tăng tốc; từ nối 'lật ý' + cụm V-ing gặp lại mỗi ngày. **Toàn bộ bằng tiếng Anh.**
+**Đang tập trung:** **Mục tiêu B2 (~8–12 tuần).** Ngày thường: 7:45 nghe 40', 20:30–21:30 bài, 21:40–22:30 nghe tự do (tab 🎧 Listen). Cuối tuần 4 giờ. **Nghe tranh thủ mọi lúc**, ghi số phút vào ô cuối bài. Bận/rảnh thì báo để gia sư chỉnh bài.
 
 ### Nhật ký quyết định (vì sao bài lại như vậy)
 | Ngày | Quyết định |
@@ -53,6 +54,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-11 | Chấm Ngày 1 → B1+ (đọc ~B2, nghe ~B1). Ngày 2: nghe A2+/B1 0.85× theo 3 bước, đọc B1+/B2, từ nối tương phản + cụm V-ing, chủ đề AI/tâm lý, ~60', full English (Tân yêu cầu). |
 | 2026-11-11 | Tân đặt mục tiêu B2 trong 3 tháng, ưu tiên input. Theo giờ học Cambridge (B1/B1+ → B2 ~100–250 giờ; nghe đang B1 nên lấy cận trên) → mục tiêu 15 giờ/tuần (~2 giờ/ngày), bài 60–75', còn lại là nghe tự do. |
 | 2026-11-11 | Chốt lịch học tuần (ngủ 23:30, dậy 7:15): T2–T6 7:45–8:25 nghe + 20:30–21:20 đọc; T7–CN 9:00–10:30 bài, 14:30–16:00 nghe tự do, 20:00–21:00 phim. Bài ngày thường chia rõ phần sáng (nghe ~40') và tối (đọc ~50'). |
+| 2026-11-11 | Tân muốn học tối 2 giờ và nghe thêm chủ động → buổi tối 20:30–22:30 (bài 60' + nghe tự do 50'), mục tiêu 21 giờ/tuần; tạo thư viện nghe đã kiểm tra link (data/resources.json, tab 🎧 Listen) chia 3 tầng theo trình độ; ngày bận/rảnh Tân báo để chỉnh. |
 
 ## Lịch sử ngày học
 | Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |
