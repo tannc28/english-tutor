@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E4ECF3"/><stop offset="1" stop-color="#F3F6F9"/></linearGradient>
+<linearGradient id="tram" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD84D"/><stop offset="1" stop-color="#F2BE1E"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<!-- brick houses -->
+<rect x="0" y="50" width="96" height="150" fill="#B5563A"/>
+<rect x="100" y="64" width="90" height="136" fill="#A24A33"/>
+<rect x="294" y="50" width="90" height="150" fill="#B5563A"/>
+<rect x="190" y="72" width="100" height="128" fill="#A24A33"/>
+<g fill="#F7F3E8"><rect x="12" y="74" width="26" height="30"/><rect x="58" y="74" width="26" height="30"/><rect x="12" y="120" width="26" height="30"/><rect x="58" y="120" width="26" height="30"/><rect x="110" y="84" width="24" height="28"/><rect x="150" y="84" width="24" height="28"/><rect x="200" y="92" width="24" height="28"/><rect x="236" y="92" width="24" height="28"/><rect x="306" y="74" width="26" height="30"/><rect x="350" y="74" width="26" height="30"/><rect x="306" y="120" width="26" height="30"/><rect x="350" y="120" width="26" height="30"/></g>
+<!-- rain -->
+<g stroke="#8FA9BF" stroke-width="1.5" stroke-linecap="round" opacity="0.8">
+<line x1="30" y1="20" x2="26" y2="34"/><line x1="70" y1="10" x2="66" y2="24"/><line x1="120" y1="26" x2="116" y2="40"/><line x1="160" y1="8" x2="156" y2="22"/><line x1="210" y1="18" x2="206" y2="32"/><line x1="250" y1="34" x2="246" y2="48"/><line x1="300" y1="12" x2="296" y2="26"/><line x1="340" y1="30" x2="336" y2="44"/><line x1="370" y1="6" x2="366" y2="20"/><line x1="90" y1="44" x2="86" y2="58"/>
+</g>
+<!-- road -->
+<rect x="0" y="200" width="384" height="88" fill="#C9CFD6"/>
+<rect x="0" y="198" width="384" height="6" fill="#AEB6BF"/>
+<g fill="#FFFFFF" opacity="0.8"><rect x="20" y="256" width="40" height="5" rx="2"/><rect x="110" y="256" width="40" height="5" rx="2"/><rect x="200" y="256" width="40" height="5" rx="2"/><rect x="290" y="256" width="40" height="5" rx="2"/></g>
+<!-- tram stop sign -->
+<rect x="318" y="150" width="4" height="60" fill="#5B6B7A"/>
+<circle cx="320" cy="144" r="10" fill="#2E7DBE"/>
+<!-- tram -->
+<rect x="20" y="130" width="270" height="78" rx="14" fill="url(#tram)"/>
+<rect x="20" y="186" width="270" height="10" fill="#E0A50F"/>
+<g fill="#8FC3E6" stroke="#5B8FB5" stroke-width="2">
+<rect x="40" y="144" width="40" height="28" rx="4"/>
+<rect x="92" y="144" width="40" height="28" rx="4"/>
+<rect x="144" y="144" width="40" height="28" rx="4"/>
+<rect x="196" y="144" width="40" height="28" rx="4"/>
+</g>
+<rect x="250" y="144" width="28" height="36" rx="4" fill="#5B8FB5"/>
+<rect x="20" y="130" width="270" height="6" rx="3" fill="#FFF0A0"/>
+<circle cx="50" cy="208" r="13" fill="#3A3F4B"/><circle cx="50" cy="208" r="5" fill="#AEB6BF"/>
+<circle cx="250" cy="208" r="13" fill="#3A3F4B"/><circle cx="250" cy="208" r="5" fill="#AEB6BF"/>
+<ellipse cx="150" cy="222" rx="140" ry="4" fill="#2B3A4A" opacity="0.12"/>
+<!-- people waiting -->
+<g transform="translate(340,236) scale(0.7)">
+<ellipse cx="0" cy="2" rx="20" ry="4" fill="#2B3A4A" opacity="0.15"/>
+<rect x="-11" y="-66" width="9" height="66" rx="4" fill="#1F2A44"/>
+<rect x="2" y="-66" width="9" height="66" rx="4" fill="#1F2A44"/>
+<rect x="-19" y="-124" width="38" height="62" rx="14" fill="#7FB3D5"/>
+<rect x="-26" y="-118" width="9" height="46" rx="4.5" fill="#7FB3D5"/>
+<rect x="17" y="-118" width="9" height="46" rx="4.5" fill="#7FB3D5"/>
+<circle cx="-21.5" cy="-70" r="5" fill="#F1C7A5"/>
+<circle cx="21.5" cy="-70" r="5" fill="#F1C7A5"/>
+<circle cx="0" cy="-152" r="17" fill="#F1C7A5"/>
+<path d="M-17 -151 Q-18 -170 0 -169 Q18 -170 17 -151 Q13 -160 0 -160 Q-12 -160 -17 -151Z" fill="#1E1E1E"/>
+</g>
+<g transform="translate(372,240) scale(0.62)">
+<rect x="-11" y="-66" width="9" height="66" rx="4" fill="#C9A227"/>
+<rect x="2" y="-66" width="9" height="66" rx="4" fill="#C9A227"/>
+<rect x="-19" y="-124" width="38" height="62" rx="14" fill="#8E86B0"/>
+<rect x="-26" y="-118" width="9" height="46" rx="4.5" fill="#8E86B0"/>
+<rect x="17" y="-118" width="9" height="46" rx="4.5" fill="#8E86B0"/>
+<circle cx="0" cy="-152" r="17" fill="#F1C7A5"/>
+<path d="M-17 -152 Q-18 -170 0 -170 Q18 -170 17 -152 Q12 -160 0 -160 Q-12 -160 -17 -152Z" fill="#6B4E3D"/>
+</g>
+</svg>

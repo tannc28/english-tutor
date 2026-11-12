@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4E6"/><stop offset="1" stop-color="#FDE3C8"/></linearGradient></defs>
+<rect width="384" height="288" fill="url(#sky)"/>
+<rect x="0" y="0" width="384" height="250" fill="#F6E3CF"/>
+<rect x="30" y="50" width="86" height="200" fill="#6E8B9C"/>
+<rect x="26" y="46" width="94" height="6" fill="#9C7A5B"/>
+<rect x="300" y="50" width="64" height="70" fill="#CFE6F2" stroke="#9C7A5B" stroke-width="4"/>
+<line x1="332" y1="50" x2="332" y2="120" stroke="#9C7A5B" stroke-width="3"/>
+<rect x="170" y="236" width="214" height="14" fill="#EDE3D1"/>
+<rect x="212" y="212" width="172" height="24" fill="#E2D6C0"/>
+<rect x="256" y="188" width="128" height="24" fill="#D6C8AE"/>
+<rect x="0" y="250" width="384" height="38" fill="#C9B79C"/>
+<ellipse cx="190" cy="238" rx="20" ry="4" fill="#000" opacity=".12"/>
+<rect x="181" y="186" width="8" height="50" rx="3" fill="#2E3B55"/>
+<rect x="191" y="186" width="8" height="50" rx="3" fill="#2E3B55"/>
+<rect x="176" y="130" width="28" height="58" rx="12" fill="#7FB3D5"/>
+<rect x="202" y="134" width="7" height="40" rx="3.5" fill="#7FB3D5"/>
+<circle cx="205.5" cy="176" r="4.5" fill="#F1C7A5"/>
+<circle cx="190" cy="116" r="15" fill="#F1C7A5"/>
+<path d="M175 118 Q174 102 190 102 Q206 102 205 118 Q200 110 190 110 Q180 110 175 118Z" fill="#1E1E1E"/>
+<ellipse cx="252" cy="214" rx="20" ry="4" fill="#000" opacity=".12"/>
+<path d="M240 150 Q252 144 264 150 L268 178 L274 212 L230 212 L236 178Z" fill="#B9A6D9"/>
+<rect x="270" y="160" width="6" height="30" rx="3" fill="#B9A6D9"/>
+<circle cx="273" cy="192" r="4" fill="#F1C7A5"/>
+<circle cx="252" cy="134" r="14" fill="#F1C7A5"/>
+<circle cx="252" cy="117" r="7" fill="#C8C8C8"/>
+<path d="M238 136 Q238 120 252 120 Q266 120 266 136 Q260 128 252 128 Q244 128 238 136Z" fill="#C8C8C8"/>
+<circle cx="247" cy="136" r="4" fill="none" stroke="#555" stroke-width="1.5"/>
+<circle cx="257" cy="136" r="4" fill="none" stroke="#555" stroke-width="1.5"/>
+<line x1="251" y1="136" x2="253" y2="136" stroke="#555" stroke-width="1.5"/>
+</svg>

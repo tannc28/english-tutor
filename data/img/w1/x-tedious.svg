@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<rect width="384" height="288" fill="#EEF3F8"/>
+<rect x="0" y="250" width="384" height="38" fill="#D8DEE6"/>
+<!-- tall stack of forms -->
+<ellipse cx="260" cy="252" rx="100" ry="4" fill="#000" opacity=".08"/>
+<rect x="212" y="170" width="110" height="10" rx="2" fill="#FFFFFF" stroke="#C9D2DC" stroke-width="1.5"/>
+<rect x="210" y="158" width="112" height="12" rx="2" fill="#FFFFFF" stroke="#C9D2DC" stroke-width="1.5"/>
+<rect x="214" y="146" width="108" height="12" rx="2" fill="#F6F8FA" stroke="#C9D2DC" stroke-width="1.5"/>
+<rect x="208" y="134" width="114" height="12" rx="2" fill="#FFFFFF" stroke="#C9D2DC" stroke-width="1.5"/>
+<rect x="212" y="122" width="108" height="12" rx="2" fill="#F6F8FA" stroke="#C9D2DC" stroke-width="1.5"/>
+<rect x="210" y="110" width="112" height="12" rx="2" fill="#FFFFFF" stroke="#C9D2DC" stroke-width="1.5"/>
+<rect x="216" y="98" width="104" height="12" rx="2" fill="#F6F8FA" stroke="#C9D2DC" stroke-width="1.5"/>
+<rect x="212" y="86" width="108" height="12" rx="2" fill="#FFFFFF" stroke="#C9D2DC" stroke-width="1.5"/>
+<rect x="210" y="74" width="112" height="12" rx="2" fill="#FFFFFF" stroke="#C9D2DC" stroke-width="1.5"/>
+<line x1="222" y1="80" x2="308" y2="80" stroke="#7FB3D5" stroke-width="1.5"/>
+<line x1="222" y1="128" x2="300" y2="128" stroke="#7FB3D5" stroke-width="1.5"/>
+<!-- desk -->
+<rect x="30" y="200" width="324" height="12" rx="4" fill="#A0744E"/>
+<rect x="46" y="212" width="8" height="38" fill="#8B5E3C"/>
+<rect x="330" y="212" width="8" height="38" fill="#8B5E3C"/>
+<!-- person sitting, yawning (Claire style) -->
+<rect x="92" y="164" width="30" height="40" rx="12" fill="#22314A"/>
+<rect x="116" y="150" width="7" height="30" rx="3.5" fill="#22314A" transform="rotate(-30 119 150)"/>
+<circle cx="106" cy="146" r="15" fill="#F1C7A5"/>
+<path d="M91 146 Q90 128 106 128 Q122 128 121 146 Q118 136 106 136 Q94 136 91 146Z" fill="#6D4C41"/>
+<path d="M97 143 Q100 141 103 143" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M109 143 Q112 141 115 143" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="106" cy="156" rx="4" ry="5.5" fill="#7A3B3B"/>
+<path d="M130 120 Q132 112 128 106" fill="none" stroke="#9AA8B6" stroke-width="2" stroke-linecap="round"/>
+<path d="M140 124 Q142 116 138 110" fill="none" stroke="#9AA8B6" stroke-width="2" stroke-linecap="round"/>
+</svg>

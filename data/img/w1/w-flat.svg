@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF3F8"/><stop offset="1" stop-color="#E2EBF4"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<rect x="0" y="236" width="384" height="52" fill="#DDE6DA"/>
+<ellipse cx="192" cy="238" rx="150" ry="5" fill="#2B3A4A" opacity="0.12"/>
+<!-- neighbouring house -->
+<rect x="20" y="92" width="92" height="144" fill="#A24A33"/>
+<polygon points="14,96 66,58 118,96" fill="#7A3B2A"/>
+<g fill="#F7F3E8"><rect x="34" y="112" width="24" height="26"/><rect x="78" y="112" width="24" height="26"/></g>
+<!-- main building -->
+<rect x="130" y="60" width="150" height="176" fill="#B5563A"/>
+<polygon points="122,64 205,20 288,64" fill="#7A3B2A"/>
+<rect x="196" y="28" width="8" height="18" fill="#7A3B2A"/>
+<!-- upper windows -->
+<g fill="#CFE3F2" stroke="#F7F3E8" stroke-width="4">
+<rect x="146" y="82" width="34" height="40"/>
+<rect x="226" y="82" width="34" height="40"/>
+</g>
+<!-- door -->
+<rect x="184" y="170" width="40" height="66" rx="4" fill="#2E7DBE"/>
+<rect x="190" y="176" width="28" height="22" fill="#8FC3E6" opacity="0.8"/>
+<circle cx="218" cy="210" r="2.5" fill="#F2C86B"/>
+<!-- door plaque (no letters) -->
+<rect x="200" y="152" width="12" height="10" rx="2" fill="#F2C86B"/>
+<!-- step -->
+<rect x="176" y="234" width="56" height="6" rx="2" fill="#C9CFD6"/>
+<!-- left window -->
+<g fill="#CFE3F2" stroke="#F7F3E8" stroke-width="4"><rect x="150" y="150" width="0" height="0"/></g>
+<rect x="150" y="170" width="24" height="30" fill="#CFE3F2" stroke="#F7F3E8" stroke-width="3"/>
+<rect x="250" y="170" width="24" height="30" fill="#CFE3F2" stroke="#F7F3E8" stroke-width="3"/>
+<!-- bins and plant -->
+<rect x="70" y="200" width="22" height="36" rx="3" fill="#5B6B7A"/>
+<rect x="66" y="196" width="30" height="6" rx="2" fill="#4A5A69"/>
+<path d="M112 226 Q104 200 118 190 Q116 210 116 226Z" fill="#6DBE8A"/>
+<rect x="108" y="222" width="16" height="14" rx="3" fill="#D98E63"/>
+<!-- rain -->
+<g stroke="#8FA9BF" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
+<line x1="30" y1="30" x2="26" y2="44"/><line x1="340" y1="40" x2="336" y2="54"/><line x1="350" y1="110" x2="346" y2="124"/><line x1="40" y1="140" x2="36" y2="154"/>
+</g>
+</svg>

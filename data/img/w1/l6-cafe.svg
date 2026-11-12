@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4E6"/><stop offset="1" stop-color="#FFFBF5"/></linearGradient>
+<linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE08A" stop-opacity="0.6"/><stop offset="1" stop-color="#FFE08A" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<!-- big window with sunlight -->
+<rect x="20" y="30" width="160" height="150" rx="4" fill="#DCEBF5" stroke="#8FA6BD" stroke-width="2"/>
+<line x1="100" y1="30" x2="100" y2="180" stroke="#8FA6BD" stroke-width="2"/>
+<line x1="20" y1="105" x2="180" y2="105" stroke="#8FA6BD" stroke-width="2"/>
+<polygon points="20,180 180,180 220,246 60,246" fill="url(#sun)"/>
+<!-- wall plant -->
+<rect x="300" y="100" width="60" height="6" rx="2" fill="#8A5A3B"/>
+<ellipse cx="318" cy="92" rx="14" ry="10" fill="#6DBE8A"/><ellipse cx="338" cy="88" rx="12" ry="9" fill="#5AAE78"/>
+<!-- counter -->
+<rect x="0" y="176" width="384" height="16" rx="3" fill="#C98D52"/>
+<rect x="0" y="192" width="384" height="56" fill="#E0A96D"/>
+<!-- pendant lamp -->
+<line x1="250" y1="0" x2="250" y2="40" stroke="#5B6B7A" stroke-width="2"/>
+<path d="M234 56 L266 56 L256 40 L244 40 Z" fill="#E0A96D"/>
+<circle cx="250" cy="58" r="8" fill="#FFE08A" opacity="0.6"/>
+<!-- table -->
+<ellipse cx="290" cy="216" rx="70" ry="12" fill="#B87C48"/>
+<rect x="286" y="216" width="8" height="30" fill="#8A5A3B"/>
+<ellipse cx="290" cy="248" rx="30" ry="4" fill="#000" opacity="0.1"/>
+<!-- coffee cups -->
+<rect x="268" y="196" width="18" height="18" rx="3" fill="#FFFFFF" stroke="#B0BCC8" stroke-width="1.5"/>
+<rect x="294" y="196" width="18" height="18" rx="3" fill="#FFFFFF" stroke="#B0BCC8" stroke-width="1.5"/>
+<path d="M286 200 Q292 198 294 200" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+<!-- Nam (left, seated) -->
+<rect x="40" y="170" width="0" height="0" fill="none"/>
+<rect x="64" y="120" width="70" height="8" rx="3" fill="#FFFFFF" opacity="0"/>
+<rect x="106" y="150" width="6" height="90" rx="2" fill="#8A5A3B" opacity="0"/>
+<rect x="58" y="128" width="46" height="60" rx="14" fill="#7FB3D5"/>
+<circle cx="81" cy="108" r="17" fill="#F1C7A5"/>
+<path d="M64 106 Q62 90 81 90 Q100 90 98 106 Q92 96 81 98 Q70 96 64 106Z" fill="#1E1E1E"/>
+<circle cx="75" cy="110" r="1.8" fill="#2B2B2B"/><circle cx="87" cy="110" r="1.8" fill="#2B2B2B"/>
+<path d="M76 118 Q82 124 88 118" stroke="#8A4B3A" stroke-width="2" fill="none" stroke-linecap="round"/>
+<rect x="44" y="134" width="12" height="36" rx="5" fill="#7FB3D5" transform="rotate(-10 50 134)"/>
+<rect x="96" y="150" width="12" height="36" rx="5" fill="#7FB3D5" transform="rotate(-6 102 150)"/>
+<rect x="60" y="184" width="24" height="10" rx="4" fill="#1F2A44"/>
+<rect x="88" y="184" width="22" height="10" rx="4" fill="#1F2A44"/>
+<rect x="60" y="192" width="22" height="20" fill="#1F2A44" opacity="0"/>
+<!-- chair -->
+<rect x="48" y="190" width="72" height="8" rx="3" fill="#8A5A3B"/>
+<rect x="48" y="190" width="6" height="56" fill="#8A5A3B"/>
+<!-- Jess (right, standing behind counter, green apron) -->
+<rect x="222" y="120" width="0" height="0" fill="none"/>
+<rect x="318" y="140" width="0" height="0" fill="none"/>
+<rect x="338" y="124" width="0" height="0" fill="none"/>
+<rect x="326" y="136" width="36" height="50" rx="12" fill="#F08A3C" opacity="0"/>
+<circle cx="180" cy="0" r="0" fill="none"/>
+<rect x="180" y="114" width="40" height="66" rx="14" fill="#F4F0EA"/>
+<rect x="186" y="132" width="28" height="48" rx="6" fill="#6DBE8A"/>
+<circle cx="200" cy="96" r="18" fill="#F1C7A5"/>
+<path d="M182 96 Q180 78 200 78 Q220 78 218 96 Q214 86 200 88 Q186 86 182 96Z" fill="#C0462E"/>
+<circle cx="194" cy="100" r="1.8" fill="#2B2B2B"/><circle cx="206" cy="100" r="1.8" fill="#2B2B2B"/>
+<path d="M195 108 Q200 112 205 108" stroke="#8A4B3A" stroke-width="2" fill="none" stroke-linecap="round"/>
+<rect x="172" y="132" width="12" height="36" rx="5" fill="#F4F0EA"/>
+<rect x="216" y="132" width="12" height="36" rx="5" fill="#F4F0EA"/>
+<!-- laugh marks -->
+<g stroke="#F08A3C" stroke-width="2.5" stroke-linecap="round">
+<path d="M124 84 L118 78"/><path d="M130 96 L124 92"/><path d="M226 74 L232 68"/><path d="M234 88 L242 86"/>
+</g>
+<!-- bottom floor -->
+<rect x="0" y="246" width="384" height="42" fill="#E8D5BE"/>
+</svg>

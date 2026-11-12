@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8F5EC"/><stop offset="1" stop-color="#DDEFE3"/></linearGradient>
+<linearGradient id="grass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FD3A9"/><stop offset="1" stop-color="#7FBE8E"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<!-- sun -->
+<circle cx="330" cy="60" r="26" fill="#FFE08A"/>
+<!-- field -->
+<rect x="0" y="190" width="384" height="98" fill="url(#grass)"/>
+<ellipse cx="200" cy="262" rx="170" ry="8" fill="#2B3A4A" opacity="0.10"/>
+<!-- grass blades in front -->
+<g stroke="#6BAE7E" stroke-width="3" stroke-linecap="round" fill="none">
+<path d="M40 280 Q44 262 40 250"/><path d="M70 280 Q76 258 72 244"/><path d="M300 280 Q296 262 302 250"/><path d="M340 280 Q346 264 340 252"/><path d="M20 270 Q24 258 18 248"/>
+</g>
+<!-- man sitting on grass, bored -->
+<!-- legs stretched forward -->
+<rect x="150" y="214" width="110" height="18" rx="9" fill="#1F2A44"/>
+<rect x="150" y="216" width="6" height="6" fill="#1F2A44"/>
+<ellipse cx="262" cy="224" rx="14" ry="10" fill="#2B2B2B"/>
+<!-- torso leaning back -->
+<path d="M130 214 L146 150 Q156 136 178 138 Q190 146 186 170 L172 214 Z" fill="#8E86B0"/>
+<!-- arm resting -->
+<path d="M160 160 Q168 186 180 200" fill="none" stroke="#8E86B0" stroke-width="12" stroke-linecap="round"/>
+<circle cx="182" cy="203" r="6" fill="#F1C7A5"/>
+<!-- head tilted, yawning -->
+<circle cx="168" cy="122" r="20" fill="#F1C7A5"/>
+<path d="M149 120 Q148 100 168 100 Q188 100 187 120 Q182 110 168 110 Q156 110 149 120Z" fill="#1E1E1E"/>
+<path d="M158 124 L164 124" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M172 124 L178 124" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="168" cy="138" rx="6" ry="8" fill="#8A5A44"/>
+<!-- arm raised to mouth -->
+<path d="M190 150 Q196 136 184 128" fill="none" stroke="#8E86B0" stroke-width="9" stroke-linecap="round"/>
+<circle cx="182" cy="126" r="5" fill="#F1C7A5"/>
+<!-- yawn lines -->
+<g stroke="#5AAE78" stroke-width="2" stroke-linecap="round">
+<line x1="208" y1="108" x2="222" y2="100"/><line x1="210" y1="122" x2="226" y2="122"/>
+</g>
+<!-- grass grows in clock-like rows, dull -->
+<g fill="#6DBE8A">
+<ellipse cx="60" cy="236" rx="8" ry="16"/>
+<ellipse cx="90" cy="232" rx="7" ry="14"/>
+<ellipse cx="330" cy="236" rx="8" ry="16"/>
+</g>
+<!-- zzz -->
+<g fill="#7A6FA8" font-family="serif"><rect x="232" y="84" width="10" height="3" rx="1"/><rect x="246" y="76" width="7" height="2" rx="1"/></g>
+</svg>

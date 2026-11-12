@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<rect width="384" height="288" fill="#FBE9D6"/>
+<rect x="0" y="0" width="384" height="70" fill="#FFFFFF"/>
+<g>
+<rect x="0" y="40" width="48" height="30" fill="#2E8B57"/><rect x="48" y="40" width="48" height="30" fill="#FFFFFF"/>
+<rect x="96" y="40" width="48" height="30" fill="#2E8B57"/><rect x="144" y="40" width="48" height="30" fill="#FFFFFF"/>
+<rect x="192" y="40" width="48" height="30" fill="#2E8B57"/><rect x="240" y="40" width="48" height="30" fill="#FFFFFF"/>
+<rect x="288" y="40" width="48" height="30" fill="#2E8B57"/><rect x="336" y="40" width="48" height="30" fill="#FFFFFF"/>
+</g>
+<rect x="0" y="70" width="384" height="180" fill="#F6E0C4"/>
+<rect x="0" y="250" width="384" height="38" fill="#D9C2A0"/>
+<!-- Claire (left, navy blazer) -->
+<path d="M70 150 Q90 140 110 150 L112 190 L68 190Z" fill="#22314A"/>
+<circle cx="90" cy="128" r="14" fill="#F1C7A5"/>
+<path d="M75 126 Q74 110 90 110 Q106 110 105 126 L106 142 Q100 134 90 134 Q80 134 75 142Z" fill="#6D4C41"/>
+<circle cx="85" cy="128" r="4" fill="none" stroke="#777" stroke-width="1.5"/>
+<circle cx="95" cy="128" r="4" fill="none" stroke="#777" stroke-width="1.5"/>
+<!-- Tom (middle, orange sweater, arm raised) -->
+<rect x="176" y="146" width="28" height="44" rx="12" fill="#E67E22"/>
+<line x1="200" y1="160" x2="222" y2="122" stroke="#E67E22" stroke-width="8" stroke-linecap="round"/>
+<circle cx="224" cy="116" r="5" fill="#F1C7A5"/>
+<circle cx="182" cy="116" r="7" fill="#5B3A29"/>
+<circle cx="190" cy="110" r="8" fill="#5B3A29"/>
+<circle cx="198" cy="116" r="7" fill="#5B3A29"/>
+<circle cx="190" cy="128" r="14" fill="#F1C7A5"/>
+<!-- Mr Patel (right, brown jacket, beard) -->
+<path d="M270 150 Q290 140 310 150 L312 190 L268 190Z" fill="#8B5E3C"/>
+<circle cx="290" cy="128" r="14" fill="#B07A52"/>
+<path d="M278 128 Q280 144 290 144 Q300 144 302 128 Q298 138 290 138 Q282 138 278 128Z" fill="#2B2B2B"/>
+<path d="M276 118 Q290 106 304 118 Q298 112 290 112 Q282 112 276 118Z" fill="#2B2B2B"/>
+<!-- table -->
+<rect x="20" y="190" width="344" height="12" rx="4" fill="#A0744E"/>
+<rect x="40" y="202" width="8" height="48" fill="#8B5E3C"/>
+<rect x="336" y="202" width="8" height="48" fill="#8B5E3C"/>
+<ellipse cx="130" cy="186" rx="22" ry="5" fill="#FFFFFF"/>
+<ellipse cx="260" cy="186" rx="20" ry="5" fill="#FFFFFF"/>
+<ellipse cx="130" cy="184" rx="10" ry="2.5" fill="#E8A87C"/>
+<circle cx="250" cy="182" r="5" fill="#C0553A"/>
+</svg>

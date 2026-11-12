@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCEBF5"/><stop offset="1" stop-color="#F4F8FB"/></linearGradient>
+<linearGradient id="tram" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD84D"/><stop offset="1" stop-color="#F2B705"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#sky)"/>
+<!-- background buildings -->
+<rect x="0" y="80" width="60" height="166" fill="#C0644A" opacity="0.5"/>
+<rect x="320" y="70" width="64" height="176" fill="#B5583F" opacity="0.5"/>
+<!-- overhead wire -->
+<line x1="0" y1="40" x2="384" y2="40" stroke="#5B6B7A" stroke-width="2"/>
+<line x1="170" y1="40" x2="170" y2="60" stroke="#5B6B7A" stroke-width="2"/>
+<!-- tram body -->
+<rect x="70" y="110" width="250" height="110" rx="18" fill="url(#tram)"/>
+<rect x="70" y="200" width="250" height="14" fill="#E0A000"/>
+<!-- roof pantograph -->
+<path d="M190 110 L170 40 L200 40 L210 110Z" fill="#5B6B7A" opacity="0.0"/>
+<line x1="190" y1="110" x2="170" y2="40" stroke="#5B6B7A" stroke-width="3"/>
+<line x1="170" y1="40" x2="186" y2="40" stroke="#5B6B7A" stroke-width="4" stroke-linecap="round"/>
+<!-- windows -->
+<rect x="84" y="126" width="60" height="44" rx="6" fill="#7FB3D5"/>
+<rect x="154" y="126" width="60" height="44" rx="6" fill="#7FB3D5"/>
+<rect x="224" y="126" width="60" height="44" rx="6" fill="#7FB3D5"/>
+<rect x="84" y="126" width="60" height="10" rx="4" fill="#A6CBE4"/>
+<rect x="154" y="126" width="60" height="10" rx="4" fill="#A6CBE4"/>
+<rect x="224" y="126" width="60" height="10" rx="4" fill="#A6CBE4"/>
+<!-- doors -->
+<rect x="282" y="130" width="28" height="90" rx="4" fill="#2E3B4E"/>
+<rect x="290" y="150" width="2" height="24" fill="#8FA6BD"/>
+<!-- wheels -->
+<circle cx="110" cy="226" r="14" fill="#2B2B2B"/><circle cx="110" cy="226" r="5" fill="#8FA6BD"/>
+<circle cx="290" cy="226" r="14" fill="#2B2B2B"/><circle cx="290" cy="226" r="5" fill="#8FA6BD"/>
+<!-- lights -->
+<circle cx="78" cy="180" r="5" fill="#FFFFFF"/>
+<circle cx="312" cy="180" r="5" fill="#E03B2E"/>
+<!-- tram stop sign pole (no text) -->
+<rect x="346" y="120" width="5" height="126" fill="#5B6B7A"/>
+<circle cx="348" cy="112" r="16" fill="#FFFFFF" stroke="#2E3B4E" stroke-width="3"/>
+<circle cx="348" cy="112" r="5" fill="#FFD84D"/>
+<!-- rails -->
+<rect x="0" y="236" width="384" height="52" fill="#C9D3DD"/>
+<line x1="0" y1="244" x2="384" y2="244" stroke="#8A96A3" stroke-width="3"/>
+<line x1="0" y1="256" x2="384" y2="256" stroke="#8A96A3" stroke-width="3"/>
+<ellipse cx="200" cy="262" rx="0" ry="0" fill="none"/>
+</svg>

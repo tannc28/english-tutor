@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4E6"/><stop offset="1" stop-color="#FFFAF3"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFE08A" stop-opacity="0.5"/><stop offset="1" stop-color="#FFE08A" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<circle cx="190" cy="150" r="150" fill="url(#glow)"/>
+<!-- wall lamp and shelves -->
+<rect x="24" y="60" width="90" height="6" rx="2" fill="#8A5A3B"/>
+<rect x="30" y="36" width="20" height="24" rx="3" fill="#E0A96D"/>
+<rect x="56" y="30" width="20" height="30" rx="3" fill="#6DBE8A"/>
+<rect x="84" y="40" width="20" height="20" rx="3" fill="#7FB3D5"/>
+<!-- picture frame -->
+<rect x="280" y="50" width="72" height="56" rx="4" fill="#FFFFFF" stroke="#C98D52" stroke-width="4"/>
+<path d="M286 100 L306 76 L322 92 L332 82 L346 100Z" fill="#6DBE8A"/>
+<!-- window glow -->
+<rect x="250" y="140" width="0" height="0" fill="none"/>
+<!-- armchair -->
+<rect x="70" y="150" width="130" height="30" rx="12" fill="#E0A96D"/>
+<rect x="60" y="130" width="22" height="60" rx="10" fill="#E0A96D"/>
+<rect x="188" y="130" width="22" height="60" rx="10" fill="#E0A96D"/>
+<rect x="82" y="112" width="106" height="44" rx="14" fill="#C98D52"/>
+<!-- cushion -->
+<rect x="90" y="122" width="34" height="28" rx="8" fill="#7FB3D5"/>
+<!-- young man relaxing, legs stretched -->
+<circle cx="130" cy="92" r="18" fill="#F1C7A5"/>
+<path d="M112 90 Q110 74 130 74 Q150 74 148 90 Q142 82 130 84 Q118 82 112 90Z" fill="#1E1E1E"/>
+<circle cx="124" cy="94" r="1.8" fill="#2B2B2B"/><circle cx="136" cy="94" r="1.8" fill="#2B2B2B"/>
+<path d="M125 102 Q130 106 135 102" stroke="#8A4B3A" stroke-width="2" fill="none" stroke-linecap="round"/>
+<rect x="104" y="114" width="52" height="34" rx="14" fill="#7FB3D5"/>
+<rect x="142" y="120" width="11" height="34" rx="5" fill="#7FB3D5" transform="rotate(-30 147 120)"/>
+<!-- happy legs -->
+<rect x="150" y="150" width="60" height="12" rx="6" fill="#1F2A44"/>
+<ellipse cx="214" cy="160" rx="9" ry="6" fill="#2B2B2B"/>
+<!-- coffee cup on side table -->
+<rect x="232" y="186" width="44" height="6" rx="2" fill="#8A5A3B"/>
+<rect x="240" y="192" width="5" height="50" fill="#8A5A3B"/>
+<rect x="266" y="166" width="0" height="0" fill="none"/>
+<rect x="238" y="166" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#B0BCC8" stroke-width="1.5"/>
+<path d="M258 172 Q266 172 264 180 Q262 184 258 182" stroke="#B0BCC8" stroke-width="2" fill="none"/>
+<path d="M244 158 Q248 152 244 146 M252 158 Q256 152 252 146" stroke="#C98D52" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+<!-- rug and floor -->
+<ellipse cx="180" cy="246" rx="120" ry="14" fill="#F3D3B0" opacity="0.7"/>
+<rect x="0" y="246" width="384" height="42" fill="#E8D5BE"/>
+<rect x="0" y="246" width="384" height="3" fill="#D6BF9F"/>
+<ellipse cx="130" cy="250" rx="36" ry="4" fill="#000" opacity="0.1"/>
+</svg>

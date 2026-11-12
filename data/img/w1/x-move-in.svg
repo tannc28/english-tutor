@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<rect width="384" height="288" fill="#FDF1E0"/>
+<!-- window with sky -->
+<rect x="24" y="50" width="90" height="90" fill="#CFE6F2" stroke="#FFFFFF" stroke-width="6"/>
+<line x1="69" y1="50" x2="69" y2="140" stroke="#FFFFFF" stroke-width="4"/>
+<line x1="24" y1="95" x2="114" y2="95" stroke="#FFFFFF" stroke-width="4"/>
+<!-- open front door -->
+<rect x="290" y="50" width="84" height="200" fill="#B8895B"/>
+<rect x="282" y="46" width="100" height="6" fill="#9C7A5B"/>
+<rect x="300" y="66" width="60" height="80" fill="#A07350"/>
+<rect x="356" y="140" width="10" height="8" rx="2" fill="#E8C872"/>
+<!-- floor -->
+<rect x="0" y="250" width="384" height="38" fill="#D9B98A"/>
+<line x1="0" y1="264" x2="384" y2="264" stroke="#C4A272" stroke-width="2"/>
+<!-- stacked boxes on floor -->
+<rect x="28" y="206" width="66" height="44" rx="2" fill="#D9A86C" stroke="#A0744E" stroke-width="2"/>
+<rect x="36" y="206" width="50" height="10" fill="#C8955A"/>
+<rect x="46" y="170" width="46" height="36" rx="2" fill="#E2B57E" stroke="#A0744E" stroke-width="2"/>
+<!-- man carrying box (Nam) -->
+<ellipse cx="200" cy="252" rx="20" ry="4" fill="#000" opacity=".12"/>
+<rect x="191" y="200" width="8" height="50" rx="3" fill="#2E3B55"/>
+<rect x="201" y="200" width="8" height="50" rx="3" fill="#2E3B55"/>
+<rect x="186" y="144" width="28" height="58" rx="12" fill="#7FB3D5"/>
+<rect x="210" y="150" width="7" height="34" rx="3.5" fill="#7FB3D5" transform="rotate(-18 213 150)"/>
+<rect x="170" y="150" width="7" height="34" rx="3.5" fill="#7FB3D5" transform="rotate(18 173 150)"/>
+<rect x="150" y="164" width="84" height="56" rx="4" fill="#D9A86C" stroke="#A0744E" stroke-width="2"/>
+<rect x="186" y="164" width="12" height="56" fill="#C8955A"/>
+<circle cx="155" cy="182" r="5" fill="#F1C7A5"/>
+<circle cx="229" cy="182" r="5" fill="#F1C7A5"/>
+<circle cx="200" cy="130" r="15" fill="#F1C7A5"/>
+<path d="M185 132 Q184 116 200 116 Q216 116 215 132 Q210 124 200 124 Q190 124 185 132Z" fill="#1E1E1E"/>
+<path d="M194 138 Q200 144 206 138" fill="none" stroke="#8A4B3A" stroke-width="2" stroke-linecap="round"/>
+<!-- sparkle for happy -->
+<g stroke="#F4C542" stroke-width="3" stroke-linecap="round">
+<line x1="262" y1="110" x2="262" y2="124"/><line x1="255" y1="117" x2="269" y2="117"/>
+<line x1="150" y1="100" x2="150" y2="112"/><line x1="144" y1="106" x2="156" y2="106"/>
+</g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCEBF5"/><stop offset="1" stop-color="#F4F8FB"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#sky)"/>
+<!-- sun -->
+<circle cx="330" cy="58" r="22" fill="#FFE08A"/>
+<!-- park railings -->
+<rect x="0" y="150" width="200" height="8" fill="#8FA6BD"/>
+<g fill="#8FA6BD">
+<rect x="10" y="150" width="4" height="60"/><rect x="34" y="150" width="4" height="60"/><rect x="58" y="150" width="4" height="60"/>
+<rect x="82" y="150" width="4" height="60"/><rect x="106" y="150" width="4" height="60"/><rect x="130" y="150" width="4" height="60"/>
+<rect x="154" y="150" width="4" height="60"/><rect x="178" y="150" width="4" height="60"/>
+</g>
+<!-- park trees -->
+<rect x="30" y="110" width="8" height="42" fill="#8A5A3B"/>
+<circle cx="34" cy="100" r="32" fill="#6DBE8A"/>
+<rect x="110" y="104" width="8" height="48" fill="#8A5A3B"/>
+<circle cx="114" cy="92" r="36" fill="#5AAE78"/>
+<rect x="176" y="120" width="8" height="32" fill="#8A5A3B"/>
+<circle cx="180" cy="112" r="24" fill="#6DBE8A"/>
+<!-- grass -->
+<rect x="0" y="158" width="200" height="88" fill="#BFE3C8"/>
+<!-- sidewalk and road -->
+<rect x="200" y="150" width="184" height="98" fill="#C9D3DD"/>
+<rect x="0" y="246" width="384" height="42" fill="#B5BFCA"/>
+<line x1="0" y1="262" x2="384" y2="262" stroke="#9AA6B3" stroke-width="2"/>
+<!-- building on right -->
+<rect x="260" y="30" width="110" height="122" fill="#C0644A"/>
+<rect x="276" y="50" width="22" height="26" fill="#FFE08A"/><rect x="310" y="50" width="22" height="26" fill="#7A8B9C"/>
+<rect x="276" y="92" width="22" height="26" fill="#7A8B9C"/><rect x="310" y="92" width="22" height="26" fill="#FFE08A"/>
+<!-- man walking past (going right) -->
+<ellipse cx="220" cy="254" rx="28" ry="4" fill="#000" opacity="0.12"/>
+<rect x="208" y="186" width="11" height="58" rx="5" fill="#1F2A44" transform="rotate(-6 213 186)"/>
+<rect x="224" y="186" width="11" height="58" rx="5" fill="#1F2A44" transform="rotate(8 229 186)"/>
+<rect x="200" y="122" width="40" height="70" rx="14" fill="#7FB3D5"/>
+<circle cx="220" cy="104" r="17" fill="#F1C7A5"/>
+<path d="M203 102 Q202 86 220 86 Q238 86 237 102 Q230 94 220 96 Q210 94 203 102Z" fill="#1E1E1E"/>
+<circle cx="214" cy="106" r="1.8" fill="#2B2B2B"/><circle cx="226" cy="106" r="1.8" fill="#2B2B2B"/>
+<path d="M215 114 Q220 117 225 114" stroke="#8A4B3A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<rect x="238" y="132" width="11" height="48" rx="5" fill="#7FB3D5" transform="rotate(-18 243 132)"/>
+<rect x="188" y="132" width="11" height="48" rx="5" fill="#7FB3D5" transform="rotate(14 193 132)"/>
+<!-- motion arrow -->
+<path d="M268 220 L330 220 M320 212 L332 220 L320 228" stroke="#F08A3C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8F5EC"/><stop offset="1" stop-color="#F4FBF6"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<!-- wall calendar-style star -->
+<circle cx="320" cy="60" r="28" fill="#FFE08A"/>
+<path d="M320 40 L324 52 L337 52 L326 60 L330 72 L320 64 L310 72 L314 60 L303 52 L316 52Z" fill="#F08A3C"/>
+<!-- desk -->
+<rect x="0" y="206" width="384" height="14" rx="4" fill="#C98D52"/>
+<rect x="30" y="220" width="12" height="32" fill="#A87340"/>
+<rect x="342" y="220" width="12" height="32" fill="#A87340"/>
+<!-- notebook -->
+<rect x="86" y="110" width="150" height="96" rx="6" fill="#FFFFFF" stroke="#8FA6BD" stroke-width="2"/>
+<rect x="86" y="110" width="14" height="96" rx="4" fill="#7FB3D5"/>
+<!-- goals list lines and checkboxes -->
+<g stroke="#B0BCC8" stroke-width="2" stroke-linecap="round">
+<line x1="118" y1="130" x2="224" y2="130"/><line x1="118" y1="148" x2="224" y2="148"/><line x1="118" y1="166" x2="224" y2="166"/><line x1="118" y1="184" x2="200" y2="184"/>
+</g>
+<g fill="none" stroke="#5B6B7A" stroke-width="2">
+<rect x="104" y="122" width="0" height="0"/>
+</g>
+<rect x="104" y="136" width="0" height="0" fill="none"/>
+<path d="M104 128 L108 132 L114 124" stroke="#6DBE8A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M104 146 L108 150 L114 142" stroke="#6DBE8A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="104" y="161" width="8" height="8" fill="none" stroke="#8FA6BD" stroke-width="1.5"/>
+<rect x="104" y="179" width="8" height="8" fill="none" stroke="#8FA6BD" stroke-width="1.5"/>
+<!-- pen -->
+<rect x="236" y="104" width="6" height="90" rx="3" transform="rotate(30 239 149)" fill="#F08A3C"/>
+<polygon points="258,186 266,194 260,198" fill="#5B6B7A" transform="rotate(30 239 149)"/>
+<!-- coffee cup -->
+<rect x="262" y="160" width="40" height="46" rx="6" fill="#FFFFFF" stroke="#B0BCC8" stroke-width="2"/>
+<path d="M302 172 Q318 172 316 186 Q314 196 302 194" stroke="#B0BCC8" stroke-width="3" fill="none"/>
+<path d="M272 152 Q278 144 272 136 M284 152 Q290 144 284 136" stroke="#C98D52" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+<rect x="262" y="160" width="40" height="8" fill="#8A5A3B" opacity="0.5"/>
+<!-- plant -->
+<rect x="18" y="176" width="26" height="30" rx="4" fill="#E0A96D"/>
+<ellipse cx="22" cy="168" rx="12" ry="10" fill="#6DBE8A"/><ellipse cx="38" cy="162" rx="12" ry="10" fill="#5AAE78"/>
+<!-- floor -->
+<rect x="0" y="252" width="384" height="36" fill="#D6E6DC"/>
+<ellipse cx="160" cy="254" rx="0" ry="0" fill="none"/>
+</svg>

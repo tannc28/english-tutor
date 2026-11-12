@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8F5EC"/><stop offset="1" stop-color="#DDEFE3"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<rect x="0" y="236" width="384" height="52" fill="#CFE3D4"/>
+<!-- door frame -->
+<rect x="200" y="50" width="120" height="186" rx="6" fill="#B5563A"/>
+<rect x="210" y="60" width="100" height="176" rx="4" fill="#2E7DBE"/>
+<rect x="250" y="136" width="8" height="20" rx="3" fill="#F2C86B"/>
+<rect x="230" y="92" width="60" height="28" rx="3" fill="#8FC3E6" opacity="0.8"/>
+<ellipse cx="260" cy="238" rx="70" ry="5" fill="#2B3A4A" opacity="0.12"/>
+<!-- young man, eyes closed, taking breath -->
+<g transform="translate(110,236) scale(1)">
+<ellipse cx="0" cy="2" rx="20" ry="4" fill="#2B3A4A" opacity="0.15"/>
+<rect x="-11" y="-66" width="9" height="66" rx="4" fill="#1F2A44"/>
+<rect x="2" y="-66" width="9" height="66" rx="4" fill="#1F2A44"/>
+<rect x="-19" y="-124" width="38" height="62" rx="14" fill="#7FB3D5"/>
+<rect x="-26" y="-118" width="9" height="46" rx="4.5" fill="#7FB3D5"/>
+<path d="M17 -118 L30 -144" stroke="#7FB3D5" stroke-width="9" stroke-linecap="round"/>
+<circle cx="-21.5" cy="-70" r="5" fill="#F1C7A5"/>
+<circle cx="32" cy="-148" r="5" fill="#F1C7A5"/>
+<rect x="-5" y="-134" width="10" height="12" fill="#E8B894"/>
+<circle cx="0" cy="-152" r="17" fill="#F1C7A5"/>
+<path d="M-17 -151 Q-18 -170 0 -169 Q18 -170 17 -151 Q13 -160 0 -160 Q-12 -160 -17 -151Z" fill="#1E1E1E"/>
+<path d="M-10 -152 Q-6 -148 -2 -152" fill="none" stroke="#2B2B2B" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M2 -152 Q6 -148 10 -152" fill="none" stroke="#2B2B2B" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M-4 -140 Q0 -136 4 -140" fill="none" stroke="#8A5A44" stroke-width="1.6" stroke-linecap="round"/>
+</g>
+<!-- breath lines -->
+<g fill="none" stroke="#7FB3D5" stroke-width="3" stroke-linecap="round">
+<path d="M60 90 Q48 74 60 58"/>
+<path d="M44 96 Q30 76 44 56" opacity="0.6"/>
+<path d="M72 80 Q62 66 72 52" opacity="0.4"/>
+</g>
+<!-- sweat drop -->
+<path d="M140 80 Q146 90 140 96 Q134 90 140 80Z" fill="#8FC3E6"/>
+</svg>

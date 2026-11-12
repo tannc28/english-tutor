@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D5E1EE"/><stop offset="1" stop-color="#EEF3F8"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#sky)"/>
+<!-- rain -->
+<g stroke="#7F98B2" stroke-width="2" stroke-linecap="round" opacity="0.75">
+<line x1="20" y1="18" x2="12" y2="40"/><line x1="60" y1="8" x2="52" y2="30"/><line x1="96" y1="40" x2="88" y2="62"/>
+<line x1="140" y1="12" x2="132" y2="34"/><line x1="200" y1="6" x2="192" y2="28"/><line x1="236" y1="44" x2="228" y2="66"/>
+<line x1="280" y1="14" x2="272" y2="36"/><line x1="326" y1="30" x2="318" y2="52"/><line x1="362" y1="10" x2="354" y2="32"/>
+<line x1="40" y1="90" x2="32" y2="112"/><line x1="350" y1="96" x2="342" y2="118"/><line x1="176" y1="84" x2="168" y2="106"/>
+</g>
+<!-- umbrella -->
+<path d="M70 150 Q192 40 314 150 Q290 136 262 146 Q242 130 222 146 Q192 128 162 146 Q142 130 122 146 Q96 136 70 150Z" fill="#2E3B4E"/>
+<path d="M70 150 Q192 40 314 150" fill="none" stroke="#1F2A44" stroke-width="2"/>
+<path d="M192 46 L192 150" stroke="#1F2A44" stroke-width="4" stroke-linecap="round"/>
+<path d="M192 150 Q196 160 188 170 Q180 178 186 186" stroke="#1F2A44" stroke-width="4" fill="none" stroke-linecap="round"/>
+<!-- hand -->
+<circle cx="186" cy="192" r="8" fill="#F1C7A5"/>
+<!-- arm -->
+<rect x="176" y="190" width="14" height="60" rx="6" fill="#7FB3D5"/>
+<!-- rain puddle and ground -->
+<rect x="0" y="246" width="384" height="42" fill="#C9D3DD"/>
+<rect x="0" y="246" width="384" height="3" fill="#B0BCC8"/>
+<ellipse cx="80" cy="262" rx="46" ry="6" fill="#A9BCCE" opacity="0.7"/>
+<ellipse cx="300" cy="272" rx="60" ry="6" fill="#A9BCCE" opacity="0.7"/>
+<ellipse cx="188" cy="252" rx="26" ry="4" fill="#000" opacity="0.12"/>
+<!-- splashes -->
+<g stroke="#8FA6BD" stroke-width="2" stroke-linecap="round">
+<path d="M130 254 L124 248"/><path d="M142 256 L148 250"/><path d="M250 258 L244 252"/>
+</g>
+</svg>
