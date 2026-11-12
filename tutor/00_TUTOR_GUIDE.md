@@ -47,7 +47,7 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 - Khung bài bên dưới là **mặc định**; được phép đổi tỉ lệ, bỏ hay thêm phần khi dữ liệu cho thấy cách khác hiệu quả hơn với Tân.
 
 ## 4. Khung bài – mặc định (Tân yêu cầu 12/11)
-**Kế hoạch theo TUẦN (Tân 12/11):** mỗi tuần 1 chủ đề phổ thông + truyện dài kỳ nối tiếp (narrow input), ~6 bài **riêng, nộp riêng** (40–60'), Tân làm lúc rảnh, thứ tự tuỳ ý; bài cuối tuần = ôn tập + "Look back". Kèm word wall ~12 từ có hình + audio, 6–8 bài nghe tự do cùng chủ đề. **Không bao giờ gộp nhiều buổi thành 1 bài nộp.**
+**Kế hoạch theo TUẦN (Tân 12/11):** mỗi tuần 1 chủ đề phổ thông + truyện dài kỳ nối tiếp (narrow input), ~6 bài **riêng, nộp riêng** (40–60'), **luôn kèm lịch gợi ý từng ngày** (`weeks[].days`: hôm nay làm gì, lúc mấy giờ – Tân 12/11: "thả cho tự do thì sẽ không học"); lỡ thì dời nhẹ nhàng, ≤2 bài/ngày; bài cuối tuần = ôn tập + "Look back". Kèm word wall ~12 từ có hình + audio, 6–8 bài nghe tự do cùng chủ đề. **Không bao giờ gộp nhiều buổi thành 1 bài nộp.**
 
 **Hình ảnh là bắt buộc** (Tân học nhanh qua ngữ cảnh + hình): ảnh bìa tuần/bài, ảnh cảnh truyện (2–3 ảnh/tập), ảnh cho từ vựng cụ thể, SVG cho bản đồ/sơ đồ/dòng thời gian.
 

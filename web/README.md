@@ -12,7 +12,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 ## Cấu trúc `data/`
 | File | Nội dung |
 |---|---|
-| `weeks.json` | **Kế hoạch theo tuần** `{weeks:[{no, start, end, status:"current|planned|done", theme, title, why_md, goals[], how_md, target_hours, cover, words:[{w, img, def, ex, vi?, audio}], listen:[{title, source, minutes, level, apple?, youtube?, url?, transcript?, why}], review_md?}]}` – tuần hiện tại có đủ chi tiết; các tuần tới chỉ có chủ đề + mục tiêu |
+| `weeks.json` | **Kế hoạch theo tuần** `{weeks:[{no, start, end, status:"current|planned|done", theme, title, why_md, goals[], how_md, target_hours, cover, days:{"YYYY-MM-DD":{lessons:[id…] (≤2/ngày), listen?:<chỉ số trong listen>, note}}, words:[{w, img, def, ex, vi?, audio}], listen:[{title, source, minutes, level, apple?, youtube?, url?, transcript?, why}], review_md?}]}` – tuần hiện tại có đủ chi tiết; các tuần tới chỉ có chủ đề + mục tiêu |
 | `lessons.json` | Danh sách bài `{lessons:[{id, week, order, kind:"Listening|Reading|Mixed|Review|Assessment", title, minutes, cover, status:"open|graded", date (ngày làm, ghi khi chấm), listenPct, readPct, difficulty, strain, minutesActual, extraMinutes, note}]}` – mỗi bài nộp riêng; chỉ số do gia sư ghi khi chấm |
 | `profile.json` | Hồ sơ học sinh = Learner model: `cefr{overall,listening,reading,vocab,grammar}`, `levels{…}`, `strengths[]`, `weaknesses[]`, `interests[]`, `habits`, `teacher_md`, `focus_md`, `decisions[{date,text}]`, `story`, `chunk_bank[]`, `pronunciation[]`, `orientation[]`, `week`, `streak`, `coach{summary_md, weekly_target_hours, target_why, recommendations[{title,why,how}]}`; `weaknesses` là object `{area, detail, evidence, plan}` |
 | `lessons/<id>.json` | Nội dung bài: `{intro_md, parts:[{kind, title, md, listen?:[{who, voice:"buttery|airy|glassy|rounded", text≤2000}], rate?:0.75–1.1, audio?:"data/audio/<id>/p<i>.mp3", learn?:true, practice?:true, questions:[{id, q, type:"text|short|choice|dictation|recording", options?, placeholder?, read?, check?:{answer, why}}]}]}` – `check` = câu luyện, trang chấm ngay (không tính điểm, không cần trong keys) |
@@ -27,7 +27,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 - `listen` → trang hiện trình nghe (Claude đọc, chỉnh tốc độ, lời ẩn tới khi bấm). `recording` → nút thu âm (xem `tools/speech/README.md`). `choice` luôn có thêm, tách riêng dưới các đáp án, nút "🤔 Mình không chắc" + ô ghi chú (đáp án lưu dạng `"Unsure: <ghi chú>"`; bài cũ có thể là `"Khác: …"`) và nút Bỏ chọn. Feedback bắt buộc (độ khó, chỗ khó nhất, phút) do trang tự thêm.
 
 ## Web có gì
-- **🗓 This week** (trang chủ): chủ đề tuần + ảnh bìa, vì sao chủ đề này, mục tiêu can-do, tiến độ tuần, nút "Continue" (bài chưa làm kế tiếp), thẻ bài có hình (làm thứ tự tuỳ ý), word wall (chạm để lật: nghĩa + ví dụ + audio), bài nghe tự do cùng chủ đề, dải các tuần tới.
+- **🗓 This week** (trang chủ): **📍 Today** (việc hôm nay theo giờ: bài sáng/tối + podcast; bài lỡ tự dời sang hôm nay, tối đa 2 bài/ngày, phần thừa ghi "no rush"), **dải 7 ngày** (✅ xong · ▶ hôm nay · ↪ lỡ), **Your journey** (mọi tuần, số bài đã xong, bấm để xem lại – không bao giờ xoá); chủ đề tuần + ảnh bìa, vì sao chủ đề này, mục tiêu can-do, tiến độ tuần, nút "Continue" (bài chưa làm kế tiếp), thẻ bài có hình (làm thứ tự tuỳ ý), word wall (chạm để lật: nghĩa + ví dụ + audio), bài nghe tự do cùng chủ đề, dải các tuần tới.
 - **📚 Bài học**: danh sách gom theo tuần, vở làm bài, trình nghe MP3, nộp bài, kết quả chấm. Feedback có thêm **độ căng não** (😌 relaxed / 🙂 some / 😵 hard).
 - **👤 Hồ sơ**: CEFR ước lượng từng kỹ năng, giáo viên nhận xét, điểm mạnh / cần cải thiện, sở thích, đang tập trung, nhật ký quyết định ("vì sao bài lại như vậy").
 - **📈 Tiến độ** (bảng huấn luyện): bức tranh hiện tại, gia sư khuyên, giờ học mỗi tuần so với mục tiêu, đang yếu gì + kế hoạch, dự báo tới C1 (chọn giờ/tuần để xem thay đổi), làm được gì ở mỗi mức, biểu đồ mức hiểu, bảng đánh giá từng ngày.
@@ -36,14 +36,14 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 1. `git pull`; đọc `CLAUDE.md`, file này, Tutor Guide, Roadmap, `profile.json` (input_level, weaknesses, decisions, chunk_bank), `weeks.json`, `lessons.json`, grades + submissions của tuần (nhất là phần "Look back" của bài ôn cuối tuần, cột strain).
 2. `ArtifactData list inbox` → chấm bài tồn trước.
 3. Đánh giá tuần: cập nhật `profile` (input_level lên/xuống, weaknesses, coach) + `weeks[tuần này].review_md`, status `done`.
-4. Tuần tới (`status: current`): chọn/điều chỉnh chủ đề (theo feedback + sở thích; tiếng Anh phổ thông), viết why_md, goals, how_md, **~6 bài** (Learn → Try it → Input → Check, bài cuối = ôn tập + Look back), truyện dài kỳ nối tiếp, word wall ~12 từ có hình, 6–8 bài nghe tự do cùng chủ đề (Apple Podcasts/YouTube, đã kiểm tra link). Bài tuần trước chưa làm vẫn để nguyên – không dồn, không áp lực; tuần mới có thể ít bài hơn. Thêm 1 tuần `planned` ở cuối để luôn thấy trước 3 tuần.
+4. Tuần tới (`status: current`): chọn/điều chỉnh chủ đề (theo feedback + sở thích; tiếng Anh phổ thông), viết why_md, goals, how_md, **~6 bài** (Learn → Try it → Input → Check, bài cuối = ôn tập + Look back), **lịch gợi ý từng ngày `days`** (ngày thường 1–2 bài theo khung 7:45/20:30, cuối tuần 1 bài 9:00 + podcast, có ngày nghỉ; khớp `profile.schedule`), truyện dài kỳ nối tiếp, word wall ~12 từ có hình, 6–8 bài nghe tự do cùng chủ đề (Apple Podcasts/YouTube, đã kiểm tra link). Bài tuần trước chưa làm vẫn để nguyên – không dồn, không áp lực; tuần mới có thể ít bài hơn. Thêm 1 tuần `planned` ở cuối để luôn thấy trước 3 tuần.
 5. Minh hoạ: spec → `python3 tools/illustrate.py spec.json` (bìa tuần, bìa từng bài, cảnh truyện, word wall); bản đồ/sơ đồ → SVG tự vẽ. Audio: `python3 tools/audio.py <id>…` + `--words <N>`.
 6. `python3 tools/sync.py` → commit + push `main` → `Artifact publish web/index.html` với `files` = `web/publish_files.json`.
 7. Báo Tân 2–3 dòng + link + PushNotification.
 
 ## Job hằng ngày 05:55 – theo dõi nhẹ nhàng
 1. `git pull`; `ArtifactData list inbox` → chấm bài tồn.
-2. Điều chỉnh **bài chưa làm** của tuần theo feedback mới nhất (😵 → hạ độ khó/độ dài; 😌 + ≥90% liền → nâng nhẹ). Tân làm hết bài tuần → thêm 1–2 bài bonus cùng chủ đề.
+2. Xem `days`: Tân lỡ nhiều → dàn lại lịch các ngày còn lại (vẫn ≤2 bài/ngày, có thể bỏ bớt bài phụ). Điều chỉnh **bài chưa làm** của tuần theo feedback mới nhất (😵 → hạ độ khó/độ dài; 😌 + ≥90% liền → nâng nhẹ). Tân làm hết bài tuần → thêm 1–2 bài bonus cùng chủ đề.
 3. Cập nhật lịch hôm nay: gợi ý bài kế tiếp (link `#<id>`) cho buổi sáng/tối.
 4. Chỉ nhắc khi 2 ngày không học, giọng nhẹ nhàng – không thúc ép. Không có gì mới → không gửi thông báo.
 

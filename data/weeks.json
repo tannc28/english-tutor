@@ -14,7 +14,7 @@
     "See where an idea turns: *although, however, yet, rather, unless*",
     "Use *be used to + V-ing* and *it takes + time* when you read and hear them"
    ],
-   "how_md": "Do the lessons **in any order, whenever you're free** – the numbers are only a suggestion. Each lesson is separate: finish it → 📤 Submit → I grade it and adapt the next ones. Free time? Pick a podcast from the list below.",
+   "how_md": "Follow **Today** – it tells you what to do and when. Missed a day? No stress: the lesson moves to the next day, and I keep each day to **two lessons at most**. Each lesson is submitted separately, I grade it, and I adjust the next ones.",
    "target_hours": 21,
    "words": [
     {
@@ -177,7 +177,44 @@
      "why": "English subtitles on. Pick a title that interests you."
     }
    ],
-   "cover": "data/img/w1/cover.webp"
+   "cover": "data/img/w1/cover.webp",
+   "days": {
+    "2026-11-11": {
+     "lessons": [
+      "2026-11-11-main"
+     ],
+     "note": "Starting point"
+    },
+    "2026-11-12": {
+     "lessons": [
+      "2026-11-12-morning",
+      "2026-11-12-evening"
+     ],
+     "listen": 0,
+     "note": "Morning: listening · Evening: reading"
+    },
+    "2026-11-13": {
+     "lessons": [
+      "w1-l4"
+     ],
+     "listen": 5,
+     "note": "Evening: first day at work"
+    },
+    "2026-11-14": {
+     "lessons": [
+      "w1-l5"
+     ],
+     "listen": 3,
+     "note": "Short lesson + a podcast on the walk"
+    },
+    "2026-11-15": {
+     "lessons": [
+      "w1-l6"
+     ],
+     "listen": 1,
+     "note": "Weekend review – then rest"
+    }
+   }
   },
   {
    "no": 2,
