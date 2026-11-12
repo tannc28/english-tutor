@@ -1,0 +1,316 @@
+{
+  "answers": {
+    "f1": "Why people often sleep badly in a new place.",
+    "f2": "left half",
+    "f3": "a night guard",
+    "f4": "a kind of protection",
+    "f5": "the effect of bad sleeping is weaker, and could have a good sleep",
+    "f6": "It gives the same idea again in a clearer way.",
+    "f7": "80 (Về cơ bản từ ngữ ở đó tôi hiểu hết, chỉ là tôi bị cái đó là khi một từ hoặc 1 đoạn văn nào đó quên hoặc không hiểu cái là bị ảnh hưởng hết cả quá trình sau). Tôi đọc script xong hiểu hết 100%",
+    "m1": "The heating made a noise at night.",
+    "m2": "3 o'clock",
+    "m3": "Going to the café on the corner before work.",
+    "m4": "20 minutes",
+    "m5": "I'm not used to sleeping in a new place",
+    "m6": "You'll get used to it",
+    "m7": "80",
+    "tm1": "I had",
+    "tm2": "walking",
+    "tm3": "used to live",
+    "tm4": "it has",
+    "tm5": "get used to"
+  },
+  "feedback": {
+    "difficulty": 2,
+    "extra": "0",
+    "hardest": "- Cái vấn đề của tôi là tai tôi vẫn chưa nghe được nhiều, và tôi thấy việc làm theo này và trả lời đáp án không được hay lắm. Như ở bài thứ 2 đọc liên quan tới năm ấy, tôi quên k hiểu cái là ảnh hưởng tới cả bài nghe, rồi vì việc chưa nghe được nhiều nên mẫu câu cơ bản tôi cũng phải suy nghĩ chưa đưa về được phản xạ nên cũng khả tốn effort và ảnh hưởng tới khả năng hiểu\n=> Tôi đề xuất ở phase này tập trung cung cấp hướng học nghe thật nhiều giỉa thích thật nhiều learn thật nhiều hơn là ngồi làm bài test, reading tôi cũng thấy thế, phase liên quan tới input nạp nhiều nhất có thể, việc quiz hay gì đó bạn tìm phương án đi nhé, tôi cũng k rõ nghiệp vụ sư phạm lắm, nhưng hãy hiểu trường hợp của tôi, cần researrch gì thì cứ research",
+    "minutes": "",
+    "strain": "some"
+  },
+  "lessonId": "2026-11-12-morning",
+  "log": {
+    "listen": {
+      "0": {
+        "answeredBeforeReveal": "0/0",
+        "plays": 10,
+        "rates": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 23201
+      },
+      "2": {
+        "answeredBeforeReveal": "5/7",
+        "plays": 4,
+        "rates": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 24530
+      }
+    },
+    "parts": {
+      "0": {
+        "ms": 460000
+      },
+      "1": {
+        "ms": 570000
+      },
+      "2": {
+        "ms": 190000
+      },
+      "3": {
+        "ms": 245000
+      }
+    },
+    "q": {
+      "m1": {
+        "changes": [],
+        "edits": 1,
+        "first": 23802,
+        "last": "The heating made a noise at night.",
+        "ms": 5000
+      },
+      "m2": {
+        "edits": 11,
+        "first": 23806,
+        "ms": 25000
+      },
+      "m3": {
+        "changes": [
+          {
+            "from": "Going to the café on the corner before work.",
+            "t": 24524,
+            "to": "Taking a taxi to work."
+          },
+          {
+            "from": "Taking a taxi to work.",
+            "t": 24525,
+            "to": "Going to the café on the corner before work."
+          }
+        ],
+        "edits": 3,
+        "first": 23830,
+        "last": "Going to the café on the corner before work.",
+        "ms": 160000
+      },
+      "m4": {
+        "edits": 12,
+        "first": 23835,
+        "ms": 5000
+      },
+      "m5": {
+        "edits": 36,
+        "first": 23843,
+        "ms": 20000
+      },
+      "m6": {
+        "edits": 0,
+        "first": 23862,
+        "ms": 55000
+      },
+      "tm1": {
+        "changes": [],
+        "edits": 1,
+        "first": 23458,
+        "last": "I had",
+        "ms": 80000
+      },
+      "tm2": {
+        "changes": [],
+        "edits": 1,
+        "first": 23537,
+        "last": "walking",
+        "ms": 65000
+      },
+      "tm3": {
+        "changes": [],
+        "edits": 1,
+        "first": 23631,
+        "last": "used to live",
+        "ms": 10000
+      },
+      "tm4": {
+        "changes": [],
+        "edits": 1,
+        "first": 23642,
+        "last": "it is",
+        "ms": 50000
+      },
+      "tm5": {
+        "changes": [],
+        "edits": 1,
+        "first": 23690,
+        "last": "get used to",
+        "ms": 80000
+      }
+    },
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-12T04:47:32.297Z",
+        "e": 35,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 0,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T04:58:12.961Z",
+        "e": 701,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 641,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T05:00:57.667Z",
+        "e": 1202,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 805,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T05:07:56.179Z",
+        "e": 1765,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 1224,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T05:16:58.429Z",
+        "e": 1775,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 1766,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T05:18:13.529Z",
+        "e": 2272,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 1841,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T08:38:18.900Z",
+        "e": 17991,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 13847,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T10:39:08.888Z",
+        "e": 21099,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 21097,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T10:39:11.631Z",
+        "e": 21104,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 21099,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T10:39:23.843Z",
+        "e": 21137,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 21112,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T10:55:26.176Z",
+        "e": 22363,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 22074,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T11:01:14.867Z",
+        "e": 22639,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 22423,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T11:08:02.212Z",
+        "e": 22835,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 22830,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T11:08:08.038Z",
+        "e": 23196,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 22836,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T11:14:08.058Z",
+        "e": 23617,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 23196,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T11:21:10.319Z",
+        "e": 24994,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 23618,
+        "vw": 430
+      }
+    ],
+    "t0": 1794458852297,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-12T14:57:36.152Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "bb45b2b2-3317-4d6f-b796-cfd328102a33",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-12T14:57:36.152Z"
+}

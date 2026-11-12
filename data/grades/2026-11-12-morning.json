@@ -1,0 +1,105 @@
+{
+ "score": "Listening (conversation) 6/6 · Listening (short talk) 6/6 · Quick checks 5/5 · First listen ~80% · After transcript 100%",
+ "gradedAt": "2026-11-12T22:10:00+07:00",
+ "summary_md": "**Every answer is correct – 17/17.** 🎉\n\n- **Dictation was exact:** *I'm not used to sleeping in a new place* and *You'll get used to it*. Your ears caught the small squeezed words (*I'm, you'll*) that you missed on Day 1 (*she's*).\n- **Short talk:** you followed the whole idea – left half of the brain, *night guard*, *a kind of protection*, the effect was weaker the second time, and what *in other words* does.\n- **Grammar you mixed up on Day 1 is now right:** *getting used to walking*, *used to live*, *get used to*.\n- You understood **~80% on the first listen and 100% with the transcript**. Your strain: 🙂 *some effort*.\n\n**Your most important note:** when you miss one word or one part, you lose the rest. That is normal at this stage and it tells me what to change – see *What's next*.",
+ "answers_md": "**3 things to remember from this lesson:**\n1. **Small words are getting easier:** *I'm, you'll, it's* – you heard them in the dictation.\n2. **be / get used to + V-ing** = something becomes normal for you. *used to + V* = something you did in the past.\n3. **Missing one word is OK.** Keep listening – the next sentence often explains it. Don't stop and go back in your head.",
+ "next_md": "**Thay đổi từ bài tiếp theo (theo góp ý của Tân):**\n- **Ít kiểm tra, nhiều input + giải thích hơn.** Mỗi bài chủ yếu là *nghe và đọc thật nhiều*, có giải thích từng đoạn, không còn chuỗi câu hỏi dài.\n- **Nghe kèm lời ngay từ đầu (listening while reading)**, nghe lại nhiều vòng cùng một đoạn, rồi mới nghe không lời.\n- **Chỉ giữ 1–2 câu tự kiểm tra nhẹ** (có đáp án hiện ngay) + 1 câu cảm nhận. Quiz ôn tập chuyển sang Telegram.\n- **Luyện kỹ năng 'lỡ một từ vẫn nghe tiếp'.**",
+ "items": {
+  "m1": {
+   "verdict": "correct",
+   "note_md": "Right – the old **heating** made a noise."
+  },
+  "m2": {
+   "verdict": "correct",
+   "note_md": "Right – *about three o'clock*."
+  },
+  "m3": {
+   "verdict": "correct",
+   "note_md": "Right. You first chose *a taxi*, then changed back – good: Margaret says *\"try the café on the corner\"*."
+  },
+  "m4": {
+   "verdict": "correct",
+   "note_md": "Right – *it takes about twenty minutes*. Note the chunk **it takes + time**."
+  },
+  "m5": {
+   "verdict": "correct",
+   "note_md": "Exact dictation: *I'm not used to sleeping in a new place.* You heard **I'm** and **sleeping** (-ing after *used to*)."
+  },
+  "m6": {
+   "verdict": "correct",
+   "note_md": "Exact: *You'll get used to it.* **You'll** is squeezed – you caught it."
+  },
+  "f1": {
+   "verdict": "correct",
+   "note_md": "Right – the main idea."
+  },
+  "f2": {
+   "verdict": "correct",
+   "note_md": "Right – the **left** half stayed more awake."
+  },
+  "f3": {
+   "verdict": "correct",
+   "note_md": "Right – like a **night guard**."
+  },
+  "f4": {
+   "verdict": "correct",
+   "note_md": "Right – it may be **a kind of protection**."
+  },
+  "f5": {
+   "verdict": "correct",
+   "note_md": "Right – the effect was **much weaker** the second time, so they slept better."
+  },
+  "f6": {
+   "verdict": "correct",
+   "note_md": "Right – *in other words* says the same idea again, more clearly."
+  },
+  "tm1": {
+   "verdict": "correct",
+   "note_md": "*I'd better* = I **had** better."
+  },
+  "tm2": {
+   "verdict": "correct",
+   "note_md": "*getting used to **walking*** – correct (Day 1 mistake fixed)."
+  },
+  "tm3": {
+   "verdict": "correct",
+   "note_md": "*used to live* – a past habit. Correct."
+  },
+  "tm4": {
+   "verdict": "correct",
+   "note_md": "*It's been* = it **has** been. You changed from *it is* to *it has* – good thinking."
+  },
+  "tm5": {
+   "verdict": "correct",
+   "note_md": "*get used to* the noise – correct."
+  }
+ },
+ "tg": {
+  "score": "17/17 câu đúng · nghe lần đầu ~80%, đọc lời 100% · 🙂",
+  "win": "Chép chính tả đúng y: I'm not used to sleeping… / You'll get used to it",
+  "fix": "Lỡ 1 từ là mất mạch → bài sau: nghe kèm lời, nghe lại nhiều vòng, ít câu hỏi"
+ },
+ "cards": [],
+ "quiz": [
+  {
+   "q": "\"It's been a long day.\" Here it's = …",
+   "options": [
+    "it is",
+    "it has",
+    "it was"
+   ],
+   "answer": 1,
+   "why": "It's + been → it HAS been (hiện tại hoàn thành)."
+  },
+  {
+   "q": "\"I'd better go now.\" Here I'd = …",
+   "options": [
+    "I would",
+    "I had",
+    "I did"
+   ],
+   "answer": 1,
+   "why": "had better → I'd better = I HAD better."
+  }
+ ]
+}

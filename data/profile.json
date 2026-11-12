@@ -2,10 +2,10 @@
   "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
   "name": "Tân",
   "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
-  "updatedAt": "2026-11-11T21:45:00+07:00",
+  "updatedAt": "2026-11-12T22:10:00+07:00",
   "week": 1,
-  "streak": 1,
-  "focus_now": "Chỉ INPUT (nghe + đọc). Output/phát âm chỉ khi Tân muốn.",
+  "streak": 2,
+  "focus_now": "Chỉ INPUT (nghe + đọc) – input-first: nạp nhiều, giải thích nhiều, rất ít kiểm tra. Output/phát âm chỉ khi Tân muốn.",
   "cefr": {
     "overall": "B1+",
     "listening": "A2+ (comfortable) · B1 (with effort)",
@@ -29,6 +29,12 @@
     "Tiếp xúc tiếng Anh hằng ngày qua công việc (chat với Claude bằng tiếng Anh)"
   ],
   "weaknesses": [
+    {
+      "area": "Nghe – mất mạch",
+      "detail": "Lỡ 1 từ hoặc 1 đoạn là ảnh hưởng cả phần sau; mẫu câu cơ bản vẫn phải nghĩ, chưa thành phản xạ",
+      "evidence": "Ngày 2 sáng: nghe lần đầu ~80%, đọc lời 100%; Tân tự nhận (feedback 12/11); phần Learn audio nghe 10 lần",
+      "plan": "Nghe kèm lời trước (listening while reading), nghe lại nhiều vòng cùng đoạn, đoạn ngắn có giải thích; luyện 'lỡ từ vẫn nghe tiếp' (đoán từ câu sau)"
+    },
     {
       "area": "Nghe (mức thoải mái)",
       "detail": "Nghe B1 vẫn phải căng não – mức thoải mái thật ~A2+",
@@ -106,6 +112,10 @@
     {
       "date": "2026-11-12",
       "text": "Chuyển sang KẾ HOẠCH THEO TUẦN (Tân yêu cầu): mỗi tuần 1 chủ đề + truyện chung, ~6 bài làm lúc rảnh theo thứ tự tuỳ ý, word wall có hình, bài nghe tự do theo chủ đề; minh hoạ bằng hình (Tân học nhanh qua ngữ cảnh + hình ảnh). Tân tự đánh giá nghe thật ra ~A2+ (vẫn căng não) → tách 'mức thoải mái' (soạn bài) và 'mức làm bài'; thêm câu 'căng não đến mức nào' vào feedback để theo dõi stress, tăng dần không áp lực."
+    },
+    {
+      "date": "2026-11-12",
+      "text": "Chấm Ngày 2 sáng: 17/17 đúng, nghe lần đầu ~80%, đọc lời 100%, 🙂. Tân góp ý: giai đoạn này cần NẠP INPUT tối đa + giải thích + learn nhiều, ít làm bài kiểm tra (cả nghe lẫn đọc). → Đổi khung bài: input-first – mỗi bài = Learn (giải thích, ví dụ, chunk) → Input lớn nhiều vòng (nghe kèm lời → nghe lại → nghe không lời; đọc rộng có chú giải) có giải thích từng đoạn → chỉ 1–2 câu tự kiểm tra nhẹ (đáp án hiện ngay) + cảm nhận/%; bỏ chuỗi câu hỏi dài; quiz ôn chuyển sang Telegram. Cơ sở: Krashen (CI), extensive listening (Renandya & Farrell 2011), listening-while-reading (Chang & Millett 2014)."
     }
   ],
   "story": {
@@ -221,7 +231,8 @@
     "11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items).",
     "11/11: Mục tiêu B2 vào ~giữa tháng 2/2027, 15 giờ/tuần; output để sau, chỉ 'rèn giũa' khi input đủ.",
     "12/11: Mỗi buổi 1 bài nộp riêng; khung Learn → Try it → Input → Check; luyện phản xạ bằng lặp lại ở tốc độ tự nhiên (không làm chậm).",
-    "12/11: Kế hoạch theo TUẦN (chủ đề + truyện + word wall có hình); soạn ở mức input thoải mái (nghe A2+, đọc B1), theo dõi độ căng não mỗi bài, tăng dần không stress."
+    "12/11: Kế hoạch theo TUẦN (chủ đề + truyện + word wall có hình); soạn ở mức input thoải mái (nghe A2+, đọc B1), theo dõi độ căng não mỗi bài, tăng dần không stress.",
+    "12/11 (sau Ngày 2 sáng): INPUT-FIRST – nhiều nghe/đọc + giải thích, rất ít câu hỏi kiểm tra; kiểm tra nhẹ, tự chấm ngay; quiz ôn qua Telegram."
   ],
   "coach": {
     "summary_md": "**B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.\n\n**Mục tiêu B2:** cần khoảng 150–250 giờ input tập trung. Với **~21 giờ/tuần**, ước tính **khoảng 8–12 tuần** nếu giữ đều. Phần lớn nên là **nghe** (nghe đang ở B1).",

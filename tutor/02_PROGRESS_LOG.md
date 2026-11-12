@@ -4,10 +4,10 @@
 
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
-- Trọng tâm: Chỉ INPUT (nghe + đọc). Output/phát âm chỉ khi Tân muốn.
-- Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/10 bài
+- Trọng tâm: Chỉ INPUT (nghe + đọc) – input-first: nạp nhiều, giải thích nhiều, rất ít kiểm tra. Output/phát âm chỉ khi Tân muốn.
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 2/10 bài
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
-- Cập nhật hồ sơ: 2026-11-11T21:45:00+07:00
+- Cập nhật hồ sơ: 2026-11-12T22:10:00+07:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -22,6 +22,7 @@
 **Sở thích:** AI & công nghệ (thích nhất, tin AI); Tâm lý; Ẩm thực; Khoa học; Thể thao
 
 **Cần cải thiện & kế hoạch:**
+- [Nghe – mất mạch] **Lỡ 1 từ hoặc 1 đoạn là ảnh hưởng cả phần sau; mẫu câu cơ bản vẫn phải nghĩ, chưa thành phản xạ** – dấu hiệu: Ngày 2 sáng: nghe lần đầu ~80%, đọc lời 100%; Tân tự nhận (feedback 12/11); phần Learn audio nghe 10 lần → Nghe kèm lời trước (listening while reading), nghe lại nhiều vòng cùng đoạn, đoạn ngắn có giải thích; luyện 'lỡ từ vẫn nghe tiếp' (đoán từ câu sau)
 - [Nghe (mức thoải mái)] **Nghe B1 vẫn phải căng não – mức thoải mái thật ~A2+** – dấu hiệu: Tân tự nhận 12/11: Ngày 1 làm được nhưng phải tập trung cao → Input nghe ở A2+/B1- , 1×, lặp 3 vòng; chỉ nâng khi feedback 'relaxed' + ≥90% hiểu 2–3 bài liền
 - [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's' → Nghe dễ (A2+/B1, 0.85×) theo 3 bước: nghe → nghe + đọc lời → nghe lại không lời; chính tả từng phần tập trung dạng yếu/nối âm
 - [Đọc] **Xử lý câu dài còn chậm (hiểu được nhưng tốn nhiều thời gian)** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Nhiều đọc rộng B1+ dễ hơn để tăng tốc; đọc kỹ chỉ 1 đoạn/ngày
@@ -61,19 +62,20 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-12 | Ngày 2: nghe chậm 0.85× theo 3 bước (hội thoại Hope Street + bài nói 'first-night effect' – cùng chủ đề giấc ngủ), đọc rộng Hope Street tập 2 (dễ, ~400 từ), đọc kỹ B1+/B2 về AI 'hallucination' (sở thích + từ nối yet/rather/however/even though/until…though), 6 câu nhận diện although/unless/rather + be used to/suggest + V-ing trong câu mới. Full English. ~100'. |
 | 2026-11-12 | Tân góp ý: (1) mỗi buổi phải là bài riêng để nộp riêng → tách Ngày 2 thành Morning + Evening; (2) phải dạy kiến thức nền trước rồi mới kiểm tra → mỗi bài có ① Learn → ② Try it (phản hồi ngay) → Input → Check; (3) chậm là do phải nghĩ/dịch, chưa thành phản xạ → nghe 1× lặp 3 vòng thay vì 0.85×, đọc không quay lại + đọc lần 2 nhanh hơn, ghi thời gian đọc. |
 | 2026-11-12 | Chuyển sang KẾ HOẠCH THEO TUẦN (Tân yêu cầu): mỗi tuần 1 chủ đề + truyện chung, ~6 bài làm lúc rảnh theo thứ tự tuỳ ý, word wall có hình, bài nghe tự do theo chủ đề; minh hoạ bằng hình (Tân học nhanh qua ngữ cảnh + hình ảnh). Tân tự đánh giá nghe thật ra ~A2+ (vẫn căng não) → tách 'mức thoải mái' (soạn bài) và 'mức làm bài'; thêm câu 'căng não đến mức nào' vào feedback để theo dõi stress, tăng dần không áp lực. |
+| 2026-11-12 | Chấm Ngày 2 sáng: 17/17 đúng, nghe lần đầu ~80%, đọc lời 100%, 🙂. Tân góp ý: giai đoạn này cần NẠP INPUT tối đa + giải thích + learn nhiều, ít làm bài kiểm tra (cả nghe lẫn đọc). → Đổi khung bài: input-first – mỗi bài = Learn (giải thích, ví dụ, chunk) → Input lớn nhiều vòng (nghe kèm lời → nghe lại → nghe không lời; đọc rộng có chú giải) có giải thích từng đoạn → chỉ 1–2 câu tự kiểm tra nhẹ (đáp án hiện ngay) + cảm nhận/%; bỏ chuỗi câu hỏi dài; quiz ôn chuyển sang Telegram. Cơ sở: Krashen (CI), extensive listening (Renandya & Farrell 2011), listening-while-reading (Chang & Millett 2014). |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
 |---|---|---|---|---|
 | A2 | 15/15 | 0 | 0 | 0 |
-| B1 | 5/28 | 10 | 0 | 13 |
+| B1 | 7/28 | 9 | 0 | 12 |
 | B2 | 0/23 | 1 | 2 | 20 |
 | C1 | 1/14 | 0 | 1 | 12 |
 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 1/10 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 2/10 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -82,7 +84,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | Tuần · Bài | Ngày làm | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |
 |---|---|---|---|---|---|---|---|---|---|
 | T1 · B1 | 2026-11-11 | Starting point – full assessment | graded | 60% | 88% | 3 | 90 | – | Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k |
-| T1 · B2 | – | Small words you can't hear + Hope Street | open | – | – | – | – | – |  |
+| T1 · B2 | 2026-11-12 | Small words you can't hear + Hope Street | graded | 80% | 100% | 2 | 25 | – | 17/17 · dictation exact · nghe lần đầu ~80% · Tân: muốn ít test, nhiều input + giải thích |
 | T1 · B3 | – | Linking words + The Café & AI chatbots | open | – | – | – | – | – |  |
 | T1 · B4 | – | First day at work – meeting the team | open | – | – | – | – | – |  |
 | T1 · B5 | – | Getting around – directions & the tram | open | – | – | – | – | – |  |
@@ -128,3 +130,4 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 - 11/11: Mục tiêu B2 vào ~giữa tháng 2/2027, 15 giờ/tuần; output để sau, chỉ 'rèn giũa' khi input đủ.
 - 12/11: Mỗi buổi 1 bài nộp riêng; khung Learn → Try it → Input → Check; luyện phản xạ bằng lặp lại ở tốc độ tự nhiên (không làm chậm).
 - 12/11: Kế hoạch theo TUẦN (chủ đề + truyện + word wall có hình); soạn ở mức input thoải mái (nghe A2+, đọc B1), theo dõi độ căng não mỗi bài, tăng dần không stress.
+- 12/11 (sau Ngày 2 sáng): INPUT-FIRST – nhiều nghe/đọc + giải thích, rất ít câu hỏi kiểm tra; kiểm tra nhẹ, tự chấm ngay; quiz ôn qua Telegram.

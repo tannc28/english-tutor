@@ -96,9 +96,8 @@
   },
   "B1-L1": {
    "tutor": "learning",
-   "evidence": "Day 1: easy listening 9/10, but needed ~9 plays – understanding is there, speed isn't yet",
-   "date": "2026-11-11",
-   "baseline": true
+   "evidence": "Day 2: ~80% on first listen of an easy story + short talk, 100% with transcript; loses the thread when one word is missed",
+   "date": "2026-11-12"
   },
   "B1-L2": {
    "tutor": "learning",
@@ -114,9 +113,8 @@
   },
   "B1-L4": {
    "tutor": "learning",
-   "evidence": "Day 1 dictation: missed *she's* (9/10 words) – weak forms are the main gap",
-   "date": "2026-11-11",
-   "baseline": true
+   "evidence": "Day 2 morning: exact dictation with *I'm, you'll*; *I'd = I had*, *it's = it has* right – needs more natural-speed practice",
+   "date": "2026-11-12"
   },
   "B1-R1": {
    "tutor": "got_it",
@@ -161,10 +159,9 @@
    "baseline": true
   },
   "B1-G9": {
-   "tutor": "learning",
-   "evidence": "Day 1 ❌ *used to get up* → *used to getting up*",
-   "date": "2026-11-11",
-   "baseline": true
+   "tutor": "got_it",
+   "evidence": "Day 2 morning: *getting used to walking*, *used to live*, *get used to* all right; dictation *not used to sleeping*",
+   "date": "2026-11-12"
   },
   "B1-K1": {
    "tutor": "learning",
@@ -179,10 +176,9 @@
    "baseline": true
   },
   "B1-K6": {
-   "tutor": "learning",
-   "evidence": "Seen in lessons 2–3 (rather, in other words)",
-   "date": "2026-11-11",
-   "baseline": true
+   "tutor": "got_it",
+   "evidence": "Day 2 morning: explained *in other words* correctly in a listening",
+   "date": "2026-11-12"
   },
   "B2-R1": {
    "tutor": "learning",
@@ -213,6 +209,11 @@
    "evidence": "Day 1: correct *Hardly had I…*, *Not only was he…* (recognition)",
    "date": "2026-11-11",
    "baseline": true
+  },
+  "B1-K5": {
+   "tutor": "learning",
+   "evidence": "Day 2 morning: understood *it takes about twenty minutes* in listening",
+   "date": "2026-11-12"
   }
  }
 }
