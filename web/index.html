@@ -565,6 +565,27 @@ table.days tr.next td{background:var(--accent-soft)}
 .brand-h{display:flex;align-items:center;gap:10px}
 .theme-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:5px 11px;font:600 .8rem var(--f-ui);cursor:pointer;flex:none}
 .theme-btn:hover{border-color:var(--accent);color:var(--ink)}
+
+/* ---- Thanh điều khiển bài học ở ĐÁY màn hình; mục lục hiện khi di/bấm vào thanh tiến độ (Tân 12/11) ---- */
+.book>.toolbar{position:fixed;top:auto;bottom:calc(12px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);width:min(1180px,calc(100vw - 32px));z-index:40;box-shadow:0 8px 30px rgba(20,26,38,.18)}
+body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
+.bookgrid{grid-template-columns:minmax(0,1fr)!important}
+#tb-prog{position:relative;cursor:pointer;border-radius:10px;padding:4px 6px;margin:-4px -6px}
+#tb-prog:hover,#tb-prog.open{background:var(--sunk)}
+.tb-caret{font-size:.75rem;color:var(--ink-3)}
+.toc-pop{display:none;position:absolute;left:0;right:0;bottom:calc(100% + 12px);z-index:41}
+.toc-pop .toc{position:static;max-height:60vh;box-shadow:0 10px 30px rgba(20,26,38,.2);flex-direction:column;overflow:auto}
+.toc-pop .toc a .t{display:block}
+.toc-pop .toc a{grid-template-columns:26px minmax(0,1fr) auto}
+@media (hover:hover){#tb-prog:hover .toc-pop{display:block}}
+#tb-prog.open .toc-pop{display:block}
+#tb-prog .toc-pop::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px}
+#txt-fab{bottom:calc(var(--tbb,64px) + 26px + env(safe-area-inset-bottom,0px))!important}
+@media (max-width:1100px){
+  .book>.toolbar{left:0;right:0;transform:none;width:auto;bottom:0;border-radius:0;border-width:1px 0 0;padding-bottom:calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 18px rgba(20,26,38,.08)}
+  .toc-pop{display:none!important}
+  .tb-caret{display:none}
+}
 </style>
 <script>
 /* Giao diện sáng/tối – mặc định SÁNG (Tân 12/11), lựa chọn lưu trên máy */
@@ -784,7 +805,7 @@ table.days tr.next td{background:var(--accent-soft)}
   function setPref(k, on, cls){ prefs[k] = on; store.set("prefs", prefs); document.body.classList.toggle(cls, on); }
   let tocObs = null;
   function bindToc(){
-    const tb = document.querySelector(".toolbar"); if (tb) document.documentElement.style.setProperty("--tbh", tb.offsetHeight + "px");
+    const tb = document.querySelector(".toolbar"); if (tb){ document.documentElement.style.setProperty("--tbh", "0px"); document.documentElement.style.setProperty("--tbb", tb.offsetHeight + "px"); }
     $("#tg-shelf")?.addEventListener("click", e => { const off = !document.body.classList.contains("shelf-off"); setPref("shelfOff", off, "shelf-off"); if (!off) setPref("focus", false, "focus"); syncToggles(); });
     $("#tg-focus")?.addEventListener("click", () => { setPref("focus", !document.body.classList.contains("focus"), "focus"); syncToggles(); });
     document.querySelectorAll(".toc a[data-go]").forEach(a => a.addEventListener("click", ev => { ev.preventDefault(); document.getElementById(a.dataset.go)?.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"}); }));
@@ -977,7 +998,8 @@ table.days tr.next td{background:var(--accent-soft)}
         <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Show/hide lesson list">☰<span class="bl"> Lessons</span></button>
         <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Hide everything except the lesson">🎯<span class="bl"> Focus</span></button>
         <button class="tbtn tb-parts" id="tg-parts" type="button" title="Jump to a part">Parts</button>
-        <div class="grow"><span class="ttl">${esc(l.title||"")}</span>${nQ && !grade ? `<div class="bar" style="flex:1;min-width:80px"><i id="pbar2" style="width:0%"></i></div><span class="note mono" id="plab2">0/${nQ}</span>` : ""}</div>
+        <div class="grow" id="tb-prog" tabindex="0" title="Parts of this lesson – hover or tap to jump"><span class="ttl">${esc(l.title||"")}</span>${nQ && !grade ? `<div class="bar" style="flex:1;min-width:80px"><i id="pbar2" style="width:0%"></i></div><span class="note mono" id="plab2">0/${nQ}</span>` : `<div class="bar" style="flex:1;min-width:80px"><i style="width:${grade?100:0}%"></i></div>`}<span class="tb-caret" aria-hidden="true">▴</span>
+          <div class="toc-pop"><nav class="toc" aria-label="Lesson contents"><span class="label lbl">Parts – tap to jump</span>${tocItems}</nav></div></div>
         ${grade ? `<span class="save-st" data-k="ok">✅ Graded · see results at the top</span>`
           : locked ? `<span class="save-st">Submitted ${esc(new Date(sub.submittedAt).toLocaleString("en-GB"))} · being graded</span><button class="tbtn" id="edit" type="button">Edit & resubmit</button>`
           : `<span class="save-st" id="save-st" role="status" title="${esc(saveTitle())}" aria-label="${esc(saveTitle())}">${esc(saveLabel())}</span><button class="tbtn" id="save-now" type="button" title="Save to the cloud now">💾<span class="bl"> Save</span></button><button class="primary sm" id="submit" type="button" title="Submit">📤<span class="bl"> Submit</span></button>`}
@@ -1033,7 +1055,6 @@ table.days tr.next td{background:var(--accent-soft)}
         <label class="fl" for="fb-extra"><span>Extra English today outside this lesson (minutes)? <span class="note">(YouTube, podcasts, reading… – optional)</span></span><input type="number" id="fb-extra" min="0" inputmode="numeric" value="${esc(fb.extra||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
       </section>
       </div>
-      <nav class="toc" aria-label="Lesson contents"><span class="label lbl">Contents</span>${tocItems}</nav>
       </div>`;
 
     if (!locked){
@@ -1043,6 +1064,8 @@ table.days tr.next td{background:var(--accent-soft)}
     } else { main.oninput = main.onchange = null; }
     updateProgress(l);
     bindToc();
+    { const tp = $("#tb-prog"); if (tp){ tp.addEventListener("click", ev => { if (ev.target.closest(".toc a")) { tp.classList.remove("open"); return; } tp.classList.toggle("open"); });
+        document.addEventListener("click", ev => { if (!ev.target.closest?.("#tb-prog")) tp.classList.remove("open"); }); } }
     main.querySelectorAll(".opts").forEach(g => {
       g.addEventListener("change", ev => { if (ev.target.type !== "radio") return; const note = g.querySelector(".other-note"); if (note){ note.hidden = ev.target.value !== "__other"; if (!note.hidden) note.focus(); } });
       g.querySelector(".opt-clear")?.addEventListener("click", () => { g.querySelectorAll("input[type=radio]").forEach(r => r.checked = false); const note = g.querySelector(".other-note"); if (note){ note.value = ""; note.hidden = true; } g.dispatchEvent(new Event("input", {bubbles:true})); });
