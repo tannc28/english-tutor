@@ -1,0 +1,55 @@
+{
+ "items": [
+  {
+   "id": "2026-11-11-main-q0",
+   "lesson": "2026-11-11-main",
+   "q": "I'm slowly getting used to ___ in the rain.",
+   "options": [
+    "walk",
+    "walking",
+    "walked"
+   ],
+   "answer": 1,
+   "why": "get/be used to + V-ing → walking (đã quen với việc…).",
+   "due": "2026-11-13",
+   "step": 0,
+   "history": [],
+   "poll_id": "6316692287233459042",
+   "sent": "2026-11-12"
+  },
+  {
+   "id": "2026-11-11-main-q1",
+   "lesson": "2026-11-11-main",
+   "q": "My friend suggested ___ a podcast on the way to work.",
+   "options": [
+    "to listen to",
+    "listening to",
+    "listen to"
+   ],
+   "answer": 1,
+   "why": "suggest + V-ing → suggested listening to.",
+   "due": "2026-11-13",
+   "step": 0,
+   "history": [],
+   "poll_id": "6316692287233459043",
+   "sent": "2026-11-12"
+  },
+  {
+   "id": "2026-11-11-main-q2",
+   "lesson": "2026-11-11-main",
+   "q": "I can't sleep ___ the room is completely dark.",
+   "options": [
+    "although",
+    "unless",
+    "however"
+   ],
+   "answer": 1,
+   "why": "unless = if … not: nếu phòng KHÔNG tối thì mình không ngủ được.",
+   "due": "2026-11-13",
+   "step": 0,
+   "history": [],
+   "poll_id": "6316692287233459044",
+   "sent": "2026-11-12"
+  }
+ ]
+}

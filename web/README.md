@@ -21,6 +21,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 | `keys/<id>.json` | Đáp án trắc nghiệm, **không** publish |
 | `levels.json` | **Checklist trình độ** A2 / B1 / B2 / C1: mỗi level có `summary_md, hours, proof[]` (cách biết đã đạt), `vocab` (danh sách từ), `sections` (listening, reading, grammar, linking, later) → `items[{id, text, ex?, later?}]`. Nguồn: CEFR Companion Volume, Core Inventory, CEFR-J |
 | `mastery.json` | Gia sư đánh giá từng item: `items{id:{tutor:"got_it|learning|not_yet", evidence, date}}`, `vocab.estimate_md`. **Cập nhật mỗi lần chấm** (có bằng chứng từ bài) |
+| `review.json` | Hàng ôn quiz Telegram (từ `grades[].quiz`): `items[{id, lesson, q, options, answer, why, due, step, history[{date, ok}], poll_id?}]` – do `tools/tg.py` quản lý |
 | `vocab/<A1…C1>.json`, `vocab/pseudo.json` | Danh sách từ theo level (CEFR-J Wordlist 1.5 + Octanove C1) và từ giả cho bài kiểm tra từ vựng yes/no |
 | `img/w<N>/…` | Minh hoạ (webp từ `tools/illustrate.py`, svg tự vẽ). Trong bài: `![alt](data/img/…)` trong md, `cover` cho thẻ bài |
 | `audio/<id>/p<i>.mp3`, `audio/w<N>/words/*.mp3` | Audio bài nghe + word wall (`tools/audio.py`) |
@@ -42,13 +43,13 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 4. Tuần tới (`status: current`): chọn/điều chỉnh chủ đề (theo feedback + sở thích; tiếng Anh phổ thông), viết why_md, goals, how_md, **~6 bài** (Learn → Try it → Input → Check, bài cuối = ôn tập + Look back), **lịch gợi ý từng ngày `days`** (ngày thường 1–2 bài theo khung 7:45/20:30, cuối tuần 1 bài 9:00 + podcast, có ngày nghỉ; khớp `profile.schedule`), truyện dài kỳ nối tiếp, word wall ~12 từ có hình, 6–8 bài nghe tự do cùng chủ đề (Apple Podcasts/YouTube, đã kiểm tra link). Bài tuần trước chưa làm vẫn để nguyên – không dồn, không áp lực; tuần mới có thể ít bài hơn. Thêm 1 tuần `planned` ở cuối để luôn thấy trước 3 tuần.
 5. Minh hoạ: spec → `python3 tools/illustrate.py spec.json` (bìa tuần, bìa từng bài, cảnh truyện, word wall); bản đồ/sơ đồ → SVG tự vẽ. Audio: `python3 tools/audio.py <id>…` + `--words <N>`.
 6. `python3 tools/sync.py` → commit + push `main` → `Artifact publish web/index.html` với `files` = `web/publish_files.json`.
-7. Báo Tân qua **Telegram** (`tools/notify.py`): chủ đề tuần + lịch Thứ 2 + link.
+7. Telegram: `weeks[N].next_focus` (1 câu) → `python3 tools/tg.py weekly <N>` (ảnh báo cáo tuần vừa xong) → `tools/notify.py`: chủ đề tuần mới + lịch Thứ 2 + link.
 
 ## Job hằng ngày 05:55 – theo dõi nhẹ nhàng
 1. `git pull`; `ArtifactData list inbox` → chấm bài tồn.
 2. Xem `days`: Tân lỡ nhiều → dàn lại lịch các ngày còn lại (vẫn ≤2 bài/ngày, có thể bỏ bớt bài phụ). Điều chỉnh **bài chưa làm** của tuần theo feedback mới nhất (😵 → hạ độ khó/độ dài; 😌 + ≥90% liền → nâng nhẹ). Tân làm hết bài tuần → thêm 1–2 bài bonus cùng chủ đề.
 3. Cập nhật lịch hôm nay: gợi ý bài kế tiếp (link `#<id>`) cho buổi sáng/tối.
-4. Đọc tin Tân nhắn bot (`tools/notify.py --inbox`) → xử lý. Thông báo qua **Telegram**: khi có chấm/đổi lịch; nhắc nhẹ khi 2 ngày không học (không thúc ép). Không có gì mới → không gửi.
+4. `python3 tools/tg.py quiz` – gửi quiz ôn đến hạn (ôn lại sau 1 → 3 → 7 ngày; sai thì làm lại từ đầu) và ghi kết quả quiz Tân đã làm vào `review.json` (lỗi vẫn sai sau 2 lần → thêm vào weaknesses + bài tuần tới). Đọc tin Tân nhắn bot (`tools/notify.py --inbox`) → xử lý. Thông báo qua **Telegram**: khi có chấm/đổi lịch; nhắc nhẹ khi 2 ngày không học (không thúc ép). Không có gì mới → không gửi.
 
 ## Lịch Google Calendar
 - Connector Google Calendar (tài khoản của Tân). Connector **không tạo được calendar mới** → dùng lịch **Personal** (`calendarId` = email chính), sự kiện tên bắt đầu **"📚 English · "**, `colorId: "9"`. Nếu Tân tự tạo lịch "English", chuyển sang dùng `calendarId` của lịch đó (`list_calendars`).
@@ -62,7 +63,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 2. `ArtifactData get submissions/<id>` (+ `data/lessons/<id>.json`, `data/keys/<id>.json`). Có câu `recording` → lấy asset, chấm phát âm (`tools/speech/README.md`), xong xoá asset.
 3. Chấm theo Tutor Guide; đọc thêm `log` để phân tích quá trình (Tutor Guide 6d). Ghi `data/submissions/<id>.json` (bản chép), `data/grades/<id>.json`; cập nhật `data/lessons.json` (status `graded`, `date` = ngày nộp, `listenPct`, `readPct`, `difficulty`, `strain` = feedback.strain, `minutesActual`, `extraMinutes` = feedback.extra, `note` ngắn) **`data/mastery.json`** (item checklist nào bài này cho bằng chứng → got_it/learning/not_yet + evidence; đọc thêm `drafts/selfcheck`) và `data/profile.json` (cefr/levels, strengths, weaknesses, interests, teacher_md, focus_md, decisions, chunk_bank, streak, updatedAt, **coach**, weaknesses có bằng chứng – xem Tutor Guide 6c).
 4. `python3 tools/sync.py` → commit + push → publish (như trên) → `ArtifactData delete inbox/<id>`.
-5. Trả lời trong thread comment + resolve (nếu đến qua comment), hoặc 1–2 dòng trong chat. **Gửi Telegram**: `python3 tools/notify.py --result <id> "<caption>"` → **ảnh dài** của bài đã chấm (câu trả lời + nhận xét từng câu; bài dài tự chia album) + caption **ngắn** (điểm, 1 ý chính, bài kế tiếp, link `#<id>`). Không viết lại nhận xét dài trong tin nhắn (Tân 12/11).
+5. Trả lời trong thread comment + resolve (nếu đến qua comment), hoặc 1–2 dòng trong chat. **Telegram** (Tân chọn 12/11): ghi vào `grades/<id>.json` thêm `tg {score, win, fix}` (mỗi dòng ≤ 90 ký tự), `cards` (≤3 lỗi quan trọng nhất: q, yours, right, tip – ❌→✅→💡) và `quiz` (2–3 câu trắc nghiệm ôn đúng chỗ sai: q, options, answer, why) → `python3 tools/tg.py graded <id>` = tin 4 dòng + ảnh thẻ lỗi + đưa quiz vào hàng ôn `data/review.json`. Không gửi ảnh chụp dài, không viết lại nhận xét dài.
 
 ## Checklist trình độ (tab 🎯 Levels)
 - Mỗi level hiện % item ✅, số 🌱/⬜/chưa kiểm tra, "how we'll know you're there", ô từ vựng (bài **word check** 40 từ = 36 từ thật ngẫu nhiên + 4 từ giả, điểm đã trừ đoán bừa; hoặc duyệt toàn bộ danh sách).

@@ -265,5 +265,62 @@
    "verdict": "correct",
    "note_md": "Agreed – listening is the main focus now."
   }
- }
+ },
+ "tg": {
+  "score": "Tổng ~B1+ · Đọc ~B2 · Nghe ~B1 (điểm nghẽn)",
+  "win": "Đọc hiểu và nối ý tốt: quy chiếu, câu dài đều đúng (đọc kỹ 9.5/10)",
+  "fix": "Tai chưa nhận ra từ ở tốc độ thật (bài B2: đọc hiểu 90%, nghe chỉ 40–50%)"
+ },
+ "cards": [
+  {
+   "q": "I'm not used to ___ up so early.",
+   "yours": "I'm not used to get up",
+   "right": "I'm not used to getting up",
+   "tip": "be used to + V-ing: “to” ở đây là giới từ → động từ thêm -ing (đã quen với việc…)."
+  },
+  {
+   "q": "He suggested ___ a taxi.",
+   "yours": "He suggested to take a taxi",
+   "right": "He suggested taking a taxi",
+   "tip": "suggest + V-ing (hoặc suggest that…). Không dùng suggest to do."
+  },
+  {
+   "q": "___ it was raining, they went for a walk.",
+   "yours": "Unless (không chắc)",
+   "right": "Although",
+   "tip": "Although = mặc dù (sự thật bất ngờ). Unless = trừ khi / nếu… không (điều kiện)."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "I'm slowly getting used to ___ in the rain.",
+   "options": [
+    "walk",
+    "walking",
+    "walked"
+   ],
+   "answer": 1,
+   "why": "get/be used to + V-ing → walking (đã quen với việc…)."
+  },
+  {
+   "q": "My friend suggested ___ a podcast on the way to work.",
+   "options": [
+    "to listen to",
+    "listening to",
+    "listen to"
+   ],
+   "answer": 1,
+   "why": "suggest + V-ing → suggested listening to."
+  },
+  {
+   "q": "I can't sleep ___ the room is completely dark.",
+   "options": [
+    "although",
+    "unless",
+    "however"
+   ],
+   "answer": 1,
+   "why": "unless = if … not: nếu phòng KHÔNG tối thì mình không ngủ được."
+  }
+ ]
 }
