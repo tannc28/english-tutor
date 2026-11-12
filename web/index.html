@@ -734,13 +734,10 @@ body{font-size:14.5px}
 }
 @media (max-width:520px){.wk-mini{grid-template-columns:64px minmax(0,1fr)}.wk-thumb{width:64px;height:64px}.wk-why{-webkit-line-clamp:2}}
     .pace-in{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)} .pace-in input{width:64px;padding:4px 6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:15px;font-weight:600}
-.rt{position:sticky;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:4;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px;padding:8px 10px;border:1px dashed var(--line);border-radius:10px;background:var(--sunk)}
-.rt.on{border-style:solid;border-color:var(--accent);background:var(--surface);box-shadow:inset 0 0 0 999px var(--accent-soft),0 2px 8px rgba(0,0,0,.08)}
+.rt{position:sticky;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:4;display:flex;justify-content:flex-end;height:0;overflow:visible;pointer-events:none}
 @media (min-width:1100px){body:not(.focus) .rt{top:calc(env(safe-area-inset-top,0px) + 58px)}}
-.rt button{padding:5px 12px;font-size:.85rem}
-.rt-clock{font-size:1.05rem;font-weight:700;min-width:48px}
-.rt-log{display:flex;flex-wrap:wrap;gap:6px}
-.rt-chip{padding:2px 8px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.78rem}
+.rt-tg{pointer-events:auto;transform:translateY(-4px);padding:4px 10px;font-size:.78rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);box-shadow:0 1px 4px rgba(0,0,0,.08);opacity:.9}
+.rt.on .rt-tg{opacity:.55;color:var(--ink-3)}.rt.on .rt-tg:hover{opacity:1}
   table.fcst td{vertical-align:top;font-size:13px;line-height:1.4} table.fcst td .note{font-size:12px;margin-top:2px} table.fcst th{white-space:nowrap;text-align:left;vertical-align:bottom}
 </style>
 <script>
@@ -1291,39 +1288,46 @@ body{font-size:14.5px}
       <div class="md transcript" ${open?"":"hidden"}>${lines}</div>
     </div>`;
   }
-  // ⏱ Đồng hồ đọc (Tân 12/11): ▶ Start → ⏸ Pause → ✓ Finished; đọc lại = lượt 2, 3… → thời gian + tốc độ (từ/phút) mỗi lượt.
-  // Lơ đễnh trong lúc đọc VẪN tính (luyện đọc bền); chỉ rời trang/app (cuộc gọi…) mới tự dừng.
+  // 📖 Ghi nhận đọc NGẦM (Tân 12/11: không timer, không "Finished" – nộp bài = xong). Chỉ 1 nút nhỏ Start/Pause.
+  // Lượt đọc lại tự nhận: đã cuộn tới cuối đoạn văn rồi quay lên đầu → lượt mới. Rời trang/app → tự dừng, quay lại → tự chạy tiếp.
+  // Lơ đễnh trong lúc đọc vẫn tính (luyện đọc bền). Không hiện đồng hồ hay số liệu khi đang học.
   const isReadPart = p => !p.listen && /(^|\n)>\s/.test(p.md || "");
-  const passageWords = p => (String(p.md||"").split("\n").filter(x => /^>\s?/.test(x)).join(" ").replace(/[*_>#`|]|\*\*/g," ").match(/[A-Za-z0-9'’]+/g) || []).length;
-  const mmss = ms => { const t = Math.round(ms/1000); return Math.floor(t/60) + ":" + String(t%60).padStart(2,"0"); };
-  function readerHtml(pi){ return `<div class="rt" data-pi="${pi}"><button type="button" class="primary rt-go">▶ Start reading</button><button type="button" class="ghost rt-pause" hidden>⏸ Pause</button><button type="button" class="ghost rt-done" hidden>✓ Finished</button><span class="rt-clock mono" hidden>0:00</span><span class="note rt-log"></span></div>`; }
-  let rtTick = null;
+  const passageWords = p => (String(p.md||"").split("\n").filter(x => /^>\s?/.test(x)).join(" ").replace(/[*_>#`|]/g," ").match(/[A-Za-z0-9'’]+/g) || []).length;
+  function readerHtml(pi){ return `<div class="rt" data-pi="${pi}"><button type="button" class="rt-tg">📖 Start reading</button></div>`; }
+  let rtAll = [], rtStop = null, rtGo = null;
+  function rtFinalize(){ rtAll.forEach(f => f()); }
   function bindReaders(l){
-    clearInterval(rtTick);
+    rtAll = []; rtStop = rtGo = null;
     const boxes = [...document.querySelectorAll(".rt")]; if (!boxes.length || !act) return;
     act.read = act.read || {};
+    if (document.querySelector('#part-fb input[name="fb-strain"]:disabled')){ boxes.forEach(b => b.hidden = true); return; }
     const st = pi => act.read[pi] = act.read[pi] || {words: passageWords(l.parts[pi]), reads:[]};
-    const elapsed = r => r.cur ? r.cur.acc + (r.cur.on ? Date.now() - r.cur.on : 0) : 0;
-    const paint = box => { const r = st(box.dataset.pi), c = r.cur, q = s => box.querySelector(s) || {};
-      q(".rt-go").hidden = !!(c && c.on); q(".rt-go").textContent = c ? "▶ Continue" : (r.reads.length ? `▶ Read again (${r.reads.length+1})` : "▶ Start reading");
-      q(".rt-pause").hidden = !(c && c.on); q(".rt-done").hidden = !c; q(".rt-clock").hidden = !c; q(".rt-clock").textContent = mmss(elapsed(r));
-      box.classList.toggle("on", !!(c && c.on));
-      q(".rt-log").innerHTML = r.reads.map((x,i) => `<span class="rt-chip">#${i+1} ${mmss(x.ms)} · <b>${x.wpm}</b> wpm</span>`).join(""); };
-    const stop = (r, why) => { if (r.cur && r.cur.on){ r.cur.acc += Date.now() - r.cur.on; r.cur.on = null; if (why) r.cur.auto = (r.cur.auto||0) + 1; actDirty = true; } };
-    boxes.forEach(box => { const r = st(box.dataset.pi); if (r.cur) stop(r);
-      if (document.querySelector('#part-fb input[name="fb-strain"]:disabled')){ box.querySelectorAll("button").forEach(b => b.remove()); if (!r.reads.length) box.hidden = true; paint(box); return; }
-      box.querySelector(".rt-go").addEventListener("click", () => { boxes.forEach(b => { const o = st(b.dataset.pi); if (o !== r){ stop(o); paint(b); } });
-        if (!r.cur) r.cur = {at: new Date().toISOString(), acc:0, pauses:0}; r.cur.on = Date.now(); actPoke(); actDirty = true; paint(box); });
-      box.querySelector(".rt-pause").addEventListener("click", () => { stop(r); r.cur.pauses++; actPoke(); paint(box); });
-      box.querySelector(".rt-done").addEventListener("click", () => { stop(r); const ms = r.cur.acc;
-        if (ms > 3000) r.reads.push({at:r.cur.at, ms, wpm: Math.round(r.words / (ms/60000)), pauses:r.cur.pauses, auto:r.cur.auto||0});
-        r.cur = null; actPoke(); actDirty = true; if (actLesson) saveLocal(actLesson); paint(box); });
-      paint(box); });
-    rtTick = setInterval(() => boxes.forEach(b => { const r = st(b.dataset.pi); if (r.cur && r.cur.on){ actPoke(); b.querySelector(".rt-clock").textContent = mmss(elapsed(r)); } }), 1000);
-    rtHide = () => boxes.forEach(b => { const r = act?.read?.[b.dataset.pi]; if (r){ stop(r, "hidden"); paint(b); } });
+    const pause = r => { if (r.cur && r.cur.on){ r.cur.acc += Date.now() - r.cur.on; r.cur.on = null; actDirty = true; } };
+    const close = r => { pause(r); if (r.cur && r.cur.acc > 5000) r.reads.push({at:r.cur.at, ms:r.cur.acc, wpm: Math.round(r.words / (r.cur.acc/60000)), pauses:r.cur.pauses||0, auto:r.cur.auto||0}); r.cur = null; actDirty = true; };
+    const start = r => { if (!r.cur) r.cur = {at:new Date().toISOString(), acc:0, pauses:0}; r.cur.on = Date.now(); actDirty = true; };
+    const paint = b => { const r = st(b.dataset.pi), on = !!(r.cur && r.cur.on), t = b.querySelector(".rt-tg");
+      b.classList.toggle("on", on); t.textContent = on ? "⏸ Pause" : (r.cur || r.reads.length ? "📖 Continue reading" : "📖 Start reading"); };
+    boxes.forEach(b => { const r = st(b.dataset.pi), md = b.parentElement.querySelector(".md");
+      if (r.cur) pause(r);
+      const bq = () => [...md.querySelectorAll("blockquote")];
+      b.querySelector(".rt-tg").addEventListener("click", () => {
+        if (r.cur && r.cur.on){ pause(r); r.cur.pauses++; }
+        else { boxes.forEach(o => { if (o !== b){ pause(st(o.dataset.pi)); paint(o); } }); start(r); }
+        actPoke(); paint(b); if (actLesson) saveLocal(actLesson); });
+      // lượt đọc lại: thấy cuối đoạn văn rồi quay lại thấy đầu đoạn → lượt mới (tự động)
+      const onScroll = () => { if (!document.body.contains(b)) return document.removeEventListener("scroll", onScroll, true); if (!r.cur || !r.cur.on) return; actPoke(); const q = bq(); if (!q.length) return;
+        const vh = innerHeight, top = q[0].getBoundingClientRect(), end = q[q.length-1].getBoundingClientRect();
+        if (end.bottom < vh && end.bottom > 0) r.cur.seenEnd = true;
+        else if (r.cur.seenEnd && top.top > 0 && top.top < vh*0.6 && end.bottom > vh){ close(r); start(r); }
+      };
+      document.addEventListener("scroll", onScroll, {passive:true, capture:true});
+      rtAll.push(() => close(r));
+      paint(b); });
+    const tick = setInterval(() => { if (!document.body.contains(boxes[0])) return clearInterval(tick); if (boxes.some(b => st(b.dataset.pi).cur?.on)) actPoke(); }, 5000);
+    rtStop = () => boxes.forEach(b => { const r = st(b.dataset.pi); if (r.cur && r.cur.on){ pause(r); r.cur.auto = (r.cur.auto||0) + 1; r.cur.wasOn = true; } });
+    rtGo = () => boxes.forEach(b => { const r = st(b.dataset.pi); if (r.cur && r.cur.wasOn){ r.cur.wasOn = false; start(r); } paint(b); });
   }
-  let rtHide = null;
-  document.addEventListener("visibilitychange", () => { if (document.hidden && rtHide) rtHide(); });
+  document.addEventListener("visibilitychange", () => { if (document.hidden) rtStop?.(); else rtGo?.(); });
   function bindPlayers(l){
     document.querySelectorAll(".player").forEach(box => {
       const key = box.dataset.key, p = (l.parts||[])[Number(box.dataset.pi)];
@@ -1422,6 +1426,7 @@ body{font-size:14.5px}
     if (!db){ msg.innerHTML = '<div class="banner bad">Can\'t reach the answer store. Open this page on claude.ai while signed in, then try again.</div>'; return; }
     btn.disabled = true; btn.innerHTML = "⏳<span class=\"bl\"> Submitting…</span>";
     if (act){ const ss = act.sessions[act.sessions.length-1]; if (ss) ss.e = nowS(); }
+    rtFinalize();
     const rec = {lessonId:l.id, ...data, log:act, submittedAt:new Date().toISOString()};
     const diag = {at:new Date().toISOString()};
     const savePromise = db.doc("submissions/"+l.id).set(rec);
