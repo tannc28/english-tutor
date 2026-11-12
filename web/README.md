@@ -32,6 +32,10 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 - `listen` → trang hiện trình nghe (Claude đọc, chỉnh tốc độ, lời ẩn tới khi bấm). `recording` → nút thu âm (xem `tools/speech/README.md`). `choice` luôn có thêm, tách riêng dưới các đáp án, nút "🤔 Mình không chắc" + ô ghi chú (đáp án lưu dạng `"Unsure: <ghi chú>"`; bài cũ có thể là `"Khác: …"`) và nút Bỏ chọn. Feedback bắt buộc (độ khó, chỗ khó nhất, phút) do trang tự thêm.
 
 ## Web có gì
+**Điều hướng: 3 tab chính + tab con** – 📅 Learn (🗓 This week · 📚 Lessons · 🎧 Listening library) · 🧠 Review · 📈 Progress (🎯 Levels · 📊 Stats · 👤 Profile). Hash cũ vẫn chạy (`#`, `#bai`, `#nghe`, `#on-tap`, `#level`, `#tien-do`, `#ho-so`, `#<lessonId>/p<i>`).
+
+**Làm bài (đọc/nghe + câu hỏi):** phần có bài dài (>600 ký tự) hoặc có audio và ≥2 câu hỏi được chia `.split`: máy tính ≥1100px → 2 cột, bài **ghim bên trái** (cuộn riêng), câu hỏi bên phải; điện thoại → nút nổi **📖 Text** (hiện khi bài đã cuộn khỏi màn hình) mở **bảng trượt** 62% màn hình với bài đọc; phần nghe → **trình phát gọn 1 dòng ghim** trên đầu khi cuộn câu hỏi. Danh sách bài bên trái mặc định thu gọn (☰ để mở).
+
 - **🗓 This week** (trang chủ): **thời khoá biểu theo ngày** – dải 7 ngày (bấm 1 ngày để xem kế hoạch ngày đó), **📍 Today** (việc hôm nay theo giờ: bài sáng/tối + podcast; bài lỡ tự dời sang hôm nay, tối đa 2 bài/ngày, phần thừa ghi "no rush"), **dải 7 ngày** (✅ xong · ▶ hôm nay · ↪ lỡ), **Your journey** (mọi tuần, số bài đã xong, bấm để xem lại – không bao giờ xoá); chủ đề tuần + ảnh bìa, vì sao chủ đề này, mục tiêu can-do, tiến độ tuần, nút "Continue" (bài chưa làm kế tiếp), thẻ bài có hình (làm thứ tự tuỳ ý), word wall (chạm để lật: nghĩa + ví dụ + audio), bài nghe tự do cùng chủ đề, dải các tuần tới.
 - **📚 Bài học**: danh sách gom theo tuần → ngày ("Thu, 12/11 · Morning"), vở làm bài, trình nghe MP3, nộp bài, kết quả chấm. Feedback có thêm **độ căng não** (😌 relaxed / 🙂 some / 😵 hard).
 - **👤 Hồ sơ**: CEFR ước lượng từng kỹ năng, giáo viên nhận xét, điểm mạnh / cần cải thiện, sở thích, đang tập trung, nhật ký quyết định ("vì sao bài lại như vậy").

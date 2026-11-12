@@ -101,6 +101,8 @@ sequenceDiagram
 
 Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư)
 
+- **Điều hướng:** 3 tab chính – 📅 Learn (This week · Lessons · Listening library) · 🧠 Review · 📈 Progress (Levels · Stats · Profile).
+- **Làm bài:** máy tính – bài đọc ghim bên trái, câu hỏi bên phải; điện thoại – nút 📖 Text mở bài đọc từ dưới lên, trình phát audio ghim khi cuộn.
 - **🗓 This week:** chủ đề tuần, ảnh bìa, mục tiêu, nút Continue, thẻ bài có hình, word wall (lật thẻ + audio), bài nghe tự do, các tuần tới.
 - **📚 Bài học:** danh sách gom theo tuần → ngày.
 - **🎯 Levels:** checklist từng level (nghe, đọc, ngữ pháp, từ nối, ~8.900 từ), tự đánh giá, bài kiểm tra từ vựng.

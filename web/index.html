@@ -216,6 +216,27 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
 .grade summary{cursor:pointer;font-weight:600}
 
 .pl-au{width:100%;height:40px}
+.player.compact{gap:6px;padding:10px 12px;width:100%}
+.player.compact .pl-row{display:flex;gap:8px;align-items:center;width:100%}
+.player.compact .pl-au{flex:1;min-width:0}
+.player.compact .pl-sel{flex:0 0 auto;padding:6px}
+.pl-row2{display:flex;gap:14px;align-items:center}
+/* --- Đọc + trả lời cùng lúc --- */
+@media (min-width:1100px){
+  .split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px;align-items:start}
+  .split .src{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--tbh,64px) + 12px);max-height:calc(100vh - var(--tbh,64px) - 32px);overflow:auto;padding-right:10px;border-right:1px solid var(--line);overscroll-behavior:contain}
+  .split .qs{margin-top:0}
+  .split .src::-webkit-scrollbar{width:8px}.split .src::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+}
+@media (max-width:1099px){ .split .src-listen{display:contents} .split .src-listen .player{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--tbh,56px) + 52px);z-index:4;box-shadow:var(--shadow)} .split .src-listen .player .transcript{max-height:40vh;overflow:auto} }
+#txt-fab{position:fixed;right:16px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;padding:12px 18px;border-radius:999px;border:0;background:var(--accent);color:#fff;font:inherit;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+#txt-fab[hidden]{display:none}
+#txt-sheet{position:fixed;left:0;right:0;bottom:0;height:62vh;z-index:40;background:var(--surface);border-top:1px solid var(--line);border-radius:18px 18px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.25);display:flex;flex-direction:column}
+#txt-sheet[hidden]{display:none}
+.sh-h{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.sh-b{overflow:auto;padding:12px 16px 30px;overscroll-behavior:contain}
+body.sheet-open #txt-fab{display:none}
+body.sheet-open .book{padding-bottom:62vh}
 .inlv{margin-top:14px;padding:12px 14px;border:1px dashed var(--accent);border-radius:12px;background:var(--accent-soft)}
 .inlv-r{display:flex;gap:18px;flex-wrap:wrap;margin:6px 0;font-size:1.05rem}
 .strain{display:flex;flex-wrap:wrap;gap:8px}
@@ -353,7 +374,14 @@ a.rv-row:hover{border-color:var(--accent)}
 .tabs{display:flex;gap:6px;margin-top:16px;padding:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px;width:max-content;max-width:100%;overflow-x:auto}
 .tab{padding:8px 14px;border-radius:9px;color:var(--ink-2);text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}
 .tab[aria-current="page"]{background:var(--accent);color:var(--on-accent)}
-.view{margin-top:20px;display:flex;flex-direction:column;gap:16px}
+.view{margin-top:14px;display:flex;flex-direction:column;gap:16px}
+.main3{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}
+.main3 .tab{text-align:center;font-size:.98rem;padding:10px 8px}
+.subtabs{display:flex;gap:6px;margin-top:10px;overflow-x:auto;padding-bottom:2px}
+.subtabs[hidden]{display:none}
+.stab{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);text-decoration:none;font-weight:600;font-size:.86rem;white-space:nowrap}
+.stab[aria-current="page"]{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+@media (max-width:640px){body.in-lesson .track,body.in-lesson .top .stats,body.in-lesson .top .label{display:none}body.in-lesson .top h1{font-size:1.05rem;margin:0}body.in-lesson .subtabs{display:none}}
 .sec{padding:22px clamp(16px,3.5vw,32px);display:flex;flex-direction:column;gap:12px}
 .sec h2{margin:0;font-size:1.15rem}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
@@ -463,15 +491,12 @@ table.days tr.next td{background:var(--accent-soft)}
 
   <section class="track" aria-label="CEFR journey"><div class="ph"><span class="nm"><b>Road to C1</b> – <span id="cefr-now">current level: waiting for Day 1 assessment</span></span><div class="segs cefr" id="cefr"></div></div></section>
 
-  <nav class="tabs" aria-label="Sections">
-    <a href="#" class="tab" data-view="week">🗓<span class="tl"> This week</span></a>
-    <a href="#bai" class="tab" data-view="lessons">📚<span class="tl"> Lessons</span></a>
-    <a href="#level" class="tab" data-view="levels">🎯<span class="tl"> Levels</span></a>
-    <a href="#on-tap" class="tab" data-view="review">🧠<span class="tl"> Review</span></a>
-    <a href="#ho-so" class="tab" data-view="profile">👤<span class="tl"> Profile</span></a>
-    <a href="#tien-do" class="tab" data-view="progress">📈<span class="tl"> Progress</span></a>
-    <a href="#nghe" class="tab" data-view="listen">🎧<span class="tl"> Listen</span></a>
+  <nav class="tabs main3" aria-label="Sections">
+    <a href="#" class="tab" data-group="learn">📅<span class="tl3"> Learn</span></a>
+    <a href="#on-tap" class="tab" data-group="review">🧠<span class="tl3"> Review</span></a>
+    <a href="#level" class="tab" data-group="progress">📈<span class="tl3"> Progress</span></a>
   </nav>
+  <nav class="subtabs" id="subtabs" aria-label="Subsections"></nav>
 
   <section id="view-profile" class="view" hidden></section>
   <section id="view-progress" class="view" hidden></section>
@@ -650,7 +675,7 @@ table.days tr.next td{background:var(--accent-soft)}
   }
   // ---- Mục lục, thu gọn danh sách, chế độ tập trung
   const prefs = store.get("prefs") || {};
-  if (prefs.shelfOff) document.body.classList.add("shelf-off");
+  if (prefs.shelfOff ?? true) document.body.classList.add("shelf-off");  // mặc định thu gọn danh sách để bài rộng hơn
   if (prefs.focus) document.body.classList.add("focus");
   function setPref(k, on, cls){ prefs[k] = on; store.set("prefs", prefs); document.body.classList.toggle(cls, on); }
   let tocObs = null;
@@ -787,6 +812,37 @@ table.days tr.next td{background:var(--accent-soft)}
     const [ic, lab] = VERDICT[it.verdict] || ["💬","Note"];
     return `<div class="qfb v-${esc(it.verdict||"note")}"><span class="qfb-h">${ic} ${lab}</span><div class="md">${md(it.note_md||"")}</div></div>`;
   }
+  // Bài đọc/nghe dài + câu hỏi: máy tính → 2 cột (bài ghim bên trái, câu hỏi bên phải); điện thoại → nút "📖 Text" mở bảng trượt
+  const isSplit = p => (p.questions||[]).length >= 2 && !p.learn && !p.practice && ((p.md||"").length > 600 || (p.listen||[]).length);
+  function bindReading(){
+    let fab = $("#txt-fab"), sheet = $("#txt-sheet");
+    if (!fab){
+      fab = document.createElement("button"); fab.id = "txt-fab"; fab.type = "button"; fab.hidden = true; fab.innerHTML = "📖 Text"; document.body.appendChild(fab);
+      sheet = document.createElement("div"); sheet.id = "txt-sheet"; sheet.hidden = true;
+      sheet.innerHTML = `<div class="sh-h"><b id="sh-t"></b><button type="button" class="tbtn" id="sh-x">✕ Close</button></div><div class="sh-b md" id="sh-b"></div>`;
+      document.body.appendChild(sheet);
+      $("#sh-x").addEventListener("click", () => { sheet.hidden = true; document.body.classList.remove("sheet-open"); });
+      fab.addEventListener("click", () => {
+        const part = document.getElementById("part-" + fab.dataset.pi); if (!part) return;
+        $("#sh-t").textContent = part.querySelector("h3")?.textContent || "Text";
+        const md = part.querySelector(".src .md").cloneNode(true);
+        $("#sh-b").replaceChildren(md); sheet.hidden = false; document.body.classList.add("sheet-open"); $("#sh-b").scrollTop = 0;
+      });
+      let t = 0; window.addEventListener("scroll", () => { if (!t) t = requestAnimationFrame(() => { t = 0; updFab(); }); }, {passive:true});
+    }
+    updFab();
+  }
+  function updFab(){
+    const fab = $("#txt-fab"); if (!fab) return;
+    if (window.innerWidth >= 1100 || $("#view-lessons").hidden){ fab.hidden = true; return; }
+    const mid = window.innerHeight * 0.45; let show = null;
+    document.querySelectorAll(".split .src-read").forEach(src => {
+      const part = src.closest(".part"), r = part.getBoundingClientRect(), sr = src.getBoundingClientRect();
+      if (r.top < mid && r.bottom > mid && sr.bottom < 80) show = src.dataset.pi;
+    });
+    fab.hidden = show == null; if (show != null) fab.dataset.pi = show;
+  }
+
   function renderLesson(){
     const main = $("#main");
     const meta = lessons.find(x => x.id === current);
@@ -843,9 +899,9 @@ table.days tr.next td{background:var(--accent-soft)}
           <span class="step" aria-hidden="true">${pi+1}</span>
           ${p.kind?`<span class="kind">${esc(p.kind)}</span>`:""}
           <h3>${esc(p.title||"")}</h3>
-          <div>
-            <div class="md">${md(p.md)}</div>
-            ${Array.isArray(p.listen) && p.listen.length ? playerHtml(l.id, pi, p) : ""}
+          <div class="${isSplit(p) ? "split" : ""}">
+            <div class="src ${p.listen ? "src-listen" : "src-read"}" data-pi="${pi}"><div class="md">${md(p.md)}</div>
+            ${Array.isArray(p.listen) && p.listen.length ? playerHtml(l.id, pi, p) : ""}</div>
             ${(p.questions||[]).length ? `<div class="qs">${p.questions.map(q => `
               <div class="q" id="qb-${esc(q.id)}">
                 <label class="qt" for="q-${esc(q.id)}"><span class="qn">✍️ ${++qn}</span><span class="qx">${inline(q.q)}</span></label>
@@ -883,6 +939,7 @@ table.days tr.next td{background:var(--accent-soft)}
     if (!locked && actLesson?.id !== l.id) initActivity(l, (store.get("draft:"+l.id)||{}).log);
     bindPlayers(l);
     bindChecks(l);
+    bindReading();
     bindRecorders(l);
     $("#edit")?.addEventListener("click", () => { main.dataset.editing = "1"; renderLesson(); });
   }
@@ -914,6 +971,13 @@ table.days tr.next td{background:var(--accent-soft)}
   function playerHtml(id, pi, p){
     const key = id+"#"+pi, open = !!reveal[key], n = plays[key]||0;
     const lines = p.listen.map(x => `<p>${x.who?`<b>${esc(x.who)}:</b> `:""}${esc(x.text)}</p>`).join("");
+    if (p.audio) return `<div class="player compact" data-key="${esc(key)}" data-pi="${pi}">
+      <div class="pl-row"><audio class="pl-au" preload="none" src="${esc(p.audio)}" controls></audio>
+        <select class="pl-sel" aria-label="Speed">${[0.75,0.85,1,1.1].map(r=>`<option value="${r}" ${r==(p.rate||1)?"selected":""}>${r}×</option>`).join("")}</select></div>
+      <div class="pl-row2"><button class="linkbtn pl-tx" type="button">${open?"Hide transcript":"Show transcript"}</button><span class="note pl-n">Played ${n}×</span><button class="pl-play" type="button" hidden></button><button class="pl-stop" type="button" hidden></button></div>
+      <div class="note pl-msg" hidden></div>
+      <div class="md transcript" ${open?"":"hidden"}>${lines}</div>
+    </div>`;
     return `<div class="player" data-key="${esc(key)}" data-pi="${pi}">
       <div class="pl-row">
         <button class="primary pl-play" type="button">▶ Listen</button>
@@ -937,8 +1001,9 @@ table.days tr.next td{background:var(--accent-soft)}
         // File MP3 (Piper TTS) – phát được trên iPhone/app Claude điện thoại; có tua + chỉnh tốc độ
         const setRate = () => { au.playbackRate = Number(sel.value)||0.85; try { au.preservesPitch = true; } catch {} };
         sel.addEventListener("change", setRate);
-        au.addEventListener("play", () => { setRate(); actListen(box.dataset.pi, "play", au.playbackRate); play.hidden = true; stop.hidden = false; });
-        au.addEventListener("pause", () => { play.hidden = false; stop.hidden = true; });
+        const compact = box.classList.contains("compact");
+        au.addEventListener("play", () => { setRate(); actListen(box.dataset.pi, "play", au.playbackRate); if (!compact){ play.hidden = true; stop.hidden = false; } });
+        au.addEventListener("pause", () => { if (!compact){ play.hidden = false; stop.hidden = true; } });
         au.addEventListener("ended", () => { plays[key] = (plays[key]||0)+1; store.set("plays", plays); box.querySelector(".pl-n").textContent = `Played ${plays[key]}×`; });
         au.addEventListener("error", () => { msg.hidden = false; msg.textContent = "Couldn't load the audio file. Please reload the page."; });
         play.addEventListener("click", () => { setRate(); au.play().catch(() => {}); });
@@ -1546,7 +1611,18 @@ table.days tr.next td{background:var(--accent-soft)}
       <button type="button" class="linkbtn" id="fc-end">Stop</button></div>`;
   }
 
+  // 3 nhóm chính, mỗi nhóm có tab con (Tân 12/11: ít tab, gộp cái chung)
+  const GROUPS = {
+    learn: [["week","🗓 This week","#"],["lessons","📚 Lessons","#bai"],["listen","🎧 Listening library","#nghe"]],
+    review: [["review","🧠 Review & practise","#on-tap"]],
+    progress: [["levels","🎯 Levels","#level"],["progress","📊 Stats","#tien-do"],["profile","👤 Profile","#ho-so"]]};
+  const groupOf = v => Object.keys(GROUPS).find(g => GROUPS[g].some(x => x[0] === v)) || "learn";
   function showView(name){
+    const g = groupOf(name);
+    document.querySelectorAll(".main3 .tab").forEach(t => t.setAttribute("aria-current", t.dataset.group === g ? "page" : "false"));
+    const sub = $("#subtabs"); sub.hidden = GROUPS[g].length < 2;
+    sub.innerHTML = GROUPS[g].map(([v,t,h]) => `<a href="${h}" class="stab" aria-current="${v===name?"page":"false"}">${t}</a>`).join("");
+    document.body.classList.toggle("in-lesson", name === "lessons");
     $("#view-review").hidden = name!=="review";
     if (name==="review") renderReview();
     $("#view-levels").hidden = name!=="levels";
@@ -1556,7 +1632,6 @@ table.days tr.next td{background:var(--accent-soft)}
     $("#view-listen").hidden = name!=="listen";
     if (name==="listen") renderListen();
     $("#view-lessons").hidden = name!=="lessons"; $("#view-profile").hidden = name!=="profile"; $("#view-progress").hidden = name!=="progress";
-    document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-current", t.dataset.view===name ? "page" : "false"));
     if (name==="profile") renderProfile();
     if (name==="progress") renderProgress();
   }
