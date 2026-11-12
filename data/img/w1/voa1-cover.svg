@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCEBF7"/><stop offset="1" stop-color="#EEF3F8"/></linearGradient>
+<linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A8D8A0"/><stop offset="1" stop-color="#7DC28A"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#sky)"/>
+<circle cx="320" cy="48" r="26" fill="#FFE29A"/>
+<ellipse cx="90" cy="55" rx="34" ry="11" fill="#fff" opacity=".9"/><ellipse cx="112" cy="46" rx="22" ry="11" fill="#fff" opacity=".9"/>
+<ellipse cx="230" cy="80" rx="28" ry="9" fill="#fff" opacity=".8"/>
+<path d="M0 170 Q100 150 200 165 T384 158 V288 H0Z" fill="url(#gr)"/>
+<path d="M0 215 Q120 200 384 220 V288 H0Z" fill="#6DB87D" opacity=".6"/>
+<!-- grass blades -->
+<g stroke="#4E9E62" stroke-width="2" stroke-linecap="round" fill="none">
+<path d="M30 250 q2 -14 -2 -22"/><path d="M38 252 q4 -12 8 -18"/><path d="M60 256 q-2 -12 2 -20"/><path d="M80 250 q3 -14 0 -22"/><path d="M110 258 q-3 -10 1 -18"/>
+<path d="M140 262 q2 -14 -1 -22"/><path d="M170 258 q4 -12 8 -16"/><path d="M200 262 q-2 -12 2 -20"/><path d="M240 256 q3 -14 0 -22"/><path d="M270 262 q-3 -10 1 -18"/><path d="M300 258 q2 -14 -1 -22"/><path d="M340 254 q4 -12 8 -18"/>
+</g>
+<!-- flowers -->
+<g>
+<g stroke="#4E9E62" stroke-width="2"><path d="M40 222 V196"/><path d="M95 232 V204"/><path d="M270 210 V186"/><path d="M345 226 V198"/><path d="M215 222 V200"/></g>
+<g fill="#FF9AB3"><circle cx="40" cy="192" r="5"/><circle cx="34" cy="196" r="5"/><circle cx="46" cy="196" r="5"/><circle cx="37" cy="201" r="4"/><circle cx="43" cy="201" r="4"/></g><circle cx="40" cy="196" r="3.5" fill="#FFD54F"/>
+<g fill="#FFD54F"><circle cx="95" cy="200" r="5"/><circle cx="89" cy="204" r="5"/><circle cx="101" cy="204" r="5"/><circle cx="92" cy="209" r="4"/><circle cx="98" cy="209" r="4"/></g><circle cx="95" cy="204" r="3.5" fill="#F29C38"/>
+<g fill="#fff"><circle cx="270" cy="182" r="5"/><circle cx="264" cy="186" r="5"/><circle cx="276" cy="186" r="5"/><circle cx="267" cy="191" r="4"/><circle cx="273" cy="191" r="4"/></g><circle cx="270" cy="186" r="3.5" fill="#FFB74D"/>
+<g fill="#B39DDB"><circle cx="345" cy="194" r="5"/><circle cx="339" cy="198" r="5"/><circle cx="351" cy="198" r="5"/><circle cx="342" cy="203" r="4"/><circle cx="348" cy="203" r="4"/></g><circle cx="345" cy="198" r="3.5" fill="#FFD54F"/>
+<g fill="#FF9AB3"><circle cx="215" cy="197" r="4"/><circle cx="210" cy="200" r="4"/><circle cx="220" cy="200" r="4"/><circle cx="212" cy="204" r="3.5"/><circle cx="218" cy="204" r="3.5"/></g><circle cx="215" cy="200" r="3" fill="#FFD54F"/>
+</g>
+<!-- clock post -->
+<rect x="300" y="100" width="8" height="120" rx="3" fill="#8D6E63"/>
+<ellipse cx="304" cy="222" rx="18" ry="4" fill="#000" opacity=".1"/>
+<circle cx="304" cy="88" r="30" fill="#fff" stroke="#8D6E63" stroke-width="4"/>
+<g stroke="#455A64" stroke-width="2" stroke-linecap="round"><path d="M304 64v6M304 106v6M280 88h6M322 88h6"/></g>
+<path d="M304 88 V72" stroke="#263238" stroke-width="3" stroke-linecap="round"/><path d="M304 88 L316 94" stroke="#263238" stroke-width="3" stroke-linecap="round"/>
+<circle cx="304" cy="88" r="3" fill="#E57373"/>
+<!-- Nam -->
+<ellipse cx="150" cy="248" rx="80" ry="9" fill="#000" opacity=".12"/>
+<!-- crossed legs -->
+<path d="M96 236 Q110 214 150 220 L190 232 Q196 244 180 246 L110 248 Q92 248 96 236Z" fill="#1F3A5F"/>
+<path d="M130 230 Q160 218 205 236 Q210 246 196 246 L132 246Z" fill="#2A4A75"/>
+<ellipse cx="102" cy="244" rx="12" ry="6" fill="#fff" stroke="#9AA" stroke-width="1.5"/>
+<ellipse cx="196" cy="244" rx="12" ry="6" fill="#fff" stroke="#9AA" stroke-width="1.5"/>
+<!-- torso leaning forward -->
+<path d="M120 226 Q112 170 150 150 Q182 146 188 190 L184 232Z" fill="#7FB3D5"/>
+<path d="M150 150 Q168 154 176 168" stroke="#6AA0C4" stroke-width="2" fill="none"/>
+<!-- arm resting on knee, hand to chin -->
+<path d="M170 168 Q196 200 176 222" stroke="#7FB3D5" stroke-width="16" stroke-linecap="round" fill="none"/>
+<circle cx="176" cy="224" r="8" fill="#F1C7A5"/>
+<!-- head -->
+<ellipse cx="158" cy="124" rx="26" ry="28" fill="#F1C7A5"/>
+<path d="M132 120 Q130 92 160 92 Q188 94 184 120 Q172 106 150 108 Q138 110 132 120Z" fill="#1B1B1F"/>
+<!-- eyes drooping half-closed -->
+<path d="M158 124 q6 4 12 0" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M146 126 q4 2 8 0" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M160 116 l10 -2 M144 117 l9 2" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+<!-- yawn mouth -->
+<ellipse cx="170" cy="144" rx="6" ry="8" fill="#8B2E3C"/><ellipse cx="170" cy="148" rx="3.5" ry="3" fill="#E57373"/>
+<!-- hand at cheek -->
+<circle cx="140" cy="142" r="8" fill="#F1C7A5"/>
+<path d="M140 150 Q130 175 140 190" stroke="#7FB3D5" stroke-width="14" stroke-linecap="round" fill="none"/>
+<!-- looking down lines to grass -->
+<g stroke="#7A8B99" stroke-width="1.5" stroke-dasharray="3 4" fill="none"><path d="M175 130 Q215 160 225 205"/></g>
+<!-- magnified grass sprout -->
+<circle cx="236" cy="228" r="22" fill="#fff" opacity=".6" stroke="#6AA0C4" stroke-width="2"/>
+<g stroke="#3F8F55" stroke-width="3" stroke-linecap="round" fill="none"><path d="M228 244 q-2 -14 2 -24"/><path d="M236 244 q0 -16 -1 -28"/><path d="M244 244 q4 -12 0 -22"/></g>
+<!-- zzz-less yawn puffs -->
+<circle cx="190" cy="104" r="3" fill="#fff" opacity=".8"/><circle cx="198" cy="96" r="4" fill="#fff" opacity=".8"/>
+</svg>

@@ -216,6 +216,10 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
 .grade summary{cursor:pointer;font-weight:600}
 
 .pl-au{width:100%;height:40px}
+.item.has-thumb{grid-template-columns:72px minmax(0,1fr);align-items:center;gap:12px}
+.it-thumb{width:72px;height:54px;object-fit:cover;border-radius:8px;background:var(--sunk);display:grid;place-items:center;font-size:1.4rem}
+.it-body{display:grid;gap:4px;min-width:0}
+@media (max-width:640px){body.list-mode .item.has-thumb{grid-template-columns:96px minmax(0,1fr)}body.list-mode .it-thumb{width:96px;height:72px}}
 .ipa{font-family:"Charis SIL","Doulos SIL","Gentium Plus","Noto Sans","Segoe UI",system-ui,sans-serif;font-size:.86rem;color:var(--accent);letter-spacing:.01em}
 .wipa{padding:0 10px}
 .player.compact{gap:6px;padding:10px 12px;width:100%}
@@ -675,10 +679,13 @@ table.days tr.next td{background:var(--accent-soft)}
       const st = statusOf(l);
       const key = (planOf[l.id]?.ds) || ("w"+l.week);
       const head = key !== lastW ? (lastW = key, `<div class="wk-h">${planOf[l.id] ? `Week ${esc(l.week)} · ${esc(new Date(planOf[l.id].ds+"T12:00:00").toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"short"}))}` : `Week ${esc(l.week)}`}</div>`) : "";
-      return head + `<button class="item t-${esc(l.type)}" data-id="${esc(l.id)}" aria-current="${current===l.id}">
+      return head + `<button class="item has-thumb t-${esc(l.type)}" data-id="${esc(l.id)}" aria-current="${current===l.id}">
+        ${l.cover ? `<img class="it-thumb" src="${esc(l.cover)}" alt="" loading="lazy">` : `<span class="it-thumb it-ph">${esc(KIND_ICON[l.kind]||"📘")}</span>`}
+        <span class="it-body">
         <span class="row"><span class="kind">${esc(dayLabel(l))}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
         <span class="t">${esc(l.title || "Lesson")}</span>
         <span class="note">${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")}${l.minutes?` · ~${esc(l.minutes)} min`:""}${l.date&&st==="graded"?` · ${esc(fmtDate(l.date))}`:""}</span>
+        </span>
       </button>`;
     }).join("");
     el.querySelectorAll(".item").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.id; }));

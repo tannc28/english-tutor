@@ -128,7 +128,8 @@
    "difficulty": null,
    "minutesActual": null,
    "extraMinutes": null,
-   "note": ""
+   "note": "",
+   "cover": "data/img/w1/voa1-cover.svg"
   },
   {
    "id": "w1-voa-2",
@@ -147,7 +148,8 @@
    "difficulty": null,
    "minutesActual": null,
    "extraMinutes": null,
-   "note": ""
+   "note": "",
+   "cover": "data/img/w1/voa2-cover.svg"
   },
   {
    "id": "w1-voa-3",
@@ -166,7 +168,8 @@
    "difficulty": null,
    "minutesActual": null,
    "extraMinutes": null,
-   "note": ""
+   "note": "",
+   "cover": "data/img/w1/voa3-cover.svg"
   },
   {
    "id": "w1-voa-4",
@@ -185,7 +188,8 @@
    "difficulty": null,
    "minutesActual": null,
    "extraMinutes": null,
-   "note": ""
+   "note": "",
+   "cover": "data/img/w1/voa4-cover.svg"
   }
  ]
 }

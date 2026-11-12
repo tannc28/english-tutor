@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8F5EC"/><stop offset="1" stop-color="#F3FAF5"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<rect y="236" width="384" height="52" fill="#D3E6D8"/>
+<!-- whiteboard -->
+<rect x="150" y="26" width="214" height="136" rx="8" fill="#fff" stroke="#9AA7B4" stroke-width="3"/>
+<rect x="150" y="156" width="214" height="8" rx="3" fill="#B0BEC5"/>
+<!-- simple shapes on board: pizza fraction circle -->
+<circle cx="212" cy="92" r="34" fill="#FFF4E6" stroke="#F29C38" stroke-width="2.5"/>
+<path d="M212 92 L212 58 A34 34 0 0 1 246 92Z" fill="#F29C38" opacity=".55"/>
+<path d="M212 92 L212 58 M212 92 L246 92 M212 92 L212 126 M212 92 L178 92" stroke="#F29C38" stroke-width="2"/>
+<g fill="none" stroke="#7FB3D5" stroke-width="3" stroke-linecap="round"><path d="M278 60H340"/><path d="M278 84H322"/><path d="M278 108H336"/></g>
+<rect x="278" y="124" width="22" height="22" rx="4" fill="#E8F5EC" stroke="#43A047" stroke-width="2"/>
+<!-- teacher -->
+<ellipse cx="90" cy="250" rx="52" ry="7" fill="#000" opacity=".1"/>
+<path d="M76 166 L72 242 M104 166 L108 242" stroke="#455A64" stroke-width="16" stroke-linecap="round"/>
+<ellipse cx="70" cy="246" rx="12" ry="5" fill="#333"/><ellipse cx="110" cy="246" rx="12" ry="5" fill="#333"/>
+<path d="M62 106 Q58 150 66 176 L116 176 Q124 148 118 106Z" fill="#F28B82"/>
+<!-- pointing arm -->
+<path d="M114 118 L152 110" stroke="#F28B82" stroke-width="12" stroke-linecap="round"/><circle cx="158" cy="109" r="6.5" fill="#F1C7A5"/>
+<path d="M66 118 L52 150" stroke="#F28B82" stroke-width="12" stroke-linecap="round"/><circle cx="50" cy="154" r="6.5" fill="#F1C7A5"/>
+<rect x="82" y="92" width="16" height="16" rx="5" fill="#F1C7A5"/>
+<ellipse cx="90" cy="76" rx="22" ry="24" fill="#F1C7A5"/>
+<path d="M66 76 Q62 48 92 50 Q120 52 114 78 Q112 62 98 58 Q80 58 72 80 Q66 86 66 76Z" fill="#6D4C41"/>
+<path d="M66 80 Q60 104 74 106 Q70 92 74 82Z" fill="#6D4C41"/>
+<circle cx="82" cy="78" r="2.2" fill="#333"/><circle cx="100" cy="78" r="2.2" fill="#333"/>
+<path d="M82 90 q9 8 18 0" stroke="#8B2E3C" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<!-- pizza box with remaining slices (foreground table) -->
+<rect x="150" y="214" width="214" height="12" rx="3" fill="#A1795A"/>
+<rect x="160" y="226" width="8" height="30" fill="#8D6A4E"/><rect x="346" y="226" width="8" height="30" fill="#8D6A4E"/>
+<g transform="translate(196 176)">
+<path d="M0 34 L12 14 H108 L120 34Z" fill="#D7B58F" stroke="#B8946B" stroke-width="2"/>
+<rect x="0" y="34" width="120" height="6" rx="2" fill="#C9A276"/>
+<!-- remaining 5 slices as wedges in a row -->
+<g stroke="#C77D1E" stroke-width="1.5" stroke-linejoin="round">
+<path d="M14 36 L30 14 L46 36Z" fill="#FFC857"/><path d="M42 36 L58 14 L74 36Z" fill="#FFC857"/><path d="M70 36 L86 14 L102 36Z" fill="#FFC857"/>
+</g>
+<g fill="#E57373"><circle cx="30" cy="27" r="3"/><circle cx="58" cy="26" r="3"/><circle cx="86" cy="27" r="3"/></g>
+<g fill="#66BB6A"><circle cx="24" cy="31" r="1.8"/><circle cx="66" cy="31" r="1.8"/><circle cx="94" cy="31" r="1.8"/></g>
+</g>
+<!-- empty slots hint: dashed wedges on board pizza -->
+<!-- student -->
+<ellipse cx="318" cy="262" rx="42" ry="6" fill="#000" opacity=".1"/>
+<path d="M306 236 L306 258 M330 236 L330 258" stroke="#1F3A5F" stroke-width="14" stroke-linecap="round"/>
+<ellipse cx="304" cy="262" rx="11" ry="4.5" fill="#333"/><ellipse cx="332" cy="262" rx="11" ry="4.5" fill="#333"/>
+<path d="M298 190 Q294 228 300 242 L336 242 Q342 226 336 190Z" fill="#7FB3D5"/>
+<path d="M300 200 L290 226" stroke="#7FB3D5" stroke-width="10" stroke-linecap="round"/><circle cx="289" cy="229" r="5.5" fill="#F1C7A5"/>
+<rect x="310" y="178" width="14" height="14" rx="5" fill="#F1C7A5"/>
+<ellipse cx="317" cy="164" rx="19" ry="21" fill="#F1C7A5"/>
+<path d="M298 162 Q296 140 318 140 Q340 142 336 162 Q330 150 318 150 Q306 152 298 162Z" fill="#1B1B1F"/>
+<circle cx="311" cy="166" r="2" fill="#333"/><circle cx="326" cy="166" r="2" fill="#333"/>
+<path d="M311 175 q6 5 14 0" stroke="#8B2E3C" stroke-width="2" fill="none" stroke-linecap="round"/>
+<!-- nod marks -->
+<g stroke="#43A047" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M346 150 q8 4 8 14"/><path d="M352 142 q10 6 10 20"/></g>
+</svg>
