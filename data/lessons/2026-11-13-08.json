@@ -1,13 +1,12 @@
 {
- "intro_md": "🎧 **6 min.** Hear the second part. Listen + read, then without the words.",
+ "intro_md": "🎧 **6 min.** Hear the second part – ears first, then check with the words.",
  "parts": [
   {
    "kind": "🎧 Listen + read",
    "title": "A heavy box – audio",
    "rate": 1,
    "audio": "data/audio/2026-11-13-08/p0.mp3",
-   "transcript_open": true,
-   "md": "1. 👀👂 **Listen + read.**\n2. 👂 **Hide the transcript**, listen again. **Tap a line** to replay it.",
+   "md": "**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
    "listen": [
     {
      "who": "",

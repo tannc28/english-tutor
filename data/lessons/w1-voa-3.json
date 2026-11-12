@@ -1,5 +1,5 @@
 {
- "intro_md": "**🎧 Listening · 6.3 min audio · ~15 min.** Real English for learners from VOA Learning English – slower than normal (~106 words per minute), clear, one topic.\n\n**Input only:** learn the key expressions, then listen while reading several times. No quiz – just tell me how much you understood, and ask me anything.",
+ "intro_md": "**🎧 Listening · 6.3 min audio · ~15 min.** Real English for learners from VOA Learning English – slower than normal (~106 words per minute), clear, one topic.\n\n**Input only:** learn the key expressions, then listen first without the words, and check with the transcript after. No quiz – just tell me how much you understood, and ask me anything.",
  "parts": [
   {
    "kind": "① Before you listen",
@@ -11,7 +11,7 @@
   {
    "kind": "② Listen",
    "title": "VOA: 'Kicking Off' a New Year",
-   "md": "**4 rounds – don't stop the audio:**\n1. 👀👂 **Listen + read** (the transcript is open). Follow with your eyes.\n2. 👀👂 **Listen + read again** – notice the key expressions from part ①.\n3. 👂 **Hide the transcript** and just listen. Missed a word? Keep going.\n4. 🔁 **Tap any line** in the transcript to hear just that part again.",
+   "md": "**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
    "listen": [
     {
      "who": "",
@@ -140,8 +140,7 @@
     322.34,
     346.78,
     371.95
-   ],
-   "transcript_open": true
+   ]
   }
  ],
  "credit": "Audio and text: VOA Learning English (public domain)."

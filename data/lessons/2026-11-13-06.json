@@ -1,13 +1,12 @@
 {
- "intro_md": "🎧 **8 min.** Now **hear** what you just read. Same words → your ears learn the sound of words you already know.",
+ "intro_md": "🎧 **8 min.** Now **hear** what you just read – ears first, words after. Same words → your ears learn the sound of words you already know.",
  "parts": [
   {
    "kind": "🎧 Listen + read",
    "title": "Lunch with Tom – audio",
    "rate": 1,
    "audio": "data/audio/2026-11-13-06/p0.mp3",
-   "transcript_open": true,
-   "md": "1. 👀👂 **Listen + read** together.\n2. 👂 **Hide the transcript** and listen again. Missed something? **Tap that line** to hear it once more.\n3. 👂 **(Optional)** One more time, eyes closed – like a podcast.",
+   "md": "**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
    "listen": [
     {
      "who": "",

@@ -67,6 +67,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-12 | Chấm Ngày 2 tối: đọc 11/11, từ nối 8/8, đọc lần đầu 95–99%, ~100 từ/phút, 😌, khó 1/5, mất ~25' (không phải 60'). Nâng mức ĐỌC thoải mái B1 → B1+ (đọc 😌 + ≥90% liên tiếp). Tân muốn: đọc nhiều hơn có gia sư dẫn dắt, ít trả lời; vẫn cần tương tác → thêm ô '💬 Ask me' (tuỳ chọn, tiếng Việt OK) cuối mỗi phần input; gia sư trả lời khi chấm. Sửa lỗi web: ô feedback bị chép từ bài trước. |
 | 2026-11-12 | Chấm VOA-1: 4/4, nghe thật lần đầu ~60%, có lời ~95%, 🙂, dùng nghe-lại-từng-đoạn 5 lần. Tân nhắc lại mạnh: 'dạy nhiều vào, đừng học rồi làm quiz nhiều – vừa chán vừa thấy không được học nhiều'; ôn tập đã có ở Review. → Bỏ gần hết quiz (kể cả bài VOA: chỉ còn % hiểu + 💬 Ask me), tăng phần DẠY trong mỗi bài: giải thích âm nối/dạng yếu, cụm, cách câu nối ý, chú giải từng dòng. |
 | 2026-11-12 | Tân: chia mỗi ngày thành NHIỀU BÀI NHỎ 5–15' (mỗi bài 1 kỹ năng, nộp ngay để gia sư nắm tiến độ liên tục, không bài nào chờ bài nào), ngày nào cũng có cả đọc lẫn nghe, tổng 2–3 giờ; bài nghe 45' là dư – tối đa ~25'. Cơ sở: microlearning, 'small wins'/progress principle (Amabile), giảm ngưỡng bắt đầu, phản hồi ngay. Ngày 13/11: 14 bài nhỏ (6 đọc, 8 nghe, ~2 giờ). Bài nhỏ: feedback 1 chạm, chấm nhẹ, không Telegram từng bài – tóm tắt cả ngày vào sáng hôm sau. |
+| 2026-11-12 | Tân: bỏ mở sẵn transcript – mặc định ẨN để luyện tai ('tôi rất muốn được luyện tai'). Vòng nghe: không lời ×2 → mở lời đối chiếu + bấm dòng nghe lại → ẩn, nghe lần cuối. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
@@ -96,7 +97,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | T1 · B9 | – | 'Kicking Off' a New Year | open | – | – | – | – | – |  |
 | T1 · B10 | – | Ask a Teacher: Remaining, Remainder and Rest of | open | – | – | – | – | – |  |
 | T1 · B101 | – | Work chunks you will hear today | open | – | – | – | – | – |  |
-| T1 · B102 | – | Meeting the team (listen + read) | open | – | – | – | – | – |  |
+| T1 · B102 | – | Meeting the team | open | – | – | – | – | – |  |
 | T1 · B103 | – | How ideas connect: although · rather · in other words | open | – | – | – | – | – |  |
 | T1 · B104 | – | Fast re-read: The Café on the Corner | open | – | – | – | – | – |  |
 | T1 · B105 | – | Hope Street Ep. 3 (1/2): Lunch with Tom | open | – | – | – | – | – |  |

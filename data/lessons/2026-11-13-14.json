@@ -1,13 +1,12 @@
 {
- "intro_md": "🎧 **6 min.** Nam reads his message out loud (he's sending a voice message!). Listen + read, then just listen.",
+ "intro_md": "🎧 **6 min.** Nam reads his message out loud (he's sending a voice message!). Listen first, then check with the words.",
  "parts": [
   {
    "kind": "🎧 Listen + read",
    "title": "Voice message",
    "rate": 1,
    "audio": "data/audio/2026-11-13-14/p0.mp3",
-   "transcript_open": true,
-   "md": "1. 👀👂 **Listen + read.**\n2. 👂 **Hide the words** and listen once more – you already know every sentence.",
+   "md": "**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
    "listen": [
     {
      "who": "Nam",
