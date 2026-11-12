@@ -1,5 +1,5 @@
 {
- "_note": "Sinh tự động bởi tools/sync.py từ log bài nộp – giờ học thật (phút hoạt động).",
+ "_note": "Sinh tự động bởi tools/sync.py từ log bài nộp – giờ học thật (phút hoạt động), tốc độ đọc, dòng nghe lại nhiều.",
  "sessions": [
   {
    "start": "2026-11-11T16:45+07:00",
@@ -278,5 +278,7 @@
     }
    ]
   }
- }
+ },
+ "reads": [],
+ "hard_lines": []
 }

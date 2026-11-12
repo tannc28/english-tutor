@@ -734,6 +734,13 @@ body{font-size:14.5px}
 }
 @media (max-width:520px){.wk-mini{grid-template-columns:64px minmax(0,1fr)}.wk-thumb{width:64px;height:64px}.wk-why{-webkit-line-clamp:2}}
     .pace-in{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)} .pace-in input{width:64px;padding:4px 6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:15px;font-weight:600}
+.rt{position:sticky;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:4;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px;padding:8px 10px;border:1px dashed var(--line);border-radius:10px;background:var(--sunk)}
+.rt.on{border-style:solid;border-color:var(--accent);background:var(--surface);box-shadow:inset 0 0 0 999px var(--accent-soft),0 2px 8px rgba(0,0,0,.08)}
+@media (min-width:1100px){body:not(.focus) .rt{top:calc(env(safe-area-inset-top,0px) + 58px)}}
+.rt button{padding:5px 12px;font-size:.85rem}
+.rt-clock{font-size:1.05rem;font-weight:700;min-width:48px}
+.rt-log{display:flex;flex-wrap:wrap;gap:6px}
+.rt-chip{padding:2px 8px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.78rem}
   table.fcst td{vertical-align:top;font-size:13px;line-height:1.4} table.fcst td .note{font-size:12px;margin-top:2px} table.fcst th{white-space:nowrap;text-align:left;vertical-align:bottom}
 </style>
 <script>
@@ -1044,10 +1051,10 @@ body{font-size:14.5px}
     }
     actDirty = true;
   }
-  function actListen(pi, kind, rate){
+  function actListen(pi, kind, rate, segI){
     if (!act) return; actPoke();
     const r = act.listen[pi] = act.listen[pi] || {plays:0, rates:[]};
-    if (kind === "segment") r.segs = (r.segs||0) + 1;   // số lần nghe lại 1 đoạn
+    if (kind === "segment"){ r.segs = (r.segs||0) + 1; if (segI != null){ r.segIdx = r.segIdx || {}; r.segIdx[segI] = (r.segIdx[segI]||0) + 1; } }   // dòng nào nghe lại nhiều = chỗ tai còn khó
     if (kind === "play"){ r.plays++; r.rates.push(rate); if (r.rates.length > 10) r.rates.shift(); }
     if (kind === "reveal" && r.revealAt == null){
       r.revealAt = nowS();
@@ -1181,7 +1188,7 @@ body{font-size:14.5px}
           ${p.kind?`<span class="kind">${esc(p.kind)}</span>`:""}
           <h3>${esc(p.title||"")}</h3>
           <div class="${isSplit(p) ? "split" : ""}">
-            <div class="src ${p.listen ? "src-listen" : "src-read"}" data-pi="${pi}">${isSplit(p) ? `<div class="src-h"><span class="kind">${esc(p.kind||"")}</span> ${esc(p.title||"")}</div>` : ""}<div class="md">${md(p.md)}</div>
+            <div class="src ${p.listen ? "src-listen" : "src-read"}" data-pi="${pi}">${isSplit(p) ? `<div class="src-h"><span class="kind">${esc(p.kind||"")}</span> ${esc(p.title||"")}</div>` : ""}${isReadPart(p) ? readerHtml(pi) : ""}<div class="md">${md(p.md)}</div>
             ${Array.isArray(p.listen) && p.listen.length ? playerHtml(l.id, pi, p) : ""}</div>
             ${(p.questions||[]).length ? `<div class="qs">${p.questions.map(q => `
               <div class="q" id="qb-${esc(q.id)}">
@@ -1219,7 +1226,7 @@ body{font-size:14.5px}
       g.querySelector(".opt-clear")?.addEventListener("click", () => { g.querySelectorAll("input[type=radio]").forEach(r => r.checked = false); const note = g.querySelector(".other-note"); if (note){ note.value = ""; note.hidden = true; } g.dispatchEvent(new Event("input", {bubbles:true})); });
     });
     if (!locked && actLesson?.id !== l.id) initActivity(l, (store.get("draft:"+l.id)||{}).log);
-    bindPlayers(l);
+    bindPlayers(l); bindReaders(l);
     bindChecks(l);
     bindReading();
     $("#tg-parts")?.addEventListener("click", () => {
@@ -1284,6 +1291,39 @@ body{font-size:14.5px}
       <div class="md transcript" ${open?"":"hidden"}>${lines}</div>
     </div>`;
   }
+  // ⏱ Đồng hồ đọc (Tân 12/11): ▶ Start → ⏸ Pause → ✓ Finished; đọc lại = lượt 2, 3… → thời gian + tốc độ (từ/phút) mỗi lượt.
+  // Lơ đễnh trong lúc đọc VẪN tính (luyện đọc bền); chỉ rời trang/app (cuộc gọi…) mới tự dừng.
+  const isReadPart = p => !p.listen && /(^|\n)>\s/.test(p.md || "");
+  const passageWords = p => (String(p.md||"").split("\n").filter(x => /^>\s?/.test(x)).join(" ").replace(/[*_>#`|]|\*\*/g," ").match(/[A-Za-z0-9'’]+/g) || []).length;
+  const mmss = ms => { const t = Math.round(ms/1000); return Math.floor(t/60) + ":" + String(t%60).padStart(2,"0"); };
+  function readerHtml(pi){ return `<div class="rt" data-pi="${pi}"><button type="button" class="primary rt-go">▶ Start reading</button><button type="button" class="ghost rt-pause" hidden>⏸ Pause</button><button type="button" class="ghost rt-done" hidden>✓ Finished</button><span class="rt-clock mono" hidden>0:00</span><span class="note rt-log"></span></div>`; }
+  let rtTick = null;
+  function bindReaders(l){
+    clearInterval(rtTick);
+    const boxes = [...document.querySelectorAll(".rt")]; if (!boxes.length || !act) return;
+    act.read = act.read || {};
+    const st = pi => act.read[pi] = act.read[pi] || {words: passageWords(l.parts[pi]), reads:[]};
+    const elapsed = r => r.cur ? r.cur.acc + (r.cur.on ? Date.now() - r.cur.on : 0) : 0;
+    const paint = box => { const r = st(box.dataset.pi), c = r.cur, q = s => box.querySelector(s) || {};
+      q(".rt-go").hidden = !!(c && c.on); q(".rt-go").textContent = c ? "▶ Continue" : (r.reads.length ? `▶ Read again (${r.reads.length+1})` : "▶ Start reading");
+      q(".rt-pause").hidden = !(c && c.on); q(".rt-done").hidden = !c; q(".rt-clock").hidden = !c; q(".rt-clock").textContent = mmss(elapsed(r));
+      box.classList.toggle("on", !!(c && c.on));
+      q(".rt-log").innerHTML = r.reads.map((x,i) => `<span class="rt-chip">#${i+1} ${mmss(x.ms)} · <b>${x.wpm}</b> wpm</span>`).join(""); };
+    const stop = (r, why) => { if (r.cur && r.cur.on){ r.cur.acc += Date.now() - r.cur.on; r.cur.on = null; if (why) r.cur.auto = (r.cur.auto||0) + 1; actDirty = true; } };
+    boxes.forEach(box => { const r = st(box.dataset.pi); if (r.cur) stop(r);
+      if (document.querySelector('#part-fb input[name="fb-strain"]:disabled')){ box.querySelectorAll("button").forEach(b => b.remove()); if (!r.reads.length) box.hidden = true; paint(box); return; }
+      box.querySelector(".rt-go").addEventListener("click", () => { boxes.forEach(b => { const o = st(b.dataset.pi); if (o !== r){ stop(o); paint(b); } });
+        if (!r.cur) r.cur = {at: new Date().toISOString(), acc:0, pauses:0}; r.cur.on = Date.now(); actPoke(); actDirty = true; paint(box); });
+      box.querySelector(".rt-pause").addEventListener("click", () => { stop(r); r.cur.pauses++; actPoke(); paint(box); });
+      box.querySelector(".rt-done").addEventListener("click", () => { stop(r); const ms = r.cur.acc;
+        if (ms > 3000) r.reads.push({at:r.cur.at, ms, wpm: Math.round(r.words / (ms/60000)), pauses:r.cur.pauses, auto:r.cur.auto||0});
+        r.cur = null; actPoke(); actDirty = true; if (actLesson) saveLocal(actLesson); paint(box); });
+      paint(box); });
+    rtTick = setInterval(() => boxes.forEach(b => { const r = st(b.dataset.pi); if (r.cur && r.cur.on){ actPoke(); b.querySelector(".rt-clock").textContent = mmss(elapsed(r)); } }), 1000);
+    rtHide = () => boxes.forEach(b => { const r = act?.read?.[b.dataset.pi]; if (r){ stop(r, "hidden"); paint(b); } });
+  }
+  let rtHide = null;
+  document.addEventListener("visibilitychange", () => { if (document.hidden && rtHide) rtHide(); });
   function bindPlayers(l){
     document.querySelectorAll(".player").forEach(box => {
       const key = box.dataset.key, p = (l.parts||[])[Number(box.dataset.pi)];
@@ -1319,7 +1359,7 @@ body{font-size:14.5px}
             const t0 = Math.max(0, (mk[i] || 0) - 0.15); segEnd = mk[i+1] != null ? mk[i+1] : null;
             const go = () => { au.currentTime = t0; };
             if (au.readyState >= 1) go(); else { au.preload = "auto"; au.addEventListener("loadedmetadata", go, {once:true}); au.load?.(); }
-            actListen(box.dataset.pi, "segment", au.playbackRate); au.play().catch(() => {});
+            actListen(box.dataset.pi, "segment", au.playbackRate, i); au.play().catch(() => {});
           }));
         }
         return;
@@ -1555,6 +1595,9 @@ body{font-size:14.5px}
           <div class="tile"><span class="label">Studied</span><b>${studiedDays} day${studiedDays===1?"":"s"}</b><span class="sub">${totalH.toFixed(1)} h real study time</span></div>
           <div class="tile"><span class="label">Listening comprehension · recent</span><b>${pct(recent("listenPct"))}</b><span class="sub">all-time ${pct(avg("listenPct"))}</span></div>
           <div class="tile"><span class="label">Reading comprehension · recent</span><b>${pct(recent("readPct"))}</b><span class="sub">all-time ${pct(avg("readPct"))}</span></div>
+          ${(() => { const rs = (SL && SL.reads || []).filter(x => x.pass === 1 && x.wpm > 20 && x.wpm < 600); if (!rs.length) return `<div class="tile"><span class="label">Reading speed · first read</span><b>–</b><span class="sub">tap ⏱ Start reading in a lesson · B2 needs 180 wpm</span></div>`;
+            const last3 = rs.slice(-3), a = Math.round(last3.reduce((s,x)=>s+x.wpm,0)/last3.length);
+            return `<div class="tile"><span class="label">Reading speed · first read</span><b>${a} wpm</b><span class="sub">last ${last3.length} reads · B2 needs 180 · C1 220</span></div>`; })()}
         </div>
       </section>
       <section class="card sec">

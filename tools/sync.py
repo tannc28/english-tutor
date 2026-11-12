@@ -36,9 +36,19 @@ def build_studylog():
     import glob, datetime as dt
     tz = dt.timezone(dt.timedelta(hours=7))
     L = {l["id"]: l for l in json.load(open(D("lessons.json")))["lessons"]}
-    ses = []
+    ses, reads, hard = [], [], []
     for f in glob.glob(D("submissions", "*.json")):
         lid = os.path.basename(f)[:-5]; s = json.load(open(f)); lg = s.get("log") or {}
+        # ⏱ đồng hồ đọc: mỗi lượt đọc → thời gian + từ/phút (lượt 1 = đọc lần đầu, lượt 2+ = đọc lại)
+        for pi, r in (lg.get("read") or {}).items():
+            for n, x in enumerate(r.get("reads") or [], 1):
+                reads.append({"at": x.get("at"), "lesson": lid, "title": L.get(lid, {}).get("title", lid), "part": int(pi),
+                              "pass": n, "words": r.get("words"), "sec": round(x.get("ms", 0) / 1000), "wpm": x.get("wpm"),
+                              "pauses": x.get("pauses", 0), "left_page": x.get("auto", 0)})
+        # 🎧 dòng nghe lại nhiều nhất = chỗ tai còn khó
+        for pi, r in (lg.get("listen") or {}).items():
+            for i, c in sorted((r.get("segIdx") or {}).items(), key=lambda kv: -kv[1])[:5]:
+                hard.append({"lesson": lid, "part": int(pi), "line": int(i), "replays": c})
         ss = [x for x in lg.get("sessions", []) if "s" in x and "e" in x]
         if not ss or not lg.get("t0"): continue
         active = sum(v.get("ms", 0) for v in (lg.get("parts") or {}).values()) / 60000
@@ -65,7 +75,9 @@ def build_studylog():
     for b in blocks:
         d = b["start"][:10]; days.setdefault(d, {"min": 0, "blocks": []})
         days[d]["min"] = round(days[d]["min"] + b["min"], 1); days[d]["blocks"].append(b)
-    out = {"_note": "Sinh tự động bởi tools/sync.py từ log bài nộp – giờ học thật (phút hoạt động).", "sessions": ses, "days": days}
+    reads.sort(key=lambda x: x.get("at") or "")
+    out = {"_note": "Sinh tự động bởi tools/sync.py từ log bài nộp – giờ học thật (phút hoạt động), tốc độ đọc, dòng nghe lại nhiều.",
+           "sessions": ses, "days": days, "reads": reads, "hard_lines": hard}
     json.dump(out, open(D("studylog.json"), "w"), ensure_ascii=False, indent=1)
     return out
 
