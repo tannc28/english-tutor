@@ -98,6 +98,13 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 - Tân tự đánh giá từng item + kết quả word check → DB `drafts/selfcheck` (chỉ chủ sở hữu). **Khi chấm / job tuần:** đọc `drafts/selfcheck`, so với bằng chứng từ bài → cập nhật `mastery.json` (ghi evidence ngắn, tiếng Anh). Tân tự chấm cao hơn gia sư → thêm item đó vào bài tuần tới để kiểm chứng.
 - `weeks[].targets` = các item tuần đó đẩy lên; hiện ở trang tuần. Job tuần chọn targets từ các item 🌱/⬜ của level đang học.
 
+## Gia sư ↔ Tân (Tân chọn 12/11: đề xuất 6, 9, 10, 11, 12)
+- **🧑‍🏫 Lời nhắn hôm nay** (`weeks[].days[<date>].tutor_md`, tiếng Anh đơn giản, 1–2 câu): job sáng viết mỗi ngày từ số liệu hôm qua (dòng nghe lại nhiều, wpm, strain) – cụ thể, ấm áp, nói hôm nay để ý gì.
+- **✉️ Thư tuần** (`weeks[].letter_md`, tiếng Việt, ngắn): job Chủ nhật viết vào tuần MỚI: tuần qua thấy gì (số liệu thật) · đã/ sẽ đổi gì và vì sao · 1 đề xuất có cơ sở · 1 câu hỏi cho Tân. Gửi kèm Telegram 1 dòng.
+- **💌 Góp ý tuần 1 chạm** (hiện T6–CN): đến `inbox/weekfb-<tuần>` {vote, text} → đọc, xử lý, trả lời trong thư tuần sau, xoá doc.
+- **💬 Ask mọi lúc** (nút 💬 Ask trên thanh công cụ bài): đi kèm bài nộp ở `log.asks[]` → trả lời trong `grades/<id>.json` `asks_md` (check.py bắt buộc); bài đã nộp → `inbox/ask-<ts>` → trả lời qua Telegram/ thread, xoá doc.
+- **🎧 Nghe khi đi đường** (nút "Play today's audio"): phát liền audio của ngày, chạy khi khoá màn hình; log ở `drafts/otg-<date>` {sec, tracks} → job sáng chép về `data/listenlog/<date>.json` (sync.py cộng vào giờ học thật).
+
 ## Quy trình XIN NGHỈ (Tân bấm "🙋 Can't study…" ở một ngày)
 - Trang ghi `inbox/leave-<YYYY-MM-DD>` `{type:"leave", date, kind:"off|morning|evening|short", note}` + gửi comment "🙋 Day-off request …" (dự phòng: fire_trigger).
 - Gia sư: sửa `weeks[].days` – ngày đó `off: "<lý do ngắn, tiếng Anh>"` (nghỉ cả ngày) hoặc bớt bài/rút ngắn; **dời bài sang ngày nhẹ sau đó** (≤2 bài/ngày, cuối tuần có thể bỏ bài phụ); cập nhật lịch Google ngày đó → sync → push → publish → `ArtifactData delete inbox/leave-<date>` → trả lời 1 dòng + resolve thread → **Telegram**: lịch mới của những ngày bị ảnh hưởng.

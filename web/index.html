@@ -735,6 +735,16 @@ body{font-size:14.5px}
 @media (max-width:520px){.wk-mini{grid-template-columns:64px minmax(0,1fr)}.wk-thumb{width:64px;height:64px}.wk-why{-webkit-line-clamp:2}}
     .pace-in{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)} .pace-in input{width:64px;padding:4px 6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:15px;font-weight:600}
 .work ul{margin:4px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:.9rem}.work{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+.tnote{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;margin:6px 0 8px;border-radius:12px;background:var(--accent-soft);font-size:.92rem}.tnote .md p{margin:0}.tn-i{font-size:1.3rem;line-height:1}
+.otg-btn{display:block;width:100%;text-align:left;margin:4px 0 8px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font:inherit;font-weight:600;color:var(--ink)}
+#otg{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 84px);z-index:40;width:min(360px,calc(100vw - 32px));padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:var(--surface);box-shadow:0 8px 28px rgba(0,0,0,.18);display:flex;flex-direction:column;gap:6px}
+.otg-h{display:flex;justify-content:space-between;align-items:center}.otg-x{border:0;background:none;cursor:pointer;color:var(--ink-3);font-size:1rem}
+.otg-t{display:flex;flex-direction:column}.otg-t b{font-size:.92rem}.otg-c{display:flex;gap:8px;align-items:center}.otg-c button{min-width:40px}
+#ask-pop{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 84px);z-index:41;width:min(460px,calc(100vw - 32px));padding:12px;border-radius:14px;border:1px solid var(--line);background:var(--surface);box-shadow:0 8px 28px rgba(0,0,0,.18);display:flex;flex-direction:column;gap:8px}
+#ask-pop textarea{width:100%;box-sizing:border-box;font:inherit;padding:8px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}.ask-r{display:flex;gap:8px;align-items:center}.ask-prev{margin:0;padding-left:18px;font-size:.85rem;color:var(--ink-2)}
+.letter summary{display:flex;gap:8px;align-items:center;cursor:pointer;list-style:none}.letter .md{margin-top:6px}
+.wfb-r{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.wfb-b{font-size:1.2rem;padding:4px 10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer}.wfb-b.on{border-color:var(--accent);background:var(--accent-soft)}.wfb-t{flex:1;min-width:180px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.asks-r{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
   table.fcst td{vertical-align:top;font-size:13px;line-height:1.4} table.fcst td .note{font-size:12px;margin-top:2px} table.fcst th{white-space:nowrap;text-align:left;vertical-align:bottom}
 </style>
 <script>
@@ -1146,7 +1156,7 @@ body{font-size:14.5px}
         <a class="tbtn tb-back" href="${esc(backTo)}" title="Back" aria-label="Back">←</a>
         <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Show/hide lesson list">☰<span class="bl"> Lessons</span></button>
         <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Hide everything except the lesson">🎯<span class="bl"> Focus</span></button>
-        <button class="tbtn tb-parts" id="tg-parts" type="button" title="Jump to a part">Parts</button>
+        <button class="tbtn tb-parts" id="tg-parts" type="button" title="Jump to a part">Parts</button><button class="tbtn" id="tg-ask" type="button" title="Ask your tutor anything – any time">💬<span class="bl"> Ask</span></button>
         <div class="grow" id="tb-prog" tabindex="0" title="Parts of this lesson – hover or tap to jump"><span class="ttl">${esc(l.title||"")}</span>${nQ && !grade ? `<div class="bar" style="flex:1;min-width:80px"><i id="pbar2" style="width:0%"></i></div><span class="note mono" id="plab2">0/${nQ}</span>` : `<div class="bar" style="flex:1;min-width:80px"><i style="width:${grade?100:0}%"></i></div>`}<span class="tb-caret" aria-hidden="true">▴</span>
           <div class="toc-pop"><nav class="toc" aria-label="Lesson contents"><span class="label lbl">Parts – tap to jump</span>${tocItems}</nav></div></div>
         ${grade ? `<span class="save-st" data-k="ok">✅ Graded · see results at the top</span>`
@@ -1175,6 +1185,7 @@ body{font-size:14.5px}
           <div class="md">${md(grade.summary_md)}</div>
           ${grade.answers_md?`<details><summary>Answers & corrections</summary><div class="md">${md(grade.answers_md)}</div></details>`:""}
           ${grade.next_md?`<div class="md">${md(grade.next_md)}</div>`:""}
+          ${grade.asks_md?`<div class="md asks-r"><b>💬 Your questions</b>${md(grade.asks_md)}</div>`:""}
           ${workHtml(l, sub)}
         </section>` : (sub ? `<section class="card grade" aria-label="Your study record"><span class="label">Submitted · waiting for your tutor</span>${workHtml(l, sub)}</section>` : "")}
       ${(l.parts||[]).map((p,pi) => `
@@ -1737,6 +1748,97 @@ body{font-size:14.5px}
       <span class="td-main"><b>${esc(l.title||"")}</b><span class="note">${l.extra ? "🎧 VOA listening" : `Lesson ${esc(l.order)} · ${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")}`} · ~${esc(l.minutes||"?")} min${tag && !/VOA/.test(tag)?` · <span class="td-tag">${esc(tag)}</span>`:""}</span></span>
       <span class="td-go">${DONE(st)?"✅":"Start ▶"}</span></a>`;
   }
+
+  // ===== (12) Góp ý tuần 1 chạm + (11) đánh dấu đã đọc thư (Tân 12/11) =====
+  function weekFb(w){
+    const k = "weekFb:" + w.no, sent = store.get(k);
+    if (sent) return `<section class="card sec wfb"><span class="note">💌 Thanks – your feedback for week ${esc(w.no)} (${esc(sent.v)}) reached your tutor.</span></section>`;
+    return `<section class="card sec wfb" data-w="${esc(w.no)}"><span class="label">How is this week going for you?</span>
+      <div class="wfb-r">${[["👍","good"],["😐","ok"],["👎","not good"]].map(([e,v]) => `<button type="button" class="wfb-b" data-v="${e} ${v}">${e}</button>`).join("")}
+      <input type="text" class="wfb-t" placeholder="One line if you like (Vietnamese OK) – what should I change?"><button type="button" class="primary sm wfb-s">Send</button><span class="note wfb-st"></span></div></section>`;
+  }
+  async function sendInbox(id, doc, text, anchor){
+    let ok = false;
+    try { if (db){ await db.doc("inbox/" + id).set({...doc, at:new Date().toISOString()}); ok = true; } } catch {}
+    try { const c = await claude.use("comments"); if (c && await c.canSendToClaude() === "available"){ await c.sendToClaude({anchor: await c.anchorFor(anchor), text}); ok = true; } } catch {}
+    return ok;
+  }
+  document.addEventListener("click", async ev => {
+    const b = ev.target.closest?.(".wfb-b"); if (b){ b.parentElement.querySelectorAll(".wfb-b").forEach(x => x.classList.toggle("on", x === b)); return; }
+    const s = ev.target.closest?.(".wfb-s"); if (s){ const box = s.closest(".wfb"), v = box.querySelector(".wfb-b.on")?.dataset.v, t = box.querySelector(".wfb-t").value.trim(), st = box.querySelector(".wfb-st");
+      if (!v && !t){ st.textContent = "Tap 👍 / 😐 / 👎 first"; return; }
+      s.disabled = true; st.textContent = "Sending…";
+      const ok = await sendInbox("weekfb-" + box.dataset.w, {type:"weekfb", week:+box.dataset.w, vote:v||"", text:t}, `💌 Week ${box.dataset.w} feedback: ${v||""} ${t}`, box);
+      if (ok){ store.set("weekFb:" + box.dataset.w, {v: v || t.slice(0,20), at:Date.now()}); st.textContent = "✅ Sent – thank you!"; } else { s.disabled = false; st.textContent = "Couldn't send – try again later."; }
+      return; }
+    const o = ev.target.closest?.(".otg-btn"); if (o){ otgStart(o.dataset.ds); return; }
+  });
+  document.addEventListener("toggle", ev => { const d = ev.target; if (d.classList?.contains("letter") && !d.open){ store.set("letterRead:" + d.id.replace("letter-",""), Date.now()); d.querySelector(".pill")?.remove(); } }, true);
+
+  // ===== (6) 🎧 Nghe khi đi đường: phát liền mọi audio của ngày, chạy cả khi khoá màn hình (Tân 12/11) =====
+  let otg = null;
+  async function otgStart(ds){
+    const w = weeks.find(x => x.days && x.days[ds]); const d = w?.days?.[ds] || {};
+    const ids = [...(d.lessons || []), ...(d.extra ? [d.extra] : [])];
+    const tracks = [];
+    for (const id of ids){ const meta = lessons.find(l => l.id === id); if (!meta) continue;
+      let body = meta.parts ? meta : bodies[id]; if (!body || body.loading){ try { body = bodies[id] = await getJSON("data/lessons/" + encodeURIComponent(id) + ".json"); } catch { continue; } }
+      (body.parts || []).forEach((p, pi) => { if (p.listen && p.audio) tracks.push({src:p.audio, lid:id, pi, title:meta.title || p.title || id, part:p.title || ""}); }); }
+    if (!tracks.length){ alert("No audio for this day yet."); return; }
+    otgOpen(ds, tracks);
+  }
+  function otgOpen(ds, tracks){
+    let el = document.getElementById("otg");
+    if (!el){ el = document.createElement("div"); el.id = "otg"; document.body.appendChild(el); }
+    el.innerHTML = `<div class="otg-h"><span class="label">🎧 On the go · ${esc(fmtDate(ds))}</span><button type="button" class="otg-x" title="Close">✕</button></div>
+      <div class="otg-t"><b class="otg-ti"></b><span class="note otg-n"></span></div>
+      <div class="otg-c"><button type="button" class="ghost sm otg-prev" title="Previous">⏮</button><button type="button" class="primary sm otg-pp">▶</button><button type="button" class="ghost sm otg-next" title="Next">⏭</button>
+      <select class="pl-sel otg-rate">${[0.85,1,1.1].map(r => `<option value="${r}" ${r===1?"selected":""}>${r}×</option>`).join("")}</select></div>
+      <audio class="otg-au" preload="auto"></audio>`;
+    const au = el.querySelector(".otg-au"), pp = el.querySelector(".otg-pp");
+    const logK = "otg:" + ds, lg = store.get(logK) || {date:ds, sec:0, tracks:{}};
+    otg = {ds, tracks, i:0, au};
+    const load = (i, play) => { otg.i = (i + tracks.length) % tracks.length; const t = tracks[otg.i]; au.src = t.src; au.playbackRate = +el.querySelector(".otg-rate").value;
+      el.querySelector(".otg-ti").textContent = t.title; el.querySelector(".otg-n").textContent = `${otg.i+1}/${tracks.length}${t.part ? " · " + t.part : ""}`;
+      if ("mediaSession" in navigator) try { navigator.mediaSession.metadata = new MediaMetadata({title:t.title, artist:"Tân's English Class", album:"On the go · " + ds}); } catch {}
+      if (play) au.play().catch(() => {}); };
+    let lastT = null;
+    au.addEventListener("timeupdate", () => { const now = au.currentTime; if (lastT != null && now > lastT && now - lastT < 2){ const d = (now - lastT) / au.playbackRate; lg.sec += d; const k = tracks[otg.i].lid + "#" + tracks[otg.i].pi; lg.tracks[k] = Math.round(((lg.tracks[k] || 0) + d) * 10) / 10; } lastT = now; });
+    const save = () => { lg.sec = Math.round(lg.sec); store.set(logK, lg); if (db) db.doc("drafts/otg-" + ds).set({...lg, savedAt:new Date().toISOString()}).catch(() => {}); };
+    let saveT = setInterval(save, 30000);
+    au.addEventListener("play", () => { pp.textContent = "⏸"; lastT = au.currentTime; });
+    au.addEventListener("pause", () => { pp.textContent = "▶"; save(); });
+    au.addEventListener("ended", () => { save(); if (otg.i < tracks.length - 1) load(otg.i + 1, true); });
+    pp.addEventListener("click", () => au.paused ? au.play().catch(() => {}) : au.pause());
+    el.querySelector(".otg-prev").addEventListener("click", () => load(otg.i - 1, true));
+    el.querySelector(".otg-next").addEventListener("click", () => load(otg.i + 1, true));
+    el.querySelector(".otg-rate").addEventListener("change", e => { au.playbackRate = +e.target.value; });
+    el.querySelector(".otg-x").addEventListener("click", () => { au.pause(); save(); clearInterval(saveT); el.remove(); otg = null; });
+    if ("mediaSession" in navigator) try { navigator.mediaSession.setActionHandler("nexttrack", () => load(otg.i + 1, true)); navigator.mediaSession.setActionHandler("previoustrack", () => load(otg.i - 1, true));
+      navigator.mediaSession.setActionHandler("play", () => au.play()); navigator.mediaSession.setActionHandler("pause", () => au.pause()); } catch {}
+    load(0, true);
+  }
+
+  // ===== (10) 💬 Hỏi thầy bất cứ lúc nào trong bài (Tân 12/11) – đi kèm bài nộp; bài đã nộp → gửi thẳng hộp thư =====
+  document.addEventListener("click", ev => {
+    if (!ev.target.closest?.("#tg-ask")) return;
+    let pop = document.getElementById("ask-pop");
+    if (pop){ pop.remove(); return; }
+    const on = document.querySelector(".toc a.on")?.id?.replace("toc-","");
+    pop = document.createElement("div"); pop.id = "ask-pop";
+    const prev = (act?.asks || []).map(a => `<li>${esc(a.text)}</li>`).join("");
+    pop.innerHTML = `<span class="label">💬 Ask your tutor – any time, Vietnamese OK</span>${prev ? `<ul class="ask-prev">${prev}</ul>` : ""}
+      <textarea rows="3" placeholder="A word, a sentence, a sound you couldn't hear… I answer when I grade."></textarea>
+      <div class="ask-r"><button type="button" class="primary sm ask-s">Send</button><button type="button" class="ghost sm ask-c">Close</button><span class="note ask-st"></span></div>`;
+    document.body.appendChild(pop); pop.querySelector("textarea").focus();
+    pop.querySelector(".ask-c").onclick = () => pop.remove();
+    pop.querySelector(".ask-s").onclick = async () => { const t = pop.querySelector("textarea").value.trim(), st = pop.querySelector(".ask-st"); if (!t) return;
+      const lid = actLesson?.id, item = {at:new Date().toISOString(), part: on != null ? on : null, text:t};
+      if (act){ act.asks = act.asks || []; act.asks.push(item); actDirty = true; if (actLesson) saveLocal(actLesson); }
+      if (lid && subs[lid]) await sendInbox("ask-" + Date.now(), {type:"ask", lesson:lid, ...item}, `💬 Question (${lid}): ${t}`, document.querySelector("#tg-ask"));
+      st.textContent = lid && subs[lid] ? "✅ Sent to your tutor" : "✅ Saved – it goes with this lesson when you submit";
+      pop.querySelector("textarea").value = ""; setTimeout(() => pop.remove(), 1400); };
+  });
   let daySel = null;
   // Ngày gồm nhiều bài nhỏ (5–15 phút, mỗi bài 1 kỹ năng, nộp ngay) – Tân 12/11
   // Ngày gồm nhiều bài nhỏ (5–15 phút, mỗi bài 1 kỹ năng, nộp ngay) – nhóm theo KỸ NĂNG bằng tab (Tân 12/11)
@@ -1774,6 +1876,8 @@ body{font-size:14.5px}
     const off = d.off ? `<p class="td-free">🙋 Day off – ${esc(d.off)}. Your tutor moved this day's lessons. Rest well!</p>` : "";
     return `<section class="card today ${isToday?"":"other"}">
       <div class="td-h"><span class="label">${isToday?"📍 Today":"🗓"} · ${esc(title)}</span>${d.note&&!d.off?`<span class="note">${esc(d.note)}</span>`:""}</div>
+      ${d.tutor_md && !d.off ? `<div class="tnote"><span class="tn-i" aria-hidden="true">🧑‍🏫</span><div class="md">${md(d.tutor_md)}</div></div>` : ""}
+      ${!d.off && (own.some(l => l.kind === "Listening") || ext) ? `<button type="button" class="otg-btn" data-ds="${esc(ds)}">🎧 Play ${isToday?"today's":"this day's"} audio <span class="note">– all listening in one player, keeps playing with the screen locked</span></button>` : ""}
       ${!off && micro ? microDay(own, isToday ? P.carry : [], tm, we) : off || (list.length ? `<div class="td-list">${list.map((l,i) => lessonRow(l, DONE(statusOf(l)) ? "" : timeFor(l,i), isToday && P.carry.includes(l) ? "missed on "+fmtDate(P.plannedDay[l.id]) : (ds < P.t && !DONE(statusOf(l)) ? "missed – it's in Today" : ""))).join("")}</div>`
         : `<p class="td-free">${isToday && own.length ? "🎉 Today's lessons are done. Great work!" : "No lesson planned – rest day."}</p>`)}
       ${ext && !d.off ? lessonRow(ext, DONE(statusOf(ext)) ? "" : tm.listen, "🎧 VOA listening") : ""}
@@ -1834,6 +1938,8 @@ body{font-size:14.5px}
           ${w.review_md?`<div class="md wk-review"><b>Week review:</b> ${md(w.review_md)}</div>`:""}
         </div>
       </section>
+      ${w.letter_md ? `<details class="card sec letter" id="letter-${esc(w.no)}" ${store.get("letterRead:"+w.no)?"":"open"}><summary><span class="label">✉️ Letter from your tutor · week ${esc(w.no)}</span>${store.get("letterRead:"+w.no)?"":`<span class="pill">new</span>`}</summary><div class="md">${md(w.letter_md)}</div></details>` : ""}
+      ${cur && [5,6,0].includes(new Date().getDay()) ? weekFb(w) : ""}
       <div class="dash">
         <div class="dash-main">
           ${w.days && (daySel || cur) ? dayPanel(w, daySel && daySel >= w.start && daySel <= w.end ? daySel : todayStr()) : (next ? `<section class="card sec"><a class="primary wk-next" href="#${esc(next.id)}">▶ Continue: ${esc(next.title)}</a></section>` : "")}

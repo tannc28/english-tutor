@@ -75,6 +75,13 @@ def build_studylog():
     for b in blocks:
         d = b["start"][:10]; days.setdefault(d, {"min": 0, "blocks": []})
         days[d]["min"] = round(days[d]["min"] + b["min"], 1); days[d]["blocks"].append(b)
+    # 🎧 nghe khi đi đường (web: drafts/otg-<date> → job chép về data/listenlog/<date>.json) = giờ input thật
+    for f in glob.glob(D("listenlog", "*.json")):
+        x = json.load(open(f)); m = round((x.get("sec") or 0) / 60, 1); d = x.get("date") or os.path.basename(f)[:-5]
+        if m < 0.5: continue
+        days.setdefault(d, {"min": 0, "blocks": []})
+        days[d]["min"] = round(days[d]["min"] + m, 1)
+        days[d]["blocks"].append({"start": (x.get("savedAt") or d + "T00:00")[:16], "end": (x.get("savedAt") or d + "T00:00")[:16], "min": m, "lessons": ["🎧 On the go"]})
     reads.sort(key=lambda x: x.get("at") or "")
     out = {"_note": "Sinh tự động bởi tools/sync.py từ log bài nộp – giờ học thật (phút hoạt động), tốc độ đọc, dòng nghe lại nhiều.",
            "sessions": ses, "days": days, "reads": reads, "hard_lines": hard}

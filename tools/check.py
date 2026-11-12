@@ -53,6 +53,8 @@ def main():
             txt = json.dumps(g, ensure_ascii=False)
             if 'wpm' not in txt:
                 warn.append(f'grades/{gid}: có số đo đọc (log.read) nhưng nhận xét chưa nêu – Tân 12/11: nói rõ đọc bao lâu, mấy lượt, tốc độ wpm so với mốc')
+        if (sub.get('log') or {}).get('asks') and not g.get('asks_md'):
+            err.append(f'grades/{gid}: Tân hỏi qua nút 💬 Ask ({len(sub["log"]["asks"])} câu) nhưng grade chưa có asks_md trả lời')
         if not (L.get(gid, {}).get('micro')) and not g.get('tg'):
             warn.append(f'grades/{gid}: thiếu tg (tin Telegram)')
     if last and p_upd and last[1] > p_upd:
