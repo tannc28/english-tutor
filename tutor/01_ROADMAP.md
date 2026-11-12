@@ -1,5 +1,7 @@
 # ROADMAP (v4) – Định hướng mềm, thích ứng theo từng bài
 
+> **12/11: Đơn vị kế hoạch là TUẦN** (chủ đề + ~6 bài, `data/weeks.json`). Vòng lặp thích ứng chạy ở 2 nhịp: sau mỗi bài (chỉnh bài chưa làm trong tuần) và cuối tuần (chọn chủ đề + mức cho tuần tới). Mức soạn bài = `profile.input_level` (mức thoải mái), không phải mức làm bài kiểm tra.
+
 > Đây là **la bàn, không phải lịch trình.** Bài mỗi ngày được quyết định bởi **hồ sơ năng lực** (Learner model) trong `data/profile.json` (xem đẹp ở tab Hồ sơ trên web), tức là kết quả chấm gần nhất, feedback và sở thích của Tân. Không theo bảng tuần cố định.
 
 ## Đích đến

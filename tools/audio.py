@@ -4,7 +4,7 @@
 Vì sao: giọng đọc `tts` của trang không chạy trên app Claude điện thoại. File MP3 thì phát được ở mọi nơi
 (iPhone, Chrome, app), có chỉnh tốc độ và tua.
 
-Dùng:  python3 tools/audio.py <lesson-id> [...]   (hoặc --all)
+Dùng:  python3 tools/audio.py <lesson-id> [...]   (hoặc --all; --words <số tuần> = audio cho word wall)
 → data/audio/<id>/p<số phần>.mp3 và ghi part["audio"] = đường dẫn đó vào data/lessons/<id>.json.
 Giọng (thư mục PIPER_DIR, mặc định /root/piper; tải ở tools/audio_setup.sh):
   rounded → en_GB-alan (nam, Anh) · glassy → en_GB-alba (nữ, Anh) · buttery/airy → en_US-lessac (Mỹ)
@@ -46,7 +46,22 @@ def render(lid):
         print(f"{lid} part {pi+1}: {p['audio']} ({os.path.getsize(mp3)//1024} KB)")
     json.dump(L, open(path, "w"), ensure_ascii=False, indent=1)
 
+def render_words(no):
+    W = json.load(open(os.path.join(ROOT, "data", "weeks.json")))
+    w = [x for x in W["weeks"] if x["no"] == no][0]
+    for x in w.get("words", []):
+        if not x.get("audio"): continue
+        out = os.path.join(ROOT, x["audio"]); os.makedirs(os.path.dirname(out), exist_ok=True)
+        sr, a = pcm(x["w"].replace("sb", "somebody").replace("+ V-ing", ""), VOICE["glassy"])
+        _, b = pcm(x.get("ex", ""), VOICE["rounded"]) if x.get("ex") else (sr, b"")
+        wav = out[:-4] + ".wav"
+        with wave.open(wav, "wb") as f:
+            f.setnchannels(1); f.setsampwidth(2); f.setframerate(sr); f.writeframes(a + b"\0\0" * int(sr * 0.6) + b)
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav, "-ac", "1", "-b:a", "48k", out], check=True); os.remove(wav)
+    print(f"week {no}: {len(w.get('words', []))} word audios")
+
 if __name__ == "__main__":
     ids = sys.argv[1:]
+    if ids[:1] == ["--words"]: render_words(int(ids[1])); sys.exit()
     if ids == ["--all"]: ids = [f[:-5] for f in sorted(os.listdir(os.path.join(ROOT, "data", "lessons"))) if f.endswith(".json")]
     for i in ids: render(i)

@@ -1,11 +1,11 @@
 # PROGRESS LOG – Tân
 
-> ⚠️ **File này được SINH TỰ ĐỘNG** từ `data/profile.json` + `data/days.json` bằng `python3 tools/sync.py`. Đừng sửa tay, hãy sửa file JSON.
+> ⚠️ **File này được SINH TỰ ĐỘNG** từ `data/profile.json` + `data/weeks.json` + `data/lessons.json` bằng `python3 tools/sync.py`. Đừng sửa tay, hãy sửa file JSON.
 
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: Chỉ INPUT (nghe + đọc). Output/phát âm chỉ khi Tân muốn.
-- Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/3 ngày
+- Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/6 bài
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
 - Cập nhật hồ sơ: 2026-11-11T21:45:00+07:00
 
@@ -13,8 +13,8 @@
 | Kỹ năng | CEFR ước lượng | Ghi chú |
 |---|---|---|
 | Tổng thể | B1+ | Đánh giá đầu vào 11/11: đọc kéo lên, nghe kéo xuống |
-| Nghe | B1 | Bài A2–B1 hiểu đủ nhưng cần ~9 lần nghe; B2 nghe ~40–50% (đọc lời 90–95%) → giải mã âm |
-| Đọc | B2 | B1 85–90%; B1+/B2 hiểu đúng nhưng chậm; C1 ~65%, lỡ ý chuyển hướng |
+| Nghe | A2+ (comfortable) · B1 (with effort) | Bài A2–B1 hiểu đủ nhưng cần ~9 lần nghe; B2 nghe ~40–50% (đọc lời 90–95%) → giải mã âm |
+| Đọc | B1 (comfortable) · B2 (with effort, slow) | B1 85–90%; B1+/B2 hiểu đúng nhưng chậm; C1 ~65%, lỡ ý chuyển hướng |
 | Từ vựng | B1+ | ~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt |
 | Ngữ pháp & từ nối | B1+ | 9/12; đúng cả đảo ngữ C1, trượt cụm B1 (be used to/suggest + V-ing) và although/unless |
 
@@ -22,6 +22,7 @@
 **Sở thích:** AI & công nghệ (thích nhất, tin AI); Tâm lý; Ẩm thực; Khoa học; Thể thao
 
 **Cần cải thiện & kế hoạch:**
+- [Nghe (mức thoải mái)] **Nghe B1 vẫn phải căng não – mức thoải mái thật ~A2+** – dấu hiệu: Tân tự nhận 12/11: Ngày 1 làm được nhưng phải tập trung cao → Input nghe ở A2+/B1- , 1×, lặp 3 vòng; chỉ nâng khi feedback 'relaxed' + ≥90% hiểu 2–3 bài liền
 - [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's' → Nghe dễ (A2+/B1, 0.85×) theo 3 bước: nghe → nghe + đọc lời → nghe lại không lời; chính tả từng phần tập trung dạng yếu/nối âm
 - [Đọc] **Xử lý câu dài còn chậm (hiểu được nhưng tốn nhiều thời gian)** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Nhiều đọc rộng B1+ dễ hơn để tăng tốc; đọc kỹ chỉ 1 đoạn/ngày
 - [Từ nối & cụm] **Từ nối tương phản/nhượng bộ và cụm động từ cố định** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
@@ -59,13 +60,25 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-11 | Tân không xem phim/series → input nghe chỉ YouTube + podcast; buổi tối cuối tuần đổi thành YouTube/podcast. Thêm tab 📅 Plan (List/Calendar) với bài nghe gia sư chọn mỗi ngày (data/plan.json) + nút Apple Podcasts cho iPhone. |
 | 2026-11-12 | Ngày 2: nghe chậm 0.85× theo 3 bước (hội thoại Hope Street + bài nói 'first-night effect' – cùng chủ đề giấc ngủ), đọc rộng Hope Street tập 2 (dễ, ~400 từ), đọc kỹ B1+/B2 về AI 'hallucination' (sở thích + từ nối yet/rather/however/even though/until…though), 6 câu nhận diện although/unless/rather + be used to/suggest + V-ing trong câu mới. Full English. ~100'. |
 | 2026-11-12 | Tân góp ý: (1) mỗi buổi phải là bài riêng để nộp riêng → tách Ngày 2 thành Morning + Evening; (2) phải dạy kiến thức nền trước rồi mới kiểm tra → mỗi bài có ① Learn → ② Try it (phản hồi ngay) → Input → Check; (3) chậm là do phải nghĩ/dịch, chưa thành phản xạ → nghe 1× lặp 3 vòng thay vì 0.85×, đọc không quay lại + đọc lần 2 nhanh hơn, ghi thời gian đọc. |
+| 2026-11-12 | Chuyển sang KẾ HOẠCH THEO TUẦN (Tân yêu cầu): mỗi tuần 1 chủ đề + truyện chung, ~6 bài làm lúc rảnh theo thứ tự tuỳ ý, word wall có hình, bài nghe tự do theo chủ đề; minh hoạ bằng hình (Tân học nhanh qua ngữ cảnh + hình ảnh). Tân tự đánh giá nghe thật ra ~A2+ (vẫn căng não) → tách 'mức thoải mái' (soạn bài) và 'mức làm bài'; thêm câu 'căng não đến mức nào' vào feedback để theo dõi stress, tăng dần không áp lực. |
 
-## Lịch sử ngày học
-| Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |
-|---|---|---|---|---|---|---|---|---|
-| N1 · 2026-11-11 | Day 1 – Đánh giá đầu vào toàn diện | graded | 60% | 88% | 3 | 90 | – | Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k |
-| N2 · 2026-11-12 | Small words you can't hear + Hope Street | open | – | – | – | – | – |  |
-| N2 · 2026-11-12 | Linking words + The Café & AI chatbots | open | – | – | – | – | – |  |
+## Kế hoạch theo tuần
+| Tuần | Ngày | Chủ đề | Trạng thái | Bài |
+|---|---|---|---|---|
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 1/6 đã chấm |
+| 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
+| 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
+| 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
+
+## Lịch sử bài học
+| Tuần · Bài | Ngày làm | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |
+|---|---|---|---|---|---|---|---|---|---|
+| T1 · B1 | 2026-11-11 | Starting point – full assessment | graded | 60% | 88% | 3 | 90 | – | Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k |
+| T1 · B2 | – | Small words you can't hear + Hope Street | open | – | – | – | – | – |  |
+| T1 · B3 | – | Linking words + The Café & AI chatbots | open | – | – | – | – | – |  |
+| T1 · B4 | – | First day at work – meeting the team | open | – | – | – | – | – |  |
+| T1 · B5 | – | Getting around – directions & the tram | open | – | – | – | – | – |  |
+| T1 · B6 | – | Weekend review – the story so far | open | – | – | – | – | – |  |
 
 ## Truyện dài kỳ: Hope Street
 - Nhân vật: Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà); Jess (quán cà phê đầu phố, tóc đỏ ngắn); Claire (quản lý của Nam, kính xám)
@@ -102,3 +115,4 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 - 11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items).
 - 11/11: Mục tiêu B2 vào ~giữa tháng 2/2027, 15 giờ/tuần; output để sau, chỉ 'rèn giũa' khi input đủ.
 - 12/11: Mỗi buổi 1 bài nộp riêng; khung Learn → Try it → Input → Check; luyện phản xạ bằng lặp lại ở tốc độ tự nhiên (không làm chậm).
+- 12/11: Kế hoạch theo TUẦN (chủ đề + truyện + word wall có hình); soạn ở mức input thoải mái (nghe A2+, đọc B1), theo dõi độ căng não mỗi bài, tăng dần không stress.

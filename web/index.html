@@ -216,6 +216,41 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
 .grade summary{cursor:pointer;font-weight:600}
 
 .pl-au{width:100%;height:40px}
+.inlv{margin-top:14px;padding:12px 14px;border:1px dashed var(--accent);border-radius:12px;background:var(--accent-soft)}
+.inlv-r{display:flex;gap:18px;flex-wrap:wrap;margin:6px 0;font-size:1.05rem}
+.strain{display:flex;flex-wrap:wrap;gap:8px}
+.strain label{display:flex}.strain input{position:absolute;opacity:0}
+.strain span{padding:8px 12px;border:1px solid var(--line);border-radius:10px;cursor:pointer;font-size:.9rem;background:var(--surface)}
+.strain input:checked+span{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+.strain input:focus-visible+span{outline:2px solid var(--accent)}
+.md img{max-width:100%;height:auto;border-radius:12px;display:block;margin:10px 0}
+.hero-img{width:100%;max-height:260px;object-fit:cover;border-radius:12px;margin:10px 0 4px}
+.wk-h{font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);padding:10px 4px 2px}
+.wk-hero{padding:0;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+.wk-cover{width:100%;height:100%;min-height:220px;object-fit:cover}
+.wk-body{padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.wk-body h2{margin:0;font-size:1.6rem}
+.wk-prog{display:flex;gap:10px;align-items:center}.wk-prog .bar{flex:1}
+.wk-next{align-self:flex-start;text-decoration:none;padding:11px 18px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700}
+.wk-next:hover{filter:brightness(1.08)}
+.wk-goals{margin:8px 0;padding-left:20px;display:grid;gap:4px}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
+.wk-les{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden;color:var(--ink);text-decoration:none;background:var(--surface)}
+.wk-les:hover{border-color:var(--accent)}
+.wk-les img,.wk-ph{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--sunk);display:grid;place-items:center;font-size:2.4rem}
+.wk-les.graded img,.wk-les.submitted img{opacity:.75}
+.wk-lb{padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.wk-lb .row{display:flex;justify-content:space-between;gap:6px;align-items:center}
+.ww{display:grid;align-items:start;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:10px}
+.wcard{display:flex;flex-direction:column;gap:6px;align-items:stretch;text-align:left;padding:0 0 10px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer;overflow:hidden}
+.wcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.wcard b{padding:0 10px;font-size:1rem}
+.wcard .wback{display:none;padding:0 10px;font-size:.84rem;line-height:1.45;flex-direction:column;gap:4px}
+.wcard.flip .wback{display:flex}.wcard.flip{border-color:var(--accent)}
+.wk-road{display:flex;gap:8px;overflow-x:auto;padding:6px 0}
+.wk-chip{display:flex;flex-direction:column;gap:2px;min-width:150px;text-align:left;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--sunk);color:var(--ink);font:inherit;cursor:pointer}
+.wk-chip.on{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+@media (max-width:720px){.wk-hero{grid-template-columns:1fr}.wk-cover{min-height:0;max-height:200px}.wk-body{padding:16px}.ww{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .part.learn{border-left:4px solid var(--main);background:linear-gradient(180deg,color-mix(in srgb,var(--main) 6%,var(--surface)),var(--surface))}
 .part.practice{border-left:4px solid #16a34a}
 .instant{margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.92rem;line-height:1.5}
@@ -344,17 +379,17 @@ table.days tr.next td{background:var(--accent-soft)}
   <section class="track" aria-label="CEFR journey"><div class="ph"><span class="nm"><b>Road to C1</b> – <span id="cefr-now">current level: waiting for Day 1 assessment</span></span><div class="segs cefr" id="cefr"></div></div></section>
 
   <nav class="tabs" aria-label="Sections">
-    <a href="#" class="tab" data-view="lessons">📚<span class="tl"> Lessons</span></a>
+    <a href="#" class="tab" data-view="week">🗓<span class="tl"> This week</span></a>
+    <a href="#bai" class="tab" data-view="lessons">📚<span class="tl"> Lessons</span></a>
     <a href="#ho-so" class="tab" data-view="profile">👤<span class="tl"> Profile</span></a>
     <a href="#tien-do" class="tab" data-view="progress">📈<span class="tl"> Progress</span></a>
-    <a href="#ke-hoach" class="tab" data-view="plan">📅<span class="tl"> Plan</span></a>
     <a href="#nghe" class="tab" data-view="listen">🎧<span class="tl"> Listen</span></a>
   </nav>
 
   <section id="view-profile" class="view" hidden></section>
   <section id="view-progress" class="view" hidden></section>
   <section id="view-listen" class="view" hidden></section>
-  <section id="view-plan" class="view" hidden></section>
+  <section id="view-week" class="view" hidden></section>
 
   <div class="layout" id="view-lessons">
     <nav class="shelf" aria-label="Lesson list">
@@ -375,7 +410,8 @@ table.days tr.next td{background:var(--accent-soft)}
   const TYPE_LABEL = {day:"Daily lesson", walk:"Walk Pack", main:"Main lesson", weekly:"Weekly review", sunday:"Sunday", test:"Test"};
   const SLOT_LABEL = {morning:"🌅 Morning", evening:"🌙 Evening", weekend:"☀️ Weekend", review:"🔁 Review"};
   const SLOT_ORDER = {morning:1, evening:2, weekend:3, review:4};
-  const dayLabel = l => (l.dayNo?`Day ${l.dayNo}`:(TYPE_LABEL[l.type]||"Lesson")) + (l.slot?` · ${SLOT_LABEL[l.slot]||l.slot}`:"");
+  const KIND_ICON = {Listening:"🎧", Reading:"📖", Mixed:"🎧📖", Review:"🔁", Assessment:"🧭"};
+  const dayLabel = l => l.week ? `Week ${l.week} · Lesson ${l.order||""}` : (l.dayNo?`Day ${l.dayNo}`:(TYPE_LABEL[l.type]||"Lesson"));
   const STATUS_LABEL = {open:"Not started", submitted:"Submitted", graded:"Graded"};
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -395,9 +431,9 @@ table.days tr.next td{background:var(--accent-soft)}
   };
 
   // NGUỒN DỮ LIỆU DUY NHẤT = repo GitHub (thư mục data/), xuất bản kèm trang:
-  //   data/days.json (danh sách ngày + chỉ số), data/profile.json, data/lessons/<id>.json, data/grades/<id>.json
+  //   data/weeks.json (kế hoạch tuần), data/lessons.json (danh sách bài + chỉ số), data/profile.json, data/lessons/<id>.json, data/grades/<id>.json
   // Database của artifact CHỈ nhận bài nộp (submissions/<id>, inbox/<id>).
-  let db = null, lessons = [], subs = {}, grades = {}, bodies = {}, current = null, unsubCur = [], week = 1;
+  let db = null, weeks = [], lessons = [], subs = {}, grades = {}, bodies = {}, current = null, unsubCur = [], week = 1;
   const getJSON = async p => { const r = await fetch(p, {cache:"no-store"}); if (!r.ok) throw {code:"http_"+r.status}; return r.json(); };
 
   const LEVELS = ["A2","B1","B1+","B2","B2+","C1"];
@@ -446,12 +482,14 @@ table.days tr.next td{background:var(--accent-soft)}
     $("#count").textContent = lessons.length ? `${lessons.length} lesson${lessons.length===1?"":"s"}` : "";
     $("#s-done").textContent = lessons.filter(l => statusOf(l)==="graded").length;
     if (!lessons.length){ el.innerHTML = '<p class="note">No lessons yet.</p>'; return; }
+    let lastW = null;
     el.innerHTML = lessons.map(l => {
       const st = statusOf(l);
-      return `<button class="item t-${esc(l.type)}" data-id="${esc(l.id)}" aria-current="${current===l.id}">
+      const head = l.week !== lastW ? (lastW = l.week, `<div class="wk-h">Week ${esc(l.week)} · ${esc((weeks.find(w=>w.no===l.week)||{}).theme||"")}</div>`) : "";
+      return head + `<button class="item t-${esc(l.type)}" data-id="${esc(l.id)}" aria-current="${current===l.id}">
         <span class="row"><span class="kind">${esc(dayLabel(l))}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
         <span class="t">${esc(l.title || "Lesson")}</span>
-        <span class="note">${esc(fmtDate(l.date))}${l.minutes?` · ~${esc(l.minutes)} min`:""}</span>
+        <span class="note">${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")}${l.minutes?` · ~${esc(l.minutes)} min`:""}${l.date&&st==="graded"?` · ${esc(fmtDate(l.date))}`:""}</span>
       </button>`;
     }).join("");
     el.querySelectorAll(".item").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.id; }));
@@ -499,7 +537,8 @@ table.days tr.next td{background:var(--accent-soft)}
       else { const e = document.getElementById("q-"+q.id); answers[q.id] = e ? e.value : ""; }
     });
     const diff = document.querySelector('input[name="fb-diff"]:checked');
-    const feedback = {difficulty: diff ? Number(diff.value) : null, hardest: $("#fb-hard")?.value || "", minutes: $("#fb-min")?.value || "", extra: $("#fb-extra")?.value || ""};
+    const strain = document.querySelector('input[name="fb-strain"]:checked');
+    const feedback = {strain: strain ? strain.value : "", difficulty: diff ? Number(diff.value) : null, hardest: $("#fb-hard")?.value || "", minutes: $("#fb-min")?.value || "", extra: $("#fb-extra")?.value || ""};
     return {answers, feedback};
   }
   function updateProgress(l){
@@ -689,7 +728,8 @@ table.days tr.next td{background:var(--accent-soft)}
       <div class="bookgrid">
       <div class="bookcol">
       <section class="card hero t-${esc(l.type)}">
-        <span class="kind">${esc(dayLabel(l))} · ${esc(fmtDate(l.date))}</span>
+        <span class="kind">${esc(dayLabel(l))} · ${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")}</span>
+        ${l.cover?`<img class="hero-img" src="${esc(l.cover)}" alt="">`:""}
         <h2>${esc(l.title||"Lesson")}</h2>
         <div class="meta">
           ${l.minutes?`<span class="dot">⏱ ~${esc(l.minutes)} min</span>`:""}
@@ -727,6 +767,8 @@ table.days tr.next td{background:var(--accent-soft)}
         <div class="fl"><span>How hard was this lesson?</span>
           <div class="scale" role="radiogroup" aria-label="Difficulty">${[1,2,3,4,5].map(n=>`<label><input type="radio" name="fb-diff" id="fb-diff-${n}" value="${n}" ${fb.difficulty==n?"checked":""} ${locked?"disabled":""}><span>${n}</span></label>`).join("")}</div>
           <div class="scale-cap"><span>too easy</span><span>too hard</span></div></div>
+        <div class="fl"><span>How did your brain feel? <span class="note">(this tells me if the level is right – no wrong answer)</span></span>
+          <div class="strain" role="radiogroup" aria-label="Effort">${[["relaxed","😌 Relaxed – understood without trying"],["some","🙂 Some effort"],["hard","😵 Hard work – had to translate / strain"]].map(([v,t])=>`<label><input type="radio" name="fb-strain" value="${v}" ${fb.strain===v?"checked":""} ${locked?"disabled":""}><span>${t}</span></label>`).join("")}</div></div>
         <label class="fl" for="fb-hard"><span>What was hardest to understand?</span><textarea id="fb-hard" placeholder="Which question, paragraph or word got you stuck?" ${locked?"disabled":""}>${esc(fb.hardest||"")}</textarea></label>
         <label class="fl" for="fb-min"><span>Time spent on this lesson (minutes)</span><input type="number" id="fb-min" min="0" inputmode="numeric" value="${esc(fb.minutes||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
         <label class="fl" for="fb-extra"><span>Extra English today outside this lesson (minutes)? <span class="note">(YouTube, podcasts, reading… – optional)</span></span><input type="number" id="fb-extra" min="0" inputmode="numeric" value="${esc(fb.extra||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
@@ -858,7 +900,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const lines = [`Lesson: ${l.id} – ${l.title||""}`];
     let n = 0;
     allQs(l).forEach(q => { lines.push(`${++n}. [${q.id}] ${q.q}\n→ ${data.answers[q.id]||"(blank)"}`); });
-    lines.push(`FEEDBACK: difficulty ${data.feedback.difficulty}/5 · hardest: ${data.feedback.hardest||"-"} · time: ${data.feedback.minutes||"-"} min`);
+    lines.push(`FEEDBACK: effort ${data.feedback.strain||"-"} · difficulty ${data.feedback.difficulty}/5 · hardest: ${data.feedback.hardest||"-"} · time: ${data.feedback.minutes||"-"} min`);
     return lines.join("\n").slice(0, 60000);
   }
 
@@ -935,6 +977,7 @@ table.days tr.next td{background:var(--accent-soft)}
         <h2>Tân · goal: C1 general English</h2>
         ${!profile ? `<p class="note">Your profile appears after the Day 1 assessment is graded.</p>` : ""}
         <div class="tiles">${lv("overall","Overall (estimate)")}${lv("listening","Listening")}${lv("reading","Reading")}${lv("vocab","Vocabulary")}${lv("grammar","Grammar & linking")}</div>
+      ${p.input_level ? `<div class="inlv"><span class="label">Comfortable input level – lessons are built here</span><div class="inlv-r"><span>🎧 Listening <b>${esc(p.input_level.listening||"–")}</b></span><span>📖 Reading <b>${esc(p.input_level.reading||"–")}</b></span></div>${p.input_level.note_md?`<div class="md note">${md(p.input_level.note_md)}</div>`:""}</div>` : ""}
       </section>
       ${p.teacher_md ? `<section class="card sec"><span class="label">Tutor's comments</span><div class="md">${md(p.teacher_md)}</div></section>` : ""}
       <div class="cols">
@@ -956,7 +999,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const ser = [{k:"readPct", name:"Reading", c:"var(--s-read)"},{k:"listenPct", name:"Listening", c:"var(--s-listen)"}];
     let g = [0,25,50,75,100].map(v=>`<line class="grid" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text class="axis" x="${L-8}" y="${y(v)+4}" text-anchor="end">${v}%</text>`).join("");
     const step = Math.max(1, Math.ceil(n/8));
-    g += rows.map((r,i)=> (i%step===0||i===n-1) ? `<text class="axis" x="${x(i)}" y="${H-8}" text-anchor="middle">N${esc(r.dayNo||i+1)}</text>` : "").join("");
+    g += rows.map((r,i)=> (i%step===0||i===n-1) ? `<text class="axis" x="${x(i)}" y="${H-8}" text-anchor="middle">${r.week?`W${esc(r.week)}·${esc(r.order)}`:"N"+esc(r.dayNo||i+1)}</text>` : "").join("");
     const labs = [];
     ser.forEach(s => {
       const pts = rows.map((r,i)=>[i,r[s.k]]).filter(p=>p[1]!=null && p[1]!=="");
@@ -1064,7 +1107,7 @@ table.days tr.next td{background:var(--accent-soft)}
       <section class="card sec">
         <span class="label">Day-by-day assessment</span>
         ${rows.length ? `<div class="tblwrap"><table class="days"><thead><tr><th>Day</th><th>Lesson</th><th>Listening</th><th>Reading</th><th>Difficulty</th><th>Minutes (lesson + extra)</th><th>Tutor's note</th></tr></thead><tbody>
-          ${rows.slice().reverse().map(r=>`<tr data-id="${esc(r.lessonId)}"><td class="num">N${esc(r.dayNo||"")} · ${esc(fmtDate(r.date))}</td><td>${esc(r.title||"")}</td><td class="num">${pct(r.listenPct)}</td><td class="num">${pct(r.readPct)}</td><td class="num">${r.difficulty?esc(r.difficulty)+"/5":"–"}</td><td class="num">${esc(r.minutesActual||"–")}${r.extraMinutes?" + "+esc(r.extraMinutes):""}</td><td>${inline(r.note||"")}</td></tr>`).join("")}
+          ${rows.slice().reverse().map(r=>`<tr data-id="${esc(r.lessonId)}"><td class="num">${r.week?`W${esc(r.week)} · L${esc(r.order)}`:"N"+esc(r.dayNo||"")} · ${esc(fmtDate(r.date))}</td><td>${esc(r.title||"")}</td><td class="num">${pct(r.listenPct)}</td><td class="num">${pct(r.readPct)}</td><td class="num">${r.difficulty?esc(r.difficulty)+"/5":"–"}</td><td class="num">${esc(r.minutesActual||"–")}${r.extraMinutes?" + "+esc(r.extraMinutes):""}</td><td>${inline(r.note||"")}</td></tr>`).join("")}
           </tbody></table></div>` : `<p class="note">No graded days yet.</p>`}
       </section>`;
     v.querySelectorAll("tr[data-id]").forEach(tr => tr.addEventListener("click", () => { location.hash = tr.dataset.id; }));
@@ -1077,7 +1120,7 @@ table.days tr.next td{background:var(--accent-soft)}
         const row = rows[bi], px = ch.x(bi);
         xh.setAttribute("x1",px); xh.setAttribute("x2",px); xh.setAttribute("visibility","visible");
         tip.hidden = false; tip.style.left = (px/ch.W*r.width)+"px"; tip.style.top = "40px";
-        tip.innerHTML = `<b>Day ${esc(row.dayNo||bi+1)} · ${esc(fmtDate(row.date))}</b><div><span class="sw" style="background:var(--s-read)"></span>Reading ${pct(row.readPct)}</div><div><span class="sw" style="background:var(--s-listen)"></span>Listening ${pct(row.listenPct)}</div>`;
+        tip.innerHTML = `<b>${row.week?`Week ${esc(row.week)} · Lesson ${esc(row.order)}`:"Day "+esc(row.dayNo||bi+1)} · ${esc(fmtDate(row.date))}</b><div><span class="sw" style="background:var(--s-read)"></span>Reading ${pct(row.readPct)}</div><div><span class="sw" style="background:var(--s-listen)"></span>Listening ${pct(row.listenPct)}</div>`;
       };
       const hide = () => { tip.hidden = true; xh.setAttribute("visibility","hidden"); };
       svg.querySelector("#hit").addEventListener("pointermove", move);
@@ -1101,69 +1144,62 @@ table.days tr.next td{background:var(--accent-soft)}
         </div>`).join("")}</div></section>`).join("")}`;
   }
   // ---- 📅 Plan: lịch theo ngày = bài (days.json) + bài nghe gia sư chọn (plan.json) + khung giờ (profile.schedule)
-  let planData = null, planMode = (store.get("prefs")||{}).planMode || "calendar", planSel = null, planMonth = null;
   const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
   const todayStr = () => ymd(new Date());
-  function dayInfo(ds){
-    const les = lessons.filter(l => l.date === ds);
-    const pl = planData?.days?.[ds] || null;
-    const dow = new Date(ds+"T12:00:00").getDay();
-    const sch = profile?.schedule ? ((dow===0||dow===6) ? profile.schedule.weekend : profile.schedule.weekday) || [] : [];
-    return {les, pl, sch, dow};
-  }
   const listenBtns = it => [it.apple?`<a class="tbtn" href="${esc(it.apple)}" target="_blank" rel="noopener">🎙 Apple Podcasts</a>`:"", it.youtube?`<a class="tbtn" href="${esc(it.youtube)}" target="_blank" rel="noopener">▶ YouTube</a>`:"", it.url?`<a class="tbtn" href="${esc(it.url)}" target="_blank" rel="noopener">Open ↗</a>`:"", it.transcript?`<a class="tbtn" href="${esc(it.transcript)}" target="_blank" rel="noopener">📄 Transcript</a>`:""].join("");
-  const SLOT = {walk:"🚶 Walk", morning:"🌅 Morning", evening:"🌙 Evening", weekend:"🗓 Weekend", any:"⏱ Anytime"};
-  function dayCard(ds){
-    const {les, pl, sch} = dayInfo(ds), isToday = ds === todayStr();
-    const d = new Date(ds+"T12:00:00");
-    return `<section class="card sec dayc ${isToday?"is-today":""}">
-      <div class="dayc-h"><h2>${d.toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"short"})}${isToday?' <span class="pill submitted">Today</span>':""}</h2></div>
-      ${sch.length?`<div class="slots">${sch.map(b=>`<span class="slot"><b>${esc(b.time||"")}</b> ${esc(b.what||"")}</span>`).join("")}</div>`:""}
-      ${les.length ? les.map(l=>{const st=statusOf(l); return `<a class="plan-les" href="#${esc(l.id)}"><span class="pill ${st}">${STATUS_LABEL[st]}</span> 📘 ${esc(dayLabel(l))} – ${esc(l.title||"Lesson")}${l.minutes?` · ~${esc(l.minutes)} min`:""}</a>`;}).join("") : `<p class="note">${ds >= todayStr() ? "📘 Lesson appears here at 05:55 that day." : "No lesson this day."}</p>`}
-      ${pl?.note?`<div class="md">${md(pl.note)}</div>`:""}
-      ${(pl?.listen||[]).length ? `<div class="plan-listen">${pl.listen.map(it=>`<div class="pli">
-          <div class="pli-h"><span class="note mono">${esc(SLOT[it.slot]||it.slot||"")}${it.time?" · "+esc(it.time):""}${it.minutes?" · "+esc(it.minutes)+" min":""}</span>${it.level?`<span class="pill">${esc(it.level)}</span>`:""}</div>
-          <b>${esc(it.title||"")}</b><span class="note">${esc(it.source||"")}</span>
-          ${it.why?`<div class="md">${inline(it.why)}</div>`:""}
-          <div class="pli-b">${listenBtns(it)}</div></div>`).join("")}</div>` : (ds >= todayStr() ? `<p class="note">🎧 Listening picks are added each morning. Meanwhile, use the 🎧 Listen library.</p>` : "")}
-    </section>`;
-  }
-  function calendarGrid(){
-    const base = planMonth || new Date(); const y = base.getFullYear(), m = base.getMonth();
-    const first = new Date(y, m, 1), start = new Date(first); start.setDate(1 - ((first.getDay()+6)%7));
-    const cells = []; for (let i=0;i<42;i++){ const d = new Date(start); d.setDate(start.getDate()+i); cells.push(d); }
-    const t = todayStr();
-    return `<div class="calhead"><button class="tbtn" id="cal-prev" type="button">‹</button><b>${first.toLocaleDateString("en-GB",{month:"long", year:"numeric"})}</b><button class="tbtn" id="cal-next" type="button">›</button></div>
-      <div class="calgrid">${["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(w=>`<div class="calw">${w}</div>`).join("")}
-      ${cells.map(d=>{ const ds = ymd(d), {les, pl} = dayInfo(ds); const st = les[0] ? statusOf(les[0]) : "";
-        return `<button type="button" class="calc ${d.getMonth()!==m?"out":""} ${ds===t?"today":""} ${ds===planSel?"sel":""}" data-ds="${ds}">
-          <span class="cd">${d.getDate()}</span>
-          ${les[0]?`<span class="cb ${st}">📘${les[0].dayNo?" D"+esc(les[0].dayNo):""}${les.length>1?" ×"+les.length:""}</span>`:""}
-          ${(pl?.listen||[]).length?`<span class="cb">🎧${pl.listen.length}</span>`:""}
-        </button>`;}).join("")}</div>`;
-  }
-  async function renderPlan(){
-    const v = $("#view-plan");
-    if (!planData){ try { planData = await getJSON("data/plan.json"); } catch { planData = {days:{}}; } }
-    planSel = planSel || todayStr();
-    const toggle = `<div class="seg2"><button type="button" class="tbtn" data-pm="calendar" aria-pressed="${planMode==="calendar"}">📅 Calendar</button><button type="button" class="tbtn" data-pm="list" aria-pressed="${planMode==="list"}">☰ List</button></div>`;
-    if (planMode === "calendar"){
-      v.innerHTML = `<section class="card sec"><div class="plan-top"><span class="label">Your days</span>${toggle}</div>${calendarGrid()}</section>${dayCard(planSel)}`;
-    } else {
-      const t = todayStr(), set = new Set([t]);
-      lessons.forEach(l => set.add(l.date)); Object.keys(planData.days||{}).forEach(k => set.add(k));
-      for (let i=1;i<=2;i++){ const d = new Date(); d.setDate(d.getDate()+i); set.add(ymd(d)); }
-      const all = [...set].sort(), up = all.filter(x => x >= t), past = all.filter(x => x < t).reverse();
-      v.innerHTML = `<section class="card sec"><div class="plan-top"><span class="label">Your days</span>${toggle}</div></section>${up.map(dayCard).join("")}${past.length?`<div class="label" style="margin-top:8px">Earlier</div>${past.map(dayCard).join("")}`:""}`;
-    }
-    v.querySelectorAll("[data-pm]").forEach(b => b.addEventListener("click", () => { planMode = b.dataset.pm; const pr = store.get("prefs")||{}; pr.planMode = planMode; store.set("prefs", pr); renderPlan(); }));
-    v.querySelectorAll(".calc").forEach(b => b.addEventListener("click", () => { planSel = b.dataset.ds; renderPlan(); }));
-    $("#cal-prev")?.addEventListener("click", () => { const b = planMonth || new Date(); planMonth = new Date(b.getFullYear(), b.getMonth()-1, 1); renderPlan(); });
-    $("#cal-next")?.addEventListener("click", () => { const b = planMonth || new Date(); planMonth = new Date(b.getFullYear(), b.getMonth()+1, 1); renderPlan(); });
+  // ---- 🗓 This week: chủ đề tuần + bài làm lúc nào rảnh + word wall có hình + bài nghe tự do + các tuần tới
+  let weekSel = null;
+  function curWeek(){ return weeks.find(w => w.status === "current") || weeks.filter(w => lessons.some(l => l.week===w.no)).slice(-1)[0] || weeks[0]; }
+  let wordAudio = null;
+  function renderWeek(){
+    const v = $("#view-week");
+    const w = weeks.find(x => x.no === weekSel) || curWeek();
+    if (!w){ v.innerHTML = `<section class="card sec"><p class="note">No weekly plan yet.</p></section>`; return; }
+    const ls = lessons.filter(l => l.week === w.no).sort((a,b) => (a.order||0)-(b.order||0));
+    const done = ls.filter(l => ["graded","submitted"].includes(statusOf(l))).length;
+    const next = ls.find(l => statusOf(l) === "open");
+    const mins = ls.filter(l => statusOf(l)!=="open").reduce((t,l) => t + (Number(l.minutesActual)||0) + (Number(l.extraMinutes)||0), 0);
+    const pctDone = ls.length ? Math.round(done/ls.length*100) : 0;
+    const others = weeks.filter(x => x.no !== w.no);
+    v.innerHTML = `
+      <section class="card wk-hero">
+        ${w.cover?`<img class="wk-cover" src="${esc(w.cover)}" alt="">`:""}
+        <div class="wk-body">
+          <span class="label">Week ${esc(w.no)} · ${esc(fmtDate(w.start))} → ${esc(fmtDate(w.end))}${w.status==="planned"?" · coming soon":""}</span>
+          <h2>${esc(w.theme||"")}</h2>
+          ${w.why_md?`<div class="md">${md(w.why_md)}</div>`:""}
+          ${ls.length?`<div class="wk-prog"><div class="bar"><i style="width:${pctDone}%"></i></div><span class="note mono">${done}/${ls.length} lessons${mins?` · ${Math.round(mins/6)/10} h logged`:""}</span></div>`:""}
+          ${next?`<a class="primary wk-next" href="#${esc(next.id)}">▶ Continue: Lesson ${esc(next.order)} – ${esc(next.title)}</a>`:(ls.length && done===ls.length?`<p class="note">✅ All lessons done – great week! Extra lessons may appear after grading.</p>`:"")}
+        </div>
+      </section>
+      ${(w.goals||[]).length?`<section class="card sec"><span class="label">By the end of this week you can…</span><ul class="wk-goals">${w.goals.map(g=>`<li>${inline(g)}</li>`).join("")}</ul>${w.how_md?`<div class="md note">${md(w.how_md)}</div>`:""}</section>`:""}
+      ${ls.length?`<section class="card sec"><span class="label">Lessons – any order, whenever you're free</span>
+        <div class="wk-grid">${ls.map(l => { const st = statusOf(l); return `<a class="wk-les ${st}" href="#${esc(l.id)}">
+          ${l.cover?`<img src="${esc(l.cover)}" alt="" loading="lazy">`:`<div class="wk-ph">${esc(KIND_ICON[l.kind]||"📘")}</div>`}
+          <div class="wk-lb"><span class="row"><span class="note mono">Lesson ${esc(l.order)} · ${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
+          <b>${esc(l.title||"")}</b><span class="note">~${esc(l.minutes||"?")} min</span></div></a>`; }).join("")}</div></section>`:""}
+      ${(w.words||[]).length?`<section class="card sec"><span class="label">Word wall – tap a card</span>
+        <div class="ww">${w.words.map((x,i)=>`<button type="button" class="wcard" data-i="${i}">
+          ${x.img?`<img src="${esc(x.img)}" alt="" loading="lazy">`:""}
+          <b>${esc(x.w)}</b>
+          <span class="wback">${inline(x.def||"")}${x.ex?`<i>“${esc(x.ex)}”</i>`:""}${x.vi?`<span class="note">🇻🇳 ${esc(x.vi)}</span>`:""}</span>
+        </button>`).join("")}</div></section>`:""}
+      ${(w.listen||[]).length?`<section class="card sec"><span class="label">Free listening this week – same theme</span>
+        <div class="plan-listen">${w.listen.map(it=>`<div class="pli">
+          <div class="pli-h"><span class="note mono">${esc(it.source||"")}${it.minutes?" · "+esc(it.minutes)+" min":""}</span>${it.level?`<span class="pill">${esc(it.level)}</span>`:""}</div>
+          <b>${esc(it.title||"")}</b>${it.why?`<div class="md">${inline(it.why)}</div>`:""}
+          <div class="pli-b">${listenBtns(it)}</div></div>`).join("")}</div></section>`:""}
+      ${others.length?`<section class="card sec"><span class="label">Weeks</span><div class="wk-road">${weeks.map(x=>`<button type="button" class="wk-chip ${x.no===w.no?"on":""} ${esc(x.status||"")}" data-w="${esc(x.no)}"><span class="note mono">W${esc(x.no)} · ${esc(fmtDate(x.start))}</span><b>${esc(x.theme||"")}</b></button>`).join("")}</div></section>`:""}`;
+    v.querySelectorAll(".wcard").forEach(c => c.addEventListener("click", () => {
+      c.classList.toggle("flip");
+      const x = w.words[Number(c.dataset.i)];
+      if (x?.audio && c.classList.contains("flip")){ try { wordAudio?.pause(); wordAudio = new Audio(x.audio); wordAudio.play().catch(()=>{}); } catch {} }
+    }));
+    v.querySelectorAll(".wk-chip").forEach(b => b.addEventListener("click", () => { weekSel = Number(b.dataset.w); renderWeek(); }));
   }
   function showView(name){
-    $("#view-plan").hidden = name!=="plan";
-    if (name==="plan") renderPlan();
+    $("#view-week").hidden = name!=="week";
+    if (name==="week") renderWeek();
     $("#view-listen").hidden = name!=="listen";
     if (name==="listen") renderListen();
     $("#view-lessons").hidden = name!=="lessons"; $("#view-profile").hidden = name!=="profile"; $("#view-progress").hidden = name!=="progress";
@@ -1177,9 +1213,10 @@ table.days tr.next td{background:var(--accent-soft)}
     if (h === "ho-so"){ showView("profile"); return; }
     if (h === "tien-do"){ showView("progress"); return; }
     if (h === "nghe"){ showView("listen"); return; }
-    if (h === "ke-hoach"){ showView("plan"); return; }
+    if (!h || h === "ke-hoach" || h === "tuan"){ showView("week"); return; }
     showView("lessons");
-    current = lessons.some(l => l.id === h) ? h : (lessons[0]?.id || null);
+    const nextOpen = lessons.filter(l => l.week === curWeek()?.no).sort((a,b)=>(a.order||0)-(b.order||0)).find(l => statusOf(l)==="open");
+    current = lessons.some(l => l.id === h) ? h : (nextOpen?.id || lessons[0]?.id || null);
     delete $("#main").dataset.editing;
     watchCurrent();
     renderList(); renderLesson();
@@ -1189,12 +1226,13 @@ table.days tr.next td{background:var(--accent-soft)}
   async function boot(){
     // 1) Dữ liệu từ repo (xuất bản kèm trang) – hiển thị được ngay cả khi chưa có database
     try {
-      const [days, prof] = await Promise.all([getJSON("data/days.json"), getJSON("data/profile.json").catch(() => null)]);
-      lessons = (days.days || []).slice().sort((a,b) => String(b.date).localeCompare(String(a.date)) || ((SLOT_ORDER[a.slot]||9)-(SLOT_ORDER[b.slot]||9)) || String(a.id).localeCompare(String(b.id)));
+      const [idx, wk, prof] = await Promise.all([getJSON("data/lessons.json"), getJSON("data/weeks.json").catch(() => ({weeks:[]})), getJSON("data/profile.json").catch(() => null)]);
+      weeks = wk.weeks || [];
+      lessons = (idx.lessons || []).slice().sort((a,b) => ((b.week||0)-(a.week||0)) || ((a.order||0)-(b.order||0)));
       stats = lessons.filter(d => d.status === "graded").map(d => ({lessonId:d.id, ...d}));
       profile = prof && Object.keys(prof).length ? prof : null;
       $("#s-done").textContent = stats.length;
-      if (profile?.week != null){ week = Number(profile.week)||1; $("#s-week").textContent = week; }
+      week = curWeek()?.no || Number(profile?.week) || 1; $("#s-week").textContent = week;
       if (profile?.streak != null){ $("#s-streak").textContent = profile.streak; $("#s-streak-u").textContent = Number(profile.streak) === 1 ? "day" : "days"; }
       renderTrack();
     } catch(e){ $("#list").innerHTML = `<p class="note">Couldn't load the lesson list (${esc(e?.code||"error")}). Please reload.</p>`; }

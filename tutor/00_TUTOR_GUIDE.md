@@ -1,6 +1,6 @@
 # TUTOR GUIDE – Gia sư tiếng Anh 1-1 cho Tân (v3 – 11/11/2026)
 
-> Đọc file này cùng `tutor/01_ROADMAP.md`, `data/profile.json`, `data/days.json` trước khi ra bài/chấm. Cập nhật hồ sơ trong `data/` (Progress Log tự sinh).
+> Đọc file này cùng `tutor/01_ROADMAP.md`, `data/profile.json`, `data/lessons.json` trước khi ra bài/chấm. Cập nhật hồ sơ trong `data/` (Progress Log tự sinh).
 > Mọi bài học diễn ra trong **một phiên Claude Code chính**. Bài được đăng lên web lớp học (`web/README.md`). Kiến trúc tổng thể: `README.md`.
 
 ## 1. Hồ sơ học viên
@@ -47,7 +47,11 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 - Khung bài bên dưới là **mặc định**; được phép đổi tỉ lệ, bỏ hay thêm phần khi dữ liệu cho thấy cách khác hiệu quả hơn với Tân.
 
 ## 4. Khung bài – mặc định (Tân yêu cầu 12/11)
-**Mỗi buổi = 1 bài riêng, nộp riêng** (ngày thường: `<ngày>-morning` ~40' + `<ngày>-evening` ~60'; cuối tuần: `<ngày>-weekend`). Web gom theo ngày ("Day N · 🌅 Morning"). **Không bao giờ gộp cả ngày thành 1 bài nộp.**
+**Kế hoạch theo TUẦN (Tân 12/11):** mỗi tuần 1 chủ đề phổ thông + truyện dài kỳ nối tiếp (narrow input), ~6 bài **riêng, nộp riêng** (40–60'), Tân làm lúc rảnh, thứ tự tuỳ ý; bài cuối tuần = ôn tập + "Look back". Kèm word wall ~12 từ có hình + audio, 6–8 bài nghe tự do cùng chủ đề. **Không bao giờ gộp nhiều buổi thành 1 bài nộp.**
+
+**Hình ảnh là bắt buộc** (Tân học nhanh qua ngữ cảnh + hình): ảnh bìa tuần/bài, ảnh cảnh truyện (2–3 ảnh/tập), ảnh cho từ vựng cụ thể, SVG cho bản đồ/sơ đồ/dòng thời gian.
+
+**Mức độ:** soạn ở **mức input thoải mái** (`profile.input_level`) – Tân hiểu ngay, không căng não. Phần khó hơn (mức "with effort") chỉ là **Stretch (optional)**. Đọc feedback 😌/🙂/😵: 2–3 bài 😌 + hiểu ≥90% → nâng 1 bậc nhỏ; 😵 → hạ ngay ở các bài chưa làm.
 
 Mỗi bài đi theo đường cong học (learning curve) – **dạy trước, kiểm tra sau**:
 1. **① Learn (8–12')** – `learn: true`: dạy kiến thức nền cần cho input hôm nay (âm/dạng yếu, chunk, từ nối, cách đọc theo cụm…). Bảng + ví dụ + audio ví dụ; giải thích bằng tiếng Anh đơn giản, thêm 🇻🇳 cho nghĩa/ngữ pháp khó. Ôn chunk đến hạn ở đây.

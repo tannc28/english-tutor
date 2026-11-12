@@ -2,7 +2,8 @@
 """Đồng bộ: repo (data/) → các bản hiển thị.
 
 Nguồn dữ liệu DUY NHẤT là thư mục data/:
-  data/days.json           danh sách ngày học + chỉ số mỗi ngày (listenPct, readPct, difficulty, minutesActual, note, status)
+  data/weeks.json          kế hoạch theo TUẦN: chủ đề, mục tiêu, word wall, bài nghe tự do, chủ đề các tuần tới
+  data/lessons.json        danh sách bài (mỗi bài thuộc 1 tuần) + chỉ số mỗi bài (listenPct, readPct, difficulty, minutesActual, note, status)
   data/profile.json        hồ sơ học sinh (Learner model, nhật ký quyết định, chunk bank, phát âm…)
   data/lessons/<id>.json   nội dung bài
   data/grades/<id>.json    kết quả chấm
@@ -10,8 +11,8 @@ Nguồn dữ liệu DUY NHẤT là thư mục data/:
   data/keys/<id>.json      đáp án (KHÔNG xuất bản lên web)
 
 Script này:
-  1. Kiểm tra JSON hợp lệ và days.json trỏ tới file bài có thật.
-  2. Sinh lại tutor/02_PROGRESS_LOG.md từ profile.json + days.json (đừng sửa tay file đó).
+  1. Kiểm tra JSON hợp lệ và lessons.json trỏ tới file bài có thật.
+  2. Sinh lại tutor/02_PROGRESS_LOG.md từ profile.json + weeks.json + lessons.json (đừng sửa tay file đó).
   3. In ra danh sách file cần xuất bản kèm web (map `files` cho Artifact publish) → web/publish_files.json
 
 Dùng: python3 tools/sync.py   (rồi publish web/index.html với files trong web/publish_files.json)
@@ -29,7 +30,11 @@ def pct(v):
     return "–" if v in (None, "") else f"{round(float(v))}%"
 
 def main():
-    days = load(D("days.json"))["days"]
+    days = load(D("lessons.json"))["lessons"]
+    weeks = load(D("weeks.json"))["weeks"]
+    wids = {w["no"] for w in weeks}
+    for d in days:
+        if d.get("week") not in wids: print(f"LỖI: {d['id']} thuộc tuần {d.get('week')} không có trong weeks.json"); sys.exit(1)
     prof = load(D("profile.json"))
     errors = []
     for d in days:
@@ -45,15 +50,15 @@ def main():
         print("LỖI:\n- " + "\n- ".join(errors)); sys.exit(1)
 
     # ---- Progress Log (sinh tự động)
-    days_sorted = sorted(days, key=lambda d: d["date"])
+    days_sorted = sorted(days, key=lambda d: (d.get("week", 0), d.get("order", 0)))
     graded = [d for d in days_sorted if d.get("status") == "graded"]
     L = []
     L.append("# PROGRESS LOG – Tân\n")
-    L.append("> ⚠️ **File này được SINH TỰ ĐỘNG** từ `data/profile.json` + `data/days.json` bằng `python3 tools/sync.py`. Đừng sửa tay, hãy sửa file JSON.\n")
+    L.append("> ⚠️ **File này được SINH TỰ ĐỘNG** từ `data/profile.json` + `data/weeks.json` + `data/lessons.json` bằng `python3 tools/sync.py`. Đừng sửa tay, hãy sửa file JSON.\n")
     L.append("## Trạng thái hiện tại")
     L.append(f"- Mục tiêu: {prof.get('goal','')}")
     L.append(f"- Trọng tâm: {prof.get('focus_now','')}")
-    L.append(f"- Tuần: {prof.get('week','')} · Streak: {prof.get('streak',0)} ngày · Đã chấm: {len(graded)}/{len(days)} ngày")
+    L.append(f"- Tuần: {prof.get('week','')} · Streak: {prof.get('streak',0)} ngày · Đã chấm: {len(graded)}/{len(days)} bài")
     L.append(f"- Mức hiểu mục tiêu: {prof.get('comprehension_target','')}")
     L.append(f"- Cập nhật hồ sơ: {prof.get('updatedAt','')}\n")
     L.append("## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)")
@@ -80,10 +85,15 @@ def main():
     L.append("\n### Nhật ký quyết định (vì sao bài lại như vậy)")
     L.append("| Ngày | Quyết định |\n|---|---|")
     for x in prof.get("decisions", []): L.append(f"| {x.get('date','')} | {x.get('text','')} |")
-    L.append("\n## Lịch sử ngày học")
-    L.append("| Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |\n|---|---|---|---|---|---|---|---|---|")
+    L.append("\n## Kế hoạch theo tuần")
+    L.append("| Tuần | Ngày | Chủ đề | Trạng thái | Bài |\n|---|---|---|---|---|")
+    for w in weeks:
+        n = [d for d in days if d.get("week") == w["no"]]
+        L.append(f"| {w['no']} | {w.get('start','')} → {w.get('end','')} | {w.get('theme','')} | {w.get('status','')} | {sum(1 for d in n if d.get('status')=='graded')}/{len(n)} đã chấm |")
+    L.append("\n## Lịch sử bài học")
+    L.append("| Tuần · Bài | Ngày làm | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |\n|---|---|---|---|---|---|---|---|---|---|")
     for d in days_sorted:
-        L.append(f"| N{d.get('dayNo','')} · {d['date']} | {d.get('title','')} | {d.get('status','')} | {pct(d.get('listenPct'))} | {pct(d.get('readPct'))} | {d.get('difficulty') or '–'} | {d.get('minutesActual') or '–'} | {d.get('extraMinutes') or '–'} | {d.get('note','')} |")
+        L.append(f"| T{d.get('week','')} · B{d.get('order','')} | {d.get('date') or '–'} | {d.get('title','')} | {d.get('status','')} | {pct(d.get('listenPct'))} | {pct(d.get('readPct'))} | {d.get('difficulty') or '–'} | {d.get('minutesActual') or '–'} | {d.get('extraMinutes') or '–'} | {d.get('note','')} |")
     st = prof.get("story") or {}
     if st:
         L.append(f"\n## Truyện dài kỳ: {st.get('title','')}")
@@ -106,19 +116,20 @@ def main():
         f.write("\n".join(L) + "\n")
 
     # ---- Danh sách file xuất bản kèm web (không có keys/)
-    files = {"data/days.json": "data/days.json", "data/profile.json": "data/profile.json", "data/resources.json": "data/resources.json", "data/plan.json": "data/plan.json"}
+    files = {f"data/{n}": f"data/{n}" for n in ("weeks.json", "lessons.json", "profile.json", "resources.json")}
     for sub in ("lessons", "grades", "submissions"):
         for fn in sorted(os.listdir(D(sub))):
             if fn.endswith(".json"):
                 files[f"data/{sub}/{fn}"] = f"data/{sub}/{fn}"
-    adir = D("audio")
-    if os.path.isdir(adir):
-        for lid in sorted(os.listdir(adir)):
-            for fn in sorted(os.listdir(os.path.join(adir, lid))):
-                if fn.endswith(".mp3"): files[f"data/audio/{lid}/{fn}"] = f"data/audio/{lid}/{fn}"
+    for sub, exts in (("audio", (".mp3",)), ("img", (".webp", ".jpg", ".png", ".svg"))):
+        for dp, _, fns in os.walk(D(sub)):
+            for fn in sorted(fns):
+                if fn.endswith(exts):
+                    rel = os.path.relpath(os.path.join(dp, fn), ROOT)
+                    files[rel] = rel
     with open(os.path.join(ROOT, "web", "publish_files.json"), "w", encoding="utf-8") as f:
         json.dump(files, f, ensure_ascii=False, indent=1)
-    print(f"OK – {len(days)} ngày, {len(graded)} đã chấm. Progress Log đã sinh lại. {len(files)} file cần xuất bản (web/publish_files.json).")
+    print(f"OK – {len(weeks)} tuần, {len(days)} bài, {len(graded)} đã chấm. Progress Log đã sinh lại. {len(files)} file cần xuất bản (web/publish_files.json).")
 
 if __name__ == "__main__":
     main()

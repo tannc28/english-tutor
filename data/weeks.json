@@ -1,0 +1,225 @@
+{
+ "weeks": [
+  {
+   "no": 1,
+   "start": "2026-11-09",
+   "end": "2026-11-15",
+   "status": "current",
+   "theme": "A New Start",
+   "title": "Week 1 – A New Start: a new home, a new city, a new routine",
+   "why_md": "Everyone knows what it feels like to start again somewhere new. We follow **Nam** in his first days in Manchester – his flat, his neighbour, the café on the corner, his first day at work. **One world, the same people and words all week**, so the English gets easier every lesson.",
+   "goals": [
+    "Hear the small squeezed words in natural speech: *I'm, you'll, it's, I'd*",
+    "Follow a story about a new home and a daily routine without translating",
+    "See where an idea turns: *although, however, yet, rather, unless*",
+    "Use *be used to + V-ing* and *it takes + time* when you read and hear them"
+   ],
+   "how_md": "Do the lessons **in any order, whenever you're free** – the numbers are only a suggestion. Each lesson is separate: finish it → 📤 Submit → I grade it and adapt the next ones. Free time? Pick a podcast from the list below.",
+   "target_hours": 21,
+   "words": [
+    {
+     "w": "flat",
+     "img": "data/img/w1/w-flat.webp",
+     "def": "a home on one floor of a building",
+     "ex": "Nam lives in Flat 2 at number 14.",
+     "vi": "căn hộ",
+     "audio": "data/audio/w1/words/w-flat.mp3"
+    },
+    {
+     "w": "heating",
+     "img": "data/img/w1/w-heating.webp",
+     "def": "the system that makes a building warm",
+     "ex": "The heating made a noise at 3 a.m.",
+     "vi": "hệ thống sưởi",
+     "audio": "data/audio/w1/words/w-heating.mp3"
+    },
+    {
+     "w": "umbrella",
+     "img": "data/img/w1/w-umbrella.webp",
+     "def": "you hold it over your head in the rain",
+     "ex": "Take an umbrella – it's going to rain.",
+     "vi": "cái ô",
+     "audio": "data/audio/w1/words/w-umbrella.mp3"
+    },
+    {
+     "w": "counter",
+     "img": "data/img/w1/w-counter.webp",
+     "def": "the long table in a shop or café where you pay",
+     "ex": "Jess was standing behind the counter.",
+     "vi": "quầy",
+     "audio": "data/audio/w1/words/w-counter.mp3"
+    },
+    {
+     "w": "bacon sandwich",
+     "img": "data/img/w1/w-sandwich.webp",
+     "def": "bread with hot bacon inside – a British breakfast",
+     "ex": "Try the bacon sandwich!",
+     "audio": "data/audio/w1/words/w-sandwich.mp3"
+    },
+    {
+     "w": "tram",
+     "img": "data/img/w1/w-tram.webp",
+     "def": "a long electric train that runs on city streets",
+     "ex": "Take the tram to Market Street.",
+     "vi": "tàu điện",
+     "audio": "data/audio/w1/words/w-tram.mp3"
+    },
+    {
+     "w": "on the corner",
+     "img": "data/img/w1/w-corner.webp",
+     "def": "where two streets meet",
+     "ex": "There's a little café on the corner.",
+     "vi": "ở góc phố",
+     "audio": "data/audio/w1/words/w-corner.mp3"
+    },
+    {
+     "w": "be used to + V-ing",
+     "img": "data/img/w1/w-used.webp",
+     "def": "something is normal for you now",
+     "ex": "I'm not used to sleeping in a new place.",
+     "vi": "đã quen với",
+     "audio": "data/audio/w1/words/w-used.mp3"
+    },
+    {
+     "w": "show sb around",
+     "img": "data/img/w1/w-showaround.webp",
+     "def": "walk with someone and show them a place",
+     "ex": "Tom will show you around the office.",
+     "vi": "dẫn đi xem",
+     "audio": "data/audio/w1/words/w-showaround.mp3"
+    },
+    {
+     "w": "give sb a hand",
+     "img": "data/img/w1/w-hand.webp",
+     "def": "help someone",
+     "ex": "Could you give me a hand with this box?",
+     "vi": "giúp một tay",
+     "audio": "data/audio/w1/words/w-hand.mp3"
+    },
+    {
+     "w": "take a deep breath",
+     "img": "data/img/w1/w-breath.webp",
+     "def": "breathe in slowly to feel calm",
+     "ex": "He took a deep breath and pushed the door.",
+     "vi": "hít một hơi thật sâu",
+     "audio": "data/audio/w1/words/w-breath.mp3"
+    },
+    {
+     "w": "get lost",
+     "img": "data/img/w1/w-lost.webp",
+     "def": "not know where you are",
+     "ex": "It's easy to get lost in a new city.",
+     "vi": "bị lạc",
+     "audio": "data/audio/w1/words/w-lost.mp3"
+    }
+   ],
+   "listen": [
+    {
+     "title": "What should you eat for a better night's sleep?",
+     "source": "6 Minute English · BBC",
+     "minutes": 7,
+     "level": "Tier 1",
+     "apple": "https://podcasts.apple.com/us/podcast/what-should-you-eat-for-a-better-night-s-sleep/id262026947?i=1000797598235",
+     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+     "why": "Sleep – same topic as Lesson 2. Easy start."
+    },
+    {
+     "title": "Making cities feel quieter",
+     "source": "6 Minute English · BBC",
+     "minutes": 7,
+     "level": "Tier 1",
+     "apple": "https://podcasts.apple.com/us/podcast/making-cities-feel-quieter/id262026947?i=1000767735615",
+     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+     "why": "Life in a city – like Nam in Manchester."
+    },
+    {
+     "title": "Who does the housework?",
+     "source": "6 Minute English · BBC",
+     "minutes": 7,
+     "level": "Tier 1",
+     "apple": "https://podcasts.apple.com/us/podcast/who-does-the-housework/id262026947?i=1000783096027",
+     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+     "why": "Home life and routines."
+    },
+    {
+     "title": "Should we cycle more?",
+     "source": "6 Minute English · BBC",
+     "minutes": 6,
+     "level": "Tier 1",
+     "apple": "https://podcasts.apple.com/us/podcast/should-we-cycle-more/id262026947?i=1000776098256",
+     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+     "why": "Getting around a city – goes with Lesson 5."
+    },
+    {
+     "title": "Is breakfast the most important meal of the day?",
+     "source": "6 Minute English · BBC",
+     "minutes": 7,
+     "level": "Tier 1",
+     "apple": "https://podcasts.apple.com/us/podcast/is-breakfast-the-most-important-meal-of-the-day/id262026947?i=1000734189697",
+     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+     "why": "Morning routine – Nam's breakfast at the café."
+    },
+    {
+     "title": "Rude emails",
+     "source": "6 Minute English · BBC",
+     "minutes": 7,
+     "level": "Tier 1",
+     "apple": "https://podcasts.apple.com/us/podcast/rude-emails/id262026947?i=1000775125993",
+     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+     "why": "First weeks at a new job – goes with Lesson 4."
+    },
+    {
+     "title": "Any Psych2Go video (5–10 min)",
+     "source": "Psych2Go · YouTube",
+     "minutes": 10,
+     "level": "Tier 2",
+     "youtube": "https://www.youtube.com/@Psych2go",
+     "why": "English subtitles on. Pick a title that interests you."
+    }
+   ],
+   "cover": "data/img/w1/cover.webp"
+  },
+  {
+   "no": 2,
+   "start": "2026-11-16",
+   "end": "2026-11-22",
+   "status": "planned",
+   "theme": "Food & Eating Out",
+   "title": "Week 2 – Food & Eating Out",
+   "why_md": "Food is in every conversation. Ordering, recipes, food habits, and Nam's first dinner with new friends.",
+   "goals": [
+    "Understand menus, ordering and small talk at a restaurant",
+    "Follow a simple recipe video",
+    "Describe taste and texture words when you hear them"
+   ]
+  },
+  {
+   "no": 3,
+   "start": "2026-11-23",
+   "end": "2026-11-29",
+   "status": "planned",
+   "theme": "Mind & Feelings",
+   "title": "Week 3 – Mind & Feelings",
+   "why_md": "Psychology – one of your interests. Stress, habits, sleep and motivation, in everyday English.",
+   "goals": [
+    "Follow a 6-minute psychology podcast with the transcript",
+    "Understand feelings vocabulary in context",
+    "Track cause → effect words: because of, so, as a result"
+   ]
+  },
+  {
+   "no": 4,
+   "start": "2026-11-30",
+   "end": "2026-12-06",
+   "status": "planned",
+   "theme": "Tech in Everyday Life",
+   "title": "Week 4 – Tech in Everyday Life",
+   "why_md": "Your favourite topic, but in general English – phones, AI at home, online life. Not technical IT English yet.",
+   "goals": [
+    "Read a news-style article about technology",
+    "Follow opinions: I'd argue that…, on the other hand…",
+    "Understand a podcast discussion with two speakers"
+   ]
+  }
+ ]
+}

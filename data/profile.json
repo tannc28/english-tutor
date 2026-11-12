@@ -8,8 +8,8 @@
  "focus_now": "Chỉ INPUT (nghe + đọc). Output/phát âm chỉ khi Tân muốn.",
  "cefr": {
   "overall": "B1+",
-  "listening": "B1",
-  "reading": "B2",
+  "listening": "A2+ (comfortable) · B1 (with effort)",
+  "reading": "B1 (comfortable) · B2 (with effort, slow)",
   "vocab": "B1+",
   "grammar": "B1+"
  },
@@ -29,6 +29,12 @@
   "Tiếp xúc tiếng Anh hằng ngày qua công việc (chat với Claude bằng tiếng Anh)"
  ],
  "weaknesses": [
+  {
+   "area": "Nghe (mức thoải mái)",
+   "detail": "Nghe B1 vẫn phải căng não – mức thoải mái thật ~A2+",
+   "evidence": "Tân tự nhận 12/11: Ngày 1 làm được nhưng phải tập trung cao",
+   "plan": "Input nghe ở A2+/B1- , 1×, lặp 3 vòng; chỉ nâng khi feedback 'relaxed' + ≥90% hiểu 2–3 bài liền"
+  },
   {
    "area": "Nghe",
    "detail": "Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)",
@@ -96,6 +102,10 @@
   {
    "date": "2026-11-12",
    "text": "Tân góp ý: (1) mỗi buổi phải là bài riêng để nộp riêng → tách Ngày 2 thành Morning + Evening; (2) phải dạy kiến thức nền trước rồi mới kiểm tra → mỗi bài có ① Learn → ② Try it (phản hồi ngay) → Input → Check; (3) chậm là do phải nghĩ/dịch, chưa thành phản xạ → nghe 1× lặp 3 vòng thay vì 0.85×, đọc không quay lại + đọc lần 2 nhanh hơn, ghi thời gian đọc."
+  },
+  {
+   "date": "2026-11-12",
+   "text": "Chuyển sang KẾ HOẠCH THEO TUẦN (Tân yêu cầu): mỗi tuần 1 chủ đề + truyện chung, ~6 bài làm lúc rảnh theo thứ tự tuỳ ý, word wall có hình, bài nghe tự do theo chủ đề; minh hoạ bằng hình (Tân học nhanh qua ngữ cảnh + hình ảnh). Tân tự đánh giá nghe thật ra ~A2+ (vẫn căng não) → tách 'mức thoải mái' (soạn bài) và 'mức làm bài'; thêm câu 'căng não đến mức nào' vào feedback để theo dõi stress, tăng dần không áp lực."
   }
  ],
  "story": {
@@ -210,7 +220,8 @@
   "11/11 (sau Ngày 1): Tân yêu cầu **câu hỏi + giao diện toàn tiếng Anh** (full English).",
   "11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items).",
   "11/11: Mục tiêu B2 vào ~giữa tháng 2/2027, 15 giờ/tuần; output để sau, chỉ 'rèn giũa' khi input đủ.",
-  "12/11: Mỗi buổi 1 bài nộp riêng; khung Learn → Try it → Input → Check; luyện phản xạ bằng lặp lại ở tốc độ tự nhiên (không làm chậm)."
+  "12/11: Mỗi buổi 1 bài nộp riêng; khung Learn → Try it → Input → Check; luyện phản xạ bằng lặp lại ở tốc độ tự nhiên (không làm chậm).",
+  "12/11: Kế hoạch theo TUẦN (chủ đề + truyện + word wall có hình); soạn ở mức input thoải mái (nghe A2+, đọc B1), theo dõi độ căng não mỗi bài, tăng dần không stress."
  ],
  "coach": {
   "summary_md": "**B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.\n\n**Mục tiêu B2:** cần khoảng 150–250 giờ input tập trung. Với **~21 giờ/tuần**, ước tính **khoảng 8–12 tuần** nếu giữ đều. Phần lớn nên là **nghe** (nghe đang ở B1).",
@@ -302,5 +313,10 @@
    "day1_event": "bsi90bucrjchpm19nd7bdttm0c"
   },
   "flex": "Tân sẽ báo ngày bận (→ bài ngắn ~30–40', không dồn) hoặc ngày rảnh (→ thêm phần/bài dài hơn). Ghi vào profile.decisions khi điều chỉnh."
+ },
+ "input_level": {
+  "listening": "A2+",
+  "reading": "B1",
+  "note_md": "**Comfortable level** = you understand straight away, without strain or translating. Lessons are built at this level (that's real *comprehensible input*). The *with effort* level is only what you can manage in a test. We move up one small step when 2–3 lessons in a row feel **😌 relaxed** and you understand ≥ 90%."
  }
 }
