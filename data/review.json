@@ -80,6 +80,21 @@
    "due": "2026-11-13",
    "step": 0,
    "history": []
+  },
+  {
+   "id": "2026-11-12-evening-q0",
+   "lesson": "2026-11-12-evening",
+   "q": "\"After a week in the new office, I started to feel at home.\" = …",
+   "options": [
+    "I wanted to go home",
+    "I felt comfortable there",
+    "I worked from home"
+   ],
+   "answer": 1,
+   "why": "feel at home = feel comfortable, like in your own home.",
+   "due": "2026-11-13",
+   "step": 0,
+   "history": []
   }
  ],
  "words": {
