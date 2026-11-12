@@ -4,51 +4,51 @@
 
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
-- Trọng tâm: Chỉ INPUT (nghe + đọc) – input-first: nạp nhiều, giải thích nhiều, rất ít kiểm tra. Output/phát âm chỉ khi Tân muốn.
+- Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
 - Tuần: 1 · Streak: 2 ngày · Đã chấm: 4/22 bài
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
-- Cập nhật hồ sơ: 2026-11-12T22:50:00+07:00
+- Cập nhật hồ sơ: 2026-11-13T00:30:00+07:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
 |---|---|---|
 | Tổng thể | B1+ | Đánh giá đầu vào 11/11: đọc kéo lên, nghe kéo xuống |
-| Nghe | A2+ (comfortable) · B1 (with effort) | Bài A2–B1 hiểu đủ nhưng cần ~9 lần nghe; B2 nghe ~40–50% (đọc lời 90–95%) → giải mã âm |
-| Đọc | B1 (comfortable) · B2 (with effort, slow) | B1 85–90%; B1+/B2 hiểu đúng nhưng chậm; C1 ~65%, lỡ ý chuyển hướng |
+| Nghe | A2+ (comfortable) · B1 (with effort) | 12/11: easy story ~80% first listen, real VOA ~60% first listen, ~95% with transcript → ears are the bottleneck, words are known |
+| Đọc | B1+ (comfortable) · B2 (with effort) | 12/11: story B1 95% at ~100 words/min, B1+/B2 article 99% and felt easy → comfortable level raised to B1+ |
 | Từ vựng | B1+ | ~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt |
-| Ngữ pháp & từ nối | B1+ | 9/12; đúng cả đảo ngữ C1, trượt cụm B1 (be used to/suggest + V-ing) và although/unless |
+| Ngữ pháp & từ nối | B1+ → B2 (linking words solid) | Day 1 mistakes now fixed: be/get used to + V-ing, suggest + V-ing, although vs unless (12/11) |
 
 **Điểm mạnh:** Đọc hiểu tốt tới B2: nắm ý chính, quy chiếu (this/it), tách câu dài đúng; Đoán nghĩa từ ngữ cảnh rất tốt (seized upon, reluctantly, evade); Nhận biết cấu trúc khó (đảo ngữ Hardly/Not only, quá khứ hoàn thành); Trung thực, tự nhận biết rõ mình hiểu/không hiểu (metacognition tốt) – dữ liệu rất chuẩn; Tiếp xúc tiếng Anh hằng ngày qua công việc (chat với Claude bằng tiếng Anh); Từ nối tương phản/điều kiện (although/unless/rather/yet/however) đã chắc khi đọc (12/11)
 **Sở thích:** AI & công nghệ (thích nhất, tin AI); Tâm lý; Ẩm thực; Khoa học; Thể thao
 
 **Cần cải thiện & kế hoạch:**
-- [Nghe – mất mạch] **Lỡ 1 từ hoặc 1 đoạn là ảnh hưởng cả phần sau; mẫu câu cơ bản vẫn phải nghĩ, chưa thành phản xạ** – dấu hiệu: Ngày 2 sáng: nghe lần đầu ~80%, đọc lời 100%; Tân tự nhận (feedback 12/11); phần Learn audio nghe 10 lần → Nghe kèm lời trước (listening while reading), nghe lại nhiều vòng cùng đoạn, đoạn ngắn có giải thích; luyện 'lỡ từ vẫn nghe tiếp' (đoán từ câu sau)
+- [Nghe – mất mạch] **Lỡ 1 từ hoặc 1 đoạn là ảnh hưởng cả phần sau; mẫu câu cơ bản vẫn phải nghĩ, chưa thành phản xạ** – dấu hiệu: Ngày 2 sáng: nghe lần đầu ~80%, đọc lời 100%; Tân tự nhận (feedback 12/11); phần Learn audio nghe 10 lần → Nghe không lời trước rồi đối chiếu lời, bấm nghe lại đúng đoạn khó; đọc trước rồi nghe cùng nội dung, đoạn ngắn có giải thích; luyện 'lỡ từ vẫn nghe tiếp' (đoán từ câu sau)
 - [Nghe (mức thoải mái)] **Nghe B1 vẫn phải căng não – mức thoải mái thật ~A2+** – dấu hiệu: Tân tự nhận 12/11: Ngày 1 làm được nhưng phải tập trung cao → Input nghe ở A2+/B1- , 1×, lặp 3 vòng; chỉ nâng khi feedback 'relaxed' + ≥90% hiểu 2–3 bài liền
-- [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's' → Nghe dễ (A2+/B1, 0.85×) theo 3 bước: nghe → nghe + đọc lời → nghe lại không lời; chính tả từng phần tập trung dạng yếu/nối âm
-- [Đọc] **Xử lý câu dài còn chậm (hiểu được nhưng tốn nhiều thời gian)** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Nhiều đọc rộng B1+ dễ hơn để tăng tốc; đọc kỹ chỉ 1 đoạn/ngày
-- [Từ nối & cụm] **Từ nối tương phản/nhượng bộ và cụm động từ cố định** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
+- [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's' → Nghe dễ A2+/B1 tốc độ tự nhiên: 2 vòng không lời → đối chiếu lời, bấm nghe lại từng dòng → nghe lại; bài dạy âm (dạng yếu/nối âm)
+- [Đọc] **Đọc còn hơi chậm (~100 từ/phút) – đã thoải mái ở B1+** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Đọc lại nhanh truyện cũ (đo thời gian), đọc rộng B1+ mỗi ngày; mục tiêu 130–150 từ/phút
+- [Từ nối & cụm] **(Đã cải thiện 12/11: từ nối 8/8, be used to/suggest + V-ing đúng) – tiếp tục gặp lại trong input** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
 - [Xử lý / phản xạ] **Hiểu được nhưng chậm: phải nghĩ/dịch sang tiếng Việt, chưa tự động** – dấu hiệu: Tân tự nhận 12/11; Ngày 1 đọc ~88% nhưng mất nhiều thời gian → Lặp lại cùng input ở tốc độ tự nhiên (3 vòng), fluency reading có ghi thời gian, đọc theo cụm, nhiều input dễ (≥98%) để luyện tự động hoá
 
-**Mục tiêu thời gian:** 21 giờ/tuần (ngày thường ~2h40 (7:45 nghe 40' + 20:30–22:30), cuối tuần 4 giờ, cộng nghe tranh thủ → B2 có thể sớm hơn 3 tháng (khoảng 8–12 tuần nếu giữ đều))
+**Mục tiêu thời gian:** 18 giờ/tuần (mỗi ngày ~2–3 giờ chia thành 10–14 bài nhỏ (sáng ~40', tối ~2 giờ), cuối tuần theo lịch → khoảng 15–21 giờ/tuần)
 
-**Bức tranh hiện tại:** **B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.
+**Bức tranh hiện tại:** **B1+ tổng thể.** Đọc đã thoải mái ở **B1+** (nhanh, hiểu ~95–99%). **Nghe là điểm nghẽn:** lần đầu ~60–80%, có lời ~95% → tai cần quen âm thật.
 
-**Mục tiêu B2:** cần khoảng 150–250 giờ input tập trung. Với **~21 giờ/tuần**, ước tính **khoảng 8–12 tuần** nếu giữ đều. Phần lớn nên là **nghe** (nghe đang ở B1).
+**Mục tiêu B2:** cần khoảng 150–250 giờ input. Với **~2–3 giờ/ngày** bài nhỏ, ước tính **khoảng 8–12 tuần**. Phần lớn thời gian nên dành cho **nghe**.
 
 **Gia sư khuyên:**
-- **Nghe tranh thủ mọi lúc – thư viện 🎧 Listen** – Mở tab **🎧 Listen**: Tier 1 dùng hằng ngày; Tier 2 theo sở thích (AI, tâm lý, khoa học, ẩm thực); Tier 3 thỉnh thoảng thử. Nghe nền khi đi bộ hoặc chờ: ưu tiên video đã xem 1 lần.
-- **Nghe 3 bước, mỗi bài nghe** – Nghe 1 lần không lời → nghe + đọc lời cùng lúc → nghe lại không lời. Tốc độ 0.85× khi mới nghe.
-- **Đổi 20 phút TikTok thành YouTube tiếng Anh về AI** – Video ngắn về AI/công nghệ cho người xem phổ thông, **bật phụ đề tiếng Anh**. Ghi số phút vào ô cuối bài.
-- **Tận dụng giờ làm việc** – Câu nào Claude trả lời mà Tân không hiểu, chép lại và dán vào ô ghi chú cuối bài. Mình sẽ dùng làm bài đọc kỹ.
-- **Giữ thói quen ghi 'không chắc'** – Cứ không chắc là bấm 🤔 và ghi vài chữ.
+- **Nghe không lời trước** – Mỗi bài nghe: 2 vòng không lời → mở lời đối chiếu → nghe lại lần cuối không lời.
+- **Bấm dòng nào chưa nghe ra** – Trong transcript, bấm ▶ ở dòng đó (nghe 2–3 lần, thì thầm theo). Mình theo dõi số lần bấm để biết chỗ nào tai còn khó.
+- **Đọc trước – nghe sau cùng nội dung** – Làm bài 📖 trước, ngay sau đó làm bài 🎧 của cùng câu chuyện/bài báo.
+- **Lỡ một từ – cứ nghe tiếp** – Giữ ý chính (ai, ở đâu, chuyện gì), bỏ qua từ lỡ; câu sau thường giải thích.
+- **Hỏi mình bất cứ lúc nào** – Ô 💬 Ask me cuối mỗi bài – tiếng Việt cũng được. Mình trả lời khi chấm.
 
 **Thói quen tiếp xúc tiếng Anh:** Làm việc cả ngày, chat với Claude bằng tiếng Anh để code (nhiều chỗ chưa hiểu; gấp thì chuyển tiếng Việt). Thời gian rảnh hay lướt TikTok/FB; muốn chuyển sang podcast/YouTube tiếng Anh. Input thêm ngoài bài ngày 11/11: 0 phút. **Không thích phim/series** – chỉ YouTube và podcast.
 
 **Giáo viên nhận xét:**
 
-Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá nhiều** (~B1). Khoảng cách này rất điển hình ở người học qua sách, chữ và công việc. Tin tốt là Tân đã có sẵn vốn từ, nên chỉ cần **nghe nhiều thứ dễ** để tai bắt kịp mắt. Đây là phần tiến bộ nhanh nhất nếu đều đặn. Tân trả lời trung thực từng chỗ không chắc, nhờ vậy mình đánh giá được rất chính xác.
+Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài B1+/B2 hiểu 99% mà thấy dễ), từ nối và các lỗi ngữ pháp của Ngày 1 đã sửa được hết. **Điểm nghẽn duy nhất là tai:** nghe lần đầu ~60–80%, có lời thì ~95–100% – nghĩa là từ đã biết, tai chỉ chưa quen âm thật (dạng yếu, nối âm). Tân rất rõ mình cần gì – *nạp input, ít quiz, luyện tai* – và mình đã đổi cách dạy theo đúng hướng đó.
 
-**Đang tập trung:** **Mục tiêu B2 (~8–12 tuần).** Ngày thường: 7:45 nghe 40', 20:30–21:30 bài, 21:40–22:30 nghe tự do (tab 🎧 Listen). Cuối tuần 4 giờ. **Nghe tranh thủ mọi lúc**, ghi số phút vào ô cuối bài. Bận/rảnh thì báo để gia sư chỉnh bài.
+**Đang tập trung:** **Luyện tai bằng thật nhiều input nghe vừa sức.** Mỗi ngày ~10–14 bài nhỏ (5–15'), sáng ~40', tối ~2 giờ, ngày nào cũng có cả đọc và nghe. Bài nghe: **lời ẩn mặc định** → nghe 2 vòng → mở lời đối chiếu, **bấm dòng chưa nghe ra để nghe lại** → nghe lần cuối. Đọc trước rồi nghe cùng nội dung để tai bắt kịp mắt. Không quiz – chỉ % hiểu + 💬 Ask me.
 
 ### Nhật ký quyết định (vì sao bài lại như vậy)
 | Ngày | Quyết định |
