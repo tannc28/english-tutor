@@ -476,6 +476,58 @@ table.days tr.next td{background:var(--accent-soft)}
 .sched b{display:block;font-family:var(--f-mono);font-weight:500}
 .note{font-size:.88rem;color:var(--ink-3)}
 @media (prefers-reduced-motion:no-preference){.item,.opt,button{transition:border-color .15s,background .15s,box-shadow .15s}}
+/* ===================== PHONE (≤640px) – thiết kế lại 12/11: rộng rãi, ít khung, thao tác bằng ngón cái ===================== */
+.tb-back,.tb-parts{display:none}
+@media (max-width:640px){
+  :root{--tbh:50px}
+  body{font-size:16.5px;line-height:1.62}
+  input,textarea,select{font-size:16px!important}               /* iOS không tự phóng to khi gõ */
+  .wrap{padding-top:10px;padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+  /* đầu trang 1 dòng; số liệu & lộ trình nằm ở tab Progress */
+  .top{grid-template-columns:1fr;gap:0}.top .stats,.brand .label,.track{display:none}
+  .brand h1{font-size:1.2rem}
+  /* thanh tab chính ở đáy – tầm ngón cái */
+  nav.tabs.main3{position:fixed;left:0;right:0;bottom:0;z-index:20;margin:0;width:auto;max-width:none;border:0;border-top:1px solid var(--line);border-radius:0;
+    padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);gap:6px}
+  nav.tabs.main3 .tab{display:flex;flex-direction:column;align-items:center;gap:1px;padding:6px 4px 4px;font-size:1.3rem;line-height:1.1;border-radius:14px;color:var(--ink-3)}
+  nav.tabs.main3 .tab .tl3{font-size:.7rem;font-weight:600;letter-spacing:.01em}
+  nav.tabs.main3 .tab[aria-current="page"]{background:var(--accent-soft);color:var(--accent)}
+  .subtabs{margin-top:6px;padding-inline:2px}
+  .view .card.sec,.view>.card{border-radius:16px}
+  /* ---- chế độ làm bài: toàn màn hình, 1 thanh mỏng ---- */
+  body.in-lesson .top,body.in-lesson nav.tabs.main3,body.in-lesson .subtabs,body.in-lesson .shelf{display:none!important}
+  body.in-lesson .wrap{padding:0 0 calc(40px + env(safe-area-inset-bottom,0px))}
+  body.in-lesson .layout{display:block;margin:0}
+  .book .toolbar{margin:0;border-radius:0;border-width:0 0 1px;box-shadow:none;padding:6px 10px;gap:8px;background:color-mix(in srgb,var(--surface) 92%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+  .tb-back,.tb-parts{display:inline-flex}.tb-back{text-decoration:none;font-size:1.1rem;padding:6px 12px}
+  #tg-shelf,#tg-focus{display:none}
+  .book .toc{display:none!important}
+  .bookgrid{gap:0}.bookcol{gap:8px}
+  .book .card{border-radius:0;border-width:1px 0;box-shadow:none}
+  .hero{padding:20px 18px}
+  .part{padding:22px 18px 10px;grid-template-columns:minmax(0,1fr)}
+  .part .step{display:none}
+  .part h3{font-size:1.2rem}
+  .md blockquote{margin:14px -18px;padding:18px;border-radius:0;border-width:1px 0;font-size:1.13rem;line-height:1.8}
+  .md table{font-size:.9rem}
+  .md img{border-radius:12px}
+  /* câu hỏi: bỏ hộp, chỉ còn đường kẻ mảnh; đáp án là hàng to dễ bấm */
+  .qs{gap:0;margin-top:20px}
+  .q{padding:18px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:none;gap:12px}
+  .qt{font-size:1.04rem;line-height:1.5}
+  .qn{min-width:26px;height:22px;font-size:.7rem}
+  .opts{gap:8px}
+  .opt{padding:13px 14px;border-radius:12px;min-height:50px;align-items:center}
+  .opt input{margin:0;width:20px;height:20px;flex:none}
+  .q textarea,.q input[type=text]{width:100%;border-radius:12px;padding:12px 14px}
+  .fb{border-radius:0;border-width:1px 0;margin:0;padding:22px 18px}
+  .split .src-listen .player{top:calc(env(safe-area-inset-top,0px) + var(--tbh) + 2px)!important;border-radius:14px}
+  #txt-fab{bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+  .parts-list{display:flex;flex-direction:column}
+  .parts-list a{display:flex;gap:12px;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:600}
+  .parts-list .n{display:none}
+  .parts-list .c{margin-left:auto;font-family:var(--f-mono);font-size:.75rem;color:var(--ink-3)}
+}
 </style>
 
 <div class="wrap">
@@ -867,8 +919,10 @@ table.days tr.next td{background:var(--accent-soft)}
     const tocItems = (l.parts||[]).map((p,pi)=>`<a href="#" data-go="part-${pi}" id="toc-${pi}"><span class="n">${pi+1}</span><span class="t">${esc(p.kind||p.title||"Part "+(pi+1))}</span><span class="c" id="tocc-${pi}"></span></a>`).join("") + `<a href="#" data-go="part-fb" id="toc-fb"><span class="n">✓</span><span class="t">Feedback & submit</span><span class="c"></span></a>`;
     main.innerHTML = `
       <div class="toolbar">
+        <a class="tbtn tb-back" href="#" title="Back to this week" aria-label="Back">←</a>
         <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Show/hide lesson list">☰<span class="bl"> Lessons</span></button>
         <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Hide everything except the lesson">🎯<span class="bl"> Focus</span></button>
+        <button class="tbtn tb-parts" id="tg-parts" type="button" title="Jump to a part">Parts</button>
         <div class="grow"><span class="ttl">${esc(l.title||"")}</span>${nQ && !grade ? `<div class="bar" style="flex:1;min-width:80px"><i id="pbar2" style="width:0%"></i></div><span class="note mono" id="plab2">0/${nQ}</span>` : ""}</div>
         ${grade ? `<span class="save-st" data-k="ok">✅ Graded · see results at the top</span>`
           : locked ? `<span class="save-st">Submitted ${esc(new Date(sub.submittedAt).toLocaleString("en-GB"))} · being graded</span><button class="tbtn" id="edit" type="button">Edit & resubmit</button>`
@@ -942,6 +996,12 @@ table.days tr.next td{background:var(--accent-soft)}
     bindPlayers(l);
     bindChecks(l);
     bindReading();
+    $("#tg-parts")?.addEventListener("click", () => {
+      const list = document.createElement("div"); list.className = "parts-list";
+      list.innerHTML = [...document.querySelectorAll(".toc a")].map(a => `<a href="#" data-go="${a.dataset.go}">${a.innerHTML}</a>`).join("");
+      list.querySelectorAll("a").forEach(a => a.addEventListener("click", ev => { ev.preventDefault(); $("#sh-x").click(); document.getElementById(a.dataset.go)?.scrollIntoView({behavior:"smooth", block:"start"}); }));
+      $("#sh-t").textContent = "Parts"; $("#sh-b").replaceChildren(list); $("#txt-sheet").hidden = false; document.body.classList.add("sheet-open");
+    });
     bindRecorders(l);
     $("#edit")?.addEventListener("click", () => { main.dataset.editing = "1"; renderLesson(); });
   }
