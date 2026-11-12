@@ -248,7 +248,12 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
 .td-tag{color:var(--warn);font-weight:600}
 .td-free{margin:0;font-size:1rem}
 .ws{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:10px}
-.ws-d{display:flex;flex-direction:column;gap:4px;padding:8px 6px;border:1px solid var(--line);border-radius:10px;background:var(--surface);min-height:84px}
+.ws-d{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:8px 6px;border:1px solid var(--line);border-radius:10px;background:var(--surface);min-height:84px;font:inherit;color:inherit;cursor:pointer;text-align:left}
+.ws-d.sel{box-shadow:0 0 0 2px var(--accent)}
+.today.other{border-color:var(--line)}
+.leave summary{cursor:pointer;color:var(--ink-2);font-size:.9rem}
+.leave-f{display:flex;flex-direction:column;gap:8px;margin-top:8px;align-items:flex-start}
+.leave-f .lv-note{width:100%}
 .ws-d.is-today{border:2px solid var(--accent);background:var(--accent-soft)}
 .ws-d.past{background:var(--sunk)}
 .ws-n{font-size:.75rem;color:var(--ink-3)}.ws-n b{color:var(--ink);font-size:.95rem}
@@ -434,7 +439,9 @@ table.days tr.next td{background:var(--accent-soft)}
   const SLOT_LABEL = {morning:"🌅 Morning", evening:"🌙 Evening", weekend:"☀️ Weekend", review:"🔁 Review"};
   const SLOT_ORDER = {morning:1, evening:2, weekend:3, review:4};
   const KIND_ICON = {Listening:"🎧", Reading:"📖", Mixed:"🎧📖", Review:"🔁", Assessment:"🧭"};
-  const dayLabel = l => l.week ? `Week ${l.week} · Lesson ${l.order||""}` : (l.dayNo?`Day ${l.dayNo}`:(TYPE_LABEL[l.type]||"Lesson"));
+  let planOf = {};  // lessonId → {ds, slot} từ weeks[].days
+  function buildPlanOf(){ planOf = {}; weeks.forEach(w => Object.entries(w.days||{}).forEach(([ds,d]) => (d.lessons||[]).forEach((id,i,arr) => { const dow = new Date(ds+"T12:00:00").getDay(), we = dow===0||dow===6; planOf[id] = {ds, slot: we ? "Weekend" : (arr.length===1 ? "Evening" : (i===0 ? "Morning" : "Evening"))}; }))); }
+  const dayLabel = l => { const p = planOf[l.id]; return p ? `${fmtDate(p.ds)} · ${p.slot}` : (l.week ? `Week ${l.week} · Lesson ${l.order||""}` : (l.dayNo?`Day ${l.dayNo}`:(TYPE_LABEL[l.type]||"Lesson"))); };
   const STATUS_LABEL = {open:"Not started", submitted:"Submitted", graded:"Graded"};
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -508,7 +515,8 @@ table.days tr.next td{background:var(--accent-soft)}
     let lastW = null;
     el.innerHTML = lessons.map(l => {
       const st = statusOf(l);
-      const head = l.week !== lastW ? (lastW = l.week, `<div class="wk-h">Week ${esc(l.week)} · ${esc((weeks.find(w=>w.no===l.week)||{}).theme||"")}</div>`) : "";
+      const key = (planOf[l.id]?.ds) || ("w"+l.week);
+      const head = key !== lastW ? (lastW = key, `<div class="wk-h">${planOf[l.id] ? `Week ${esc(l.week)} · ${esc(new Date(planOf[l.id].ds+"T12:00:00").toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"short"}))}` : `Week ${esc(l.week)}`}</div>`) : "";
       return head + `<button class="item t-${esc(l.type)}" data-id="${esc(l.id)}" aria-current="${current===l.id}">
         <span class="row"><span class="kind">${esc(dayLabel(l))}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
         <span class="t">${esc(l.title || "Lesson")}</span>
@@ -1180,7 +1188,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const t = todayStr(), days = w.days || {}, keys = Object.keys(days).sort();
     const byId = id => lessons.find(l => l.id === id);
     const plannedDay = {}; keys.forEach(k => (days[k].lessons||[]).forEach(id => plannedDay[id] = k));
-    const carry = keys.filter(k => k < t).flatMap(k => (days[k].lessons||[]).map(byId)).filter(l => l && !DONE(statusOf(l)));
+    const carry = keys.filter(k => k < t && !days[k].off).flatMap(k => (days[k].lessons||[]).map(byId)).filter(l => l && !DONE(statusOf(l)));
     const todays = (days[t]?.lessons||[]).map(byId).filter(Boolean);
     const queue = [...carry, ...todays.filter(l => !DONE(statusOf(l)))];
     return {t, days, keys, plannedDay, carry, todays, now: queue.slice(0,2), later: queue.slice(2), listen: days[t]?.listen, note: days[t]?.note};
@@ -1197,31 +1205,56 @@ table.days tr.next td{background:var(--accent-soft)}
       <span class="td-main"><b>${esc(l.title||"")}</b><span class="note">Lesson ${esc(l.order)} · ${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")} · ~${esc(l.minutes||"?")} min${tag?` · <span class="td-tag">${esc(tag)}</span>`:""}</span></span>
       <span class="td-go">${DONE(st)?"✅":"Start ▶"}</span></a>`;
   }
-  function todayCard(w){
-    const P = weekPlan(w);
-    if (P.t < w.start || P.t > w.end) return "";
-    const tm = slotTimes(P.t);
-    const doneToday = P.todays.filter(l => DONE(statusOf(l)));
-    const pod = P.listen != null ? (w.listen||[])[P.listen] : null;
-    const rows = P.now.map((l,i) => lessonRow(l, P.now.length===1 && !new Set([0,6]).has(new Date(P.t+"T12:00:00").getDay()) ? tm.lesson[1] : tm.lesson[i], P.carry.includes(l) ? "moved from "+fmtDate(P.plannedDay[l.id]) : ""));
-    return `<section class="card today">
-      <div class="td-h"><span class="label">📍 Today · ${esc(fmtDate(P.t))}</span>${P.note?`<span class="note">${esc(P.note)}</span>`:""}</div>
-      ${rows.length ? `<div class="td-list">${rows.join("")}${doneToday.map(l => lessonRow(l, "", "done today")).join("")}</div>`
-        : `<p class="td-free">🎉 ${doneToday.length ? "Today's lessons are done. Great work!" : "No lesson planned today."} ${pod ? "Enjoy the podcast below – that's enough for today." : "Rest, or listen to something you like."}</p>`}
-      ${pod ? `<div class="td-pod"><span class="td-time mono">${esc(tm.listen)}</span><span class="td-main"><b>🎧 ${esc(pod.title)}</b><span class="note">${esc(pod.source||"")} · ${esc(pod.minutes||"")} min – free listening, no questions</span></span><span class="pli-b">${listenBtns(pod)}</span></div>` : ""}
-      ${P.later.length ? `<p class="note">Also waiting: ${P.later.map(l => `<a href="#${esc(l.id)}">Lesson ${esc(l.order)}</a>`).join(", ")} – no rush, it stays on your path for the next days.</p>` : ""}
+  let daySel = null;
+  function dayPanel(w, ds){
+    const P = weekPlan(w), isToday = ds === P.t, d = P.days[ds] || {}, tm = slotTimes(ds);
+    const dow = new Date(ds+"T12:00:00").getDay(), we = dow===0||dow===6;
+    const own = (d.lessons||[]).map(id => lessons.find(l => l.id===id)).filter(Boolean);
+    const list = isToday ? [...P.now, ...own.filter(l => DONE(statusOf(l)) && !P.now.includes(l))] : own;
+    const timeFor = (l,i) => we ? tm.lesson[i] : ((list.filter(x=>!DONE(statusOf(x))).length===1 || own.length===1) && i===0 ? tm.lesson[1] : tm.lesson[i]);
+    const pod = d.listen != null ? (w.listen||[])[d.listen] : null;
+    const title = new Date(ds+"T12:00:00").toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"short"});
+    const leave = leaveReq[ds];
+    const off = d.off ? `<p class="td-free">🙋 Day off – ${esc(d.off)}. Your tutor moved this day's lessons. Rest well!</p>` : "";
+    return `<section class="card today ${isToday?"":"other"}">
+      <div class="td-h"><span class="label">${isToday?"📍 Today":"🗓"} · ${esc(title)}</span>${d.note&&!d.off?`<span class="note">${esc(d.note)}</span>`:""}</div>
+      ${off || (list.length ? `<div class="td-list">${list.map((l,i) => lessonRow(l, DONE(statusOf(l)) ? "" : timeFor(l,i), isToday && P.carry.includes(l) ? "missed on "+fmtDate(P.plannedDay[l.id]) : (ds < P.t && !DONE(statusOf(l)) ? "missed – it's in Today" : ""))).join("")}</div>`
+        : `<p class="td-free">${isToday && own.length ? "🎉 Today's lessons are done. Great work!" : "No lesson planned – rest day."}</p>`)}
+      ${pod && !d.off ? `<div class="td-pod"><span class="td-time mono">${esc(tm.listen)}</span><span class="td-main"><b>🎧 ${esc(pod.title)}</b><span class="note">${esc(pod.source||"")} · ${esc(pod.minutes||"")} min – free listening, no questions</span></span><span class="pli-b">${listenBtns(pod)}</span></div>` : ""}
+      ${isToday && P.later.length ? `<p class="note">Also waiting: ${P.later.map(l => `<a href="#${esc(l.id)}">${esc(l.title)}</a>`).join(", ")} – no rush.</p>` : ""}
+      ${ds >= P.t && !d.off && own.length ? (leave ? `<p class="note">🙋 Day-off request sent (${esc(leave.kind)}) – your tutor will reschedule.</p>`
+        : `<details class="leave"><summary>🙋 Can't study ${isToday?"today":"this day"}? Tell your tutor</summary>
+          <div class="leave-f" data-ds="${esc(ds)}">
+            <div class="strain">${[["off","Whole day off"],["morning","Skip the morning only"],["evening","Skip the evening only"],["short","I'm busy – make it short"]].map(([v,t],i)=>`<label><input type="radio" name="lv-${esc(ds)}" value="${v}" ${i===0?"checked":""}><span>${t}</span></label>`).join("")}</div>
+            <input type="text" class="lv-note" placeholder="Reason (optional) – e.g. working late, travelling…">
+            <button type="button" class="primary sm lv-send">Send to my tutor</button><span class="note lv-st"></span>
+          </div></details>`) : ""}
     </section>`;
+  }
+  const leaveReq = store.get("leaveReq") || {};
+  async function sendLeave(box){
+    const ds = box.dataset.ds, kind = box.querySelector("input[type=radio]:checked")?.value || "off", note = box.querySelector(".lv-note").value.trim();
+    const st = box.querySelector(".lv-st"), btn = box.querySelector(".lv-send"); btn.disabled = true; st.textContent = "Sending…";
+    const text = `🙋 Day-off request ${ds}: ${kind}${note?" – "+note:""}`;
+    let ok = false;
+    try { if (db) await db.doc("inbox/leave-"+ds).set({type:"leave", date:ds, kind, note, at:new Date().toISOString()}); ok = !!db; } catch {}
+    let told = false;
+    try { const c = await claude.use("comments"); if (c && await c.canSendToClaude() === "available"){ await c.sendToClaude({anchor: await c.anchorFor(box), text}); told = true; } } catch {}
+    if (!told) try { const mcp = await claude.use("mcp"); if (mcp){ await mcp.callTool("Claude Code Remote", "fire_trigger", {trigger_id:TRIGGER_ID, text}); told = true; } } catch {}
+    if (ok || told){ leaveReq[ds] = {kind, at:Date.now()}; store.set("leaveReq", leaveReq); st.textContent = "✅ Sent. Your tutor will reschedule."; setTimeout(renderWeek, 1200); }
+    else { btn.disabled = false; st.textContent = "Couldn't send – please tell your tutor in the chat."; }
   }
   function weekStrip(w){
     const P = weekPlan(w), out = [];
     for (let i=0;i<7;i++){ const d = new Date(w.start+"T12:00:00"); d.setDate(d.getDate()+i); const ds = ymd(d);
       const ls = (P.days[ds]?.lessons||[]).map(id => lessons.find(l => l.id===id)).filter(Boolean);
-      out.push(`<div class="ws-d ${ds===P.t?"is-today":""} ${ds<P.t?"past":""}">
+      const off = P.days[ds]?.off;
+      out.push(`<button type="button" data-ds="${ds}" class="ws-d ${ds===P.t?"is-today":""} ${ds<P.t?"past":""} ${ds===(daySel||P.t)?"sel":""}">
         <span class="ws-n">${d.toLocaleDateString("en-GB",{weekday:"short"})} <b>${d.getDate()}</b></span>
-        ${ls.map(l => { const st = statusOf(l), ic = DONE(st) ? "✅" : ds < P.t ? "↪" : ds === P.t ? "▶" : "·"; return `<a class="ws-l ${DONE(st)?"done":ds<P.t?"moved":""}" href="#${esc(l.id)}" title="${esc(l.title)}">${ic} L${esc(l.order)}</a>`; }).join("") || `<span class="ws-l rest">rest</span>`}
-      </div>`); }
+        ${off ? `<span class="ws-l rest">🙋 off</span>` : ls.map(l => { const st = statusOf(l), ic = DONE(st) ? "✅" : ds < P.t ? "↪" : ds === P.t ? "▶" : "·"; return `<span class="ws-l ${DONE(st)?"done":ds<P.t?"moved":""}" title="${esc(l.title)}">${ic} L${esc(l.order)}</span>`; }).join("") || `<span class="ws-l rest">rest</span>`}
+      </button>`); }
     return `<section class="card sec"><span class="label">Your week at a glance</span><div class="ws">${out.join("")}</div>
-      <p class="note">✅ done · ▶ today · ↪ missed – moved to the next free day · L = lesson</p></section>`;
+      <p class="note">Tap a day to see its plan · ✅ done · ▶ today · ↪ missed · 🙋 day off</p></section>`;
   }
   function renderWeek(){
     const v = $("#view-week");
@@ -1245,8 +1278,8 @@ table.days tr.next td{background:var(--accent-soft)}
           ${next && !(todayStr() >= w.start && todayStr() <= w.end && w.days)?`<a class="primary wk-next" href="#${esc(next.id)}">▶ Continue: Lesson ${esc(next.order)} – ${esc(next.title)}</a>`:(ls.length && done===ls.length?`<p class="note">✅ All lessons done – great week! Extra lessons may appear after grading.</p>`:"")}
         </div>
       </section>
-      ${todayCard(w)}
       ${w.days ? weekStrip(w) : ""}
+      ${w.days && (daySel || (todayStr() >= w.start && todayStr() <= w.end)) ? dayPanel(w, daySel && daySel >= w.start && daySel <= w.end ? daySel : todayStr()) : ""}
       ${(w.goals||[]).length?`<section class="card sec"><span class="label">By the end of this week you can…</span><ul class="wk-goals">${w.goals.map(g=>`<li>${inline(g)}</li>`).join("")}</ul>${w.how_md?`<div class="md note">${md(w.how_md)}</div>`:""}</section>`:""}
       ${ls.length?`<section class="card sec"><span class="label">All lessons this week – your path</span>
         <div class="wk-grid">${ls.map(l => { const st = statusOf(l); return `<a class="wk-les ${st}" href="#${esc(l.id)}">
@@ -1270,7 +1303,9 @@ table.days tr.next td{background:var(--accent-soft)}
       const x = w.words[Number(c.dataset.i)];
       if (x?.audio && c.classList.contains("flip")){ try { wordAudio?.pause(); wordAudio = new Audio(x.audio); wordAudio.play().catch(()=>{}); } catch {} }
     }));
-    v.querySelectorAll(".wk-chip").forEach(b => b.addEventListener("click", () => { weekSel = Number(b.dataset.w); renderWeek(); }));
+    v.querySelectorAll(".wk-chip").forEach(b => b.addEventListener("click", () => { weekSel = Number(b.dataset.w); daySel = null; renderWeek(); }));
+    v.querySelectorAll(".ws-d").forEach(b => b.addEventListener("click", () => { daySel = b.dataset.ds; renderWeek(); }));
+    v.querySelectorAll(".lv-send").forEach(b => b.addEventListener("click", () => sendLeave(b.closest(".leave-f"))));
   }
   function showView(name){
     $("#view-week").hidden = name!=="week";
@@ -1302,8 +1337,9 @@ table.days tr.next td{background:var(--accent-soft)}
     // 1) Dữ liệu từ repo (xuất bản kèm trang) – hiển thị được ngay cả khi chưa có database
     try {
       const [idx, wk, prof] = await Promise.all([getJSON("data/lessons.json"), getJSON("data/weeks.json").catch(() => ({weeks:[]})), getJSON("data/profile.json").catch(() => null)]);
-      weeks = wk.weeks || [];
-      lessons = (idx.lessons || []).slice().sort((a,b) => ((b.week||0)-(a.week||0)) || ((a.order||0)-(b.order||0)));
+      weeks = wk.weeks || []; buildPlanOf();
+      buildPlanOf();
+      lessons = (idx.lessons || []).slice().sort((a,b) => ((b.week||0)-(a.week||0)) || String(planOf[a.id]?.ds||"9").localeCompare(String(planOf[b.id]?.ds||"9")) || ((a.order||0)-(b.order||0)));
       stats = lessons.filter(d => d.status === "graded").map(d => ({lessonId:d.id, ...d}));
       profile = prof && Object.keys(prof).length ? prof : null;
       $("#s-done").textContent = stats.length;

@@ -27,8 +27,8 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 - `listen` → trang hiện trình nghe (Claude đọc, chỉnh tốc độ, lời ẩn tới khi bấm). `recording` → nút thu âm (xem `tools/speech/README.md`). `choice` luôn có thêm, tách riêng dưới các đáp án, nút "🤔 Mình không chắc" + ô ghi chú (đáp án lưu dạng `"Unsure: <ghi chú>"`; bài cũ có thể là `"Khác: …"`) và nút Bỏ chọn. Feedback bắt buộc (độ khó, chỗ khó nhất, phút) do trang tự thêm.
 
 ## Web có gì
-- **🗓 This week** (trang chủ): **📍 Today** (việc hôm nay theo giờ: bài sáng/tối + podcast; bài lỡ tự dời sang hôm nay, tối đa 2 bài/ngày, phần thừa ghi "no rush"), **dải 7 ngày** (✅ xong · ▶ hôm nay · ↪ lỡ), **Your journey** (mọi tuần, số bài đã xong, bấm để xem lại – không bao giờ xoá); chủ đề tuần + ảnh bìa, vì sao chủ đề này, mục tiêu can-do, tiến độ tuần, nút "Continue" (bài chưa làm kế tiếp), thẻ bài có hình (làm thứ tự tuỳ ý), word wall (chạm để lật: nghĩa + ví dụ + audio), bài nghe tự do cùng chủ đề, dải các tuần tới.
-- **📚 Bài học**: danh sách gom theo tuần, vở làm bài, trình nghe MP3, nộp bài, kết quả chấm. Feedback có thêm **độ căng não** (😌 relaxed / 🙂 some / 😵 hard).
+- **🗓 This week** (trang chủ): **thời khoá biểu theo ngày** – dải 7 ngày (bấm 1 ngày để xem kế hoạch ngày đó), **📍 Today** (việc hôm nay theo giờ: bài sáng/tối + podcast; bài lỡ tự dời sang hôm nay, tối đa 2 bài/ngày, phần thừa ghi "no rush"), **dải 7 ngày** (✅ xong · ▶ hôm nay · ↪ lỡ), **Your journey** (mọi tuần, số bài đã xong, bấm để xem lại – không bao giờ xoá); chủ đề tuần + ảnh bìa, vì sao chủ đề này, mục tiêu can-do, tiến độ tuần, nút "Continue" (bài chưa làm kế tiếp), thẻ bài có hình (làm thứ tự tuỳ ý), word wall (chạm để lật: nghĩa + ví dụ + audio), bài nghe tự do cùng chủ đề, dải các tuần tới.
+- **📚 Bài học**: danh sách gom theo tuần → ngày ("Thu, 12/11 · Morning"), vở làm bài, trình nghe MP3, nộp bài, kết quả chấm. Feedback có thêm **độ căng não** (😌 relaxed / 🙂 some / 😵 hard).
 - **👤 Hồ sơ**: CEFR ước lượng từng kỹ năng, giáo viên nhận xét, điểm mạnh / cần cải thiện, sở thích, đang tập trung, nhật ký quyết định ("vì sao bài lại như vậy").
 - **📈 Tiến độ** (bảng huấn luyện): bức tranh hiện tại, gia sư khuyên, giờ học mỗi tuần so với mục tiêu, đang yếu gì + kế hoạch, dự báo tới C1 (chọn giờ/tuần để xem thay đổi), làm được gì ở mỗi mức, biểu đồ mức hiểu, bảng đánh giá từng ngày.
 
@@ -60,6 +60,11 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 3. Chấm theo Tutor Guide; đọc thêm `log` để phân tích quá trình (Tutor Guide 6d). Ghi `data/submissions/<id>.json` (bản chép), `data/grades/<id>.json`; cập nhật `data/lessons.json` (status `graded`, `date` = ngày nộp, `listenPct`, `readPct`, `difficulty`, `strain` = feedback.strain, `minutesActual`, `extraMinutes` = feedback.extra, `note` ngắn) và `data/profile.json` (cefr/levels, strengths, weaknesses, interests, teacher_md, focus_md, decisions, chunk_bank, streak, updatedAt, **coach**, weaknesses có bằng chứng – xem Tutor Guide 6c).
 4. `python3 tools/sync.py` → commit + push → publish (như trên) → `ArtifactData delete inbox/<id>`.
 5. Trả lời trong thread comment + resolve (nếu đến qua comment), hoặc 1–2 dòng trong chat.
+
+## Quy trình XIN NGHỈ (Tân bấm "🙋 Can't study…" ở một ngày)
+- Trang ghi `inbox/leave-<YYYY-MM-DD>` `{type:"leave", date, kind:"off|morning|evening|short", note}` + gửi comment "🙋 Day-off request …" (dự phòng: fire_trigger).
+- Gia sư: sửa `weeks[].days` – ngày đó `off: "<lý do ngắn, tiếng Anh>"` (nghỉ cả ngày) hoặc bớt bài/rút ngắn; **dời bài sang ngày nhẹ sau đó** (≤2 bài/ngày, cuối tuần có thể bỏ bài phụ); cập nhật lịch Google ngày đó → sync → push → publish → `ArtifactData delete inbox/leave-<date>` → trả lời 1 dòng + resolve thread.
+- Bài lỡ mà **không** xin nghỉ: trang tự hiện ở Today với nhãn "missed"; job sáng xếp lại nếu dồn quá 2 bài.
 
 ## Báo bài nộp về gia sư
 - Chính: trang gửi comment **Send to Claude** "📥 Nộp bài <id>" → đánh thức phiên chính (đã kiểm chứng ~3 giây).
