@@ -1073,7 +1073,9 @@ table.days tr.next td{background:var(--accent-soft)}
   const reveal = {}, plays = store.get("plays") || {};
   const getTts = () => (ttsP ||= (window.claude?.use ? claude.use("tts") : Promise.resolve(null)).catch(() => null));
   function playerHtml(id, pi, p){
-    const key = id+"#"+pi, open = !!reveal[key], n = plays[key]||0;
+    const key = id+"#"+pi, n = plays[key]||0;
+    if (reveal[key] === undefined && p.transcript_open) reveal[key] = true;   // nghe kèm lời ngay từ đầu (input-first)
+    const open = !!reveal[key];
     const lines = p.listen.map(x => `<p>${x.who?`<b>${esc(x.who)}:</b> `:""}${esc(x.text)}</p>`).join("");
     if (p.audio) return `<div class="player compact" data-key="${esc(key)}" data-pi="${pi}">
       <div class="pl-row"><audio class="pl-au" preload="none" src="${esc(p.audio)}" controls></audio>

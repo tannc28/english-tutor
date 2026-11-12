@@ -87,7 +87,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | T1 · B1 | 2026-11-11 | Starting point – full assessment | graded | 60% | 88% | 3 | 90 | – | Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k |
 | T1 · B2 | 2026-11-12 | Small words you can't hear + Hope Street | graded | 80% | 100% | 2 | 25 | – | 17/17 · dictation exact · nghe lần đầu ~80% · Tân: muốn ít test, nhiều input + giải thích |
 | T1 · B3 | – | Linking words + The Café & AI chatbots | open | – | – | – | – | – |  |
-| T1 · B4 | – | First day at work – meeting the team | open | – | – | – | – | – |  |
+| T1 · B4 | – | First day at work – listen & read | open | – | – | – | – | – |  |
 | T1 · B5 | – | Getting around – directions & the tram | open | – | – | – | – | – |  |
 | T1 · B6 | – | Weekend review – the story so far | open | – | – | – | – | – |  |
 | T1 · B7 | – | 'Watching the Grass Grow' Is Not Fun | open | – | – | – | – | – |  |
