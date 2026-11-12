@@ -304,6 +304,7 @@ body.sheet-open .book{padding-bottom:62vh}
 .rv-hero{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.rv-hero h2{margin:4px 0}
 #rv-q{width:100%;margin:12px 0 8px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--surface);color:var(--ink)}
 .rv-tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}.rv-tabs .tbtn{white-space:nowrap}
+.w-h{display:flex;align-items:center;gap:6px;justify-content:space-between}.say{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;border-radius:50%;background:var(--surface-2,rgba(127,127,127,.12));font-size:1rem;cursor:pointer;flex:none;user-select:none;-webkit-tap-highlight-color:transparent}.say:active{transform:scale(.92)}
 .rv-words{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;align-items:start}
 .rv-w{display:flex;flex-direction:column;gap:6px;text-align:left;padding:0 0 10px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer;overflow:hidden}
 .rv-w img{width:100%;aspect-ratio:4/3;object-fit:cover}
@@ -1500,7 +1501,7 @@ table.days tr.next td{background:var(--accent-soft)}
       ${(w.words||[]).length?`<section class="card sec"><span class="label">Word wall – tap a card</span>
         <div class="ww">${w.words.map((x,i)=>`<button type="button" class="wcard" data-i="${i}">
           ${x.img?`<img src="${esc(x.img)}" alt="" loading="lazy">`:""}
-          <b>${esc(x.w)}</b>${x.ipa?`<span class="ipa wipa">${esc(x.ipa)}${x.ipa_us && x.ipa_us!==x.ipa?` · US ${esc(x.ipa_us)}`:""}</span>`:""}
+          <span class="w-h"><b>${esc(x.w)}</b>${sayBtn(x.audio)}</span>${ipaHtml(x, "wipa")}
           <span class="wback">${inline(x.def||"")}${x.ex?`<i>“${esc(x.ex)}”</i>`:""}${x.vi?`<span class="note">🇻🇳 ${esc(x.vi)}</span>`:""}</span>
         </button>`).join("")}</div></section>`:""}
       ${(w.listen||[]).length?`<section class="card sec"><span class="label">Free listening this week – same theme</span>
@@ -1509,10 +1510,11 @@ table.days tr.next td{background:var(--accent-soft)}
           <b>${esc(it.title||"")}</b>${it.why?`<div class="md">${inline(it.why)}</div>`:""}
           <div class="pli-b">${listenBtns(it)}</div></div>`).join("")}</div></section>`:""}
       ${others.length?`<section class="card sec"><span class="label">Your journey – all weeks</span><div class="wk-road">${weeks.map(x=>`<button type="button" class="wk-chip ${x.no===w.no?"on":""} ${esc(x.status||"")}" data-w="${esc(x.no)}"><span class="note mono">W${esc(x.no)} · ${esc(fmtDate(x.start))}</span><b>${esc(x.theme||"")}</b><span class="note">${(()=>{const ls=lessons.filter(l=>l.week===x.no); return ls.length ? `${ls.filter(l=>DONE(statusOf(l))).length}/${ls.length} lessons done` : (x.status==="planned"?"coming soon":"");})()}</span></button>`).join("")}</div><p class="note">Tap a week to look back at it – nothing is ever deleted. Every lesson, answer and grade stays in 📚 Lessons too.</p></section>`:""}`;
+    warmWords(w.words);
     v.querySelectorAll(".wcard").forEach(c => c.addEventListener("click", () => {
       c.classList.toggle("flip");
       const x = w.words[Number(c.dataset.i)];
-      if (x?.audio && c.classList.contains("flip")){ try { wordAudio?.pause(); wordAudio = new Audio(x.audio); wordAudio.play().catch(()=>{}); } catch {} }
+      if (x?.audio && c.classList.contains("flip")) playWord(x.audio);
     }));
     const tg = $("#wk-tg-list"); if (tg) loadLevels().then(() => { const all = LV.levels.flatMap(l => l.sections.flatMap(x => x.items)); tg.innerHTML = tg.dataset.ids.split(",").map(id => { const it = all.find(x => x.id === id), t = MA.items[id]?.tutor || "unknown"; return it ? `<a class="wk-tgi" href="#level" title="${esc(ST[t][1])}">${ST[t][0]} ${esc(id)} · ${inline(it.text).replace(/<[^>]+>/g,"").slice(0,60)}</a>` : ""; }).join(""); }).catch(()=>{});
     v.querySelectorAll(".wk-chip").forEach(b => b.addEventListener("click", () => { weekSel = Number(b.dataset.w); daySel = null; renderWeek(); }));
@@ -1646,7 +1648,7 @@ table.days tr.next td{background:var(--accent-soft)}
       body = `<div class="rv-types">${types.map(t => `<button type="button" class="stab rv-ty" data-ty="${esc(t)}" aria-current="${rvType===t?"page":"false"}">${t==="all"?"All":`${TYPE_ICON[t]||""} ${esc(t)}`} <span class="note">${t==="all"?words.length:words.filter(w => (w.type||"word")===t).length}</span></button>`).join("")}</div>
         <div class="rv-words">${list.map(w => { const r = srsOf(w), st = !r ? "new" : r.step >= 3 ? "known" : r.due <= todayStr() ? "due" : "learning";
         return `<button type="button" class="rv-w" data-w="${esc(w.w)}">${w.img?`<img src="${esc(w.img)}" alt="" loading="lazy">`:`<span class="rv-noimg">${TYPE_ICON[w.type]||"📝"}</span>`}
-          <span class="rv-wt"><b>${esc(w.w)}</b>${w.ipa?`<span class="ipa">${esc(w.ipa)}${w.ipa_us && w.ipa_us!==w.ipa?` · US ${esc(w.ipa_us)}`:""}</span>`:""}<span class="pill rv-${st}">${{new:"new",due:"review today",learning:"learning",known:"known ✓"}[st]}</span></span>
+          <span class="rv-wt"><span class="w-h"><b>${esc(w.w)}</b>${sayBtn(w.audio)}</span>${ipaHtml(w)}<span class="pill rv-${st}">${{new:"new",due:"review today",learning:"learning",known:"known ✓"}[st]}</span></span>
           <span class="rv-wd"><span class="pill rv-type">${TYPE_ICON[w.type]||""} ${esc(w.type||"word")}</span>${w.def?inline(w.def):""}${w.ex?`<i>“${esc(w.ex)}”</i>`:""}${w.vi?`<span class="note">🇻🇳 ${esc(w.vi)}</span>`:""}${w.week?`<span class="note">Week ${esc(w.week)}</span>`:""}</span></button>`; }).join("") || `<p class="note">Nothing matches “${esc(rvQ)}”.</p>`}</div>`;
     } else if (rvTab === "grammar"){
       body = `<div class="gr-list">${(LIB.grammar||[]).filter(g => hit(g.title)||hit(g.pattern)||hit(g.rule)||(g.examples||[]).some(hit)).map(g => {
@@ -1689,6 +1691,7 @@ table.days tr.next td{background:var(--accent-soft)}
     $("#fc-start")?.addEventListener("click", () => { const pool = words.filter(isDue).sort((a,b) => (srsOf(a)?1:0)-(srsOf(b)?1:0) || String(srsOf(a)?.due||"").localeCompare(String(srsOf(b)?.due||""))); fc = {cards: pool.slice(0,10), i:0, flip:false, ok:0}; renderReview(); });
     const qi = $("#rv-q"); qi?.addEventListener("input", () => { rvQ = qi.value; const pos = qi.selectionStart; renderReview().then(() => { const n = $("#rv-q"); n?.focus(); try { n.setSelectionRange(pos,pos); } catch {} }); });
     v.querySelectorAll(".rv-tabs [data-t]").forEach(b => b.addEventListener("click", () => { rvTab = b.dataset.t; renderReview(); }));
+    warmWords(fc && fc.deck !== "g" ? fc.cards.slice(fc.i, fc.i + 3) : words.slice(0, 60));
     v.querySelectorAll(".rv-w").forEach(b => b.addEventListener("click", () => { b.classList.toggle("open"); const w = words.find(x => x.w === b.dataset.w); if (w?.audio && b.classList.contains("open")) playWord(w.audio); }));
     v.querySelector(".fc-card")?.addEventListener("click", () => { fc.flip = !fc.flip; if (fc.flip && fc.deck !== "g"){ const w = fc.cards[fc.i]; if (w.audio) playWord(w.audio); } renderReview(); });
     v.querySelectorAll(".fc-b [data-r]").forEach(b => b.addEventListener("click", ev => { ev.stopPropagation(); const w = fc.cards[fc.i], key = fc.deck === "g" ? w.key : w.w, r = (SC.srs ||= {})[key] || {step:-1};
@@ -1697,7 +1700,16 @@ table.days tr.next td{background:var(--accent-soft)}
       saveSC(); fc.i++; fc.flip = false; renderReview(); }));
     $("#fc-end")?.addEventListener("click", () => { fc = null; renderReview(); });
   }
-  function playWord(src){ try { rvAudio?.pause(); rvAudio = new Audio(src); rvAudio.play().catch(()=>{}); } catch {} }
+  // Audio từ vựng: tải trước thành blob (bấm là phát ngay, cả trên iPhone), nút 🔊 nghe lại bất cứ lúc nào
+  const WAUD = {}, WURL = {};
+  function warmWord(src){ if (!src || WAUD[src]) return; WAUD[src] = fetch(src).then(r => r.ok ? r.blob() : Promise.reject()).then(b => { WURL[src] = URL.createObjectURL(b); }).catch(() => {}); }
+  function warmWords(list){ (list||[]).forEach(w => warmWord(w?.audio)); }
+  function playWord(src){ if (!src) return; try { rvAudio?.pause(); rvAudio = new Audio(WURL[src] || src); rvAudio.play().catch(()=>{}); if (!WURL[src]) warmWord(src); } catch {} }
+  function sayBtn(src){ return src ? `<span class="say" role="button" tabindex="0" data-say="${esc(src)}" aria-label="Listen" title="Listen">🔊</span>` : ""; }
+  function ipaHtml(w, cls=""){ if (!w.ipa && !w.ipa_us) return ""; const us = w.ipa_us || w.ipa, uk = w.ipa;
+    return `<span class="ipa ${cls}">US ${esc(us)}${uk && uk !== us ? ` · UK ${esc(uk)}` : ""}</span>`; }
+  document.addEventListener("click", ev => { const b = ev.target.closest?.(".say"); if (!b) return; ev.stopPropagation(); ev.preventDefault(); playWord(b.dataset.say); }, true);
+  document.addEventListener("keydown", ev => { const b = ev.target.closest?.(".say"); if (b && (ev.key === "Enter" || ev.key === " ")){ ev.preventDefault(); ev.stopPropagation(); playWord(b.dataset.say); } }, true);
   function flashcardHtml(){
     if (fc.i >= fc.cards.length) return `<div class="fc-done"><div class="wc-big">🎉</div><b>Done! ${fc.ok} card${fc.ok===1?"":"s"} remembered.</b><p class="note">They'll come back later, just before you forget them.</p><button type="button" class="primary" id="fc-end">Back to Review</button></div>`;
     const w = fc.cards[fc.i];
@@ -1708,7 +1720,7 @@ table.days tr.next td{background:var(--accent-soft)}
       <button type="button" class="linkbtn" id="fc-end">Stop</button></div>`;
     return `<div class="fc"><span class="note mono">${fc.i+1} / ${fc.cards.length} · tap the card to flip</span>
       <button type="button" class="fc-card ${fc.flip?"flip":""}">
-        ${w.img?`<img src="${esc(w.img)}" alt="">`:`<span class="rv-noimg fc-noimg">${TYPE_ICON[w.type]||"📝"}</span>`}<span class="note">${TYPE_ICON[w.type]||""} ${esc(w.type||"word")}</span><b class="fc-w">${esc(w.w)}</b>${w.ipa?`<span class="ipa">${esc(w.ipa)}${w.ipa_us && w.ipa_us!==w.ipa?` · US ${esc(w.ipa_us)}`:""}</span>`:""}
+        ${w.img?`<img src="${esc(w.img)}" alt="">`:`<span class="rv-noimg fc-noimg">${TYPE_ICON[w.type]||"📝"}</span>`}<span class="note">${TYPE_ICON[w.type]||""} ${esc(w.type||"word")}</span><span class="w-h"><b class="fc-w">${esc(w.w)}</b>${sayBtn(w.audio)}</span>${ipaHtml(w)}
         ${fc.flip ? `<span class="fc-back">${w.def?`<span>${inline(w.def)}</span>`:""}${w.ex?`<i>“${esc(w.ex)}”</i>`:""}${w.vi?`<span class="note">🇻🇳 ${esc(w.vi)}</span>`:""}</span>` : `<span class="note">What does it mean? Think, then tap.</span>`}
       </button>
       ${fc.flip ? `<div class="fc-b"><button type="button" class="ghost" data-r="again">🔁 Again</button><button type="button" class="primary" data-r="ok">✅ Got it</button></div>` : ""}

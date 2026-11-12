@@ -12,7 +12,9 @@ Giọng (thư mục PIPER_DIR, mặc định /root/piper; tải ở tools/audio_
 import io, json, os, re, subprocess, sys, wave
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PIPER = os.environ.get("PIPER_DIR", "/root/piper")
-VOICE = {"rounded": "en_GB-alan-medium", "glassy": "en_GB-alba-medium", "buttery": "en_US-lessac-medium", "airy": "en_US-lessac-medium"}
+VOICE = {"rounded": "en_GB-alan-medium", "glassy": "en_GB-alba-medium", "buttery": "en_US-lessac-medium", "airy": "en_US-lessac-medium",
+         "us_f": "en_US-lessac-medium", "us_m": "en_US-ryan-medium"}
+# Mặc định giọng MỸ (Tân chọn 12/11): từ = us_f, câu ví dụ = us_m; bài không ghi voice → buttery (Mỹ).
 _cache = {}
 
 def voice(name):
@@ -46,24 +48,32 @@ def render(lid):
         print(f"{lid} part {pi+1}: {p['audio']} ({os.path.getsize(mp3)//1024} KB)")
     json.dump(L, open(path, "w"), ensure_ascii=False, indent=1)
 
-def render_words(no):
+def render_words(no, force=False):
     W = json.load(open(os.path.join(ROOT, "data", "weeks.json")))
     w = [x for x in W["weeks"] if x["no"] == no][0]
     extra = json.load(open(os.path.join(ROOT, "data", "words.json")))["words"] if os.path.exists(os.path.join(ROOT, "data", "words.json")) else []
-    for x in w.get("words", []) + [e for e in extra if e.get("week") == no]:
-        if x.get("audio") and os.path.exists(os.path.join(ROOT, x["audio"])): continue
+    items = w.get("words", []) + [e for e in extra if e.get("week") == no]
+    for x in items:
         if not x.get("audio"): continue
+        if not x["audio"].endswith("-us.mp3"):   # đổi tên file khi đổi sang giọng Mỹ (tránh cache bản cũ)
+            x["audio"] = x["audio"][:-4] + "-us.mp3"
+        if os.path.exists(os.path.join(ROOT, x["audio"])) and not force: continue
         out = os.path.join(ROOT, x["audio"]); os.makedirs(os.path.dirname(out), exist_ok=True)
-        sr, a = pcm(re.sub(r"\bsb\b", "somebody", re.sub(r"\bsth\b", "something", x["w"])).replace("+ V-ing", "").replace("…", "").replace("+ time", ""), VOICE["glassy"])
-        _, b = pcm(x.get("ex", ""), VOICE["rounded"]) if x.get("ex") else (sr, b"")
+        sr, a = pcm(re.sub(r"\bsb\b", "somebody", re.sub(r"\bsth\b", "something", x["w"])).replace("+ V-ing", "").replace("…", "").replace("+ time", ""), VOICE["us_f"])
+        _, b = pcm(x.get("ex", ""), VOICE["us_m"]) if x.get("ex") else (sr, b"")
         wav = out[:-4] + ".wav"
         with wave.open(wav, "wb") as f:
             f.setnchannels(1); f.setsampwidth(2); f.setframerate(sr); f.writeframes(a + b"\0\0" * int(sr * 0.6) + b)
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav, "-ac", "1", "-b:a", "48k", out], check=True); os.remove(wav)
-    print(f"week {no}: {len(w.get('words', []))} word audios")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav, "-af", "silenceremove=start_periods=1:start_threshold=-45dB",
+                        "-ac", "1", "-b:a", "48k", out], check=True); os.remove(wav)
+    json.dump(W, open(os.path.join(ROOT, "data", "weeks.json"), "w"), ensure_ascii=False, indent=1)
+    if extra:
+        WJ = json.load(open(os.path.join(ROOT, "data", "words.json"))); WJ["words"] = extra
+        json.dump(WJ, open(os.path.join(ROOT, "data", "words.json"), "w"), ensure_ascii=False, indent=1)
+    print(f"week {no}: {len(items)} word audios")
 
 if __name__ == "__main__":
     ids = sys.argv[1:]
-    if ids[:1] == ["--words"]: render_words(int(ids[1])); sys.exit()
+    if ids[:1] == ["--words"]: render_words(int(ids[1]), "--force" in ids); sys.exit()
     if ids == ["--all"]: ids = [f[:-5] for f in sorted(os.listdir(os.path.join(ROOT, "data", "lessons"))) if f.endswith(".json")]
     for i in ids: render(i)

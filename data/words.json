@@ -8,7 +8,7 @@
    "vi": "làm nghề …",
    "week": 1,
    "img": "data/img/w1/x-work-as-a.webp",
-   "audio": "data/audio/w1/words/x-work-as-a.mp3",
+   "audio": "data/audio/w1/words/x-work-as-a-us.mp3",
    "ipa": "/wɜːk əz ə/",
    "ipa_us": "/wɜːk əz ə/",
    "scene": "Nam as a designer at a big screen with colour swatches and drawing tablet."
@@ -21,7 +21,7 @@
    "vi": "chịu trách nhiệm về …",
    "week": 1,
    "img": "data/img/w1/x-be-responsible-for.webp",
-   "audio": "data/audio/w1/words/x-be-responsible-for.mp3",
+   "audio": "data/audio/w1/words/x-be-responsible-for-us.mp3",
    "ipa": "/bi rɪˈspɒnsɪbəl fə/",
    "ipa_us": "/bi rᵻˈspɑːnsᵻbəl fər/",
    "scene": "Claire standing in front of her small team (Nam, Tom, two others) with a clipboard, leading them."
@@ -34,7 +34,7 @@
    "vi": "làm (việc/dự án)",
    "week": 1,
    "img": "data/img/w1/x-work-on.webp",
-   "audio": "data/audio/w1/words/x-work-on.mp3",
+   "audio": "data/audio/w1/words/x-work-on-us.mp3",
    "ipa": "/wɜːk ɒn/",
    "ipa_us": "/wɜːk ɔn/",
    "scene": "Tom concentrating on building a website on his laptop, sticky notes around the screen."
@@ -47,7 +47,7 @@
    "vi": "mất (bao lâu)",
    "week": 1,
    "img": "data/img/w1/x-it-takes--time.webp",
-   "audio": "data/audio/w1/words/x-it-takes--time.mp3",
+   "audio": "data/audio/w1/words/x-it-takes--time-us.mp3",
    "ipa": "/ɪt teɪks taɪm/",
    "ipa_us": "/ɪt teɪks taɪm/",
    "scene": "Nam walking from a small house to an office building along a path, with a big clock above the path showing 20 minutes as a coloured arc."
@@ -60,7 +60,7 @@
    "vi": "dành thời gian (làm gì)",
    "week": 1,
    "img": "data/img/w1/x-spend-time-doing.webp",
-   "audio": "data/audio/w1/words/x-spend-time-doing.mp3",
+   "audio": "data/audio/w1/words/x-spend-time-doing-us.mp3",
    "ipa": "/spend taɪm/",
    "ipa_us": "/spend taɪm/",
    "scene": "Nam at a laptop trying to log in (padlock on screen), an hourglass beside him almost empty – an hour spent."
@@ -73,7 +73,7 @@
    "vi": "mỗi ngày / thường ngày",
    "week": 1,
    "img": "data/img/w1/x-every-day-vs-everyday.svg",
-   "audio": "data/audio/w1/words/x-every-day-vs-everyday.mp3",
+   "audio": "data/audio/w1/words/x-every-day-vs-everyday-us.mp3",
    "ipa": "/ˈevrɪ deɪ ˌviːˈes ˈevrɪˌdeɪ/",
    "ipa_us": "/ˈevri deɪ ˌviːˈes ˈevrɪˌdeɪ/",
    "scene": "Left: a wall calendar with every day ticked and a coffee cup; right: simple everyday clothes (t-shirt, jeans) on a chair – each day vs normal things."
@@ -86,7 +86,7 @@
    "vi": "mặc dù",
    "week": 1,
    "img": "data/img/w1/x-although.webp",
-   "audio": "data/audio/w1/words/x-although.mp3",
+   "audio": "data/audio/w1/words/x-although-us.mp3",
    "ipa": "/ɔːlˈðəʊ/",
    "ipa_us": "/ɔːlˈðoʊ/",
    "scene": "Nam looks very tired (droopy eyes, small zz shapes) BUT still carries a big box up the stairs for Margaret – show tired + helping in one scene."
@@ -99,7 +99,7 @@
    "vi": "mặc dù (nhấn mạnh)",
    "week": 1,
    "img": "data/img/w1/x-even-though.webp",
-   "audio": "data/audio/w1/words/x-even-though.mp3",
+   "audio": "data/audio/w1/words/x-even-though-us.mp3",
    "ipa": "/ˈiːvən ðəʊ/",
    "ipa_us": "/ˈiːvən ðoʊ/",
    "scene": "Heavy rain falling, yet two friends walk happily together under umbrellas, smiling – rain + still happy."
@@ -112,7 +112,7 @@
    "vi": "tuy nhiên",
    "week": 1,
    "img": "data/img/w1/x-however.svg",
-   "audio": "data/audio/w1/words/x-however.mp3",
+   "audio": "data/audio/w1/words/x-however-us.mp3",
    "ipa": "/haʊˈevə/",
    "ipa_us": "/haʊˈevər/",
    "scene": "Left: a cute robot proudly pointing at a board with an answer; right: the board shows a big red X – it sounded right, but it was wrong."
@@ -125,7 +125,7 @@
    "vi": "vậy mà",
    "week": 1,
    "img": "data/img/w1/x-yet.webp",
-   "audio": "data/audio/w1/words/x-yet.mp3",
+   "audio": "data/audio/w1/words/x-yet-us.mp3",
    "ipa": "/jet/",
    "ipa_us": "/jet/",
    "scene": "A tiny café building that is completely full of people inside and a queue outside – small, yet full."
@@ -138,7 +138,7 @@
    "vi": "thay vào đó",
    "week": 1,
    "img": "data/img/w1/x-rather.svg",
-   "audio": "data/audio/w1/words/x-rather.mp3",
+   "audio": "data/audio/w1/words/x-rather-us.mp3",
    "ipa": "/ˈrɑːðə/",
    "ipa_us": "/ˈræðər/",
    "scene": "Left: a phone with a chat bubble crossed out; right: Nam talking on the phone, smiling – not texting, calling instead."
@@ -151,7 +151,7 @@
    "vi": "trừ khi / nếu không",
    "week": 1,
    "img": "data/img/w1/x-unless.svg",
-   "audio": "data/audio/w1/words/x-unless.mp3",
+   "audio": "data/audio/w1/words/x-unless-us.mp3",
    "ipa": "/ʌnˈles/",
    "ipa_us": "/ʌnˈles/",
    "scene": "Two panels: left: bedroom with lamp on, Nam awake and annoyed in bed; right: same room dark with moon in window, Nam sleeping peacefully."
@@ -164,7 +164,7 @@
    "vi": "nói cách khác",
    "week": 1,
    "img": "data/img/w1/x-in-other-words.svg",
-   "audio": "data/audio/w1/words/x-in-other-words.mp3",
+   "audio": "data/audio/w1/words/x-in-other-words-us.mp3",
    "ipa": "/ɪn ˈʌðə wɜːdz/",
    "ipa_us": "/ɪn ˈʌðər wɜːdz/",
    "scene": "Two panels showing the same idea twice: left: an archery target on wheels rolling away; right: a goal flag that keeps jumping to new places with dotted arrows."
@@ -177,7 +177,7 @@
    "vi": "vồ lấy, tận dụng ngay",
    "week": 1,
    "img": "data/img/w1/x-seize-upon-sth.webp",
-   "audio": "data/audio/w1/words/x-seize-upon-sth.mp3",
+   "audio": "data/audio/w1/words/x-seize-upon-sth-us.mp3",
    "ipa": "/siːz əˈpɒn ˈsʌmθɪŋ/",
    "ipa_us": "/siːz əˈpɑːn ˈsʌmθɪŋ/",
    "scene": "Reporters with microphones rushing eagerly towards a scientist holding a new report."
@@ -190,7 +190,7 @@
    "vi": "bỏ cuộc",
    "week": 1,
    "img": "data/img/w1/x-pack-it-in.svg",
-   "audio": "data/audio/w1/words/x-pack-it-in.mp3",
+   "audio": "data/audio/w1/words/x-pack-it-in-us.mp3",
    "ipa": "/pæk ɪt ɪn/",
    "ipa_us": "/pæk ɪt ɪn/",
    "scene": "Two panels: left: a person at a piano, frustrated, about to close the lid; right: the same person still playing, determined."
@@ -203,7 +203,7 @@
    "vi": "Dạo này thế nào?",
    "week": 1,
    "img": "data/img/w1/x-how-s-it-going.webp",
-   "audio": "data/audio/w1/words/x-how-s-it-going.mp3",
+   "audio": "data/audio/w1/words/x-how-s-it-going-us.mp3",
    "ipa": "/haʊz ɪt ˈɡəʊɪŋ/",
    "ipa_us": "/haʊz ɪt ˈɡoʊɪŋ/",
    "scene": "Tom waving hello to Nam in an office corridor, both smiling."
@@ -216,7 +216,7 @@
    "vi": "tới giờ vẫn ổn",
    "week": 1,
    "img": "data/img/w1/x-so-far-so-good.webp",
-   "audio": "data/audio/w1/words/x-so-far-so-good.mp3",
+   "audio": "data/audio/w1/words/x-so-far-so-good-us.mp3",
    "ipa": "/səʊ fɑː səʊ ɡʊd/",
    "ipa_us": "/soʊ fɑːr soʊ ɡʊd/",
    "scene": "Nam on his first day at a bright office, giving a thumbs up, with a short path behind him (progress) and the path ahead still long."
@@ -229,7 +229,7 @@
    "vi": "báo cho tôi biết",
    "week": 1,
    "img": "data/img/w1/x-let-me-know.webp",
-   "audio": "data/audio/w1/words/x-let-me-know.mp3",
+   "audio": "data/audio/w1/words/x-let-me-know-us.mp3",
    "ipa": "/let miː nəʊ/",
    "ipa_us": "/let miː noʊ/",
    "scene": "Tom at the office smiling and pointing to himself with an open hand, Nam asking with a small question-mark shape bubble (no letters)."
@@ -242,7 +242,7 @@
    "vi": "quen tay, nắm được cách làm",
    "week": 1,
    "img": "data/img/w1/x-get-the-hang-of-sth.svg",
-   "audio": "data/audio/w1/words/x-get-the-hang-of-sth.mp3",
+   "audio": "data/audio/w1/words/x-get-the-hang-of-sth-us.mp3",
    "ipa": "/ɡet ðə hæŋ əv ˈsʌmθɪŋ/",
    "ipa_us": "/ɡet ðə hæŋ əv ˈsʌmθɪŋ/",
    "scene": "Two panels: left: Nam wobbling nervously on a bicycle; right: Nam riding confidently and smiling."
@@ -255,7 +255,7 @@
    "vi": "mình rất muốn",
    "week": 1,
    "img": "data/img/w1/x-i-d-love-sth.webp",
-   "audio": "data/audio/w1/words/x-i-d-love-sth.mp3",
+   "audio": "data/audio/w1/words/x-i-d-love-sth-us.mp3",
    "ipa": "/aɪd lʌv/",
    "ipa_us": "/aɪd lʌv/",
    "scene": "Jess at a café counter offering a cup of coffee, Nam with sparkling happy eyes reaching for it."
@@ -268,7 +268,7 @@
    "vi": "nhân tiện",
    "week": 1,
    "img": "data/img/w1/x-by-the-way.webp",
-   "audio": "data/audio/w1/words/x-by-the-way.mp3",
+   "audio": "data/audio/w1/words/x-by-the-way-us.mp3",
    "ipa": "/baɪ ðə weɪ/",
    "ipa_us": "/baɪ ðə weɪ/",
    "scene": "Claire and Nam talking at an office desk with documents; Nam turns and points to a small kitchen door with a coffee cup sign (no text) – switching to a new small topic."
@@ -281,7 +281,7 @@
    "vi": "đối diện",
    "week": 1,
    "img": "data/img/w1/x-opposite.webp",
-   "audio": "data/audio/w1/words/x-opposite.mp3",
+   "audio": "data/audio/w1/words/x-opposite-us.mp3",
    "ipa": "/ˈɒpəˌzɪt/",
    "ipa_us": "/ˈɑːpəˌzɪt/",
    "scene": "A street with a tram stop on one side and a church directly across the street on the other side, a dotted line connecting them across the road."
@@ -294,7 +294,7 @@
    "vi": "bên cạnh",
    "week": 1,
    "img": "data/img/w1/x-next-to.webp",
-   "audio": "data/audio/w1/words/x-next-to.mp3",
+   "audio": "data/audio/w1/words/x-next-to-us.mp3",
    "ipa": "/nekst tə/",
    "ipa_us": "/nekst tə/",
    "scene": "A phone shop and a bank standing right side by side on a street."
@@ -307,7 +307,7 @@
    "vi": "rẽ trái / phải",
    "week": 1,
    "img": "data/img/w1/x-turn-left--right.svg",
-   "audio": "data/audio/w1/words/x-turn-left--right.mp3",
+   "audio": "data/audio/w1/words/x-turn-left--right-us.mp3",
    "ipa": "/tɜːn left raɪt/",
    "ipa_us": "/tɜːn left raɪt/",
    "scene": "Nam coming out of a café door at a street corner, a big curved arrow showing him turning left."
@@ -320,7 +320,7 @@
    "vi": "đi qua",
    "week": 1,
    "img": "data/img/w1/x-go-past.webp",
-   "audio": "data/audio/w1/words/x-go-past.mp3",
+   "audio": "data/audio/w1/words/x-go-past-us.mp3",
    "ipa": "/ɡəʊ pæst/",
    "ipa_us": "/ɡoʊ pæst/"
   },
@@ -332,7 +332,7 @@
    "vi": "lên xe / xuống xe",
    "week": 1,
    "img": "data/img/w1/x-get-on--get-off.webp",
-   "audio": "data/audio/w1/words/x-get-on--get-off.mp3",
+   "audio": "data/audio/w1/words/x-get-on--get-off-us.mp3",
    "ipa": "/ɡet ɒn ɡet ɒf/",
    "ipa_us": "/ɡet ɔn ɡet ɔf/"
   },
@@ -344,7 +344,7 @@
    "vi": "đi bộ mười phút",
    "week": 1,
    "img": "data/img/w1/x-a-ten-minute-walk.webp",
-   "audio": "data/audio/w1/words/x-a-ten-minute-walk.mp3",
+   "audio": "data/audio/w1/words/x-a-ten-minute-walk-us.mp3",
    "ipa": "/ə ten ˈmɪnɪt wɔːk/",
    "ipa_us": "/ə ten ˈmɪnɪt wɔːk/",
    "scene": "Nam walking along a street with a dotted path to a building, a small stopwatch icon showing a 10-minute sector."
@@ -357,7 +357,7 @@
    "vi": "dễ tìm lắm",
    "week": 1,
    "img": "data/img/w1/x-you-can-t-miss-it.webp",
-   "audio": "data/audio/w1/words/x-you-can-t-miss-it.mp3",
+   "audio": "data/audio/w1/words/x-you-can-t-miss-it-us.mp3",
    "ipa": "/jə kɑːnt mɪs ɪt/",
    "ipa_us": "/jə kænt mɪs ɪt/",
    "scene": "A huge church at the end of a small street, very easy to see, Nam looking at it with a surprised smile."
@@ -370,7 +370,7 @@
    "vi": "hiểu rồi",
    "week": 1,
    "img": "data/img/w1/x-got-it.webp",
-   "audio": "data/audio/w1/words/x-got-it.mp3",
+   "audio": "data/audio/w1/words/x-got-it-us.mp3",
    "ipa": "/ɡɒt ɪt/",
    "ipa_us": "/ɡɑːt ɪt/",
    "scene": "Jess pointing left towards a church on a street map gesture, Nam nodding with an OK hand sign."
@@ -383,7 +383,7 @@
    "vi": "dọn đến ở",
    "week": 1,
    "img": "data/img/w1/x-move-in.webp",
-   "audio": "data/audio/w1/words/x-move-in.mp3",
+   "audio": "data/audio/w1/words/x-move-in-us.mp3",
    "ipa": "/muːv ɪn/",
    "ipa_us": "/muːv ɪn/"
   },
@@ -395,7 +395,7 @@
    "vi": "thấy như ở nhà",
    "week": 1,
    "img": "data/img/w1/x-feel-at-home.webp",
-   "audio": "data/audio/w1/words/x-feel-at-home.mp3",
+   "audio": "data/audio/w1/words/x-feel-at-home-us.mp3",
    "ipa": "/fiːl ət həʊm/",
    "ipa_us": "/fiːl ət hoʊm/"
   },
@@ -407,7 +407,7 @@
    "vi": "mình nên (làm) thì hơn",
    "week": 1,
    "img": "data/img/w1/x-i-d-better-do.webp",
-   "audio": "data/audio/w1/words/x-i-d-better-do.mp3",
+   "audio": "data/audio/w1/words/x-i-d-better-do-us.mp3",
    "ipa": "/aɪd ˈbetə/",
    "ipa_us": "/aɪd ˈbetər/",
    "scene": "Late evening, a wall clock at 11, Nam putting on his jacket and hurrying to the door."
@@ -420,7 +420,7 @@
    "vi": "chán như con gián",
    "week": 1,
    "img": "data/img/w1/x-like-watching-grass-grow.webp",
-   "audio": "data/audio/w1/words/x-like-watching-grass-grow.mp3",
+   "audio": "data/audio/w1/words/x-like-watching-grass-grow-us.mp3",
    "ipa": "/laɪk ˈwɒtʃɪŋ ɡræs ɡrəʊ/",
    "ipa_us": "/laɪk ˈwɑːtʃɪŋ ɡræs ɡroʊ/"
   },
@@ -432,7 +432,7 @@
    "vi": "tẻ nhạt",
    "week": 1,
    "img": "data/img/w1/x-tedious.webp",
-   "audio": "data/audio/w1/words/x-tedious.mp3",
+   "audio": "data/audio/w1/words/x-tedious-us.mp3",
    "ipa": "/ˈtiːdiəs/",
    "ipa_us": "/ˈtiːdiəs/"
   },
@@ -444,7 +444,7 @@
    "vi": "bận rộn suốt",
    "week": 1,
    "img": "data/img/w1/x-on-the-go.webp",
-   "audio": "data/audio/w1/words/x-on-the-go.mp3",
+   "audio": "data/audio/w1/words/x-on-the-go-us.mp3",
    "ipa": "/ɒn ðə ɡəʊ/",
    "ipa_us": "/ɔn ðə ɡoʊ/"
   },
@@ -456,7 +456,7 @@
    "vi": "đừng chần chừ",
    "week": 1,
    "img": "data/img/w1/x-don-t-let-the-grass-grow-under-your-feet.webp",
-   "audio": "data/audio/w1/words/x-don-t-let-the-grass-grow-under-your-feet.mp3",
+   "audio": "data/audio/w1/words/x-don-t-let-the-grass-grow-under-your-feet-us.mp3",
    "ipa": "/dəʊnt let ðə ɡræs ɡrəʊ ˈʌndə jə fiːt/",
    "ipa_us": "/doʊnt let ðə ɡræs ɡroʊ ˈʌndər jə fiːt/"
   },
@@ -468,7 +468,7 @@
    "vi": "việc phải làm",
    "week": 1,
    "img": "data/img/w1/x-on-your-plate.svg",
-   "audio": "data/audio/w1/words/x-on-your-plate.mp3",
+   "audio": "data/audio/w1/words/x-on-your-plate-us.mp3",
    "ipa": "/ɒn jə pleɪt/",
    "ipa_us": "/ɔn jə pleɪt/",
    "scene": "A big dinner plate on a table piled with tiny objects: a laptop, papers, a phone, a calendar – too many things to do."
@@ -481,7 +481,7 @@
    "vi": "quá tải, choáng ngợp",
    "week": 1,
    "img": "data/img/w1/x-overwhelmed.webp",
-   "audio": "data/audio/w1/words/x-overwhelmed.mp3",
+   "audio": "data/audio/w1/words/x-overwhelmed-us.mp3",
    "ipa": "/ˌəʊvəˈwelmd/",
    "ipa_us": "/ˌoʊvərˈwelmd/"
   },
@@ -493,7 +493,7 @@
    "vi": "ôm đồm quá nhiều",
    "week": 1,
    "img": "data/img/w1/x-spread-yourself-too-thin.webp",
-   "audio": "data/audio/w1/words/x-spread-yourself-too-thin.mp3",
+   "audio": "data/audio/w1/words/x-spread-yourself-too-thin-us.mp3",
    "ipa": "/spred jɔːˈself tuː θɪn/",
    "ipa_us": "/spred joːrˈself tuː θɪn/",
    "scene": "A person trying to hold many things at once – juggling a briefcase, books, a theatre mask and a phone – looking stressed."
@@ -506,7 +506,7 @@
    "vi": "ôm việc quá sức",
    "week": 1,
    "img": "data/img/w1/x-bite-off-more-than-you-can-chew.webp",
-   "audio": "data/audio/w1/words/x-bite-off-more-than-you-can-chew.mp3",
+   "audio": "data/audio/w1/words/x-bite-off-more-than-you-can-chew-us.mp3",
    "ipa": "/baɪt ɒf mɔː ðən jə kən tʃuː/",
    "ipa_us": "/baɪt ɔf moːr ðən jə kən tʃuː/"
   },
@@ -518,7 +518,7 @@
    "vi": "làm nhiều việc cùng lúc",
    "week": 1,
    "img": "data/img/w1/x-multitasking.webp",
-   "audio": "data/audio/w1/words/x-multitasking.mp3",
+   "audio": "data/audio/w1/words/x-multitasking-us.mp3",
    "ipa": "/ˈmʌltiˌtæskɪŋ/",
    "ipa_us": "/ˈmʌltiˌtæskɪŋ/"
   },
@@ -530,7 +530,7 @@
    "vi": "gia hạn",
    "week": 1,
    "img": "data/img/w1/x-extend-a-deadline.svg",
-   "audio": "data/audio/w1/words/x-extend-a-deadline.mp3",
+   "audio": "data/audio/w1/words/x-extend-a-deadline-us.mp3",
    "ipa": "/ekˈstend ə ˈdedlaɪn/",
    "ipa_us": "/ekˈstend ə ˈdedlaɪn/",
    "scene": "A calendar where the red deadline circle moves one week later along a dotted arrow, a teacher smiling and students relieved."
@@ -543,7 +543,7 @@
    "vi": "bắt đầu, khởi động",
    "week": 1,
    "img": "data/img/w1/x-kick-off-sth.webp",
-   "audio": "data/audio/w1/words/x-kick-off-sth.mp3",
+   "audio": "data/audio/w1/words/x-kick-off-sth-us.mp3",
    "ipa": "/kɪk ɒf/",
    "ipa_us": "/kɪk ɔf/"
   },
@@ -555,7 +555,7 @@
    "vi": "quyết tâm, mục tiêu tự hứa",
    "week": 1,
    "img": "data/img/w1/x-a-resolution.webp",
-   "audio": "data/audio/w1/words/x-a-resolution.mp3",
+   "audio": "data/audio/w1/words/x-a-resolution-us.mp3",
    "ipa": "/ə ˌrezəˈluːʃən/",
    "ipa_us": "/ə ˌrezəˈluːʃən/"
   },
@@ -567,7 +567,7 @@
    "vi": "đẩy việc / hoãn quyết định",
    "week": 1,
    "img": "data/img/w1/x-punt-sth.svg",
-   "audio": "data/audio/w1/words/x-punt-sth.mp3",
+   "audio": "data/audio/w1/words/x-punt-sth-us.mp3",
    "ipa": "/pʌnt/",
    "ipa_us": "/pʌnt/",
    "scene": "Tom passing a big box of work papers to a colleague with a relieved face."
@@ -580,7 +580,7 @@
    "vi": "gác lại",
    "week": 1,
    "img": "data/img/w1/x-table-it.svg",
-   "audio": "data/audio/w1/words/x-table-it.mp3",
+   "audio": "data/audio/w1/words/x-table-it-us.mp3",
    "ipa": "/ˈteɪbəl ɪt/",
    "ipa_us": "/ˈteɪbəl ɪt/",
    "scene": "Three colleagues at a meeting table; one puts a folder aside onto a 'later' tray, calendar showing next Monday highlighted."
@@ -593,7 +593,7 @@
    "vi": "thay đổi luật chơi",
    "week": 1,
    "img": "data/img/w1/x-move-the-goalposts.svg",
-   "audio": "data/audio/w1/words/x-move-the-goalposts.mp3",
+   "audio": "data/audio/w1/words/x-move-the-goalposts-us.mp3",
    "ipa": "/muːv ðə ˈɡəʊlpəʊsts/",
    "ipa_us": "/muːv ðə ˈɡoʊlpoʊsts/",
    "scene": "A football pitch: a player about to kick while two people carry the goalposts further away."
@@ -606,7 +606,7 @@
    "vi": "mục tiêu luôn thay đổi",
    "week": 1,
    "img": "data/img/w1/x-a-moving-target.webp",
-   "audio": "data/audio/w1/words/x-a-moving-target.mp3",
+   "audio": "data/audio/w1/words/x-a-moving-target-us.mp3",
    "ipa": "/ə ˈmuːvɪŋ ˈtɑːɡɪt/",
    "ipa_us": "/ə ˈmuːvɪŋ ˈtɑːrɡɪt/",
    "scene": "An archer aiming at a target that is on wheels and rolling away, with motion lines."
@@ -619,7 +619,7 @@
    "vi": "phần còn lại của",
    "week": 1,
    "img": "data/img/w1/x-the-rest-of-the.webp",
-   "audio": "data/audio/w1/words/x-the-rest-of-the.mp3",
+   "audio": "data/audio/w1/words/x-the-rest-of-the-us.mp3",
    "ipa": "/ðə rest əv ðə/",
    "ipa_us": "/ðə rest əv ðə/",
    "scene": "A book half read with a bookmark, on a bed at night with the moon in the window – reading the rest tonight."
