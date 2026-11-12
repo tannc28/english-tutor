@@ -17,6 +17,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Vấn đề cốt lõi: Tân biết từ nhưng **không nối được thành ý** → dạy chunk, từ nối, quy chiếu (it/this/which), tách câu dài, nối âm.
 - Nghe theo chu trình Vandergrift (dự đoán → nghe → kiểm tra → nghe lại → transcript → tự rút kinh nghiệm) + partial dictation + shadowing.
 - **Kế hoạch theo TUẦN (Tân yêu cầu 12/11):** mỗi tuần 1 chủ đề + truyện chung, ~6 bài riêng (mỗi bài nộp riêng) **xếp theo thời khoá biểu từng ngày** (sáng/tối/cuối tuần). Ngày bận Tân bấm **🙋 xin nghỉ** trên web → gia sư xếp lại lịch (web/README: Quy trình XIN NGHỈ). Có word wall + minh hoạ (Tân học nhanh qua ngữ cảnh + hình ảnh). Mỗi bài: **① Learn (dạy kiến thức nền trước) → ② Try it (luyện, phản hồi ngay) → ③ Input → ✓ Check** – lớp học, không phải bài thi.
+- **Chỉ học trên web – KHÔNG link sang trang khác** (Tân 12/11). Nghe thêm = **bài nghe VOA** do gia sư soạn, theo dõi, chấm (`tools/voa.py`, public domain; web/README "Bài nghe VOA"), mỗi ngày 1 bài ~15' (`days[].extra`).
 - **Tab 🧠 Review** (`data/library.json`, sync.py tự gom): tra cứu mọi thứ đã học (từ + cụm có hình/audio, phần Learn, lỗi đã sửa, truyện) + thẻ lật ôn tập (spaced repetition, lưu `drafts/selfcheck.srs`) + "What's next". Mỗi từ/cụm mới phải có def/ex (và img/audio nếu có) để vào được thư viện.
 - **Checklist trình độ** (`data/levels.json` + `data/mastery.json`, tab 🎯 Levels): lộ trình rõ ràng từng level. Mỗi lần chấm cập nhật mastery có bằng chứng; mỗi tuần chọn `targets` từ checklist.
 - **Soạn ở MỨC INPUT THOẢI MÁI** (`profile.input_level`: hiểu ngay, không căng não), không phải mức làm bài kiểm tra. Theo dõi cảm giác 😌/🙂/😵 mỗi bài; chỉ nâng 1 bậc nhỏ khi 2–3 bài liền 😌 + hiểu ≥90%; 😵 → hạ ngay. Tăng dần, không stress.
@@ -37,7 +38,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Việc **máy móc** – vẽ ảnh, tạo audio, kiểm tra link, chép file – có thể giao subagent model nhẹ (sonnet/haiku) để nhanh và tiết kiệm.
 
 ## Công cụ có sẵn
-- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/illustrate.py` (SD-Turbo vẽ minh hoạ, ~10 giây/ảnh) · SVG tự vẽ cho bản đồ/sơ đồ · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`, torch CPU + diffusers (xem đầu `tools/illustrate.py`).
+- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · `tools/illustrate.py` (SD-Turbo vẽ minh hoạ, ~10 giây/ảnh) · SVG tự vẽ cho bản đồ/sơ đồ · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`, torch CPU + diffusers (xem đầu `tools/illustrate.py`).
 
 ## Quyền với repo (Tân cho phép 11/11/2026)
 - Claude có **toàn quyền** trên repo này: được commit và **push thẳng lên `main`**, không cần tạo nhánh riêng hay PR.

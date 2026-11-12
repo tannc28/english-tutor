@@ -5,7 +5,7 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: Chỉ INPUT (nghe + đọc). Output/phát âm chỉ khi Tân muốn.
-- Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/6 bài
+- Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/10 bài
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
 - Cập nhật hồ sơ: 2026-11-11T21:45:00+07:00
 
@@ -73,7 +73,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 1/6 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 1/10 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -87,6 +87,10 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | T1 · B4 | – | First day at work – meeting the team | open | – | – | – | – | – |  |
 | T1 · B5 | – | Getting around – directions & the tram | open | – | – | – | – | – |  |
 | T1 · B6 | – | Weekend review – the story so far | open | – | – | – | – | – |  |
+| T1 · B7 | – | 'Watching the Grass Grow' Is Not Fun | open | – | – | – | – | – |  |
+| T1 · B8 | – | Sometimes We 'Spread Ourselves Too Thin' | open | – | – | – | – | – |  |
+| T1 · B9 | – | 'Kicking Off' a New Year | open | – | – | – | – | – |  |
+| T1 · B10 | – | Ask a Teacher: Remaining, Remainder and Rest of | open | – | – | – | – | – |  |
 
 ## Truyện dài kỳ: Hope Street
 - Nhân vật: Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà); Jess (quán cà phê đầu phố, tóc đỏ ngắn); Claire (quản lý của Nam, kính xám)

@@ -30,7 +30,7 @@ def render(lid):
     path = os.path.join(ROOT, "data", "lessons", lid + ".json"); L = json.load(open(path))
     out = os.path.join(ROOT, "data", "audio", lid); os.makedirs(out, exist_ok=True)
     for pi, p in enumerate(L.get("parts", [])):
-        if not p.get("listen"): continue
+        if not p.get("listen") or p.get("keep_audio"): continue   # bài nghe thật (VOA…) giữ audio gốc
         rate, chunks = None, []
         for x in p["listen"]:
             for para in [s for s in str(x["text"]).split("\n\n") if s.strip()]:

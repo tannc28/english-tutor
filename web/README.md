@@ -72,6 +72,12 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 4. `python3 tools/sync.py` → commit + push → publish (như trên) → `ArtifactData delete inbox/<id>`.
 5. Trả lời trong thread comment + resolve (nếu đến qua comment), hoặc 1–2 dòng trong chat. **Telegram** (Tân chọn 12/11): ghi vào `grades/<id>.json` thêm `tg {score, win, fix}` (mỗi dòng ≤ 90 ký tự), `cards` (≤3 lỗi quan trọng nhất: q, yours, right, tip – ❌→✅→💡) và `quiz` (2–3 câu trắc nghiệm ôn đúng chỗ sai: q, options, answer, why) → `python3 tools/tg.py graded <id>` = tin 4 dòng + ảnh thẻ lỗi + đưa quiz vào hàng ôn `data/review.json`. Không gửi ảnh chụp dài, không viết lại nhận xét dài.
 
+## Bài nghe VOA (tab con 🎧 Listening) – thay cho "nghe tự do" (Tân 12/11)
+- Tân muốn **chỉ học trên web, không link sang trang khác**, và muốn nghe cũng được dẫn dắt + theo dõi. Nguồn: **VOA Learning English** (public domain, ~95–125 từ/phút, có lời). Chỉ lấy bài **VOA tự viết** (American Stories, Words and Their Stories, Ask a Teacher, Everyday Grammar…); `tools/voa.py` tự bỏ bài có AP/Reuters/AFP.
+- `python3 tools/voa.py list <zone>` → chọn bài hợp chủ đề tuần + mức thoải mái → `python3 tools/voa.py get <url> voa-<tên>` (MP3 → `data/audio/voa/`, lời + từ vựng → `data/sources/voa/`).
+- Soạn bài `w<N>-voa-<k>` (kind `Listening`, `extra: true`, ~15'): ① Before you listen (cụm từ + IPA + dự đoán) → ② Listen (part có `audio` = MP3 VOA, `keep_audio: true`, `listen` = các đoạn lời để hiện transcript) với 4–6 câu hỏi + % hiểu + từ còn khó. Đáp án vào `keys/`. Ghi `credit` (chữ, **không link**).
+- Lịch: `weeks[].days[ngày].extra = "<id>"` → hiện ở Today (21:40 / 14:30) và dải 7 ngày (🎧). Chấm như bài thường. Không dùng link podcast bên ngoài nữa.
+
 ## Tab 🧠 Review (ôn tập & tra cứu)
 - Ô tìm kiếm chung; mục **Words & chunks** (thẻ có hình, chạm để xem nghĩa + nghe), **Grammar & skills** (mở thẳng phần Learn), **My mistakes** (❌→✅→💡), **Story** (đọc lại các tập), **What's next** (tuần tới, mục checklist còn lại, từ chưa biết trong word check).
 - **🃏 Practise**: thẻ lật (hình → đoán → lật xem nghĩa + nghe) → *Again* / *Got it*; ôn lại sau 1 → 3 → 7 → 14 → 30 ngày. Lưu ở `drafts/selfcheck.srs` (gia sư đọc khi lên kế hoạch tuần: từ hay "Again" → đưa vào bài).

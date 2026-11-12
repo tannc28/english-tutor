@@ -148,8 +148,8 @@
    "vi": "làm (vị trí) …",
    "kind": "chunk",
    "learned": "2026-11-11",
-   "ipa": "/wɜːk æz ə/",
-   "ipa_us": "/wɜːk æz ə/"
+   "ipa": "/wɜːk əz ə/",
+   "ipa_us": "/wɜːk əz ə/"
   },
   {
    "w": "be responsible for …",
@@ -290,6 +290,46 @@
    "status": "open",
    "title": "The story so far",
    "img": "data/img/w1/cover.webp"
+  },
+  {
+   "lesson": "w1-voa-1",
+   "part": 0,
+   "week": 1,
+   "order": 7,
+   "date": null,
+   "status": "open",
+   "title": "Key expressions – 'Watching the Grass Grow' Is Not Fun",
+   "img": null
+  },
+  {
+   "lesson": "w1-voa-2",
+   "part": 0,
+   "week": 1,
+   "order": 8,
+   "date": null,
+   "status": "open",
+   "title": "Key expressions – Sometimes We 'Spread Ourselves Too Thin'",
+   "img": null
+  },
+  {
+   "lesson": "w1-voa-3",
+   "part": 0,
+   "week": 1,
+   "order": 9,
+   "date": null,
+   "status": "open",
+   "title": "Key expressions – 'Kicking Off' a New Year",
+   "img": null
+  },
+  {
+   "lesson": "w1-voa-4",
+   "part": 0,
+   "week": 1,
+   "order": 10,
+   "date": null,
+   "status": "open",
+   "title": "Key expressions – Ask a Teacher: Remaining, Remainder and Rest of",
+   "img": null
   }
  ],
  "story": [

@@ -1,0 +1,156 @@
+{
+ "intro_md": "**🎧 Listening · 4.6 min audio · ~15 min.** Real English for learners from VOA Learning English – slower than normal (~99 words per minute), clear, one topic.\n\nFirst learn the key expressions, then listen 3 times. Then 📤 Submit – I check your answers and track your listening.",
+ "parts": [
+  {
+   "kind": "① Before you listen",
+   "learn": true,
+   "title": "Key expressions – Ask a Teacher: Remaining, Remainder and Rest of",
+   "md": "Learn these first – you'll hear every one of them.\n\n| Expression | Meaning |\n|---|---|\n| **the rest of the …** <span class=\"ipa\">/ðə rest əv ðə/</span> | what is left (most common) |\n| **the remaining + noun** <span class=\"ipa\">/ðə rɪˈmeɪnɪŋ naʊn/</span> | the things that are left: *the remaining countries* |\n| **the remainder of the …** <span class=\"ipa\">/ðə rɪˈmeɪndə əv ðə/</span> | = the rest of the (more formal) |\n| **quantifier** <span class=\"ipa\">/ˈkwɒntɪˌfaɪə/</span> | a word for amount: *some, many, the rest of* |\n\n🔮 **Predict:** Which sounds right to you: *the rest countries* or *the rest of the countries*?",
+   "questions": []
+  },
+  {
+   "kind": "② Listen",
+   "title": "VOA: Ask a Teacher: Remaining, Remainder and Rest of",
+   "md": "**Listen in 3 rounds – don't stop the audio:**\n1. **Round 1 – no transcript.** Just follow. Answer the first question.\n2. **Round 2 – no transcript.** Listen for details. Answer the rest.\n3. **Round 3 – with the transcript** (*Show transcript*). Read while you listen. Notice what you missed.",
+   "listen": [
+    {
+     "who": "",
+     "voice": "",
+     "text": "This week on Ask a Teacher, we answer a question from Ann. Here is part of Ann’s question:"
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "I don't really understand the difference between \"remaining,\" \"remainder\" and \"rest\" when using these words to describe what is left of something."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "For example,... can I replace \"the remaining countries\" by \"the remain\" or \"the rest\"?"
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "I’m happy to answer this question, Ann."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "English has many words that share the same meaning or that are close in meaning. So, you might wonder why we usually use one word instead of another that is very similar to it."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "We often use one word instead of another because of grammar. Let’s look at how this works by considering the last part of your question. You asked:"
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "can I replace \"the remaining countries\" by \"the remain\" or \"the rest\"?"
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "The answer is no. That’s because the word “remain” is a verb, and the term “the rest” is a quantifier. To describe the word “countries,” we need to use an adjective. The -ing ending on the word “remaining” makes it an adjective when we place it before a noun."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "If you want to use the words “the rest” to describe a noun, you need to use four words. These four words are “the rest of the.” These four words mean the same thing as the two words “the remaining.” The following example shows this:"
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "The rest of the countries use more land for farming."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "Now let’s look at the first part of your question:"
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "I don't really understand the difference between \"remaining,\" \"remainder\" and \"rest\" when using these words to describe what is left of something."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "The word “remainder” is a noun, but when we use it to describe what is left of something, we change it to a quantifier. To do this, we usually say or write the four words “the remainder of the.” In this way, it works the same way as the quantifier “the rest of the.”"
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "However, we use the quantifier “the rest of the” much more often, especially in spoken English, than “the remainder of the.”"
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "Also, you should know that as a noun, “the remainder” is a term used in mathematics. It can mean the decimal fraction that remains when one number is divided by another number that is not one of its factors. For example, six-tenths, or.6, is the remainder when 33 is divided by five. It can also be what is left over from the process of subtraction."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "For our readers and listeners, what are your questions about American English? We want to hear from you! Send us an email at learningenglish@voanews.com. And please let us know where you are from, too."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "Andrew Smith wrote this lesson for VOA Learning English."
+    }
+   ],
+   "audio": "data/audio/voa/voa-ask-remaining.mp3",
+   "keep_audio": true,
+   "rate": 1,
+   "questions": [
+    {
+     "id": "r1",
+     "q": "What was Ann's question about?",
+     "type": "choice",
+     "options": [
+      "The difference between remaining, remainder and rest",
+      "How to write a formal email",
+      "Words from American football"
+     ]
+    },
+    {
+     "id": "r2",
+     "q": "Can you say *“the remain countries”*?",
+     "type": "choice",
+     "options": [
+      "No – remain is a verb",
+      "Yes, it is very common",
+      "Only in British English"
+     ]
+    },
+    {
+     "id": "r3",
+     "q": "Which is more common, especially in spoken English?",
+     "type": "choice",
+     "options": [
+      "the rest of the …",
+      "the remainder of the …"
+     ]
+    },
+    {
+     "id": "r4",
+     "q": "Complete with one word: *“The ___ countries use more land for farming.”*",
+     "type": "short"
+    },
+    {
+     "id": "r5",
+     "q": "How much did you understand on the **first** listen (before the transcript)? Write a number, e.g. 70",
+     "type": "short",
+     "placeholder": "e.g. 70"
+    },
+    {
+     "id": "r6",
+     "q": "Which words or sentences were still hard **after** you read the transcript? (optional)",
+     "type": "text",
+     "placeholder": "Copy them here…"
+    }
+   ]
+  }
+ ],
+ "credit": "Audio and text: VOA Learning English (public domain)."
+}

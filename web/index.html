@@ -580,7 +580,7 @@ table.days tr.next td{background:var(--accent-soft)}
   const SLOT_ORDER = {morning:1, evening:2, weekend:3, review:4};
   const KIND_ICON = {Listening:"🎧", Reading:"📖", Mixed:"🎧📖", Review:"🔁", Assessment:"🧭"};
   let planOf = {};  // lessonId → {ds, slot} từ weeks[].days
-  function buildPlanOf(){ planOf = {}; weeks.forEach(w => Object.entries(w.days||{}).forEach(([ds,d]) => (d.lessons||[]).forEach((id,i,arr) => { const dow = new Date(ds+"T12:00:00").getDay(), we = dow===0||dow===6; planOf[id] = {ds, slot: we ? "Weekend" : (arr.length===1 ? "Evening" : (i===0 ? "Morning" : "Evening"))}; }))); }
+  function buildPlanOf(){ planOf = {}; weeks.forEach(w => Object.entries(w.days||{}).forEach(([ds,d]) => { (d.lessons||[]).forEach((id,i,arr) => { const dow = new Date(ds+"T12:00:00").getDay(), we = dow===0||dow===6; planOf[id] = {ds, slot: we ? "Weekend" : (arr.length===1 ? "Evening" : (i===0 ? "Morning" : "Evening"))}; }); if (d.extra) planOf[d.extra] = {ds, slot:"🎧 Listening"}; })); }
   const dayLabel = l => { const p = planOf[l.id]; return p ? `${fmtDate(p.ds)} · ${p.slot}` : (l.week ? `Week ${l.week} · Lesson ${l.order||""}` : (l.dayNo?`Day ${l.dayNo}`:(TYPE_LABEL[l.type]||"Lesson"))); };
   const STATUS_LABEL = {open:"Not started", submitted:"Submitted", graded:"Graded"};
   const $ = s => document.querySelector(s);
@@ -942,6 +942,7 @@ table.days tr.next td{background:var(--accent-soft)}
         </div>
         ${nQ && !grade ? `<div class="progress"><div class="bar"><i id="pbar" style="width:0%"></i></div><span class="note mono" id="plab">0/${nQ} questions</span></div>` : ""}
         ${l.intro_md ? `<div class="md intro">${md(l.intro_md)}</div>` : ""}
+        ${l.credit ? `<p class="note">${esc(l.credit)}</p>` : ""}
       </section>
       ${grade ? `<section class="card grade" aria-label="Results">
           <span class="label">Results · graded by your tutor</span>
@@ -1347,21 +1348,17 @@ table.days tr.next td{background:var(--accent-soft)}
     }
   }
   let resources = null;
-  async function renderListen(){
+  function renderListen(){
     const v = $("#view-listen");
-    if (!resources){ v.innerHTML = '<section class="card sec"><p class="note">Loading…</p></section>'; try { resources = await getJSON("data/resources.json"); } catch(e){ v.innerHTML = '<section class="card sec"><p class="note">Couldn\'t load the library. Please reload.</p></section>'; return; } }
-    const r = resources;
-    v.innerHTML = `
-      <section class="card sec"><span class="label">Free listening library</span><h2>Listen anytime – no need to wait for a lesson</h2><div class="md">${md(r.how_md||"")}</div></section>
-      ${(r.tiers||[]).map(t => `<section class="card sec">
-        <span class="label">${esc(t.level||"")}</span><h2>${esc(t.name||"")}</h2>${t.note?`<p class="note">${esc(t.note)}</p>`:""}
-        <div class="libgrid">${(t.items||[]).map(it => `<div class="lib">
-          <div class="lib-h"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a><span class="pill">${esc(it.type||"")}</span></div>
-          <div class="note">${esc(it.topics||"")}</div>
-          <div class="md">${inline(it.why||"")}</div>
-          <div class="pli-b">${it.apple?`<a class="tbtn" href="${esc(it.apple)}" target="_blank" rel="noopener">🎙 Apple Podcasts</a>`:""}${it.alt?`<a class="tbtn" href="${esc(it.alt)}" target="_blank" rel="noopener">▶ YouTube</a>`:""}</div>
-        </div>`).join("")}</div></section>`).join("")}`;
+    const ls = lessons.filter(l => l.kind === "Listening").sort((a,b) => String(planOf[a.id]?.ds||"").localeCompare(String(planOf[b.id]?.ds||"")));
+    const done = ls.filter(l => DONE(statusOf(l))).length;
+    v.innerHTML = `<section class="card sec"><span class="label">Listening – planned and tracked by your tutor</span>
+        <h2 style="margin:4px 0">🎧 ${done}/${ls.length} listening lessons done</h2>
+        <p class="note">Short real-English audio (VOA Learning English – slower than normal, clear). Each one: learn the key expressions → listen 3 times → answer → 📤 Submit. Everything stays here on this page.</p></section>
+      <section class="card sec"><div class="rv-list">${ls.map(l => { const st = statusOf(l), p = planOf[l.id];
+        return `<a class="rv-row" href="#${esc(l.id)}"><span class="rv-noimg">${DONE(st)?"✅":"🎧"}</span><span><b>${esc(l.title)}</b><span class="note">Week ${esc(l.week)}${p?` · ${esc(fmtDate(p.ds))}`:""} · ~${esc(l.minutes)} min · ${STATUS_LABEL[st]}</span></span><span class="td-go">${DONE(st)?"Review":"Start ▶"}</span></a>`; }).join("") || `<p class="note">Listening lessons appear here every week.</p>`}</div></section>`;
   }
+
   // ---- 📅 Plan: lịch theo ngày = bài (days.json) + bài nghe gia sư chọn (plan.json) + khung giờ (profile.schedule)
   const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
   const todayStr = () => ymd(new Date());
@@ -1390,7 +1387,7 @@ table.days tr.next td{background:var(--accent-soft)}
     return `<a class="td-row ${DONE(st)?"done":""}" href="#${esc(l.id)}">
       <span class="td-time mono">${esc(time||"")}</span>
       ${l.cover?`<img src="${esc(l.cover)}" alt="" loading="lazy">`:`<span class="td-ph">${esc(KIND_ICON[l.kind]||"📘")}</span>`}
-      <span class="td-main"><b>${esc(l.title||"")}</b><span class="note">Lesson ${esc(l.order)} · ${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")} · ~${esc(l.minutes||"?")} min${tag?` · <span class="td-tag">${esc(tag)}</span>`:""}</span></span>
+      <span class="td-main"><b>${esc(l.title||"")}</b><span class="note">${l.extra ? "🎧 VOA listening" : `Lesson ${esc(l.order)} · ${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")}`} · ~${esc(l.minutes||"?")} min${tag && !/VOA/.test(tag)?` · <span class="td-tag">${esc(tag)}</span>`:""}</span></span>
       <span class="td-go">${DONE(st)?"✅":"Start ▶"}</span></a>`;
   }
   let daySel = null;
@@ -1400,7 +1397,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const own = (d.lessons||[]).map(id => lessons.find(l => l.id===id)).filter(Boolean);
     const list = isToday ? [...P.now, ...own.filter(l => DONE(statusOf(l)) && !P.now.includes(l))] : own;
     const timeFor = (l,i) => we ? tm.lesson[i] : ((list.filter(x=>!DONE(statusOf(x))).length===1 || own.length===1) && i===0 ? tm.lesson[1] : tm.lesson[i]);
-    const pod = d.listen != null ? (w.listen||[])[d.listen] : null;
+    const ext = d.extra ? lessons.find(l => l.id === d.extra) : null;
     const title = new Date(ds+"T12:00:00").toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"short"});
     const leave = leaveReq[ds];
     const off = d.off ? `<p class="td-free">🙋 Day off – ${esc(d.off)}. Your tutor moved this day's lessons. Rest well!</p>` : "";
@@ -1408,7 +1405,7 @@ table.days tr.next td{background:var(--accent-soft)}
       <div class="td-h"><span class="label">${isToday?"📍 Today":"🗓"} · ${esc(title)}</span>${d.note&&!d.off?`<span class="note">${esc(d.note)}</span>`:""}</div>
       ${off || (list.length ? `<div class="td-list">${list.map((l,i) => lessonRow(l, DONE(statusOf(l)) ? "" : timeFor(l,i), isToday && P.carry.includes(l) ? "missed on "+fmtDate(P.plannedDay[l.id]) : (ds < P.t && !DONE(statusOf(l)) ? "missed – it's in Today" : ""))).join("")}</div>`
         : `<p class="td-free">${isToday && own.length ? "🎉 Today's lessons are done. Great work!" : "No lesson planned – rest day."}</p>`)}
-      ${pod && !d.off ? `<div class="td-pod"><span class="td-time mono">${esc(tm.listen)}</span><span class="td-main"><b>🎧 ${esc(pod.title)}</b><span class="note">${esc(pod.source||"")} · ${esc(pod.minutes||"")} min – free listening, no questions</span></span><span class="pli-b">${listenBtns(pod)}</span></div>` : ""}
+      ${ext && !d.off ? lessonRow(ext, DONE(statusOf(ext)) ? "" : tm.listen, "🎧 VOA listening") : ""}
       ${isToday && P.later.length ? `<p class="note">Also waiting: ${P.later.map(l => `<a href="#${esc(l.id)}">${esc(l.title)}</a>`).join(", ")} – no rush.</p>` : ""}
       ${ds >= P.t && !d.off && own.length ? (leave ? `<p class="note">🙋 Day-off request sent (${esc(leave.kind)}) – your tutor will reschedule.</p>`
         : `<details class="leave"><summary>🙋 Can't study ${isToday?"today":"this day"}? Tell your tutor</summary>
@@ -1439,7 +1436,7 @@ table.days tr.next td{background:var(--accent-soft)}
       const off = P.days[ds]?.off;
       out.push(`<button type="button" data-ds="${ds}" class="ws-d ${ds===P.t?"is-today":""} ${ds<P.t?"past":""} ${ds===(daySel||P.t)?"sel":""}">
         <span class="ws-n">${d.toLocaleDateString("en-GB",{weekday:"short"})} <b>${d.getDate()}</b></span>
-        ${off ? `<span class="ws-l rest">🙋 off</span>` : ls.map(l => { const st = statusOf(l), ic = DONE(st) ? "✅" : ds < P.t ? "↪" : ds === P.t ? "▶" : "·"; return `<span class="ws-l ${DONE(st)?"done":ds<P.t?"moved":""}" title="${esc(l.title)}">${ic} L${esc(l.order)}</span>`; }).join("") || `<span class="ws-l rest">rest</span>`}
+        ${off ? `<span class="ws-l rest">🙋 off</span>` : [...ls, ...(P.days[ds]?.extra ? [lessons.find(l => l.id === P.days[ds].extra)].filter(Boolean) : [])].map(l => { const st = statusOf(l), ic = DONE(st) ? "✅" : ds < P.t ? "↪" : ds === P.t ? "▶" : "·"; return `<span class="ws-l ${DONE(st)?"done":ds<P.t?"moved":""}" title="${esc(l.title)}">${ic} ${l.extra?"🎧":"L"+esc(l.order)}</span>`; }).join("") || `<span class="ws-l rest">rest</span>`}
       </button>`); }
     return `<section class="card sec"><span class="label">Your week at a glance</span><div class="ws">${out.join("")}</div>
       <p class="note">Tap a day to see its plan · ✅ done · ▶ today · ↪ missed · 🙋 day off</p></section>`;
@@ -1675,7 +1672,7 @@ table.days tr.next td{background:var(--accent-soft)}
 
   // 3 nhóm chính, mỗi nhóm có tab con (Tân 12/11: ít tab, gộp cái chung)
   const GROUPS = {
-    learn: [["week","🗓 This week","#"],["lessons","📚 Lessons","#bai"],["listen","🎧 Listening library","#nghe"]],
+    learn: [["week","🗓 This week","#"],["lessons","📚 Lessons","#bai"],["listen","🎧 Listening","#nghe"]],
     review: [["review","🧠 Review & practise","#on-tap"]],
     progress: [["levels","🎯 Levels","#level"],["progress","📊 Stats","#tien-do"],["profile","👤 Profile","#ho-so"]]};
   const groupOf = v => Object.keys(GROUPS).find(g => GROUPS[g].some(x => x[0] === v)) || "learn";

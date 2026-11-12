@@ -54,7 +54,7 @@ def word_ipa(word, acc="uk"):
     if _syllables(w) <= 1: w = w.replace("ˈ", "").replace("ˌ", "")
     return w
 
-WEAK = {"a": "ə", "an": "ən", "the": "ðə", "to": "tə", "of": "əv", "and": "ənd", "for": "fə", "at": "ət", "be": "bi", "some": "səm", "from": "frəm", "was": "wəz", "can": "kən"}
+WEAK = {"a": "ə", "an": "ən", "the": "ðə", "to": "tə", "of": "əv", "and": "ənd", "for": "fə", "at": "ət", "be": "bi", "some": "səm", "from": "frəm", "was": "wəz", "can": "kən", "your": "jə", "you": "jə", "than": "ðən", "as": "əz", "that": "ðət"}
 def ipa(text, acc="uk"):
     t = re.sub(r"\bsb\b", "somebody", re.sub(r"\bsth\b", "something", text))
     t = re.sub(r"\+\s*V-ing|\(.*?\)|…|\.\.\.", " ", t)

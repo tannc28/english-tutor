@@ -1,0 +1,137 @@
+{
+ "intro_md": "**🎧 Listening · 3.3 min audio · ~15 min.** Real English for learners from VOA Learning English – slower than normal (~92 words per minute), clear, one topic.\n\nFirst learn the key expressions, then listen 3 times. Then 📤 Submit – I check your answers and track your listening.",
+ "parts": [
+  {
+   "kind": "① Before you listen",
+   "learn": true,
+   "title": "Key expressions – 'Watching the Grass Grow' Is Not Fun",
+   "md": "Learn these first – you'll hear every one of them.\n\n| Expression | Meaning |\n|---|---|\n| **like watching grass grow** <span class=\"ipa\">/laɪk ˈwɒtʃɪŋ ɡræs ɡrəʊ/</span> | very, very boring |\n| **tedious** <span class=\"ipa\">/ˈtiːdiəs/</span> | boring because it is long and the same again and again |\n| **on the go** <span class=\"ipa\">/ɒn ðə ɡəʊ/</span> | always busy and moving |\n| **don't let the grass grow under your feet** <span class=\"ipa\">/dəʊnt let ðə ɡræs ɡrəʊ ˈʌndə jə fiːt/</span> | don't wait – keep moving, act now |\n| **bloom** <span class=\"ipa\">/bluːm/</span> | when a flower opens |\n\n🔮 **Predict:** Grass grows very slowly. So what do you think *“It was like watching grass grow”* means?",
+   "questions": []
+  },
+  {
+   "kind": "② Listen",
+   "title": "VOA: 'Watching the Grass Grow' Is Not Fun",
+   "md": "**Listen in 3 rounds – don't stop the audio:**\n1. **Round 1 – no transcript.** Just follow. Answer the first question.\n2. **Round 2 – no transcript.** Listen for details. Answer the rest.\n3. **Round 3 – with the transcript** (*Show transcript*). Read while you listen. Notice what you missed.",
+   "listen": [
+    {
+     "who": "",
+     "voice": "",
+     "text": "And now Words and Their Stories from VOA Learning English."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "Springtime is a time of renewal and growth. Many plants end their long winter sleep and form new buds and shoots. Beautiful flowers will soon be showing their bright colors. And the grass will grow thicker and greener again."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "Some flowers bloom in a very noticeable way but that is not the case with grass. Imagine you are sitting in a grassy field. And you have only one job – to watch the grass grow. That does not sound very interesting. In fact, it sounds really boring."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "That idea is what gives us the expression “like watching grass grow.” We use this expression to describe an experience that is uninteresting. Another good word to describe it is tedious."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "We use this expression in many situations. Let’s hear a few examples:"
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "After the politician won his campaign, he gave a two-hour long acceptance speech. Two hours! It was as much fun as watching grass grow."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "I really don’t like watching long sports games. It’s like watching grass grow."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "Now, grass grows on the ground all the time. And usually, we don’t give it much thought. If you stand in one place for a long time, the grass will continue to grow under your feet."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "For people who are always active, always moving, always on-the-go, we can say they don't let grass grow under their feet. We can also say beneath their feet. And sometimes we use this expression as a command."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "Don’t let the grass grow beneath your feet. Get back to work."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "She certainly doesn’t let the grass grow under her feet. She’s been traveling non-stop for over a year."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "And that’s all the time we have for this Words and Their Stories. Until next time, I’m Anna Matteo."
+    },
+    {
+     "who": "",
+     "voice": "",
+     "text": "on-the-go –phrase having much high-spirited energy and movement"
+    }
+   ],
+   "audio": "data/audio/voa/voa-grass-grow.mp3",
+   "keep_audio": true,
+   "rate": 1,
+   "questions": [
+    {
+     "id": "v1",
+     "q": "What is the expression *like watching grass grow* used for?",
+     "type": "choice",
+     "options": [
+      "Something very boring",
+      "Something that grows fast",
+      "A nice day in spring"
+     ]
+    },
+    {
+     "id": "v2",
+     "q": "Which example does the speaker give?",
+     "type": "choice",
+     "options": [
+      "A politician's two-hour speech",
+      "A football game in the rain",
+      "A long train journey"
+     ]
+    },
+    {
+     "id": "v3",
+     "q": "If someone *doesn't let the grass grow under their feet*, they…",
+     "type": "choice",
+     "options": [
+      "are always active and moving",
+      "never go outside",
+      "love gardening"
+     ]
+    },
+    {
+     "id": "v4",
+     "q": "**Dictation:** type the example sentence that starts *“She certainly…”*",
+     "type": "dictation"
+    },
+    {
+     "id": "v5",
+     "q": "How much did you understand on the **first** listen (before the transcript)? Write a number, e.g. 70",
+     "type": "short",
+     "placeholder": "e.g. 70"
+    },
+    {
+     "id": "v6",
+     "q": "Which words or sentences were still hard **after** you read the transcript? (optional)",
+     "type": "text",
+     "placeholder": "Copy them here…"
+    }
+   ]
+  }
+ ],
+ "credit": "Audio and text: VOA Learning English (public domain)."
+}

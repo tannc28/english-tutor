@@ -14,7 +14,7 @@
     "See where an idea turns: *although, however, yet, rather, unless*",
     "Use *be used to + V-ing* and *it takes + time* when you read and hear them"
    ],
-   "how_md": "Follow **Today** – it tells you what to do and when. Missed a day? No stress: the lesson moves to the next day, and I keep each day to **two lessons at most**. Each lesson is submitted separately, I grade it, and I adjust the next ones.",
+   "how_md": "Follow **Today** – it tells you what to do and when. Every day has a short **🎧 VOA listening** (~15 min) after the main lesson. Missed a day? No stress: the lesson moves to the next day, and I keep each day to **two lessons at most**. Each lesson is submitted separately, I grade it, and I adjust the next ones.",
    "target_hours": 21,
    "words": [
     {
@@ -137,70 +137,7 @@
      "ipa_us": "/ɡet lɔst/"
     }
    ],
-   "listen": [
-    {
-     "title": "What should you eat for a better night's sleep?",
-     "source": "6 Minute English · BBC",
-     "minutes": 7,
-     "level": "Tier 1",
-     "apple": "https://podcasts.apple.com/us/podcast/what-should-you-eat-for-a-better-night-s-sleep/id262026947?i=1000797598235",
-     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
-     "why": "Sleep – same topic as Lesson 2. Easy start."
-    },
-    {
-     "title": "Making cities feel quieter",
-     "source": "6 Minute English · BBC",
-     "minutes": 7,
-     "level": "Tier 1",
-     "apple": "https://podcasts.apple.com/us/podcast/making-cities-feel-quieter/id262026947?i=1000767735615",
-     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
-     "why": "Life in a city – like Nam in Manchester."
-    },
-    {
-     "title": "Who does the housework?",
-     "source": "6 Minute English · BBC",
-     "minutes": 7,
-     "level": "Tier 1",
-     "apple": "https://podcasts.apple.com/us/podcast/who-does-the-housework/id262026947?i=1000783096027",
-     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
-     "why": "Home life and routines."
-    },
-    {
-     "title": "Should we cycle more?",
-     "source": "6 Minute English · BBC",
-     "minutes": 6,
-     "level": "Tier 1",
-     "apple": "https://podcasts.apple.com/us/podcast/should-we-cycle-more/id262026947?i=1000776098256",
-     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
-     "why": "Getting around a city – goes with Lesson 5."
-    },
-    {
-     "title": "Is breakfast the most important meal of the day?",
-     "source": "6 Minute English · BBC",
-     "minutes": 7,
-     "level": "Tier 1",
-     "apple": "https://podcasts.apple.com/us/podcast/is-breakfast-the-most-important-meal-of-the-day/id262026947?i=1000734189697",
-     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
-     "why": "Morning routine – Nam's breakfast at the café."
-    },
-    {
-     "title": "Rude emails",
-     "source": "6 Minute English · BBC",
-     "minutes": 7,
-     "level": "Tier 1",
-     "apple": "https://podcasts.apple.com/us/podcast/rude-emails/id262026947?i=1000775125993",
-     "transcript": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
-     "why": "First weeks at a new job – goes with Lesson 4."
-    },
-    {
-     "title": "Any Psych2Go video (5–10 min)",
-     "source": "Psych2Go · YouTube",
-     "minutes": 10,
-     "level": "Tier 2",
-     "youtube": "https://www.youtube.com/@Psych2go",
-     "why": "English subtitles on. Pick a title that interests you."
-    }
-   ],
+   "listen": [],
    "cover": "data/img/w1/cover.webp",
    "days": {
     "2026-11-11": {
@@ -214,29 +151,29 @@
       "2026-11-12-morning",
       "2026-11-12-evening"
      ],
-     "listen": 0,
-     "note": "Morning: listening · Evening: reading"
+     "note": "Morning: listening · Evening: reading",
+     "extra": "w1-voa-1"
     },
     "2026-11-13": {
      "lessons": [
       "w1-l4"
      ],
-     "listen": 5,
-     "note": "Evening: first day at work"
+     "note": "Evening: first day at work",
+     "extra": "w1-voa-2"
     },
     "2026-11-14": {
      "lessons": [
       "w1-l5"
      ],
-     "listen": 3,
-     "note": "Short lesson + a podcast on the walk"
+     "note": "Short lesson + a podcast on the walk",
+     "extra": "w1-voa-3"
     },
     "2026-11-15": {
      "lessons": [
       "w1-l6"
      ],
-     "listen": 1,
-     "note": "Weekend review – then rest"
+     "note": "Weekend review – then rest",
+     "extra": "w1-voa-4"
     }
    },
    "targets": [
