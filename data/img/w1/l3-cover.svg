@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4E6"/><stop offset="1" stop-color="#FCE9D2"/></linearGradient>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D5E8F5"/><stop offset="1" stop-color="#B7D6EA"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<rect x="0" y="236" width="384" height="52" fill="#EBD9C0"/>
+<!-- window -->
+<rect x="18" y="26" width="200" height="176" rx="6" fill="#8E7A66"/>
+<rect x="26" y="34" width="184" height="160" fill="url(#sky)"/>
+<rect x="116" y="34" width="6" height="160" fill="#8E7A66"/>
+<rect x="26" y="112" width="184" height="6" fill="#8E7A66"/>
+<!-- rain -->
+<g stroke="#8FBAD8" stroke-width="2" stroke-linecap="round" opacity="0.9">
+<line x1="40" y1="50" x2="36" y2="64"/><line x1="66" y1="60" x2="62" y2="76"/>
+<line x1="94" y1="44" x2="90" y2="58"/><line x1="140" y1="56" x2="136" y2="72"/>
+<line x1="176" y1="48" x2="172" y2="62"/><line x1="200" y1="80" x2="196" y2="96"/>
+<line x1="50" y1="88" x2="46" y2="102"/><line x1="84" y1="82" x2="80" y2="98"/>
+<line x1="150" y1="92" x2="146" y2="106"/><line x1="36" y1="132" x2="32" y2="146"/>
+<line x1="70" y1="136" x2="66" y2="150"/><line x1="130" y1="140" x2="126" y2="154"/>
+<line x1="180" y1="132" x2="176" y2="146"/><line x1="196" y1="158" x2="192" y2="172"/>
+</g>
+<!-- Nam seated behind table -->
+<ellipse cx="290" cy="232" rx="30" ry="4" fill="#5A4636" opacity="0.12"/>
+<rect x="268" y="150" width="48" height="8" rx="3" fill="#8C6239" opacity="0"/>
+<rect x="282" y="118" width="46" height="66" rx="16" fill="#7FB3D5"/>
+<rect x="296" y="104" width="14" height="16" fill="#E8B894"/>
+<circle cx="303" cy="96" r="16" fill="#F1C7A5"/>
+<path d="M287 98 Q286 78 303 78 Q320 78 319 98 Q314 88 303 88 Q293 88 287 98Z" fill="#1E1E1E"/>
+<circle cx="297" cy="99" r="1.8" fill="#2B2B2B"/>
+<circle cx="309" cy="99" r="1.8" fill="#2B2B2B"/>
+<path d="M298 106 Q303 110 308 106" fill="none" stroke="#8A5A44" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="326" y="128" width="12" height="40" rx="6" fill="#7FB3D5"/>
+<!-- table -->
+<rect x="150" y="186" width="200" height="10" rx="4" fill="#B98A5E"/>
+<rect x="164" y="196" width="8" height="40" fill="#8C6239"/>
+<rect x="336" y="196" width="8" height="40" fill="#8C6239"/>
+<!-- coffee -->
+<ellipse cx="200" cy="184" rx="18" ry="4" fill="#FFFFFF"/>
+<rect x="186" y="160" width="26" height="22" rx="4" fill="#FFFFFF"/>
+<ellipse cx="199" cy="162" rx="11" ry="3" fill="#8B5A3C"/>
+<path d="M212 166 Q222 166 220 174 Q218 178 212 176" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+<!-- sandwich on plate -->
+<ellipse cx="256" cy="182" rx="30" ry="5" fill="#FFFFFF"/>
+<path d="M234 178 L276 178 L256 158 Z" fill="#F2C86B"/>
+<path d="M240 176 L272 176" stroke="#E0A93F" stroke-width="2"/>
+<path d="M248 166 L264 166" stroke="#7FB36A" stroke-width="3" stroke-linecap="round"/>
+<!-- hanging lamp -->
+<line x1="300" y1="0" x2="300" y2="22" stroke="#8E7A66" stroke-width="2"/>
+<path d="M286 40 L314 40 L306 24 L294 24 Z" fill="#F2C86B"/>
+<circle cx="300" cy="44" r="18" fill="#FFE9A8" opacity="0.4"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8F5EC"/><stop offset="1" stop-color="#F4FBF6"/></linearGradient>
+<linearGradient id="robot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B8CCDC"/><stop offset="1" stop-color="#8FA6BD"/></linearGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<!-- desk -->
+<rect x="20" y="206" width="344" height="12" rx="4" fill="#C98D52"/>
+<rect x="40" y="218" width="10" height="30" fill="#A87340"/>
+<rect x="334" y="218" width="10" height="30" fill="#A87340"/>
+<!-- robot -->
+<ellipse cx="120" cy="252" rx="46" ry="5" fill="#000" opacity="0.12"/>
+<rect x="92" y="150" width="56" height="100" rx="18" fill="url(#robot)"/>
+<rect x="104" y="170" width="32" height="18" rx="5" fill="#5B6B7A"/>
+<circle cx="120" cy="179" r="4" fill="#9FE3B0"/>
+<rect x="96" y="112" width="48" height="40" rx="12" fill="url(#robot)"/>
+<line x1="120" y1="112" x2="120" y2="96" stroke="#5B6B7A" stroke-width="3"/>
+<circle cx="120" cy="92" r="5" fill="#FFE08A"/>
+<circle cx="110" cy="130" r="5" fill="#2E3B4E"/><circle cx="130" cy="130" r="5" fill="#2E3B4E"/>
+<circle cx="111" cy="128" r="1.5" fill="#FFFFFF"/><circle cx="131" cy="128" r="1.5" fill="#FFFFFF"/>
+<path d="M112 142 Q120 148 128 142" stroke="#2E3B4E" stroke-width="2" fill="none" stroke-linecap="round"/>
+<!-- arms -->
+<rect x="72" y="172" width="22" height="12" rx="6" fill="#8FA6BD" transform="rotate(20 83 178)"/>
+<rect x="146" y="172" width="22" height="12" rx="6" fill="#8FA6BD" transform="rotate(-20 157 178)"/>
+<!-- open book -->
+<path d="M160 176 Q196 164 230 176 L230 206 Q196 196 160 206 Z" fill="#FFFFFF" stroke="#5B6B7A" stroke-width="2"/>
+<path d="M196 170 L196 202" stroke="#5B6B7A" stroke-width="2"/>
+<line x1="170" y1="186" x2="190" y2="182" stroke="#B0BCC8" stroke-width="2"/>
+<line x1="170" y1="194" x2="190" y2="190" stroke="#B0BCC8" stroke-width="2"/>
+<line x1="202" y1="182" x2="222" y2="186" stroke="#B0BCC8" stroke-width="2"/>
+<line x1="202" y1="190" x2="222" y2="194" stroke="#B0BCC8" stroke-width="2"/>
+<!-- question marks floating -->
+<g fill="none" stroke="#F08A3C" stroke-width="4" stroke-linecap="round">
+<path d="M254 92 Q254 74 270 74 Q284 74 284 88 Q284 98 270 102 L270 110"/>
+<path d="M302 140 Q302 124 316 124 Q330 124 330 138 Q330 148 316 152 L316 160"/>
+<path d="M300 58 Q300 44 312 44 Q324 44 324 56 Q324 64 312 68 L312 74"/>
+</g>
+<circle cx="270" cy="122" r="4" fill="#F08A3C"/>
+<circle cx="316" cy="172" r="4" fill="#F08A3C"/>
+<circle cx="312" cy="84" r="4" fill="#F08A3C"/>
+<!-- sparkles -->
+<path d="M352 110 L355 118 L363 121 L355 124 L352 132 L349 124 L341 121 L349 118Z" fill="#FFE08A"/>
+<path d="M240 240 L242 245 L247 247 L242 249 L240 254 L238 249 L233 247 L238 245Z" fill="#FFE08A" opacity="0"/>
+<rect x="0" y="252" width="384" height="36" fill="#D6E6DC" opacity="0"/>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDE7F6"/><stop offset="1" stop-color="#DCE6F2"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFE08A" stop-opacity="0.6"/><stop offset="1" stop-color="#FFE08A" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<rect x="0" y="236" width="384" height="52" fill="#D9D2E8"/>
+<rect x="20" y="36" width="90" height="110" rx="6" fill="#F7F3FB" stroke="#B9B0D0" stroke-width="2"/>
+<rect x="28" y="44" width="34" height="46" fill="#CFE3F2"/>
+<rect x="66" y="44" width="34" height="46" fill="#CFE3F2"/>
+<circle cx="305" cy="110" r="80" fill="url(#glow)"/>
+<ellipse cx="180" cy="236" rx="120" ry="5" fill="#2B2B45" opacity="0.12"/>
+<!-- chair back -->
+<rect x="160" y="130" width="60" height="110" rx="14" fill="#8E86B0"/>
+<!-- Nam body -->
+<rect x="150" y="120" width="60" height="70" rx="18" fill="#7FB3D5"/>
+<rect x="170" y="100" width="20" height="18" fill="#E8B894"/>
+<circle cx="180" cy="92" r="17" fill="#F1C7A5"/>
+<path d="M163 94 Q162 74 180 74 Q198 74 197 94 Q192 84 180 84 Q170 84 163 94Z" fill="#1E1E1E"/>
+<circle cx="174" cy="95" r="1.8" fill="#2B2B2B"/>
+<circle cx="186" cy="95" r="1.8" fill="#2B2B2B"/>
+<path d="M175 103 Q180 107 185 103" fill="none" stroke="#8A5A44" stroke-width="1.6" stroke-linecap="round"/>
+<!-- headphones -->
+<path d="M160 90 Q180 56 200 90" fill="none" stroke="#2B3A4A" stroke-width="5"/>
+<rect x="156" y="86" width="9" height="16" rx="4" fill="#2B3A4A"/>
+<rect x="195" y="86" width="9" height="16" rx="4" fill="#2B3A4A"/>
+<!-- arm to notebook -->
+<rect x="196" y="128" width="14" height="40" rx="7" fill="#7FB3D5"/>
+<circle cx="203" cy="168" r="6" fill="#F1C7A5"/>
+<!-- notebook on desk -->
+<rect x="120" y="150" width="60" height="22" rx="2" fill="#FFFFFF" stroke="#C9D6E3" stroke-width="1.5"/>
+<line x1="150" y1="150" x2="150" y2="172" stroke="#C9D6E3" stroke-width="1.5"/>
+<line x1="126" y1="158" x2="144" y2="158" stroke="#B5C4D4" stroke-width="1.5"/>
+<line x1="126" y1="164" x2="144" y2="164" stroke="#B5C4D4" stroke-width="1.5"/>
+<line x1="156" y1="158" x2="174" y2="158" stroke="#B5C4D4" stroke-width="1.5"/>
+<line x1="156" y1="164" x2="174" y2="164" stroke="#B5C4D4" stroke-width="1.5"/>
+<!-- desk -->
+<rect x="50" y="172" width="290" height="12" rx="4" fill="#B98A5E"/>
+<rect x="64" y="184" width="8" height="52" fill="#8C6239"/>
+<rect x="318" y="184" width="8" height="52" fill="#8C6239"/>
+<!-- books -->
+<rect x="70" y="158" width="36" height="14" rx="2" fill="#E0857A"/>
+<rect x="74" y="144" width="30" height="14" rx="2" fill="#7FB3D5"/>
+<!-- plant -->
+<path d="M90 150 Q84 120 102 110 Q100 128 96 150Z" fill="#6DBE8A"/>
+<path d="M96 150 Q104 118 118 116 Q110 134 100 150Z" fill="#5AAE78"/>
+<rect x="88" y="158" width="20" height="14" rx="3" fill="#D98E63" />
+<!-- lamp -->
+<rect x="306" y="96" width="4" height="76" fill="#5B6B7A"/>
+<ellipse cx="308" cy="172" rx="14" ry="4" fill="#5B6B7A"/>
+<path d="M286 104 L330 104 L320 80 L296 80 Z" fill="#FFD479"/>
+<rect x="296" y="78" width="24" height="4" rx="2" fill="#E9B94A"/>
+<circle cx="308" cy="112" r="4" fill="#FFF3C4"/>
+</svg>
