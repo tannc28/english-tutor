@@ -17,7 +17,7 @@ Script này:
 
 Dùng: python3 tools/sync.py   (rồi publish web/index.html với files trong web/publish_files.json)
 """
-import json, os, sys
+import sys, json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = lambda *p: os.path.join(ROOT, "data", *p)
@@ -185,3 +185,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # Tự soát sổ gia sư (Tân 12/11: "đây là cuốn sổ của bạn, phải tự biết cần thêm gì")
+    import subprocess
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "check.py")])

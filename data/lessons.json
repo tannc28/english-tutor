@@ -17,7 +17,8 @@
    "week": 1,
    "order": 1,
    "kind": "Assessment",
-   "cover": "data/img/w1/l1-cover.webp"
+   "cover": "data/img/w1/l1-cover.webp",
+   "strain": "n/a"
   },
   {
    "id": "2026-11-12-morning",
@@ -202,7 +203,7 @@
    "order": 103,
    "kind": "Reading",
    "type": "day",
-   "title": "How ideas connect: although · rather · in other words",
+   "title": "Linking words: how ideas connect",
    "minutes": 10,
    "status": "open",
    "cover": "data/img/w1/x-although.webp",

@@ -297,39 +297,29 @@
       {
         "time": "07:45–08:25",
         "min": 40,
-        "what": "Morning: today's listening"
+        "what": "Morning: small lessons (📖 + 🎧)"
       },
       {
-        "time": "08:30",
-        "min": 15,
-        "what": "Walk: re-listen"
-      },
-      {
-        "time": "20:30–21:30",
-        "min": 60,
-        "what": "Lesson: reading + submit"
-      },
-      {
-        "time": "21:40–22:30",
-        "min": 50,
-        "what": "Free listening (Plan picks)"
+        "time": "20:30–22:30",
+        "min": 120,
+        "what": "Evening: small lessons (📖 + 🎧), submit each one"
       }
     ],
     "weekend": [
       {
         "time": "09:00–10:30",
         "min": 90,
-        "what": "Weekend lesson"
+        "what": "Morning: small lessons"
       },
       {
         "time": "14:30–16:00",
         "min": 90,
-        "what": "Free listening"
+        "what": "Afternoon: small lessons"
       },
       {
         "time": "20:00–21:00",
         "min": 60,
-        "what": "YouTube / podcast"
+        "what": "Evening: easy listening + reading"
       }
     ],
     "calendar": {

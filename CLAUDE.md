@@ -30,6 +30,10 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Cuối tuần: Weekly Test + Talk Time (T7), nhắc học (CN). Không dồn bài khi Tân lỡ.
 - Không sao chép nguyên văn nội dung có bản quyền vào repo; lưu link + câu hỏi + tóm tắt.
 
+## Tự soát sổ (Tân 12/11: "đây là cuốn sổ của bạn – phải tự biết cần thêm gì")
+- `tools/check.py` soát mọi chỗ hay quên: chấm xong chưa cập nhật Progress/lessons/mastery, lời khuyên cũ còn sót, ngày học thiếu đọc hoặc nghe hay còn bài khung cũ, transcript mở sẵn, thiếu audio/marks, quiz quá nhiều, từ thiếu def/ex… Chạy tự động cuối `tools/sync.py` và ở **Stop hook** (`.claude/settings.json`): còn ❌ thì không được dừng – làm nốt.
+- **Mỗi khi Tân phải nhắc một điều "đáng lẽ gia sư tự biết" → thêm luật vào `tools/check.py`** để lần sau tự bắt được.
+
 ## Thông báo cho Tân: TELEGRAM (Tân yêu cầu 12/11)
 - Mọi tin quan trọng gửi qua bot **@CtanEnglishTutorBot**: `python3 tools/notify.py "<HTML ngắn>"` – khi **chấm xong**: `python3 tools/tg.py graded <id>` (tin 4 dòng + ảnh thẻ lỗi ≤3 + quiz ôn vào hàng – ghi `tg/cards/quiz` trong grade; KHÔNG ảnh chụp dài, KHÔNG nhận xét dài), **sáng** `tg.py quiz` (ôn lại 1→3→7 ngày) + `tg.py words` (≤4 thẻ từ có hình + audio, ôn 1→3→7→14 ngày), **Chủ nhật** `tg.py weekly <N>` (ảnh báo cáo tuần), **ra tuần mới**, **xử lý xin nghỉ / đổi lịch**, **nhắc nhẹ** (2 ngày không học). Tiếng Việt, ngắn, có link `#<id>`.
 - Token **không bao giờ** vào repo (Cloudflare token: Network secrets của environment, proxy tự gắn): biến môi trường `TELEGRAM_BOT_TOKEN` (Tân đặt trong cài đặt environment) hoặc `/root/.telegram_token`. Chat id ở `profile.notify.telegram_chat_id`. Không có token → PushNotification + báo Tân.

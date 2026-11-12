@@ -98,7 +98,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B10 | – | Ask a Teacher: Remaining, Remainder and Rest of | open | – | – | – | – | – |  |
 | T1 · B101 | – | Work chunks you will hear today | open | – | – | – | – | – |  |
 | T1 · B102 | – | Meeting the team | open | – | – | – | – | – |  |
-| T1 · B103 | – | How ideas connect: although · rather · in other words | open | – | – | – | – | – |  |
+| T1 · B103 | – | Linking words: how ideas connect | open | – | – | – | – | – |  |
 | T1 · B104 | – | Fast re-read: The Café on the Corner | open | – | – | – | – | – |  |
 | T1 · B105 | – | Hope Street Ep. 3 (1/2): Lunch with Tom | open | – | – | – | – | – |  |
 | T1 · B106 | – | Hope Street Ep. 3 (1/2): listen | open | – | – | – | – | – |  |
