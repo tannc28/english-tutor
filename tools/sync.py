@@ -29,6 +29,47 @@ def load(path):
 def pct(v):
     return "–" if v in (None, "") else f"{round(float(v))}%"
 
+def build_studylog():
+    """Giờ học THẬT từ nhật ký phiên trong bài nộp (log.sessions + log.parts) → data/studylog.json.
+    Mỗi phiên: bắt đầu (giờ VN), phút hoạt động (chia theo tỉ lệ thời gian mở, tổng = thời gian hoạt động thật của bài),
+    gộp các phiên cách nhau < 10 phút thành 1 khối học."""
+    import glob, datetime as dt
+    tz = dt.timezone(dt.timedelta(hours=7))
+    L = {l["id"]: l for l in json.load(open(D("lessons.json")))["lessons"]}
+    ses = []
+    for f in glob.glob(D("submissions", "*.json")):
+        lid = os.path.basename(f)[:-5]; s = json.load(open(f)); lg = s.get("log") or {}
+        ss = [x for x in lg.get("sessions", []) if "s" in x and "e" in x]
+        if not ss or not lg.get("t0"): continue
+        active = sum(v.get("ms", 0) for v in (lg.get("parts") or {}).values()) / 60000
+        opened = sum(max(0, x["e"] - x["s"]) for x in ss) / 60 or 1
+        k = min(1, active / opened) if active else 1
+        for x in ss:
+            m = max(0, x["e"] - x["s"]) / 60 * k
+            if m < 0.5: continue
+            st = dt.datetime.fromtimestamp(lg["t0"] / 1000 + x["s"], tz)
+            ses.append({"start": st.isoformat(timespec="minutes"), "min": round(m, 1), "lesson": lid,
+                        "title": L.get(lid, {}).get("title", lid), "kind": L.get(lid, {}).get("kind", ""), "device": x.get("kind", "")})
+    ses.sort(key=lambda x: x["start"])
+    blocks = []
+    for x in ses:
+        st = dt.datetime.fromisoformat(x["start"])
+        if blocks and (st - dt.datetime.fromisoformat(blocks[-1]["end"])).total_seconds() < 600:
+            b = blocks[-1]; b["min"] = round(b["min"] + x["min"], 1)
+            b["end"] = max(b["end"], (st + dt.timedelta(minutes=x["min"])).isoformat(timespec="minutes"))
+            if x["title"] not in b["lessons"]: b["lessons"].append(x["title"])
+        else:
+            blocks.append({"start": x["start"], "end": (st + dt.timedelta(minutes=x["min"])).isoformat(timespec="minutes"),
+                           "min": x["min"], "lessons": [x["title"]]})
+    days = {}
+    for b in blocks:
+        d = b["start"][:10]; days.setdefault(d, {"min": 0, "blocks": []})
+        days[d]["min"] = round(days[d]["min"] + b["min"], 1); days[d]["blocks"].append(b)
+    out = {"_note": "Sinh tự động bởi tools/sync.py từ log bài nộp – giờ học thật (phút hoạt động).", "sessions": ses, "days": days}
+    json.dump(out, open(D("studylog.json"), "w"), ensure_ascii=False, indent=1)
+    return out
+
+
 def main():
     days = load(D("lessons.json"))["lessons"]
     weeks = load(D("weeks.json"))["weeks"]
@@ -166,7 +207,7 @@ def main():
         json.dump(lib, f, ensure_ascii=False, indent=1)
 
     # ---- Danh sách file xuất bản kèm web (không có keys/)
-    files = {f"data/{n}": f"data/{n}" for n in ("weeks.json", "lessons.json", "profile.json", "resources.json", "levels.json", "mastery.json", "library.json")}
+    files = {f"data/{n}": f"data/{n}" for n in ("weeks.json", "lessons.json", "profile.json", "resources.json", "levels.json", "mastery.json", "library.json", "studylog.json")}
     for fn in sorted(os.listdir(D("vocab"))):
         if fn.endswith(".json"): files[f"data/vocab/{fn}"] = f"data/vocab/{fn}"
     for sub in ("lessons", "grades", "submissions"):
@@ -184,6 +225,7 @@ def main():
     print(f"OK – {len(weeks)} tuần, {len(days)} bài, {len(graded)} đã chấm. Progress Log đã sinh lại. {len(files)} file cần xuất bản (web/publish_files.json).")
 
 if __name__ == "__main__":
+    build_studylog()
     main()
     # Tự soát sổ gia sư (Tân 12/11: "đây là cuốn sổ của bạn, phải tự biết cần thêm gì")
     import subprocess

@@ -56,6 +56,13 @@ def main():
     if last and str(M.get('updated', '')) < last[1].astimezone(TZ).date().isoformat():
         warn.append(f'mastery.json "updated" ({M.get("updated")}) cũ hơn lần chấm {last[0]} – đã xét checklist chưa?')
 
+    # 1b) Dự báo C1 cụ thể cho Tân (Tân 12/11: phải nói rõ còn bao nhiêu giờ, tiêu chuẩn, ngày dự kiến) – đo lại sau mỗi lần chấm
+    fc = P.get('forecast') or {}
+    if not fc.get('skills') or not fc.get('phases'):
+        err.append('profile.forecast thiếu skills/phases – tab Progress cần "Your road to C1" cụ thể (giờ còn thiếu, tiêu chuẩn, mốc)')
+    elif last and str(fc.get('updated', '')) < last[1].astimezone(TZ).date().isoformat():
+        warn.append(f'profile.forecast.updated ({fc.get("updated")}) cũ hơn lần chấm {last[0]} – cập nhật "You now/evidence/gap" theo số đo mới')
+
     # 2) Không còn lời khuyên/kế hoạch đã bỏ trong Progress
     blob = json.dumps({k: P.get(k) for k in ('coach', 'focus_md', 'teacher_md', 'weaknesses', 'focus_now', 'schedule')}, ensure_ascii=False)
     for s in STALE:

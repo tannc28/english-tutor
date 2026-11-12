@@ -7,7 +7,7 @@
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
 - Tuần: 1 · Streak: 2 ngày · Đã chấm: 4/22 bài
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
-- Cập nhật hồ sơ: 2026-11-13T00:30:00+07:00
+- Cập nhật hồ sơ: 2026-11-12T17:21:20.474414+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
