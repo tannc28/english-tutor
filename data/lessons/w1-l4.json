@@ -1,5 +1,5 @@
 {
- "intro_md": "**Week 1 · Lesson 4 – First day at work (~45 min). Almost all input – very few answers.** 🎧📖\n\nToday you **listen and read a lot** – the same story, many times, with the words in front of you. Only **2 tiny checks** at the end – and a **💬 Ask me** box after each part if you want to ask me something.\n\n| Part | What | Time |\n|---|---|---|\n| ① Learn | 9 work chunks + *what to do when you miss a word* | 5 min |\n| ② Listen & read | Meeting the team – 4 rounds, with notes for every line | 15 min |\n| ③ Listen & read | Hope Street Ep. 3 – the whole story as audio + text | 20 min |\n| ✓ | 2 quick self-checks + how it felt | 3 min |\n\n💡 **No pressure:** there is nothing to write until the end. Just keep your eyes and ears on the English.",
+ "intro_md": "**Week 1 · Lesson 4 – First day at work (~45 min). Almost all input – very few answers.** 🎧📖\n\nToday you **listen and read a lot** – the same story, many times, with the words in front of you. No quiz – at the end just tell me how much you understood. There's a **💬 Ask me** box after each part if you want to ask me something.\n\n| Part | What | Time |\n|---|---|---|\n| ① Learn | 9 work chunks + *what to do when you miss a word* | 5 min |\n| ② Listen & read | Meeting the team – 4 rounds, with notes for every line | 15 min |\n| ③ Listen & read | Hope Street Ep. 3 – the whole story as audio + text | 20 min |\n| ✓ | How much you understood + what helped | 1 min |\n\n💡 **No pressure:** there is nothing to write until the end. Just keep your eyes and ears on the English.",
  "parts": [
   {
    "kind": "① Learn",
@@ -237,38 +237,9 @@
   },
   {
    "kind": "✓ Check",
-   "title": "Two tiny checks (answers straight away)",
-   "practice": true,
-   "md": "Just to see what stayed with you. Tap – you'll see the answer at once.",
+   "title": "How was it?",
+   "md": "No quiz – just tell me how it went.",
    "questions": [
-    {
-     "id": "c1",
-     "q": "Tom says *\"It takes a while to get the hang of everything here.\"* He means…",
-     "type": "choice",
-     "options": [
-      "You need time to learn how things work here.",
-      "Everything here is very easy.",
-      "You must work late every day."
-     ],
-     "check": {
-      "answer": "You need time to learn how things work here.",
-      "why": "**get the hang of sth** = slowly learn how to do it. **takes a while** = needs some time."
-     }
-    },
-    {
-     "id": "c2",
-     "q": "Why did Nam help Mr Patel, *even though* he was tired?",
-     "type": "choice",
-     "options": [
-      "Mr Patel asked him to give him a hand with a heavy TV.",
-      "Margaret told him to help.",
-      "He wanted to see the new TV."
-     ],
-     "check": {
-      "answer": "Mr Patel asked him to give him a hand with a heavy TV.",
-      "why": "*\"Could you **give me a hand** with this? It's a new TV, and it's heavier than it looks.\"*"
-     }
-    },
     {
      "id": "u1",
      "q": "How much did you understand on the **first** listen + read? Write a number, e.g. 80",
