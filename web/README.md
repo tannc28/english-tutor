@@ -19,6 +19,9 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 | `grades/<id>.json` | `{score, summary_md, answers_md, next_md, gradedAt, items:{qid:{verdict:"correct|partial|wrong|unsure|skipped", note_md}}}` – `items` hiện dưới từng câu (bắt buộc, Tutor Guide 6e) |
 | `submissions/<id>.json` | Bản chép bài làm của Tân (từ DB web; được publish để bài đã chấm luôn hiện câu trả lời), gồm `log` = nhật ký quá trình: `sessions[{s,e,at,kind,os,app,vw}]` (giây từ lúc mở bài; `at` giờ bắt đầu thật (UTC); `kind` computer/phone/tablet, `os`, `app` (đoán từ trình duyệt), `vw` bề rộng màn hình), `parts{pi:{ms}}` (thời gian tương tác mỗi phần), `q{qid:{first, ms, edits, changes[{t,from,to}]}}`, `listen{pi:{plays, rates[], revealAt, answeredBeforeReveal}}` |
 | `keys/<id>.json` | Đáp án trắc nghiệm, **không** publish |
+| `levels.json` | **Checklist trình độ** A2 / B1 / B2 / C1: mỗi level có `summary_md, hours, proof[]` (cách biết đã đạt), `vocab` (danh sách từ), `sections` (listening, reading, grammar, linking, later) → `items[{id, text, ex?, later?}]`. Nguồn: CEFR Companion Volume, Core Inventory, CEFR-J |
+| `mastery.json` | Gia sư đánh giá từng item: `items{id:{tutor:"got_it|learning|not_yet", evidence, date}}`, `vocab.estimate_md`. **Cập nhật mỗi lần chấm** (có bằng chứng từ bài) |
+| `vocab/<A1…C1>.json`, `vocab/pseudo.json` | Danh sách từ theo level (CEFR-J Wordlist 1.5 + Octanove C1) và từ giả cho bài kiểm tra từ vựng yes/no |
 | `img/w<N>/…` | Minh hoạ (webp từ `tools/illustrate.py`, svg tự vẽ). Trong bài: `![alt](data/img/…)` trong md, `cover` cho thẻ bài |
 | `audio/<id>/p<i>.mp3`, `audio/w<N>/words/*.mp3` | Audio bài nghe + word wall (`tools/audio.py`) |
 | `resources.json` | Thư viện nghe tự do (tab 🎧 Listen): `{how_md, tiers:[{name, level, note, items:[{name, type, url, alt?, topics, why}]}]}` – chỉ link đã kiểm tra |
@@ -60,6 +63,11 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 3. Chấm theo Tutor Guide; đọc thêm `log` để phân tích quá trình (Tutor Guide 6d). Ghi `data/submissions/<id>.json` (bản chép), `data/grades/<id>.json`; cập nhật `data/lessons.json` (status `graded`, `date` = ngày nộp, `listenPct`, `readPct`, `difficulty`, `strain` = feedback.strain, `minutesActual`, `extraMinutes` = feedback.extra, `note` ngắn) và `data/profile.json` (cefr/levels, strengths, weaknesses, interests, teacher_md, focus_md, decisions, chunk_bank, streak, updatedAt, **coach**, weaknesses có bằng chứng – xem Tutor Guide 6c).
 4. `python3 tools/sync.py` → commit + push → publish (như trên) → `ArtifactData delete inbox/<id>`.
 5. Trả lời trong thread comment + resolve (nếu đến qua comment), hoặc 1–2 dòng trong chat.
+
+## Checklist trình độ (tab 🎯 Levels)
+- Mỗi level hiện % item ✅, số 🌱/⬜/chưa kiểm tra, "how we'll know you're there", ô từ vựng (bài **word check** 40 từ = 36 từ thật ngẫu nhiên + 4 từ giả, điểm đã trừ đoán bừa; hoặc duyệt toàn bộ danh sách).
+- Tân tự đánh giá từng item + kết quả word check → DB `drafts/selfcheck` (chỉ chủ sở hữu). **Khi chấm / job tuần:** đọc `drafts/selfcheck`, so với bằng chứng từ bài → cập nhật `mastery.json` (ghi evidence ngắn, tiếng Anh). Tân tự chấm cao hơn gia sư → thêm item đó vào bài tuần tới để kiểm chứng.
+- `weeks[].targets` = các item tuần đó đẩy lên; hiện ở trang tuần. Job tuần chọn targets từ các item 🌱/⬜ của level đang học.
 
 ## Quy trình XIN NGHỈ (Tân bấm "🙋 Can't study…" ở một ngày)
 - Trang ghi `inbox/leave-<YYYY-MM-DD>` `{type:"leave", date, kind:"off|morning|evening|short", note}` + gửi comment "🙋 Day-off request …" (dự phòng: fire_trigger).

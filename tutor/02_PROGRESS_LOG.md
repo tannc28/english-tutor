@@ -62,6 +62,14 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-12 | Tân góp ý: (1) mỗi buổi phải là bài riêng để nộp riêng → tách Ngày 2 thành Morning + Evening; (2) phải dạy kiến thức nền trước rồi mới kiểm tra → mỗi bài có ① Learn → ② Try it (phản hồi ngay) → Input → Check; (3) chậm là do phải nghĩ/dịch, chưa thành phản xạ → nghe 1× lặp 3 vòng thay vì 0.85×, đọc không quay lại + đọc lần 2 nhanh hơn, ghi thời gian đọc. |
 | 2026-11-12 | Chuyển sang KẾ HOẠCH THEO TUẦN (Tân yêu cầu): mỗi tuần 1 chủ đề + truyện chung, ~6 bài làm lúc rảnh theo thứ tự tuỳ ý, word wall có hình, bài nghe tự do theo chủ đề; minh hoạ bằng hình (Tân học nhanh qua ngữ cảnh + hình ảnh). Tân tự đánh giá nghe thật ra ~A2+ (vẫn căng não) → tách 'mức thoải mái' (soạn bài) và 'mức làm bài'; thêm câu 'căng não đến mức nào' vào feedback để theo dõi stress, tăng dần không áp lực. |
 
+## Checklist trình độ (data/levels.json + data/mastery.json)
+| Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
+|---|---|---|---|---|
+| A2 | 15/15 | 0 | 0 | 0 |
+| B1 | 5/28 | 10 | 0 | 13 |
+| B2 | 0/23 | 1 | 2 | 20 |
+| C1 | 1/14 | 0 | 1 | 12 |
+
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|

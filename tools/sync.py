@@ -32,6 +32,10 @@ def pct(v):
 def main():
     days = load(D("lessons.json"))["lessons"]
     weeks = load(D("weeks.json"))["weeks"]
+    levels = load(D("levels.json"))["levels"]; mastery = load(D("mastery.json"))
+    ids = {i["id"] for l in levels for sec in l["sections"] for i in sec["items"]}
+    bad = [k for k in mastery.get("items", {}) if k not in ids]
+    if bad: print("LỖI: mastery.json có id không tồn tại trong levels.json:", bad); sys.exit(1)
     wids = {w["no"] for w in weeks}
     for d in days:
         if d.get("week") not in wids: print(f"LỖI: {d['id']} thuộc tuần {d.get('week')} không có trong weeks.json"); sys.exit(1)
@@ -85,6 +89,12 @@ def main():
     L.append("\n### Nhật ký quyết định (vì sao bài lại như vậy)")
     L.append("| Ngày | Quyết định |\n|---|---|")
     for x in prof.get("decisions", []): L.append(f"| {x.get('date','')} | {x.get('text','')} |")
+    L.append("\n## Checklist trình độ (data/levels.json + data/mastery.json)")
+    L.append("| Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |\n|---|---|---|---|---|")
+    for lv in levels:
+        its = [i for sec in lv["sections"] for i in sec["items"] if not i.get("later")]
+        st = [mastery.get("items", {}).get(i["id"], {}).get("tutor", "unknown") for i in its]
+        L.append(f"| {lv['id']} | {st.count('got_it')}/{len(its)} | {st.count('learning')} | {st.count('not_yet')} | {st.count('unknown')} |")
     L.append("\n## Kế hoạch theo tuần")
     L.append("| Tuần | Ngày | Chủ đề | Trạng thái | Bài |\n|---|---|---|---|---|")
     for w in weeks:
@@ -116,7 +126,9 @@ def main():
         f.write("\n".join(L) + "\n")
 
     # ---- Danh sách file xuất bản kèm web (không có keys/)
-    files = {f"data/{n}": f"data/{n}" for n in ("weeks.json", "lessons.json", "profile.json", "resources.json")}
+    files = {f"data/{n}": f"data/{n}" for n in ("weeks.json", "lessons.json", "profile.json", "resources.json", "levels.json", "mastery.json")}
+    for fn in sorted(os.listdir(D("vocab"))):
+        if fn.endswith(".json"): files[f"data/vocab/{fn}"] = f"data/vocab/{fn}"
     for sub in ("lessons", "grades", "submissions"):
         for fn in sorted(os.listdir(D(sub))):
             if fn.endswith(".json"):

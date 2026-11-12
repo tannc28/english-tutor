@@ -261,6 +261,36 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
 .ws-l.done{border-color:var(--ok);color:var(--ok)}.ws-l.moved{border-color:var(--warn);color:var(--warn)}.ws-l.rest{border:0;color:var(--ink-3)}
 .wk-review{padding:8px 10px;border-radius:8px;background:var(--sunk)}
 @media (max-width:520px){.td-row{grid-template-columns:44px 52px minmax(0,1fr);}.td-row .td-go{grid-column:1/-1;justify-self:end}.td-row img,.td-ph{width:52px;height:40px}.td-pod{grid-template-columns:44px minmax(0,1fr)}.td-pod .pli-b{grid-column:1/-1}.ws{gap:3px}.ws-d{padding:6px 3px}.ws-l{font-size:.7rem;padding:1px 3px}}
+.wk-tg{margin-top:10px}#wk-tg-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.wk-tgi{font-size:.8rem;padding:4px 9px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);background:var(--sunk)}
+.lv-ladder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0}
+.lv-step{display:flex;flex-direction:column;gap:6px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);font:inherit;color:inherit;cursor:pointer;text-align:left}
+.lv-step b{font-size:1.3rem}.lv-step .bar{width:100%}
+.lv-step.on{border:2px solid var(--accent);background:var(--accent-soft)}
+.lv-head h2{margin:0 0 6px}
+.lv-counts{display:flex;flex-wrap:wrap;gap:14px;margin:8px 0;font-size:.92rem}
+.lv-bar{margin:4px 0 10px}
+.lv-proof ul{margin:6px 0 0;padding-left:20px}
+.lv-items{display:flex;flex-direction:column;margin-top:6px}
+.lv-it{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:start;padding:12px 0;border-top:1px solid var(--line)}
+.lv-it:first-child{border-top:0}
+.lv-tst{font-size:1.1rem;line-height:1.4;text-align:center}
+.lv-tx{display:flex;flex-direction:column;gap:3px;min-width:0}
+.lv-ex{font-size:.88rem;color:var(--ink-2);font-style:italic}
+.lv-me{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex-shrink:0}
+.lv-me button{font:inherit;font-size:.78rem;padding:5px 9px;border:0;background:var(--surface);color:var(--ink-2);cursor:pointer}
+.lv-me button+button{border-left:1px solid var(--line)}
+.lv-me button.on{background:var(--accent);color:#fff}
+.lv-sec.later{opacity:.7}
+.lv-vocab-r{display:flex;gap:16px;align-items:center;margin-top:8px}
+.wc-big{font-size:2.2rem;font-weight:800;min-width:90px;text-align:center;color:var(--accent)}
+.wc-b{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.wc{margin-top:14px;padding:18px;border:2px solid var(--accent);border-radius:14px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.wc-w{font-size:2rem;font-weight:800}
+.vb{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.vb-list{display:flex;flex-wrap:wrap;gap:6px}
+.vb-w{font:inherit;font-size:.86rem;padding:4px 9px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+.vb-w.on{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent)}
+@media (max-width:620px){.lv-ladder{grid-template-columns:repeat(2,minmax(0,1fr))}.lv-it{grid-template-columns:24px minmax(0,1fr)}.lv-me{grid-column:2;justify-self:start}.lv-vocab-r{flex-direction:column;align-items:flex-start}}
 .wk-goals{margin:8px 0;padding-left:20px;display:grid;gap:4px}
 .wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
 .wk-les{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden;color:var(--ink);text-decoration:none;background:var(--surface)}
@@ -409,6 +439,7 @@ table.days tr.next td{background:var(--accent-soft)}
   <nav class="tabs" aria-label="Sections">
     <a href="#" class="tab" data-view="week">🗓<span class="tl"> This week</span></a>
     <a href="#bai" class="tab" data-view="lessons">📚<span class="tl"> Lessons</span></a>
+    <a href="#level" class="tab" data-view="levels">🎯<span class="tl"> Levels</span></a>
     <a href="#ho-so" class="tab" data-view="profile">👤<span class="tl"> Profile</span></a>
     <a href="#tien-do" class="tab" data-view="progress">📈<span class="tl"> Progress</span></a>
     <a href="#nghe" class="tab" data-view="listen">🎧<span class="tl"> Listen</span></a>
@@ -418,6 +449,7 @@ table.days tr.next td{background:var(--accent-soft)}
   <section id="view-progress" class="view" hidden></section>
   <section id="view-listen" class="view" hidden></section>
   <section id="view-week" class="view" hidden></section>
+  <section id="view-levels" class="view" hidden></section>
 
   <div class="layout" id="view-lessons">
     <nav class="shelf" aria-label="Lesson list">
@@ -1280,7 +1312,8 @@ table.days tr.next td{background:var(--accent-soft)}
       </section>
       ${w.days ? weekStrip(w) : ""}
       ${w.days && (daySel || (todayStr() >= w.start && todayStr() <= w.end)) ? dayPanel(w, daySel && daySel >= w.start && daySel <= w.end ? daySel : todayStr()) : ""}
-      ${(w.goals||[]).length?`<section class="card sec"><span class="label">By the end of this week you can…</span><ul class="wk-goals">${w.goals.map(g=>`<li>${inline(g)}</li>`).join("")}</ul>${w.how_md?`<div class="md note">${md(w.how_md)}</div>`:""}</section>`:""}
+      ${(w.goals||[]).length?`<section class="card sec"><span class="label">By the end of this week you can…</span><ul class="wk-goals">${w.goals.map(g=>`<li>${inline(g)}</li>`).join("")}</ul>
+        ${(w.targets||[]).length?`<div class="wk-tg"><span class="note">Checklist items this week moves forward (🎯 Levels):</span><div id="wk-tg-list" data-ids="${esc(w.targets.join(","))}"></div></div>`:""}${w.how_md?`<div class="md note">${md(w.how_md)}</div>`:""}</section>`:""}
       ${ls.length?`<section class="card sec"><span class="label">All lessons this week – your path</span>
         <div class="wk-grid">${ls.map(l => { const st = statusOf(l); return `<a class="wk-les ${st}" href="#${esc(l.id)}">
           ${l.cover?`<img src="${esc(l.cover)}" alt="" loading="lazy">`:`<div class="wk-ph">${esc(KIND_ICON[l.kind]||"📘")}</div>`}
@@ -1303,11 +1336,118 @@ table.days tr.next td{background:var(--accent-soft)}
       const x = w.words[Number(c.dataset.i)];
       if (x?.audio && c.classList.contains("flip")){ try { wordAudio?.pause(); wordAudio = new Audio(x.audio); wordAudio.play().catch(()=>{}); } catch {} }
     }));
+    const tg = $("#wk-tg-list"); if (tg) loadLevels().then(() => { const all = LV.levels.flatMap(l => l.sections.flatMap(x => x.items)); tg.innerHTML = tg.dataset.ids.split(",").map(id => { const it = all.find(x => x.id === id), t = MA.items[id]?.tutor || "unknown"; return it ? `<a class="wk-tgi" href="#level" title="${esc(ST[t][1])}">${ST[t][0]} ${esc(id)} · ${inline(it.text).replace(/<[^>]+>/g,"").slice(0,60)}</a>` : ""; }).join(""); }).catch(()=>{});
     v.querySelectorAll(".wk-chip").forEach(b => b.addEventListener("click", () => { weekSel = Number(b.dataset.w); daySel = null; renderWeek(); }));
     v.querySelectorAll(".ws-d").forEach(b => b.addEventListener("click", () => { daySel = b.dataset.ds; renderWeek(); }));
     v.querySelectorAll(".lv-send").forEach(b => b.addEventListener("click", () => sendLeave(b.closest(".leave-f"))));
   }
+  // ---- 🎯 Levels: checklist từng trình độ (data/levels.json) + trạng thái gia sư (data/mastery.json) + Tân tự đánh giá (DB drafts/selfcheck)
+  let LV = null, MA = null, SC = null, lvSel = null, vocabCache = {}, wc = null, browse = null;
+  const ST = {got_it:["✅","Got it"], learning:["🌱","Learning"], not_yet:["⬜","Not yet"], unknown:["·","Not checked"]};
+  async function loadLevels(){
+    if (!LV){ [LV, MA] = await Promise.all([getJSON("data/levels.json"), getJSON("data/mastery.json").catch(() => ({items:{}}))]); }
+    if (!SC){ SC = store.get("selfcheck") || {items:{}, vocab:{}, words:{}};
+      if (db) try { const d = (await db.doc("drafts/selfcheck").get()).data(); if (d && (d.at||"") > (SC.at||"")) SC = {items:{}, vocab:{}, words:{}, ...d}; } catch {} }
+  }
+  let scTimer = null;
+  function saveSC(){ SC.at = new Date().toISOString(); store.set("selfcheck", SC); clearTimeout(scTimer); scTimer = setTimeout(() => { try { db?.doc("drafts/selfcheck").set(SC); } catch {} }, 800); }
+  const itemsOf = lv => lv.sections.flatMap(sec => sec.items.filter(i => !i.later));
+  function lvStats(lv){ const its = itemsOf(lv), c = {got_it:0, learning:0, not_yet:0, unknown:0}; its.forEach(i => c[(MA.items[i.id]?.tutor)||"unknown"]++); return {n:its.length, ...c, pct: its.length ? Math.round(c.got_it/its.length*100) : 0}; }
+  async function vocabOf(lvl){ return vocabCache[lvl] ||= (await getJSON("data/vocab/"+lvl+".json")).words; }
+  async function renderLevels(){
+    const v = $("#view-levels");
+    try { await loadLevels(); } catch(e){ v.innerHTML = `<section class="card sec"><p class="note">Couldn't load the level checklists (${esc(e?.code||"error")}).</p></section>`; return; }
+    const stats = LV.levels.map(lvStats);
+    const target = LV.levels.find((l,i) => stats[i].pct < 80) || LV.levels[LV.levels.length-1];
+    const L = LV.levels.find(l => l.id === lvSel) || target, S = lvStats(L);
+    const il = profile?.input_level || {};
+    v.innerHTML = `
+      <section class="card sec">
+        <span class="label">Your road – each level is a checklist</span>
+        <div class="lv-ladder">${LV.levels.map((l,i) => `<button type="button" class="lv-step ${l.id===L.id?"on":""} ${l.id===target.id?"target":""}" data-l="${esc(l.id)}">
+          <b>${esc(l.id)}</b><span class="bar"><i style="width:${stats[i].pct}%"></i></span><span class="note mono">${stats[i].got_it}/${stats[i].n} ✅</span>${l.id===target.id?`<span class="pill submitted">working on</span>`:""}</button>`).join("")}</div>
+        <p class="note">Comfortable level now: 🎧 Listening <b>${esc(il.listening||"–")}</b> · 📖 Reading <b>${esc(il.reading||"–")}</b>. ${md(LV.how_md).replace(/^<p>|<\/p>$/g,"")}</p>
+      </section>
+      <section class="card sec lv-head">
+        <h2>${esc(L.name)}</h2>
+        <div class="md">${md(L.summary_md)}</div>
+        <div class="lv-counts"><span>✅ ${S.got_it} got it</span><span>🌱 ${S.learning} learning</span><span>⬜ ${S.not_yet} not yet</span><span>· ${S.unknown} not checked</span><span class="note">≈ ${esc(L.hours)} study hours from zero</span></div>
+        <div class="bar lv-bar"><i style="width:${S.pct}%"></i></div>
+        <div class="lv-proof"><span class="label">How we'll know you're there</span><ul>${(L.proof||[]).map(p=>`<li>${inline(p)}</li>`).join("")}</ul></div>
+      </section>
+      <section class="card sec" id="lv-vocab"></section>
+      ${L.sections.map(sec => `<section class="card sec lv-sec ${sec.key==="later"?"later":""}"><span class="label">${esc(sec.name)}</span>
+        <div class="lv-items">${sec.items.map(it => { const m = MA.items[it.id] || {}, t = m.tutor || "unknown", me = SC.items[it.id] || "";
+          return `<div class="lv-it">
+            <span class="lv-tst ${t}" title="Tutor: ${esc(ST[t][1])}">${ST[t][0]}</span>
+            <div class="lv-tx"><b>${inline(it.text)}</b>${it.ex?`<span class="lv-ex">${inline(it.ex)}</span>`:""}
+              <span class="note">Tutor: <b>${esc(ST[t][1])}</b>${m.evidence?` – ${inline(m.evidence)}`:""}</span></div>
+            ${it.later ? `<span class="note">later</span>` : `<div class="lv-me" role="radiogroup" aria-label="Your rating">${[["not_yet","Not yet"],["learning","Learning"],["got_it","Got it"]].map(([k,lab]) => `<button type="button" class="${me===k?"on":""}" data-it="${esc(it.id)}" data-v="${k}">${lab}</button>`).join("")}</div>`}
+          </div>`; }).join("")}</div></section>`).join("")}
+      <section class="card sec"><span class="label">Where these checklists come from</span><ul class="note">${LV.sources.map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a></li>`).join("")}</ul></section>`;
+    v.querySelectorAll(".lv-step").forEach(b => b.addEventListener("click", () => { lvSel = b.dataset.l; wc = null; browse = null; renderLevels(); }));
+    v.querySelectorAll(".lv-me button").forEach(b => b.addEventListener("click", () => { const id = b.dataset.it; SC.items[id] = SC.items[id] === b.dataset.v ? "" : b.dataset.v; saveSC(); b.parentElement.querySelectorAll("button").forEach(x => x.classList.toggle("on", x.dataset.v === SC.items[id])); }));
+    renderVocab(L);
+  }
+  async function renderVocab(L){
+    const box = $("#lv-vocab"); if (!box) return;
+    const lists = await Promise.all(L.vocab.map(vocabOf)), total = lists.reduce((t,x) => t + x.length, 0);
+    const res = L.vocab.map(k => SC.vocab[k]).filter(Boolean);
+    const est = res.length === L.vocab.length ? Math.round(res.reduce((t,r,i) => t + r.pct*lists[i].length, 0) / total) : null;
+    let body = "";
+    if (wc && wc.level === L.id){
+      if (wc.i < wc.q.length){ const w = wc.q[wc.i];
+        body = `<div class="wc"><span class="note mono">${wc.i+1} / ${wc.q.length}</span><div class="wc-w">${esc(w.w)}</div><span class="note">${esc(w.pos||"")}</span>
+          <p class="note">Do you know this word – could you explain what it means? Be honest; some words are fake to keep the test fair.</p>
+          <div class="wc-b"><button type="button" class="primary" data-a="1">Yes, I know it</button><button type="button" class="ghost" data-a="0">No / not sure</button></div></div>`;
+      } else {
+        const real = wc.q.filter(x => !x.fake), fake = wc.q.filter(x => x.fake), lvl = wc.part, pct = SC.vocab[lvl]?.pct ?? 0, F = fake.filter(x=>x.a).length;
+        const unknown = real.filter(x => !x.a).map(x => x.w);
+        body = `<div class="wc"><div class="wc-w">${pct}%</div><p>You know about <b>${pct}%</b> of the ${esc(lvl)} words (≈ ${Math.round(pct/100*(vocabCache[lvl]||[]).length).toLocaleString()} of ${(vocabCache[lvl]||[]).length.toLocaleString()}).${F>0?` <span class="note">(${F} fake word${F>1?"s":""} got a "yes", so the score was adjusted down.)</span>`:""}</p>
+          ${unknown.length?`<p class="note">Words to meet soon: ${unknown.slice(0,15).map(esc).join(", ")}</p>`:""}
+          <button type="button" class="ghost" id="wc-done">Done</button></div>`;
+      }
+    } else if (browse && browse.level === L.id){
+      const words = lists.flat(), q = browse.q.toLowerCase();
+      const shown = words.filter(([w]) => !q || w.toLowerCase().includes(q)).slice(0, browse.n);
+      body = `<div class="vb"><input type="search" id="vb-q" placeholder="Search ${total.toLocaleString()} words…" value="${esc(browse.q)}"><p class="note">Tap a word you know well to tick it ✓ (optional – the word check above is faster).</p>
+        <div class="vb-list">${shown.map(([w,p]) => `<button type="button" class="vb-w ${SC.words[w]?"on":""}" data-w="${esc(w)}">${SC.words[w]?"✓ ":""}${esc(w)} <span class="note">${esc(p)}</span></button>`).join("")}</div>
+        ${shown.length >= browse.n ? `<button type="button" class="ghost" id="vb-more">Show more</button>` : ""}<button type="button" class="linkbtn" id="vb-close">Close</button></div>`;
+    }
+    box.innerHTML = `<span class="label">📚 Vocabulary – ${esc(L.vocab.join(" + "))} word list (${total.toLocaleString()} words)</span>
+      <div class="lv-vocab-r"><div class="wc-big">${est==null ? "?" : est+"%"}</div><div>
+        <b>${est==null ? "Not measured yet" : `You know ≈ ${est}% of these words`}</b>
+        <div class="note">${L.vocab.map(k => SC.vocab[k] ? `${esc(k)}: ${SC.vocab[k].pct}% (${esc(fmtDate(SC.vocab[k].date))})` : `${esc(k)}: not checked`).join(" · ")}</div>
+        ${MA.vocab?.estimate_md && L.id==="B1" ? `<div class="md note">${md(MA.vocab.estimate_md)}</div>` : ""}
+        <div class="wc-b">${L.vocab.map(k => `<button type="button" class="tbtn wc-start" data-k="${esc(k)}">✅ Word check ${esc(k)} (40 words · 3 min)</button>`).join("")}<button type="button" class="tbtn" id="vb-open">🔎 Browse all words</button></div>
+      </div></div>${body}`;
+    box.querySelectorAll(".wc-start").forEach(b => b.addEventListener("click", async () => {
+      const k = b.dataset.k, words = await vocabOf(k), fake = (await getJSON("data/vocab/pseudo.json")).fake;
+      const pick = (arr, n) => arr.map(x => [Math.random(), x]).sort((a,b) => a[0]-b[0]).slice(0, n).map(x => x[1]);
+      const q = [...pick(words, 36).map(([w,p]) => ({w, pos:p})), ...pick(fake, 4).map(w => ({w, fake:true}))].sort(() => Math.random()-0.5);
+      wc = {level:L.id, part:k, q, i:0}; browse = null; renderVocab(L);
+    }));
+    box.querySelectorAll(".wc-b [data-a]").forEach(b => b.addEventListener("click", () => {
+      wc.q[wc.i].a = b.dataset.a === "1"; wc.i++;
+      if (wc.i >= wc.q.length){ // chấm: yes/no test có từ giả (Meara) – trừ "đoán bừa"
+        const real = wc.q.filter(x => !x.fake), fake = wc.q.filter(x => x.fake);
+        const H = real.filter(x => x.a).length / real.length, F = fake.length ? fake.filter(x => x.a).length / fake.length : 0;
+        const pct = Math.max(0, Math.round((F >= 1 ? 0 : (H - F) / (1 - F)) * 100));
+        SC.vocab[wc.part] = {pct, date: todayStr(), n: real.length, fakeYes: fake.filter(x=>x.a).length, unknown: real.filter(x => !x.a).map(x => x.w)}; saveSC();
+      }
+      renderVocab(L);
+    }));
+    $("#wc-done")?.addEventListener("click", () => { wc = null; renderVocab(L); });
+    $("#vb-open")?.addEventListener("click", () => { browse = {level:L.id, q:"", n:120}; wc = null; renderVocab(L); });
+    $("#vb-close")?.addEventListener("click", () => { browse = null; renderVocab(L); });
+    $("#vb-more")?.addEventListener("click", () => { browse.n += 240; renderVocab(L); });
+    const qi = $("#vb-q"); if (qi){ qi.addEventListener("input", () => { browse.q = qi.value; const pos = qi.selectionStart; renderVocab(L).then(() => { const n = $("#vb-q"); n?.focus(); try { n.setSelectionRange(pos,pos); } catch {} }); }); }
+    box.querySelectorAll(".vb-w").forEach(b => b.addEventListener("click", () => { const w = b.dataset.w; if (SC.words[w]) delete SC.words[w]; else SC.words[w] = 1; saveSC(); b.classList.toggle("on"); b.firstChild.textContent = (SC.words[w]?"✓ ":"") + w + " "; }));
+  }
+
   function showView(name){
+    $("#view-levels").hidden = name!=="levels";
+    if (name==="levels") renderLevels();
     $("#view-week").hidden = name!=="week";
     if (name==="week") renderWeek();
     $("#view-listen").hidden = name!=="listen";
@@ -1324,6 +1464,7 @@ table.days tr.next td{background:var(--accent-soft)}
     if (h === "tien-do"){ showView("progress"); return; }
     if (h === "nghe"){ showView("listen"); return; }
     if (!h || h === "ke-hoach" || h === "tuan"){ showView("week"); return; }
+    if (h === "level"){ showView("levels"); return; }
     showView("lessons");
     const nextOpen = lessons.filter(l => l.week === curWeek()?.no).sort((a,b)=>(a.order||0)-(b.order||0)).find(l => statusOf(l)==="open");
     current = lessons.some(l => l.id === h) ? h : (nextOpen?.id || lessons[0]?.id || null);
