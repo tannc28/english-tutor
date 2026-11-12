@@ -324,12 +324,12 @@
   },
   "image_gen": {
     "primary": "cloudflare",
-    "cf_account": "a00f0318dcd80d92c7cf5cc61f675b83",
+    "cf_account": "84dda49333ad8262d0c950884ebfb5df",
     "cf_model": "@cf/black-forest-labs/flux-1-schnell",
     "fallback": [
       "svg-sonnet",
       "svg-haiku"
     ],
-    "note": "Token Cloudflare (Workers AI) do proxy gắn vào api.cloudflare.com – không nằm trong repo. Free 10.000 neuron/ngày ≈ 170 ảnh."
+    "note": "Token Cloudflare (Workers AI) do proxy gắn vào api.cloudflare.com – mỗi lúc chỉ 1 token; tài khoản đang dùng = cf_account. Free 10.000 neuron/ngày/tài khoản."
   }
 }
