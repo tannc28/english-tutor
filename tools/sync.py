@@ -125,8 +125,31 @@ def main():
     with open(os.path.join(ROOT, "tutor", "02_PROGRESS_LOG.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(L) + "\n")
 
+    # ---- Thư viện ôn tập (tab 🧠 Review): gom mọi thứ đã học từ data/ → data/library.json (sinh tự động)
+    plan = {i: ds for w in weeks for ds, d in (w.get("days") or {}).items() for i in d.get("lessons", [])}
+    lib = {"words": [], "learn": [], "story": [], "mistakes": [], "generated": "auto – tools/sync.py"}
+    seen = set()
+    for w in weeks:
+        for x in w.get("words") or []:
+            lib["words"].append({**x, "week": w["no"], "kind": "word"}); seen.add(x["w"].lower())
+    for c in prof.get("chunk_bank") or []:
+        if c["chunk"].lower() not in seen:
+            lib["words"].append({"w": c["chunk"], "vi": c.get("meaning", ""), "kind": "chunk", "learned": c.get("learned", "")})
+    for d in days_sorted:
+        try: body = load(D("lessons", d["id"] + ".json"))
+        except Exception: continue
+        for pi, p in enumerate(body.get("parts", [])):
+            ref = {"lesson": d["id"], "part": pi, "week": d.get("week"), "order": d.get("order"), "date": plan.get(d["id"], d.get("date")), "status": d.get("status")}
+            if p.get("learn"): lib["learn"].append({**ref, "title": p.get("title", ""), "img": (p.get("md", "").split("](")[1].split(")")[0] if "![" in p.get("md", "")[:200] else None)})
+            if "Hope Street" in (p.get("title") or ""): lib["story"].append({**ref, "title": p.get("title", "")})
+        gp = D("grades", d["id"] + ".json")
+        if os.path.exists(gp):
+            for c in load(gp).get("cards") or []: lib["mistakes"].append({**c, "lesson": d["id"], "date": d.get("date")})
+    with open(D("library.json"), "w", encoding="utf-8") as f:
+        json.dump(lib, f, ensure_ascii=False, indent=1)
+
     # ---- Danh sách file xuất bản kèm web (không có keys/)
-    files = {f"data/{n}": f"data/{n}" for n in ("weeks.json", "lessons.json", "profile.json", "resources.json", "levels.json", "mastery.json")}
+    files = {f"data/{n}": f"data/{n}" for n in ("weeks.json", "lessons.json", "profile.json", "resources.json", "levels.json", "mastery.json", "library.json")}
     for fn in sorted(os.listdir(D("vocab"))):
         if fn.endswith(".json"): files[f"data/vocab/{fn}"] = f"data/vocab/{fn}"
     for sub in ("lessons", "grades", "submissions"):

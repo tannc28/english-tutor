@@ -102,7 +102,9 @@ sequenceDiagram
 Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư)
 
 - **🗓 This week:** chủ đề tuần, ảnh bìa, mục tiêu, nút Continue, thẻ bài có hình, word wall (lật thẻ + audio), bài nghe tự do, các tuần tới.
-- **📚 Bài học:** danh sách gom theo tuần. Vở làm bài có trình nghe (file MP3 phát được trên iPhone, chỉnh tốc độ 0.75–1.1×, lời ẩn tới khi bấm hiện), nút thu âm (khi cần), thanh tiến độ và nút Nộp. Kết quả chấm hiện ở đầu bài.
+- **📚 Bài học:** danh sách gom theo tuần → ngày.
+- **🎯 Levels:** checklist từng level (nghe, đọc, ngữ pháp, từ nối, ~8.900 từ), tự đánh giá, bài kiểm tra từ vựng.
+- **🧠 Review:** tra cứu mọi thứ đã học + thẻ lật ôn tập theo lịch nhắc lại + "What's next". Vở làm bài có trình nghe (file MP3 phát được trên iPhone, chỉnh tốc độ 0.75–1.1×, lời ẩn tới khi bấm hiện), nút thu âm (khi cần), thanh tiến độ và nút Nộp. Kết quả chấm hiện ở đầu bài.
 - **👤 Hồ sơ:** CEFR ước lượng từng kỹ năng, giáo viên nhận xét, điểm mạnh, cần cải thiện, sở thích, đang tập trung, và vì sao bài lại như vậy.
 - **📈 Tiến độ:** số ngày học, streak, mức hiểu nghe/đọc (5 bài gần nhất và cả khoá), biểu đồ mức hiểu theo ngày, bảng đánh giá từng ngày.
 

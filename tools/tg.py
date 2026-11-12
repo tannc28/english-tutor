@@ -4,6 +4,7 @@
   python3 tools/tg.py graded <lessonId>   # sau khi chấm: tin 4 dòng (grade.tg) + thẻ lỗi (grade.cards, ≤3) + đưa quiz (grade.quiz) vào hàng ôn
   python3 tools/tg.py quiz                # job sáng: gửi quiz đến hạn (data/review.json), đọc kết quả quiz đã làm
   python3 tools/tg.py weekly <weekNo>     # Chủ nhật: ảnh báo cáo tuần
+  python3 tools/tg.py words               # job sáng: ≤4 thẻ từ có hình (ôn đến hạn + từ mới) + 1 file audio
 Dữ liệu gia sư viết khi chấm (grades/<id>.json):
   tg:    {"win": "...", "fix": "..."}                       – mỗi dòng ≤ 90 ký tự, tiếng Việt/Anh đơn giản
   cards: [{"q": "...", "yours": "...", "right": "...", "tip": "..."}]   – tối đa 3 lỗi quan trọng nhất (❌→✅→💡)
@@ -128,6 +129,41 @@ def quiz(force=False):
         if r.get("ok"): x["poll_id"] = r["result"]["poll"]["id"]; x["sent"] = today()
     save(p, R); print("sent", len(due), "quiz")
 
+# ---------- 7: thẻ từ vựng có hình (mỗi ngày ≤4 thẻ: từ đến hạn ôn trước, rồi từ mới của word wall; ôn sau 1 → 3 → 7 → 14 ngày)
+WSTEPS = [1, 3, 7, 14]
+def words(n=4):
+    lib = load(D("library.json"))["words"]
+    p = D("review.json"); R = load(p) if os.path.exists(p) else {"items": []}
+    S = R.setdefault("words", {})
+    due = [w for w in lib if w["w"] in S and S[w["w"]].get("due") and S[w["w"]]["due"] <= today()]
+    new = [w for w in lib if w["w"] not in S and w.get("img")]
+    pick = (due + new)[:n]
+    if not pick: print("no word cards today"); return
+    outs, auds = [], []
+    for i, w in enumerate(pick):
+        img = f'<img src="file://{os.path.join(ROOT, w["img"])}" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px">' if w.get("img") else ""
+        body = f'''<div id="card">{img}<div class="k">{"🔁 review" if w in due else "✨ new word"} · Week {E(w.get("week",""))}</div>
+          <div style="font-size:34px;font-weight:800;line-height:1.1">{E(w["w"])}</div>
+          {f'<div class="q" style="font-weight:500">{E(w.get("def"))}</div>' if w.get("def") else ""}
+          {f'<div class="row tip"><span class="big">💬</span><span><i>{E(w.get("ex"))}</i></span></div>' if w.get("ex") else ""}
+          {f'<div style="font-size:17px;color:#6b7690">🇻🇳 {E(w.get("vi"))}</div>' if w.get("vi") else ""}</div>'''
+        outs.append(render(body, os.path.join(tempfile.gettempdir(), f"word-{i}.png")))
+        if w.get("audio") and os.path.exists(os.path.join(ROOT, w["audio"])): auds.append(os.path.join(ROOT, w["audio"]))
+        st = S.get(w["w"], {"step": -1}); step = min(st["step"] + 1, len(WSTEPS) - 1)
+        S[w["w"]] = {"step": step, "due": (dt.date.today() + dt.timedelta(days=WSTEPS[step])).isoformat(), "sent": today()}
+    send_photos(outs, f'🃏 <b>{len(pick)} thẻ từ hôm nay</b> – nhìn hình, đoán nghĩa, rồi đọc ví dụ. <a href="{CLASS}#on-tap">Ôn thêm trên web</a>')
+    if auds:  # ghép audio các từ thành 1 file để nghe liền
+        lst = os.path.join(tempfile.gettempdir(), "words.txt"); out = os.path.join(tempfile.gettempdir(), f"words-{today()}.mp3")
+        open(lst, "w").write("".join(f"file '{a}'\n" for a in auds))
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", out], check=True)
+        import uuid, urllib.request
+        b = uuid.uuid4().hex
+        body = (f'--{b}\r\nContent-Disposition: form-data; name="chat_id"\r\n\r\n{notify.chat_id()}\r\n--{b}\r\nContent-Disposition: form-data; name="title"\r\n\r\nWords {today()}\r\n'
+                f'--{b}\r\nContent-Disposition: form-data; name="audio"; filename="words.mp3"\r\nContent-Type: audio/mpeg\r\n\r\n').encode() + open(out, "rb").read() + f"\r\n--{b}--\r\n".encode()
+        req = urllib.request.Request(f"https://api.telegram.org/bot{notify.token()}/sendAudio", data=body, headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+        with urllib.request.urlopen(req, timeout=60) as r: print("audio", json.load(r).get("ok"))
+    save(p, R)
+
 # ---------- 8: báo cáo tuần
 def weekly(no):
     W = next(w for w in load(D("weeks.json"))["weeks"] if w["no"] == no)
@@ -158,4 +194,5 @@ if __name__ == "__main__":
     if a[:1] == ["graded"]: graded(a[1])
     elif a[:1] == ["quiz"]: quiz(force="--now" in a)
     elif a[:1] == ["weekly"]: weekly(int(a[1]))
+    elif a[:1] == ["words"]: words()
     else: print(__doc__)

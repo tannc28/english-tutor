@@ -17,6 +17,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Vấn đề cốt lõi: Tân biết từ nhưng **không nối được thành ý** → dạy chunk, từ nối, quy chiếu (it/this/which), tách câu dài, nối âm.
 - Nghe theo chu trình Vandergrift (dự đoán → nghe → kiểm tra → nghe lại → transcript → tự rút kinh nghiệm) + partial dictation + shadowing.
 - **Kế hoạch theo TUẦN (Tân yêu cầu 12/11):** mỗi tuần 1 chủ đề + truyện chung, ~6 bài riêng (mỗi bài nộp riêng) **xếp theo thời khoá biểu từng ngày** (sáng/tối/cuối tuần). Ngày bận Tân bấm **🙋 xin nghỉ** trên web → gia sư xếp lại lịch (web/README: Quy trình XIN NGHỈ). Có word wall + minh hoạ (Tân học nhanh qua ngữ cảnh + hình ảnh). Mỗi bài: **① Learn (dạy kiến thức nền trước) → ② Try it (luyện, phản hồi ngay) → ③ Input → ✓ Check** – lớp học, không phải bài thi.
+- **Tab 🧠 Review** (`data/library.json`, sync.py tự gom): tra cứu mọi thứ đã học (từ + cụm có hình/audio, phần Learn, lỗi đã sửa, truyện) + thẻ lật ôn tập (spaced repetition, lưu `drafts/selfcheck.srs`) + "What's next". Mỗi từ/cụm mới phải có def/ex (và img/audio nếu có) để vào được thư viện.
 - **Checklist trình độ** (`data/levels.json` + `data/mastery.json`, tab 🎯 Levels): lộ trình rõ ràng từng level. Mỗi lần chấm cập nhật mastery có bằng chứng; mỗi tuần chọn `targets` từ checklist.
 - **Soạn ở MỨC INPUT THOẢI MÁI** (`profile.input_level`: hiểu ngay, không căng não), không phải mức làm bài kiểm tra. Theo dõi cảm giác 😌/🙂/😵 mỗi bài; chỉ nâng 1 bậc nhỏ khi 2–3 bài liền 😌 + hiểu ≥90%; 😵 → hạ ngay. Tăng dần, không stress.
 - **Luyện phản xạ, không dịch:** nghe tốc độ tự nhiên, lặp lại nhiều vòng thay vì làm chậm; đọc không quay lại, lần 2 nhanh hơn.
@@ -27,7 +28,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Không sao chép nguyên văn nội dung có bản quyền vào repo; lưu link + câu hỏi + tóm tắt.
 
 ## Thông báo cho Tân: TELEGRAM (Tân yêu cầu 12/11)
-- Mọi tin quan trọng gửi qua bot **@CtanEnglishTutorBot**: `python3 tools/notify.py "<HTML ngắn>"` – khi **chấm xong**: `python3 tools/tg.py graded <id>` (tin 4 dòng + ảnh thẻ lỗi ≤3 + quiz ôn vào hàng – ghi `tg/cards/quiz` trong grade; KHÔNG ảnh chụp dài, KHÔNG nhận xét dài), **sáng** `tg.py quiz` (ôn lại 1→3→7 ngày), **Chủ nhật** `tg.py weekly <N>` (ảnh báo cáo tuần), **ra tuần mới**, **xử lý xin nghỉ / đổi lịch**, **nhắc nhẹ** (2 ngày không học). Tiếng Việt, ngắn, có link `#<id>`.
+- Mọi tin quan trọng gửi qua bot **@CtanEnglishTutorBot**: `python3 tools/notify.py "<HTML ngắn>"` – khi **chấm xong**: `python3 tools/tg.py graded <id>` (tin 4 dòng + ảnh thẻ lỗi ≤3 + quiz ôn vào hàng – ghi `tg/cards/quiz` trong grade; KHÔNG ảnh chụp dài, KHÔNG nhận xét dài), **sáng** `tg.py quiz` (ôn lại 1→3→7 ngày) + `tg.py words` (≤4 thẻ từ có hình + audio, ôn 1→3→7→14 ngày), **Chủ nhật** `tg.py weekly <N>` (ảnh báo cáo tuần), **ra tuần mới**, **xử lý xin nghỉ / đổi lịch**, **nhắc nhẹ** (2 ngày không học). Tiếng Việt, ngắn, có link `#<id>`.
 - Token **không bao giờ** vào repo: biến môi trường `TELEGRAM_BOT_TOKEN` (Tân đặt trong cài đặt environment) hoặc `/root/.telegram_token`. Chat id ở `profile.notify.telegram_chat_id`. Không có token → PushNotification + báo Tân.
 - Job sáng đọc tin Tân nhắn bot (`tools/notify.py --inbox`): xin nghỉ, góp ý → xử lý như Quy trình XIN NGHỈ.
 

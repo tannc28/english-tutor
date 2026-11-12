@@ -1,0 +1,312 @@
+{
+ "words": [
+  {
+   "w": "flat",
+   "img": "data/img/w1/w-flat.webp",
+   "def": "a home on one floor of a building",
+   "ex": "Nam lives in Flat 2 at number 14.",
+   "vi": "căn hộ",
+   "audio": "data/audio/w1/words/w-flat.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "heating",
+   "img": "data/img/w1/w-heating.webp",
+   "def": "the system that makes a building warm",
+   "ex": "The heating made a noise at 3 a.m.",
+   "vi": "hệ thống sưởi",
+   "audio": "data/audio/w1/words/w-heating.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "umbrella",
+   "img": "data/img/w1/w-umbrella.webp",
+   "def": "you hold it over your head in the rain",
+   "ex": "Take an umbrella – it's going to rain.",
+   "vi": "cái ô",
+   "audio": "data/audio/w1/words/w-umbrella.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "counter",
+   "img": "data/img/w1/w-counter.webp",
+   "def": "the long table in a shop or café where you pay",
+   "ex": "Jess was standing behind the counter.",
+   "vi": "quầy",
+   "audio": "data/audio/w1/words/w-counter.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "bacon sandwich",
+   "img": "data/img/w1/w-sandwich.webp",
+   "def": "bread with hot bacon inside – a British breakfast",
+   "ex": "Try the bacon sandwich!",
+   "audio": "data/audio/w1/words/w-sandwich.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "tram",
+   "img": "data/img/w1/w-tram.webp",
+   "def": "a long electric train that runs on city streets",
+   "ex": "Take the tram to Market Street.",
+   "vi": "tàu điện",
+   "audio": "data/audio/w1/words/w-tram.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "on the corner",
+   "img": "data/img/w1/w-corner.webp",
+   "def": "where two streets meet",
+   "ex": "There's a little café on the corner.",
+   "vi": "ở góc phố",
+   "audio": "data/audio/w1/words/w-corner.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "be used to + V-ing",
+   "img": "data/img/w1/w-used.webp",
+   "def": "something is normal for you now",
+   "ex": "I'm not used to sleeping in a new place.",
+   "vi": "đã quen với",
+   "audio": "data/audio/w1/words/w-used.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "show sb around",
+   "img": "data/img/w1/w-showaround.webp",
+   "def": "walk with someone and show them a place",
+   "ex": "Tom will show you around the office.",
+   "vi": "dẫn đi xem",
+   "audio": "data/audio/w1/words/w-showaround.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "give sb a hand",
+   "img": "data/img/w1/w-hand.webp",
+   "def": "help someone",
+   "ex": "Could you give me a hand with this box?",
+   "vi": "giúp một tay",
+   "audio": "data/audio/w1/words/w-hand.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "take a deep breath",
+   "img": "data/img/w1/w-breath.webp",
+   "def": "breathe in slowly to feel calm",
+   "ex": "He took a deep breath and pushed the door.",
+   "vi": "hít một hơi thật sâu",
+   "audio": "data/audio/w1/words/w-breath.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "get lost",
+   "img": "data/img/w1/w-lost.webp",
+   "def": "not know where you are",
+   "ex": "It's easy to get lost in a new city.",
+   "vi": "bị lạc",
+   "audio": "data/audio/w1/words/w-lost.mp3",
+   "week": 1,
+   "kind": "word"
+  },
+  {
+   "w": "work as a …",
+   "vi": "làm (vị trí) …",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "be responsible for …",
+   "vi": "chịu trách nhiệm về …",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "work on …",
+   "vi": "làm (việc gì / dự án)",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "it takes sb + time",
+   "vi": "tốn (ai) bao lâu",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "spend + time (on)",
+   "vi": "dành thời gian",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "every day / everyday",
+   "vi": "mỗi ngày / thường ngày (tính từ)",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "although + mệnh đề (≠ unless)",
+   "vi": "mặc dù (≠ trừ khi)",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "suggest + V-ing",
+   "vi": "gợi ý làm gì",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "rather than / Rather, …",
+   "vi": "thay vì / đúng hơn là",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "in other words",
+   "vi": "nói cách khác",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "seize upon sth",
+   "vi": "vồ lấy, tận dụng ngay",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  },
+  {
+   "w": "pack it in",
+   "vi": "bỏ cuộc",
+   "kind": "chunk",
+   "learned": "2026-11-11"
+  }
+ ],
+ "learn": [
+  {
+   "lesson": "2026-11-12-morning",
+   "part": 0,
+   "week": 1,
+   "order": 2,
+   "date": "2026-11-12",
+   "status": "open",
+   "title": "Why you can't hear the small words",
+   "img": null
+  },
+  {
+   "lesson": "2026-11-12-evening",
+   "part": 0,
+   "week": 1,
+   "order": 3,
+   "date": "2026-11-12",
+   "status": "open",
+   "title": "Linking words: does the idea continue or turn?",
+   "img": null
+  },
+  {
+   "lesson": "w1-l4",
+   "part": 0,
+   "week": 1,
+   "order": 4,
+   "date": "2026-11-13",
+   "status": "open",
+   "title": "What people really say on a first day",
+   "img": "data/img/w1/l4-cover.webp"
+  },
+  {
+   "lesson": "w1-l5",
+   "part": 0,
+   "week": 1,
+   "order": 5,
+   "date": "2026-11-14",
+   "status": "open",
+   "title": "Finding your way – words on a map",
+   "img": "data/img/w1/l5-map.svg"
+  },
+  {
+   "lesson": "w1-l6",
+   "part": 0,
+   "week": 1,
+   "order": 6,
+   "date": "2026-11-15",
+   "status": "open",
+   "title": "The story so far",
+   "img": "data/img/w1/cover.webp"
+  }
+ ],
+ "story": [
+  {
+   "lesson": "2026-11-11-main",
+   "part": 1,
+   "week": 1,
+   "order": 1,
+   "date": "2026-11-11",
+   "status": "graded",
+   "title": "Hope Street – Tập 1: The Key"
+  },
+  {
+   "lesson": "2026-11-12-morning",
+   "part": 2,
+   "week": 1,
+   "order": 2,
+   "date": "2026-11-12",
+   "status": "open",
+   "title": "Hope Street: The next morning"
+  },
+  {
+   "lesson": "2026-11-12-evening",
+   "part": 2,
+   "week": 1,
+   "order": 3,
+   "date": "2026-11-12",
+   "status": "open",
+   "title": "Hope Street – Episode 2: The Café on the Corner"
+  },
+  {
+   "lesson": "w1-l4",
+   "part": 3,
+   "week": 1,
+   "order": 4,
+   "date": "2026-11-13",
+   "status": "open",
+   "title": "Hope Street – Episode 3: Names and a Heavy Box"
+  }
+ ],
+ "mistakes": [
+  {
+   "q": "I'm not used to ___ up so early.",
+   "yours": "I'm not used to get up",
+   "right": "I'm not used to getting up",
+   "tip": "be used to + V-ing: “to” ở đây là giới từ → động từ thêm -ing (đã quen với việc…).",
+   "lesson": "2026-11-11-main",
+   "date": "2026-11-11"
+  },
+  {
+   "q": "He suggested ___ a taxi.",
+   "yours": "He suggested to take a taxi",
+   "right": "He suggested taking a taxi",
+   "tip": "suggest + V-ing (hoặc suggest that…). Không dùng suggest to do.",
+   "lesson": "2026-11-11-main",
+   "date": "2026-11-11"
+  },
+  {
+   "q": "___ it was raining, they went for a walk.",
+   "yours": "Unless (không chắc)",
+   "right": "Although",
+   "tip": "Although = mặc dù (sự thật bất ngờ). Unless = trừ khi / nếu… không (điều kiện).",
+   "lesson": "2026-11-11-main",
+   "date": "2026-11-11"
+  }
+ ],
+ "generated": "auto – tools/sync.py"
+}
