@@ -669,6 +669,60 @@ body.focus .appbar{display:none!important}
 }
 @media (max-width:440px){.appbar{gap:8px}.logo{gap:8px}.logo-i{width:32px;height:32px}.logo-t{font-size:.95rem}.ab-r{gap:5px}.ab-chip{padding:3px 8px;font-size:.78rem}.appbar .theme-btn{width:30px;height:30px}}
 @media (max-width:370px){.logo-c{display:none}}
+
+/* ---- Mật độ gọn hơn (Tân 12/11: tiêu đề/đệm quá to, ít không gian) – chữ bài đọc giữ nguyên cỡ ---- */
+body{font-size:14.5px}
+.appbar{padding-block:6px!important;gap:14px;margin-bottom:6px!important}
+.logo-i{width:30px;height:30px}.logo-t{font-size:.98rem}
+.appbar nav.tabs.main3 .tab{padding:5px 14px;font-size:.86rem}
+.appbar nav.tabs.main3{padding:3px}
+.ab-chip{padding:3px 9px;font-size:.78rem}.appbar .theme-btn{width:30px;height:30px}
+.subtabs{margin-top:4px;gap:4px}.stab{padding:4px 11px;font-size:.8rem}
+.view{margin-top:10px}
+.card{border-radius:12px}
+.sec{padding:14px 18px;gap:8px}
+.sec h2{font-size:1.02rem}
+.label{font-size:.68rem}
+.wk-mini{padding:10px 12px;gap:12px;grid-template-columns:84px minmax(0,1fr)}.wk-thumb{width:84px;height:63px;border-radius:8px}
+.wk-mini h2{font-size:1.05rem;margin:0}
+.wk-why{font-size:.84rem;-webkit-line-clamp:1}
+.dash{margin-top:10px;gap:12px}
+@media (min-width:981px){.dash{grid-template-columns:minmax(0,1fr) 300px}}
+.dash-main{gap:12px}.dash-side{gap:10px}
+.today{padding:12px 16px;gap:6px}
+.td-h .label{font-size:.78rem}
+.mic-sum b{font-size:.92rem}
+.mic-tabs{margin:6px 0 0}.mic-tab{padding:6px 8px;font-size:.86rem}
+.td-row.mic-r{padding:6px 10px}
+.td-row.mic-r .td-main b{font-size:.88rem}
+.dash-side .ws-d{padding:4px 8px}
+.ws-n b{font-size:.88rem}
+.layout{margin-top:10px;gap:16px}
+@media (min-width:1101px){.layout{grid-template-columns:300px minmax(0,1fr)}body.shelf-off .layout,body.focus .layout{grid-template-columns:minmax(0,1fr)}}
+.hero{padding:14px 20px;gap:6px}
+.hero h2{font-size:clamp(1.1rem,2vw,1.3rem)}
+.hero-img{max-height:150px;margin:6px 0 2px}
+.part{padding:16px 20px;gap:2px 12px}
+@media (min-width:521px){.part{grid-template-columns:32px minmax(0,1fr)}}
+.md img{max-height:320px;object-fit:cover}
+.part h3{font-size:1rem}
+.step{width:28px;height:28px;font-size:.8rem}
+.fb{padding:16px 20px}.fb h3{font-size:.98rem}
+.q{padding:12px 14px;gap:8px}
+.qt{font-size:.95rem}
+.opt{padding:9px 12px}
+.toolbar{padding:6px 10px!important;gap:6px 10px}
+.tbtn{padding:5px 10px;font-size:.82rem}
+@media (max-width:1100px){
+  .hero{padding:14px 16px}
+  .part{padding:16px 16px 8px}
+  .part h3{font-size:1.05rem}
+  .md blockquote{margin:10px -16px;padding:14px 16px}
+  .fb{padding:16px}
+  .q{padding:12px 0}
+  .opt{padding:10px 12px;min-height:44px}
+}
+@media (max-width:520px){.wk-mini{grid-template-columns:64px minmax(0,1fr)}.wk-thumb{width:64px;height:64px}.wk-why{-webkit-line-clamp:2}}
 </style>
 <script>
 /* Giao diện sáng/tối – mặc định SÁNG (Tân 12/11), lựa chọn lưu trên máy */
