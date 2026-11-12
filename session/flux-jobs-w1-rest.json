@@ -1,0 +1,77 @@
+{
+ "data/img/w1/w-hand.webp": {
+  "scene": "On the steps of a red-brick house, Nam helps Margaret by carrying a big heavy cardboard box in both arms; Margaret smiles and holds the door open.",
+  "cast": [
+   "nam",
+   "margaret"
+  ],
+  "n": 1
+ },
+ "data/img/w1/x-move-in.webp": {
+  "scene": "Nam carries cardboard moving boxes into a new small flat, a moving van parked outside the window.",
+  "cast": [
+   "nam"
+  ],
+  "n": 1
+ },
+ "data/img/w1/x-feel-at-home.webp": {
+  "scene": "Nam relaxes on a comfy sofa in Margaret's warm living room with a cup of tea, a cat on his lap, Margaret smiling in an armchair.",
+  "cast": [
+   "nam",
+   "margaret"
+  ],
+  "n": 1
+ },
+ "data/img/w1/x-spread-yourself-too-thin.webp": {
+  "scene": "A tired person trying to hold many things at once: a briefcase, a stack of books, a phone and a coffee cup, almost dropping them.",
+  "cast": [],
+  "n": 1
+ },
+ "data/img/w1/x-bite-off-more-than-you-can-chew.webp": {
+  "scene": "A young man trying to bite an enormous giant sandwich that is much bigger than his head, looking worried, funny cartoon.",
+  "cast": [],
+  "n": 1
+ },
+ "data/img/w1/x-multitasking.webp": {
+  "scene": "A woman cooking at a stove while talking on the phone and typing on a laptop on the kitchen counter at the same time.",
+  "cast": [],
+  "n": 1
+ },
+ "data/img/w1/x-kick-off-sth.webp": {
+  "scene": "A football player kicks the ball at the start of a match in a stadium, the referee blowing a whistle, crowd cheering.",
+  "cast": [],
+  "n": 1
+ },
+ "data/img/w1/x-a-resolution.webp": {
+  "scene": "A young woman on New Year's Day writing a list in a notebook at a table, a pair of running shoes beside her, a calendar showing January 1.",
+  "cast": [],
+  "n": 1
+ },
+ "data/img/w1/x-punt-sth.webp": {
+  "scene": "Tom passes a big box of work papers to a colleague, looking relieved, in an office.",
+  "cast": [
+   "tom"
+  ],
+  "n": 1
+ },
+ "data/img/w1/x-table-it.webp": {
+  "scene": "Three colleagues at a meeting table; one puts a folder aside into a tray, a wall calendar showing next Monday circled.",
+  "cast": [],
+  "n": 1
+ },
+ "data/img/w1/x-move-the-goalposts.webp": {
+  "scene": "On a football pitch, a player is about to kick the ball while two people carry the goalposts further away.",
+  "cast": [],
+  "n": 1
+ },
+ "data/img/w1/x-a-moving-target.webp": {
+  "scene": "An archer aims a bow at a round target that is on wheels and rolling away fast across a field.",
+  "cast": [],
+  "n": 1
+ },
+ "data/img/w1/x-the-rest-of-the.webp": {
+  "scene": "At night, a half-read book with a bookmark lies on a bed, the moon visible through the window, a reading lamp on.",
+  "cast": [],
+  "n": 1
+ }
+}

@@ -38,7 +38,7 @@ def save_webp(raw, path, w=768, h=576):
     im.resize((w, h), Image.LANCZOS).save(path, 'WEBP', quality=82)
 
 
-def cloudflare(prompt, out, n, seed=None, steps=6):
+def cloudflare(prompt, out, n, seed=None, steps=4):
     if not CF.get('cf_account'):
         return []
     url = (f"https://api.cloudflare.com/client/v4/accounts/{CF['cf_account']}/ai/run/"
