@@ -1,7 +1,0 @@
-{
- "nam":   {"head": "ShortTwo",     "colors": {"skinColor": "#E8B48A", "topColor": "#6FA8DC", "pantsColor": "#2F3A56", "jacketColor": "#6FA8DC", "shoesColor": "#FFFFFF"}, "note": "Nam – nhân vật chính, người Việt mới chuyển tới Hope Street"},
- "linh":  {"head": "LongHair",     "colors": {"skinColor": "#F0C29E", "topColor": "#7FB98F", "pantsColor": "#3B3F48", "jacketColor": "#7FB98F", "hairColor": "#2B2B2B"}, "note": "Linh – bạn của Nam"},
- "patel": {"head": "GrayShort", "beard": "Full", "acc": "Glasses", "colors": {"skinColor": "#B07850", "topColor": "#F4F1EA", "jacketColor": "#2F4A6D", "pantsColor": "#2F4A6D", "beardColor": "#6B6B6B"}, "note": "Mr Patel – chủ nhà / hàng xóm lớn tuổi"},
- "tom":   {"head": "Pomp",         "colors": {"skinColor": "#F3C7A8", "topColor": "#E58E5E", "pantsColor": "#4A5568", "jacketColor": "#E58E5E"}, "note": "Tom – đồng nghiệp, nói nhanh"},
- "sam":   {"head": "MediumBangs",  "colors": {"skinColor": "#D9A27A", "topColor": "#EBC45E", "pantsColor": "#5A6B8C", "jacketColor": "#EBC45E"}, "note": "Sam"}
-}

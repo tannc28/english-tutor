@@ -35,11 +35,12 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 
 ## Chọn model (Tân yêu cầu 12/11 – có benchmark 12/11, xem `session/MODEL_BENCHMARK.md`)
 - **Opus (phiên chính):** soạn bài, lên kế hoạch tuần, chấm bài, phân tích hồ sơ, quyết định thích ứng. Subagent làm các việc này phải đặt `model: "opus"`.
-- **Sonnet:** **vẽ SVG cho hình quan trọng** (ảnh bìa tuần, ảnh bìa bài, cảnh truyện – ~10–15 hình/tuần; benchmark: đẹp hơn Haiku 6/8 hình) và soạn **nội dung cần đúng nghĩa** khi cần giao việc ra ngoài – thẻ từ (def/ex/vi/note), câu quiz ôn, bản nháp câu hỏi đọc/nghe → Opus xem lại trước khi dùng. (Benchmark: thẻ từ 12/12 đúng.)
-- **Haiku:** **vẽ SVG thẻ từ** (word wall + kho Words, ~30 hình/tuần), việc máy móc (định dạng tin Telegram, chép/kiểm tra file, kiểm tra link). **Không** giao Haiku soạn nghĩa từ/ngữ pháp (benchmark: 2/12 thẻ từ sai nghĩa, trong đó *unless* bị định nghĩa ngược).
+- **Hình minh hoạ (Tân chọn 12/11): FLUX qua AI Horde là chính** (`tools/flux.py`, miễn phí, tự nhiên nhất; Opus xem và chọn ảnh). **Dự phòng SVG:** Sonnet (bìa, cảnh truyện, từ trừu tượng) → Haiku (thẻ từ đơn giản); SVG phải render + tự kiểm tra.
+- **Sonnet:** vẽ SVG dự phòng cho hình quan trọng và soạn **nội dung cần đúng nghĩa** khi cần giao việc ra ngoài – thẻ từ (def/ex/vi/note), câu quiz ôn, bản nháp câu hỏi đọc/nghe → Opus xem lại trước khi dùng. (Benchmark: thẻ từ 12/12 đúng.)
+- **Haiku:** vẽ SVG thẻ từ dự phòng, việc máy móc (định dạng tin Telegram, chép/kiểm tra file, kiểm tra link). **Không** giao Haiku soạn nghĩa từ/ngữ pháp (benchmark: 2/12 thẻ từ sai nghĩa, trong đó *unless* bị định nghĩa ngược).
 
 ## Công cụ có sẵn
-- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · minh hoạ SVG kết hợp (Tân chọn 12/11): **Sonnet** vẽ ảnh bìa + cảnh truyện, **Haiku** vẽ thẻ từ (web/README "Minh hoạ"); `tools/illustrate.py` (SDXL-Turbo) chỉ còn là dự phòng; không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`, torch CPU + diffusers (xem đầu `tools/illustrate.py`).
+- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · `tools/flux.py` (minh hoạ FLUX qua AI Horde, nhân vật cố định `data/flux_cast.json`; dự phòng SVG Sonnet/Haiku – web/README "Minh hoạ"); `tools/illustrate.py` (SDXL CPU) dự phòng cuối; không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`, torch CPU + diffusers (xem đầu `tools/illustrate.py`).
 
 ## Quyền với repo (Tân cho phép 11/11/2026)
 - Claude có **toàn quyền** trên repo này: được commit và **push thẳng lên `main`**, không cần tạo nhánh riêng hay PR.
