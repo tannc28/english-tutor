@@ -144,6 +144,7 @@ def words(n=4):
         img = f'<img src="file://{os.path.join(ROOT, w["img"])}" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px">' if w.get("img") else ""
         body = f'''<div id="card">{img}<div class="k">{"🔁 review" if w in due else "✨ new word"} · Week {E(w.get("week",""))}</div>
           <div style="font-size:34px;font-weight:800;line-height:1.1">{E(w["w"])}</div>
+          {f'<div style="font-size:21px;color:#2b6de0">🇬🇧 {E(w.get("ipa"))}' + (f' &nbsp;·&nbsp; 🇺🇸 {E(w.get("ipa_us"))}' if w.get("ipa_us") and w.get("ipa_us") != w.get("ipa") else "") + '</div>' if w.get("ipa") else ""}
           {f'<div class="q" style="font-weight:500">{E(w.get("def"))}</div>' if w.get("def") else ""}
           {f'<div class="row tip"><span class="big">💬</span><span><i>{E(w.get("ex"))}</i></span></div>' if w.get("ex") else ""}
           {f'<div style="font-size:17px;color:#6b7690">🇻🇳 {E(w.get("vi"))}</div>' if w.get("vi") else ""}</div>'''

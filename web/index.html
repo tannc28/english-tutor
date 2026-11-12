@@ -216,6 +216,8 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
 .grade summary{cursor:pointer;font-weight:600}
 
 .pl-au{width:100%;height:40px}
+.ipa{font-family:"Charis SIL","Doulos SIL","Gentium Plus","Noto Sans","Segoe UI",system-ui,sans-serif;font-size:.86rem;color:var(--accent);letter-spacing:.01em}
+.wipa{padding:0 10px}
 .player.compact{gap:6px;padding:10px 12px;width:100%}
 .player.compact .pl-row{display:flex;gap:8px;align-items:center;width:100%}
 .player.compact .pl-au{flex:1;min-width:0}
@@ -1416,7 +1418,7 @@ table.days tr.next td{background:var(--accent-soft)}
       ${(w.words||[]).length?`<section class="card sec"><span class="label">Word wall – tap a card</span>
         <div class="ww">${w.words.map((x,i)=>`<button type="button" class="wcard" data-i="${i}">
           ${x.img?`<img src="${esc(x.img)}" alt="" loading="lazy">`:""}
-          <b>${esc(x.w)}</b>
+          <b>${esc(x.w)}</b>${x.ipa?`<span class="ipa wipa">${esc(x.ipa)}${x.ipa_us && x.ipa_us!==x.ipa?` · US ${esc(x.ipa_us)}`:""}</span>`:""}
           <span class="wback">${inline(x.def||"")}${x.ex?`<i>“${esc(x.ex)}”</i>`:""}${x.vi?`<span class="note">🇻🇳 ${esc(x.vi)}</span>`:""}</span>
         </button>`).join("")}</div></section>`:""}
       ${(w.listen||[]).length?`<section class="card sec"><span class="label">Free listening this week – same theme</span>
@@ -1491,7 +1493,7 @@ table.days tr.next td{background:var(--accent-soft)}
     let body = "";
     if (wc && wc.level === L.id){
       if (wc.i < wc.q.length){ const w = wc.q[wc.i];
-        body = `<div class="wc"><span class="note mono">${wc.i+1} / ${wc.q.length}</span><div class="wc-w">${esc(w.w)}</div><span class="note">${esc(w.pos||"")}</span>
+        body = `<div class="wc"><span class="note mono">${wc.i+1} / ${wc.q.length}</span><div class="wc-w">${esc(w.w)}</div><span class="ipa">${esc(w.ipa||"")}</span><span class="note">${esc(w.pos||"")}</span>
           <p class="note">Do you know this word – could you explain what it means? Be honest; some words are fake to keep the test fair.</p>
           <div class="wc-b"><button type="button" class="primary" data-a="1">Yes, I know it</button><button type="button" class="ghost" data-a="0">No / not sure</button></div></div>`;
       } else {
@@ -1505,7 +1507,7 @@ table.days tr.next td{background:var(--accent-soft)}
       const words = lists.flat(), q = browse.q.toLowerCase();
       const shown = words.filter(([w]) => !q || w.toLowerCase().includes(q)).slice(0, browse.n);
       body = `<div class="vb"><input type="search" id="vb-q" placeholder="Search ${total.toLocaleString()} words…" value="${esc(browse.q)}"><p class="note">Tap a word you know well to tick it ✓ (optional – the word check above is faster).</p>
-        <div class="vb-list">${shown.map(([w,p]) => `<button type="button" class="vb-w ${SC.words[w]?"on":""}" data-w="${esc(w)}">${SC.words[w]?"✓ ":""}${esc(w)} <span class="note">${esc(p)}</span></button>`).join("")}</div>
+        <div class="vb-list">${shown.map(([w,p,ip]) => `<button type="button" class="vb-w ${SC.words[w]?"on":""}" data-w="${esc(w)}">${SC.words[w]?"✓ ":""}${esc(w)} <span class="ipa">${esc(ip||"")}</span> <span class="note">${esc(p)}</span></button>`).join("")}</div>
         ${shown.length >= browse.n ? `<button type="button" class="ghost" id="vb-more">Show more</button>` : ""}<button type="button" class="linkbtn" id="vb-close">Close</button></div>`;
     }
     box.innerHTML = `<span class="label">📚 Vocabulary – ${esc(L.vocab.join(" + "))} word list (${total.toLocaleString()} words)</span>
@@ -1518,7 +1520,7 @@ table.days tr.next td{background:var(--accent-soft)}
     box.querySelectorAll(".wc-start").forEach(b => b.addEventListener("click", async () => {
       const k = b.dataset.k, words = await vocabOf(k), fake = (await getJSON("data/vocab/pseudo.json")).fake;
       const pick = (arr, n) => arr.map(x => [Math.random(), x]).sort((a,b) => a[0]-b[0]).slice(0, n).map(x => x[1]);
-      const q = [...pick(words, 36).map(([w,p]) => ({w, pos:p})), ...pick(fake, 4).map(w => ({w, fake:true}))].sort(() => Math.random()-0.5);
+      const q = [...pick(words, 36).map(([w,p,ipa]) => ({w, pos:p, ipa})), ...pick(fake, 4).map(w => ({w, fake:true}))].sort(() => Math.random()-0.5);
       wc = {level:L.id, part:k, q, i:0}; browse = null; renderVocab(L);
     }));
     box.querySelectorAll(".wc-b [data-a]").forEach(b => b.addEventListener("click", () => {
@@ -1557,7 +1559,7 @@ table.days tr.next td{background:var(--accent-soft)}
       const list = words.filter(w => hit(w.w) || hit(w.def) || hit(w.vi) || hit(w.ex));
       body = `<div class="rv-words">${list.map(w => { const r = srsOf(w), st = !r ? "new" : r.step >= 3 ? "known" : r.due <= todayStr() ? "due" : "learning";
         return `<button type="button" class="rv-w" data-w="${esc(w.w)}">${w.img?`<img src="${esc(w.img)}" alt="" loading="lazy">`:`<span class="rv-noimg">${w.kind==="chunk"?"🧩":"📝"}</span>`}
-          <span class="rv-wt"><b>${esc(w.w)}</b><span class="pill rv-${st}">${{new:"new",due:"review today",learning:"learning",known:"known ✓"}[st]}</span></span>
+          <span class="rv-wt"><b>${esc(w.w)}</b>${w.ipa?`<span class="ipa">${esc(w.ipa)}${w.ipa_us && w.ipa_us!==w.ipa?` · US ${esc(w.ipa_us)}`:""}</span>`:""}<span class="pill rv-${st}">${{new:"new",due:"review today",learning:"learning",known:"known ✓"}[st]}</span></span>
           <span class="rv-wd">${w.def?inline(w.def):""}${w.ex?`<i>“${esc(w.ex)}”</i>`:""}${w.vi?`<span class="note">🇻🇳 ${esc(w.vi)}</span>`:""}${w.week?`<span class="note">Week ${esc(w.week)}</span>`:""}</span></button>`; }).join("") || `<p class="note">Nothing matches “${esc(rvQ)}”.</p>`}</div>`;
     } else if (rvTab === "learn"){
       body = `<div class="rv-list">${LIB.learn.filter(x => hit(x.title)).map(x => `<a class="rv-row" href="#${esc(x.lesson)}/p${esc(x.part)}">${x.img?`<img src="${esc(x.img)}" alt="">`:`<span class="rv-noimg">🧩</span>`}<span><b>${esc(x.title)}</b><span class="note">Week ${esc(x.week)} · Lesson ${esc(x.order)}${x.date?` · ${esc(fmtDate(x.date))}`:""} · ${x.status==="graded"?"✅ done":"not done yet"}</span></span><span class="td-go">Open ▶</span></a>`).join("")}</div>
@@ -1604,7 +1606,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const w = fc.cards[fc.i];
     return `<div class="fc"><span class="note mono">${fc.i+1} / ${fc.cards.length} · tap the card to flip</span>
       <button type="button" class="fc-card ${fc.flip?"flip":""}">
-        ${w.img?`<img src="${esc(w.img)}" alt="">`:""}<b class="fc-w">${esc(w.w)}</b>
+        ${w.img?`<img src="${esc(w.img)}" alt="">`:""}<b class="fc-w">${esc(w.w)}</b>${w.ipa?`<span class="ipa">${esc(w.ipa)}${w.ipa_us && w.ipa_us!==w.ipa?` · US ${esc(w.ipa_us)}`:""}</span>`:""}
         ${fc.flip ? `<span class="fc-back">${w.def?`<span>${inline(w.def)}</span>`:""}${w.ex?`<i>“${esc(w.ex)}”</i>`:""}${w.vi?`<span class="note">🇻🇳 ${esc(w.vi)}</span>`:""}</span>` : `<span class="note">What does it mean? Think, then tap.</span>`}
       </button>
       ${fc.flip ? `<div class="fc-b"><button type="button" class="ghost" data-r="again">🔁 Again</button><button type="button" class="primary" data-r="ok">✅ Got it</button></div>` : ""}

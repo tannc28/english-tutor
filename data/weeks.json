@@ -23,7 +23,9 @@
      "def": "a home on one floor of a building",
      "ex": "Nam lives in Flat 2 at number 14.",
      "vi": "căn hộ",
-     "audio": "data/audio/w1/words/w-flat.mp3"
+     "audio": "data/audio/w1/words/w-flat.mp3",
+     "ipa": "/flæt/",
+     "ipa_us": "/flæt/"
     },
     {
      "w": "heating",
@@ -31,7 +33,9 @@
      "def": "the system that makes a building warm",
      "ex": "The heating made a noise at 3 a.m.",
      "vi": "hệ thống sưởi",
-     "audio": "data/audio/w1/words/w-heating.mp3"
+     "audio": "data/audio/w1/words/w-heating.mp3",
+     "ipa": "/ˈhiːtɪŋ/",
+     "ipa_us": "/ˈhiːtɪŋ/"
     },
     {
      "w": "umbrella",
@@ -39,7 +43,9 @@
      "def": "you hold it over your head in the rain",
      "ex": "Take an umbrella – it's going to rain.",
      "vi": "cái ô",
-     "audio": "data/audio/w1/words/w-umbrella.mp3"
+     "audio": "data/audio/w1/words/w-umbrella.mp3",
+     "ipa": "/ʌmˈbrelə/",
+     "ipa_us": "/ʌmˈbrelə/"
     },
     {
      "w": "counter",
@@ -47,14 +53,18 @@
      "def": "the long table in a shop or café where you pay",
      "ex": "Jess was standing behind the counter.",
      "vi": "quầy",
-     "audio": "data/audio/w1/words/w-counter.mp3"
+     "audio": "data/audio/w1/words/w-counter.mp3",
+     "ipa": "/ˈkaʊntə/",
+     "ipa_us": "/ˈkaʊntər/"
     },
     {
      "w": "bacon sandwich",
      "img": "data/img/w1/w-sandwich.webp",
      "def": "bread with hot bacon inside – a British breakfast",
      "ex": "Try the bacon sandwich!",
-     "audio": "data/audio/w1/words/w-sandwich.mp3"
+     "audio": "data/audio/w1/words/w-sandwich.mp3",
+     "ipa": "/ˈbeɪkən ˈsændwɪtʃ/",
+     "ipa_us": "/ˈbeɪkən ˈsændwɪtʃ/"
     },
     {
      "w": "tram",
@@ -62,7 +72,9 @@
      "def": "a long electric train that runs on city streets",
      "ex": "Take the tram to Market Street.",
      "vi": "tàu điện",
-     "audio": "data/audio/w1/words/w-tram.mp3"
+     "audio": "data/audio/w1/words/w-tram.mp3",
+     "ipa": "/træm/",
+     "ipa_us": "/træm/"
     },
     {
      "w": "on the corner",
@@ -70,7 +82,9 @@
      "def": "where two streets meet",
      "ex": "There's a little café on the corner.",
      "vi": "ở góc phố",
-     "audio": "data/audio/w1/words/w-corner.mp3"
+     "audio": "data/audio/w1/words/w-corner.mp3",
+     "ipa": "/ɒn ðə ˈkɔːnə/",
+     "ipa_us": "/ɔn ðə ˈkɔːrnər/"
     },
     {
      "w": "be used to + V-ing",
@@ -78,7 +92,9 @@
      "def": "something is normal for you now",
      "ex": "I'm not used to sleeping in a new place.",
      "vi": "đã quen với",
-     "audio": "data/audio/w1/words/w-used.mp3"
+     "audio": "data/audio/w1/words/w-used.mp3",
+     "ipa": "/bi juːst tə/",
+     "ipa_us": "/bi juːst tə/"
     },
     {
      "w": "show sb around",
@@ -86,7 +102,9 @@
      "def": "walk with someone and show them a place",
      "ex": "Tom will show you around the office.",
      "vi": "dẫn đi xem",
-     "audio": "data/audio/w1/words/w-showaround.mp3"
+     "audio": "data/audio/w1/words/w-showaround.mp3",
+     "ipa": "/ʃəʊ ˈsʌmbɒdi əˈraʊnd/",
+     "ipa_us": "/ʃoʊ ˈsʌmbɑːdi ərˈraʊnd/"
     },
     {
      "w": "give sb a hand",
@@ -94,7 +112,9 @@
      "def": "help someone",
      "ex": "Could you give me a hand with this box?",
      "vi": "giúp một tay",
-     "audio": "data/audio/w1/words/w-hand.mp3"
+     "audio": "data/audio/w1/words/w-hand.mp3",
+     "ipa": "/ɡɪv ˈsʌmbɒdi ə hænd/",
+     "ipa_us": "/ɡɪv ˈsʌmbɑːdi ə hænd/"
     },
     {
      "w": "take a deep breath",
@@ -102,7 +122,9 @@
      "def": "breathe in slowly to feel calm",
      "ex": "He took a deep breath and pushed the door.",
      "vi": "hít một hơi thật sâu",
-     "audio": "data/audio/w1/words/w-breath.mp3"
+     "audio": "data/audio/w1/words/w-breath.mp3",
+     "ipa": "/teɪk ə diːp breθ/",
+     "ipa_us": "/teɪk ə diːp breθ/"
     },
     {
      "w": "get lost",
@@ -110,7 +132,9 @@
      "def": "not know where you are",
      "ex": "It's easy to get lost in a new city.",
      "vi": "bị lạc",
-     "audio": "data/audio/w1/words/w-lost.mp3"
+     "audio": "data/audio/w1/words/w-lost.mp3",
+     "ipa": "/ɡet lɒst/",
+     "ipa_us": "/ɡet lɔst/"
     }
    ],
    "listen": [

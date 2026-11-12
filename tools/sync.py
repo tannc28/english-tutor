@@ -129,12 +129,22 @@ def main():
     plan = {i: ds for w in weeks for ds, d in (w.get("days") or {}).items() for i in d.get("lessons", [])}
     lib = {"words": [], "learn": [], "story": [], "mistakes": [], "generated": "auto – tools/sync.py"}
     seen = set()
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    try:
+        from ipa import ipa as _ipa
+    except Exception: _ipa = None
+    changed = False
+    for w in weeks:  # điền IPA (UK + US) cho word wall nếu thiếu – ghi thẳng vào weeks.json
+        for x in w.get("words") or []:
+            if _ipa and not x.get("ipa"): x["ipa"], x["ipa_us"] = _ipa(x["w"]), _ipa(x["w"], "us"); changed = True
+    if changed:
+        with open(D("weeks.json"), "w", encoding="utf-8") as f: json.dump({"weeks": weeks}, f, ensure_ascii=False, indent=1)
     for w in weeks:
         for x in w.get("words") or []:
             lib["words"].append({**x, "week": w["no"], "kind": "word"}); seen.add(x["w"].lower())
     for c in prof.get("chunk_bank") or []:
         if c["chunk"].lower() not in seen:
-            lib["words"].append({"w": c["chunk"], "vi": c.get("meaning", ""), "kind": "chunk", "learned": c.get("learned", "")})
+            lib["words"].append({"w": c["chunk"], "vi": c.get("meaning", ""), "kind": "chunk", "learned": c.get("learned", ""), **({"ipa": _ipa(c["chunk"]), "ipa_us": _ipa(c["chunk"], "us")} if _ipa else {})})
     for d in days_sorted:
         try: body = load(D("lessons", d["id"] + ".json"))
         except Exception: continue

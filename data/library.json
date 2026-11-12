@@ -7,6 +7,8 @@
    "ex": "Nam lives in Flat 2 at number 14.",
    "vi": "căn hộ",
    "audio": "data/audio/w1/words/w-flat.mp3",
+   "ipa": "/flæt/",
+   "ipa_us": "/flæt/",
    "week": 1,
    "kind": "word"
   },
@@ -17,6 +19,8 @@
    "ex": "The heating made a noise at 3 a.m.",
    "vi": "hệ thống sưởi",
    "audio": "data/audio/w1/words/w-heating.mp3",
+   "ipa": "/ˈhiːtɪŋ/",
+   "ipa_us": "/ˈhiːtɪŋ/",
    "week": 1,
    "kind": "word"
   },
@@ -27,6 +31,8 @@
    "ex": "Take an umbrella – it's going to rain.",
    "vi": "cái ô",
    "audio": "data/audio/w1/words/w-umbrella.mp3",
+   "ipa": "/ʌmˈbrelə/",
+   "ipa_us": "/ʌmˈbrelə/",
    "week": 1,
    "kind": "word"
   },
@@ -37,6 +43,8 @@
    "ex": "Jess was standing behind the counter.",
    "vi": "quầy",
    "audio": "data/audio/w1/words/w-counter.mp3",
+   "ipa": "/ˈkaʊntə/",
+   "ipa_us": "/ˈkaʊntər/",
    "week": 1,
    "kind": "word"
   },
@@ -46,6 +54,8 @@
    "def": "bread with hot bacon inside – a British breakfast",
    "ex": "Try the bacon sandwich!",
    "audio": "data/audio/w1/words/w-sandwich.mp3",
+   "ipa": "/ˈbeɪkən ˈsændwɪtʃ/",
+   "ipa_us": "/ˈbeɪkən ˈsændwɪtʃ/",
    "week": 1,
    "kind": "word"
   },
@@ -56,6 +66,8 @@
    "ex": "Take the tram to Market Street.",
    "vi": "tàu điện",
    "audio": "data/audio/w1/words/w-tram.mp3",
+   "ipa": "/træm/",
+   "ipa_us": "/træm/",
    "week": 1,
    "kind": "word"
   },
@@ -66,6 +78,8 @@
    "ex": "There's a little café on the corner.",
    "vi": "ở góc phố",
    "audio": "data/audio/w1/words/w-corner.mp3",
+   "ipa": "/ɒn ðə ˈkɔːnə/",
+   "ipa_us": "/ɔn ðə ˈkɔːrnər/",
    "week": 1,
    "kind": "word"
   },
@@ -76,6 +90,8 @@
    "ex": "I'm not used to sleeping in a new place.",
    "vi": "đã quen với",
    "audio": "data/audio/w1/words/w-used.mp3",
+   "ipa": "/bi juːst tə/",
+   "ipa_us": "/bi juːst tə/",
    "week": 1,
    "kind": "word"
   },
@@ -86,6 +102,8 @@
    "ex": "Tom will show you around the office.",
    "vi": "dẫn đi xem",
    "audio": "data/audio/w1/words/w-showaround.mp3",
+   "ipa": "/ʃəʊ ˈsʌmbɒdi əˈraʊnd/",
+   "ipa_us": "/ʃoʊ ˈsʌmbɑːdi ərˈraʊnd/",
    "week": 1,
    "kind": "word"
   },
@@ -96,6 +114,8 @@
    "ex": "Could you give me a hand with this box?",
    "vi": "giúp một tay",
    "audio": "data/audio/w1/words/w-hand.mp3",
+   "ipa": "/ɡɪv ˈsʌmbɒdi ə hænd/",
+   "ipa_us": "/ɡɪv ˈsʌmbɑːdi ə hænd/",
    "week": 1,
    "kind": "word"
   },
@@ -106,6 +126,8 @@
    "ex": "He took a deep breath and pushed the door.",
    "vi": "hít một hơi thật sâu",
    "audio": "data/audio/w1/words/w-breath.mp3",
+   "ipa": "/teɪk ə diːp breθ/",
+   "ipa_us": "/teɪk ə diːp breθ/",
    "week": 1,
    "kind": "word"
   },
@@ -116,6 +138,8 @@
    "ex": "It's easy to get lost in a new city.",
    "vi": "bị lạc",
    "audio": "data/audio/w1/words/w-lost.mp3",
+   "ipa": "/ɡet lɒst/",
+   "ipa_us": "/ɡet lɔst/",
    "week": 1,
    "kind": "word"
   },
@@ -123,73 +147,97 @@
    "w": "work as a …",
    "vi": "làm (vị trí) …",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/wɜːk æz ə/",
+   "ipa_us": "/wɜːk æz ə/"
   },
   {
    "w": "be responsible for …",
    "vi": "chịu trách nhiệm về …",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/bi rɪˈspɒnsɪbəl fə/",
+   "ipa_us": "/bi rᵻˈspɑːnsᵻbəl fər/"
   },
   {
    "w": "work on …",
    "vi": "làm (việc gì / dự án)",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/wɜːk ɒn/",
+   "ipa_us": "/wɜːk ɔn/"
   },
   {
    "w": "it takes sb + time",
    "vi": "tốn (ai) bao lâu",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/ɪt teɪks ˈsʌmbɒdi taɪm/",
+   "ipa_us": "/ɪt teɪks ˈsʌmbɑːdi taɪm/"
   },
   {
    "w": "spend + time (on)",
    "vi": "dành thời gian",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/spend taɪm/",
+   "ipa_us": "/spend taɪm/"
   },
   {
    "w": "every day / everyday",
    "vi": "mỗi ngày / thường ngày (tính từ)",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/ˈevrɪ deɪ ˈevrɪˌdeɪ/",
+   "ipa_us": "/ˈevri deɪ ˈevrɪˌdeɪ/"
   },
   {
    "w": "although + mệnh đề (≠ unless)",
    "vi": "mặc dù (≠ trừ khi)",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/ɔːlˈðəʊ em ˌeˈneɪtʃ/",
+   "ipa_us": "/ɔːlˈðoʊ em ˌeˈneɪtʃ/"
   },
   {
    "w": "suggest + V-ing",
    "vi": "gợi ý làm gì",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/sədˈʒest/",
+   "ipa_us": "/sədˈʒest/"
   },
   {
    "w": "rather than / Rather, …",
    "vi": "thay vì / đúng hơn là",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/ˈrɑːðə ðən ˈrɑːðə/",
+   "ipa_us": "/ˈræðər ðən ˈræðər/"
   },
   {
    "w": "in other words",
    "vi": "nói cách khác",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/ɪn ˈʌðə wɜːdz/",
+   "ipa_us": "/ɪn ˈʌðər wɜːdz/"
   },
   {
    "w": "seize upon sth",
    "vi": "vồ lấy, tận dụng ngay",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/siːz əˈpɒn ˈsʌmθɪŋ/",
+   "ipa_us": "/siːz əˈpɑːn ˈsʌmθɪŋ/"
   },
   {
    "w": "pack it in",
    "vi": "bỏ cuộc",
    "kind": "chunk",
-   "learned": "2026-11-11"
+   "learned": "2026-11-11",
+   "ipa": "/pæk ɪt ɪn/",
+   "ipa_us": "/pæk ɪt ɪn/"
   }
  ],
  "learn": [
