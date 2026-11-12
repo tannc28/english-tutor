@@ -1,5 +1,5 @@
 {
- "intro_md": "**🎧 Listening · 4.6 min audio · ~15 min.** Real English for learners from VOA Learning English – slower than normal (~99 words per minute), clear, one topic.\n\nFirst learn the key expressions, then listen 3 times. Then 📤 Submit – I check your answers and track your listening.",
+ "intro_md": "**🎧 Listening · 4.6 min audio · ~15 min.** Real English for learners from VOA Learning English – slower than normal (~99 words per minute), clear, one topic.\n\n**Input only:** learn the key expressions, then listen while reading several times. No quiz – just tell me how much you understood, and ask me anything.",
  "parts": [
   {
    "kind": "① Before you listen",
@@ -11,7 +11,7 @@
   {
    "kind": "② Listen",
    "title": "VOA: Ask a Teacher: Remaining, Remainder and Rest of",
-   "md": "**Listen in 3 rounds – don't stop the audio:**\n1. **Round 1 – no transcript.** Just follow. Answer the first question.\n2. **Round 2 – no transcript.** Listen for details. Answer the rest.\n3. **Round 3 – with the transcript** (*Show transcript*). Read while you listen. Notice what you missed.",
+   "md": "**4 rounds – don't stop the audio:**\n1. 👀👂 **Listen + read** (the transcript is open). Follow with your eyes.\n2. 👀👂 **Listen + read again** – notice the key expressions from part ①.\n3. 👂 **Hide the transcript** and just listen. Missed a word? Keep going.\n4. 🔁 **Tap any line** in the transcript to hear just that part again.",
    "listen": [
     {
      "who": "",
@@ -104,50 +104,16 @@
    "rate": 1,
    "questions": [
     {
-     "id": "r1",
-     "q": "What was Ann's question about?",
-     "type": "choice",
-     "options": [
-      "The difference between remaining, remainder and rest",
-      "How to write a formal email",
-      "Words from American football"
-     ]
-    },
-    {
-     "id": "r2",
-     "q": "Can you say *“the remain countries”*?",
-     "type": "choice",
-     "options": [
-      "No – remain is a verb",
-      "Yes, it is very common",
-      "Only in British English"
-     ]
-    },
-    {
-     "id": "r3",
-     "q": "Which is more common, especially in spoken English?",
-     "type": "choice",
-     "options": [
-      "the rest of the …",
-      "the remainder of the …"
-     ]
-    },
-    {
-     "id": "r4",
-     "q": "Complete with one word: *“The ___ countries use more land for farming.”*",
-     "type": "short"
-    },
-    {
-     "id": "r5",
-     "q": "How much did you understand on the **first** listen (before the transcript)? Write a number, e.g. 70",
+     "id": "u1",
+     "q": "How much did you understand on the **first** listen + read? Write a number, e.g. 80",
      "type": "short",
-     "placeholder": "e.g. 70"
+     "placeholder": "e.g. 80"
     },
     {
-     "id": "r6",
-     "q": "Which words or sentences were still hard **after** you read the transcript? (optional)",
+     "id": "ask1",
+     "q": "💬 **Ask me** (optional): any word or line you want me to explain? Vietnamese is OK.",
      "type": "text",
-     "placeholder": "Copy them here…"
+     "placeholder": "optional"
     }
    ],
    "marks": [
@@ -168,7 +134,8 @@
     207.06,
     246.59,
     268.69
-   ]
+   ],
+   "transcript_open": true
   }
  ],
  "credit": "Audio and text: VOA Learning English (public domain)."

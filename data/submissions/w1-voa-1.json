@@ -1,0 +1,141 @@
+{
+  "answers": {
+    "v1": "Something very boring",
+    "v2": "A politician's two-hour speech",
+    "v3": "are always active and moving",
+    "v4": "She certainly doesn't let the grass grow under her feet (certainly ở đây nghĩa là gì nhỉ)",
+    "v5": "Nghe thì tầm 60% còn reading thì gần như hết tầm 95%",
+    "v6": "Không thấy khó gì cả, biết và đoán dược nghĩa hết"
+  },
+  "feedback": {
+    "difficulty": 3,
+    "extra": "0",
+    "hardest": "Cơ bản là nghe vẫn chưa quen lắm, tôi nghĩ cho tôi luyện nhiều vào chưa cần kiểm tra vội đâu, có gì có hết ở phần review rồi mà đúng không, cố gắng dạy nhiều cho tôi vào đừng bắt tôi học rồi làm quiz nhiều thế này vừa chán vừa cảm giác không dược học nhiều",
+    "minutes": "10",
+    "strain": "some"
+  },
+  "lessonId": "w1-voa-1",
+  "log": {
+    "listen": {
+      "1": {
+        "answeredBeforeReveal": "0/6",
+        "plays": 4,
+        "rates": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 40760,
+        "segs": 5
+      }
+    },
+    "parts": {
+      "0": {
+        "ms": 235000
+      },
+      "1": {
+        "ms": 120000
+      },
+      "fb": {
+        "ms": 335000
+      }
+    },
+    "q": {
+      "v1": {
+        "changes": [],
+        "edits": 1,
+        "first": 40927,
+        "last": "Something very boring",
+        "ms": 5000
+      },
+      "v2": {
+        "changes": [],
+        "edits": 1,
+        "first": 40935,
+        "last": "A politician's two-hour speech",
+        "ms": 65000
+      },
+      "v3": {
+        "changes": [],
+        "edits": 1,
+        "first": 41227,
+        "last": "are always active and moving",
+        "ms": 0
+      },
+      "v4": {
+        "edits": 163,
+        "first": 41230,
+        "ms": 55000
+      },
+      "v5": {
+        "edits": 146,
+        "first": 41286,
+        "ms": 35000
+      },
+      "v6": {
+        "edits": 141,
+        "first": 41318,
+        "ms": 130000
+      }
+    },
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-12T04:59:45.560Z",
+        "e": 25,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 0,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T15:39:28.934Z",
+        "e": 38548,
+        "kind": "computer",
+        "os": "macOS",
+        "s": 38383,
+        "vw": 1638
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T16:15:57.342Z",
+        "e": 40591,
+        "kind": "computer",
+        "os": "macOS",
+        "s": 40572,
+        "vw": 1638
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T16:16:22.942Z",
+        "e": 41087,
+        "kind": "computer",
+        "os": "macOS",
+        "s": 40597,
+        "vw": 1638
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T16:24:32.735Z",
+        "e": 41449,
+        "kind": "computer",
+        "os": "macOS",
+        "s": 41087,
+        "vw": 1638
+      }
+    ],
+    "t0": 1794459585560,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-12T16:30:34.709Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "3922a08e-99f5-4c59-9bba-5cd65fc6630a",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-12T16:30:34.709Z"
+}

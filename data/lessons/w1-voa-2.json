@@ -1,5 +1,5 @@
 {
- "intro_md": "**🎧 Listening · 3.5 min audio · ~15 min.** Real English from VOA Learning English – clear and a bit slower than normal.\n\n**Input-first:** learn the key expressions, then **listen while reading** several times. Only 1 tiny check at the end.",
+ "intro_md": "**🎧 Listening · 3.5 min audio · ~15 min.** Real English from VOA Learning English – clear and a bit slower than normal.\n\n**Input only:** learn the key expressions, then listen while reading several times. No quiz – just tell me how much you understood, and ask me anything.",
  "parts": [
   {
    "kind": "① Before you listen",
@@ -11,7 +11,7 @@
   {
    "kind": "② Listen",
    "title": "VOA: Sometimes We 'Spread Ourselves Too Thin'",
-   "md": "**4 rounds – don't stop the audio:**\n1. 👀👂 **Listen + read** (the transcript is already open). Follow with your eyes.\n2. 👀👂 **Listen + read again** – notice the key expressions from part ①.\n3. 👂 **Hide the transcript** and just listen. Missed a word? Keep going.\n4. 👀👂 **(Optional)** One more time with the words.",
+   "md": "**4 rounds – don't stop the audio:**\n1. 👀👂 **Listen + read** (the transcript is open). Follow with your eyes.\n2. 👀👂 **Listen + read again** – notice the key expressions from part ①.\n3. 👂 **Hide the transcript** and just listen. Missed a word? Keep going.\n4. 🔁 **Tap any line** in the transcript to hear just that part again.",
    "listen": [
     {
      "who": "",
@@ -104,24 +104,16 @@
    "rate": 1,
    "questions": [
     {
-     "id": "s1",
-     "q": "What is the talk mainly about?",
-     "type": "choice",
-     "options": [
-      "Trying to do too many things at once",
-      "Eating healthy food",
-      "How to become a teacher"
-     ],
-     "check": {
-      "answer": "Trying to do too many things at once",
-      "why": "*spread yourself too thin* = try to do too many things, so you can't do any of them well."
-     }
-    },
-    {
-     "id": "s6",
+     "id": "u1",
      "q": "How much did you understand on the **first** listen + read? Write a number, e.g. 80",
      "type": "short",
-     "placeholder": "e.g. 70"
+     "placeholder": "e.g. 80"
+    },
+    {
+     "id": "ask1",
+     "q": "💬 **Ask me** (optional): any word or line you want me to explain? Vietnamese is OK.",
+     "type": "text",
+     "placeholder": "optional"
     }
    ],
    "transcript_open": true,

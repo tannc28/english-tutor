@@ -1,5 +1,5 @@
 {
- "intro_md": "**🎧 Listening · 6.3 min audio · ~15 min.** Real English for learners from VOA Learning English – slower than normal (~106 words per minute), clear, one topic.\n\nFirst learn the key expressions, then listen 3 times. Then 📤 Submit – I check your answers and track your listening.",
+ "intro_md": "**🎧 Listening · 6.3 min audio · ~15 min.** Real English for learners from VOA Learning English – slower than normal (~106 words per minute), clear, one topic.\n\n**Input only:** learn the key expressions, then listen while reading several times. No quiz – just tell me how much you understood, and ask me anything.",
  "parts": [
   {
    "kind": "① Before you listen",
@@ -11,7 +11,7 @@
   {
    "kind": "② Listen",
    "title": "VOA: 'Kicking Off' a New Year",
-   "md": "**Listen in 3 rounds – don't stop the audio:**\n1. **Round 1 – no transcript.** Just follow. Answer the first question.\n2. **Round 2 – no transcript.** Listen for details. Answer the rest.\n3. **Round 3 – with the transcript** (*Show transcript*). Read while you listen. Notice what you missed.",
+   "md": "**4 rounds – don't stop the audio:**\n1. 👀👂 **Listen + read** (the transcript is open). Follow with your eyes.\n2. 👀👂 **Listen + read again** – notice the key expressions from part ①.\n3. 👂 **Hide the transcript** and just listen. Missed a word? Keep going.\n4. 🔁 **Tap any line** in the transcript to hear just that part again.",
    "listen": [
     {
      "who": "",
@@ -109,56 +109,16 @@
    "rate": 1,
    "questions": [
     {
-     "id": "k1",
-     "q": "What is the talk mainly about?",
-     "type": "choice",
-     "options": [
-      "Expressions from American football used in everyday life",
-      "The history of American football",
-      "How to become a good kicker"
-     ]
-    },
-    {
-     "id": "k2",
-     "q": "What do Americans call the sport that most of the world calls “football”?",
-     "type": "short"
-    },
-    {
-     "id": "k3",
-     "q": "If you *punt* a decision, you…",
-     "type": "choice",
-     "options": [
-      "wait and decide later",
-      "decide very quickly",
-      "forget about it"
-     ]
-    },
-    {
-     "id": "k4",
-     "q": "In the social media example, how does the boss *move the goalposts*?",
-     "type": "short"
-    },
-    {
-     "id": "k5",
-     "q": "People often *kick off the new year* with a resolution. A resolution is…",
-     "type": "choice",
-     "options": [
-      "a promise to yourself to reach a goal",
-      "a big party",
-      "a sports game"
-     ]
-    },
-    {
-     "id": "k6",
-     "q": "How much did you understand on the **first** listen (before the transcript)? Write a number, e.g. 70",
+     "id": "u1",
+     "q": "How much did you understand on the **first** listen + read? Write a number, e.g. 80",
      "type": "short",
-     "placeholder": "e.g. 70"
+     "placeholder": "e.g. 80"
     },
     {
-     "id": "k7",
-     "q": "Which words or sentences were still hard **after** you read the transcript? (optional)",
+     "id": "ask1",
+     "q": "💬 **Ask me** (optional): any word or line you want me to explain? Vietnamese is OK.",
      "type": "text",
-     "placeholder": "Copy them here…"
+     "placeholder": "optional"
     }
    ],
    "marks": [
@@ -180,7 +140,8 @@
     322.34,
     346.78,
     371.95
-   ]
+   ],
+   "transcript_open": true
   }
  ],
  "credit": "Audio and text: VOA Learning English (public domain)."
