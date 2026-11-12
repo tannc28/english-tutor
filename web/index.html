@@ -733,6 +733,7 @@ body{font-size:14.5px}
   .opt{padding:10px 12px;min-height:44px}
 }
 @media (max-width:520px){.wk-mini{grid-template-columns:64px minmax(0,1fr)}.wk-thumb{width:64px;height:64px}.wk-why{-webkit-line-clamp:2}}
+    .pace-in{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)} .pace-in input{width:64px;padding:4px 6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:15px;font-weight:600}
   table.fcst td{vertical-align:top;font-size:13px;line-height:1.4} table.fcst td .note{font-size:12px;margin-top:2px} table.fcst th{white-space:nowrap;text-align:left;vertical-align:bottom}
 </style>
 <script>
@@ -1492,7 +1493,8 @@ body{font-size:14.5px}
     "B2+":"Watch native films and podcasts with few subtitles; read ordinary (ungraded) books fairly comfortably; start catching implications, tone and light humour.",
     "C1":"Understand long, fast, loosely structured speech; watch films with almost no subtitles; read long, complex texts; use English flexibly for work, study and social life – a solid base for specialist IT English."};
   const ORDER = ["A2","B1","B1+","B2","B2+","C1"];
-  let paceChoice = null;
+  let paceChoice = (() => { try { const v = +localStorage.getItem("paceH"); return v > 0 ? v : null; } catch(e){ return null; } })();
+  function paceSpan(r0, r1, pw){ const w = h => { const d = new Date(); d.setDate(d.getDate() + Math.round(h/pw*7)); return d.toLocaleDateString("en-GB",{month:"short",year:"numeric"}); }; const a = w(r0), b = w(r1); return a===b ? a : a+" – "+b; }
   function weekKey(d){ const t = new Date(d+"T12:00:00"); const day = (t.getDay()+6)%7; t.setDate(t.getDate()-day); return t.toISOString().slice(0,10); }
   let SL = null, slWeek = null;   // giờ học thật (data/studylog.json – sync.py tính từ log bài nộp)
   function renderProgress(){
@@ -1588,15 +1590,15 @@ body{font-size:14.5px}
         <div class="tiles">
           <div class="tile"><span class="label">Still needed to C1</span><b>${tot[0]}–${tot[1]} h</b><span class="sub">real study time · ${done.toFixed(1)} h done</span></div>
           <div class="tile"><span class="label">At your real pace</span><b>${span(tot, realPace||1)}</b><span class="sub">${realPace!=null?realPace.toFixed(1)+" h/week (measured since "+esc(fmtDate(firstDay))+")":"no data yet"}</span></div>
-          <div class="tile"><span class="label">At ${pace} h/week</span><b>${span(tot, pace)}</b><span class="sub"><select id="pace-sel" class="pl-sel">${[5,8,10,12,15,18,21].concat([pace]).filter((x,i,a)=>a.indexOf(x)===i).sort((a,b)=>a-b).map(h=>`<option value="${h}" ${h==pace?"selected":""}>${h} h/week</option>`).join("")}</select></span></div>
+          <div class="tile pace-tile"><span class="label">If I study</span><span class="pace-in"><input id="pace-in" type="number" min="1" max="60" step="0.5" value="${pace}" inputmode="decimal"> h/week</span><b id="pace-date" data-r0="${tot[0]}" data-r1="${tot[1]}">${span(tot, pace)}</b><span class="sub">type your own hours – dates update</span></div>
         </div>
         <span class="label">Standards – where you are vs. what each level needs</span>
         <div class="tblwrap"><table class="days fcst"><thead><tr><th>Skill</th><th>You now</th><th>B2 standard</th><th>C1 standard</th><th>Gap</th></tr></thead><tbody>
           ${(FC.skills||[]).map(k=>`<tr><td><b>${esc(k.skill)}</b></td><td><b>${esc(k.now)}</b><div class="note">${esc(k.evidence||"")}</div></td><td>${esc(k.b2)}</td><td>${esc(k.c1)}</td><td>${esc(k.gap)}</td></tr>`).join("")}
         </tbody></table></div>
         <span class="label">The 3 stages</span>
-        <div class="tblwrap"><table class="days fcst"><thead><tr><th>Stage</th><th>Hours</th><th>Done</th><th>Reach it<div class="note">real pace / at ${pace} h/wk</div></th><th>Done when</th></tr></thead><tbody>
-          ${rowsP.map((p,i)=>`<tr class="${i===rowsP.findIndex(x=>x.pct<100)?"next":""}"><td><b>${esc(p.name)}</b><div class="note">→ ${esc(p.to)}</div></td><td class="num">${p.hours[0]}–${p.hours[1]} h</td><td class="num">${p.pct}%</td><td class="num">${realPace?span(p.rem,realPace):"–"}<div class="note">${span(p.rem,pace)}</div></td><td>${esc(p.done_when)}</td></tr>`).join("")}
+        <div class="tblwrap"><table class="days fcst"><thead><tr><th>Stage</th><th>Hours</th><th>Done</th><th>Reach it<div class="note">real pace / at <span class="pace-h">${pace}</span> h/wk</div></th><th>Done when</th></tr></thead><tbody>
+          ${rowsP.map((p,i)=>`<tr class="${i===rowsP.findIndex(x=>x.pct<100)?"next":""}"><td><b>${esc(p.name)}</b><div class="note">→ ${esc(p.to)}</div></td><td class="num">${p.hours[0]}–${p.hours[1]} h</td><td class="num">${p.pct}%</td><td class="num">${realPace?span(p.rem,realPace):"–"}<div class="note pace-d" data-r0="${p.rem[0]}" data-r1="${p.rem[1]}">${span(p.rem,pace)}</div></td><td>${esc(p.done_when)}</td></tr>`).join("")}
         </tbody></table></div>
         <p class="note">${inline(FC.method_md||"")}</p>
       </section>`; })() : ""}
@@ -1615,7 +1617,10 @@ body{font-size:14.5px}
       </section>`;
     v.querySelectorAll("tr[data-id]").forEach(tr => tr.addEventListener("click", () => { location.hash = tr.dataset.id; }));
     v.querySelectorAll(".wk-bar").forEach(b => b.addEventListener("click", () => { slWeek = b.dataset.wk; renderProgress(); }));
-    $("#pace-sel").addEventListener("change", e => { paceChoice = Number(e.target.value); renderProgress(); });
+    $("#pace-in")?.addEventListener("input", e => { const h = +e.target.value; if (!(h > 0)) return; paceChoice = h;
+      try { localStorage.setItem("paceH", String(h)); } catch(_){}
+      document.querySelectorAll("#pace-date, .pace-d").forEach(el => { el.textContent = paceSpan(+el.dataset.r0, +el.dataset.r1, h); });
+      document.querySelectorAll(".pace-h").forEach(el => { el.textContent = h; }); });
     if (ch){
       const box = $("#chart"), svg = box.querySelector("svg"), tip = $("#tip"), xh = svg.querySelector("#xh");
       const move = ev => {
