@@ -19,7 +19,7 @@
    "words": [
     {
      "w": "flat",
-     "img": "data/img/w1/w-flat.svg",
+     "img": "data/img/w1/w-flat.webp",
      "def": "a home on one floor of a building",
      "ex": "Nam lives in Flat 2 at number 14.",
      "vi": "căn hộ",
@@ -30,7 +30,7 @@
     },
     {
      "w": "heating",
-     "img": "data/img/w1/w-heating.svg",
+     "img": "data/img/w1/w-heating.webp",
      "def": "the system that makes a building warm",
      "ex": "The heating made a noise at 3 a.m.",
      "vi": "hệ thống sưởi",
@@ -41,7 +41,7 @@
     },
     {
      "w": "umbrella",
-     "img": "data/img/w1/w-umbrella.svg",
+     "img": "data/img/w1/w-umbrella.webp",
      "def": "you hold it over your head in the rain",
      "ex": "Take an umbrella – it's going to rain.",
      "vi": "cái ô",
@@ -52,7 +52,7 @@
     },
     {
      "w": "counter",
-     "img": "data/img/w1/w-counter.svg",
+     "img": "data/img/w1/w-counter.webp",
      "def": "the long table in a shop or café where you pay",
      "ex": "Jess was standing behind the counter.",
      "vi": "quầy",
@@ -63,7 +63,7 @@
     },
     {
      "w": "bacon sandwich",
-     "img": "data/img/w1/w-sandwich.svg",
+     "img": "data/img/w1/w-sandwich.webp",
      "def": "bread with hot bacon inside – a British breakfast",
      "ex": "Try the bacon sandwich!",
      "audio": "data/audio/w1/words/w-sandwich.mp3",
@@ -73,7 +73,7 @@
     },
     {
      "w": "tram",
-     "img": "data/img/w1/w-tram.svg",
+     "img": "data/img/w1/w-tram.webp",
      "def": "a long electric train that runs on city streets",
      "ex": "Take the tram to Market Street.",
      "vi": "tàu điện",
@@ -84,7 +84,7 @@
     },
     {
      "w": "on the corner",
-     "img": "data/img/w1/w-corner.svg",
+     "img": "data/img/w1/w-corner.webp",
      "def": "where two streets meet",
      "ex": "There's a little café on the corner.",
      "vi": "ở góc phố",
@@ -107,7 +107,7 @@
     },
     {
      "w": "show sb around",
-     "img": "data/img/w1/w-showaround.svg",
+     "img": "data/img/w1/w-showaround.webp",
      "def": "walk with someone and show them a place",
      "ex": "Tom will show you around the office.",
      "vi": "dẫn đi xem",
@@ -129,7 +129,7 @@
     },
     {
      "w": "take a deep breath",
-     "img": "data/img/w1/w-breath.svg",
+     "img": "data/img/w1/w-breath.webp",
      "def": "breathe in slowly to feel calm",
      "ex": "He took a deep breath and pushed the door.",
      "vi": "hít một hơi thật sâu",
@@ -140,7 +140,7 @@
     },
     {
      "w": "get lost",
-     "img": "data/img/w1/w-lost.svg",
+     "img": "data/img/w1/w-lost.webp",
      "def": "not know where you are",
      "ex": "It's easy to get lost in a new city.",
      "vi": "bị lạc",
@@ -151,7 +151,7 @@
     }
    ],
    "listen": [],
-   "cover": "data/img/w1/cover.svg",
+   "cover": "data/img/w1/cover.webp",
    "days": {
     "2026-11-11": {
      "lessons": [
