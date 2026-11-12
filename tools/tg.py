@@ -117,6 +117,9 @@ def quiz(force=False):
     p = D("review.json")
     if not os.path.exists(p): print("no review queue"); return
     R = load(p); collect_answers(R)
+    for x in R["items"]:  # quiz gửi > 2 ngày mà Tân chưa làm → gửi lại sau
+        if x.get("poll_id") and x.get("sent") and (dt.date.today() - dt.date.fromisoformat(x["sent"])).days >= 2:
+            x.pop("poll_id"); x["due"] = today()
     due = [x for x in R["items"] if x.get("due") and (force or x["due"] <= today()) and not x.get("poll_id")][:3]
     if due: notify.send(f"🧠 <b>Ôn lại {len(due)} câu</b> – chọn đáp án, Telegram hiện giải thích ngay.")
     for x in due:
