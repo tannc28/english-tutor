@@ -499,6 +499,12 @@ table.days tr.next td{background:var(--accent-soft)}
   body.in-lesson .wrap{padding:0 0 calc(40px + env(safe-area-inset-bottom,0px))}
   body.in-lesson .layout{display:block;margin:0}
   .book .toolbar{margin:0;border-radius:0;border-width:0 0 1px;box-shadow:none;padding:6px 10px;gap:8px;background:color-mix(in srgb,var(--surface) 92%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+  body.list-mode .shelf{display:flex!important;position:static}
+  body.list-mode #shelf-hide{display:none}
+  body.list-mode #list{flex-direction:column;overflow:visible;max-height:none;scroll-snap-type:none}
+  body.list-mode #list .item{min-width:0;width:100%}
+  body.list-mode .book{display:none}
+  body.list-mode .layout{display:block}
   .tb-back,.tb-parts{display:inline-flex}.tb-back{text-decoration:none;font-size:1.1rem;padding:6px 12px}
   #tg-shelf,#tg-focus{display:none}
   .book .toc{display:none!important}
@@ -905,7 +911,7 @@ table.days tr.next td{background:var(--accent-soft)}
       loadBody(meta.id); return;
     }
     const l = meta ? {...meta, ...(meta.parts ? {} : bodies[meta.id])} : null;
-    if (!l){ main.innerHTML = emptyView(); return; }
+    if (!l){ main.innerHTML = document.body.classList.contains("list-mode") && window.matchMedia("(max-width:640px)").matches ? "" : emptyView(); return; }
 
     const sub = subs[l.id], grade = grades[l.id];
     const locked = !!grade || (!!sub && !main.dataset.editing);
@@ -919,7 +925,7 @@ table.days tr.next td{background:var(--accent-soft)}
     const tocItems = (l.parts||[]).map((p,pi)=>`<a href="#" data-go="part-${pi}" id="toc-${pi}"><span class="n">${pi+1}</span><span class="t">${esc(p.kind||p.title||"Part "+(pi+1))}</span><span class="c" id="tocc-${pi}"></span></a>`).join("") + `<a href="#" data-go="part-fb" id="toc-fb"><span class="n">✓</span><span class="t">Feedback & submit</span><span class="c"></span></a>`;
     main.innerHTML = `
       <div class="toolbar">
-        <a class="tbtn tb-back" href="#" title="Back to this week" aria-label="Back">←</a>
+        <a class="tbtn tb-back" href="${esc(backTo)}" title="Back" aria-label="Back">←</a>
         <button class="tbtn" id="tg-shelf" type="button" aria-pressed="${!document.body.classList.contains("shelf-off")}" title="Show/hide lesson list">☰<span class="bl"> Lessons</span></button>
         <button class="tbtn" id="tg-focus" type="button" aria-pressed="${document.body.classList.contains("focus")}" title="Hide everything except the lesson">🎯<span class="bl"> Focus</span></button>
         <button class="tbtn tb-parts" id="tg-parts" type="button" title="Jump to a part">Parts</button>
@@ -1681,7 +1687,7 @@ table.days tr.next td{background:var(--accent-soft)}
     document.querySelectorAll(".main3 .tab").forEach(t => t.setAttribute("aria-current", t.dataset.group === g ? "page" : "false"));
     const sub = $("#subtabs"); sub.hidden = GROUPS[g].length < 2;
     sub.innerHTML = GROUPS[g].map(([v,t,h]) => `<a href="${h}" class="stab" aria-current="${v===name?"page":"false"}">${t}</a>`).join("");
-    document.body.classList.toggle("in-lesson", name === "lessons");
+    if (name !== "lessons") document.body.classList.remove("in-lesson", "list-mode");
     $("#view-review").hidden = name!=="review";
     if (name==="review") renderReview();
     $("#view-levels").hidden = name!=="levels";
@@ -1706,12 +1712,21 @@ table.days tr.next td{background:var(--accent-soft)}
     showView("lessons");
     const nextOpen = lessons.filter(l => l.week === curWeek()?.no).sort((a,b)=>(a.order||0)-(b.order||0)).find(l => statusOf(l)==="open");
     const [hid, hp] = h.split("/");
-    current = lessons.some(l => l.id === hid) ? hid : (nextOpen?.id || lessons[0]?.id || null);
+    const isLesson = lessons.some(l => l.id === hid);
+    const phone = window.matchMedia("(max-width:640px)").matches;
+    // "#bai" = danh sách bài. Điện thoại: chỉ hiện danh sách; máy tính: danh sách mở + bài kế tiếp bên cạnh.
+    document.body.classList.toggle("list-mode", !isLesson);
+    document.body.classList.toggle("in-lesson", isLesson);
+    if (!isLesson){ document.body.classList.remove("shelf-off"); }
+    current = isLesson ? hid : (phone ? null : (nextOpen?.id || lessons[0]?.id || null));
     if (hp && /^p\d+$/.test(hp)) setTimeout(() => document.getElementById("part-"+hp.slice(1))?.scrollIntoView({behavior:"smooth", block:"start"}), 700);
     delete $("#main").dataset.editing;
     watchCurrent();
     renderList(); renderLesson();
   }
+  // nút ← trong bài quay về đúng chỗ đã mở bài (danh sách / This week / Review…)
+  let backTo = "#bai";
+  window.addEventListener("hashchange", ev => { const prev = decodeURIComponent((ev.oldURL.split("#")[1]||"")); if (!lessons.some(l => l.id === prev.split("/")[0])) backTo = "#" + prev; });
   window.addEventListener("hashchange", route);
 
   async function boot(){
