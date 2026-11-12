@@ -6,13 +6,14 @@
 /* Layout: study desk. Header + phase track on top; lesson shelf (left, horizontal strip on phones) and the open workbook (right).
    Lessons are steps in a sequence, so parts carry real step numbers. Type colors encode lesson kind. */
 :root{
-  --bg:#eef1f5; --surface:#ffffff; --sunk:#f5f7fa; --ink:#141a26; --ink-2:#4a5468; --ink-3:#7a8497; --line:#dde2ea;
-  --accent:#2449d8; --accent-soft:#e7ecfd; --on-accent:#ffffff;
-  --walk:#0d8577; --main:#2449d8; --weekly:#b06a12; --sunday:#c03a68;
+  /* Giao diện sáng "Ấm, giấy" (Tân chọn B, 12/11): nền kem, nhấn cam đất – hợp tông ảnh minh hoạ */
+  --bg:#f6f1e9; --surface:#fffdf9; --sunk:#f4ede2; --ink:#2a2219; --ink-2:#5e5446; --ink-3:#8c8172; --line:#e9e0d2;
+  --accent:#c8552a; --accent-soft:#fbe8dd; --on-accent:#ffffff;
+  --walk:#0d8577; --main:#c8552a; --weekly:#b06a12; --sunday:#c03a68;
   --marker:#fff0a6; --marker-ink:#3b3000;
   --ok:#17794a; --ok-soft:#e2f4ea; --warn:#9a5a00; --warn-soft:#fdf1dc; --bad:#b4261f; --bad-soft:#fce6e4;
   --paper:#fffdf7; --paper-line:#efe8d6;
-  --shadow:0 1px 2px rgba(20,26,38,.05),0 6px 24px rgba(20,26,38,.06);
+  --shadow:0 1px 2px rgba(60,40,20,.04),0 6px 20px rgba(60,40,20,.05);
   --f-ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-read:"Literata",Georgia,"Times New Roman",serif;
   --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -35,7 +36,7 @@
 body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:none;margin:0 auto;padding-block:20px 120px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .mono{font-family:var(--f-mono)}
-.label{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.label{font-family:var(--f-ui);font-size:.72rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-3)}
 
 /* Header */
 .top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 24px;align-items:end}
@@ -124,7 +125,8 @@ body.focus .layout{grid-template-columns:minmax(0,1fr);margin-top:0}
 
 /* Workbook */
 .book{min-width:0;display:flex;flex-direction:column;gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.card{background:var(--surface);border:1px solid transparent;border-radius:14px;box-shadow:var(--shadow)}
+:root[data-theme="dark"] .card{border-color:var(--line)}
 .hero{--tc:var(--main);padding:24px clamp(16px,3.5vw,32px);border-top:4px solid var(--tc);display:flex;flex-direction:column;gap:10px}
 .hero h2{margin:0;font-size:clamp(1.3rem,2.8vw,1.7rem);line-height:1.25;letter-spacing:-.015em;text-wrap:balance}
 .meta{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;color:var(--ink-2);font-size:.86rem}
@@ -260,11 +262,11 @@ body.sheet-open .book{padding-bottom:62vh}
 .wk-prog{display:flex;gap:10px;align-items:center}.wk-prog .bar{flex:1}
 .wk-next{align-self:flex-start;text-decoration:none;padding:11px 18px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700}
 .wk-next:hover{filter:brightness(1.08)}
-.today{padding:18px clamp(14px,3vw,22px);border:2px solid var(--accent);display:flex;flex-direction:column;gap:10px}
+.today{padding:18px clamp(14px,3vw,22px);border:1px solid var(--line);box-shadow:inset 0 4px 0 var(--accent),var(--shadow);display:flex;flex-direction:column;gap:10px}
 .td-h{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:baseline}
 .td-h .label{font-size:.85rem;color:var(--accent)}
 .td-list{display:flex;flex-direction:column;gap:8px}
-.td-row,.td-pod{display:grid;grid-template-columns:52px 64px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;color:var(--ink);text-decoration:none;background:var(--surface)}
+.td-row,.td-pod{display:grid;grid-template-columns:52px 64px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 12px;border:1px solid transparent;border-radius:12px;color:var(--ink);text-decoration:none;background:var(--sunk)}
 .td-pod{grid-template-columns:52px minmax(0,1fr) auto;background:var(--sunk)}
 .td-row:hover{border-color:var(--accent)}
 .td-row img,.td-ph{width:64px;height:48px;object-fit:cover;border-radius:8px;background:var(--sunk);display:grid;place-items:center;font-size:1.4rem}
@@ -275,7 +277,7 @@ body.sheet-open .book{padding-bottom:62vh}
 .td-tag{color:var(--warn);font-weight:600}
 .td-free{margin:0;font-size:1rem}
 .ws{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:10px}
-.ws-d{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:8px 6px;border:1px solid var(--line);border-radius:10px;background:var(--surface);min-height:84px;font:inherit;color:inherit;cursor:pointer;text-align:left}
+.ws-d{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:8px 6px;border:1px solid transparent;border-radius:10px;background:var(--sunk);min-height:84px;font:inherit;color:inherit;cursor:pointer;text-align:left}
 .ws-d.sel{box-shadow:0 0 0 2px var(--accent)}
 .today.other{border-color:var(--line)}
 .leave summary{cursor:pointer;color:var(--ink-2);font-size:.9rem}
@@ -419,7 +421,7 @@ table.days td.num{font-variant-numeric:tabular-nums;font-family:var(--f-mono);wh
 table.days tr[data-id]{cursor:pointer}
 table.days tr[data-id]:hover td{background:var(--sunk)}
 /* Chart (2 series: Đọc = blue, Nghe = orange; validated light+dark) */
-:root{--s-read:#2449d8;--s-listen:#d9480f}
+:root{--s-read:#3b5bdb;--s-listen:#d9480f}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--s-read:#6a84ee;--s-listen:#de6a28}}
 :root[data-theme="dark"]{--s-read:#6a84ee;--s-listen:#de6a28}
 .chart{position:relative;width:100%}
