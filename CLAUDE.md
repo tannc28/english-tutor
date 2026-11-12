@@ -30,17 +30,17 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 
 ## Thông báo cho Tân: TELEGRAM (Tân yêu cầu 12/11)
 - Mọi tin quan trọng gửi qua bot **@CtanEnglishTutorBot**: `python3 tools/notify.py "<HTML ngắn>"` – khi **chấm xong**: `python3 tools/tg.py graded <id>` (tin 4 dòng + ảnh thẻ lỗi ≤3 + quiz ôn vào hàng – ghi `tg/cards/quiz` trong grade; KHÔNG ảnh chụp dài, KHÔNG nhận xét dài), **sáng** `tg.py quiz` (ôn lại 1→3→7 ngày) + `tg.py words` (≤4 thẻ từ có hình + audio, ôn 1→3→7→14 ngày), **Chủ nhật** `tg.py weekly <N>` (ảnh báo cáo tuần), **ra tuần mới**, **xử lý xin nghỉ / đổi lịch**, **nhắc nhẹ** (2 ngày không học). Tiếng Việt, ngắn, có link `#<id>`.
-- Token **không bao giờ** vào repo: biến môi trường `TELEGRAM_BOT_TOKEN` (Tân đặt trong cài đặt environment) hoặc `/root/.telegram_token`. Chat id ở `profile.notify.telegram_chat_id`. Không có token → PushNotification + báo Tân.
+- Token **không bao giờ** vào repo (Cloudflare token: Network secrets của environment, proxy tự gắn): biến môi trường `TELEGRAM_BOT_TOKEN` (Tân đặt trong cài đặt environment) hoặc `/root/.telegram_token`. Chat id ở `profile.notify.telegram_chat_id`. Không có token → PushNotification + báo Tân.
 - Job sáng đọc tin Tân nhắn bot (`tools/notify.py --inbox`): xin nghỉ, góp ý → xử lý như Quy trình XIN NGHỈ.
 
 ## Chọn model (Tân yêu cầu 12/11 – có benchmark 12/11, xem `session/MODEL_BENCHMARK.md`)
 - **Opus (phiên chính):** soạn bài, lên kế hoạch tuần, chấm bài, phân tích hồ sơ, quyết định thích ứng. Subagent làm các việc này phải đặt `model: "opus"`.
-- **Hình minh hoạ (Tân chọn 12/11): FLUX qua AI Horde là chính** (`tools/flux.py`, miễn phí, tự nhiên nhất; Opus xem và chọn ảnh). **Dự phòng SVG:** Sonnet (bìa, cảnh truyện, từ trừu tượng) → Haiku (thẻ từ đơn giản); SVG phải render + tự kiểm tra.
+- **Hình minh hoạ (Tân chọn 12/11): FLUX trên Cloudflare Workers AI là chính** (`tools/flux.py`, miễn phí ~170 ảnh/ngày, ~2 giây/ảnh; Opus xem và chọn ảnh). **Dự phòng SVG:** Sonnet (bìa, cảnh truyện, từ trừu tượng) → Haiku (thẻ từ đơn giản); SVG phải render + tự kiểm tra.
 - **Sonnet:** vẽ SVG dự phòng cho hình quan trọng và soạn **nội dung cần đúng nghĩa** khi cần giao việc ra ngoài – thẻ từ (def/ex/vi/note), câu quiz ôn, bản nháp câu hỏi đọc/nghe → Opus xem lại trước khi dùng. (Benchmark: thẻ từ 12/12 đúng.)
 - **Haiku:** vẽ SVG thẻ từ dự phòng, việc máy móc (định dạng tin Telegram, chép/kiểm tra file, kiểm tra link). **Không** giao Haiku soạn nghĩa từ/ngữ pháp (benchmark: 2/12 thẻ từ sai nghĩa, trong đó *unless* bị định nghĩa ngược).
 
 ## Công cụ có sẵn
-- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · `tools/flux.py` (minh hoạ FLUX qua AI Horde, nhân vật cố định `data/flux_cast.json`; dự phòng SVG Sonnet/Haiku – web/README "Minh hoạ"); `tools/illustrate.py` (SDXL CPU) dự phòng cuối; không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`, torch CPU + diffusers (xem đầu `tools/illustrate.py`).
+- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · `tools/flux.py` (minh hoạ FLUX trên Cloudflare, nhân vật cố định `data/flux_cast.json`; dự phòng SVG Sonnet/Haiku – web/README "Minh hoạ"); không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`.
 
 ## Quyền với repo (Tân cho phép 11/11/2026)
 - Claude có **toàn quyền** trên repo này: được commit và **push thẳng lên `main`**, không cần tạo nhánh riêng hay PR.

@@ -24,7 +24,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 | `library.json` | **Tự sinh** bởi `sync.py`: `words` (word wall mọi tuần + chunk_bank), `learn` (phần ① Learn của mọi bài → link `#<id>/p<i>`), `story` (các tập Hope Street), `mistakes` (`grades[].cards`) – nguồn của tab 🧠 Review |
 | `review.json` | Hàng ôn quiz Telegram (từ `grades[].quiz`): `items[{id, lesson, q, options, answer, why, due, step, history[{date, ok}], poll_id?}]` – do `tools/tg.py` quản lý |
 | `vocab/<A1…C1>.json`, `vocab/pseudo.json` | Danh sách từ theo level (CEFR-J Wordlist 1.5 + Octanove C1) và từ giả cho bài kiểm tra từ vựng yes/no |
-| `img/w<N>/…` | Minh hoạ (webp từ `tools/illustrate.py`, svg tự vẽ). Trong bài: `![alt](data/img/…)` trong md, `cover` cho thẻ bài |
+| `img/w<N>/…` | Minh hoạ (webp từ `tools/flux.py` – FLUX trên Cloudflare; svg dự phòng do Sonnet/Haiku vẽ). Trong bài: `![alt](data/img/…)` trong md, `cover` cho thẻ bài |
 | `audio/<id>/p<i>.mp3`, `audio/w<N>/words/*.mp3` | Audio bài nghe + word wall (`tools/audio.py`) |
 | `resources.json` | Thư viện nghe tự do (tab 🎧 Listen): `{how_md, tiers:[{name, level, note, items:[{name, type, url, alt?, topics, why}]}]}` – chỉ link đã kiểm tra |
 
@@ -48,7 +48,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 2. `ArtifactData list inbox` → chấm bài tồn trước.
 3. Đánh giá tuần: cập nhật `profile` (input_level lên/xuống, weaknesses, coach) + `weeks[tuần này].review_md`, status `done`.
 4. Tuần tới (`status: current`): chọn/điều chỉnh chủ đề (theo feedback + sở thích; tiếng Anh phổ thông), viết why_md, goals, how_md, **~6 bài** (Learn → Try it → Input → Check, bài cuối = ôn tập + Look back), **lịch gợi ý từng ngày `days`** (ngày thường 1–2 bài theo khung 7:45/20:30, cuối tuần 1 bài 9:00 + podcast, có ngày nghỉ; khớp `profile.schedule`), truyện dài kỳ nối tiếp, word wall ~12 từ có hình, 6–8 bài nghe tự do cùng chủ đề (Apple Podcasts/YouTube, đã kiểm tra link). Bài tuần trước chưa làm vẫn để nguyên – không dồn, không áp lực; tuần mới có thể ít bài hơn. Thêm 1 tuần `planned` ở cuối để luôn thấy trước 3 tuần.
-5. Minh hoạ: spec → `python3 tools/illustrate.py spec.json` (bìa tuần, bìa từng bài, cảnh truyện, word wall); bản đồ/sơ đồ → SVG tự vẽ. Audio: `python3 tools/audio.py <id>…` + `--words <N>`.
+5. Minh hoạ theo mục "Minh hoạ" bên dưới: `python3 tools/flux.py --batch jobs.json` (bìa tuần, bìa từng bài, cảnh truyện, word wall, thẻ từ cụ thể) → Opus chọn ảnh; từ trừu tượng, bản đồ, sơ đồ → SVG (Sonnet/Haiku). Audio: `python3 tools/audio.py <id>…` + `--words <N>`.
 6. `python3 tools/sync.py` → commit + push `main` → `Artifact publish web/index.html` với `files` = `web/publish_files.json`.
 7. Telegram: `weeks[N].next_focus` (1 câu) → `python3 tools/tg.py weekly <N>` (ảnh báo cáo tuần vừa xong) → `tools/notify.py`: chủ đề tuần mới + lịch Thứ 2 + link.
 
@@ -78,13 +78,13 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 - Soạn bài `w<N>-voa-<k>` (kind `Listening`, `extra: true`, ~15'): ① Before you listen (cụm từ + IPA + dự đoán) → ② Listen (part có `audio` = MP3 VOA, `keep_audio: true`, `listen` = các đoạn lời để hiện transcript) với 4–6 câu hỏi + % hiểu + từ còn khó. Đáp án vào `keys/`. Ghi `credit` (chữ, **không link**).
 - Lịch: `weeks[].days[ngày].extra = "<id>"` → hiện ở Today (21:40 / 14:30) và dải 7 ngày (🎧). Chấm như bài thường. Không dùng link podcast bên ngoài nữa.
 
-## Minh hoạ – FLUX là chính, SVG dự phòng (Tân chọn 12/11)
-- **Chính: FLUX.1 Schnell qua AI Horde** – `python3 tools/flux.py "<cảnh>" data/img/wN/<tên>.webp -n 2 --cast nam,linh` (hoặc `--batch jobs.json`). Miễn phí, không key; ~1–4 phút/ảnh (hàng đợi) → chạy nền, nhiều ảnh cùng lúc. Dùng cho: ảnh bìa tuần, ảnh bìa bài, cảnh truyện, **thẻ từ cụ thể** (đồ vật, hành động, nơi chốn, tình huống).
-  - Prompt = STYLE chung (flat, children's book, không chữ) + mô tả nhân vật cố định `data/flux_cast.json` + cảnh **theo câu ví dụ** (ai, làm gì, cầm gì, đặt ở đâu – viết rõ tay cầm, đồ đặt trên bàn). Không đưa thông tin cá nhân của Tân vào prompt.
-  - `-n 2..3` → **Opus xem từng ảnh** (Read), chọn bản đúng nghĩa + tự nhiên nhất (tay cầm đúng, đồ không lơ lửng, không chữ lỗi) → đổi thành `<tên>.webp`, xoá `.vN`. Không bản nào đạt → vẽ lại 1 lần với prompt rõ hơn → vẫn sai → dự phòng.
-- **Dự phòng SVG** (Horde lỗi/hết giờ, exit code 2, hoặc từ **trừu tượng** khó vẽ cảnh: *although, unless, however…* → sơ đồ/2 khung): **Sonnet** (subagent `model: "sonnet"`) cho bìa/cảnh truyện + từ trừu tượng; **Haiku** (`model: "haiku"`) cho thẻ từ đơn giản. SVG viewBox 384×288, flat pastel, cùng dàn nhân vật, không chữ, <12 KB; subagent **phải render PNG và tự xem lại, sửa ≤3 vòng** (tay cầm đúng, đồ đặt đúng mặt phẳng).
-- Sau cùng: dựng ảnh tổng hợp kiểm tra bằng mắt trước khi publish. `img` trong `words.json`/`weeks.json`/`lessons.json` trỏ `.webp` hoặc `.svg` đều được.
-- Không dùng: emoji ghép hình, ghép mảnh Open Peeps (Tân thấy chắp vá), Pollinations ẩn danh (kém), Gemini ảnh (free tier = 0), Figma generate_image (tốn credit – chỉ khi Tân đồng ý). `tools/illustrate.py` (SDXL CPU) chỉ khi mọi thứ khác hỏng.
+## Minh hoạ – FLUX (Cloudflare) là chính, SVG Sonnet/Haiku dự phòng (Tân chọn 12/11)
+- **Chính: FLUX.1 Schnell trên Cloudflare Workers AI** – `python3 tools/flux.py "<cảnh>" data/img/wN/<tên>.webp -n 2 --cast nam,linh` hoặc `--batch jobs.json -j 4`. ~2 giây/ảnh, free 10.000 neuron/ngày (≈170 ảnh), WebP 768×576. Token do proxy gắn vào api.cloudflare.com; account id ở `profile.image_gen.cf_account`. Dùng cho: ảnh bìa tuần/bài, cảnh truyện, **thẻ từ cụ thể** (đồ vật, hành động, nơi chốn, tình huống).
+  - Prompt = STYLE chung (flat, children's book, không chữ) + nhân vật cố định `data/flux_cast.json` + cảnh **theo câu ví dụ** (ai, làm gì, cầm gì, đặt ở đâu – viết rõ tay cầm, đồ đặt trên bàn). Không đưa thông tin cá nhân của Tân vào prompt.
+  - `-n 2` → **Opus xem từng ảnh**, chọn bản đúng nghĩa + tự nhiên nhất (tay cầm đúng, đồ không lơ lửng, đúng nhân vật, không chữ lỗi) → giữ `<tên>.webp`, xoá `.vN`. Không bản nào đạt → vẽ lại với prompt rõ hơn → vẫn sai → dự phòng.
+- **Dự phòng SVG** (Cloudflare lỗi/hết hạn mức → exit 2; ảnh sai 2 lần; hoặc từ **trừu tượng** khó vẽ cảnh: *although, unless, however…*, sơ đồ, 2 khung so sánh): **Sonnet** (subagent `model: "sonnet"`) cho bìa/cảnh truyện + từ trừu tượng; **Haiku** (`model: "haiku"`) cho thẻ từ đơn giản. SVG viewBox 384×288, flat pastel, cùng dàn nhân vật, không chữ, <12 KB; subagent **phải render PNG và tự xem lại, sửa ≤3 vòng**.
+- Sau cùng: dựng ảnh tổng hợp kiểm tra bằng mắt trước khi publish. `img` trỏ `.webp` hoặc `.svg` đều được.
+- Không dùng: AI Horde (chậm), SDXL/SD-Turbo CPU, emoji ghép hình, ghép mảnh Open Peeps (chắp vá), Pollinations ẩn danh, Gemini ảnh (free tier = 0), Figma generate_image (tốn credit – chỉ khi Tân đồng ý).
 
 ## Tab 🧠 Review (ôn tập & tra cứu)
 - Ô tìm kiếm chung; mục **Words & chunks** (thẻ có hình, chạm để xem nghĩa + nghe), **Grammar & skills** (mở thẳng phần Learn), **My mistakes** (❌→✅→💡), **Story** (đọc lại các tập), **What's next** (tuần tới, mục checklist còn lại, từ chưa biết trong word check).
