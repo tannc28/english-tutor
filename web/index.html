@@ -565,9 +565,13 @@ table.days tr.next td{background:var(--accent-soft)}
 .fb-full{display:none!important}
 .mic-sum{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}.mic-sum .bar{flex-basis:100%}
 .mic-g{display:flex;flex-direction:column;gap:6px;margin-top:6px}
-.td-row.mic{grid-template-columns:40px minmax(0,1fr) auto}
+.td-row.mic-r{grid-template-columns:40px minmax(0,1fr) auto}
+.mic-tabs{display:flex;gap:6px;margin:10px 0 2px;border-bottom:1px solid var(--line)}
+.mic-tab{flex:1;border:0;background:none;font:600 .95rem var(--f-ui);color:var(--ink-2);padding:9px 8px;border-bottom:3px solid transparent;margin-bottom:-1px;cursor:pointer}
+.mic-tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.mic-pane{margin-top:8px}
 .mic-ic{width:40px!important;height:40px!important;font-size:1.25rem}
-@media (max-width:520px){.td-row.mic{grid-template-columns:40px minmax(0,1fr) auto}.td-row.mic .td-go{grid-column:auto}}
+@media (max-width:520px){.td-row.mic-r{grid-template-columns:40px minmax(0,1fr) auto}.td-row.mic-r .td-go{grid-column:auto}}
 .brand-h{display:flex;align-items:center;gap:10px}
 .theme-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:5px 11px;font:600 .8rem var(--f-ui);cursor:pointer;flex:none}
 .theme-btn:hover{border-color:var(--accent);color:var(--ink)}
@@ -1501,16 +1505,27 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
   }
   let daySel = null;
   // Ngày gồm nhiều bài nhỏ (5–15 phút, mỗi bài 1 kỹ năng, nộp ngay) – Tân 12/11
+  // Ngày gồm nhiều bài nhỏ (5–15 phút, mỗi bài 1 kỹ năng, nộp ngay) – nhóm theo KỸ NĂNG bằng tab (Tân 12/11)
+  let micTab = (() => { try { return localStorage.getItem("micTab") || "Reading"; } catch { return "Reading"; } })();
+  document.addEventListener("click", ev => { const b = ev.target.closest?.(".mic-tab"); if (!b) return; ev.preventDefault(); micTab = b.dataset.k; try { localStorage.setItem("micTab", micTab); } catch {}
+    const box = b.closest(".mic"); box?.querySelectorAll(".mic-tab").forEach(x => x.setAttribute("aria-selected", x === b)); box?.querySelectorAll(".mic-pane").forEach(x => x.hidden = x.dataset.k !== micTab); });
   function microDay(own, carry, tm, we){
     const done = own.filter(l => DONE(statusOf(l))), mins = a => a.reduce((n,l) => n + (Number(l.minutes)||0), 0);
-    const slots = we ? [["weekend","☀️ Morning · "+tm.lesson[0]],["afternoon","🌤 Afternoon · 14:30"],["evening","🌙 Evening · 20:00"]] : [["morning","🌅 Morning · "+tm.lesson[0]],["evening","🌙 Evening · "+tm.lesson[1]]];
+    const SK = [["Reading","📖 Reading"],["Listening","🎧 Listening"]];
+    const other = own.filter(l => !SK.some(([k]) => k === l.kind));
+    if (other.length) SK.push(["Other","📘 Other"]);
+    const of = k => k === "Other" ? other : own.filter(l => l.kind === k);
+    if (!SK.some(([k]) => k === micTab && of(k).length)) micTab = SK.find(([k]) => of(k).some(l => !DONE(statusOf(l))))?.[0] || "Reading";
     const sk = l => l.kind === "Reading" ? "📖" : l.kind === "Listening" ? "🎧" : (KIND_ICON[l.kind]||"📘");
-    const row = l => { const st = statusOf(l); return `<a class="td-row mic ${DONE(st)?"done":""}" href="#${esc(l.id)}"><span class="td-ph mic-ic">${sk(l)}</span>
-      <span class="td-main"><b>${esc(l.title||"")}</b><span class="note">${esc(l.kind||"")} · ~${esc(l.minutes||"?")} min</span></span><span class="td-go">${DONE(st)?"✅":"Start ▶"}</span></a>`; };
-    const groups = slots.map(([k,lab]) => { const ls = own.filter(l => (l.slot||"evening") === k || (k==="weekend" && !l.slot)); return ls.length ? `<div class="mic-g"><span class="label">${lab} · ${ls.filter(l=>DONE(statusOf(l))).length}/${ls.length}</span>${ls.map(row).join("")}</div>` : ""; }).join("");
-    return `<div class="mic-sum"><b>${done.length}/${own.length} done</b><span class="note">~${mins(done)} / ${mins(own)} min today · 📖 ${own.filter(l=>l.kind==="Reading").length} reading · 🎧 ${own.filter(l=>l.kind==="Listening").length} listening</span><div class="bar"><i style="width:${own.length?Math.round(done.length/own.length*100):0}%"></i></div></div>
+    const when = l => ({morning:"🌅", evening:"🌙", afternoon:"🌤", weekend:"☀️"})[l.slot] || "";
+    const row = l => { const st = statusOf(l); return `<a class="td-row mic-r ${DONE(st)?"done":""}" href="#${esc(l.id)}"><span class="td-ph mic-ic">${sk(l)}</span>
+      <span class="td-main"><b>${esc(l.title||"")}</b><span class="note">~${esc(l.minutes||"?")} min${when(l)?` · ${when(l)} ${esc(l.slot)}`:""}</span></span><span class="td-go">${DONE(st)?"✅":"Start ▶"}</span></a>`; };
+    return `<div class="mic">
+      <div class="mic-sum"><b>${done.length}/${own.length} done</b><span class="note">~${mins(done)} / ${mins(own)} min today · 🌅 morning ${tm.lesson[0]} · 🌙 evening ${tm.lesson[1]}</span><div class="bar"><i style="width:${own.length?Math.round(done.length/own.length*100):0}%"></i></div></div>
       ${carry.length ? `<div class="mic-g"><span class="label">↪ Still open from before (no rush)</span>${carry.map(row).join("")}</div>` : ""}
-      <div class="td-list">${groups}</div>`;
+      <div class="mic-tabs" role="tablist">${SK.filter(([k]) => of(k).length).map(([k,t]) => { const ls = of(k); return `<button type="button" role="tab" class="mic-tab" data-k="${k}" aria-selected="${k===micTab}">${t} <span class="note">${ls.filter(l=>DONE(statusOf(l))).length}/${ls.length}</span></button>`; }).join("")}</div>
+      ${SK.filter(([k]) => of(k).length).map(([k]) => `<div class="mic-pane td-list" data-k="${k}" ${k===micTab?"":"hidden"}>${of(k).map(row).join("")}</div>`).join("")}
+    </div>`;
   }
   function dayPanel(w, ds){
     const P = weekPlan(w), isToday = ds === P.t, d = P.days[ds] || {}, tm = slotTimes(ds);
@@ -1528,7 +1543,7 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
       ${!off && micro ? microDay(own, isToday ? P.carry : [], tm, we) : off || (list.length ? `<div class="td-list">${list.map((l,i) => lessonRow(l, DONE(statusOf(l)) ? "" : timeFor(l,i), isToday && P.carry.includes(l) ? "missed on "+fmtDate(P.plannedDay[l.id]) : (ds < P.t && !DONE(statusOf(l)) ? "missed – it's in Today" : ""))).join("")}</div>`
         : `<p class="td-free">${isToday && own.length ? "🎉 Today's lessons are done. Great work!" : "No lesson planned – rest day."}</p>`)}
       ${ext && !d.off ? lessonRow(ext, DONE(statusOf(ext)) ? "" : tm.listen, "🎧 VOA listening") : ""}
-      ${isToday && P.later.length ? `<p class="note">Also waiting: ${P.later.map(l => `<a href="#${esc(l.id)}">${esc(l.title)}</a>`).join(", ")} – no rush.</p>` : ""}
+      ${isToday && !micro && P.later.length ? `<p class="note">Also waiting: ${P.later.map(l => `<a href="#${esc(l.id)}">${esc(l.title)}</a>`).join(", ")} – no rush.</p>` : ""}
       ${ds >= P.t && !d.off && own.length ? (leave ? `<p class="note">🙋 Day-off request sent (${esc(leave.kind)}) – your tutor will reschedule.</p>`
         : `<details class="leave"><summary>🙋 Can't study ${isToday?"today":"this day"}? Tell your tutor</summary>
           <div class="leave-f" data-ds="${esc(ds)}">
