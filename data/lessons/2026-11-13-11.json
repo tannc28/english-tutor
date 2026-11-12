@@ -1,0 +1,67 @@
+{
+ "intro_md": "🎧 **10 min.** The article you just read, as audio. Reading first, then listening to the same text = the fastest way for your ears to catch up with your eyes.",
+ "parts": [
+  {
+   "kind": "🎧 Listen + read",
+   "title": "The article – audio",
+   "rate": 1,
+   "audio": "data/audio/2026-11-13-11/p0.mp3",
+   "transcript_open": true,
+   "md": "1. 👀👂 **Listen + read.**\n2. 👂 **Hide the transcript.** Listen without stopping – if you miss a word, keep going.\n3. 🔁 **Tap the lines** that were hard and hear them again.",
+   "listen": [
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "Why is the first week at a new job so tiring? You sit at a desk most of the day, so it seems strange to feel so tired in the evening."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "The answer is in your brain. In a new place, almost nothing is automatic. You have to think about everything: where the kitchen is, how the printer works, what your manager wants, and, of course, everyone's name."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "Scientists say that learning new information uses a lot of energy. When you do something for the hundredth time, your brain uses shortcuts. When you do it for the first time, there are no shortcuts. Every small decision takes effort."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "There is also the social side. You want to make a good impression, so you listen carefully, smile a lot and try not to make mistakes. In other words, you are \"on\" all day. That is tiring even for very confident people."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "The good news is that it gets easier, and quite quickly. After two or three weeks, many things become routine. You no longer need to think about the way to the office or how to log in. Your brain can relax a little."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "So if you feel exhausted after your first week, don't worry. It doesn't mean the job is wrong for you. It means your brain is working hard to get the hang of something new."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    8.16,
+    20.34,
+    33.92,
+    46.48,
+    58.31
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

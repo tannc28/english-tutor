@@ -1,0 +1,61 @@
+{
+ "intro_md": "🎧 **6 min.** Nam reads his message out loud (he's sending a voice message!). Listen + read, then just listen.",
+ "parts": [
+  {
+   "kind": "🎧 Listen + read",
+   "title": "Voice message",
+   "rate": 1,
+   "audio": "data/audio/2026-11-13-14/p0.mp3",
+   "transcript_open": true,
+   "md": "1. 👀👂 **Listen + read.**\n2. 👂 **Hide the words** and listen once more – you already know every sentence.",
+   "listen": [
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Hi Mum, sorry I didn't call this week. It's been really busy! Don't worry, I'm fine. The job is good, although I'm still getting used to everything."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "My manager, Claire, is very kind. On my first day she told me not to worry about being late, because the trains here are terrible. Most days it rains, but people don't seem to care."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "My colleague Tom talks very fast. I understand about half of what he says! He showed me around the office, and he says it takes a while to get the hang of everything."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I also met my neighbours. Margaret lives downstairs and knows everyone on the street. Mr Patel lives in Flat 3. I helped him carry a TV up the stairs. It was heavier than it looked!"
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "There's a little café on the corner. Jess, who works there, already remembers my order. In other words, I'm starting to feel at home. I'll call you on Sunday. Love, Nam."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    7.78,
+    17.44,
+    25.82,
+    35.62
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

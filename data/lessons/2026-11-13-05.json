@@ -1,0 +1,24 @@
+{
+ "intro_md": "📖 **8 min.** The next part of the story. Read once without going back, then use the notes.",
+ "parts": [
+  {
+   "kind": "📖 Read",
+   "title": "Hope Street – Episode 3 (1/2): Lunch with Tom",
+   "md": "![Lunch with Tom](data/img/w1/d5-lunch.webp)\n\n> At one o'clock, Tom took Nam to lunch at a small Italian place round the corner. Tom talked fast. Very fast. And Nam understood about half of it. Rather than asking him to repeat everything, Nam smiled and nodded. It seemed to work.\n>\n> **Tom:** So how long have you been in Manchester?\n>\n> **Nam:** Two days. I'm still getting used to the weather.\n>\n> **Tom:** Everyone says that. Give it a month. You won't even notice the rain.\n>\n> The afternoon was harder. Nam met eight people, and by four o'clock he had forgotten six of their names. Although everyone was friendly, his head was full. He spent an hour on his new laptop, and it took him twenty minutes just to log in.\n>\n> At half past five, Claire stopped by his desk.\n>\n> **Claire:** How was your first day?\n>\n> **Nam:** Good. Tiring, but good.\n>\n> **Claire:** That's normal. The first week is always the hardest. In other words, go home and rest!\n\n| Phrase | Meaning |\n|---|---|\n| *a small Italian place **round the corner*** | a small Italian restaurant very near |\n| ***Rather than** asking him to repeat* | **instead of** asking him to say it again |\n| *It seemed to work.* | It looked like a good idea. |\n| *Give it a month.* | Wait one month – then it will be OK. |\n| *by four o'clock he **had forgotten*** | before 4 pm the names were already gone from his head |\n| ***log in*** | type your name + password to start using a computer |\n| *Claire **stopped by** his desk* | came to his desk for a short time |",
+   "questions": []
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

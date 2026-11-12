@@ -1,0 +1,85 @@
+{
+ "intro_md": "🎧 **8 min.** Now **hear** what you just read. Same words → your ears learn the sound of words you already know.",
+ "parts": [
+  {
+   "kind": "🎧 Listen + read",
+   "title": "Lunch with Tom – audio",
+   "rate": 1,
+   "audio": "data/audio/2026-11-13-06/p0.mp3",
+   "transcript_open": true,
+   "md": "1. 👀👂 **Listen + read** together.\n2. 👂 **Hide the transcript** and listen again. Missed something? **Tap that line** to hear it once more.\n3. 👂 **(Optional)** One more time, eyes closed – like a podcast.",
+   "listen": [
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "At one o'clock, Tom took Nam to lunch at a small Italian place round the corner. Tom talked fast. Very fast. And Nam understood about half of it. Rather than asking him to repeat everything, Nam smiled and nodded. It seemed to work."
+    },
+    {
+     "who": "Tom",
+     "voice": "rounded",
+     "text": "So how long have you been in Manchester?"
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Two days. I'm still getting used to the weather."
+    },
+    {
+     "who": "Tom",
+     "voice": "rounded",
+     "text": "Everyone says that. Give it a month. You won't even notice the rain."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "The afternoon was harder. Nam met eight people, and by four o'clock he had forgotten six of their names. Although everyone was friendly, his head was full. He spent an hour on his new laptop, and it took him twenty minutes just to log in."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "At half past five, Claire stopped by his desk."
+    },
+    {
+     "who": "Claire",
+     "voice": "glassy",
+     "text": "How was your first day?"
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Good. Tiring, but good."
+    },
+    {
+     "who": "Claire",
+     "voice": "glassy",
+     "text": "That's normal. The first week is always the hardest. In other words, go home and rest!"
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    14.01,
+    16.92,
+    19.63,
+    24.86,
+    38.59,
+    42.39,
+    44.45,
+    46.69
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "intro_md": "📖 **12 min. Reading a little above your comfortable level (B1+).** A short article about Nam's situation. Read in chunks; use the notes only if you need them.",
+ "parts": [
+  {
+   "kind": "📖 Read",
+   "title": "Why is the first week so tiring?",
+   "md": "![A tired new employee](data/img/w1/d5-tired.webp)\n\n> Why is the first week at a new job so tiring? You sit at a desk most of the day, so it seems strange to feel so tired in the evening.\n>\n> The answer is in your brain. In a new place, almost nothing is automatic. You have to think about everything: where the kitchen is, how the printer works, what your manager wants, and, of course, everyone's name.\n>\n> Scientists say that learning new information uses a lot of energy. When you do something for the hundredth time, your brain uses shortcuts. When you do it for the first time, there are no shortcuts. Every small decision takes effort.\n>\n> There is also the social side. You want to make a good impression, so you listen carefully, smile a lot and try not to make mistakes. In other words, you are \"on\" all day. That is tiring even for very confident people.\n>\n> The good news is that it gets easier, and quite quickly. After two or three weeks, many things become routine. You no longer need to think about the way to the office or how to log in. Your brain can relax a little.\n>\n> So if you feel exhausted after your first week, don't worry. It doesn't mean the job is wrong for you. It means your brain is working hard to get the hang of something new.\n\n| Word / phrase | Meaning |\n|---|---|\n| *automatic* | you do it without thinking |\n| *shortcuts* | quicker ways (here: the brain's quick ways) |\n| *effort* | work, energy you use |\n| *make a good impression* | make people think you are good / nice |\n| *you are \"on\" all day* | you are always careful and active, never relaxed |\n| *routine* | normal, done the same way every day |\n| *exhausted* | very, very tired |\n| *get the hang of sth* | learn how to do it (from today's chunks!) |",
+   "questions": [
+    {
+     "id": "chk",
+     "q": "According to the article, why are new things so tiring?",
+     "type": "choice",
+     "options": [
+      "Your brain has no shortcuts yet, so every small decision takes effort.",
+      "You walk a lot in a new office.",
+      "New jobs always have long hours."
+     ],
+     "check": {
+      "answer": "Your brain has no shortcuts yet, so every small decision takes effort.",
+      "why": "Paragraph 3: *When you do it for the first time, there are no shortcuts. Every small decision takes effort.*"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

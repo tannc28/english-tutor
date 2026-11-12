@@ -1,0 +1,74 @@
+{
+ "intro_md": "🎧 **8 min.** 9 short phrases people use at work – hear each one inside a sentence. Learn them as **one block**, like one long word.",
+ "parts": [
+  {
+   "kind": "🎧 Learn + listen",
+   "title": "Work chunks",
+   "learn": true,
+   "rate": 1,
+   "audio": "data/audio/2026-11-13-01/p0.mp3",
+   "transcript_open": true,
+   "md": "At work, English speakers use **short fixed phrases** – chunks. You don't need to build them word by word. Learn each one as **one block**, like one long word.\n\n| Chunk | What it means | When you hear it |\n|---|---|---|\n| **How's it going?** | How are you? (friendly) | Answer: *Good, thanks* / **So far so good** |\n| **So far so good** | until now, everything is OK | after starting something new |\n| **show sb around** | walk with someone and show them a place | *I'll show you around the office.* |\n| **let me know** | tell me | *If you need anything, just let me know.* |\n| **get the hang of sth** | learn how to do it, slowly | *It takes a while to get the hang of it.* 🇻🇳 *quen tay, nắm được cách* |\n| **it takes (a while / 20 minutes) to + V** | the time you need | *It took me twenty minutes to log in.* |\n| **I'd love (a coffee)** | I would really like | polite and warm |\n| **by the way** | a new small topic | *Where's the kitchen, by the way?* |\n| **give sb a hand (with sth)** | help someone | *Could you give me a hand with this box?* |\n\n### When you miss a word – keep going! 🏃\nOn Day 2 you said: *\"If I miss one word, I lose everything after it.\"* That happens to everyone. Try this today:\n\n1. **Don't stop in your head.** The speaker doesn't stop – you don't stop either.\n2. **Hold the gap, catch the next sentence.** The next sentence often explains the word you missed.\n3. **Main idea first, details later.** On round 1 you only need *who, where, what's happening*.\n4. **The transcript is your friend, not cheating.** Listening while reading teaches your ears what the words *sound* like.\n\n👂 **Press play** – each chunk inside a sentence, at normal speed. The words are already open: **listen and read at the same time**, twice.",
+   "listen": [
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "How's it going so far?"
+    },
+    {
+     "who": "",
+     "voice": "us_m",
+     "text": "So far so good, thanks."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "Could you show Nam around after lunch?"
+    },
+    {
+     "who": "",
+     "voice": "us_m",
+     "text": "If you need anything, just let me know."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "It takes a while to get the hang of everything here."
+    },
+    {
+     "who": "",
+     "voice": "us_m",
+     "text": "I'd love another coffee. Where's the kitchen, by the way?"
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "Could you give me a hand with this box? It's heavier than it looks."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    2.11,
+    4.63,
+    7.46,
+    9.82,
+    13.0,
+    16.2
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "intro_md": "📖 **6 min.** You read this story on Thursday. Read it again **faster** – a known story is the best way to train reading speed without translating.",
+ "parts": [
+  {
+   "kind": "📖 Fluency re-read",
+   "title": "Fast re-read: Episode 2",
+   "md": "⏱ **Note the time when you start.** Read at a comfortable speed, **never go back**. Last time you needed 4 minutes – can you do it in 3?\n\n> The café on the corner of Hope Street was small and warm. It smelled of coffee and fresh bread, and there were only six tables. A young woman with short red hair was standing behind the counter.\n>\n> \"Morning! What can I get you?\" she asked.\n>\n> \"A coffee, please,\" Nam said. \"And… something to eat. I'm not sure what's good.\"\n>\n> She smiled. \"Then try the bacon sandwich. Everyone says it's the best in Manchester. I'm Jess, <mark>by the way</mark>. I haven't seen you before.\"\n>\n> \"I'm Nam. I <mark>moved in</mark> yesterday – number fourteen.\"\n>\n> \"Margaret's building? <mark>Lucky you</mark>. She knows everything about everyone on this street.\" Jess laughed. \"Did the heating wake you up?\"\n>\n> Nam stared at her. \"How do you know about the heating?\"\n>\n> \"Everyone knows about the heating.\"\n>\n> Nam sat by the window with his coffee. Outside, people were walking quickly to work under black umbrellas. He felt tired, **but** he also felt something else – something he hadn't felt yesterday. He <mark>felt a little bit at home</mark>.\n>\n> The sandwich arrived. Jess was right: it was very good.\n>\n> **While** he was eating, he checked his phone. There was a message from his new manager, Claire: *\"Welcome to the team! See you at 9. Don't worry about being on time today – the trains are terrible.\"*\n>\n> Nam looked at the clock. It was 8:15. **Although** Claire said not to worry, he didn't want to be late on his first day. He finished his coffee, said goodbye to Jess and stepped out into the rain.\n>\n> Twenty minutes later, he was standing outside a tall glass building. His shoes were wet, his hair was wet, and his heart was beating fast. He <mark>took a deep breath</mark> and pushed the door.\n>\n> \"You must be Nam,\" said a woman with grey glasses. \"I'm Claire. Come in – you look like you need another coffee.\"\n>\n> Nam laughed. It was only his second day in Manchester, and he was already <mark>getting used to</mark> two things: the rain, and people offering him coffee.",
+   "questions": [
+    {
+     "id": "t",
+     "q": "How many minutes did it take this time?",
+     "type": "short",
+     "placeholder": "e.g. 3"
+    }
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

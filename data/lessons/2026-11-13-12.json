@@ -1,0 +1,128 @@
+{
+ "intro_md": "🎧 **10 min. A listening lesson about sounds.** Why you can't hear small words – and how to start hearing them.",
+ "parts": [
+  {
+   "kind": "🎧 Learn",
+   "title": "Small words get squeezed",
+   "learn": true,
+   "rate": 1,
+   "audio": "data/audio/2026-11-13-12/p0.mp3",
+   "transcript_open": true,
+   "md": "In natural speech, small words lose sounds and **join the word before**. You know these words when you **read** them – but in speech they are only **one short sound**:\n\n| You read | You hear | Sounds like |\n|---|---|---|\n| you will | **you'll** | /juːl/ – one syllable |\n| I have | **I've** | /aɪv/ |\n| it is / it has | **it's** | /ɪts/ – same sound for both! |\n| I would / I had | **I'd** | /aɪd/ – same sound for both! |\n| he is / he has | **he's** | /hiːz/ |\n| we have | **we've** | /wiːv/ |\n\n💡 **How to know which one?** Look at the next word:\n- *it's **been*** → it **has** (been = has been) · *it's **long*** → it **is**\n- *I'd **love*** → I **would** · *I'd **better*** → I **had**\n\n👂 **Listen:** each sentence twice – first **full** (slow, every word), then **natural** (squeezed). Then the last two sentences are only natural. **Tap any line** to hear it again. Try to **whisper along** with the natural version.",
+   "listen": [
+    {
+     "who": "Full",
+     "voice": "us_f",
+     "text": "You will get used to it."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_f",
+     "text": "You'll get used to it."
+    },
+    {
+     "who": "Full",
+     "voice": "us_m",
+     "text": "I have lived here ten years."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_m",
+     "text": "I've lived here ten years."
+    },
+    {
+     "who": "Full",
+     "voice": "us_f",
+     "text": "It is a long day."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_f",
+     "text": "It's a long day."
+    },
+    {
+     "who": "Full",
+     "voice": "us_m",
+     "text": "It has been a long day."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_m",
+     "text": "It's been a long day."
+    },
+    {
+     "who": "Full",
+     "voice": "us_f",
+     "text": "He is starting today."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_f",
+     "text": "He's starting today."
+    },
+    {
+     "who": "Full",
+     "voice": "us_m",
+     "text": "I would love another coffee."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_m",
+     "text": "I'd love another coffee."
+    },
+    {
+     "who": "Full",
+     "voice": "us_f",
+     "text": "I had better go home."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_f",
+     "text": "I'd better go home."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_m",
+     "text": "She's been here two days, and she's already got lost twice."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_f",
+     "text": "You'll be fine. It's normal. We've all been there."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    1.79,
+    3.74,
+    5.97,
+    8.16,
+    10.1,
+    11.79,
+    13.74,
+    15.55,
+    17.62,
+    19.49,
+    21.38,
+    23.24,
+    25.46,
+    27.24,
+    31.0
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

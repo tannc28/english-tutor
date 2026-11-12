@@ -1,0 +1,79 @@
+{
+ "intro_md": "🎧 **12 min.** Claire introduces Nam to the team. Tom talks fast – great practice. The words are open: **listen and read together**, then read the notes, then listen again.",
+ "parts": [
+  {
+   "kind": "🎧 Listen + read",
+   "title": "Meeting the team",
+   "rate": 1,
+   "audio": "data/audio/2026-11-13-02/p0.mp3",
+   "transcript_open": true,
+   "md": "Claire introduces Nam to the team. **Tom talks quickly** – perfect practice.\n\n**4 rounds, normal speed, no answers:**\n1. 👀👂 **Listen + read together** (the words are open below). Follow with your eyes.\n2. 📝 **Read the notes** below the player – one line at a time.\n3. 👀👂 **Listen + read again.** It will feel easier.\n4. 👂 **Hide the transcript** and listen once more. If you miss a word – keep going.\n\n#### Notes – line by line\n| Line | What it means |\n|---|---|\n| *He's starting today.* | **He's** = he is. Today is his first day. |\n| *How's it going **so far**?* | How are you, until now? – friendly small talk |\n| *So far so good.* | Everything is OK until now. |\n| ***Although** I got a bit wet* | a small surprise or problem: it rained on him (🇻🇳 *mặc dù*) |\n| *You'll **get used to** it.* | **You'll** = you will. It will become normal for you. |\n| *I've lived here ten years* | **I've** = I have. He came 10 years ago and still lives here. |\n| *could you **show Nam around**?* | walk with Nam and show him the office |\n| *that kind of thing* | and similar things |\n| *just **let me know*** | just tell me |\n| *It **takes a while** to **get the hang of** everything* | you need some time to learn how everything works (🇻🇳 *quen tay*) |\n| ***by the way*** | a new small question |\n| *The coffee machine is terrible, **though**.* | **though** at the end = but / however |\n| *Most of us go to the café downstairs **instead**.* | not the machine → the café |",
+   "listen": [
+    {
+     "who": "Claire",
+     "voice": "glassy",
+     "text": "So, Nam, this is the team. Everyone, this is Nam. He's starting today."
+    },
+    {
+     "who": "Tom",
+     "voice": "rounded",
+     "text": "Hi, Nam! Nice to meet you. How's it going so far?"
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Hi, nice to meet you too. So far so good, thanks. Although I got a bit wet on the way here."
+    },
+    {
+     "who": "Tom",
+     "voice": "rounded",
+     "text": "Ha! Welcome to Manchester. You'll get used to it. I've lived here ten years and I still forget my umbrella."
+    },
+    {
+     "who": "Claire",
+     "voice": "glassy",
+     "text": "Tom, could you show Nam around after lunch? The kitchen, the printer, that kind of thing."
+    },
+    {
+     "who": "Tom",
+     "voice": "rounded",
+     "text": "Sure, no problem. And Nam, if you need anything, just let me know. It takes a while to get the hang of everything here."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Thanks, that's really kind. Where's the kitchen, by the way? I'd love another coffee."
+    },
+    {
+     "who": "Tom",
+     "voice": "rounded",
+     "text": "Come on, I'll show you now. The coffee machine is terrible, though. Most of us go to the café downstairs instead."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    7.03,
+    11.68,
+    17.46,
+    26.08,
+    32.24,
+    41.04,
+    45.71
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

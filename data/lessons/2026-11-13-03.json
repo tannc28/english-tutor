@@ -1,0 +1,45 @@
+{
+ "intro_md": "📖 **10 min.** A short lesson + a short text. You'll learn to **see where an idea goes** – that's what makes long sentences easy.",
+ "parts": [
+  {
+   "kind": "📖 Learn",
+   "title": "Road signs in a sentence",
+   "learn": true,
+   "md": "When you read, small linking words are **road signs**. They tell you *before* the end of the sentence where the idea is going.\n\n| Sign | The idea… | Read it like this |\n|---|---|---|\n| **although / even though** | turns: a surprise is coming | *Although he was tired* → (surprise!) *he helped.* |\n| **but / yet / however** | turns: the second part is different | *It's small, **yet** it's always full.* |\n| **rather** | corrects: *not A → B* | *He didn't text. **Rather**, he called.* |\n| **in other words** | repeats: the same idea, more simply | *…**In other words**, go home and rest.* |\n| **so / that's why** | continues: a result | *It was late, **so** he took a taxi.* |\n| **because / since** | continues: a reason | *He smiled **because** it seemed to work.* |\n\n💡 **Trick:** when you see a sign, **predict** the next part in your head – then check. Your brain stops translating and starts *following*."
+  },
+  {
+   "kind": "📖 Read",
+   "title": "Nam's first week – in 6 short paragraphs",
+   "md": "Read once, **don't go back**. At every **bold** word, think: *continue, turn, or repeat?*\n\n> Nam's first week in Manchester was not easy. **Although** everyone was friendly, he felt tired all the time. New people, new streets, new words – his head was always full.\n>\n> He didn't try to remember every name. **Rather**, he wrote them in a small notebook and looked at it before meetings. It helped more than he expected.\n>\n> The weather was another surprise. It rained almost every day, **yet** nobody seemed to care. People just put up their hoods and kept walking.\n>\n> On Wednesday he got lost on the way to the office. He missed the tram stop, **so** he had to walk for twenty minutes in the rain.\n>\n> **However**, there were good moments too. Jess at the café remembered his order, and Tom always said hello. **In other words**, he was starting to feel at home.\n>\n> On Friday evening, Nam made a cup of tea, sat by the window and smiled. It had been a hard week, **but** a good one.\n\n| Word | Meaning |\n|---|---|\n| *put up their hoods* | covered their heads with the top part of a jacket |\n| *kept walking* | continued walking |\n| *remembered his order* | knew what he always buys |",
+   "questions": [
+    {
+     "id": "chk",
+     "q": "Paragraph 2: *\"Rather, he wrote them in a notebook.\"* What did he NOT do?",
+     "type": "choice",
+     "options": [
+      "try to remember every name",
+      "go to meetings",
+      "buy a notebook"
+     ],
+     "check": {
+      "answer": "try to remember every name",
+      "why": "**Rather** = not A → B. Not *remember every name* → *write them down*."
+     }
+    }
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

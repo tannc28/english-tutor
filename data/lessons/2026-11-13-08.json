@@ -1,0 +1,67 @@
+{
+ "intro_md": "🎧 **6 min.** Hear the second part. Listen + read, then without the words.",
+ "parts": [
+  {
+   "kind": "🎧 Listen + read",
+   "title": "A heavy box – audio",
+   "rate": 1,
+   "audio": "data/audio/2026-11-13-08/p0.mp3",
+   "transcript_open": true,
+   "md": "1. 👀👂 **Listen + read.**\n2. 👂 **Hide the transcript**, listen again. **Tap a line** to replay it.",
+   "listen": [
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "When Nam got back to Hope Street, a man with a beard and a brown jacket was carrying a big box up the stairs."
+    },
+    {
+     "who": "Mr Patel",
+     "voice": "rounded",
+     "text": "Oh, you must be the new neighbour. I'm Raj Patel, Flat 3. Margaret has told me all about you."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Of course she has."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "And they both laughed."
+    },
+    {
+     "who": "Mr Patel",
+     "voice": "rounded",
+     "text": "Could you give me a hand with this? It's a new TV, and it's heavier than it looks."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "Even though he was tired, Nam picked up the other end of the box. Two days in Manchester, and he already knew four people on Hope Street. That felt like a good start."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    6.6,
+    14.0,
+    16.01,
+    17.72,
+    23.68
+   ]
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

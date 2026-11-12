@@ -1073,13 +1073,22 @@
    "title": "Hope Street – Episode 2: The Café on the Corner"
   },
   {
-   "lesson": "w1-l4",
-   "part": 2,
+   "lesson": "2026-11-13-05",
+   "part": 0,
    "week": 1,
-   "order": 4,
+   "order": 105,
    "date": "2026-11-13",
    "status": "open",
-   "title": "Hope Street – Episode 3: Names and a Heavy Box"
+   "title": "Hope Street – Episode 3 (1/2): Lunch with Tom"
+  },
+  {
+   "lesson": "2026-11-13-07",
+   "part": 0,
+   "week": 1,
+   "order": 107,
+   "date": "2026-11-13",
+   "status": "open",
+   "title": "Hope Street – Episode 3 (2/2): A Heavy Box"
   }
  ],
  "mistakes": [

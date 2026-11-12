@@ -562,6 +562,12 @@ table.days tr.next td{background:var(--accent-soft)}
   .parts-list .n{display:none}
   .parts-list .c{margin-left:auto;font-family:var(--f-mono);font-size:.75rem;color:var(--ink-3)}
 }
+.fb-full{display:none!important}
+.mic-sum{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}.mic-sum .bar{flex-basis:100%}
+.mic-g{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.td-row.mic{grid-template-columns:40px minmax(0,1fr) auto}
+.mic-ic{width:40px!important;height:40px!important;font-size:1.25rem}
+@media (max-width:520px){.td-row.mic{grid-template-columns:40px minmax(0,1fr) auto}.td-row.mic .td-go{grid-column:auto}}
 .brand-h{display:flex;align-items:center;gap:10px}
 .theme-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:5px 11px;font:600 .8rem var(--f-ui);cursor:pointer;flex:none}
 .theme-btn:hover{border-color:var(--accent);color:var(--ink)}
@@ -1044,15 +1050,15 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
           </div>
         </section>`).join("")}
       <section class="fb" id="part-fb" data-lid="${esc(l.id)}" aria-labelledby="fb-h">
-        <h3 id="fb-h">📝 Your feedback</h3>
-        <div class="fl"><span>How hard was this lesson?</span>
+        <h3 id="fb-h">${l.micro ? "📝 Done? Tell me in one tap" : "📝 Your feedback"}</h3>
+        <div class="fl ${l.micro?"fb-full":""}"><span>How hard was this lesson?</span>
           <div class="scale" role="radiogroup" aria-label="Difficulty">${[1,2,3,4,5].map(n=>`<label><input type="radio" name="fb-diff" id="fb-diff-${n}" value="${n}" ${fb.difficulty==n?"checked":""} ${locked?"disabled":""}><span>${n}</span></label>`).join("")}</div>
           <div class="scale-cap"><span>too easy</span><span>too hard</span></div></div>
         <div class="fl"><span>How did your brain feel? <span class="note">(this tells me if the level is right – no wrong answer)</span></span>
           <div class="strain" role="radiogroup" aria-label="Effort">${[["relaxed","😌 Relaxed – understood without trying"],["some","🙂 Some effort"],["hard","😵 Hard work – had to translate / strain"]].map(([v,t])=>`<label><input type="radio" name="fb-strain" value="${v}" ${fb.strain===v?"checked":""} ${locked?"disabled":""}><span>${t}</span></label>`).join("")}</div></div>
-        <label class="fl" for="fb-hard"><span>What was hardest to understand?</span><textarea id="fb-hard" placeholder="Which question, paragraph or word got you stuck?" ${locked?"disabled":""}>${esc(fb.hardest||"")}</textarea></label>
-        <label class="fl" for="fb-min"><span>Time spent on this lesson (minutes)</span><input type="number" id="fb-min" min="0" inputmode="numeric" value="${esc(fb.minutes||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
-        <label class="fl" for="fb-extra"><span>Extra English today outside this lesson (minutes)? <span class="note">(YouTube, podcasts, reading… – optional)</span></span><input type="number" id="fb-extra" min="0" inputmode="numeric" value="${esc(fb.extra||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
+        <label class="fl" for="fb-hard"><span>${l.micro ? "💬 Ask me / tell me anything (optional – Vietnamese is OK)" : "What was hardest to understand?"}</span><textarea id="fb-hard" placeholder="Which question, paragraph or word got you stuck?" ${locked?"disabled":""}>${esc(fb.hardest||"")}</textarea></label>
+        <label class="fl ${l.micro?"fb-full":""}" for="fb-min"><span>Time spent on this lesson (minutes)</span><input type="number" id="fb-min" min="0" inputmode="numeric" value="${esc(fb.minutes||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
+        <label class="fl ${l.micro?"fb-full":""}" for="fb-extra"><span>Extra English today outside this lesson (minutes)? <span class="note">(YouTube, podcasts, reading… – optional)</span></span><input type="number" id="fb-extra" min="0" inputmode="numeric" value="${esc(fb.extra||"")}" ${locked?"disabled":""} style="max-width:140px"></label>
       </section>
       </div>
       </div>`;
@@ -1230,7 +1236,7 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
   async function submit(l){
     const msg = $("#msg"), btn = $("#submit");
     const data = collect(l);
-    if (!data.feedback.difficulty){ msg.innerHTML = '<div class="banner warn">Please rate the difficulty (1–5) in the feedback section, then submit.</div>'; $("#fb-h")?.scrollIntoView({behavior:"smooth",block:"center"}); return; }
+    if (!data.feedback.difficulty && !l.micro){ msg.innerHTML = '<div class="banner warn">Please rate the difficulty (1–5) in the feedback section, then submit.</div>'; $("#fb-h")?.scrollIntoView({behavior:"smooth",block:"center"}); return; }
     if (!db){ msg.innerHTML = '<div class="banner bad">Can\'t reach the answer store. Open this page on claude.ai while signed in, then try again.</div>'; return; }
     btn.disabled = true; btn.innerHTML = "⏳<span class=\"bl\"> Submitting…</span>";
     if (act){ const ss = act.sessions[act.sessions.length-1]; if (ss) ss.e = nowS(); }
@@ -1494,11 +1500,24 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
       <span class="td-go">${DONE(st)?"✅":"Start ▶"}</span></a>`;
   }
   let daySel = null;
+  // Ngày gồm nhiều bài nhỏ (5–15 phút, mỗi bài 1 kỹ năng, nộp ngay) – Tân 12/11
+  function microDay(own, carry, tm, we){
+    const done = own.filter(l => DONE(statusOf(l))), mins = a => a.reduce((n,l) => n + (Number(l.minutes)||0), 0);
+    const slots = we ? [["weekend","☀️ Morning · "+tm.lesson[0]],["afternoon","🌤 Afternoon · 14:30"],["evening","🌙 Evening · 20:00"]] : [["morning","🌅 Morning · "+tm.lesson[0]],["evening","🌙 Evening · "+tm.lesson[1]]];
+    const sk = l => l.kind === "Reading" ? "📖" : l.kind === "Listening" ? "🎧" : (KIND_ICON[l.kind]||"📘");
+    const row = l => { const st = statusOf(l); return `<a class="td-row mic ${DONE(st)?"done":""}" href="#${esc(l.id)}"><span class="td-ph mic-ic">${sk(l)}</span>
+      <span class="td-main"><b>${esc(l.title||"")}</b><span class="note">${esc(l.kind||"")} · ~${esc(l.minutes||"?")} min</span></span><span class="td-go">${DONE(st)?"✅":"Start ▶"}</span></a>`; };
+    const groups = slots.map(([k,lab]) => { const ls = own.filter(l => (l.slot||"evening") === k || (k==="weekend" && !l.slot)); return ls.length ? `<div class="mic-g"><span class="label">${lab} · ${ls.filter(l=>DONE(statusOf(l))).length}/${ls.length}</span>${ls.map(row).join("")}</div>` : ""; }).join("");
+    return `<div class="mic-sum"><b>${done.length}/${own.length} done</b><span class="note">~${mins(done)} / ${mins(own)} min today · 📖 ${own.filter(l=>l.kind==="Reading").length} reading · 🎧 ${own.filter(l=>l.kind==="Listening").length} listening</span><div class="bar"><i style="width:${own.length?Math.round(done.length/own.length*100):0}%"></i></div></div>
+      ${carry.length ? `<div class="mic-g"><span class="label">↪ Still open from before (no rush)</span>${carry.map(row).join("")}</div>` : ""}
+      <div class="td-list">${groups}</div>`;
+  }
   function dayPanel(w, ds){
     const P = weekPlan(w), isToday = ds === P.t, d = P.days[ds] || {}, tm = slotTimes(ds);
     const dow = new Date(ds+"T12:00:00").getDay(), we = dow===0||dow===6;
     const own = (d.lessons||[]).map(id => lessons.find(l => l.id===id)).filter(Boolean);
-    const list = isToday ? [...P.now, ...own.filter(l => DONE(statusOf(l)) && !P.now.includes(l))] : own;
+    const micro = own.some(l => l.micro);
+    const list = micro ? own : isToday ? [...P.now, ...own.filter(l => DONE(statusOf(l)) && !P.now.includes(l))] : own;
     const timeFor = (l,i) => we ? tm.lesson[i] : ((list.filter(x=>!DONE(statusOf(x))).length===1 || own.length===1) && i===0 ? tm.lesson[1] : tm.lesson[i]);
     const ext = d.extra ? lessons.find(l => l.id === d.extra) : null;
     const title = new Date(ds+"T12:00:00").toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"short"});
@@ -1506,7 +1525,7 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
     const off = d.off ? `<p class="td-free">🙋 Day off – ${esc(d.off)}. Your tutor moved this day's lessons. Rest well!</p>` : "";
     return `<section class="card today ${isToday?"":"other"}">
       <div class="td-h"><span class="label">${isToday?"📍 Today":"🗓"} · ${esc(title)}</span>${d.note&&!d.off?`<span class="note">${esc(d.note)}</span>`:""}</div>
-      ${off || (list.length ? `<div class="td-list">${list.map((l,i) => lessonRow(l, DONE(statusOf(l)) ? "" : timeFor(l,i), isToday && P.carry.includes(l) ? "missed on "+fmtDate(P.plannedDay[l.id]) : (ds < P.t && !DONE(statusOf(l)) ? "missed – it's in Today" : ""))).join("")}</div>`
+      ${!off && micro ? microDay(own, isToday ? P.carry : [], tm, we) : off || (list.length ? `<div class="td-list">${list.map((l,i) => lessonRow(l, DONE(statusOf(l)) ? "" : timeFor(l,i), isToday && P.carry.includes(l) ? "missed on "+fmtDate(P.plannedDay[l.id]) : (ds < P.t && !DONE(statusOf(l)) ? "missed – it's in Today" : ""))).join("")}</div>`
         : `<p class="td-free">${isToday && own.length ? "🎉 Today's lessons are done. Great work!" : "No lesson planned – rest day."}</p>`)}
       ${ext && !d.off ? lessonRow(ext, DONE(statusOf(ext)) ? "" : tm.listen, "🎧 VOA listening") : ""}
       ${isToday && P.later.length ? `<p class="note">Also waiting: ${P.later.map(l => `<a href="#${esc(l.id)}">${esc(l.title)}</a>`).join(", ")} – no rush.</p>` : ""}
@@ -1539,7 +1558,7 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
       const off = P.days[ds]?.off;
       out.push(`<button type="button" data-ds="${ds}" class="ws-d ${ds===P.t?"is-today":""} ${ds<P.t?"past":""} ${ds===(daySel||P.t)?"sel":""}">
         <span class="ws-n">${d.toLocaleDateString("en-GB",{weekday:"short"})} <b>${d.getDate()}</b></span>
-        ${off ? `<span class="ws-l rest">🙋 off</span>` : [...ls, ...(P.days[ds]?.extra ? [lessons.find(l => l.id === P.days[ds].extra)].filter(Boolean) : [])].map(l => { const st = statusOf(l), ic = DONE(st) ? "✅" : ds < P.t ? "↪" : ds === P.t ? "▶" : "·"; return `<span class="ws-l ${DONE(st)?"done":ds<P.t?"moved":""}" title="${esc(l.title)}">${ic} ${l.extra?"🎧":"L"+esc(l.order)}</span>`; }).join("") || `<span class="ws-l rest">rest</span>`}
+        ${off ? `<span class="ws-l rest">🙋 off</span>` : ls.some(l => l.micro) ? `<span class="ws-l ${ls.every(l=>DONE(statusOf(l)))?"done":""}">${ls.filter(l=>DONE(statusOf(l))).length}/${ls.length}</span><span class="ws-l rest">📖${ls.filter(l=>l.kind==="Reading").length} 🎧${ls.filter(l=>l.kind==="Listening").length}</span>` : [...ls, ...(P.days[ds]?.extra ? [lessons.find(l => l.id === P.days[ds].extra)].filter(Boolean) : [])].map(l => { const st = statusOf(l), ic = DONE(st) ? "✅" : ds < P.t ? "↪" : ds === P.t ? "▶" : "·"; return `<span class="ws-l ${DONE(st)?"done":ds<P.t?"moved":""}" title="${esc(l.title)}">${ic} ${l.extra?"🎧":"L"+esc(l.order)}</span>`; }).join("") || `<span class="ws-l rest">rest</span>`}
       </button>`); }
     return `<section class="card sec"><span class="label">Your week at a glance</span><div class="ws">${out.join("")}</div>
       <p class="note">Tap a day to see its plan · ✅ done · ▶ today · ↪ missed · 🙋 day off</p></section>`;

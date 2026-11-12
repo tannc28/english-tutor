@@ -1,0 +1,24 @@
+{
+ "intro_md": "📖 **8 min.** Nam writes to his mum about his first week. Easy, and **every chunk from this week is inside** – how many can you spot?",
+ "parts": [
+  {
+   "kind": "📖 Read",
+   "title": "A message to Mum",
+   "md": "![Nam writes home](data/img/w1/d5-message.webp)\n\n> Hi Mum, sorry I didn't call this week. It's been really busy! Don't worry, I'm fine. The job is good, although I'm still getting used to everything.\n>\n> My manager, Claire, is very kind. On my first day she told me not to worry about being late, because the trains here are terrible. Most days it rains, but people don't seem to care.\n>\n> My colleague Tom talks very fast. I understand about half of what he says! He showed me around the office, and he says it takes a while to get the hang of everything.\n>\n> I also met my neighbours. Margaret lives downstairs and knows everyone on the street. Mr Patel lives in Flat 3. I helped him carry a TV up the stairs. It was heavier than it looked!\n>\n> There's a little café on the corner. Jess, who works there, already remembers my order. In other words, I'm starting to feel at home. I'll call you on Sunday. Love, Nam.\n\n🔎 **Spot the chunks** (just notice them, no need to write): *it's been, getting used to, although, not to worry, showed me around, it takes a while, get the hang of, heavier than it looked, on the corner, in other words, feel at home*.",
+   "questions": []
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

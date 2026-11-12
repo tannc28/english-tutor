@@ -1,0 +1,24 @@
+{
+ "intro_md": "📖 **6 min.** Nam gets home and meets another neighbour.",
+ "parts": [
+  {
+   "kind": "📖 Read",
+   "title": "Hope Street – Episode 3 (2/2): A Heavy Box",
+   "md": "![Nam helps Mr Patel](data/img/w1/l4-patel.webp)\n\n> When Nam got back to Hope Street, a man with a beard and a brown jacket was carrying a big box up the stairs.\n>\n> **Mr Patel:** Oh, you must be the new neighbour. I'm Raj Patel, Flat 3. Margaret has told me all about you.\n>\n> **Nam:** Of course she has.\n>\n> And they both laughed.\n>\n> **Mr Patel:** Could you give me a hand with this? It's a new TV, and it's heavier than it looks.\n>\n> Even though he was tired, Nam picked up the other end of the box. Two days in Manchester, and he already knew four people on Hope Street. That felt like a good start.\n\n| Phrase | Meaning |\n|---|---|\n| *you **must be** the new neighbour* | I think you are the new neighbour (I'm almost sure) |\n| *Margaret **has told me all about** you* | Margaret talked a lot about you (she talks about everyone! 😄) |\n| *Of course she has.* | = of course she has told you – Nam is joking |\n| ***give me a hand*** | help me |\n| *heavier **than it looks*** | it looks light, but it's heavy |\n| ***Even though** he was tired* | he was tired, **but** he still helped |",
+   "questions": []
+  },
+  {
+   "kind": "✓ Done",
+   "title": "How was it?",
+   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "questions": [
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

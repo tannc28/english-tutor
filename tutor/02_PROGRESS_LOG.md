@@ -5,7 +5,7 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: Chỉ INPUT (nghe + đọc) – input-first: nạp nhiều, giải thích nhiều, rất ít kiểm tra. Output/phát âm chỉ khi Tân muốn.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 4/10 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 4/22 bài
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
 - Cập nhật hồ sơ: 2026-11-12T22:50:00+07:00
 
@@ -78,7 +78,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 4/10 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 4/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -89,13 +89,25 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | T1 · B1 | 2026-11-11 | Starting point – full assessment | graded | 60% | 88% | 3 | 90 | – | Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k |
 | T1 · B2 | 2026-11-12 | Small words you can't hear + Hope Street | graded | 80% | 100% | 2 | 25 | – | 17/17 · dictation exact · nghe lần đầu ~80% · Tân: muốn ít test, nhiều input + giải thích |
 | T1 · B3 | 2026-11-12 | Linking words + The Café & AI chatbots | graded | – | 97% | 1 | 28 | – | 11/11 đọc + 8/8 từ nối · đọc ~100 wpm · 😌 → nâng đọc B1+ · muốn đọc nhiều có dẫn dắt, ít câu hỏi, vẫn tương tác |
-| T1 · B4 | – | First day at work – listen & read | open | – | – | – | – | – |  |
 | T1 · B5 | – | Getting around – directions & the tram | open | – | – | – | – | – |  |
 | T1 · B6 | – | Weekend review – the story so far | open | – | – | – | – | – |  |
 | T1 · B7 | 2026-11-12 | 'Watching the Grass Grow' Is Not Fun | graded | 60% | 95% | 3 | 10 | – | VOA 4/4 · nghe 60% / có lời 95% · Tân: dạy nhiều, đừng quiz nhiều |
-| T1 · B8 | – | Sometimes We 'Spread Ourselves Too Thin' | open | – | – | – | – | – |  |
 | T1 · B9 | – | 'Kicking Off' a New Year | open | – | – | – | – | – |  |
 | T1 · B10 | – | Ask a Teacher: Remaining, Remainder and Rest of | open | – | – | – | – | – |  |
+| T1 · B101 | – | Work chunks you will hear today | open | – | – | – | – | – |  |
+| T1 · B102 | – | Meeting the team (listen + read) | open | – | – | – | – | – |  |
+| T1 · B103 | – | How ideas connect: although · rather · in other words | open | – | – | – | – | – |  |
+| T1 · B104 | – | Fast re-read: The Café on the Corner | open | – | – | – | – | – |  |
+| T1 · B105 | – | Hope Street Ep. 3 (1/2): Lunch with Tom | open | – | – | – | – | – |  |
+| T1 · B106 | – | Hope Street Ep. 3 (1/2): listen | open | – | – | – | – | – |  |
+| T1 · B107 | – | Hope Street Ep. 3 (2/2): A heavy box | open | – | – | – | – | – |  |
+| T1 · B108 | – | Hope Street Ep. 3 (2/2): listen | open | – | – | – | – | – |  |
+| T1 · B109 | – | VOA: Sometimes we 'spread ourselves too thin' | open | – | – | – | – | – |  |
+| T1 · B110 | – | Why is the first week at a new job so tiring? | open | – | – | – | – | – |  |
+| T1 · B111 | – | Listen: why the first week is so tiring | open | – | – | – | – | – |  |
+| T1 · B112 | – | Sound focus: you'll · I've · it's · I'd | open | – | – | – | – | – |  |
+| T1 · B113 | – | Nam's message home | open | – | – | – | – | – |  |
+| T1 · B114 | – | Listen: Nam's message home | open | – | – | – | – | – |  |
 
 ## Truyện dài kỳ: Hope Street
 - Nhân vật: Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà); Jess (quán cà phê đầu phố, tóc đỏ ngắn); Claire (quản lý của Nam, kính xám)
