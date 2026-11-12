@@ -27,7 +27,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Không sao chép nguyên văn nội dung có bản quyền vào repo; lưu link + câu hỏi + tóm tắt.
 
 ## Thông báo cho Tân: TELEGRAM (Tân yêu cầu 12/11)
-- Mọi tin quan trọng gửi qua bot **@CtanEnglishTutorBot**: `python3 tools/notify.py "<HTML ngắn>"` – khi **chấm xong** (điểm + 1–2 ý chính + link bài), **ra tuần mới**, **xử lý xin nghỉ / đổi lịch**, **nhắc nhẹ** (2 ngày không học). Tiếng Việt, ngắn, có link `#<id>`.
+- Mọi tin quan trọng gửi qua bot **@CtanEnglishTutorBot**: `python3 tools/notify.py "<HTML ngắn>"` – khi **chấm xong** dùng `--result <id> "<caption ngắn>"` (ảnh dài cả bài đã chấm – Tân tự cuộn; KHÔNG viết lại nhận xét dài), **ra tuần mới**, **xử lý xin nghỉ / đổi lịch**, **nhắc nhẹ** (2 ngày không học). Tiếng Việt, ngắn, có link `#<id>`.
 - Token **không bao giờ** vào repo: biến môi trường `TELEGRAM_BOT_TOKEN` (Tân đặt trong cài đặt environment) hoặc `/root/.telegram_token`. Chat id ở `profile.notify.telegram_chat_id`. Không có token → PushNotification + báo Tân.
 - Job sáng đọc tin Tân nhắn bot (`tools/notify.py --inbox`): xin nghỉ, góp ý → xử lý như Quy trình XIN NGHỈ.
 
