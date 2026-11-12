@@ -304,7 +304,7 @@ body.sheet-open .book{padding-bottom:62vh}
 .rv-hero{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.rv-hero h2{margin:4px 0}
 #rv-q{width:100%;margin:12px 0 8px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--surface);color:var(--ink)}
 .rv-tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}.rv-tabs .tbtn{white-space:nowrap}
-.w-h{display:flex;align-items:center;gap:6px;justify-content:space-between}.say{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;border-radius:50%;background:var(--surface-2,rgba(127,127,127,.12));font-size:1rem;cursor:pointer;flex:none;user-select:none;-webkit-tap-highlight-color:transparent}.say:active{transform:scale(.92)}
+.w-h{display:flex;align-items:center;gap:6px;justify-content:space-between}.say{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;border-radius:50%;background:var(--sunk);border:1px solid var(--line);font-size:1rem;cursor:pointer;flex:none;user-select:none;-webkit-tap-highlight-color:transparent}.say:active{transform:scale(.92)}
 .rv-words{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;align-items:start}
 .rv-w{display:flex;flex-direction:column;gap:6px;text-align:left;padding:0 0 10px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer;overflow:hidden}
 .rv-w img{width:100%;aspect-ratio:4/3;object-fit:cover}
@@ -551,13 +551,20 @@ table.days tr.next td{background:var(--accent-soft)}
   .parts-list .n{display:none}
   .parts-list .c{margin-left:auto;font-family:var(--f-mono);font-size:.75rem;color:var(--ink-3)}
 }
+.brand-h{display:flex;align-items:center;gap:10px}
+.theme-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:5px 11px;font:600 .8rem var(--f-ui);cursor:pointer;flex:none}
+.theme-btn:hover{border-color:var(--accent);color:var(--ink)}
 </style>
+<script>
+/* Giao diện sáng/tối – mặc định SÁNG (Tân 12/11), lựa chọn lưu trên máy */
+(function(){ let t = "light"; try { t = localStorage.getItem("theme") || "light"; } catch {} document.documentElement.dataset.theme = t; })();
+</script>
 
 <div class="wrap">
   <header class="top">
     <div class="brand">
       <div class="label">B1 → C1 · General English · Comprehensible Input · Tutor: Claude</div>
-      <h1>Tân's English Class</h1>
+      <div class="brand-h"><h1>Tân's English Class</h1><button type="button" id="theme-btn" class="theme-btn" aria-label="Switch light / dark mode"></button></div>
     </div>
     <div class="stats">
       <div class="stat"><span class="label">Week</span><b id="s-week">1</b></div>
@@ -593,6 +600,12 @@ table.days tr.next td{background:var(--accent-soft)}
   </div>
 </div>
 
+<script>
+(function(){ const b = document.getElementById("theme-btn"); if (!b) return;
+  const show = () => { const d = document.documentElement.dataset.theme === "dark"; b.textContent = d ? "☀️ Light" : "🌙 Dark"; b.title = d ? "Switch to light mode" : "Switch to dark mode"; };
+  b.addEventListener("click", () => { const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark"; document.documentElement.dataset.theme = t; try { localStorage.setItem("theme", t); } catch {} show(); });
+  show(); })();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
 <script>
