@@ -11,3 +11,14 @@ Cùng đề, cùng file đầu vào (`scratchpad/bench`), gia sư (Opus) chấm 
 | Chi phí ước tính (giá API) | ~1,5 cent | ~25 cent | Gói Max: trừ hạn mức, tỷ lệ tương tự |
 
 **Kết luận:** Haiku = vẽ SVG + việc máy móc. Sonnet = nội dung cần đúng nghĩa khi giao ra ngoài (Opus xem lại). Opus = soạn bài, chấm, lên kế hoạch.
+
+## Vẽ SVG: Haiku vs Sonnet (12/11/2026, cùng 8 hình, cùng đề)
+
+| | Haiku | Sonnet |
+|---|---|---|
+| Thời gian | 102 s | 207 s |
+| Token (cả phiên agent) | ~95k | ~99k |
+| Chi phí ước tính (giá API) | ~1,4 cent (≈0,2 cent/hình) | ~27 cent (≈3,4 cent/hình) |
+| Chất lượng (gia sư chấm từng cặp) | thắng 1/8 (*unless* tương phản ngày/đêm rõ hơn) | **thắng 6/8**, hoà 1 (*tram*): bố cục tự nhiên, nhiều chi tiết, đúng cảnh hơn (*overwhelmed*, *spread yourself too thin*, ảnh bìa Manchester, Mr Patel bê TV) |
+
+Cả hai đều đúng nghĩa ở mức dùng được; *move the goalposts* cả hai còn yếu.
