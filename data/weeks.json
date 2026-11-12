@@ -95,14 +95,29 @@
     },
     {
      "w": "be used to + V-ing",
-     "img": "data/img/w1/w-used.webp",
+     "img": "data/img/w1/w-used.svg",
      "def": "something is normal for you now",
      "ex": "I'm not used to sleeping in a new place.",
      "vi": "đã quen với",
      "audio": "data/audio/w1/words/w-used.mp3",
      "ipa": "/bi juːst tə/",
      "ipa_us": "/bi juːst tə/",
-     "type": "chunk"
+     "type": "chunk",
+     "strip": {
+      "panels": [
+       [
+        "🌧️😣",
+        "Week 1: the rain is hard"
+       ],
+       [
+        "🌧️😊",
+        "Week 4: it's normal"
+       ]
+      ],
+      "link": "I'm used to the rain",
+      "note": "normal now",
+      "sym": "→"
+     }
     },
     {
      "w": "show sb around",
