@@ -11,20 +11,7 @@
    "audio": "data/audio/w1/words/x-work-as-a.mp3",
    "ipa": "/wɜːk əz ə/",
    "ipa_us": "/wɜːk əz ə/",
-   "strip": {
-    "panels": [
-     [
-      "👨‍💻",
-      "Nam's job:"
-     ],
-     [
-      "🎨",
-      "designer"
-     ]
-    ],
-    "link": "He works as a designer",
-    "note": ""
-   }
+   "scene": "Nam as a designer at a big screen with colour swatches and drawing tablet."
   },
   {
    "w": "be responsible for …",
@@ -37,20 +24,7 @@
    "audio": "data/audio/w1/words/x-be-responsible-for.mp3",
    "ipa": "/bi rɪˈspɒnsɪbəl fə/",
    "ipa_us": "/bi rᵻˈspɑːnsᵻbəl fər/",
-   "strip": {
-    "panels": [
-     [
-      "👩‍💼",
-      "Claire"
-     ],
-     [
-      "👥👥",
-      "the whole team"
-     ]
-    ],
-    "link": "responsible for the team",
-    "note": ""
-   }
+   "scene": "Claire standing in front of her small team (Nam, Tom, two others) with a clipboard, leading them."
   },
   {
    "w": "work on …",
@@ -63,21 +37,7 @@
    "audio": "data/audio/w1/words/x-work-on.mp3",
    "ipa": "/wɜːk ɒn/",
    "ipa_us": "/wɜːk ɔn/",
-   "strip": {
-    "panels": [
-     [
-      "👨‍💻",
-      "Tom at his laptop"
-     ],
-     [
-      "🌐🛠️",
-      "a new website"
-     ]
-    ],
-    "link": "He's working on a website",
-    "note": "",
-    "sym": "→"
-   }
+   "scene": "Tom concentrating on building a website on his laptop, sticky notes around the screen."
   },
   {
    "w": "it takes + time",
@@ -90,20 +50,7 @@
    "audio": "data/audio/w1/words/x-it-takes--time.mp3",
    "ipa": "/ɪt teɪks taɪm/",
    "ipa_us": "/ɪt teɪks taɪm/",
-   "strip": {
-    "panels": [
-     [
-      "🏠🚶",
-      "walk to work"
-     ],
-     [
-      "⏱️",
-      "20 minutes"
-     ]
-    ],
-    "link": "It takes 20 minutes",
-    "note": ""
-   }
+   "scene": "Nam walking from a small house to an office building along a path, with a big clock above the path showing 20 minutes as a coloured arc."
   },
   {
    "w": "spend time (doing)",
@@ -116,20 +63,7 @@
    "audio": "data/audio/w1/words/x-spend-time-doing.mp3",
    "ipa": "/spend taɪm/",
    "ipa_us": "/spend taɪm/",
-   "strip": {
-    "panels": [
-     [
-      "💻🔑",
-      "logging in"
-     ],
-     [
-      "⏳",
-      "one hour"
-     ]
-    ],
-    "link": "He spent an hour logging in",
-    "note": ""
-   }
+   "scene": "Nam at a laptop trying to log in (padlock on screen), an hourglass beside him almost empty – an hour spent."
   },
   {
    "w": "every day vs everyday",
@@ -142,20 +76,7 @@
    "audio": "data/audio/w1/words/x-every-day-vs-everyday.mp3",
    "ipa": "/ˈevrɪ deɪ ˌviːˈes ˈevrɪˌdeɪ/",
    "ipa_us": "/ˈevri deɪ ˌviːˈes ˈevrɪˌdeɪ/",
-   "strip": {
-    "panels": [
-     [
-      "📅✅✅",
-      "every day = each day"
-     ],
-     [
-      "👕☕",
-      "everyday = normal"
-     ]
-    ],
-    "link": "every day ≠ everyday",
-    "note": ""
-   }
+   "scene": "Left: a wall calendar with every day ticked and a coffee cup; right: simple everyday clothes (t-shirt, jeans) on a chair – each day vs normal things."
   },
   {
    "w": "although",
@@ -168,20 +89,7 @@
    "audio": "data/audio/w1/words/x-although.mp3",
    "ipa": "/ɔːlˈðəʊ/",
    "ipa_us": "/ɔːlˈðoʊ/",
-   "strip": {
-    "panels": [
-     [
-      "😫",
-      "He was tired."
-     ],
-     [
-      "📦💪",
-      "He helped anyway."
-     ]
-    ],
-    "link": "although",
-    "note": "surprise"
-   }
+   "scene": "Nam looks very tired (droopy eyes, small zz shapes) BUT still carries a big box up the stairs for Margaret – show tired + helping in one scene."
   },
   {
    "w": "even though",
@@ -194,20 +102,7 @@
    "audio": "data/audio/w1/words/x-even-though.mp3",
    "ipa": "/ˈiːvən ðəʊ/",
    "ipa_us": "/ˈiːvən ðoʊ/",
-   "strip": {
-    "panels": [
-     [
-      "🌧️",
-      "It was raining hard."
-     ],
-     [
-      "🚶😊",
-      "They went for a walk."
-     ]
-    ],
-    "link": "even though",
-    "note": "stronger"
-   }
+   "scene": "Heavy rain falling, yet two friends walk happily together under umbrellas, smiling – rain + still happy."
   },
   {
    "w": "however",
@@ -220,20 +115,7 @@
    "audio": "data/audio/w1/words/x-however.mp3",
    "ipa": "/haʊˈevə/",
    "ipa_us": "/haʊˈevər/",
-   "strip": {
-    "panels": [
-     [
-      "🤖👍",
-      "It sounded right."
-     ],
-     [
-      "❌",
-      "It was wrong."
-     ]
-    ],
-    "link": "However,",
-    "note": "new sentence"
-   }
+   "scene": "Left: a cute robot proudly pointing at a board with an answer; right: the board shows a big red X – it sounded right, but it was wrong."
   },
   {
    "w": "yet",
@@ -246,20 +128,7 @@
    "audio": "data/audio/w1/words/x-yet.mp3",
    "ipa": "/jet/",
    "ipa_us": "/jet/",
-   "strip": {
-    "panels": [
-     [
-      "☕🏠",
-      "A small café"
-     ],
-     [
-      "👥👥👥",
-      "always full"
-     ]
-    ],
-    "link": "yet",
-    "note": "= but"
-   }
+   "scene": "A tiny café building that is completely full of people inside and a queue outside – small, yet full."
   },
   {
    "w": "rather",
@@ -272,20 +141,7 @@
    "audio": "data/audio/w1/words/x-rather.mp3",
    "ipa": "/ˈrɑːðə/",
    "ipa_us": "/ˈræðər/",
-   "strip": {
-    "panels": [
-     [
-      "💬🚫",
-      "He didn't text."
-     ],
-     [
-      "📞",
-      "He called."
-     ]
-    ],
-    "link": "Rather,",
-    "note": "not A → B"
-   }
+   "scene": "Left: a phone with a chat bubble crossed out; right: Nam talking on the phone, smiling – not texting, calling instead."
   },
   {
    "w": "unless",
@@ -298,20 +154,7 @@
    "audio": "data/audio/w1/words/x-unless.mp3",
    "ipa": "/ʌnˈles/",
    "ipa_us": "/ʌnˈles/",
-   "strip": {
-    "panels": [
-     [
-      "💡😳",
-      "Light on: no sleep"
-     ],
-     [
-      "🌑😴",
-      "Dark: sleep"
-     ]
-    ],
-    "link": "unless",
-    "note": "= if … not"
-   }
+   "scene": "Two panels: left: bedroom with lamp on, Nam awake and annoyed in bed; right: same room dark with moon in window, Nam sleeping peacefully."
   },
   {
    "w": "in other words",
@@ -324,20 +167,7 @@
    "audio": "data/audio/w1/words/x-in-other-words.mp3",
    "ipa": "/ɪn ˈʌðə wɜːdz/",
    "ipa_us": "/ɪn ˈʌðər wɜːdz/",
-   "strip": {
-    "panels": [
-     [
-      "🎯🛞",
-      "a moving target"
-     ],
-     [
-      "🔄🎯",
-      "the goal keeps changing"
-     ]
-    ],
-    "link": "in other words",
-    "note": "same idea"
-   }
+   "scene": "Two panels showing the same idea twice: left: an archery target on wheels rolling away; right: a goal flag that keeps jumping to new places with dotted arrows."
   },
   {
    "w": "seize upon sth",
@@ -350,20 +180,7 @@
    "audio": "data/audio/w1/words/x-seize-upon-sth.mp3",
    "ipa": "/siːz əˈpɒn ˈsʌmθɪŋ/",
    "ipa_us": "/siːz əˈpɑːn ˈsʌmθɪŋ/",
-   "strip": {
-    "panels": [
-     [
-      "📰💡",
-      "a new study"
-     ],
-     [
-      "🎤🏃",
-      "reporters rush to it"
-     ]
-    ],
-    "link": "seized upon the study",
-    "note": ""
-   }
+   "scene": "Reporters with microphones rushing eagerly towards a scientist holding a new report."
   },
   {
    "w": "pack it in",
@@ -376,20 +193,7 @@
    "audio": "data/audio/w1/words/x-pack-it-in.mp3",
    "ipa": "/pæk ɪt ɪn/",
    "ipa_us": "/pæk ɪt ɪn/",
-   "strip": {
-    "panels": [
-     [
-      "🎹😩",
-      "I wanted to stop…"
-     ],
-     [
-      "🎹🙂",
-      "but I didn't."
-     ]
-    ],
-    "link": "I nearly packed it in",
-    "note": "= give up"
-   }
+   "scene": "Two panels: left: a person at a piano, frustrated, about to close the lid; right: the same person still playing, determined."
   },
   {
    "w": "How's it going?",
@@ -402,20 +206,7 @@
    "audio": "data/audio/w1/words/x-how-s-it-going.mp3",
    "ipa": "/haʊz ɪt ˈɡəʊɪŋ/",
    "ipa_us": "/haʊz ɪt ˈɡoʊɪŋ/",
-   "strip": {
-    "panels": [
-     [
-      "👋",
-      "How's it going?"
-     ],
-     [
-      "😊",
-      "Good, thanks!"
-     ]
-    ],
-    "link": "How's it going?",
-    "note": "= how are you"
-   }
+   "scene": "Tom waving hello to Nam in an office corridor, both smiling."
   },
   {
    "w": "So far so good",
@@ -428,20 +219,7 @@
    "audio": "data/audio/w1/words/x-so-far-so-good.mp3",
    "ipa": "/səʊ fɑː səʊ ɡʊd/",
    "ipa_us": "/soʊ fɑːr soʊ ɡʊd/",
-   "strip": {
-    "panels": [
-     [
-      "🏢1️⃣",
-      "first day at work"
-     ],
-     [
-      "👍",
-      "everything OK"
-     ]
-    ],
-    "link": "So far so good",
-    "note": "until now"
-   }
+   "scene": "Nam on his first day at a bright office, giving a thumbs up, with a short path behind him (progress) and the path ahead still long."
   },
   {
    "w": "let me know",
@@ -454,20 +232,7 @@
    "audio": "data/audio/w1/words/x-let-me-know.mp3",
    "ipa": "/let miː nəʊ/",
    "ipa_us": "/let miː noʊ/",
-   "strip": {
-    "panels": [
-     [
-      "❓",
-      "Need anything?"
-     ],
-     [
-      "🗣️👂",
-      "Tell me!"
-     ]
-    ],
-    "link": "Just let me know",
-    "note": ""
-   }
+   "scene": "Tom at the office smiling and pointing to himself with an open hand, Nam asking with a small question-mark shape bubble (no letters)."
   },
   {
    "w": "get the hang of sth",
@@ -480,20 +245,7 @@
    "audio": "data/audio/w1/words/x-get-the-hang-of-sth.mp3",
    "ipa": "/ɡet ðə hæŋ əv ˈsʌmθɪŋ/",
    "ipa_us": "/ɡet ðə hæŋ əv ˈsʌmθɪŋ/",
-   "strip": {
-    "panels": [
-     [
-      "🚲😬",
-      "Day 1: difficult"
-     ],
-     [
-      "🚲😎",
-      "Day 10: easy"
-     ]
-    ],
-    "link": "get the hang of it",
-    "note": "slowly learn"
-   }
+   "scene": "Two panels: left: Nam wobbling nervously on a bicycle; right: Nam riding confidently and smiling."
   },
   {
    "w": "I'd love (sth)",
@@ -506,20 +258,7 @@
    "audio": "data/audio/w1/words/x-i-d-love-sth.mp3",
    "ipa": "/aɪd lʌv/",
    "ipa_us": "/aɪd lʌv/",
-   "strip": {
-    "panels": [
-     [
-      "☕❓",
-      "Another coffee?"
-     ],
-     [
-      "😍",
-      "Yes, I'd love one!"
-     ]
-    ],
-    "link": "I'd love …",
-    "note": "really want"
-   }
+   "scene": "Jess at a café counter offering a cup of coffee, Nam with sparkling happy eyes reaching for it."
   },
   {
    "w": "by the way",
@@ -532,20 +271,7 @@
    "audio": "data/audio/w1/words/x-by-the-way.mp3",
    "ipa": "/baɪ ðə weɪ/",
    "ipa_us": "/baɪ ðə weɪ/",
-   "strip": {
-    "panels": [
-     [
-      "💼💬",
-      "talking about work"
-     ],
-     [
-      "☕❓",
-      "Where's the kitchen?"
-     ]
-    ],
-    "link": "By the way,",
-    "note": "new topic"
-   }
+   "scene": "Claire and Nam talking at an office desk with documents; Nam turns and points to a small kitchen door with a coffee cup sign (no text) – switching to a new small topic."
   },
   {
    "w": "opposite",
@@ -558,21 +284,7 @@
    "audio": "data/audio/w1/words/x-opposite.mp3",
    "ipa": "/ˈɒpəˌzɪt/",
    "ipa_us": "/ˈɑːpəˌzɪt/",
-   "strip": {
-    "panels": [
-     [
-      "🚋",
-      "the tram stop"
-     ],
-     [
-      "⛪",
-      "the church"
-     ]
-    ],
-    "link": "The stop is opposite the church",
-    "note": "facing",
-    "sym": "↔"
-   }
+   "scene": "A street with a tram stop on one side and a church directly across the street on the other side, a dotted line connecting them across the road."
   },
   {
    "w": "next to",
@@ -585,21 +297,7 @@
    "audio": "data/audio/w1/words/x-next-to.mp3",
    "ipa": "/nekst tə/",
    "ipa_us": "/nekst tə/",
-   "strip": {
-    "panels": [
-     [
-      "📱🏪",
-      "phone shop"
-     ],
-     [
-      "🏦",
-      "bank"
-     ]
-    ],
-    "link": "next to = right beside",
-    "note": "",
-    "sym": "|"
-   }
+   "scene": "A phone shop and a bank standing right side by side on a street."
   },
   {
    "w": "turn left / right",
@@ -612,21 +310,7 @@
    "audio": "data/audio/w1/words/x-turn-left--right.mp3",
    "ipa": "/tɜːn left raɪt/",
    "ipa_us": "/tɜːn left raɪt/",
-   "strip": {
-    "panels": [
-     [
-      "☕🚪",
-      "out of the café"
-     ],
-     [
-      "⬅️",
-      "turn left"
-     ]
-    ],
-    "link": "Go out and turn left",
-    "note": "",
-    "sym": "→"
-   }
+   "scene": "Nam coming out of a café door at a street corner, a big curved arrow showing him turning left."
   },
   {
    "w": "go past",
@@ -663,20 +347,7 @@
    "audio": "data/audio/w1/words/x-a-ten-minute-walk.mp3",
    "ipa": "/ə ten ˈmɪnɪt wɔːk/",
    "ipa_us": "/ə ten ˈmɪnɪt wɔːk/",
-   "strip": {
-    "panels": [
-     [
-      "🚶",
-      "walk there"
-     ],
-     [
-      "⏱️",
-      "10 minutes"
-     ]
-    ],
-    "link": "a ten-minute walk",
-    "note": ""
-   }
+   "scene": "Nam walking along a street with a dotted path to a building, a small stopwatch icon showing a 10-minute sector."
   },
   {
    "w": "You can't miss it.",
@@ -689,20 +360,7 @@
    "audio": "data/audio/w1/words/x-you-can-t-miss-it.mp3",
    "ipa": "/jə kɑːnt mɪs ɪt/",
    "ipa_us": "/jə kænt mɪs ɪt/",
-   "strip": {
-    "panels": [
-     [
-      "⛪",
-      "a huge church"
-     ],
-     [
-      "👀✅",
-      "very easy to see"
-     ]
-    ],
-    "link": "You can't miss it.",
-    "note": ""
-   }
+   "scene": "A huge church at the end of a small street, very easy to see, Nam looking at it with a surprised smile."
   },
   {
    "w": "Got it.",
@@ -715,20 +373,7 @@
    "audio": "data/audio/w1/words/x-got-it.mp3",
    "ipa": "/ɡɒt ɪt/",
    "ipa_us": "/ɡɑːt ɪt/",
-   "strip": {
-    "panels": [
-     [
-      "⬅️⛪",
-      "Turn left at the church."
-     ],
-     [
-      "👌",
-      "Got it."
-     ]
-    ],
-    "link": "Got it.",
-    "note": "I understand"
-   }
+   "scene": "Jess pointing left towards a church on a street map gesture, Nam nodding with an OK hand sign."
   },
   {
    "w": "move in",
@@ -765,20 +410,7 @@
    "audio": "data/audio/w1/words/x-i-d-better-do.mp3",
    "ipa": "/aɪd ˈbetə/",
    "ipa_us": "/aɪd ˈbetər/",
-   "strip": {
-    "panels": [
-     [
-      "⌚",
-      "It's late."
-     ],
-     [
-      "🏃🚪",
-      "I'd better go."
-     ]
-    ],
-    "link": "I'd better + verb",
-    "note": "should"
-   }
+   "scene": "Late evening, a wall clock at 11, Nam putting on his jacket and hurrying to the door."
   },
   {
    "w": "like watching grass grow",
@@ -839,21 +471,7 @@
    "audio": "data/audio/w1/words/x-on-your-plate.mp3",
    "ipa": "/ɒn jə pleɪt/",
    "ipa_us": "/ɔn jə pleɪt/",
-   "strip": {
-    "panels": [
-     [
-      "🍽️",
-      "your plate"
-     ],
-     [
-      "📋💼📞",
-      "work, calls, tasks"
-     ]
-    ],
-    "link": "a lot on my plate",
-    "note": "= many things to do",
-    "sym": "="
-   }
+   "scene": "A big dinner plate on a table piled with tiny objects: a laptop, papers, a phone, a calendar – too many things to do."
   },
   {
    "w": "overwhelmed",
@@ -878,21 +496,7 @@
    "audio": "data/audio/w1/words/x-spread-yourself-too-thin.mp3",
    "ipa": "/spred jɔːˈself tuː θɪn/",
    "ipa_us": "/spred joːrˈself tuː θɪn/",
-   "strip": {
-    "panels": [
-     [
-      "💼🏃🎭📚",
-      "3 jobs + a play + class"
-     ],
-     [
-      "😵",
-      "nothing goes well"
-     ]
-    ],
-    "link": "spread too thin",
-    "note": "too many things",
-    "sym": "→"
-   }
+   "scene": "A person trying to hold many things at once – juggling a briefcase, books, a theatre mask and a phone – looking stressed."
   },
   {
    "w": "bite off more than you can chew",
@@ -929,21 +533,7 @@
    "audio": "data/audio/w1/words/x-extend-a-deadline.mp3",
    "ipa": "/ekˈstend ə ˈdedlaɪn/",
    "ipa_us": "/ekˈstend ə ˈdedlaɪn/",
-   "strip": {
-    "panels": [
-     [
-      "📅 Fri",
-      "deadline: Friday"
-     ],
-     [
-      "📅 next Fri",
-      "one more week"
-     ]
-    ],
-    "link": "extend the deadline",
-    "note": "more time",
-    "sym": "→"
-   }
+   "scene": "A calendar where the red deadline circle moves one week later along a dotted arrow, a teacher smiling and students relieved."
   },
   {
    "w": "kick off (sth)",
@@ -980,20 +570,7 @@
    "audio": "data/audio/w1/words/x-punt-sth.mp3",
    "ipa": "/pʌnt/",
    "ipa_us": "/pʌnt/",
-   "strip": {
-    "panels": [
-     [
-      "📦😓",
-      "a task I don't want"
-     ],
-     [
-      "➡️🙋",
-      "give it to someone"
-     ]
-    ],
-    "link": "punt it",
-    "note": "or decide later"
-   }
+   "scene": "Tom passing a big box of work papers to a colleague with a relieved face."
   },
   {
    "w": "table it",
@@ -1006,20 +583,7 @@
    "audio": "data/audio/w1/words/x-table-it.mp3",
    "ipa": "/ˈteɪbəl ɪt/",
    "ipa_us": "/ˈteɪbəl ɪt/",
-   "strip": {
-    "panels": [
-     [
-      "🗂️❓",
-      "a hard question"
-     ],
-     [
-      "📅➡️",
-      "talk on Monday"
-     ]
-    ],
-    "link": "Let's table it",
-    "note": "= later"
-   }
+   "scene": "Three colleagues at a meeting table; one puts a folder aside onto a 'later' tray, calendar showing next Monday highlighted."
   },
   {
    "w": "move the goalposts",
@@ -1032,21 +596,7 @@
    "audio": "data/audio/w1/words/x-move-the-goalposts.mp3",
    "ipa": "/muːv ðə ˈɡəʊlpəʊsts/",
    "ipa_us": "/muːv ðə ˈɡoʊlpoʊsts/",
-   "strip": {
-    "panels": [
-     [
-      "🎯 10,000",
-      "the goal: 10,000"
-     ],
-     [
-      "🎯 20,000",
-      "now: 20,000!"
-     ]
-    ],
-    "link": "The boss moved the goalposts",
-    "note": "harder",
-    "sym": "→"
-   }
+   "scene": "A football pitch: a player about to kick while two people carry the goalposts further away."
   },
   {
    "w": "a moving target",
@@ -1059,21 +609,7 @@
    "audio": "data/audio/w1/words/x-a-moving-target.mp3",
    "ipa": "/ə ˈmuːvɪŋ ˈtɑːɡɪt/",
    "ipa_us": "/ə ˈmuːvɪŋ ˈtɑːrɡɪt/",
-   "strip": {
-    "panels": [
-     [
-      "🎯",
-      "the goal…"
-     ],
-     [
-      "🎯💨",
-      "…keeps moving"
-     ]
-    ],
-    "link": "a moving target",
-    "note": "always changing",
-    "sym": "→"
-   }
+   "scene": "An archer aiming at a target that is on wheels and rolling away, with motion lines."
   },
   {
    "w": "the rest of the …",
@@ -1086,20 +622,7 @@
    "audio": "data/audio/w1/words/x-the-rest-of-the.mp3",
    "ipa": "/ðə rest əv ðə/",
    "ipa_us": "/ðə rest əv ðə/",
-   "strip": {
-    "panels": [
-     [
-      "📖",
-      "I read half."
-     ],
-     [
-      "🌙📖",
-      "the rest tonight"
-     ]
-    ],
-    "link": "the rest of the story",
-    "note": ""
-   }
+   "scene": "A book half read with a bookmark, on a bed at night with the moon in the window – reading the rest tonight."
   }
  ]
 }

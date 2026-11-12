@@ -103,21 +103,7 @@
      "ipa": "/bi juːst tə/",
      "ipa_us": "/bi juːst tə/",
      "type": "chunk",
-     "strip": {
-      "panels": [
-       [
-        "🌧️😣",
-        "Week 1: the rain is hard"
-       ],
-       [
-        "🌧️😊",
-        "Week 4: it's normal"
-       ]
-      ],
-      "link": "I'm used to the rain",
-      "note": "normal now",
-      "sym": "→"
-     }
+     "scene": "Two panels: left: Nam in the rain looking unhappy and cold (week 1); right: Nam walking in the rain relaxed and smiling (week 4)."
     },
     {
      "w": "show sb around",

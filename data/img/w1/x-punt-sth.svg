@@ -1,1 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">📦😓</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">a task I don&#x27;t</text><text x="88.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">want</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">➡️🙋</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">give it to</text><text x="296.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">someone</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">punt it · or decide later</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF3F8"/><stop offset="1" stop-color="#F8FBFD"/></linearGradient></defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<rect y="240" width="384" height="48" fill="#DCE6EF"/>
+<rect x="170" y="140" width="60" height="56" rx="4" fill="#D69E5E" stroke="#B7791F" stroke-width="2"/>
+<rect x="196" y="140" width="8" height="56" fill="#E9B872"/>
+<rect x="180" y="122" width="18" height="22" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="2"/>
+<rect x="204" y="118" width="16" height="26" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="2"/>
+<g transform="translate(120,240)">
+<ellipse cy="2" rx="24" ry="5" fill="#2D3748" opacity=".12"/>
+<rect x="-13" y="-62" width="11" height="60" rx="5" fill="#4A5568"/>
+<rect x="2" y="-62" width="11" height="60" rx="5" fill="#4A5568"/>
+<rect x="-20" y="-124" width="40" height="66" rx="16" fill="#F39C12"/>
+<path d="M-18 -116V-70" stroke="#F39C12" stroke-width="10" stroke-linecap="round"/>
+<circle cy="-142" r="20" fill="#F1C7A5"/>
+<g fill="#6D4C41"><circle cx="-14" cy="-152" r="8"/><circle cx="-5" cy="-164" r="8"/><circle cx="6" cy="-164" r="8"/><circle cx="15" cy="-152" r="8"/><circle cx="0" cy="-160" r="7"/></g>
+<path d="M-11 -143Q-7 -139 -3 -143M3 -143Q7 -139 11 -143" stroke="#2D3748" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M-8 -133Q0 -124 8 -133Z" fill="#8B3A3A"/>
+<path d="M22 -160Q26 -152 22 -148Q18 -152 22 -160Z" fill="#7FB3D5"/>
+<path d="M18 -116L50 -76" stroke="#F39C12" stroke-width="10" stroke-linecap="round"/>
+<circle cx="50" cy="-76" r="6" fill="#F1C7A5"/>
+</g>
+<g transform="translate(280,240)">
+<ellipse cy="2" rx="28" ry="5" fill="#2D3748" opacity=".12"/>
+<path d="M-18 -126Q0 -132 18 -126L30 -4H-30Z" fill="#B39DDB"/>
+<path d="M-18 -116L-48 -76" stroke="#B39DDB" stroke-width="10" stroke-linecap="round"/>
+<circle cx="-48" cy="-76" r="6" fill="#F1C7A5"/>
+<path d="M18 -116V-72" stroke="#B39DDB" stroke-width="10" stroke-linecap="round"/>
+<circle cy="-142" r="20" fill="#F1C7A5"/>
+<circle cy="-166" r="9" fill="#B0B7C3"/>
+<path d="M-21 -140Q-23 -166 0 -164Q23 -166 21 -140Q12 -152 0 -152Q-12 -152 -21 -140Z" fill="#B0B7C3"/>
+<circle cx="-8" cy="-142" r="5" fill="none" stroke="#4A5568" stroke-width="1.5"/>
+<circle cx="8" cy="-142" r="5" fill="none" stroke="#4A5568" stroke-width="1.5"/>
+<path d="M-6 -133Q0 -128 6 -133" stroke="#2D3748" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</g>
+</svg>

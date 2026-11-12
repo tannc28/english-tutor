@@ -78,6 +78,11 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 - Soạn bài `w<N>-voa-<k>` (kind `Listening`, `extra: true`, ~15'): ① Before you listen (cụm từ + IPA + dự đoán) → ② Listen (part có `audio` = MP3 VOA, `keep_audio: true`, `listen` = các đoạn lời để hiện transcript) với 4–6 câu hỏi + % hiểu + từ còn khó. Đáp án vào `keys/`. Ghi `credit` (chữ, **không link**).
 - Lịch: `weeks[].days[ngày].extra = "<id>"` → hiện ở Today (21:40 / 14:30) và dải 7 ngày (🎧). Chấm như bài thường. Không dùng link podcast bên ngoài nữa.
 
+## Minh hoạ (Tân chọn 12/11: kết hợp)
+- **Cụ thể** (cảnh truyện, ảnh bìa, đồ vật, nơi chốn, hành động thấy được): `tools/illustrate.py` – **SDXL-Turbo** trên CPU (bfloat16, ~7 giây/ảnh, không tốn token). Prompt mô tả cảnh + nhân vật (`CAST`).
+- **Trừu tượng** (từ nối, idiom, cụm ngữ pháp, nghĩa chỉ hiểu qua ví dụ): **Haiku vẽ SVG** theo câu ví dụ – ghi `scene` (mô tả cảnh thể hiện đúng nghĩa, có thể 2 khung trước/sau) vào mục từ, chia việc cho 2–3 subagent `model: "haiku"` với cùng hướng dẫn phong cách (flat như unDraw, nền pastel, dàn nhân vật Nam/Margaret/Jess/Claire/Tom, không chữ, không emoji, viewBox 384×288). Rẻ (vài cent/hình).
+- **Không dùng** emoji ghép hình (`tools/strip.py` – bỏ), không dùng ảnh ngẫu nhiên không rõ nghĩa. Công cụ tạo ảnh Figma tốn credit của Tân – chỉ dùng khi Tân đồng ý.
+
 ## Tab 🧠 Review (ôn tập & tra cứu)
 - Ô tìm kiếm chung; mục **Words & chunks** (thẻ có hình, chạm để xem nghĩa + nghe), **Grammar & skills** (mở thẳng phần Learn), **My mistakes** (❌→✅→💡), **Story** (đọc lại các tập), **What's next** (tuần tới, mục checklist còn lại, từ chưa biết trong word check).
 - **🃏 Practise**: thẻ lật (hình → đoán → lật xem nghĩa + nghe) → *Again* / *Got it*; ôn lại sau 1 → 3 → 7 → 14 → 30 ngày. Lưu ở `drafts/selfcheck.srs` (gia sư đọc khi lên kế hoạch tuần: từ hay "Again" → đưa vào bài).

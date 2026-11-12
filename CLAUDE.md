@@ -38,7 +38,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Việc **máy móc** – vẽ ảnh, tạo audio, kiểm tra link, chép file – có thể giao subagent model nhẹ (sonnet/haiku) để nhanh và tiết kiệm.
 
 ## Công cụ có sẵn
-- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · `tools/illustrate.py` (SD-Turbo vẽ minh hoạ, ~10 giây/ảnh) · SVG tự vẽ cho bản đồ/sơ đồ · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`, torch CPU + diffusers (xem đầu `tools/illustrate.py`).
+- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · minh hoạ kết hợp: `tools/illustrate.py` (SDXL-Turbo, ~7 giây/ảnh) cho hình cụ thể + **Haiku vẽ SVG theo câu ví dụ** cho từ trừu tượng (web/README "Minh hoạ"); không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`, torch CPU + diffusers (xem đầu `tools/illustrate.py`).
 
 ## Quyền với repo (Tân cho phép 11/11/2026)
 - Claude có **toàn quyền** trên repo này: được commit và **push thẳng lên `main`**, không cần tạo nhánh riêng hay PR.
