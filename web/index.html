@@ -62,7 +62,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15p
 
 
 /* Layout */
-.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;margin-top:20px;align-items:start}
+.layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:24px;margin-top:20px;align-items:start}
 body.shelf-off .layout{grid-template-columns:minmax(0,1fr)}
 body.shelf-off .shelf{display:none}
 body.focus .top,body.focus .track,body.focus .tabs,body.focus .shelf{display:none}
@@ -565,13 +565,17 @@ table.days tr.next td{background:var(--accent-soft)}
 .fb-full{display:none!important}
 .mic-sum{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}.mic-sum .bar{flex-basis:100%}
 .mic-g{display:flex;flex-direction:column;gap:6px;margin-top:6px}
-.td-row.mic-r{grid-template-columns:40px minmax(0,1fr) auto}
+.td-row.mic-r{grid-template-columns:30px minmax(0,1fr) auto 22px;padding:8px 12px;gap:10px;min-height:0}
+.td-row.mic-r .td-main b{font-weight:600;font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.mic-m{font-size:.75rem;color:var(--ink-3);font-family:var(--f-mono);white-space:nowrap}
+.td-row.mic-r .mic-ic{width:30px!important;height:30px!important;font-size:1rem;background:none}
+.mic-pane{gap:4px!important}
 .mic-tabs{display:flex;gap:6px;margin:10px 0 2px;border-bottom:1px solid var(--line)}
 .mic-tab{flex:1;border:0;background:none;font:600 .95rem var(--f-ui);color:var(--ink-2);padding:9px 8px;border-bottom:3px solid transparent;margin-bottom:-1px;cursor:pointer}
 .mic-tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
 .mic-pane{margin-top:8px}
 .mic-ic{width:40px!important;height:40px!important;font-size:1.25rem}
-@media (max-width:520px){.td-row.mic-r{grid-template-columns:40px minmax(0,1fr) auto}.td-row.mic-r .td-go{grid-column:auto}}
+@media (max-width:520px){.td-row.mic-r{grid-template-columns:26px minmax(0,1fr) auto 18px}.td-row.mic-r .td-go{grid-column:auto}.td-row.mic-r .td-main b{white-space:normal}}
 .brand-h{display:flex;align-items:center;gap:10px}
 .theme-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:5px 11px;font:600 .8rem var(--f-ui);cursor:pointer;flex:none}
 .theme-btn:hover{border-color:var(--accent);color:var(--ink)}
@@ -596,6 +600,50 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
   .toc-pop{display:none!important}
   .tb-caret{display:none}
 }
+
+/* ---- Gọn hơn (Tân 12/11): dashboard tuần 2 cột, danh sách bài 1 dòng/bài, header nhỏ ---- */
+.stat{padding:4px 10px;min-width:64px}
+.track{margin-top:10px;padding:8px 12px;gap:4px}
+.segs.cefr .seg{height:18px;font-size:.66rem}
+.hero-img{max-height:200px}
+.wk-mini{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px;align-items:center}
+.wk-thumb{width:120px;height:90px;object-fit:cover;border-radius:10px}
+.wk-mini h2{margin:2px 0 2px;font-size:1.25rem}
+.wk-mb{display:flex;flex-direction:column;gap:4px;min-width:0}
+.wk-why{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.88rem;color:var(--ink-2)}.wk-why p{margin:0}
+.wk-mini .wk-prog{margin-top:2px}
+.dash{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;align-items:start;margin-top:16px}
+.dash-main{min-width:0;display:flex;flex-direction:column;gap:16px}
+.dash-side{display:flex;flex-direction:column;gap:12px;min-width:0}
+.dash .card.sec{margin:0}
+.dsec>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.dsec>summary::-webkit-details-marker{display:none}
+.dsec>summary::after{content:"▾";color:var(--ink-3);font-size:.8rem}
+.dsec[open]>summary{margin-bottom:8px}.dsec[open]>summary::after{content:"▴"}
+.dash-side .ww{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.dash-side .wk-goals{margin:0;padding-left:18px;font-size:.9rem}
+@media (min-width:981px){
+  .dash-side .ws{grid-template-columns:1fr;gap:3px}
+  .dash-side .ws-d{flex-direction:row;align-items:center;min-height:0;padding:6px 10px;gap:6px;flex-wrap:wrap}
+  .dash-side .ws-n{min-width:58px}
+  .dash-side .card.sec>.note{display:none}
+}
+@media (max-width:980px){.dash{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.wk-mini{grid-template-columns:72px minmax(0,1fr);gap:12px;padding:12px}.wk-thumb{width:72px;height:72px}.wk-mini h2{font-size:1.1rem}}
+#list{gap:1px}
+.item.lrow{display:grid;grid-template-columns:22px minmax(0,1fr) auto 16px;gap:8px;align-items:center;padding:7px 10px;border:0;border-radius:8px;background:none}
+.item.lrow::before{display:none}
+.item.lrow:hover{background:var(--sunk);border:0}
+.item.lrow[aria-current="true"]{background:var(--accent-soft);box-shadow:none}
+.lr-ic{font-size:.95rem;text-align:center}
+.lr-t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.88rem;font-weight:500}
+.item.lrow.graded .lr-t{color:var(--ink-2)}
+.lr-m{font-size:.72rem;color:var(--ink-3);font-family:var(--f-mono)}
+.lr-st{font-size:.85rem;color:var(--ink-3);text-align:center}.lr-st.ok{color:var(--ok);font-weight:700}.lr-st.sub{color:var(--accent)}
+#list .wk-h{margin:10px 4px 2px;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+@media (max-width:880px){#list{flex-direction:column;overflow:auto;max-height:45vh}#list .item.lrow{min-width:0}}
+body.list-mode #list{max-height:none}
+body.list-mode #list .item.lrow{padding:11px 10px}
 </style>
 <script>
 /* Giao diện sáng/tối – mặc định SÁNG (Tân 12/11), lựa chọn lưu trên máy */
@@ -735,13 +783,10 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
       const st = statusOf(l);
       const key = (planOf[l.id]?.ds) || ("w"+l.week);
       const head = key !== lastW ? (lastW = key, `<div class="wk-h">${planOf[l.id] ? `Week ${esc(l.week)} · ${esc(new Date(planOf[l.id].ds+"T12:00:00").toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"short"}))}` : `Week ${esc(l.week)}`}</div>`) : "";
-      return head + `<button class="item has-thumb t-${esc(l.type)}" data-id="${esc(l.id)}" aria-current="${current===l.id}">
-        ${l.cover ? `<img class="it-thumb" src="${esc(l.cover)}" alt="" loading="lazy">` : `<span class="it-thumb it-ph">${esc(KIND_ICON[l.kind]||"📘")}</span>`}
-        <span class="it-body">
-        <span class="row"><span class="kind">${esc(dayLabel(l))}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
-        <span class="t">${esc(l.title || "Lesson")}</span>
-        <span class="note">${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")}${l.minutes?` · ~${esc(l.minutes)} min`:""}${l.date&&st==="graded"?` · ${esc(fmtDate(l.date))}`:""}</span>
-        </span>
+      const ic = l.kind === "Reading" ? "📖" : l.kind === "Listening" ? "🎧" : (KIND_ICON[l.kind]||"📘");
+      const mark = st === "graded" ? `<span class="lr-st ok" title="Graded">✓</span>` : st === "submitted" ? `<span class="lr-st sub" title="Submitted">◐</span>` : `<span class="lr-st" title="Not started">○</span>`;
+      return head + `<button class="item lrow t-${esc(l.type)} ${st}" data-id="${esc(l.id)}" aria-current="${current===l.id}" title="${esc(l.title||"")}">
+        <span class="lr-ic">${ic}</span><span class="lr-t">${esc(l.title || "Lesson")}</span><span class="lr-m">${l.minutes?`${esc(l.minutes)}′`:""}</span>${mark}
       </button>`;
     }).join("");
     el.querySelectorAll(".item").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.id; }));
@@ -1519,7 +1564,7 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
     const sk = l => l.kind === "Reading" ? "📖" : l.kind === "Listening" ? "🎧" : (KIND_ICON[l.kind]||"📘");
     const when = l => ({morning:"🌅", evening:"🌙", afternoon:"🌤", weekend:"☀️"})[l.slot] || "";
     const row = l => { const st = statusOf(l); return `<a class="td-row mic-r ${DONE(st)?"done":""}" href="#${esc(l.id)}"><span class="td-ph mic-ic">${sk(l)}</span>
-      <span class="td-main"><b>${esc(l.title||"")}</b><span class="note">~${esc(l.minutes||"?")} min${when(l)?` · ${when(l)} ${esc(l.slot)}`:""}</span></span><span class="td-go">${DONE(st)?"✅":"Start ▶"}</span></a>`; };
+      <span class="td-main"><b>${esc(l.title||"")}</b></span><span class="mic-m">${when(l)} ${esc(l.minutes||"?")}′</span><span class="td-go">${DONE(st)?"✅":"▶"}</span></a>`; };
     return `<div class="mic">
       <div class="mic-sum"><b>${done.length}/${own.length} done</b><span class="note">~${mins(done)} / ${mins(own)} min today · 🌅 morning ${tm.lesson[0]} · 🌙 evening ${tm.lesson[1]}</span><div class="bar"><i style="width:${own.length?Math.round(done.length/own.length*100):0}%"></i></div></div>
       ${carry.length ? `<div class="mic-g"><span class="label">↪ Still open from before (no rush)</span>${carry.map(row).join("")}</div>` : ""}
@@ -1588,33 +1633,34 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
     const mins = ls.filter(l => statusOf(l)!=="open").reduce((t,l) => t + (Number(l.minutesActual)||0) + (Number(l.extraMinutes)||0), 0);
     const pctDone = ls.length ? Math.round(done/ls.length*100) : 0;
     const others = weeks.filter(x => x.no !== w.no);
+    const cur = todayStr() >= w.start && todayStr() <= w.end;
     v.innerHTML = `
-      <section class="card wk-hero">
-        ${w.cover?`<img class="wk-cover" src="${esc(w.cover)}" alt="">`:""}
-        <div class="wk-body">
+      <section class="card wk-mini">
+        ${w.cover?`<img class="wk-thumb" src="${esc(w.cover)}" alt="">`:""}
+        <div class="wk-mb">
           <span class="label">Week ${esc(w.no)} · ${esc(fmtDate(w.start))} → ${esc(fmtDate(w.end))}${w.status==="planned"?" · coming soon":""}</span>
           <h2>${esc(w.theme||"")}</h2>
-          ${w.why_md?`<div class="md">${md(w.why_md)}</div>`:""}
-          ${ls.length?`<div class="wk-prog"><div class="bar"><i style="width:${pctDone}%"></i></div><span class="note mono">${done}/${ls.length} lessons${mins?` · ${Math.round(mins/6)/10} h logged`:""}</span></div>`:""}
+          ${w.why_md?`<div class="md wk-why">${md(w.why_md)}</div>`:""}
+          ${ls.length?`<div class="wk-prog"><div class="bar"><i style="width:${pctDone}%"></i></div><span class="note mono">${done}/${ls.length} lessons${mins?` · ${Math.round(mins/6)/10} h`:""}</span></div>`:""}
           ${w.review_md?`<div class="md wk-review"><b>Week review:</b> ${md(w.review_md)}</div>`:""}
-          ${next && !(todayStr() >= w.start && todayStr() <= w.end && w.days)?`<a class="primary wk-next" href="#${esc(next.id)}">▶ Continue: Lesson ${esc(next.order)} – ${esc(next.title)}</a>`:(ls.length && done===ls.length?`<p class="note">✅ All lessons done – great week! Extra lessons may appear after grading.</p>`:"")}
         </div>
       </section>
-      ${w.days ? weekStrip(w) : ""}
-      ${w.days && (daySel || (todayStr() >= w.start && todayStr() <= w.end)) ? dayPanel(w, daySel && daySel >= w.start && daySel <= w.end ? daySel : todayStr()) : ""}
-      ${(w.goals||[]).length?`<section class="card sec"><span class="label">By the end of this week you can…</span><ul class="wk-goals">${w.goals.map(g=>`<li>${inline(g)}</li>`).join("")}</ul>
-        ${(w.targets||[]).length?`<div class="wk-tg"><span class="note">Checklist items this week moves forward (🎯 Levels):</span><div id="wk-tg-list" data-ids="${esc(w.targets.join(","))}"></div></div>`:""}${w.how_md?`<div class="md note">${md(w.how_md)}</div>`:""}</section>`:""}
-      ${ls.length?`<section class="card sec"><span class="label">All lessons this week – your path</span>
-        <div class="wk-grid">${ls.map(l => { const st = statusOf(l); return `<a class="wk-les ${st}" href="#${esc(l.id)}">
-          ${l.cover?`<img src="${esc(l.cover)}" alt="" loading="lazy">`:`<div class="wk-ph">${esc(KIND_ICON[l.kind]||"📘")}</div>`}
-          <div class="wk-lb"><span class="row"><span class="note mono">Lesson ${esc(l.order)} · ${esc(KIND_ICON[l.kind]||"")} ${esc(l.kind||"")}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
-          <b>${esc(l.title||"")}</b><span class="note">~${esc(l.minutes||"?")} min${weekPlan(w).plannedDay[l.id]?` · planned ${esc(fmtDate(weekPlan(w).plannedDay[l.id]))}`:""}</span></div></a>`; }).join("")}</div></section>`:""}
-      ${(w.words||[]).length?`<section class="card sec"><span class="label">Word wall – tap a card</span>
+      <div class="dash">
+        <div class="dash-main">
+          ${w.days && (daySel || cur) ? dayPanel(w, daySel && daySel >= w.start && daySel <= w.end ? daySel : todayStr()) : (next ? `<section class="card sec"><a class="primary wk-next" href="#${esc(next.id)}">▶ Continue: ${esc(next.title)}</a></section>` : "")}
+        </div>
+        <aside class="dash-side">
+          ${w.days ? weekStrip(w) : ""}
+          ${(w.goals||[]).length?`<details class="card sec dsec"><summary><span class="label">🎯 This week's goals (${w.goals.length})</span></summary><ul class="wk-goals">${w.goals.map(g=>`<li>${inline(g)}</li>`).join("")}</ul>
+            ${(w.targets||[]).length?`<div class="wk-tg"><span class="note">Checklist items (🎯 Levels):</span><div id="wk-tg-list" data-ids="${esc(w.targets.join(","))}"></div></div>`:""}</details>`:""}
+          ${(w.words||[]).length?`<details class="card sec dsec" ${store.get("wwOpen")?"open":""} id="ww-d"><summary><span class="label">🧱 Word wall (${w.words.length}) – tap a card</span></summary>
         <div class="ww">${w.words.map((x,i)=>`<button type="button" class="wcard" data-i="${i}">
           ${x.img?`<img src="${esc(x.img)}" alt="" loading="lazy">`:""}
           <span class="w-h"><b>${esc(x.w)}</b>${sayBtn(x.audio)}</span>${ipaHtml(x, "wipa")}
           <span class="wback">${inline(x.def||"")}${x.ex?`<i>“${esc(x.ex)}”</i>`:""}${x.vi?`<span class="note">🇻🇳 ${esc(x.vi)}</span>`:""}</span>
-        </button>`).join("")}</div></section>`:""}
+        </button>`).join("")}</div></details>`:""}
+        </aside>
+      </div>
       ${(w.listen||[]).length?`<section class="card sec"><span class="label">Free listening this week – same theme</span>
         <div class="plan-listen">${w.listen.map(it=>`<div class="pli">
           <div class="pli-h"><span class="note mono">${esc(it.source||"")}${it.minutes?" · "+esc(it.minutes)+" min":""}</span>${it.level?`<span class="pill">${esc(it.level)}</span>`:""}</div>
@@ -1627,6 +1673,7 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
       const x = w.words[Number(c.dataset.i)];
       if (x?.audio && c.classList.contains("flip")) playWord(x.audio);
     }));
+    $("#ww-d")?.addEventListener("toggle", e => store.set("wwOpen", e.target.open));
     const tg = $("#wk-tg-list"); if (tg) loadLevels().then(() => { const all = LV.levels.flatMap(l => l.sections.flatMap(x => x.items)); tg.innerHTML = tg.dataset.ids.split(",").map(id => { const it = all.find(x => x.id === id), t = MA.items[id]?.tutor || "unknown"; return it ? `<a class="wk-tgi" href="#level" title="${esc(ST[t][1])}">${ST[t][0]} ${esc(id)} · ${inline(it.text).replace(/<[^>]+>/g,"").slice(0,60)}</a>` : ""; }).join(""); }).catch(()=>{});
     v.querySelectorAll(".wk-chip").forEach(b => b.addEventListener("click", () => { weekSel = Number(b.dataset.w); daySel = null; renderWeek(); }));
     v.querySelectorAll(".ws-d").forEach(b => b.addEventListener("click", () => { daySel = b.dataset.ds; renderWeek(); }));
