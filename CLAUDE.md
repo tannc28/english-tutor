@@ -32,6 +32,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Không sao chép nguyên văn nội dung có bản quyền vào repo; lưu link + câu hỏi + tóm tắt.
 
 ## Chủ động đề xuất (Tân 12/11: "đọc nhiều sách thế mà chưa đề xuất gì")
+- Đề xuất gồm CẢ cách dạy, sửa/thêm tính năng web, và cách hai bên hiểu nhau hơn (thư tuần, hỏi sở thích, phản hồi) – giáo viên dẫn dắt, không để học sinh phải tự nghĩ ra.
 - Gia sư phải CHỦ ĐỘNG đề xuất cách học tốt hơn dựa trên nghiên cứu (SLA, tâm lý học, sư phạm) + số đo thật của Tân – không chờ Tân nghĩ ra. Mỗi tuần (job CN) ít nhất 1 đề xuất có cơ sở, nói rõ: vì sao, Tân phải làm thêm gì (ưu tiên: không thêm gì), đo hiệu quả bằng gì. Tân đồng ý → ghi `profile.decisions`.
 
 ## Tự soát sổ (Tân 12/11: "đây là cuốn sổ của bạn – phải tự biết cần thêm gì")
