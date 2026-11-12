@@ -11,11 +11,16 @@
    ],
    "answer": 1,
    "why": "get/be used to + V-ing → walking (đã quen với việc…).",
-   "due": "2026-11-13",
-   "step": 0,
-   "history": [],
-   "poll_id": "6316692287233459042",
-   "sent": "2026-11-12"
+   "due": "2026-11-15",
+   "step": 1,
+   "history": [
+    {
+     "date": "2026-11-12",
+     "ok": true
+    }
+   ],
+   "sent": "2026-11-12",
+   "answered_poll": "6316692287233459042"
   },
   {
    "id": "2026-11-11-main-q1",
@@ -28,11 +33,16 @@
    ],
    "answer": 1,
    "why": "suggest + V-ing → suggested listening to.",
-   "due": "2026-11-13",
-   "step": 0,
-   "history": [],
-   "poll_id": "6316692287233459043",
-   "sent": "2026-11-12"
+   "due": "2026-11-15",
+   "step": 1,
+   "history": [
+    {
+     "date": "2026-11-12",
+     "ok": true
+    }
+   ],
+   "sent": "2026-11-12",
+   "answered_poll": "6316692287233459043"
   },
   {
    "id": "2026-11-11-main-q2",
@@ -47,9 +57,14 @@
    "why": "unless = if … not: nếu phòng KHÔNG tối thì mình không ngủ được.",
    "due": "2026-11-13",
    "step": 0,
-   "history": [],
-   "poll_id": "6316692287233459044",
-   "sent": "2026-11-12"
+   "history": [
+    {
+     "date": "2026-11-12",
+     "ok": false
+    }
+   ],
+   "sent": "2026-11-12",
+   "answered_poll": "6316692287233459044"
   },
   {
    "id": "2026-11-12-morning-q0",
@@ -114,6 +129,26 @@
    "sent": "2026-11-12"
   },
   "counter": {
+   "step": 0,
+   "due": "2026-11-13",
+   "sent": "2026-11-12"
+  },
+  "bacon sandwich": {
+   "step": 0,
+   "due": "2026-11-13",
+   "sent": "2026-11-12"
+  },
+  "tram": {
+   "step": 0,
+   "due": "2026-11-13",
+   "sent": "2026-11-12"
+  },
+  "on the corner": {
+   "step": 0,
+   "due": "2026-11-13",
+   "sent": "2026-11-12"
+  },
+  "be used to + V-ing": {
    "step": 0,
    "due": "2026-11-13",
    "sent": "2026-11-12"
