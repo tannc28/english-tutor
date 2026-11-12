@@ -1,50 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
 <defs>
-<linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9C9DE"/><stop offset="1" stop-color="#E8EEF6"/></linearGradient>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4B5C85"/><stop offset="1" stop-color="#6A7BA3"/></linearGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF6D6" stop-opacity="0.55"/><stop offset="1" stop-color="#FFF6D6" stop-opacity="0"/></linearGradient>
+<radialGradient id="moon" cx="0.4" cy="0.4" r="0.7"><stop offset="0" stop-color="#FFFBE8"/><stop offset="1" stop-color="#F6E7A8"/></radialGradient>
 </defs>
-<rect width="384" height="288" fill="url(#night)"/>
-<!-- wall and window -->
-<rect x="0" y="0" width="384" height="220" fill="#DCE5F0" opacity="0.6"/>
-<rect x="250" y="40" width="96" height="112" rx="4" fill="#F7FAFD" stroke="#8FA6BD" stroke-width="2"/>
-<line x1="298" y1="40" x2="298" y2="152" stroke="#8FA6BD" stroke-width="2"/>
-<line x1="250" y1="96" x2="346" y2="96" stroke="#8FA6BD" stroke-width="2"/>
-<rect x="240" y="30" width="116" height="6" rx="3" fill="#B0BCC8"/>
-<!-- moon and stars -->
-<circle cx="278" cy="66" r="18" fill="#FFF4C7"/>
-<circle cx="287" cy="60" r="16" fill="#F7FAFD"/>
-<circle cx="320" cy="48" r="2" fill="#FFF4C7"/><circle cx="332" cy="130" r="2" fill="#FFF4C7"/>
-<!-- moonlight on floor -->
-<path d="M250 152 L346 152 L372 246 L226 246 Z" fill="#FFF4C7" opacity="0.35"/>
+<rect width="384" height="288" fill="url(#wall)"/>
+<rect y="228" width="384" height="60" fill="#3F4A6B"/>
+<!-- window -->
+<rect x="236" y="38" width="108" height="116" rx="6" fill="#26335A" stroke="#C9D3EA" stroke-width="4"/>
+<circle cx="276" cy="78" r="17" fill="url(#moon)"/>
+<circle cx="283" cy="73" r="14" fill="#26335A"/>
+<circle cx="276" cy="78" r="17" fill="none"/>
+<path d="M270 62a17 17 0 1 0 0 32a14 14 0 0 1 0-32z" fill="url(#moon)"/>
+<circle cx="312" cy="60" r="1.6" fill="#fff"/><circle cx="326" cy="92" r="1.4" fill="#fff"/><circle cx="256" cy="118" r="1.4" fill="#fff"/><circle cx="305" cy="118" r="1.6" fill="#fff"/><circle cx="332" cy="52" r="1.2" fill="#fff"/>
+<path d="M0 154 L28 140 L50 150 L70 134 L108 154Z" fill="#1E2A4D" transform="translate(236 -10) scale(1)" opacity="0.0"/>
+<path d="M240 150 L262 132 L284 146 L306 128 L340 150Z" fill="#1E2A4D"/>
+<line x1="290" y1="38" x2="290" y2="154" stroke="#C9D3EA" stroke-width="3"/>
+<line x1="236" y1="96" x2="344" y2="96" stroke="#C9D3EA" stroke-width="3"/>
+<rect x="228" y="154" width="124" height="8" rx="3" fill="#C9D3EA"/>
+<!-- moonlight beam on floor -->
+<path d="M240 162 L350 162 L300 252 L150 252Z" fill="url(#beam)"/>
 <!-- boxes -->
-<rect x="22" y="170" width="70" height="60" rx="3" fill="#E0A96D"/>
-<rect x="22" y="170" width="70" height="10" fill="#C98D52"/>
-<line x1="57" y1="170" x2="57" y2="230" stroke="#C98D52" stroke-width="2"/>
-<rect x="34" y="128" width="54" height="42" rx="3" fill="#D4935A"/>
-<rect x="34" y="128" width="54" height="8" fill="#B87C48"/>
+<rect x="14" y="170" width="70" height="60" fill="#C99A62" stroke="#9A7243" stroke-width="2"/>
+<rect x="14" y="170" width="70" height="12" fill="#D9AE78" stroke="#9A7243" stroke-width="2"/>
+<rect x="38" y="170" width="22" height="12" fill="#E8D5A8"/>
+<rect x="30" y="132" width="52" height="38" fill="#D2A66C" stroke="#9A7243" stroke-width="2"/>
+<rect x="30" y="132" width="52" height="9" fill="#E0B885" stroke="#9A7243" stroke-width="2"/>
+<rect x="88" y="196" width="40" height="34" fill="#C99A62" stroke="#9A7243" stroke-width="2"/>
+<!-- suitcase -->
+<rect x="318" y="200" width="52" height="34" rx="5" fill="#7A5C8E" stroke="#5A406B" stroke-width="2"/>
+<rect x="336" y="194" width="16" height="7" rx="2" fill="none" stroke="#5A406B" stroke-width="2"/>
+<!-- shadow bed -->
+<ellipse cx="190" cy="248" rx="140" ry="9" fill="#2B3556" opacity="0.5"/>
 <!-- bed -->
-<rect x="112" y="186" width="200" height="22" rx="6" fill="#5B6B7A"/>
-<rect x="112" y="206" width="12" height="40" fill="#4A5868"/>
-<rect x="300" y="206" width="12" height="40" fill="#4A5868"/>
-<rect x="122" y="160" width="46" height="30" rx="10" fill="#FFFFFF"/>
-<rect x="116" y="170" width="190" height="20" rx="6" fill="#7FB3D5" opacity="0.0"/>
+<rect x="62" y="200" width="262" height="44" rx="8" fill="#8A6A4A"/>
+<rect x="56" y="150" width="18" height="96" rx="6" fill="#6F5238"/>
+<rect x="68" y="168" width="248" height="46" rx="10" fill="#E9EEF7"/>
+<!-- pillow -->
+<ellipse cx="112" cy="168" rx="38" ry="16" fill="#FFFFFF"/>
+<!-- Nam head -->
+<circle cx="118" cy="154" r="22" fill="#F1C7A5" stroke="#C9976F" stroke-width="1.5"/>
+<path d="M97 150 C98 130 134 128 140 148 C130 142 112 140 97 150Z" fill="#14161C"/>
+<circle cx="110" cy="156" r="3.2" fill="#fff"/><circle cx="127" cy="156" r="3.2" fill="#fff"/>
+<circle cx="111" cy="156.5" r="1.8" fill="#14161C"/><circle cx="128" cy="156.5" r="1.8" fill="#14161C"/>
+<path d="M106 148 q5 -3 10 0 M123 148 q5 -3 10 0" stroke="#14161C" stroke-width="1.5" fill="none"/>
+<path d="M114 167 q5 3 10 0" stroke="#A8654A" stroke-width="1.8" fill="none"/>
 <!-- blanket -->
-<rect x="160" y="168" width="150" height="24" rx="8" fill="#7FB3D5"/>
-<rect x="160" y="168" width="150" height="6" rx="3" fill="#A6CBE4"/>
-<!-- young man lying awake -->
-<circle cx="150" cy="170" r="0" fill="#F1C7A5"/>
-<path d="M170 174 Q168 150 150 150" fill="none"/>
-<ellipse cx="145" cy="160" rx="18" ry="18" fill="#F1C7A5"/>
-<path d="M128 158 Q126 140 145 140 Q164 140 162 158 Q156 150 145 151 Q134 150 128 158Z" fill="#1E1E1E"/>
-<circle cx="139" cy="162" r="1.8" fill="#2B2B2B"/><circle cx="151" cy="162" r="1.8" fill="#2B2B2B"/>
-<path d="M140 170 Q145 173 150 170" stroke="#8A4B3A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-<!-- open eyes glow: wide -->
-<path d="M136 176 L290 176" stroke="none"/>
-<!-- pillow head rest -->
-<rect x="124" y="156" width="8" height="8" fill="#FFFFFF" opacity="0"/>
-<!-- floor -->
-<rect x="0" y="246" width="384" height="42" fill="#C9D3DD"/>
-<rect x="0" y="246" width="384" height="3" fill="#B0BCC8"/>
-<!-- sleepless clock -->
-<circle cx="330" cy="200" r="0" fill="none"/>
-<rect x="60" y="232" width="8" height="0" fill="#000" opacity="0"/>
+<path d="M140 178 C170 168 250 170 316 176 L316 216 L140 216Z" fill="#7FB3D5"/>
+<path d="M140 178 C170 168 250 170 316 176 L316 186 C250 182 170 180 140 190Z" fill="#9CC6E0"/>
+<path d="M150 200 h150" stroke="#6A9FC2" stroke-width="2" opacity="0.6"/>
+<!-- hand on blanket -->
+<ellipse cx="160" cy="184" rx="12" ry="7" fill="#F1C7A5" stroke="#C9976F" stroke-width="1.2"/>
+<!-- nightstand with lamp -->
+<rect x="330" y="206" width="40" height="42" rx="4" fill="#8A6A4A"/>
+<rect x="326" y="202" width="48" height="7" rx="3" fill="#A07F5B"/>
+<!-- z thoughts: clock -->
+<circle cx="56" cy="76" r="22" fill="#F4F1E8" stroke="#C9D3EA" stroke-width="3"/>
+<path d="M56 62 V76 L66 82" stroke="#3A4A6B" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="56" cy="76" r="2.5" fill="#3A4A6B"/>
+<!-- thought bubble -->
+<circle cx="96" cy="118" r="4" fill="#E9EEF7" opacity="0.8"/><circle cx="106" cy="104" r="6" fill="#E9EEF7" opacity="0.8"/>
 </svg>
