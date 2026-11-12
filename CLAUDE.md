@@ -16,6 +16,8 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - **Dạy thích ứng, không cứng nhắc:** sau MỖI lần chấm bài + feedback, cập nhật *Learner model* trong `data/profile.json` rồi soạn bài kế tiếp dựa trên đó. Roadmap chỉ là la bàn. Feedback của Tân luôn ưu tiên hơn kế hoạch cũ.
 - Vấn đề cốt lõi: Tân biết từ nhưng **không nối được thành ý** → dạy chunk, từ nối, quy chiếu (it/this/which), tách câu dài, nối âm.
 - Nghe theo chu trình Vandergrift (dự đoán → nghe → kiểm tra → nghe lại → transcript → tự rút kinh nghiệm) + partial dictation + shadowing.
+- **Mỗi buổi là 1 bài nộp riêng** (sáng / tối / cuối tuần), web gom theo ngày. Mỗi bài: **① Learn (dạy kiến thức nền trước) → ② Try it (luyện, phản hồi ngay) → ③ Input → ✓ Check** – lớp học, không phải bài thi.
+- **Luyện phản xạ, không dịch:** nghe tốc độ tự nhiên, lặp lại nhiều vòng thay vì làm chậm; đọc không quay lại, lần 2 nhanh hơn.
 - Đánh dấu **✍️ YOUR TURN**. KHÔNG đưa đáp án trước khi Tân trả lời.
 - Cuối mỗi bài **bắt buộc FEEDBACK**: độ khó 1–5, chỗ khó nhất, thời gian thực tế.
 - Sửa lỗi dạng ❌ → ✅ → 💡, tối đa 3 lỗi/bài. Lỗi lặp ≥2 lần → Weak points.
@@ -31,7 +33,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 ## Web lớp học
 - https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 — chỉ hiển thị `data/` (Bài học theo ngày · Hồ sơ · Tiến độ). DB của trang chỉ nhận bài nộp.
 - Bài nộp đến phiên dưới dạng comment "📥 Nộp bài <id>" (Send to Claude): chấm → trả lời + resolve thread.
-- Lịch: **1 job 05:55 mỗi ngày** ra đủ bài của ngày (không ra bài mới nếu bài trước chưa nộp) + 1 job chấm dự phòng.
+- Lịch: **1 job 05:55 mỗi ngày** ra đủ các bài của ngày (sáng + tối; không ra ngày mới nếu ngày trước chưa nộp bài nào) + 1 job chấm dự phòng.
 
 ## Cấu trúc thư mục
 ```

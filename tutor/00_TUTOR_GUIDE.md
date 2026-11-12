@@ -46,14 +46,20 @@ Nguyên lý (Krashen; Nation; Day & Bamford): ngôn ngữ **được thụ đắ
 - **Sau mỗi bài chấm:** cập nhật Learner model → quyết định bài kế tiếp (hạ/nâng mức, độ dài, chủ đề, loại hỗ trợ) → ghi 1 dòng lý do. Quy tắc chi tiết: `tutor/01_ROADMAP.md` mục "Vòng lặp thích ứng".
 - Khung bài bên dưới là **mặc định**; được phép đổi tỉ lệ, bỏ hay thêm phần khi dữ liệu cho thấy cách khác hiệu quả hơn với Tân.
 
-## 4. Khung bài chính – mặc định (45–60')
-1. **Warm-up (3–5')**: gặp lại 4–6 chunk đến hạn ôn, trong câu mới (không hỏi nghĩa khô khan).
-2. **Nghe (10–15')**: 1 bài nghe dễ (≥98% từ quen), 1–3 phút. Hỏi ý chính, rồi chi tiết, nghe lại, xem lời, dictation 2–3 câu.
-3. **Đọc rộng (15–20')**: 1 tập truyện dài kỳ hoặc bài phổ thông 500–900 từ, dễ. 3–4 câu hỏi hiểu.
-4. **Đọc kỹ (10')**: 1 đoạn 150–250 từ, khó hơn chút (~95%), có gloss. Hỏi quy chiếu + tách 1 câu dài + 4–6 chunk.
-5. **Tự đánh giá mức hiểu**: Tân ghi % hiểu cho từng bài đọc/nghe và các từ/cụm còn mù mờ.
-6. **📝 Feedback bắt buộc** (trang web tự thêm): độ khó 1–5, chỗ khó nhất, thời gian thực tế.
-- Bản 15' khi bận: 1 bài nghe ngắn + 1 tập truyện + feedback.
+## 4. Khung bài – mặc định (Tân yêu cầu 12/11)
+**Mỗi buổi = 1 bài riêng, nộp riêng** (ngày thường: `<ngày>-morning` ~40' + `<ngày>-evening` ~60'; cuối tuần: `<ngày>-weekend`). Web gom theo ngày ("Day N · 🌅 Morning"). **Không bao giờ gộp cả ngày thành 1 bài nộp.**
+
+Mỗi bài đi theo đường cong học (learning curve) – **dạy trước, kiểm tra sau**:
+1. **① Learn (8–12')** – `learn: true`: dạy kiến thức nền cần cho input hôm nay (âm/dạng yếu, chunk, từ nối, cách đọc theo cụm…). Bảng + ví dụ + audio ví dụ; giải thích bằng tiếng Anh đơn giản, thêm 🇻🇳 cho nghĩa/ngữ pháp khó. Ôn chunk đến hạn ở đây.
+2. **② Try it (4–6')** – `practice: true`, câu hỏi có `check:{answer, why}` → **phản hồi ngay** trên trang, không tính điểm. Đây là luyện, không phải thi.
+3. **③④ Input** – nghe/đọc vận dụng đúng thứ vừa học. Ít câu hỏi, đúng trọng tâm.
+4. **✓ Check + Feedback** – câu hỏi được chấm (đáp án trong `data/keys/`), % hiểu, feedback → 📤 Nộp.
+
+**Phản xạ, không dịch (Tân 12/11: chậm vì phải nghĩ/dịch, chưa thành phản xạ):**
+- Nghe ở **tốc độ tự nhiên 1×**, 3 vòng cùng 1 audio (không lời → có lời → không lời), không dừng. **Không làm chậm audio** để "dễ hơn"; dùng lặp lại thay vì chậm.
+- Đọc: "fluency reading" – đọc 1 lần không quay lại, ghi thời gian; đọc lần 2 nhanh hơn. Theo dõi phút/bài để thấy tốc độ tăng.
+- Dạy đọc theo cụm (chunk bằng `/`) và từ nối như "biển báo" (ý tiếp tục hay rẽ hướng).
+- Bản 15' khi bận: Learn ngắn + 1 input + feedback.
 
 ## 5. Phần nghe lúc đi bộ (nằm trong bài của ngày)
 - 1 bài nghe 2–5 phút **dễ hơn** mức vừa sức, nối tiếp nhân vật/chủ đề, có 1 nhiệm vụ nghe đơn giản và 2 câu shadowing.

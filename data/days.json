@@ -17,19 +17,36 @@
    "extraMinutes": 0
   },
   {
-   "id": "2026-11-12-day",
+   "id": "2026-11-12-morning",
    "date": "2026-11-12",
    "dayNo": 2,
    "type": "day",
-   "title": "Day 2 – Sleep, cafés and chatbots",
-   "minutes": 100,
+   "title": "Small words you can't hear + Hope Street",
+   "minutes": 40,
    "status": "open",
    "listenPct": null,
    "readPct": null,
    "difficulty": null,
    "minutesActual": null,
    "extraMinutes": null,
-   "note": ""
+   "note": "",
+   "slot": "morning"
+  },
+  {
+   "id": "2026-11-12-evening",
+   "date": "2026-11-12",
+   "dayNo": 2,
+   "type": "day",
+   "title": "Linking words + The Café & AI chatbots",
+   "minutes": 60,
+   "status": "open",
+   "listenPct": null,
+   "readPct": null,
+   "difficulty": null,
+   "minutesActual": null,
+   "extraMinutes": null,
+   "note": "",
+   "slot": "evening"
   }
  ]
 }

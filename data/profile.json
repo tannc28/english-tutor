@@ -46,6 +46,12 @@
    "detail": "Từ nối tương phản/nhượng bộ và cụm động từ cố định",
    "evidence": "g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means)",
    "plan": "Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày"
+  },
+  {
+   "area": "Xử lý / phản xạ",
+   "detail": "Hiểu được nhưng chậm: phải nghĩ/dịch sang tiếng Việt, chưa tự động",
+   "evidence": "Tân tự nhận 12/11; Ngày 1 đọc ~88% nhưng mất nhiều thời gian",
+   "plan": "Lặp lại cùng input ở tốc độ tự nhiên (3 vòng), fluency reading có ghi thời gian, đọc theo cụm, nhiều input dễ (≥98%) để luyện tự động hoá"
   }
  ],
  "interests": [
@@ -86,6 +92,10 @@
   {
    "date": "2026-11-12",
    "text": "Ngày 2: nghe chậm 0.85× theo 3 bước (hội thoại Hope Street + bài nói 'first-night effect' – cùng chủ đề giấc ngủ), đọc rộng Hope Street tập 2 (dễ, ~400 từ), đọc kỹ B1+/B2 về AI 'hallucination' (sở thích + từ nối yet/rather/however/even though/until…though), 6 câu nhận diện although/unless/rather + be used to/suggest + V-ing trong câu mới. Full English. ~100'."
+  },
+  {
+   "date": "2026-11-12",
+   "text": "Tân góp ý: (1) mỗi buổi phải là bài riêng để nộp riêng → tách Ngày 2 thành Morning + Evening; (2) phải dạy kiến thức nền trước rồi mới kiểm tra → mỗi bài có ① Learn → ② Try it (phản hồi ngay) → Input → Check; (3) chậm là do phải nghĩ/dịch, chưa thành phản xạ → nghe 1× lặp 3 vòng thay vì 0.85×, đọc không quay lại + đọc lần 2 nhanh hơn, ghi thời gian đọc."
   }
  ],
  "story": {
@@ -93,7 +103,7 @@
   "characters": "Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà); Jess (quán cà phê đầu phố, tóc đỏ ngắn); Claire (quản lý của Nam, kính xám)",
   "episodes": [
    "Tập 1 – The Key (Ngày 1)",
-   "Tập 2 – The Café on the Corner (Ngày 2): Jess (quán cà phê), Claire (quản lý)"
+   "Tập 2 – The Café on the Corner (Ngày 2 tối): Jess (quán cà phê), Claire (quản lý)"
   ]
  },
  "chunk_bank": [
@@ -199,7 +209,8 @@
   "11/11: Tab Tiến độ thành bảng huấn luyện: lời khuyên, giờ học/tuần vs mục tiêu, điểm yếu + kế hoạch, dự báo tới C1 (giờ Cambridge), làm được gì ở mỗi mức; Feedback thêm ô phút nghe/đọc ngoài bài.",
   "11/11 (sau Ngày 1): Tân yêu cầu **câu hỏi + giao diện toàn tiếng Anh** (full English).",
   "11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items).",
-  "11/11: Mục tiêu B2 vào ~giữa tháng 2/2027, 15 giờ/tuần; output để sau, chỉ 'rèn giũa' khi input đủ."
+  "11/11: Mục tiêu B2 vào ~giữa tháng 2/2027, 15 giờ/tuần; output để sau, chỉ 'rèn giũa' khi input đủ.",
+  "12/11: Mỗi buổi 1 bài nộp riêng; khung Learn → Try it → Input → Check; luyện phản xạ bằng lặp lại ở tốc độ tự nhiên (không làm chậm)."
  ],
  "coach": {
   "summary_md": "**B1+ tổng thể.** Đọc khoảng B2 nhưng còn chậm, nghe khoảng B1 và là **điểm nghẽn chính**. Vốn từ khoảng 4–5k, đủ để hiểu phần lớn nội dung phổ thông khi *đọc*. Việc cần làm là cho **tai bắt kịp mắt** bằng thật nhiều input nghe dễ.\n\n**Mục tiêu B2:** cần khoảng 150–250 giờ input tập trung. Với **~21 giờ/tuần**, ước tính **khoảng 8–12 tuần** nếu giữ đều. Phần lớn nên là **nghe** (nghe đang ở B1).",

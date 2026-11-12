@@ -12,16 +12,16 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 ## Cấu trúc `data/`
 | File | Nội dung |
 |---|---|
-| `days.json` | `{days:[{id, date, dayNo, type:"day", title, minutes, status:"open|graded", listenPct, readPct, difficulty, minutesActual, extraMinutes, note}]}`. Một entry mỗi ngày học; chỉ số do gia sư đánh giá khi chấm |
+| `days.json` | `{days:[{id, date, dayNo, slot:"morning|evening|weekend", type:"day", title, minutes, status:"open|graded", listenPct, readPct, difficulty, minutesActual, extraMinutes, note}]}`. **Một entry mỗi BUỔI** (mỗi bài nộp riêng), web gom theo ngày; chỉ số do gia sư đánh giá khi chấm |
 | `profile.json` | Hồ sơ học sinh = Learner model: `cefr{overall,listening,reading,vocab,grammar}`, `levels{…}`, `strengths[]`, `weaknesses[]`, `interests[]`, `habits`, `teacher_md`, `focus_md`, `decisions[{date,text}]`, `story`, `chunk_bank[]`, `pronunciation[]`, `orientation[]`, `week`, `streak`, `coach{summary_md, weekly_target_hours, target_why, recommendations[{title,why,how}]}`; `weaknesses` là object `{area, detail, evidence, plan}` |
-| `lessons/<id>.json` | Nội dung bài: `{intro_md, parts:[{kind, title, md, listen?:[{who, voice:"buttery|airy|glassy|rounded", text≤2000}], rate?:0.75–1.1, audio?:"data/audio/<id>/p<i>.mp3", questions:[{id, q, type:"text|short|choice|dictation|recording", options?, placeholder?, read?}]}]}` |
+| `lessons/<id>.json` | Nội dung bài: `{intro_md, parts:[{kind, title, md, listen?:[{who, voice:"buttery|airy|glassy|rounded", text≤2000}], rate?:0.75–1.1, audio?:"data/audio/<id>/p<i>.mp3", learn?:true, practice?:true, questions:[{id, q, type:"text|short|choice|dictation|recording", options?, placeholder?, read?, check?:{answer, why}}]}]}` – `check` = câu luyện, trang chấm ngay (không tính điểm, không cần trong keys) |
 | `grades/<id>.json` | `{score, summary_md, answers_md, next_md, gradedAt, items:{qid:{verdict:"correct|partial|wrong|unsure|skipped", note_md}}}` – `items` hiện dưới từng câu (bắt buộc, Tutor Guide 6e) |
 | `submissions/<id>.json` | Bản chép bài làm của Tân (từ DB web; được publish để bài đã chấm luôn hiện câu trả lời), gồm `log` = nhật ký quá trình: `sessions[{s,e,at,kind,os,app,vw}]` (giây từ lúc mở bài; `at` giờ bắt đầu thật (UTC); `kind` computer/phone/tablet, `os`, `app` (đoán từ trình duyệt), `vw` bề rộng màn hình), `parts{pi:{ms}}` (thời gian tương tác mỗi phần), `q{qid:{first, ms, edits, changes[{t,from,to}]}}`, `listen{pi:{plays, rates[], revealAt, answeredBeforeReveal}}` |
 | `keys/<id>.json` | Đáp án trắc nghiệm, **không** publish |
 | `plan.json` | Bài nghe gia sư chọn theo ngày (tab 📅 Plan): `{days:{"YYYY-MM-DD":{note, listen:[{slot:"walk|morning|evening|weekend|any", time, title, source, minutes, level, apple?, youtube?, url?, transcript?, why}]}}}` – job 05:55 thêm ngày hôm nay |
 | `resources.json` | Thư viện nghe tự do (tab 🎧 Listen): `{how_md, tiers:[{name, level, note, items:[{name, type, url, alt?, topics, why}]}]}` – chỉ link đã kiểm tra |
 
-- **id**: `YYYY-MM-DD-day` (Day 1 giữ id cũ `2026-11-11-main`). Danh sách trên web sắp theo id giảm dần, hiển thị "Ngày N".
+- **id**: `YYYY-MM-DD-morning` / `-evening` / `-weekend` (Day 1 giữ id cũ `2026-11-11-main`). Web sắp ngày mới nhất trước, trong ngày sáng trước tối, hiển thị "Day N · 🌅 Morning". Khung bài: Learn → Try it → Input → Check (Tutor Guide mục 4).
 - `listen` → trang hiện trình nghe (Claude đọc, chỉnh tốc độ, lời ẩn tới khi bấm). `recording` → nút thu âm (xem `tools/speech/README.md`). `choice` luôn có thêm, tách riêng dưới các đáp án, nút "🤔 Mình không chắc" + ô ghi chú (đáp án lưu dạng `"Unsure: <ghi chú>"`; bài cũ có thể là `"Khác: …"`) và nút Bỏ chọn. Feedback bắt buộc (độ khó, chỗ khó nhất, phút) do trang tự thêm.
 
 ## Web có gì
@@ -32,7 +32,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 ## Quy trình RA BÀI (job 05:55 mỗi ngày)
 1. `git pull`; đọc `CLAUDE.md`, file này, `tutor/00_TUTOR_GUIDE.md`, `tutor/01_ROADMAP.md`, `data/profile.json`, `data/days.json`.
 2. `ArtifactData list inbox` → nếu có bài chưa chấm: làm **Quy trình CHẤM** trước.
-3. Bài ngày gần nhất còn `status:"open"` (Tân chưa nộp) → **không ra bài mới** (không dồn bài), chỉ nhắc nhẹ.
+3. Ngày gần nhất **chưa nộp bài nào** → **không ra ngày mới** (không dồn bài), chỉ nhắc nhẹ. Nộp được một phần → vẫn ra ngày mới (có thể ngắn hơn).
 4. Quyết định bài hôm nay từ hồ sơ (vòng lặp thích ứng, `tutor/01_ROADMAP.md`). Ghi `data/lessons/<id>.json`, thêm entry vào `data/days.json`, thêm 1 dòng `profile.decisions`.
 4b. **Audio MP3 cho phần nghe (bắt buộc – app Claude trên iPhone không phát được giọng `tts`):** `bash tools/audio_setup.sh` (container mới) → `python3 tools/audio.py <id>` → sinh `data/audio/<id>/p<i>.mp3` (Piper TTS, giọng Anh nam/nữ + Mỹ) và ghi `part.audio`. Trang ưu tiên MP3 (tua, chỉnh tốc độ), không có mới dùng `tts`.
 5. `python3 tools/sync.py` → commit + push `main` → `Artifact publish web/index.html` với `files` = nội dung `web/publish_files.json`.

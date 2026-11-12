@@ -216,6 +216,13 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
 .grade summary{cursor:pointer;font-weight:600}
 
 .pl-au{width:100%;height:40px}
+.part.learn{border-left:4px solid var(--main);background:linear-gradient(180deg,color-mix(in srgb,var(--main) 6%,var(--surface)),var(--surface))}
+.part.practice{border-left:4px solid #16a34a}
+.instant{margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.92rem;line-height:1.5}
+.instant.ok{background:color-mix(in srgb,#16a34a 12%,transparent);border:1px solid color-mix(in srgb,#16a34a 40%,transparent)}
+.instant.no{background:color-mix(in srgb,#dc2626 10%,transparent);border:1px solid color-mix(in srgb,#dc2626 35%,transparent)}
+.instant.cmp{background:color-mix(in srgb,var(--main) 8%,transparent);border:1px solid color-mix(in srgb,var(--main) 30%,transparent)}
+.ck-btn{margin-top:6px}
 .player{margin-top:14px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--sunk);display:flex;flex-direction:column;gap:10px;align-items:flex-start}
 .pl-row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
 .pl-rate{font-size:.86rem;color:var(--ink-2);display:flex;gap:6px;align-items:center}
@@ -366,6 +373,9 @@ table.days tr.next td{background:var(--accent-soft)}
 (() => {
   const TRIGGER_ID = "trig_01AN7RrytvZ5BmXiymy5Ym5M";
   const TYPE_LABEL = {day:"Daily lesson", walk:"Walk Pack", main:"Main lesson", weekly:"Weekly review", sunday:"Sunday", test:"Test"};
+  const SLOT_LABEL = {morning:"🌅 Morning", evening:"🌙 Evening", weekend:"☀️ Weekend", review:"🔁 Review"};
+  const SLOT_ORDER = {morning:1, evening:2, weekend:3, review:4};
+  const dayLabel = l => (l.dayNo?`Day ${l.dayNo}`:(TYPE_LABEL[l.type]||"Lesson")) + (l.slot?` · ${SLOT_LABEL[l.slot]||l.slot}`:"");
   const STATUS_LABEL = {open:"Not started", submitted:"Submitted", graded:"Graded"};
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -439,7 +449,7 @@ table.days tr.next td{background:var(--accent-soft)}
     el.innerHTML = lessons.map(l => {
       const st = statusOf(l);
       return `<button class="item t-${esc(l.type)}" data-id="${esc(l.id)}" aria-current="${current===l.id}">
-        <span class="row"><span class="kind">${l.dayNo?`Day ${esc(l.dayNo)}`:esc(TYPE_LABEL[l.type]||l.type||"Lesson")}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
+        <span class="row"><span class="kind">${esc(dayLabel(l))}</span><span class="pill ${st}">${STATUS_LABEL[st]}</span></span>
         <span class="t">${esc(l.title || "Lesson")}</span>
         <span class="note">${esc(fmtDate(l.date))}${l.minutes?` · ~${esc(l.minutes)} min`:""}</span>
       </button>`;
@@ -679,7 +689,7 @@ table.days tr.next td{background:var(--accent-soft)}
       <div class="bookgrid">
       <div class="bookcol">
       <section class="card hero t-${esc(l.type)}">
-        <span class="kind">${esc(TYPE_LABEL[l.type]||"Lesson")} · ${esc(fmtDate(l.date))}</span>
+        <span class="kind">${esc(dayLabel(l))} · ${esc(fmtDate(l.date))}</span>
         <h2>${esc(l.title||"Lesson")}</h2>
         <div class="meta">
           ${l.minutes?`<span class="dot">⏱ ~${esc(l.minutes)} min</span>`:""}
@@ -697,7 +707,7 @@ table.days tr.next td{background:var(--accent-soft)}
           ${grade.next_md?`<div class="md">${md(grade.next_md)}</div>`:""}
         </section>` : ""}
       ${(l.parts||[]).map((p,pi) => `
-        <section class="card part" id="part-${pi}">
+        <section class="card part ${p.learn?"learn":""} ${p.practice?"practice":""}" id="part-${pi}">
           <span class="step" aria-hidden="true">${pi+1}</span>
           ${p.kind?`<span class="kind">${esc(p.kind)}</span>`:""}
           <h3>${esc(p.title||"")}</h3>
@@ -708,7 +718,7 @@ table.days tr.next td{background:var(--accent-soft)}
               <div class="q" id="qb-${esc(q.id)}">
                 <label class="qt" for="q-${esc(q.id)}"><span class="qn">✍️ ${++qn}</span><span class="qx">${inline(q.q)}</span></label>
                 ${qInput(q, ans[q.id], locked)}
-                ${fbItem(grade, q.id)}
+                ${q.check ? checkHtml(q, ans[q.id]) : fbItem(grade, q.id)}
               </div>`).join("")}</div>` : ""}
           </div>
         </section>`).join("")}
@@ -738,8 +748,29 @@ table.days tr.next td{background:var(--accent-soft)}
     });
     if (!locked && actLesson?.id !== l.id) initActivity(l, (store.get("draft:"+l.id)||{}).log);
     bindPlayers(l);
+    bindChecks(l);
     bindRecorders(l);
     $("#edit")?.addEventListener("click", () => { main.dataset.editing = "1"; renderLesson(); });
+  }
+
+  // ---- Practice: q.check = {answer, why} → phản hồi ngay (phần "Try it", không tính điểm)
+  const norm = v => String(v||"").toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9' ]+/g," ").replace(/\s+/g," ").trim();
+  function checkHtml(q, val){
+    const v = String(val||"").trim(), has = !!v && !/^(Khác|Unsure): /.test(v);
+    const ok = has && [].concat(q.check.answer).some(a => norm(a) === norm(v));
+    const show = has && (q.type === "choice" || revealed[q.id]);
+    const choice = q.type === "choice";
+    return `<div class="instant ${show?(ok?"ok":(choice?"no":"cmp")):""}" id="ck-${esc(q.id)}" ${show?"":"hidden"}>
+      ${show ? (ok ? `<b>✅ Right!</b> ${inline(q.check.why||"")}` : choice ? `<b>❌ Not quite – answer: ${esc([].concat(q.check.answer)[0])}.</b> ${inline(q.check.why||"")}` : `<b>📘 Compare with yours:</b> ${inline(q.check.why||"")}`) : ""}</div>
+      ${q.type !== "choice" ? `<button type="button" class="linkbtn ck-btn" data-q="${esc(q.id)}">Check my answer</button>` : ""}`;
+  }
+  const revealed = {};
+  function bindChecks(l){
+    allQs(l).filter(q => q.check).forEach(q => {
+      const upd = () => { const box = document.getElementById("ck-"+q.id); if (!box) return; const tmp = document.createElement("div"); tmp.innerHTML = checkHtml(q, collect(l).answers[q.id]); const nb = tmp.firstElementChild; box.replaceWith(nb); };
+      if (q.type === "choice") document.querySelectorAll(`input[name="q-${CSS.escape(q.id)}"]`).forEach(r => r.addEventListener("change", upd));
+      document.querySelector(`.ck-btn[data-q="${CSS.escape(q.id)}"]`)?.addEventListener("click", () => { revealed[q.id] = true; upd(); });
+    });
   }
 
   // ---- Listening player: Claude đọc bài nghe (tts). Lời ẩn cho tới khi Tân bấm hiện.
@@ -1088,7 +1119,7 @@ table.days tr.next td{background:var(--accent-soft)}
     return `<section class="card sec dayc ${isToday?"is-today":""}">
       <div class="dayc-h"><h2>${d.toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"short"})}${isToday?' <span class="pill submitted">Today</span>':""}</h2></div>
       ${sch.length?`<div class="slots">${sch.map(b=>`<span class="slot"><b>${esc(b.time||"")}</b> ${esc(b.what||"")}</span>`).join("")}</div>`:""}
-      ${les.length ? les.map(l=>{const st=statusOf(l); return `<a class="plan-les" href="#${esc(l.id)}"><span class="pill ${st}">${STATUS_LABEL[st]}</span> 📘 ${l.dayNo?`Day ${esc(l.dayNo)} – `:""}${esc(l.title||"Lesson")}${l.minutes?` · ~${esc(l.minutes)} min`:""}</a>`;}).join("") : `<p class="note">${ds >= todayStr() ? "📘 Lesson appears here at 05:55 that day." : "No lesson this day."}</p>`}
+      ${les.length ? les.map(l=>{const st=statusOf(l); return `<a class="plan-les" href="#${esc(l.id)}"><span class="pill ${st}">${STATUS_LABEL[st]}</span> 📘 ${esc(dayLabel(l))} – ${esc(l.title||"Lesson")}${l.minutes?` · ~${esc(l.minutes)} min`:""}</a>`;}).join("") : `<p class="note">${ds >= todayStr() ? "📘 Lesson appears here at 05:55 that day." : "No lesson this day."}</p>`}
       ${pl?.note?`<div class="md">${md(pl.note)}</div>`:""}
       ${(pl?.listen||[]).length ? `<div class="plan-listen">${pl.listen.map(it=>`<div class="pli">
           <div class="pli-h"><span class="note mono">${esc(SLOT[it.slot]||it.slot||"")}${it.time?" · "+esc(it.time):""}${it.minutes?" · "+esc(it.minutes)+" min":""}</span>${it.level?`<span class="pill">${esc(it.level)}</span>`:""}</div>
@@ -1107,7 +1138,7 @@ table.days tr.next td{background:var(--accent-soft)}
       ${cells.map(d=>{ const ds = ymd(d), {les, pl} = dayInfo(ds); const st = les[0] ? statusOf(les[0]) : "";
         return `<button type="button" class="calc ${d.getMonth()!==m?"out":""} ${ds===t?"today":""} ${ds===planSel?"sel":""}" data-ds="${ds}">
           <span class="cd">${d.getDate()}</span>
-          ${les[0]?`<span class="cb ${st}">📘${les[0].dayNo?" D"+esc(les[0].dayNo):""}</span>`:""}
+          ${les[0]?`<span class="cb ${st}">📘${les[0].dayNo?" D"+esc(les[0].dayNo):""}${les.length>1?" ×"+les.length:""}</span>`:""}
           ${(pl?.listen||[]).length?`<span class="cb">🎧${pl.listen.length}</span>`:""}
         </button>`;}).join("")}</div>`;
   }
@@ -1159,7 +1190,7 @@ table.days tr.next td{background:var(--accent-soft)}
     // 1) Dữ liệu từ repo (xuất bản kèm trang) – hiển thị được ngay cả khi chưa có database
     try {
       const [days, prof] = await Promise.all([getJSON("data/days.json"), getJSON("data/profile.json").catch(() => null)]);
-      lessons = (days.days || []).slice().sort((a,b) => String(b.id).localeCompare(String(a.id)));
+      lessons = (days.days || []).slice().sort((a,b) => String(b.date).localeCompare(String(a.date)) || ((SLOT_ORDER[a.slot]||9)-(SLOT_ORDER[b.slot]||9)) || String(a.id).localeCompare(String(b.id)));
       stats = lessons.filter(d => d.status === "graded").map(d => ({lessonId:d.id, ...d}));
       profile = prof && Object.keys(prof).length ? prof : null;
       $("#s-done").textContent = stats.length;

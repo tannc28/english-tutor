@@ -4,12 +4,14 @@
  "data/resources.json": "data/resources.json",
  "data/plan.json": "data/plan.json",
  "data/lessons/2026-11-11-main.json": "data/lessons/2026-11-11-main.json",
- "data/lessons/2026-11-12-day.json": "data/lessons/2026-11-12-day.json",
+ "data/lessons/2026-11-12-evening.json": "data/lessons/2026-11-12-evening.json",
+ "data/lessons/2026-11-12-morning.json": "data/lessons/2026-11-12-morning.json",
  "data/grades/2026-11-11-main.json": "data/grades/2026-11-11-main.json",
  "data/submissions/2026-11-11-main.json": "data/submissions/2026-11-11-main.json",
  "data/audio/2026-11-11-main/p0.mp3": "data/audio/2026-11-11-main/p0.mp3",
  "data/audio/2026-11-11-main/p3.mp3": "data/audio/2026-11-11-main/p3.mp3",
  "data/audio/2026-11-11-main/p5.mp3": "data/audio/2026-11-11-main/p5.mp3",
- "data/audio/2026-11-12-day/p0.mp3": "data/audio/2026-11-12-day/p0.mp3",
- "data/audio/2026-11-12-day/p1.mp3": "data/audio/2026-11-12-day/p1.mp3"
+ "data/audio/2026-11-12-morning/p0.mp3": "data/audio/2026-11-12-morning/p0.mp3",
+ "data/audio/2026-11-12-morning/p2.mp3": "data/audio/2026-11-12-morning/p2.mp3",
+ "data/audio/2026-11-12-morning/p3.mp3": "data/audio/2026-11-12-morning/p3.mp3"
 }

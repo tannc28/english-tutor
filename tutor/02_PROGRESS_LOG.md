@@ -5,7 +5,7 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: Chỉ INPUT (nghe + đọc). Output/phát âm chỉ khi Tân muốn.
-- Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/2 ngày
+- Tuần: 1 · Streak: 1 ngày · Đã chấm: 1/3 ngày
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
 - Cập nhật hồ sơ: 2026-11-11T21:45:00+07:00
 
@@ -25,6 +25,7 @@
 - [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's' → Nghe dễ (A2+/B1, 0.85×) theo 3 bước: nghe → nghe + đọc lời → nghe lại không lời; chính tả từng phần tập trung dạng yếu/nối âm
 - [Đọc] **Xử lý câu dài còn chậm (hiểu được nhưng tốn nhiều thời gian)** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Nhiều đọc rộng B1+ dễ hơn để tăng tốc; đọc kỹ chỉ 1 đoạn/ngày
 - [Từ nối & cụm] **Từ nối tương phản/nhượng bộ và cụm động từ cố định** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
+- [Xử lý / phản xạ] **Hiểu được nhưng chậm: phải nghĩ/dịch sang tiếng Việt, chưa tự động** – dấu hiệu: Tân tự nhận 12/11; Ngày 1 đọc ~88% nhưng mất nhiều thời gian → Lặp lại cùng input ở tốc độ tự nhiên (3 vòng), fluency reading có ghi thời gian, đọc theo cụm, nhiều input dễ (≥98%) để luyện tự động hoá
 
 **Mục tiêu thời gian:** 21 giờ/tuần (ngày thường ~2h40 (7:45 nghe 40' + 20:30–22:30), cuối tuần 4 giờ, cộng nghe tranh thủ → B2 có thể sớm hơn 3 tháng (khoảng 8–12 tuần nếu giữ đều))
 
@@ -57,16 +58,18 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-11 | Tân muốn học tối 2 giờ và nghe thêm chủ động → buổi tối 20:30–22:30 (bài 60' + nghe tự do 50'), mục tiêu 21 giờ/tuần; tạo thư viện nghe đã kiểm tra link (data/resources.json, tab 🎧 Listen) chia 3 tầng theo trình độ; ngày bận/rảnh Tân báo để chỉnh. |
 | 2026-11-11 | Tân không xem phim/series → input nghe chỉ YouTube + podcast; buổi tối cuối tuần đổi thành YouTube/podcast. Thêm tab 📅 Plan (List/Calendar) với bài nghe gia sư chọn mỗi ngày (data/plan.json) + nút Apple Podcasts cho iPhone. |
 | 2026-11-12 | Ngày 2: nghe chậm 0.85× theo 3 bước (hội thoại Hope Street + bài nói 'first-night effect' – cùng chủ đề giấc ngủ), đọc rộng Hope Street tập 2 (dễ, ~400 từ), đọc kỹ B1+/B2 về AI 'hallucination' (sở thích + từ nối yet/rather/however/even though/until…though), 6 câu nhận diện although/unless/rather + be used to/suggest + V-ing trong câu mới. Full English. ~100'. |
+| 2026-11-12 | Tân góp ý: (1) mỗi buổi phải là bài riêng để nộp riêng → tách Ngày 2 thành Morning + Evening; (2) phải dạy kiến thức nền trước rồi mới kiểm tra → mỗi bài có ① Learn → ② Try it (phản hồi ngay) → Input → Check; (3) chậm là do phải nghĩ/dịch, chưa thành phản xạ → nghe 1× lặp 3 vòng thay vì 0.85×, đọc không quay lại + đọc lần 2 nhanh hơn, ghi thời gian đọc. |
 
 ## Lịch sử ngày học
 | Ngày | Bài | Trạng thái | Nghe | Đọc | Độ khó | Phút bài | Phút thêm | Nhận xét |
 |---|---|---|---|---|---|---|---|---|
 | N1 · 2026-11-11 | Day 1 – Đánh giá đầu vào toàn diện | graded | 60% | 88% | 3 | 90 | – | Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k |
-| N2 · 2026-11-12 | Day 2 – Sleep, cafés and chatbots | open | – | – | – | – | – |  |
+| N2 · 2026-11-12 | Small words you can't hear + Hope Street | open | – | – | – | – | – |  |
+| N2 · 2026-11-12 | Linking words + The Café & AI chatbots | open | – | – | – | – | – |  |
 
 ## Truyện dài kỳ: Hope Street
 - Nhân vật: Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà); Jess (quán cà phê đầu phố, tóc đỏ ngắn); Claire (quản lý của Nam, kính xám)
-- Đã có: Tập 1 – The Key (Ngày 1); Tập 2 – The Café on the Corner (Ngày 2): Jess (quán cà phê), Claire (quản lý)
+- Đã có: Tập 1 – The Key (Ngày 1); Tập 2 – The Café on the Corner (Ngày 2 tối): Jess (quán cà phê), Claire (quản lý)
 
 ## Chunk Bank (gặp lại trong input mới theo lịch 1–3–7–14 ngày)
 | Chunk | Nghĩa | Học | Gặp lại | Trạng thái |
@@ -98,3 +101,4 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 - 11/11 (sau Ngày 1): Tân yêu cầu **câu hỏi + giao diện toàn tiếng Anh** (full English).
 - 11/11: Bỏ kết quả phát âm Ngày 1 (bộ chấm không tin cậy trên bản thu giọng nhỏ). Chấm bài phải có nhận xét **từng câu** (grades.items).
 - 11/11: Mục tiêu B2 vào ~giữa tháng 2/2027, 15 giờ/tuần; output để sau, chỉ 'rèn giũa' khi input đủ.
+- 12/11: Mỗi buổi 1 bài nộp riêng; khung Learn → Try it → Input → Check; luyện phản xạ bằng lặp lại ở tốc độ tự nhiên (không làm chậm).
