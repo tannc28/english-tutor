@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">📖</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">I read half.</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">🌙📖</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">the rest</text><text x="296.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">tonight</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">the rest of the story</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A3550"/><stop offset="1" stop-color="#1A2236"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#FFF2B3" stop-opacity=".6"/><stop offset="1" stop-color="#FFF2B3" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="384" height="288" fill="url(#g)"/>
+<rect x="200" y="24" width="130" height="96" rx="8" fill="#1E2A44" stroke="#7D8AA0" stroke-width="4"/>
+<circle cx="232" cy="56" r="40" fill="url(#glow)"/>
+<circle cx="232" cy="56" r="20" fill="#FFF2B3"/>
+<rect x="262" y="24" width="5" height="96" fill="#7D8AA0"/>
+<rect x="200" y="70" width="130" height="5" fill="#7D8AA0"/>
+<circle cx="296" cy="46" r="2" fill="#FFFFFF"/>
+<circle cx="312" cy="84" r="2.5" fill="#FFFFFF"/>
+<circle cx="280" cy="96" r="1.8" fill="#FFFFFF"/>
+<circle cx="318" cy="40" r="1.6" fill="#FFFFFF"/>
+<rect y="222" width="384" height="66" fill="#151C2E"/>
+<rect x="36" y="112" width="14" height="112" rx="4" fill="#C7A27C"/>
+<rect x="36" y="200" width="312" height="22" rx="6" fill="#A88660"/>
+<rect x="50" y="156" width="298" height="44" rx="14" fill="#7FB3D5"/>
+<path d="M180 156 Q186 170 180 200" fill="none" stroke="#6A9CC4" stroke-width="3"/>
+<rect x="60" y="138" width="56" height="24" rx="10" fill="#FFFFFF" opacity=".9"/>
+<path d="M140 160 Q168 148 194 156 L194 186 Q168 180 140 190 Z" fill="#FFFFFF" stroke="#C9D3DF" stroke-width="1.5"/>
+<path d="M194 156 Q220 148 248 160 L248 190 Q220 180 194 186 Z" fill="#F5F0E6" stroke="#C9D3DF" stroke-width="1.5"/>
+<path d="M150 166 Q168 162 186 166 M150 174 Q168 170 186 174 M150 182 Q168 178 186 182" fill="none" stroke="#C9D3DF" stroke-width="2"/>
+<path d="M206 168 Q220 164 236 168" fill="none" stroke="#C9D3DF" stroke-width="2"/>
+<rect x="226" y="152" width="6" height="42" fill="#E8575A"/>
+</svg>
