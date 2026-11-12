@@ -17,7 +17,7 @@
    "week": 1,
    "order": 1,
    "kind": "Assessment",
-   "cover": "data/img/w1/l1-cover.webp"
+   "cover": "data/img/w1/l1-cover.svg"
   },
   {
    "id": "2026-11-12-morning",
@@ -36,7 +36,7 @@
    "week": 1,
    "order": 2,
    "kind": "Listening",
-   "cover": "data/img/w1/l2-cover.webp"
+   "cover": "data/img/w1/l2-cover.svg"
   },
   {
    "id": "2026-11-12-evening",
@@ -55,7 +55,7 @@
    "week": 1,
    "order": 3,
    "kind": "Reading",
-   "cover": "data/img/w1/l3-cover.webp"
+   "cover": "data/img/w1/l3-cover.svg"
   },
   {
    "id": "w1-l4",
@@ -66,7 +66,7 @@
    "title": "First day at work – meeting the team",
    "minutes": 50,
    "status": "open",
-   "cover": "data/img/w1/l4-cover.webp",
+   "cover": "data/img/w1/l4-cover.svg",
    "date": null,
    "listenPct": null,
    "readPct": null,
@@ -84,7 +84,7 @@
    "title": "Getting around – directions & the tram",
    "minutes": 40,
    "status": "open",
-   "cover": "data/img/w1/l5-cover.webp",
+   "cover": "data/img/w1/l5-cover.svg",
    "date": null,
    "listenPct": null,
    "readPct": null,
@@ -102,7 +102,7 @@
    "title": "Weekend review – the story so far",
    "minutes": 60,
    "status": "open",
-   "cover": "data/img/w1/l6-cafe.webp",
+   "cover": "data/img/w1/l6-cafe.svg",
    "date": null,
    "listenPct": null,
    "readPct": null,

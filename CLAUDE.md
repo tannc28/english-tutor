@@ -33,12 +33,13 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Token **không bao giờ** vào repo: biến môi trường `TELEGRAM_BOT_TOKEN` (Tân đặt trong cài đặt environment) hoặc `/root/.telegram_token`. Chat id ở `profile.notify.telegram_chat_id`. Không có token → PushNotification + báo Tân.
 - Job sáng đọc tin Tân nhắn bot (`tools/notify.py --inbox`): xin nghỉ, góp ý → xử lý như Quy trình XIN NGHỈ.
 
-## Chọn model (Tân yêu cầu 12/11)
-- Việc cần **suy nghĩ sâu** – soạn bài, lên kế hoạch tuần, chấm bài, phân tích hồ sơ/nhật ký, quyết định thích ứng – **bắt buộc dùng Opus** (phiên chính chạy Opus; subagent làm việc này phải đặt `model: "opus"`).
-- Việc **máy móc** – vẽ ảnh, tạo audio, kiểm tra link, chép file – có thể giao subagent model nhẹ (sonnet/haiku) để nhanh và tiết kiệm.
+## Chọn model (Tân yêu cầu 12/11 – có benchmark 12/11, xem `session/MODEL_BENCHMARK.md`)
+- **Opus (phiên chính):** soạn bài, lên kế hoạch tuần, chấm bài, phân tích hồ sơ, quyết định thích ứng. Subagent làm các việc này phải đặt `model: "opus"`.
+- **Sonnet:** soạn **nội dung cần đúng nghĩa** khi cần giao việc ra ngoài – thẻ từ (def/ex/vi/note), câu quiz ôn, bản nháp câu hỏi đọc/nghe → Opus xem lại trước khi dùng. (Benchmark: thẻ từ 12/12 đúng.)
+- **Haiku:** **vẽ minh hoạ SVG** (toàn bộ hình), việc máy móc (định dạng tin Telegram, chép/kiểm tra file, kiểm tra link). **Không** giao Haiku soạn nghĩa từ/ngữ pháp (benchmark: 2/12 thẻ từ sai nghĩa, trong đó *unless* bị định nghĩa ngược).
 
 ## Công cụ có sẵn
-- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · minh hoạ kết hợp: `tools/illustrate.py` (SDXL-Turbo, ~7 giây/ảnh) cho hình cụ thể + **Haiku vẽ SVG theo câu ví dụ** cho từ trừu tượng (web/README "Minh hoạ"); không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`, torch CPU + diffusers (xem đầu `tools/illustrate.py`).
+- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · minh hoạ: **Haiku vẽ SVG cho TẤT CẢ hình** (cảnh truyện, ảnh bìa, từ cụ thể và trừu tượng – web/README "Minh hoạ"); `tools/illustrate.py` (SDXL-Turbo) chỉ còn là dự phòng; không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`, torch CPU + diffusers (xem đầu `tools/illustrate.py`).
 
 ## Quyền với repo (Tân cho phép 11/11/2026)
 - Claude có **toàn quyền** trên repo này: được commit và **push thẳng lên `main`**, không cần tạo nhánh riêng hay PR.

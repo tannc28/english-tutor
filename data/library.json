@@ -2,7 +2,7 @@
  "words": [
   {
    "w": "flat",
-   "img": "data/img/w1/w-flat.webp",
+   "img": "data/img/w1/w-flat.svg",
    "def": "a home on one floor of a building",
    "ex": "Nam lives in Flat 2 at number 14.",
    "vi": "căn hộ",
@@ -14,7 +14,7 @@
   },
   {
    "w": "heating",
-   "img": "data/img/w1/w-heating.webp",
+   "img": "data/img/w1/w-heating.svg",
    "def": "the system that makes a building warm",
    "ex": "The heating made a noise at 3 a.m.",
    "vi": "hệ thống sưởi",
@@ -26,7 +26,7 @@
   },
   {
    "w": "umbrella",
-   "img": "data/img/w1/w-umbrella.webp",
+   "img": "data/img/w1/w-umbrella.svg",
    "def": "you hold it over your head in the rain",
    "ex": "Take an umbrella – it's going to rain.",
    "vi": "cái ô",
@@ -38,7 +38,7 @@
   },
   {
    "w": "counter",
-   "img": "data/img/w1/w-counter.webp",
+   "img": "data/img/w1/w-counter.svg",
    "def": "the long table in a shop or café where you pay",
    "ex": "Jess was standing behind the counter.",
    "vi": "quầy",
@@ -50,7 +50,7 @@
   },
   {
    "w": "bacon sandwich",
-   "img": "data/img/w1/w-sandwich.webp",
+   "img": "data/img/w1/w-sandwich.svg",
    "def": "bread with hot bacon inside – a British breakfast",
    "ex": "Try the bacon sandwich!",
    "audio": "data/audio/w1/words/w-sandwich.mp3",
@@ -61,7 +61,7 @@
   },
   {
    "w": "tram",
-   "img": "data/img/w1/w-tram.webp",
+   "img": "data/img/w1/w-tram.svg",
    "def": "a long electric train that runs on city streets",
    "ex": "Take the tram to Market Street.",
    "vi": "tàu điện",
@@ -73,7 +73,7 @@
   },
   {
    "w": "on the corner",
-   "img": "data/img/w1/w-corner.webp",
+   "img": "data/img/w1/w-corner.svg",
    "def": "where two streets meet",
    "ex": "There's a little café on the corner.",
    "vi": "ở góc phố",
@@ -98,7 +98,7 @@
   },
   {
    "w": "show sb around",
-   "img": "data/img/w1/w-showaround.webp",
+   "img": "data/img/w1/w-showaround.svg",
    "def": "walk with someone and show them a place",
    "ex": "Tom will show you around the office.",
    "vi": "dẫn đi xem",
@@ -110,7 +110,7 @@
   },
   {
    "w": "give sb a hand",
-   "img": "data/img/w1/w-hand.webp",
+   "img": "data/img/w1/w-hand.svg",
    "def": "help someone",
    "ex": "Could you give me a hand with this box?",
    "vi": "giúp một tay",
@@ -122,7 +122,7 @@
   },
   {
    "w": "take a deep breath",
-   "img": "data/img/w1/w-breath.webp",
+   "img": "data/img/w1/w-breath.svg",
    "def": "breathe in slowly to feel calm",
    "ex": "He took a deep breath and pushed the door.",
    "vi": "hít một hơi thật sâu",
@@ -134,7 +134,7 @@
   },
   {
    "w": "get lost",
-   "img": "data/img/w1/w-lost.webp",
+   "img": "data/img/w1/w-lost.svg",
    "def": "not know where you are",
    "ex": "It's easy to get lost in a new city.",
    "vi": "bị lạc",
@@ -463,7 +463,7 @@
    "ex": "Go past the park and you'll see it.",
    "vi": "đi qua",
    "week": 1,
-   "img": "data/img/w1/x-go-past.webp",
+   "img": "data/img/w1/x-go-past.svg",
    "audio": "data/audio/w1/words/x-go-past.mp3",
    "ipa": "/ɡəʊ pæst/",
    "ipa_us": "/ɡoʊ pæst/"
@@ -475,7 +475,7 @@
    "ex": "Get on at Hope Street and get off at Market Street.",
    "vi": "lên xe / xuống xe",
    "week": 1,
-   "img": "data/img/w1/x-get-on--get-off.webp",
+   "img": "data/img/w1/x-get-on--get-off.svg",
    "audio": "data/audio/w1/words/x-get-on--get-off.mp3",
    "ipa": "/ɡet ɒn ɡet ɒf/",
    "ipa_us": "/ɡet ɔn ɡet ɔf/"
@@ -526,7 +526,7 @@
    "ex": "Nam moved in yesterday.",
    "vi": "dọn đến ở",
    "week": 1,
-   "img": "data/img/w1/x-move-in.webp",
+   "img": "data/img/w1/x-move-in.svg",
    "audio": "data/audio/w1/words/x-move-in.mp3",
    "ipa": "/muːv ɪn/",
    "ipa_us": "/muːv ɪn/"
@@ -538,7 +538,7 @@
    "ex": "After a week, he felt at home in the café.",
    "vi": "thấy như ở nhà",
    "week": 1,
-   "img": "data/img/w1/x-feel-at-home.webp",
+   "img": "data/img/w1/x-feel-at-home.svg",
    "audio": "data/audio/w1/words/x-feel-at-home.mp3",
    "ipa": "/fiːl ət həʊm/",
    "ipa_us": "/fiːl ət hoʊm/"
@@ -563,7 +563,7 @@
    "ex": "The meeting was like watching grass grow.",
    "vi": "chán như con gián",
    "week": 1,
-   "img": "data/img/w1/x-like-watching-grass-grow.webp",
+   "img": "data/img/w1/x-like-watching-grass-grow.svg",
    "audio": "data/audio/w1/words/x-like-watching-grass-grow.mp3",
    "ipa": "/laɪk ˈwɒtʃɪŋ ɡræs ɡrəʊ/",
    "ipa_us": "/laɪk ˈwɑːtʃɪŋ ɡræs ɡroʊ/"
@@ -575,7 +575,7 @@
    "ex": "Filling in forms is tedious.",
    "vi": "tẻ nhạt",
    "week": 1,
-   "img": "data/img/w1/x-tedious.webp",
+   "img": "data/img/w1/x-tedious.svg",
    "audio": "data/audio/w1/words/x-tedious.mp3",
    "ipa": "/ˈtiːdiəs/",
    "ipa_us": "/ˈtiːdiəs/"
@@ -587,7 +587,7 @@
    "ex": "She's always on the go – work, gym, friends.",
    "vi": "bận rộn suốt",
    "week": 1,
-   "img": "data/img/w1/x-on-the-go.webp",
+   "img": "data/img/w1/x-on-the-go.svg",
    "audio": "data/audio/w1/words/x-on-the-go.mp3",
    "ipa": "/ɒn ðə ɡəʊ/",
    "ipa_us": "/ɔn ðə ɡoʊ/"
@@ -599,7 +599,7 @@
    "ex": "Don't let the grass grow under your feet – apply today!",
    "vi": "đừng chần chừ",
    "week": 1,
-   "img": "data/img/w1/x-don-t-let-the-grass-grow-under-your-feet.webp",
+   "img": "data/img/w1/x-don-t-let-the-grass-grow-under-your-feet.svg",
    "audio": "data/audio/w1/words/x-don-t-let-the-grass-grow-under-your-feet.mp3",
    "ipa": "/dəʊnt let ðə ɡræs ɡrəʊ ˈʌndə jə fiːt/",
    "ipa_us": "/doʊnt let ðə ɡræs ɡroʊ ˈʌndər jə fiːt/"
@@ -624,7 +624,7 @@
    "ex": "He felt overwhelmed by all the emails.",
    "vi": "quá tải, choáng ngợp",
    "week": 1,
-   "img": "data/img/w1/x-overwhelmed.webp",
+   "img": "data/img/w1/x-overwhelmed.svg",
    "audio": "data/audio/w1/words/x-overwhelmed.mp3",
    "ipa": "/ˌəʊvəˈwelmd/",
    "ipa_us": "/ˌoʊvərˈwelmd/"
@@ -649,7 +649,7 @@
    "ex": "I bit off more than I could chew with this project.",
    "vi": "ôm việc quá sức",
    "week": 1,
-   "img": "data/img/w1/x-bite-off-more-than-you-can-chew.webp",
+   "img": "data/img/w1/x-bite-off-more-than-you-can-chew.svg",
    "audio": "data/audio/w1/words/x-bite-off-more-than-you-can-chew.mp3",
    "ipa": "/baɪt ɒf mɔː ðən jə kən tʃuː/",
    "ipa_us": "/baɪt ɔf moːr ðən jə kən tʃuː/"
@@ -661,7 +661,7 @@
    "ex": "Multitasking can make you slower.",
    "vi": "làm nhiều việc cùng lúc",
    "week": 1,
-   "img": "data/img/w1/x-multitasking.webp",
+   "img": "data/img/w1/x-multitasking.svg",
    "audio": "data/audio/w1/words/x-multitasking.mp3",
    "ipa": "/ˈmʌltiˌtæskɪŋ/",
    "ipa_us": "/ˈmʌltiˌtæskɪŋ/"
@@ -686,7 +686,7 @@
    "ex": "We kicked off the project with a meeting.",
    "vi": "bắt đầu, khởi động",
    "week": 1,
-   "img": "data/img/w1/x-kick-off-sth.webp",
+   "img": "data/img/w1/x-kick-off-sth.svg",
    "audio": "data/audio/w1/words/x-kick-off-sth.mp3",
    "ipa": "/kɪk ɒf/",
    "ipa_us": "/kɪk ɔf/"
@@ -698,7 +698,7 @@
    "ex": "My resolution is to listen to English every day.",
    "vi": "quyết tâm, mục tiêu tự hứa",
    "week": 1,
-   "img": "data/img/w1/x-a-resolution.webp",
+   "img": "data/img/w1/x-a-resolution.svg",
    "audio": "data/audio/w1/words/x-a-resolution.mp3",
    "ipa": "/ə ˌrezəˈluːʃən/",
    "ipa_us": "/ə ˌrezəˈluːʃən/"

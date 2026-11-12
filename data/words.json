@@ -319,7 +319,7 @@
    "ex": "Go past the park and you'll see it.",
    "vi": "đi qua",
    "week": 1,
-   "img": "data/img/w1/x-go-past.webp",
+   "img": "data/img/w1/x-go-past.svg",
    "audio": "data/audio/w1/words/x-go-past.mp3",
    "ipa": "/ɡəʊ pæst/",
    "ipa_us": "/ɡoʊ pæst/"
@@ -331,7 +331,7 @@
    "ex": "Get on at Hope Street and get off at Market Street.",
    "vi": "lên xe / xuống xe",
    "week": 1,
-   "img": "data/img/w1/x-get-on--get-off.webp",
+   "img": "data/img/w1/x-get-on--get-off.svg",
    "audio": "data/audio/w1/words/x-get-on--get-off.mp3",
    "ipa": "/ɡet ɒn ɡet ɒf/",
    "ipa_us": "/ɡet ɔn ɡet ɔf/"
@@ -382,7 +382,7 @@
    "ex": "Nam moved in yesterday.",
    "vi": "dọn đến ở",
    "week": 1,
-   "img": "data/img/w1/x-move-in.webp",
+   "img": "data/img/w1/x-move-in.svg",
    "audio": "data/audio/w1/words/x-move-in.mp3",
    "ipa": "/muːv ɪn/",
    "ipa_us": "/muːv ɪn/"
@@ -394,7 +394,7 @@
    "ex": "After a week, he felt at home in the café.",
    "vi": "thấy như ở nhà",
    "week": 1,
-   "img": "data/img/w1/x-feel-at-home.webp",
+   "img": "data/img/w1/x-feel-at-home.svg",
    "audio": "data/audio/w1/words/x-feel-at-home.mp3",
    "ipa": "/fiːl ət həʊm/",
    "ipa_us": "/fiːl ət hoʊm/"
@@ -419,7 +419,7 @@
    "ex": "The meeting was like watching grass grow.",
    "vi": "chán như con gián",
    "week": 1,
-   "img": "data/img/w1/x-like-watching-grass-grow.webp",
+   "img": "data/img/w1/x-like-watching-grass-grow.svg",
    "audio": "data/audio/w1/words/x-like-watching-grass-grow.mp3",
    "ipa": "/laɪk ˈwɒtʃɪŋ ɡræs ɡrəʊ/",
    "ipa_us": "/laɪk ˈwɑːtʃɪŋ ɡræs ɡroʊ/"
@@ -431,7 +431,7 @@
    "ex": "Filling in forms is tedious.",
    "vi": "tẻ nhạt",
    "week": 1,
-   "img": "data/img/w1/x-tedious.webp",
+   "img": "data/img/w1/x-tedious.svg",
    "audio": "data/audio/w1/words/x-tedious.mp3",
    "ipa": "/ˈtiːdiəs/",
    "ipa_us": "/ˈtiːdiəs/"
@@ -443,7 +443,7 @@
    "ex": "She's always on the go – work, gym, friends.",
    "vi": "bận rộn suốt",
    "week": 1,
-   "img": "data/img/w1/x-on-the-go.webp",
+   "img": "data/img/w1/x-on-the-go.svg",
    "audio": "data/audio/w1/words/x-on-the-go.mp3",
    "ipa": "/ɒn ðə ɡəʊ/",
    "ipa_us": "/ɔn ðə ɡoʊ/"
@@ -455,7 +455,7 @@
    "ex": "Don't let the grass grow under your feet – apply today!",
    "vi": "đừng chần chừ",
    "week": 1,
-   "img": "data/img/w1/x-don-t-let-the-grass-grow-under-your-feet.webp",
+   "img": "data/img/w1/x-don-t-let-the-grass-grow-under-your-feet.svg",
    "audio": "data/audio/w1/words/x-don-t-let-the-grass-grow-under-your-feet.mp3",
    "ipa": "/dəʊnt let ðə ɡræs ɡrəʊ ˈʌndə jə fiːt/",
    "ipa_us": "/doʊnt let ðə ɡræs ɡroʊ ˈʌndər jə fiːt/"
@@ -480,7 +480,7 @@
    "ex": "He felt overwhelmed by all the emails.",
    "vi": "quá tải, choáng ngợp",
    "week": 1,
-   "img": "data/img/w1/x-overwhelmed.webp",
+   "img": "data/img/w1/x-overwhelmed.svg",
    "audio": "data/audio/w1/words/x-overwhelmed.mp3",
    "ipa": "/ˌəʊvəˈwelmd/",
    "ipa_us": "/ˌoʊvərˈwelmd/"
@@ -505,7 +505,7 @@
    "ex": "I bit off more than I could chew with this project.",
    "vi": "ôm việc quá sức",
    "week": 1,
-   "img": "data/img/w1/x-bite-off-more-than-you-can-chew.webp",
+   "img": "data/img/w1/x-bite-off-more-than-you-can-chew.svg",
    "audio": "data/audio/w1/words/x-bite-off-more-than-you-can-chew.mp3",
    "ipa": "/baɪt ɒf mɔː ðən jə kən tʃuː/",
    "ipa_us": "/baɪt ɔf moːr ðən jə kən tʃuː/"
@@ -517,7 +517,7 @@
    "ex": "Multitasking can make you slower.",
    "vi": "làm nhiều việc cùng lúc",
    "week": 1,
-   "img": "data/img/w1/x-multitasking.webp",
+   "img": "data/img/w1/x-multitasking.svg",
    "audio": "data/audio/w1/words/x-multitasking.mp3",
    "ipa": "/ˈmʌltiˌtæskɪŋ/",
    "ipa_us": "/ˈmʌltiˌtæskɪŋ/"
@@ -542,7 +542,7 @@
    "ex": "We kicked off the project with a meeting.",
    "vi": "bắt đầu, khởi động",
    "week": 1,
-   "img": "data/img/w1/x-kick-off-sth.webp",
+   "img": "data/img/w1/x-kick-off-sth.svg",
    "audio": "data/audio/w1/words/x-kick-off-sth.mp3",
    "ipa": "/kɪk ɒf/",
    "ipa_us": "/kɪk ɔf/"
@@ -554,7 +554,7 @@
    "ex": "My resolution is to listen to English every day.",
    "vi": "quyết tâm, mục tiêu tự hứa",
    "week": 1,
-   "img": "data/img/w1/x-a-resolution.webp",
+   "img": "data/img/w1/x-a-resolution.svg",
    "audio": "data/audio/w1/words/x-a-resolution.mp3",
    "ipa": "/ə ˌrezəˈluːʃən/",
    "ipa_us": "/ə ˌrezəˈluːʃən/"
