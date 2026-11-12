@@ -563,6 +563,11 @@ table.days tr.next td{background:var(--accent-soft)}
   .parts-list .c{margin-left:auto;font-family:var(--f-mono);font-size:.75rem;color:var(--ink-3)}
 }
 .fb-full{display:none!important}
+.rv-w.st-known{opacity:.62}.rv-w.st-known:hover{opacity:1}
+.rv-w.st-due{border-color:color-mix(in srgb,var(--warn) 45%,var(--line))}
+.rv-act{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px}
+.rv-k{font:600 .78rem var(--f-ui);padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface);cursor:pointer}
+.rv-k.ok{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 40%,var(--line))}.rv-k.again{color:var(--warn)}
 .mic-sum{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}.mic-sum .bar{flex-basis:100%}
 .mic-g{display:flex;flex-direction:column;gap:6px;margin-top:6px}
 .td-row.mic-r{grid-template-columns:30px minmax(0,1fr) auto 22px;padding:8px 12px;gap:10px;min-height:0}
@@ -1883,12 +1888,17 @@ body{font-size:14.5px}
     if (fc) body = flashcardHtml();
     else if (rvTab === "words"){
       const types = ["all", ...new Set(words.map(w => w.type || "word"))];
-      const list = words.filter(w => (rvType === "all" || (w.type||"word") === rvType) && (hit(w.w) || hit(w.def) || hit(w.vi) || hit(w.ex)));
+      // Sắp xếp: cần ôn hôm nay → mới → đang học (chưa tới hạn, gần hạn trước) → đã thuộc (Tân 12/11)
+      const stOf = w => { const r = srsOf(w); return !r ? "new" : r.due <= todayStr() ? "due" : r.step >= 3 ? "known" : "learning"; };
+      const RANK = {due:0, new:1, learning:2, known:3};
+      const list = words.filter(w => (rvType === "all" || (w.type||"word") === rvType) && (hit(w.w) || hit(w.def) || hit(w.vi) || hit(w.ex)))
+        .map((w,i) => [w,i]).sort((a,b) => RANK[stOf(a[0])] - RANK[stOf(b[0])] || String(srsOf(a[0])?.due||"").localeCompare(String(srsOf(b[0])?.due||"")) || a[1]-b[1]).map(x => x[0]);
+      const inDays = d => { const n = Math.round((new Date(d+"T12:00:00") - new Date(todayStr()+"T12:00:00"))/864e5); return n <= 1 ? "tomorrow" : `in ${n} days`; };
       body = `<div class="rv-types">${types.map(t => `<button type="button" class="stab rv-ty" data-ty="${esc(t)}" aria-current="${rvType===t?"page":"false"}">${t==="all"?"All":`${TYPE_ICON[t]||""} ${esc(t)}`} <span class="note">${t==="all"?words.length:words.filter(w => (w.type||"word")===t).length}</span></button>`).join("")}</div>
-        <div class="rv-words">${list.map(w => { const r = srsOf(w), st = !r ? "new" : r.step >= 3 ? "known" : r.due <= todayStr() ? "due" : "learning";
-        return `<button type="button" class="rv-w" data-w="${esc(w.w)}">${w.img?`<img src="${esc(w.img)}" alt="" loading="lazy">`:`<span class="rv-noimg">${TYPE_ICON[w.type]||"📝"}</span>`}
-          <span class="rv-wt"><span class="w-h"><b>${esc(w.w)}</b>${sayBtn(w.audio)}</span>${ipaHtml(w)}<span class="pill rv-${st}">${{new:"new",due:"review today",learning:"learning",known:"known ✓"}[st]}</span></span>
-          <span class="rv-wd"><span class="pill rv-type">${TYPE_ICON[w.type]||""} ${esc(w.type||"word")}</span>${w.def?inline(w.def):""}${w.ex?`<i>“${esc(w.ex)}”</i>`:""}${w.vi?`<span class="note">🇻🇳 ${esc(w.vi)}</span>`:""}${w.week?`<span class="note">Week ${esc(w.week)}</span>`:""}</span></button>`; }).join("") || `<p class="note">Nothing matches “${esc(rvQ)}”.</p>`}</div>`;
+        <div class="rv-words">${list.map(w => { const r = srsOf(w), st = stOf(w);
+        return `<button type="button" class="rv-w st-${st}" data-w="${esc(w.w)}">${w.img?`<img src="${esc(w.img)}" alt="" loading="lazy">`:`<span class="rv-noimg">${TYPE_ICON[w.type]||"📝"}</span>`}
+          <span class="rv-wt"><span class="w-h"><b>${esc(w.w)}</b>${sayBtn(w.audio)}</span>${ipaHtml(w)}<span class="pill rv-${st}">${st==="new" ? "new" : st==="due" ? "🔁 review today" : st==="known" ? `known ✓ · ${inDays(r.due)}` : `next review ${inDays(r.due)}`}</span></span>
+          <span class="rv-wd"><span class="rv-act"><span role="button" tabindex="0" class="rv-k ok" data-k="ok">✅ I know it</span><span role="button" tabindex="0" class="rv-k again" data-k="again">🔁 Not yet</span></span><span class="pill rv-type">${TYPE_ICON[w.type]||""} ${esc(w.type||"word")}</span>${w.def?inline(w.def):""}${w.ex?`<i>“${esc(w.ex)}”</i>`:""}${w.vi?`<span class="note">🇻🇳 ${esc(w.vi)}</span>`:""}${w.week?`<span class="note">Week ${esc(w.week)}</span>`:""}</span></button>`; }).join("") || `<p class="note">Nothing matches “${esc(rvQ)}”.</p>`}</div>`;
     } else if (rvTab === "grammar"){
       body = `<div class="gr-list">${(LIB.grammar||[]).filter(g => hit(g.title)||hit(g.pattern)||hit(g.rule)||(g.examples||[]).some(hit)).map(g => {
         const ks = (g.practice||[]).map((_,i) => (SC.srs ||= {})[`g:${g.id}#${i}`]), st = ks.every(r => r?.step >= 3) ? "known" : ks.some(r => !r || r.due <= todayStr()) ? (ks.some(Boolean) ? "due" : "new") : "learning";
@@ -1931,6 +1941,10 @@ body{font-size:14.5px}
     const qi = $("#rv-q"); qi?.addEventListener("input", () => { rvQ = qi.value; const pos = qi.selectionStart; renderReview().then(() => { const n = $("#rv-q"); n?.focus(); try { n.setSelectionRange(pos,pos); } catch {} }); });
     v.querySelectorAll(".rv-tabs [data-t]").forEach(b => b.addEventListener("click", () => { rvTab = b.dataset.t; renderReview(); }));
     warmWords(fc && fc.deck !== "g" ? fc.cards.slice(fc.i, fc.i + 3) : words.slice(0, 60));
+    v.querySelectorAll(".rv-k").forEach(k => k.addEventListener("click", ev => { ev.stopPropagation(); const key = k.closest(".rv-w").dataset.w, r = (SC.srs ||= {})[key] || {step:-1};
+      if (k.dataset.k === "ok"){ const st = Math.min(r.step+1, SRS_DAYS.length-1); SC.srs[key] = {step:st, due:addDays(SRS_DAYS[st]), at:todayStr()}; }
+      else SC.srs[key] = {step:0, due:todayStr(), at:todayStr()};
+      saveSC(); renderReview(); }));
     v.querySelectorAll(".rv-w").forEach(b => b.addEventListener("click", () => { b.classList.toggle("open"); const w = words.find(x => x.w === b.dataset.w); if (w?.audio && b.classList.contains("open")) playWord(w.audio); }));
     v.querySelector(".fc-card")?.addEventListener("click", () => { fc.flip = !fc.flip; if (fc.flip && fc.deck !== "g"){ const w = fc.cards[fc.i]; if (w.audio) playWord(w.audio); } renderReview(); });
     v.querySelectorAll(".fc-b [data-r]").forEach(b => b.addEventListener("click", ev => { ev.stopPropagation(); const w = fc.cards[fc.i], key = fc.deck === "g" ? w.key : w.w, r = (SC.srs ||= {})[key] || {step:-1};
