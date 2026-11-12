@@ -127,7 +127,7 @@ def main():
 
     # ---- Thư viện ôn tập (tab 🧠 Review): gom mọi thứ đã học từ data/ → data/library.json (sinh tự động)
     plan = {i: ds for w in weeks for ds, d in (w.get("days") or {}).items() for i in d.get("lessons", [])}
-    lib = {"words": [], "learn": [], "story": [], "mistakes": [], "generated": "auto – tools/sync.py"}
+    lib = {"words": [], "grammar": [], "story": [], "mistakes": [], "generated": "auto – tools/sync.py"}
     seen = set()
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     try:
@@ -141,16 +141,23 @@ def main():
         with open(D("weeks.json"), "w", encoding="utf-8") as f: json.dump({"weeks": weeks}, f, ensure_ascii=False, indent=1)
     for w in weeks:
         for x in w.get("words") or []:
-            lib["words"].append({**x, "week": w["no"], "kind": "word"}); seen.add(x["w"].lower())
-    for c in prof.get("chunk_bank") or []:
-        if c["chunk"].lower() not in seen:
-            lib["words"].append({"w": c["chunk"], "vi": c.get("meaning", ""), "kind": "chunk", "learned": c.get("learned", ""), **({"ipa": _ipa(c["chunk"]), "ipa_us": _ipa(c["chunk"], "us")} if _ipa else {})})
+            lib["words"].append({**x, "week": w["no"], "type": x.get("type", "word")}); seen.add(x["w"].lower())
+    # kho Words (data/words.json): mọi từ/cụm/từ nối/phrasal verb/idiom đã dạy – có def, ex, vi, img, audio; IPA tự điền
+    wp = D("words.json"); WJ = load(wp) if os.path.exists(wp) else {"words": []}; ch = False
+    for x in WJ["words"]:
+        if _ipa and not x.get("ipa"): x["ipa"], x["ipa_us"] = _ipa(x["w"]), _ipa(x["w"], "us"); ch = True
+        if x["w"].lower() not in seen:
+            lib["words"].append({k: v for k, v in x.items() if k != "prompt"}); seen.add(x["w"].lower())
+    if ch:
+        with open(wp, "w", encoding="utf-8") as f: json.dump(WJ, f, ensure_ascii=False, indent=1)
+    lib["words"] = [w if os.path.exists(D("..", w["img"])) or not w.get("img") else {**w, "img": None} for w in lib["words"]]
+    lib["words"] = [w if not w.get("audio") or os.path.exists(D("..", w["audio"])) else {**w, "audio": None} for w in lib["words"]]
+    gp_ = D("grammar.json"); lib["grammar"] = load(gp_)["grammar"] if os.path.exists(gp_) else []
     for d in days_sorted:
         try: body = load(D("lessons", d["id"] + ".json"))
         except Exception: continue
         for pi, p in enumerate(body.get("parts", [])):
             ref = {"lesson": d["id"], "part": pi, "week": d.get("week"), "order": d.get("order"), "date": plan.get(d["id"], d.get("date")), "status": d.get("status")}
-            if p.get("learn"): lib["learn"].append({**ref, "title": p.get("title", ""), "img": (p.get("md", "").split("](")[1].split(")")[0] if "![" in p.get("md", "")[:200] else None)})
             if "Hope Street" in (p.get("title") or ""): lib["story"].append({**ref, "title": p.get("title", "")})
         gp = D("grades", d["id"] + ".json")
         if os.path.exists(gp):

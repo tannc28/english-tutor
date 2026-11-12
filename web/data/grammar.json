@@ -1,0 +1,277 @@
+{
+ "grammar": [
+  {
+   "id": "g-contractions",
+   "title": "Squeezed words: I'm · you'll · it's · I'd",
+   "pattern": "I am → I'm · you will → you'll · it is / it has → it's · I would / I had → I'd",
+   "rule": "In speech, small words join the word before them. **it's** can be *it is* or *it has*; **I'd** can be *I would* or *I had* – the next word tells you which.",
+   "examples": [
+    "It's been a long day. (= it has)",
+    "I'd better go. (= I had)",
+    "I'd love a coffee. (= I would)"
+   ],
+   "vi": "Dạng rút gọn – nghe kỹ âm cuối /m/, /l/, /s/, /d/.",
+   "mistake": {
+    "wrong": "I better go.",
+    "right": "I'd better go.",
+    "tip": "The /d/ is very short, but it's there."
+   },
+   "practice": [
+    {
+     "q": "“It's been raining all day.” – it's = ?",
+     "a": "it has",
+     "why": "been → present perfect → has."
+    },
+    {
+     "q": "“I'd love to come.” – I'd = ?",
+     "a": "I would",
+     "why": "would love = really want."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-used-to",
+   "title": "be used to + V-ing  vs  used to + V",
+   "pattern": "be/get used to + V-ing / noun  ·  used to + base verb",
+   "rule": "**be used to** = it is normal for you now. **get used to** = it is becoming normal. **used to + V** = you did it in the past, not now.",
+   "examples": [
+    "I'm used to getting up early.",
+    "You'll get used to the rain.",
+    "I used to live in Hanoi."
+   ],
+   "vi": "be used to + V-ing = đã quen với · used to + V = đã từng (giờ không còn).",
+   "mistake": {
+    "wrong": "I'm not used to get up early.",
+    "right": "I'm not used to getting up early.",
+    "tip": "In 'be used to', 'to' is a preposition → V-ing."
+   },
+   "practice": [
+    {
+     "q": "I'm slowly getting used to ___ (walk) in the rain.",
+     "a": "walking",
+     "why": "get used to + V-ing."
+    },
+    {
+     "q": "When I was a kid, I ___ (play) football every day.",
+     "a": "used to play",
+     "why": "past habit → used to + V."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-verb-ing",
+   "title": "Verb + -ing  or  verb + to-infinitive",
+   "pattern": "suggest / enjoy / finish / mind + V-ing  ·  decide / want / hope / plan + to V",
+   "rule": "Some verbs are followed by **-ing**, others by **to + verb**. Learn them as chunks: *suggest doing*, *decide to do*.",
+   "examples": [
+    "She suggested taking the tram.",
+    "I enjoy listening to podcasts.",
+    "He decided to leave early."
+   ],
+   "vi": "suggest/enjoy/finish + V-ing · decide/want/hope + to V.",
+   "mistake": {
+    "wrong": "He suggested to take a taxi.",
+    "right": "He suggested taking a taxi.",
+    "tip": "suggest + V-ing (or suggest that…)."
+   },
+   "practice": [
+    {
+     "q": "My friend suggested ___ (listen) to a podcast.",
+     "a": "listening",
+     "why": "suggest + V-ing."
+    },
+    {
+     "q": "I decided ___ (study) every morning.",
+     "a": "to study",
+     "why": "decide + to V."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-takes-spend",
+   "title": "It takes + time  vs  spend + time",
+   "pattern": "It takes (sb) + time + to V  ·  sb spends + time + V-ing",
+   "rule": "**It takes** focuses on the time needed. **Spend** focuses on the person using the time.",
+   "examples": [
+    "It takes twenty minutes to walk there.",
+    "It took me an hour to log in.",
+    "He spent an hour logging in."
+   ],
+   "vi": "It takes … to V = mất bao lâu · spend … V-ing = dành thời gian làm.",
+   "mistake": {
+    "wrong": "I spent an hour to log in.",
+    "right": "I spent an hour logging in.",
+    "tip": "spend + time + V-ing."
+   },
+   "practice": [
+    {
+     "q": "It ___ me ten minutes to find the café.",
+     "a": "took",
+     "why": "It takes/took + person + time."
+    },
+    {
+     "q": "She spends a lot of time ___ (read).",
+     "a": "reading",
+     "why": "spend + time + V-ing."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-contrast",
+   "title": "Contrast: although · even though · however · yet · though",
+   "pattern": "Although + clause, clause.  ·  Sentence. However, sentence.  ·  …, yet …  ·  …, though.",
+   "rule": "All show a **turn** in the idea. **Although/even though** join two parts in one sentence. **However** starts a new sentence + comma. **Yet** = but (surprising). **though** can end a sentence.",
+   "examples": [
+    "Although he was tired, he helped.",
+    "The answer sounded right. However, it was wrong.",
+    "It's small, yet it's always full.",
+    "The coffee is great, though."
+   ],
+   "vi": "Từ nối đối lập: mặc dù / tuy nhiên / vậy mà / dù vậy.",
+   "mistake": {
+    "wrong": "Although he was tired, but he helped.",
+    "right": "Although he was tired, he helped.",
+    "tip": "Don't use although + but together."
+   },
+   "practice": [
+    {
+     "q": "___ it was raining, we went for a walk.",
+     "a": "Although / Even though",
+     "why": "surprising contrast in one sentence."
+    },
+    {
+     "q": "It looked easy. ___, it took three hours.",
+     "a": "However",
+     "why": "new sentence + comma."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-unless",
+   "title": "unless = if … not",
+   "pattern": "unless + positive clause",
+   "rule": "**Unless** sets a condition: the result happens only if the condition is NOT true. Don't confuse it with *although* (a surprising fact).",
+   "examples": [
+    "I can't sleep unless it's dark. (= if it's not dark, I can't sleep)",
+    "Take the tram unless you want to walk an hour."
+   ],
+   "vi": "unless = trừ khi / nếu không. ≠ although (mặc dù).",
+   "mistake": {
+    "wrong": "Unless it was raining, we went out. (= although)",
+    "right": "Although it was raining, we went out.",
+    "tip": "unless = condition, although = surprising fact."
+   },
+   "practice": [
+    {
+     "q": "You won't understand it ___ you listen three times.",
+     "a": "unless",
+     "why": "= if you don't listen three times."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-rather",
+   "title": "rather · rather than · instead",
+   "pattern": "not A. Rather, B.  ·  B rather than A  ·  B instead of A / A. Instead, B.",
+   "rule": "Use these when you say **not A – B**. *Rather* often starts the second sentence.",
+   "examples": [
+    "He didn't text. Rather, he called.",
+    "I'll walk rather than take the tram.",
+    "Let's have tea instead of coffee."
+   ],
+   "vi": "thay vì / thay vào đó / đúng hơn là.",
+   "mistake": {
+    "wrong": "I'll walk rather than taking the tram.",
+    "right": "I'll walk rather than take the tram.",
+    "tip": "rather than + same verb form as the first verb."
+   },
+   "practice": [
+    {
+     "q": "She doesn't text much. ___, she calls.",
+     "a": "Rather / Instead",
+     "why": "not A (text) → B (call)."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-had-better",
+   "title": "had better + verb",
+   "pattern": "sb had better ('d better) + base verb",
+   "rule": "Strong advice: you should, or something bad may happen. Usually short: **I'd better**.",
+   "examples": [
+    "It's late – I'd better go.",
+    "You'd better take an umbrella."
+   ],
+   "vi": "nên (kẻo…) – mạnh hơn should.",
+   "mistake": {
+    "wrong": "You had better to take an umbrella.",
+    "right": "You'd better take an umbrella.",
+    "tip": "no 'to' after had better."
+   },
+   "practice": [
+    {
+     "q": "It's going to rain. You'd better ___ (take) an umbrella.",
+     "a": "take",
+     "why": "had better + base verb."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-place",
+   "title": "Place words: opposite · next to · on the corner · at the end of",
+   "pattern": "opposite + place · next to + place · on the corner (of …) · at the end of the street",
+   "rule": "Use these to say **where** something is, especially when giving directions.",
+   "examples": [
+    "The tram stop is opposite the church.",
+    "The shop is next to the bank.",
+    "There's a café on the corner."
+   ],
+   "vi": "đối diện · bên cạnh · ở góc phố · ở cuối phố.",
+   "mistake": {
+    "wrong": "The shop is next the bank.",
+    "right": "The shop is next to the bank.",
+    "tip": "next TO."
+   },
+   "practice": [
+    {
+     "q": "The bank and the shop are side by side. The shop is ___ the bank.",
+     "a": "next to",
+     "why": "right beside."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-rest-of",
+   "title": "the rest of the · the remaining · the remainder of the",
+   "pattern": "the rest of the + noun · the remaining + noun · the remainder of the + noun",
+   "rule": "All mean **what is left**. *The rest of the* is the most common in speech. *Remaining* is an adjective before a noun.",
+   "examples": [
+    "I'll read the rest of the story tonight.",
+    "The remaining countries agreed."
+   ],
+   "vi": "phần còn lại của …",
+   "mistake": {
+    "wrong": "the rest countries",
+    "right": "the rest of the countries",
+    "tip": "rest needs 'of the'."
+   },
+   "practice": [
+    {
+     "q": "I ate half of the pizza. I'll eat ___ ___ ___ it later.",
+     "a": "the rest of",
+     "why": "what is left."
+    }
+   ],
+   "week": 1
+  }
+ ]
+}

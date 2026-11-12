@@ -285,6 +285,18 @@ body.sheet-open .book{padding-bottom:62vh}
 .wk-review{padding:8px 10px;border-radius:8px;background:var(--sunk)}
 @media (max-width:520px){.td-row{grid-template-columns:44px 52px minmax(0,1fr);}.td-row .td-go{grid-column:1/-1;justify-self:end}.td-row img,.td-ph{width:52px;height:40px}.td-pod{grid-template-columns:44px minmax(0,1fr)}.td-pod .pli-b{grid-column:1/-1}.ws{gap:3px}.ws-d{padding:6px 3px}.ws-l{font-size:.7rem;padding:1px 3px}}
 .wk-tg{margin-top:10px}#wk-tg-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.wk-tgi{font-size:.8rem;padding:4px 9px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);background:var(--sunk)}
+.rv-types{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;margin-bottom:6px}
+.rv-type{align-self:flex-start;font-size:.72rem}
+.fc-starts{display:flex;gap:8px;flex-wrap:wrap}
+.gr-list{display:flex;flex-direction:column;gap:10px}
+.gr-card{display:flex;flex-direction:column;gap:8px;text-align:left;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer}
+.gr-card.open{border-color:var(--accent)}
+.gr-h{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.gr-h .pill{flex:none;font-size:.7rem}
+.gr-pat{font-family:var(--f-mono);font-size:.82rem;background:var(--sunk);padding:6px 10px;border-radius:8px;white-space:normal;line-height:1.5}
+.gr-more{display:none;flex-direction:column;gap:8px}.gr-card.open .gr-more{display:flex}
+.gr-ex{display:flex;flex-direction:column;gap:2px;font-style:italic}
+.fc-card.gr{padding:18px 16px}.fc-q{font-size:1.25rem;line-height:1.4}.fc-a{font-size:1.4rem;color:var(--accent)}
+.fc-noimg{width:100%;height:120px;font-size:2.4rem;border-radius:0}
 .rv-hero{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.rv-hero h2{margin:4px 0}
 #rv-q{width:100%;margin:12px 0 8px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--surface);color:var(--ink)}
 .rv-tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}.rv-tabs .tbtn{white-space:nowrap}
@@ -1605,7 +1617,9 @@ table.days tr.next td{background:var(--accent-soft)}
   }
 
   // ---- 🧠 Review: tra cứu mọi thứ đã học (data/library.json – sync.py tự gom) + thẻ lật ôn tập (SRS lưu trong drafts/selfcheck)
-  let LIB = null, rvTab = "words", rvQ = "", fc = null, rvAudio = null;
+  let LIB = null, rvTab = "words", rvQ = "", fc = null, rvAudio = null, rvType = "all";
+  const TYPE_ICON = {"word":"📝", "chunk":"🧩", "phrasal verb":"🔀", "idiom":"💡", "linking word":"🔗", "phrase":"🧩"};
+  const gCards = () => (LIB.grammar||[]).flatMap(g => (g.practice||[]).map((p,i) => ({key:`g:${g.id}#${i}`, g, p})));
   const SRS_DAYS = [1, 3, 7, 14, 30];
   const addDays = n => { const d = new Date(); d.setDate(d.getDate()+n); return ymd(d); };
   const srsOf = w => (SC.srs ||= {})[w.w] || null;
@@ -1614,19 +1628,29 @@ table.days tr.next td{background:var(--accent-soft)}
     const v = $("#view-review");
     try { await loadLevels(); LIB ||= await getJSON("data/library.json"); } catch(e){ v.innerHTML = `<section class="card sec"><p class="note">Couldn't load your library (${esc(e?.code||"error")}).</p></section>`; return; }
     const words = LIB.words, due = words.filter(isDue), known = words.filter(w => srsOf(w)?.step >= 3);
+    const gc = gCards(), gDue = gc.filter(c => { const r = (SC.srs ||= {})[c.key]; return !r || r.due <= todayStr(); });
     const q = rvQ.trim().toLowerCase(), hit = t => !q || String(t||"").toLowerCase().includes(q);
-    const TABS = [["words",`📚 Words & chunks (${words.length})`],["learn",`🧩 Grammar & skills (${LIB.learn.length})`],["mistakes",`🔧 My mistakes (${LIB.mistakes.length})`],["story",`📖 Story (${LIB.story.length})`],["next","➡️ What's next"]];
+    const TABS = [["words",`📚 Words (${words.length})`],["grammar",`🧩 Grammar (${(LIB.grammar||[]).length})`],["mistakes",`🔧 My mistakes (${LIB.mistakes.length})`],["story",`📖 Story (${LIB.story.length})`],["next","➡️ What's next"]];
     let body = "";
     if (fc) body = flashcardHtml();
     else if (rvTab === "words"){
-      const list = words.filter(w => hit(w.w) || hit(w.def) || hit(w.vi) || hit(w.ex));
-      body = `<div class="rv-words">${list.map(w => { const r = srsOf(w), st = !r ? "new" : r.step >= 3 ? "known" : r.due <= todayStr() ? "due" : "learning";
-        return `<button type="button" class="rv-w" data-w="${esc(w.w)}">${w.img?`<img src="${esc(w.img)}" alt="" loading="lazy">`:`<span class="rv-noimg">${w.kind==="chunk"?"🧩":"📝"}</span>`}
+      const types = ["all", ...new Set(words.map(w => w.type || "word"))];
+      const list = words.filter(w => (rvType === "all" || (w.type||"word") === rvType) && (hit(w.w) || hit(w.def) || hit(w.vi) || hit(w.ex)));
+      body = `<div class="rv-types">${types.map(t => `<button type="button" class="stab rv-ty" data-ty="${esc(t)}" aria-current="${rvType===t?"page":"false"}">${t==="all"?"All":`${TYPE_ICON[t]||""} ${esc(t)}`} <span class="note">${t==="all"?words.length:words.filter(w => (w.type||"word")===t).length}</span></button>`).join("")}</div>
+        <div class="rv-words">${list.map(w => { const r = srsOf(w), st = !r ? "new" : r.step >= 3 ? "known" : r.due <= todayStr() ? "due" : "learning";
+        return `<button type="button" class="rv-w" data-w="${esc(w.w)}">${w.img?`<img src="${esc(w.img)}" alt="" loading="lazy">`:`<span class="rv-noimg">${TYPE_ICON[w.type]||"📝"}</span>`}
           <span class="rv-wt"><b>${esc(w.w)}</b>${w.ipa?`<span class="ipa">${esc(w.ipa)}${w.ipa_us && w.ipa_us!==w.ipa?` · US ${esc(w.ipa_us)}`:""}</span>`:""}<span class="pill rv-${st}">${{new:"new",due:"review today",learning:"learning",known:"known ✓"}[st]}</span></span>
-          <span class="rv-wd">${w.def?inline(w.def):""}${w.ex?`<i>“${esc(w.ex)}”</i>`:""}${w.vi?`<span class="note">🇻🇳 ${esc(w.vi)}</span>`:""}${w.week?`<span class="note">Week ${esc(w.week)}</span>`:""}</span></button>`; }).join("") || `<p class="note">Nothing matches “${esc(rvQ)}”.</p>`}</div>`;
-    } else if (rvTab === "learn"){
-      body = `<div class="rv-list">${LIB.learn.filter(x => hit(x.title)).map(x => `<a class="rv-row" href="#${esc(x.lesson)}/p${esc(x.part)}">${x.img?`<img src="${esc(x.img)}" alt="">`:`<span class="rv-noimg">🧩</span>`}<span><b>${esc(x.title)}</b><span class="note">Week ${esc(x.week)} · Lesson ${esc(x.order)}${x.date?` · ${esc(fmtDate(x.date))}`:""} · ${x.status==="graded"?"✅ done":"not done yet"}</span></span><span class="td-go">Open ▶</span></a>`).join("")}</div>
-        <p class="note">Each one opens the ① Learn part of the lesson – tables, examples and audio.</p>`;
+          <span class="rv-wd"><span class="pill rv-type">${TYPE_ICON[w.type]||""} ${esc(w.type||"word")}</span>${w.def?inline(w.def):""}${w.ex?`<i>“${esc(w.ex)}”</i>`:""}${w.vi?`<span class="note">🇻🇳 ${esc(w.vi)}</span>`:""}${w.week?`<span class="note">Week ${esc(w.week)}</span>`:""}</span></button>`; }).join("") || `<p class="note">Nothing matches “${esc(rvQ)}”.</p>`}</div>`;
+    } else if (rvTab === "grammar"){
+      body = `<div class="gr-list">${(LIB.grammar||[]).filter(g => hit(g.title)||hit(g.pattern)||hit(g.rule)||(g.examples||[]).some(hit)).map(g => {
+        const ks = (g.practice||[]).map((_,i) => (SC.srs ||= {})[`g:${g.id}#${i}`]), st = ks.every(r => r?.step >= 3) ? "known" : ks.some(r => !r || r.due <= todayStr()) ? (ks.some(Boolean) ? "due" : "new") : "learning";
+        return `<button type="button" class="gr-card" data-g="${esc(g.id)}">
+          <span class="gr-h"><b>${esc(g.title)}</b><span class="pill rv-${st}">${{new:"new",due:"review today",learning:"learning",known:"known ✓"}[st]}</span></span>
+          <code class="gr-pat">${esc(g.pattern)}</code>
+          <span class="gr-more"><span class="md">${md(g.rule)}</span>
+            <span class="gr-ex">${(g.examples||[]).map(e => `<span>• ${inline(e)}</span>`).join("")}</span>
+            ${g.mistake?`<span class="rv-no">❌ ${esc(g.mistake.wrong)}</span><span class="rv-ok">✅ ${esc(g.mistake.right)}</span><span class="rv-tip">💡 ${esc(g.mistake.tip)}</span>`:""}
+            ${g.vi?`<span class="note">🇻🇳 ${esc(g.vi)}</span>`:""}</span></button>`; }).join("")}</div>`;
     } else if (rvTab === "mistakes"){
       body = LIB.mistakes.length ? `<div class="rv-mis">${LIB.mistakes.filter(m => hit(m.q)||hit(m.right)||hit(m.tip)).map(m => `<div class="rv-m"><span class="note">${esc(fmtDate(m.date))} · <a href="#${esc(m.lesson)}">lesson</a></span><b>${esc(m.q)}</b>
           <span class="rv-no">❌ ${esc(m.yours)}</span><span class="rv-ok">✅ ${esc(m.right)}</span><span class="rv-tip">💡 ${esc(m.tip)}</span></div>`).join("")}</div>` : `<p class="note">No mistakes saved yet.</p>`;
@@ -1645,21 +1669,24 @@ table.days tr.next td{background:var(--accent-soft)}
     }
     v.innerHTML = `
       <section class="card sec rv-top">
-        <div class="rv-hero"><div><span class="label">Review – everything you've learned</span><h2>${(() => { const rv = due.filter(w => srsOf(w)).length, nw = due.length - rv; return due.length ? [rv?`${rv} to review`:"", nw?`${Math.min(nw,10)} new card${Math.min(nw,10)>1?"s":""} today`:""].filter(Boolean).join(" · ") : "All caught up 🎉"; })()}</h2>
-          <p class="note">${words.length} words & chunks · ${known.length} known · cards come back after 1 → 3 → 7 → 14 → 30 days, so you don't forget.</p></div>
-          ${fc ? "" : `<button type="button" class="primary" id="fc-start" ${due.length?"":"disabled"}>🃏 Practise ${Math.min(10, due.length)} cards</button>`}</div>
+        <div class="rv-hero"><div><span class="label">Review – everything you've learned</span><h2>${(() => { const rv = due.filter(w => srsOf(w)).length + gDue.filter(c => SC.srs[c.key]).length, nw = due.length + gDue.length - rv; return due.length ? [rv?`${rv} to review`:"", nw?`${Math.min(nw,10)} new card${Math.min(nw,10)>1?"s":""} today`:""].filter(Boolean).join(" · ") : "All caught up 🎉"; })()}</h2>
+          <p class="note">${words.length} words · ${(LIB.grammar||[]).length} grammar points · ${known.length} words known · cards come back after 1 → 3 → 7 → 14 → 30 days, so you don't forget.</p></div>
+          ${fc ? "" : `<div class="fc-starts"><button type="button" class="primary" id="fc-start" ${due.length?"":"disabled"}>🃏 Words (${Math.min(10, due.length)})</button><button type="button" class="primary" id="fc-start-g" ${gDue.length?"":"disabled"}>🧩 Grammar (${Math.min(8, gDue.length)})</button></div>`}</div>
         ${fc ? "" : `<input type="search" id="rv-q" placeholder="Search words, grammar, mistakes…" value="${esc(rvQ)}">
         <div class="rv-tabs">${TABS.map(([k,t]) => `<button type="button" class="tbtn" data-t="${k}" aria-pressed="${rvTab===k}">${t}</button>`).join("")}</div>`}
       </section>
       <section class="card sec">${body}</section>`;
+    $("#fc-start-g")?.addEventListener("click", () => { fc = {deck:"g", cards: gDue.slice(0,8), i:0, flip:false, ok:0}; renderReview(); });
+    v.querySelectorAll(".rv-ty").forEach(b => b.addEventListener("click", () => { rvType = b.dataset.ty; renderReview(); }));
+    v.querySelectorAll(".gr-card").forEach(b => b.addEventListener("click", () => b.classList.toggle("open")));
     $("#fc-start")?.addEventListener("click", () => { const pool = words.filter(isDue).sort((a,b) => (srsOf(a)?1:0)-(srsOf(b)?1:0) || String(srsOf(a)?.due||"").localeCompare(String(srsOf(b)?.due||""))); fc = {cards: pool.slice(0,10), i:0, flip:false, ok:0}; renderReview(); });
     const qi = $("#rv-q"); qi?.addEventListener("input", () => { rvQ = qi.value; const pos = qi.selectionStart; renderReview().then(() => { const n = $("#rv-q"); n?.focus(); try { n.setSelectionRange(pos,pos); } catch {} }); });
     v.querySelectorAll(".rv-tabs [data-t]").forEach(b => b.addEventListener("click", () => { rvTab = b.dataset.t; renderReview(); }));
     v.querySelectorAll(".rv-w").forEach(b => b.addEventListener("click", () => { b.classList.toggle("open"); const w = words.find(x => x.w === b.dataset.w); if (w?.audio && b.classList.contains("open")) playWord(w.audio); }));
-    v.querySelector(".fc-card")?.addEventListener("click", () => { fc.flip = !fc.flip; if (fc.flip){ const w = fc.cards[fc.i]; if (w.audio) playWord(w.audio); } renderReview(); });
-    v.querySelectorAll(".fc-b [data-r]").forEach(b => b.addEventListener("click", ev => { ev.stopPropagation(); const w = fc.cards[fc.i], r = srsOf(w) || {step:-1};
-      if (b.dataset.r === "ok"){ const st = Math.min(r.step+1, SRS_DAYS.length-1); SC.srs[w.w] = {step:st, due:addDays(SRS_DAYS[st]), at:todayStr()}; fc.ok++; }
-      else { SC.srs[w.w] = {step:0, due:todayStr(), at:todayStr()}; fc.cards.push(w); }
+    v.querySelector(".fc-card")?.addEventListener("click", () => { fc.flip = !fc.flip; if (fc.flip && fc.deck !== "g"){ const w = fc.cards[fc.i]; if (w.audio) playWord(w.audio); } renderReview(); });
+    v.querySelectorAll(".fc-b [data-r]").forEach(b => b.addEventListener("click", ev => { ev.stopPropagation(); const w = fc.cards[fc.i], key = fc.deck === "g" ? w.key : w.w, r = (SC.srs ||= {})[key] || {step:-1};
+      if (b.dataset.r === "ok"){ const st = Math.min(r.step+1, SRS_DAYS.length-1); SC.srs[key] = {step:st, due:addDays(SRS_DAYS[st]), at:todayStr()}; fc.ok++; }
+      else { SC.srs[key] = {step:0, due:todayStr(), at:todayStr()}; fc.cards.push(w); }
       saveSC(); fc.i++; fc.flip = false; renderReview(); }));
     $("#fc-end")?.addEventListener("click", () => { fc = null; renderReview(); });
   }
@@ -1667,9 +1694,14 @@ table.days tr.next td{background:var(--accent-soft)}
   function flashcardHtml(){
     if (fc.i >= fc.cards.length) return `<div class="fc-done"><div class="wc-big">🎉</div><b>Done! ${fc.ok} card${fc.ok===1?"":"s"} remembered.</b><p class="note">They'll come back later, just before you forget them.</p><button type="button" class="primary" id="fc-end">Back to Review</button></div>`;
     const w = fc.cards[fc.i];
+    if (fc.deck === "g") return `<div class="fc"><span class="note mono">${fc.i+1} / ${fc.cards.length} · think of the answer, then tap</span>
+      <button type="button" class="fc-card gr ${fc.flip?"flip":""}"><span class="note">🧩 ${esc(w.g.title)}</span><b class="fc-q">${inline(w.p.q)}</b>
+        ${fc.flip ? `<span class="fc-back"><b class="fc-a">${esc(w.p.a)}</b><span>${inline(w.p.why||"")}</span><code class="gr-pat">${esc(w.g.pattern)}</code></span>` : `<span class="note">Tap to see the answer</span>`}</button>
+      ${fc.flip ? `<div class="fc-b"><button type="button" class="ghost" data-r="again">🔁 Again</button><button type="button" class="primary" data-r="ok">✅ Got it</button></div>` : ""}
+      <button type="button" class="linkbtn" id="fc-end">Stop</button></div>`;
     return `<div class="fc"><span class="note mono">${fc.i+1} / ${fc.cards.length} · tap the card to flip</span>
       <button type="button" class="fc-card ${fc.flip?"flip":""}">
-        ${w.img?`<img src="${esc(w.img)}" alt="">`:""}<b class="fc-w">${esc(w.w)}</b>${w.ipa?`<span class="ipa">${esc(w.ipa)}${w.ipa_us && w.ipa_us!==w.ipa?` · US ${esc(w.ipa_us)}`:""}</span>`:""}
+        ${w.img?`<img src="${esc(w.img)}" alt="">`:`<span class="rv-noimg fc-noimg">${TYPE_ICON[w.type]||"📝"}</span>`}<span class="note">${TYPE_ICON[w.type]||""} ${esc(w.type||"word")}</span><b class="fc-w">${esc(w.w)}</b>${w.ipa?`<span class="ipa">${esc(w.ipa)}${w.ipa_us && w.ipa_us!==w.ipa?` · US ${esc(w.ipa_us)}`:""}</span>`:""}
         ${fc.flip ? `<span class="fc-back">${w.def?`<span>${inline(w.def)}</span>`:""}${w.ex?`<i>“${esc(w.ex)}”</i>`:""}${w.vi?`<span class="note">🇻🇳 ${esc(w.vi)}</span>`:""}</span>` : `<span class="note">What does it mean? Think, then tap.</span>`}
       </button>
       ${fc.flip ? `<div class="fc-b"><button type="button" class="ghost" data-r="again">🔁 Again</button><button type="button" class="primary" data-r="ok">✅ Got it</button></div>` : ""}

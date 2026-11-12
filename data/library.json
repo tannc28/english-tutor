@@ -9,8 +9,8 @@
    "audio": "data/audio/w1/words/w-flat.mp3",
    "ipa": "/flæt/",
    "ipa_us": "/flæt/",
-   "week": 1,
-   "kind": "word"
+   "type": "word",
+   "week": 1
   },
   {
    "w": "heating",
@@ -21,8 +21,8 @@
    "audio": "data/audio/w1/words/w-heating.mp3",
    "ipa": "/ˈhiːtɪŋ/",
    "ipa_us": "/ˈhiːtɪŋ/",
-   "week": 1,
-   "kind": "word"
+   "type": "word",
+   "week": 1
   },
   {
    "w": "umbrella",
@@ -33,8 +33,8 @@
    "audio": "data/audio/w1/words/w-umbrella.mp3",
    "ipa": "/ʌmˈbrelə/",
    "ipa_us": "/ʌmˈbrelə/",
-   "week": 1,
-   "kind": "word"
+   "type": "word",
+   "week": 1
   },
   {
    "w": "counter",
@@ -45,8 +45,8 @@
    "audio": "data/audio/w1/words/w-counter.mp3",
    "ipa": "/ˈkaʊntə/",
    "ipa_us": "/ˈkaʊntər/",
-   "week": 1,
-   "kind": "word"
+   "type": "word",
+   "week": 1
   },
   {
    "w": "bacon sandwich",
@@ -56,8 +56,8 @@
    "audio": "data/audio/w1/words/w-sandwich.mp3",
    "ipa": "/ˈbeɪkən ˈsændwɪtʃ/",
    "ipa_us": "/ˈbeɪkən ˈsændwɪtʃ/",
-   "week": 1,
-   "kind": "word"
+   "type": "word",
+   "week": 1
   },
   {
    "w": "tram",
@@ -68,8 +68,8 @@
    "audio": "data/audio/w1/words/w-tram.mp3",
    "ipa": "/træm/",
    "ipa_us": "/træm/",
-   "week": 1,
-   "kind": "word"
+   "type": "word",
+   "week": 1
   },
   {
    "w": "on the corner",
@@ -80,8 +80,8 @@
    "audio": "data/audio/w1/words/w-corner.mp3",
    "ipa": "/ɒn ðə ˈkɔːnə/",
    "ipa_us": "/ɔn ðə ˈkɔːrnər/",
-   "week": 1,
-   "kind": "word"
+   "type": "chunk",
+   "week": 1
   },
   {
    "w": "be used to + V-ing",
@@ -92,8 +92,8 @@
    "audio": "data/audio/w1/words/w-used.mp3",
    "ipa": "/bi juːst tə/",
    "ipa_us": "/bi juːst tə/",
-   "week": 1,
-   "kind": "word"
+   "type": "chunk",
+   "week": 1
   },
   {
    "w": "show sb around",
@@ -104,8 +104,8 @@
    "audio": "data/audio/w1/words/w-showaround.mp3",
    "ipa": "/ʃəʊ ˈsʌmbɒdi əˈraʊnd/",
    "ipa_us": "/ʃoʊ ˈsʌmbɑːdi ərˈraʊnd/",
-   "week": 1,
-   "kind": "word"
+   "type": "phrasal verb",
+   "week": 1
   },
   {
    "w": "give sb a hand",
@@ -116,8 +116,8 @@
    "audio": "data/audio/w1/words/w-hand.mp3",
    "ipa": "/ɡɪv ˈsʌmbɒdi ə hænd/",
    "ipa_us": "/ɡɪv ˈsʌmbɑːdi ə hænd/",
-   "week": 1,
-   "kind": "word"
+   "type": "idiom",
+   "week": 1
   },
   {
    "w": "take a deep breath",
@@ -128,8 +128,8 @@
    "audio": "data/audio/w1/words/w-breath.mp3",
    "ipa": "/teɪk ə diːp breθ/",
    "ipa_us": "/teɪk ə diːp breθ/",
-   "week": 1,
-   "kind": "word"
+   "type": "chunk",
+   "week": 1
   },
   {
    "w": "get lost",
@@ -140,196 +140,1384 @@
    "audio": "data/audio/w1/words/w-lost.mp3",
    "ipa": "/ɡet lɒst/",
    "ipa_us": "/ɡet lɔst/",
-   "week": 1,
-   "kind": "word"
+   "type": "phrasal verb",
+   "week": 1
   },
   {
    "w": "work as a …",
-   "vi": "làm (vị trí) …",
-   "kind": "chunk",
-   "learned": "2026-11-11",
+   "type": "chunk",
+   "def": "have a particular job",
+   "ex": "Nam works as a designer in Manchester.",
+   "vi": "làm nghề …",
+   "week": 1,
+   "img": "data/img/w1/x-work-as-a.svg",
+   "audio": "data/audio/w1/words/x-work-as-a.mp3",
    "ipa": "/wɜːk əz ə/",
-   "ipa_us": "/wɜːk əz ə/"
+   "ipa_us": "/wɜːk əz ə/",
+   "strip": {
+    "panels": [
+     [
+      "👨‍💻",
+      "Nam's job:"
+     ],
+     [
+      "🎨",
+      "designer"
+     ]
+    ],
+    "link": "He works as a designer",
+    "note": ""
+   }
   },
   {
    "w": "be responsible for …",
+   "type": "chunk",
+   "def": "it is your job to take care of something",
+   "ex": "Claire is responsible for the whole team.",
    "vi": "chịu trách nhiệm về …",
-   "kind": "chunk",
-   "learned": "2026-11-11",
+   "week": 1,
+   "img": "data/img/w1/x-be-responsible-for.svg",
+   "audio": "data/audio/w1/words/x-be-responsible-for.mp3",
    "ipa": "/bi rɪˈspɒnsɪbəl fə/",
-   "ipa_us": "/bi rᵻˈspɑːnsᵻbəl fər/"
+   "ipa_us": "/bi rᵻˈspɑːnsᵻbəl fər/",
+   "strip": {
+    "panels": [
+     [
+      "👩‍💼",
+      "Claire"
+     ],
+     [
+      "👥👥",
+      "the whole team"
+     ]
+    ],
+    "link": "responsible for the team",
+    "note": ""
+   }
   },
   {
    "w": "work on …",
-   "vi": "làm (việc gì / dự án)",
-   "kind": "chunk",
-   "learned": "2026-11-11",
+   "type": "phrasal verb",
+   "def": "spend time doing or improving something",
+   "ex": "Tom is working on a new website.",
+   "vi": "làm (việc/dự án)",
+   "week": 1,
+   "img": "data/img/w1/x-work-on.svg",
+   "audio": "data/audio/w1/words/x-work-on.mp3",
    "ipa": "/wɜːk ɒn/",
-   "ipa_us": "/wɜːk ɔn/"
+   "ipa_us": "/wɜːk ɔn/",
+   "strip": {
+    "panels": [
+     [
+      "👨‍💻",
+      "Tom at his laptop"
+     ],
+     [
+      "🌐🛠️",
+      "a new website"
+     ]
+    ],
+    "link": "He's working on a website",
+    "note": "",
+    "sym": "→"
+   }
   },
   {
-   "w": "it takes sb + time",
-   "vi": "tốn (ai) bao lâu",
-   "kind": "chunk",
-   "learned": "2026-11-11",
-   "ipa": "/ɪt teɪks ˈsʌmbɒdi taɪm/",
-   "ipa_us": "/ɪt teɪks ˈsʌmbɑːdi taɪm/"
+   "w": "it takes + time",
+   "type": "chunk",
+   "def": "you need this much time to do something",
+   "ex": "It takes twenty minutes to walk to work.",
+   "vi": "mất (bao lâu)",
+   "week": 1,
+   "img": "data/img/w1/x-it-takes--time.svg",
+   "audio": "data/audio/w1/words/x-it-takes--time.mp3",
+   "ipa": "/ɪt teɪks taɪm/",
+   "ipa_us": "/ɪt teɪks taɪm/",
+   "strip": {
+    "panels": [
+     [
+      "🏠🚶",
+      "walk to work"
+     ],
+     [
+      "⏱️",
+      "20 minutes"
+     ]
+    ],
+    "link": "It takes 20 minutes",
+    "note": ""
+   }
   },
   {
-   "w": "spend + time (on)",
-   "vi": "dành thời gian",
-   "kind": "chunk",
-   "learned": "2026-11-11",
+   "w": "spend time (doing)",
+   "type": "chunk",
+   "def": "use time for an activity",
+   "ex": "He spent an hour logging in to his new laptop.",
+   "vi": "dành thời gian (làm gì)",
+   "week": 1,
+   "img": "data/img/w1/x-spend-time-doing.svg",
+   "audio": "data/audio/w1/words/x-spend-time-doing.mp3",
    "ipa": "/spend taɪm/",
-   "ipa_us": "/spend taɪm/"
+   "ipa_us": "/spend taɪm/",
+   "strip": {
+    "panels": [
+     [
+      "💻🔑",
+      "logging in"
+     ],
+     [
+      "⏳",
+      "one hour"
+     ]
+    ],
+    "link": "He spent an hour logging in",
+    "note": ""
+   }
   },
   {
-   "w": "every day / everyday",
-   "vi": "mỗi ngày / thường ngày (tính từ)",
-   "kind": "chunk",
-   "learned": "2026-11-11",
-   "ipa": "/ˈevrɪ deɪ ˈevrɪˌdeɪ/",
-   "ipa_us": "/ˈevri deɪ ˈevrɪˌdeɪ/"
+   "w": "every day vs everyday",
+   "type": "word",
+   "def": "every day = each day (adverb); everyday = normal, usual (adjective)",
+   "ex": "I drink coffee every day. It's an everyday thing.",
+   "vi": "mỗi ngày / thường ngày",
+   "week": 1,
+   "img": "data/img/w1/x-every-day-vs-everyday.svg",
+   "audio": "data/audio/w1/words/x-every-day-vs-everyday.mp3",
+   "ipa": "/ˈevrɪ deɪ ˌviːˈes ˈevrɪˌdeɪ/",
+   "ipa_us": "/ˈevri deɪ ˌviːˈes ˈevrɪˌdeɪ/",
+   "strip": {
+    "panels": [
+     [
+      "📅✅✅",
+      "every day = each day"
+     ],
+     [
+      "👕☕",
+      "everyday = normal"
+     ]
+    ],
+    "link": "every day ≠ everyday",
+    "note": ""
+   }
   },
   {
-   "w": "although + mệnh đề (≠ unless)",
-   "vi": "mặc dù (≠ trừ khi)",
-   "kind": "chunk",
-   "learned": "2026-11-11",
-   "ipa": "/ɔːlˈðəʊ em ˌeˈneɪtʃ/",
-   "ipa_us": "/ɔːlˈðoʊ em ˌeˈneɪtʃ/"
+   "w": "although",
+   "type": "linking word",
+   "def": "shows a surprising contrast: A is true, but B is also true",
+   "ex": "Although he was tired, he helped Mr Patel.",
+   "vi": "mặc dù",
+   "week": 1,
+   "img": "data/img/w1/x-although.svg",
+   "audio": "data/audio/w1/words/x-although.mp3",
+   "ipa": "/ɔːlˈðəʊ/",
+   "ipa_us": "/ɔːlˈðoʊ/",
+   "strip": {
+    "panels": [
+     [
+      "😫",
+      "He was tired."
+     ],
+     [
+      "📦💪",
+      "He helped anyway."
+     ]
+    ],
+    "link": "although",
+    "note": "surprise"
+   }
   },
   {
-   "w": "suggest + V-ing",
-   "vi": "gợi ý làm gì",
-   "kind": "chunk",
-   "learned": "2026-11-11",
-   "ipa": "/sədˈʒest/",
-   "ipa_us": "/sədˈʒest/"
+   "w": "even though",
+   "type": "linking word",
+   "def": "a stronger 'although'",
+   "ex": "Even though it was raining, they went for a walk.",
+   "vi": "mặc dù (nhấn mạnh)",
+   "week": 1,
+   "img": "data/img/w1/x-even-though.svg",
+   "audio": "data/audio/w1/words/x-even-though.mp3",
+   "ipa": "/ˈiːvən ðəʊ/",
+   "ipa_us": "/ˈiːvən ðoʊ/",
+   "strip": {
+    "panels": [
+     [
+      "🌧️",
+      "It was raining hard."
+     ],
+     [
+      "🚶😊",
+      "They went for a walk."
+     ]
+    ],
+    "link": "even though",
+    "note": "stronger"
+   }
   },
   {
-   "w": "rather than / Rather, …",
-   "vi": "thay vì / đúng hơn là",
-   "kind": "chunk",
-   "learned": "2026-11-11",
-   "ipa": "/ˈrɑːðə ðən ˈrɑːðə/",
-   "ipa_us": "/ˈræðər ðən ˈræðər/"
+   "w": "however",
+   "type": "linking word",
+   "def": "but (starts a new sentence, followed by a comma)",
+   "ex": "The answer sounded right. However, it was wrong.",
+   "vi": "tuy nhiên",
+   "week": 1,
+   "img": "data/img/w1/x-however.svg",
+   "audio": "data/audio/w1/words/x-however.mp3",
+   "ipa": "/haʊˈevə/",
+   "ipa_us": "/haʊˈevər/",
+   "strip": {
+    "panels": [
+     [
+      "🤖👍",
+      "It sounded right."
+     ],
+     [
+      "❌",
+      "It was wrong."
+     ]
+    ],
+    "link": "However,",
+    "note": "new sentence"
+   }
+  },
+  {
+   "w": "yet",
+   "type": "linking word",
+   "def": "but (a little surprising)",
+   "ex": "The café is small, yet it's always full.",
+   "vi": "vậy mà",
+   "week": 1,
+   "img": "data/img/w1/x-yet.svg",
+   "audio": "data/audio/w1/words/x-yet.mp3",
+   "ipa": "/jet/",
+   "ipa_us": "/jet/",
+   "strip": {
+    "panels": [
+     [
+      "☕🏠",
+      "A small café"
+     ],
+     [
+      "👥👥👥",
+      "always full"
+     ]
+    ],
+    "link": "yet",
+    "note": "= but"
+   }
+  },
+  {
+   "w": "rather",
+   "type": "linking word",
+   "def": "not A – B instead",
+   "ex": "He didn't text. Rather, he called.",
+   "vi": "thay vào đó",
+   "week": 1,
+   "img": "data/img/w1/x-rather.svg",
+   "audio": "data/audio/w1/words/x-rather.mp3",
+   "ipa": "/ˈrɑːðə/",
+   "ipa_us": "/ˈræðər/",
+   "strip": {
+    "panels": [
+     [
+      "💬🚫",
+      "He didn't text."
+     ],
+     [
+      "📞",
+      "He called."
+     ]
+    ],
+    "link": "Rather,",
+    "note": "not A → B"
+   }
+  },
+  {
+   "w": "unless",
+   "type": "linking word",
+   "def": "if … not",
+   "ex": "I can't sleep unless the room is dark.",
+   "vi": "trừ khi / nếu không",
+   "week": 1,
+   "img": "data/img/w1/x-unless.svg",
+   "audio": "data/audio/w1/words/x-unless.mp3",
+   "ipa": "/ʌnˈles/",
+   "ipa_us": "/ʌnˈles/",
+   "strip": {
+    "panels": [
+     [
+      "💡😳",
+      "Light on: no sleep"
+     ],
+     [
+      "🌑😴",
+      "Dark: sleep"
+     ]
+    ],
+    "link": "unless",
+    "note": "= if … not"
+   }
   },
   {
    "w": "in other words",
+   "type": "linking word",
+   "def": "saying the same idea again, more clearly",
+   "ex": "It's a moving target. In other words, the goal keeps changing.",
    "vi": "nói cách khác",
-   "kind": "chunk",
-   "learned": "2026-11-11",
+   "week": 1,
+   "img": "data/img/w1/x-in-other-words.svg",
+   "audio": "data/audio/w1/words/x-in-other-words.mp3",
    "ipa": "/ɪn ˈʌðə wɜːdz/",
-   "ipa_us": "/ɪn ˈʌðər wɜːdz/"
+   "ipa_us": "/ɪn ˈʌðər wɜːdz/",
+   "strip": {
+    "panels": [
+     [
+      "🎯🛞",
+      "a moving target"
+     ],
+     [
+      "🔄🎯",
+      "the goal keeps changing"
+     ]
+    ],
+    "link": "in other words",
+    "note": "same idea"
+   }
   },
   {
    "w": "seize upon sth",
+   "type": "phrasal verb",
+   "def": "quickly use an idea or chance with great interest",
+   "ex": "Reporters seized upon the new study.",
    "vi": "vồ lấy, tận dụng ngay",
-   "kind": "chunk",
-   "learned": "2026-11-11",
+   "week": 1,
+   "img": "data/img/w1/x-seize-upon-sth.svg",
+   "audio": "data/audio/w1/words/x-seize-upon-sth.mp3",
    "ipa": "/siːz əˈpɒn ˈsʌmθɪŋ/",
-   "ipa_us": "/siːz əˈpɑːn ˈsʌmθɪŋ/"
+   "ipa_us": "/siːz əˈpɑːn ˈsʌmθɪŋ/",
+   "strip": {
+    "panels": [
+     [
+      "📰💡",
+      "a new study"
+     ],
+     [
+      "🎤🏃",
+      "reporters rush to it"
+     ]
+    ],
+    "link": "seized upon the study",
+    "note": ""
+   }
   },
   {
    "w": "pack it in",
+   "type": "idiom",
+   "def": "stop doing something; give up",
+   "ex": "I nearly packed it in, but I kept practising.",
    "vi": "bỏ cuộc",
-   "kind": "chunk",
-   "learned": "2026-11-11",
+   "week": 1,
+   "img": "data/img/w1/x-pack-it-in.svg",
+   "audio": "data/audio/w1/words/x-pack-it-in.mp3",
    "ipa": "/pæk ɪt ɪn/",
-   "ipa_us": "/pæk ɪt ɪn/"
+   "ipa_us": "/pæk ɪt ɪn/",
+   "strip": {
+    "panels": [
+     [
+      "🎹😩",
+      "I wanted to stop…"
+     ],
+     [
+      "🎹🙂",
+      "but I didn't."
+     ]
+    ],
+    "link": "I nearly packed it in",
+    "note": "= give up"
+   }
+  },
+  {
+   "w": "How's it going?",
+   "type": "chunk",
+   "def": "How are you? (friendly)",
+   "ex": "“Hi Nam, how's it going?” – “Good, thanks!”",
+   "vi": "Dạo này thế nào?",
+   "week": 1,
+   "img": "data/img/w1/x-how-s-it-going.svg",
+   "audio": "data/audio/w1/words/x-how-s-it-going.mp3",
+   "ipa": "/haʊz ɪt ˈɡəʊɪŋ/",
+   "ipa_us": "/haʊz ɪt ˈɡoʊɪŋ/",
+   "strip": {
+    "panels": [
+     [
+      "👋",
+      "How's it going?"
+     ],
+     [
+      "😊",
+      "Good, thanks!"
+     ]
+    ],
+    "link": "How's it going?",
+    "note": "= how are you"
+   }
+  },
+  {
+   "w": "So far so good",
+   "type": "idiom",
+   "def": "until now, everything is OK",
+   "ex": "“How's the new job?” – “So far so good.”",
+   "vi": "tới giờ vẫn ổn",
+   "week": 1,
+   "img": "data/img/w1/x-so-far-so-good.svg",
+   "audio": "data/audio/w1/words/x-so-far-so-good.mp3",
+   "ipa": "/səʊ fɑː səʊ ɡʊd/",
+   "ipa_us": "/soʊ fɑːr soʊ ɡʊd/",
+   "strip": {
+    "panels": [
+     [
+      "🏢1️⃣",
+      "first day at work"
+     ],
+     [
+      "👍",
+      "everything OK"
+     ]
+    ],
+    "link": "So far so good",
+    "note": "until now"
+   }
+  },
+  {
+   "w": "let me know",
+   "type": "chunk",
+   "def": "tell me",
+   "ex": "If you need anything, just let me know.",
+   "vi": "báo cho tôi biết",
+   "week": 1,
+   "img": "data/img/w1/x-let-me-know.svg",
+   "audio": "data/audio/w1/words/x-let-me-know.mp3",
+   "ipa": "/let miː nəʊ/",
+   "ipa_us": "/let miː noʊ/",
+   "strip": {
+    "panels": [
+     [
+      "❓",
+      "Need anything?"
+     ],
+     [
+      "🗣️👂",
+      "Tell me!"
+     ]
+    ],
+    "link": "Just let me know",
+    "note": ""
+   }
+  },
+  {
+   "w": "get the hang of sth",
+   "type": "idiom",
+   "def": "slowly learn how to do something",
+   "ex": "It takes a while to get the hang of the new system.",
+   "vi": "quen tay, nắm được cách làm",
+   "week": 1,
+   "img": "data/img/w1/x-get-the-hang-of-sth.svg",
+   "audio": "data/audio/w1/words/x-get-the-hang-of-sth.mp3",
+   "ipa": "/ɡet ðə hæŋ əv ˈsʌmθɪŋ/",
+   "ipa_us": "/ɡet ðə hæŋ əv ˈsʌmθɪŋ/",
+   "strip": {
+    "panels": [
+     [
+      "🚲😬",
+      "Day 1: difficult"
+     ],
+     [
+      "🚲😎",
+      "Day 10: easy"
+     ]
+    ],
+    "link": "get the hang of it",
+    "note": "slowly learn"
+   }
+  },
+  {
+   "w": "I'd love (sth)",
+   "type": "chunk",
+   "def": "I would really like",
+   "ex": "I'd love another coffee.",
+   "vi": "mình rất muốn",
+   "week": 1,
+   "img": "data/img/w1/x-i-d-love-sth.svg",
+   "audio": "data/audio/w1/words/x-i-d-love-sth.mp3",
+   "ipa": "/aɪd lʌv/",
+   "ipa_us": "/aɪd lʌv/",
+   "strip": {
+    "panels": [
+     [
+      "☕❓",
+      "Another coffee?"
+     ],
+     [
+      "😍",
+      "Yes, I'd love one!"
+     ]
+    ],
+    "link": "I'd love …",
+    "note": "really want"
+   }
+  },
+  {
+   "w": "by the way",
+   "type": "linking word",
+   "def": "starting a new, small topic",
+   "ex": "By the way, where's the kitchen?",
+   "vi": "nhân tiện",
+   "week": 1,
+   "img": "data/img/w1/x-by-the-way.svg",
+   "audio": "data/audio/w1/words/x-by-the-way.mp3",
+   "ipa": "/baɪ ðə weɪ/",
+   "ipa_us": "/baɪ ðə weɪ/",
+   "strip": {
+    "panels": [
+     [
+      "💼💬",
+      "talking about work"
+     ],
+     [
+      "☕❓",
+      "Where's the kitchen?"
+     ]
+    ],
+    "link": "By the way,",
+    "note": "new topic"
+   }
+  },
+  {
+   "w": "opposite",
+   "type": "word",
+   "def": "on the other side, facing",
+   "ex": "The tram stop is opposite the church.",
+   "vi": "đối diện",
+   "week": 1,
+   "img": "data/img/w1/x-opposite.svg",
+   "audio": "data/audio/w1/words/x-opposite.mp3",
+   "ipa": "/ˈɒpəˌzɪt/",
+   "ipa_us": "/ˈɑːpəˌzɪt/",
+   "strip": {
+    "panels": [
+     [
+      "🚋",
+      "the tram stop"
+     ],
+     [
+      "⛪",
+      "the church"
+     ]
+    ],
+    "link": "The stop is opposite the church",
+    "note": "facing",
+    "sym": "↔"
+   }
+  },
+  {
+   "w": "next to",
+   "type": "word",
+   "def": "right beside",
+   "ex": "The phone shop is next to the bank.",
+   "vi": "bên cạnh",
+   "week": 1,
+   "img": "data/img/w1/x-next-to.svg",
+   "audio": "data/audio/w1/words/x-next-to.mp3",
+   "ipa": "/nekst tə/",
+   "ipa_us": "/nekst tə/",
+   "strip": {
+    "panels": [
+     [
+      "📱🏪",
+      "phone shop"
+     ],
+     [
+      "🏦",
+      "bank"
+     ]
+    ],
+    "link": "next to = right beside",
+    "note": "",
+    "sym": "|"
+   }
+  },
+  {
+   "w": "turn left / right",
+   "type": "chunk",
+   "def": "change direction",
+   "ex": "Go out of the café and turn left.",
+   "vi": "rẽ trái / phải",
+   "week": 1,
+   "img": "data/img/w1/x-turn-left--right.svg",
+   "audio": "data/audio/w1/words/x-turn-left--right.mp3",
+   "ipa": "/tɜːn left raɪt/",
+   "ipa_us": "/tɜːn left raɪt/",
+   "strip": {
+    "panels": [
+     [
+      "☕🚪",
+      "out of the café"
+     ],
+     [
+      "⬅️",
+      "turn left"
+     ]
+    ],
+    "link": "Go out and turn left",
+    "note": "",
+    "sym": "→"
+   }
+  },
+  {
+   "w": "go past",
+   "type": "phrasal verb",
+   "def": "walk by something without stopping",
+   "ex": "Go past the park and you'll see it.",
+   "vi": "đi qua",
+   "week": 1,
+   "img": "data/img/w1/x-go-past.webp",
+   "audio": "data/audio/w1/words/x-go-past.mp3",
+   "ipa": "/ɡəʊ pæst/",
+   "ipa_us": "/ɡoʊ pæst/"
+  },
+  {
+   "w": "get on / get off",
+   "type": "phrasal verb",
+   "def": "enter / leave a bus, tram or train",
+   "ex": "Get on at Hope Street and get off at Market Street.",
+   "vi": "lên xe / xuống xe",
+   "week": 1,
+   "img": "data/img/w1/x-get-on--get-off.webp",
+   "audio": "data/audio/w1/words/x-get-on--get-off.mp3",
+   "ipa": "/ɡet ɒn ɡet ɒf/",
+   "ipa_us": "/ɡet ɔn ɡet ɔf/"
+  },
+  {
+   "w": "a ten-minute walk",
+   "type": "chunk",
+   "def": "you need ten minutes to walk there",
+   "ex": "The station is a ten-minute walk from here.",
+   "vi": "đi bộ mười phút",
+   "week": 1,
+   "img": "data/img/w1/x-a-ten-minute-walk.svg",
+   "audio": "data/audio/w1/words/x-a-ten-minute-walk.mp3",
+   "ipa": "/ə ten ˈmɪnɪt wɔːk/",
+   "ipa_us": "/ə ten ˈmɪnɪt wɔːk/",
+   "strip": {
+    "panels": [
+     [
+      "🚶",
+      "walk there"
+     ],
+     [
+      "⏱️",
+      "10 minutes"
+     ]
+    ],
+    "link": "a ten-minute walk",
+    "note": ""
+   }
+  },
+  {
+   "w": "You can't miss it.",
+   "type": "chunk",
+   "def": "it's very easy to find",
+   "ex": "The church is huge. You can't miss it.",
+   "vi": "dễ tìm lắm",
+   "week": 1,
+   "img": "data/img/w1/x-you-can-t-miss-it.svg",
+   "audio": "data/audio/w1/words/x-you-can-t-miss-it.mp3",
+   "ipa": "/jə kɑːnt mɪs ɪt/",
+   "ipa_us": "/jə kænt mɪs ɪt/",
+   "strip": {
+    "panels": [
+     [
+      "⛪",
+      "a huge church"
+     ],
+     [
+      "👀✅",
+      "very easy to see"
+     ]
+    ],
+    "link": "You can't miss it.",
+    "note": ""
+   }
+  },
+  {
+   "w": "Got it.",
+   "type": "chunk",
+   "def": "I understand (informal)",
+   "ex": "“Turn left at the church.” – “Got it.”",
+   "vi": "hiểu rồi",
+   "week": 1,
+   "img": "data/img/w1/x-got-it.svg",
+   "audio": "data/audio/w1/words/x-got-it.mp3",
+   "ipa": "/ɡɒt ɪt/",
+   "ipa_us": "/ɡɑːt ɪt/",
+   "strip": {
+    "panels": [
+     [
+      "⬅️⛪",
+      "Turn left at the church."
+     ],
+     [
+      "👌",
+      "Got it."
+     ]
+    ],
+    "link": "Got it.",
+    "note": "I understand"
+   }
+  },
+  {
+   "w": "move in",
+   "type": "phrasal verb",
+   "def": "start living in a new home",
+   "ex": "Nam moved in yesterday.",
+   "vi": "dọn đến ở",
+   "week": 1,
+   "img": "data/img/w1/x-move-in.webp",
+   "audio": "data/audio/w1/words/x-move-in.mp3",
+   "ipa": "/muːv ɪn/",
+   "ipa_us": "/muːv ɪn/"
+  },
+  {
+   "w": "feel at home",
+   "type": "idiom",
+   "def": "feel comfortable, as if you belong",
+   "ex": "After a week, he felt at home in the café.",
+   "vi": "thấy như ở nhà",
+   "week": 1,
+   "img": "data/img/w1/x-feel-at-home.webp",
+   "audio": "data/audio/w1/words/x-feel-at-home.mp3",
+   "ipa": "/fiːl ət həʊm/",
+   "ipa_us": "/fiːl ət hoʊm/"
+  },
+  {
+   "w": "I'd better (do)",
+   "type": "chunk",
+   "def": "I should (or something bad may happen)",
+   "ex": "It's late – I'd better go.",
+   "vi": "mình nên (làm) thì hơn",
+   "week": 1,
+   "img": "data/img/w1/x-i-d-better-do.svg",
+   "audio": "data/audio/w1/words/x-i-d-better-do.mp3",
+   "ipa": "/aɪd ˈbetə/",
+   "ipa_us": "/aɪd ˈbetər/",
+   "strip": {
+    "panels": [
+     [
+      "⌚",
+      "It's late."
+     ],
+     [
+      "🏃🚪",
+      "I'd better go."
+     ]
+    ],
+    "link": "I'd better + verb",
+    "note": "should"
+   }
+  },
+  {
+   "w": "like watching grass grow",
+   "type": "idiom",
+   "def": "very, very boring",
+   "ex": "The meeting was like watching grass grow.",
+   "vi": "chán như con gián",
+   "week": 1,
+   "img": "data/img/w1/x-like-watching-grass-grow.webp",
+   "audio": "data/audio/w1/words/x-like-watching-grass-grow.mp3",
+   "ipa": "/laɪk ˈwɒtʃɪŋ ɡræs ɡrəʊ/",
+   "ipa_us": "/laɪk ˈwɑːtʃɪŋ ɡræs ɡroʊ/"
+  },
+  {
+   "w": "tedious",
+   "type": "word",
+   "def": "boring because it is long and the same again and again",
+   "ex": "Filling in forms is tedious.",
+   "vi": "tẻ nhạt",
+   "week": 1,
+   "img": "data/img/w1/x-tedious.webp",
+   "audio": "data/audio/w1/words/x-tedious.mp3",
+   "ipa": "/ˈtiːdiəs/",
+   "ipa_us": "/ˈtiːdiəs/"
+  },
+  {
+   "w": "on the go",
+   "type": "idiom",
+   "def": "always busy and moving",
+   "ex": "She's always on the go – work, gym, friends.",
+   "vi": "bận rộn suốt",
+   "week": 1,
+   "img": "data/img/w1/x-on-the-go.webp",
+   "audio": "data/audio/w1/words/x-on-the-go.mp3",
+   "ipa": "/ɒn ðə ɡəʊ/",
+   "ipa_us": "/ɔn ðə ɡoʊ/"
+  },
+  {
+   "w": "don't let the grass grow under your feet",
+   "type": "idiom",
+   "def": "don't wait – act now and keep moving",
+   "ex": "Don't let the grass grow under your feet – apply today!",
+   "vi": "đừng chần chừ",
+   "week": 1,
+   "img": "data/img/w1/x-don-t-let-the-grass-grow-under-your-feet.webp",
+   "audio": "data/audio/w1/words/x-don-t-let-the-grass-grow-under-your-feet.mp3",
+   "ipa": "/dəʊnt let ðə ɡræs ɡrəʊ ˈʌndə jə fiːt/",
+   "ipa_us": "/doʊnt let ðə ɡræs ɡroʊ ˈʌndər jə fiːt/"
+  },
+  {
+   "w": "on your plate",
+   "type": "idiom",
+   "def": "all the things you have to do",
+   "ex": "I have a lot on my plate this week.",
+   "vi": "việc phải làm",
+   "week": 1,
+   "img": "data/img/w1/x-on-your-plate.svg",
+   "audio": "data/audio/w1/words/x-on-your-plate.mp3",
+   "ipa": "/ɒn jə pleɪt/",
+   "ipa_us": "/ɔn jə pleɪt/",
+   "strip": {
+    "panels": [
+     [
+      "🍽️",
+      "your plate"
+     ],
+     [
+      "📋💼📞",
+      "work, calls, tasks"
+     ]
+    ],
+    "link": "a lot on my plate",
+    "note": "= many things to do",
+    "sym": "="
+   }
+  },
+  {
+   "w": "overwhelmed",
+   "type": "word",
+   "def": "feeling there is too much and you can't manage",
+   "ex": "He felt overwhelmed by all the emails.",
+   "vi": "quá tải, choáng ngợp",
+   "week": 1,
+   "img": "data/img/w1/x-overwhelmed.webp",
+   "audio": "data/audio/w1/words/x-overwhelmed.mp3",
+   "ipa": "/ˌəʊvəˈwelmd/",
+   "ipa_us": "/ˌoʊvərˈwelmd/"
+  },
+  {
+   "w": "spread yourself too thin",
+   "type": "idiom",
+   "def": "try to do too many things, so nothing goes well",
+   "ex": "She's spread herself too thin with three jobs.",
+   "vi": "ôm đồm quá nhiều",
+   "week": 1,
+   "img": "data/img/w1/x-spread-yourself-too-thin.svg",
+   "audio": "data/audio/w1/words/x-spread-yourself-too-thin.mp3",
+   "ipa": "/spred jɔːˈself tuː θɪn/",
+   "ipa_us": "/spred joːrˈself tuː θɪn/",
+   "strip": {
+    "panels": [
+     [
+      "💼🏃🎭📚",
+      "3 jobs + a play + class"
+     ],
+     [
+      "😵",
+      "nothing goes well"
+     ]
+    ],
+    "link": "spread too thin",
+    "note": "too many things",
+    "sym": "→"
+   }
+  },
+  {
+   "w": "bite off more than you can chew",
+   "type": "idiom",
+   "def": "try to do more than is possible",
+   "ex": "I bit off more than I could chew with this project.",
+   "vi": "ôm việc quá sức",
+   "week": 1,
+   "img": "data/img/w1/x-bite-off-more-than-you-can-chew.webp",
+   "audio": "data/audio/w1/words/x-bite-off-more-than-you-can-chew.mp3",
+   "ipa": "/baɪt ɒf mɔː ðən jə kən tʃuː/",
+   "ipa_us": "/baɪt ɔf moːr ðən jə kən tʃuː/"
+  },
+  {
+   "w": "multitasking",
+   "type": "word",
+   "def": "doing several things at the same time",
+   "ex": "Multitasking can make you slower.",
+   "vi": "làm nhiều việc cùng lúc",
+   "week": 1,
+   "img": "data/img/w1/x-multitasking.webp",
+   "audio": "data/audio/w1/words/x-multitasking.mp3",
+   "ipa": "/ˈmʌltiˌtæskɪŋ/",
+   "ipa_us": "/ˈmʌltiˌtæskɪŋ/"
+  },
+  {
+   "w": "extend a deadline",
+   "type": "chunk",
+   "def": "give more time to finish",
+   "ex": "The teacher extended the deadline by a week.",
+   "vi": "gia hạn",
+   "week": 1,
+   "img": "data/img/w1/x-extend-a-deadline.svg",
+   "audio": "data/audio/w1/words/x-extend-a-deadline.mp3",
+   "ipa": "/ekˈstend ə ˈdedlaɪn/",
+   "ipa_us": "/ekˈstend ə ˈdedlaɪn/",
+   "strip": {
+    "panels": [
+     [
+      "📅 Fri",
+      "deadline: Friday"
+     ],
+     [
+      "📅 next Fri",
+      "one more week"
+     ]
+    ],
+    "link": "extend the deadline",
+    "note": "more time",
+    "sym": "→"
+   }
+  },
+  {
+   "w": "kick off (sth)",
+   "type": "phrasal verb",
+   "def": "start something",
+   "ex": "We kicked off the project with a meeting.",
+   "vi": "bắt đầu, khởi động",
+   "week": 1,
+   "img": "data/img/w1/x-kick-off-sth.webp",
+   "audio": "data/audio/w1/words/x-kick-off-sth.mp3",
+   "ipa": "/kɪk ɒf/",
+   "ipa_us": "/kɪk ɔf/"
+  },
+  {
+   "w": "a resolution",
+   "type": "word",
+   "def": "a promise to yourself to reach a goal",
+   "ex": "My resolution is to listen to English every day.",
+   "vi": "quyết tâm, mục tiêu tự hứa",
+   "week": 1,
+   "img": "data/img/w1/x-a-resolution.webp",
+   "audio": "data/audio/w1/words/x-a-resolution.mp3",
+   "ipa": "/ə ˌrezəˈluːʃən/",
+   "ipa_us": "/ə ˌrezəˈluːʃən/"
+  },
+  {
+   "w": "punt (sth)",
+   "type": "word",
+   "def": "give a task to someone else, or decide later",
+   "ex": "I'll punt that decision until next week.",
+   "vi": "đẩy việc / hoãn quyết định",
+   "week": 1,
+   "img": "data/img/w1/x-punt-sth.svg",
+   "audio": "data/audio/w1/words/x-punt-sth.mp3",
+   "ipa": "/pʌnt/",
+   "ipa_us": "/pʌnt/",
+   "strip": {
+    "panels": [
+     [
+      "📦😓",
+      "a task I don't want"
+     ],
+     [
+      "➡️🙋",
+      "give it to someone"
+     ]
+    ],
+    "link": "punt it",
+    "note": "or decide later"
+   }
+  },
+  {
+   "w": "table it",
+   "type": "idiom",
+   "def": "wait until later to talk about it",
+   "ex": "Let's table it until Monday.",
+   "vi": "gác lại",
+   "week": 1,
+   "img": "data/img/w1/x-table-it.svg",
+   "audio": "data/audio/w1/words/x-table-it.mp3",
+   "ipa": "/ˈteɪbəl ɪt/",
+   "ipa_us": "/ˈteɪbəl ɪt/",
+   "strip": {
+    "panels": [
+     [
+      "🗂️❓",
+      "a hard question"
+     ],
+     [
+      "📅➡️",
+      "talk on Monday"
+     ]
+    ],
+    "link": "Let's table it",
+    "note": "= later"
+   }
+  },
+  {
+   "w": "move the goalposts",
+   "type": "idiom",
+   "def": "change the rules or goal so success is harder",
+   "ex": "The boss keeps moving the goalposts.",
+   "vi": "thay đổi luật chơi",
+   "week": 1,
+   "img": "data/img/w1/x-move-the-goalposts.svg",
+   "audio": "data/audio/w1/words/x-move-the-goalposts.mp3",
+   "ipa": "/muːv ðə ˈɡəʊlpəʊsts/",
+   "ipa_us": "/muːv ðə ˈɡoʊlpoʊsts/",
+   "strip": {
+    "panels": [
+     [
+      "🎯 10,000",
+      "the goal: 10,000"
+     ],
+     [
+      "🎯 20,000",
+      "now: 20,000!"
+     ]
+    ],
+    "link": "The boss moved the goalposts",
+    "note": "harder",
+    "sym": "→"
+   }
+  },
+  {
+   "w": "a moving target",
+   "type": "idiom",
+   "def": "a goal that changes all the time",
+   "ex": "The budget is a moving target.",
+   "vi": "mục tiêu luôn thay đổi",
+   "week": 1,
+   "img": "data/img/w1/x-a-moving-target.svg",
+   "audio": "data/audio/w1/words/x-a-moving-target.mp3",
+   "ipa": "/ə ˈmuːvɪŋ ˈtɑːɡɪt/",
+   "ipa_us": "/ə ˈmuːvɪŋ ˈtɑːrɡɪt/",
+   "strip": {
+    "panels": [
+     [
+      "🎯",
+      "the goal…"
+     ],
+     [
+      "🎯💨",
+      "…keeps moving"
+     ]
+    ],
+    "link": "a moving target",
+    "note": "always changing",
+    "sym": "→"
+   }
+  },
+  {
+   "w": "the rest of the …",
+   "type": "chunk",
+   "def": "what is left",
+   "ex": "I'll read the rest of the story tonight.",
+   "vi": "phần còn lại của",
+   "week": 1,
+   "img": "data/img/w1/x-the-rest-of-the.svg",
+   "audio": "data/audio/w1/words/x-the-rest-of-the.mp3",
+   "ipa": "/ðə rest əv ðə/",
+   "ipa_us": "/ðə rest əv ðə/",
+   "strip": {
+    "panels": [
+     [
+      "📖",
+      "I read half."
+     ],
+     [
+      "🌙📖",
+      "the rest tonight"
+     ]
+    ],
+    "link": "the rest of the story",
+    "note": ""
+   }
   }
  ],
- "learn": [
+ "grammar": [
   {
-   "lesson": "2026-11-12-morning",
-   "part": 0,
-   "week": 1,
-   "order": 2,
-   "date": "2026-11-12",
-   "status": "open",
-   "title": "Why you can't hear the small words",
-   "img": null
+   "id": "g-contractions",
+   "title": "Squeezed words: I'm · you'll · it's · I'd",
+   "pattern": "I am → I'm · you will → you'll · it is / it has → it's · I would / I had → I'd",
+   "rule": "In speech, small words join the word before them. **it's** can be *it is* or *it has*; **I'd** can be *I would* or *I had* – the next word tells you which.",
+   "examples": [
+    "It's been a long day. (= it has)",
+    "I'd better go. (= I had)",
+    "I'd love a coffee. (= I would)"
+   ],
+   "vi": "Dạng rút gọn – nghe kỹ âm cuối /m/, /l/, /s/, /d/.",
+   "mistake": {
+    "wrong": "I better go.",
+    "right": "I'd better go.",
+    "tip": "The /d/ is very short, but it's there."
+   },
+   "practice": [
+    {
+     "q": "“It's been raining all day.” – it's = ?",
+     "a": "it has",
+     "why": "been → present perfect → has."
+    },
+    {
+     "q": "“I'd love to come.” – I'd = ?",
+     "a": "I would",
+     "why": "would love = really want."
+    }
+   ],
+   "week": 1
   },
   {
-   "lesson": "2026-11-12-evening",
-   "part": 0,
-   "week": 1,
-   "order": 3,
-   "date": "2026-11-12",
-   "status": "open",
-   "title": "Linking words: does the idea continue or turn?",
-   "img": null
+   "id": "g-used-to",
+   "title": "be used to + V-ing  vs  used to + V",
+   "pattern": "be/get used to + V-ing / noun  ·  used to + base verb",
+   "rule": "**be used to** = it is normal for you now. **get used to** = it is becoming normal. **used to + V** = you did it in the past, not now.",
+   "examples": [
+    "I'm used to getting up early.",
+    "You'll get used to the rain.",
+    "I used to live in Hanoi."
+   ],
+   "vi": "be used to + V-ing = đã quen với · used to + V = đã từng (giờ không còn).",
+   "mistake": {
+    "wrong": "I'm not used to get up early.",
+    "right": "I'm not used to getting up early.",
+    "tip": "In 'be used to', 'to' is a preposition → V-ing."
+   },
+   "practice": [
+    {
+     "q": "I'm slowly getting used to ___ (walk) in the rain.",
+     "a": "walking",
+     "why": "get used to + V-ing."
+    },
+    {
+     "q": "When I was a kid, I ___ (play) football every day.",
+     "a": "used to play",
+     "why": "past habit → used to + V."
+    }
+   ],
+   "week": 1
   },
   {
-   "lesson": "w1-l4",
-   "part": 0,
-   "week": 1,
-   "order": 4,
-   "date": "2026-11-13",
-   "status": "open",
-   "title": "What people really say on a first day",
-   "img": "data/img/w1/l4-cover.webp"
+   "id": "g-verb-ing",
+   "title": "Verb + -ing  or  verb + to-infinitive",
+   "pattern": "suggest / enjoy / finish / mind + V-ing  ·  decide / want / hope / plan + to V",
+   "rule": "Some verbs are followed by **-ing**, others by **to + verb**. Learn them as chunks: *suggest doing*, *decide to do*.",
+   "examples": [
+    "She suggested taking the tram.",
+    "I enjoy listening to podcasts.",
+    "He decided to leave early."
+   ],
+   "vi": "suggest/enjoy/finish + V-ing · decide/want/hope + to V.",
+   "mistake": {
+    "wrong": "He suggested to take a taxi.",
+    "right": "He suggested taking a taxi.",
+    "tip": "suggest + V-ing (or suggest that…)."
+   },
+   "practice": [
+    {
+     "q": "My friend suggested ___ (listen) to a podcast.",
+     "a": "listening",
+     "why": "suggest + V-ing."
+    },
+    {
+     "q": "I decided ___ (study) every morning.",
+     "a": "to study",
+     "why": "decide + to V."
+    }
+   ],
+   "week": 1
   },
   {
-   "lesson": "w1-l5",
-   "part": 0,
-   "week": 1,
-   "order": 5,
-   "date": "2026-11-14",
-   "status": "open",
-   "title": "Finding your way – words on a map",
-   "img": "data/img/w1/l5-map.svg"
+   "id": "g-takes-spend",
+   "title": "It takes + time  vs  spend + time",
+   "pattern": "It takes (sb) + time + to V  ·  sb spends + time + V-ing",
+   "rule": "**It takes** focuses on the time needed. **Spend** focuses on the person using the time.",
+   "examples": [
+    "It takes twenty minutes to walk there.",
+    "It took me an hour to log in.",
+    "He spent an hour logging in."
+   ],
+   "vi": "It takes … to V = mất bao lâu · spend … V-ing = dành thời gian làm.",
+   "mistake": {
+    "wrong": "I spent an hour to log in.",
+    "right": "I spent an hour logging in.",
+    "tip": "spend + time + V-ing."
+   },
+   "practice": [
+    {
+     "q": "It ___ me ten minutes to find the café.",
+     "a": "took",
+     "why": "It takes/took + person + time."
+    },
+    {
+     "q": "She spends a lot of time ___ (read).",
+     "a": "reading",
+     "why": "spend + time + V-ing."
+    }
+   ],
+   "week": 1
   },
   {
-   "lesson": "w1-l6",
-   "part": 0,
-   "week": 1,
-   "order": 6,
-   "date": "2026-11-15",
-   "status": "open",
-   "title": "The story so far",
-   "img": "data/img/w1/cover.webp"
+   "id": "g-contrast",
+   "title": "Contrast: although · even though · however · yet · though",
+   "pattern": "Although + clause, clause.  ·  Sentence. However, sentence.  ·  …, yet …  ·  …, though.",
+   "rule": "All show a **turn** in the idea. **Although/even though** join two parts in one sentence. **However** starts a new sentence + comma. **Yet** = but (surprising). **though** can end a sentence.",
+   "examples": [
+    "Although he was tired, he helped.",
+    "The answer sounded right. However, it was wrong.",
+    "It's small, yet it's always full.",
+    "The coffee is great, though."
+   ],
+   "vi": "Từ nối đối lập: mặc dù / tuy nhiên / vậy mà / dù vậy.",
+   "mistake": {
+    "wrong": "Although he was tired, but he helped.",
+    "right": "Although he was tired, he helped.",
+    "tip": "Don't use although + but together."
+   },
+   "practice": [
+    {
+     "q": "___ it was raining, we went for a walk.",
+     "a": "Although / Even though",
+     "why": "surprising contrast in one sentence."
+    },
+    {
+     "q": "It looked easy. ___, it took three hours.",
+     "a": "However",
+     "why": "new sentence + comma."
+    }
+   ],
+   "week": 1
   },
   {
-   "lesson": "w1-voa-1",
-   "part": 0,
-   "week": 1,
-   "order": 7,
-   "date": null,
-   "status": "open",
-   "title": "Key expressions – 'Watching the Grass Grow' Is Not Fun",
-   "img": null
+   "id": "g-unless",
+   "title": "unless = if … not",
+   "pattern": "unless + positive clause",
+   "rule": "**Unless** sets a condition: the result happens only if the condition is NOT true. Don't confuse it with *although* (a surprising fact).",
+   "examples": [
+    "I can't sleep unless it's dark. (= if it's not dark, I can't sleep)",
+    "Take the tram unless you want to walk an hour."
+   ],
+   "vi": "unless = trừ khi / nếu không. ≠ although (mặc dù).",
+   "mistake": {
+    "wrong": "Unless it was raining, we went out. (= although)",
+    "right": "Although it was raining, we went out.",
+    "tip": "unless = condition, although = surprising fact."
+   },
+   "practice": [
+    {
+     "q": "You won't understand it ___ you listen three times.",
+     "a": "unless",
+     "why": "= if you don't listen three times."
+    }
+   ],
+   "week": 1
   },
   {
-   "lesson": "w1-voa-2",
-   "part": 0,
-   "week": 1,
-   "order": 8,
-   "date": null,
-   "status": "open",
-   "title": "Key expressions – Sometimes We 'Spread Ourselves Too Thin'",
-   "img": null
+   "id": "g-rather",
+   "title": "rather · rather than · instead",
+   "pattern": "not A. Rather, B.  ·  B rather than A  ·  B instead of A / A. Instead, B.",
+   "rule": "Use these when you say **not A – B**. *Rather* often starts the second sentence.",
+   "examples": [
+    "He didn't text. Rather, he called.",
+    "I'll walk rather than take the tram.",
+    "Let's have tea instead of coffee."
+   ],
+   "vi": "thay vì / thay vào đó / đúng hơn là.",
+   "mistake": {
+    "wrong": "I'll walk rather than taking the tram.",
+    "right": "I'll walk rather than take the tram.",
+    "tip": "rather than + same verb form as the first verb."
+   },
+   "practice": [
+    {
+     "q": "She doesn't text much. ___, she calls.",
+     "a": "Rather / Instead",
+     "why": "not A (text) → B (call)."
+    }
+   ],
+   "week": 1
   },
   {
-   "lesson": "w1-voa-3",
-   "part": 0,
-   "week": 1,
-   "order": 9,
-   "date": null,
-   "status": "open",
-   "title": "Key expressions – 'Kicking Off' a New Year",
-   "img": null
+   "id": "g-had-better",
+   "title": "had better + verb",
+   "pattern": "sb had better ('d better) + base verb",
+   "rule": "Strong advice: you should, or something bad may happen. Usually short: **I'd better**.",
+   "examples": [
+    "It's late – I'd better go.",
+    "You'd better take an umbrella."
+   ],
+   "vi": "nên (kẻo…) – mạnh hơn should.",
+   "mistake": {
+    "wrong": "You had better to take an umbrella.",
+    "right": "You'd better take an umbrella.",
+    "tip": "no 'to' after had better."
+   },
+   "practice": [
+    {
+     "q": "It's going to rain. You'd better ___ (take) an umbrella.",
+     "a": "take",
+     "why": "had better + base verb."
+    }
+   ],
+   "week": 1
   },
   {
-   "lesson": "w1-voa-4",
-   "part": 0,
-   "week": 1,
-   "order": 10,
-   "date": null,
-   "status": "open",
-   "title": "Key expressions – Ask a Teacher: Remaining, Remainder and Rest of",
-   "img": null
+   "id": "g-place",
+   "title": "Place words: opposite · next to · on the corner · at the end of",
+   "pattern": "opposite + place · next to + place · on the corner (of …) · at the end of the street",
+   "rule": "Use these to say **where** something is, especially when giving directions.",
+   "examples": [
+    "The tram stop is opposite the church.",
+    "The shop is next to the bank.",
+    "There's a café on the corner."
+   ],
+   "vi": "đối diện · bên cạnh · ở góc phố · ở cuối phố.",
+   "mistake": {
+    "wrong": "The shop is next the bank.",
+    "right": "The shop is next to the bank.",
+    "tip": "next TO."
+   },
+   "practice": [
+    {
+     "q": "The bank and the shop are side by side. The shop is ___ the bank.",
+     "a": "next to",
+     "why": "right beside."
+    }
+   ],
+   "week": 1
+  },
+  {
+   "id": "g-rest-of",
+   "title": "the rest of the · the remaining · the remainder of the",
+   "pattern": "the rest of the + noun · the remaining + noun · the remainder of the + noun",
+   "rule": "All mean **what is left**. *The rest of the* is the most common in speech. *Remaining* is an adjective before a noun.",
+   "examples": [
+    "I'll read the rest of the story tonight.",
+    "The remaining countries agreed."
+   ],
+   "vi": "phần còn lại của …",
+   "mistake": {
+    "wrong": "the rest countries",
+    "right": "the rest of the countries",
+    "tip": "rest needs 'of the'."
+   },
+   "practice": [
+    {
+     "q": "I ate half of the pizza. I'll eat ___ ___ ___ it later.",
+     "a": "the rest of",
+     "why": "what is left."
+    }
+   ],
+   "week": 1
   }
  ],
  "story": [

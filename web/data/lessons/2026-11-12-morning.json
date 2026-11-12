@@ -1,0 +1,318 @@
+{
+ "intro_md": "Good morning, Tân! ☀️ **Day 2 · Morning (~40 min).** This is a **separate lesson** – submit it when you finish, and the evening lesson is waiting for tonight.\n\n**Today's idea:** you already *know* most words. The problem is speed: your brain **translates**, and that takes time. Today we train **automatic hearing** – the same audio several times, at normal speed, until the words arrive without thinking.\n\n| Part | What | Time |\n|---|---|---|\n| ① Learn | Small words you can't hear: *I'm, you'll, it's, I'd* + *be used to* | 8 min |\n| ② Try it | 5 quick checks – you see the answer straight away | 4 min |\n| ③ Listen | Hope Street: the next morning (3 rounds) | 13 min |\n| ④ Listen | The first-night effect (3 rounds) | 13 min |\n| ✓ | Feedback + 📤 Submit | 2 min |",
+ "parts": [
+  {
+   "kind": "① Learn",
+   "learn": true,
+   "title": "Why you can't hear the small words",
+   "md": "In fast English, small words get **squeezed** into the word before them. You know *I will*, but in speech you hear **\"I'll\"** – sometimes just **/aɪl/**, one sound. If your ear waits for *\"I will\"*, it misses it.\n\n| Written in full | What you actually hear | Example |\n|---|---|---|\n| I am | **I'm** /aɪm/ | **I'm** not used to it. |\n| you will | **you'll** /jʊl/ | **You'll** get used to it. |\n| it is / it has | **it's** /ɪts/ | **It's** so quiet. · **It's** been a long day. |\n| I would / I had | **I'd** /aɪd/ | **I'd** better go. (= I had better) |\n| she is / she has | **she's** /ʃiːz/ | **She's** lived here for years. |\n| do you | **d'you** /djə/ | **D'you** want a coffee? |\n\n👂 Press play and listen to the examples. Then press **Show transcript** and listen again.\n\n---\n\n### Chunk: *be used to + V-ing* ≠ *used to + V*\n\n| | Meaning | Example |\n|---|---|---|\n| **be / get used to + V-ing** | something is **normal** for you now (or is becoming normal) | I'm **not used to sleeping** in a new place. · You'll **get used to** it. |\n| **used to + V** | something you did **in the past**, but not now | I **used to sleep** badly, but now I sleep well. |\n\n🇻🇳 *be used to + V-ing* = **đã quen với** việc gì · *used to + V* = **đã từng** (giờ không còn).\n🔑 Trick: after **be/get used to**, the word *to* is a preposition → the verb takes **-ing** (or a noun: *used to the rain*).",
+   "listen": [
+    {
+     "who": "",
+     "voice": "glassy",
+     "text": "I'm not used to it."
+    },
+    {
+     "who": "",
+     "voice": "rounded",
+     "text": "You'll get used to it."
+    },
+    {
+     "who": "",
+     "voice": "glassy",
+     "text": "It's so quiet here."
+    },
+    {
+     "who": "",
+     "voice": "rounded",
+     "text": "I'd better go now."
+    },
+    {
+     "who": "",
+     "voice": "glassy",
+     "text": "She's lived here for years."
+    },
+    {
+     "who": "",
+     "voice": "rounded",
+     "text": "Do you want a coffee?"
+    },
+    {
+     "who": "",
+     "voice": "glassy",
+     "text": "I used to sleep badly, but now I'm used to the noise."
+    }
+   ],
+   "rate": 1,
+   "questions": [],
+   "audio": "data/audio/2026-11-12-morning/p0.mp3"
+  },
+  {
+   "kind": "② Try it",
+   "practice": true,
+   "title": "Quick checks (not graded)",
+   "md": "Choose fast – your first feeling is usually right. You'll see the answer and why straight away.",
+   "questions": [
+    {
+     "id": "tm1",
+     "q": "*\"I'd better go now.\"* Here **I'd** = …",
+     "type": "choice",
+     "options": [
+      "I had",
+      "I would",
+      "I did"
+     ],
+     "check": {
+      "answer": "I had",
+      "why": "*had better* + verb = should (strong advice). So **I'd better go** = *I had better go*."
+     }
+    },
+    {
+     "id": "tm2",
+     "q": "I'm getting used to ___ in the rain.",
+     "type": "choice",
+     "options": [
+      "walking",
+      "walk",
+      "walked"
+     ],
+     "check": {
+      "answer": "walking",
+      "why": "After **get used to**, use **V-ing** – *to* is a preposition here."
+     }
+    },
+    {
+     "id": "tm3",
+     "q": "When I was a child, I ___ in the countryside. (Now I live in the city.)",
+     "type": "choice",
+     "options": [
+      "used to live",
+      "am used to living",
+      "used to living"
+     ],
+     "check": {
+      "answer": "used to live",
+      "why": "Past habit, not true now → **used to + V** (base verb)."
+     }
+    },
+    {
+     "id": "tm4",
+     "q": "*\"It's been a long day.\"* Here **it's** = …",
+     "type": "choice",
+     "options": [
+      "it has",
+      "it is",
+      "it was"
+     ],
+     "check": {
+      "answer": "it has",
+      "why": "**been** comes after *has* (present perfect): *it has been*. Before an -ing word or adjective, *it's* = *it is*."
+     }
+    },
+    {
+     "id": "tm5",
+     "q": "Margaret thinks Nam will ___ the noise soon.",
+     "type": "choice",
+     "options": [
+      "get used to",
+      "use to",
+      "used to"
+     ],
+     "check": {
+      "answer": "get used to",
+      "why": "*will* + **get used to** = become comfortable with it. *Use to* is not correct here."
+     }
+    }
+   ]
+  },
+  {
+   "kind": "③ Listen",
+   "title": "Hope Street: The next morning",
+   "md": "![Nam and Margaret on the stairs](data/img/w1/l2-cover.webp)\n\nNam meets Margaret on the stairs the next morning. Natural speed (1×).\n\n**Listen in 3 rounds – don't translate, don't pause:**\n1. **Round 1 – no transcript.** Just follow the story. Answer Q1–4.\n2. **Round 2 – with the transcript.** Eyes follow the words *while* you hear them. Notice the small words from part ①.\n3. **Round 3 – no transcript again.** You will hear much more. Now do the dictations.\n\n💡 If you don't catch something, **keep going**. Your brain learns more from 3 full listens than from 1 slow listen with many stops.",
+   "listen": [
+    {
+     "who": "Nam",
+     "voice": "rounded",
+     "text": "Good morning, Margaret."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Morning, Nam! Did you sleep well?"
+    },
+    {
+     "who": "Nam",
+     "voice": "rounded",
+     "text": "Not really, to be honest. The heating made that noise again at about three o'clock, and then I couldn't get back to sleep."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Oh dear. I told you it always does that. You'll get used to it."
+    },
+    {
+     "who": "Nam",
+     "voice": "rounded",
+     "text": "I hope so. I'm not used to sleeping in a new place. And it's so quiet here at night. It's a bit strange."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Quiet? You should hear it on a Friday night, when the students from the house next door come home!"
+    },
+    {
+     "who": "Nam",
+     "voice": "rounded",
+     "text": "Ha! Maybe I'm lucky, then."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Now, have you eaten anything yet? There's a little café on the corner. It's cheap, and the coffee is good. I suggest going there before work."
+    },
+    {
+     "who": "Nam",
+     "voice": "rounded",
+     "text": "That's a good idea. What time does it open?"
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Seven, I think. And Nam, it takes about twenty minutes to walk to the city centre, so don't be late on your first day."
+    },
+    {
+     "who": "Nam",
+     "voice": "rounded",
+     "text": "Twenty minutes? Then I'd better go now. Thanks, Margaret!"
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Good luck! And take an umbrella. It's going to rain again."
+    }
+   ],
+   "rate": 1,
+   "questions": [
+    {
+     "id": "m1",
+     "q": "Why didn't Nam sleep well?",
+     "type": "choice",
+     "options": [
+      "The heating made a noise at night.",
+      "The students next door were loud.",
+      "He drank too much coffee."
+     ]
+    },
+    {
+     "id": "m2",
+     "q": "At about what time did the noise wake him up?",
+     "type": "short"
+    },
+    {
+     "id": "m3",
+     "q": "What does Margaret suggest?",
+     "type": "choice",
+     "options": [
+      "Going to the café on the corner before work.",
+      "Buying a new heater.",
+      "Taking a taxi to work."
+     ]
+    },
+    {
+     "id": "m4",
+     "q": "How long does it take to walk to the city centre?",
+     "type": "short"
+    },
+    {
+     "id": "m5",
+     "q": "**Dictation:** type exactly what Nam says, starting with *\"I'm not used to…\"*",
+     "type": "dictation"
+    },
+    {
+     "id": "m6",
+     "q": "**Dictation:** type Margaret's short sentence starting with *\"You'll get…\"*",
+     "type": "dictation"
+    },
+    {
+     "id": "m7",
+     "q": "How much of this conversation did you understand on the **first** listen/read (before the transcript or gloss)? Write a number, e.g. 75",
+     "type": "short",
+     "placeholder": "e.g. 75"
+    }
+   ],
+   "audio": "data/audio/2026-11-12-morning/p2.mp3"
+  },
+  {
+   "kind": "④ Listen",
+   "title": "The first-night effect",
+   "md": "![Sleeping in a new place](data/img/w1/l2-sleep.webp)\n\nA short talk about why we sleep badly in a new place – just like Nam. Same 3 rounds. Before you press play, **predict**: why do *you* think people sleep badly on the first night? (Just think – no need to write.)",
+   "listen": [
+    {
+     "who": "Speaker",
+     "voice": "buttery",
+     "text": "Have you ever slept badly on your first night in a hotel, or in a new home? If so, you're not alone. Scientists call it the \"first-night effect\".\n\nFor many years, researchers knew about it, but they didn't really understand why it happens. Then, in 2016, a team at Brown University in the United States studied people sleeping in a laboratory. They measured the brain activity of each person, side by side, left and right.\n\nThey found something surprising. During deep sleep on the first night, one half of the brain, usually the left half, stayed more awake than the other. It was a bit like a night guard. When the scientists played strange sounds, that half of the brain reacted more, and people woke up more easily.\n\nIn other words, the brain was not just sleeping badly. It was keeping watch in an unfamiliar place, just in case something was wrong. Rather than a problem, it may be a kind of protection.\n\nThe good news? When people came back to sleep there again, the effect was much weaker. So if you've just moved house, don't worry too much. Your brain simply needs a little time to decide that the new place is safe."
+    }
+   ],
+   "rate": 1,
+   "questions": [
+    {
+     "id": "f1",
+     "q": "What is the talk mainly about?",
+     "type": "choice",
+     "options": [
+      "Why people often sleep badly in a new place.",
+      "How to choose a good hotel.",
+      "Why noise is bad for the brain."
+     ]
+    },
+    {
+     "id": "f2",
+     "q": "Which half of the brain usually stayed more awake on the first night?",
+     "type": "short"
+    },
+    {
+     "id": "f3",
+     "q": "The speaker compares that half of the brain to…",
+     "type": "choice",
+     "options": [
+      "a night guard",
+      "an alarm clock",
+      "a computer"
+     ]
+    },
+    {
+     "id": "f4",
+     "q": "According to the speaker, the first-night effect may be…",
+     "type": "choice",
+     "options": [
+      "a kind of protection",
+      "a serious illness",
+      "caused by coffee"
+     ]
+    },
+    {
+     "id": "f5",
+     "q": "What happened when people came back to sleep there again?",
+     "type": "short"
+    },
+    {
+     "id": "f6",
+     "q": "The speaker says *\"**In other words**, the brain was not just sleeping badly.\"* What does *in other words* do here?",
+     "type": "choice",
+     "options": [
+      "It gives the same idea again in a clearer way.",
+      "It starts a completely new topic.",
+      "It gives the opposite idea."
+     ]
+    },
+    {
+     "id": "f7",
+     "q": "How much of this talk did you understand on the **first** listen/read (before the transcript or gloss)? Write a number, e.g. 75",
+     "type": "short",
+     "placeholder": "e.g. 75"
+    }
+   ],
+   "audio": "data/audio/2026-11-12-morning/p3.mp3"
+  }
+ ]
+}

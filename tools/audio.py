@@ -9,7 +9,7 @@ Dùng:  python3 tools/audio.py <lesson-id> [...]   (hoặc --all; --words <số 
 Giọng (thư mục PIPER_DIR, mặc định /root/piper; tải ở tools/audio_setup.sh):
   rounded → en_GB-alan (nam, Anh) · glassy → en_GB-alba (nữ, Anh) · buttery/airy → en_US-lessac (Mỹ)
 """
-import io, json, os, subprocess, sys, wave
+import io, json, os, re, subprocess, sys, wave
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PIPER = os.environ.get("PIPER_DIR", "/root/piper")
 VOICE = {"rounded": "en_GB-alan-medium", "glassy": "en_GB-alba-medium", "buttery": "en_US-lessac-medium", "airy": "en_US-lessac-medium"}
@@ -49,10 +49,12 @@ def render(lid):
 def render_words(no):
     W = json.load(open(os.path.join(ROOT, "data", "weeks.json")))
     w = [x for x in W["weeks"] if x["no"] == no][0]
-    for x in w.get("words", []):
+    extra = json.load(open(os.path.join(ROOT, "data", "words.json")))["words"] if os.path.exists(os.path.join(ROOT, "data", "words.json")) else []
+    for x in w.get("words", []) + [e for e in extra if e.get("week") == no]:
+        if x.get("audio") and os.path.exists(os.path.join(ROOT, x["audio"])): continue
         if not x.get("audio"): continue
         out = os.path.join(ROOT, x["audio"]); os.makedirs(os.path.dirname(out), exist_ok=True)
-        sr, a = pcm(x["w"].replace("sb", "somebody").replace("+ V-ing", ""), VOICE["glassy"])
+        sr, a = pcm(re.sub(r"\bsb\b", "somebody", re.sub(r"\bsth\b", "something", x["w"])).replace("+ V-ing", "").replace("…", "").replace("+ time", ""), VOICE["glassy"])
         _, b = pcm(x.get("ex", ""), VOICE["rounded"]) if x.get("ex") else (sr, b"")
         wav = out[:-4] + ".wav"
         with wave.open(wav, "wb") as f:

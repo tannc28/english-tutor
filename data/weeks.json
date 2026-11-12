@@ -25,7 +25,8 @@
      "vi": "căn hộ",
      "audio": "data/audio/w1/words/w-flat.mp3",
      "ipa": "/flæt/",
-     "ipa_us": "/flæt/"
+     "ipa_us": "/flæt/",
+     "type": "word"
     },
     {
      "w": "heating",
@@ -35,7 +36,8 @@
      "vi": "hệ thống sưởi",
      "audio": "data/audio/w1/words/w-heating.mp3",
      "ipa": "/ˈhiːtɪŋ/",
-     "ipa_us": "/ˈhiːtɪŋ/"
+     "ipa_us": "/ˈhiːtɪŋ/",
+     "type": "word"
     },
     {
      "w": "umbrella",
@@ -45,7 +47,8 @@
      "vi": "cái ô",
      "audio": "data/audio/w1/words/w-umbrella.mp3",
      "ipa": "/ʌmˈbrelə/",
-     "ipa_us": "/ʌmˈbrelə/"
+     "ipa_us": "/ʌmˈbrelə/",
+     "type": "word"
     },
     {
      "w": "counter",
@@ -55,7 +58,8 @@
      "vi": "quầy",
      "audio": "data/audio/w1/words/w-counter.mp3",
      "ipa": "/ˈkaʊntə/",
-     "ipa_us": "/ˈkaʊntər/"
+     "ipa_us": "/ˈkaʊntər/",
+     "type": "word"
     },
     {
      "w": "bacon sandwich",
@@ -64,7 +68,8 @@
      "ex": "Try the bacon sandwich!",
      "audio": "data/audio/w1/words/w-sandwich.mp3",
      "ipa": "/ˈbeɪkən ˈsændwɪtʃ/",
-     "ipa_us": "/ˈbeɪkən ˈsændwɪtʃ/"
+     "ipa_us": "/ˈbeɪkən ˈsændwɪtʃ/",
+     "type": "word"
     },
     {
      "w": "tram",
@@ -74,7 +79,8 @@
      "vi": "tàu điện",
      "audio": "data/audio/w1/words/w-tram.mp3",
      "ipa": "/træm/",
-     "ipa_us": "/træm/"
+     "ipa_us": "/træm/",
+     "type": "word"
     },
     {
      "w": "on the corner",
@@ -84,7 +90,8 @@
      "vi": "ở góc phố",
      "audio": "data/audio/w1/words/w-corner.mp3",
      "ipa": "/ɒn ðə ˈkɔːnə/",
-     "ipa_us": "/ɔn ðə ˈkɔːrnər/"
+     "ipa_us": "/ɔn ðə ˈkɔːrnər/",
+     "type": "chunk"
     },
     {
      "w": "be used to + V-ing",
@@ -94,7 +101,8 @@
      "vi": "đã quen với",
      "audio": "data/audio/w1/words/w-used.mp3",
      "ipa": "/bi juːst tə/",
-     "ipa_us": "/bi juːst tə/"
+     "ipa_us": "/bi juːst tə/",
+     "type": "chunk"
     },
     {
      "w": "show sb around",
@@ -104,7 +112,8 @@
      "vi": "dẫn đi xem",
      "audio": "data/audio/w1/words/w-showaround.mp3",
      "ipa": "/ʃəʊ ˈsʌmbɒdi əˈraʊnd/",
-     "ipa_us": "/ʃoʊ ˈsʌmbɑːdi ərˈraʊnd/"
+     "ipa_us": "/ʃoʊ ˈsʌmbɑːdi ərˈraʊnd/",
+     "type": "phrasal verb"
     },
     {
      "w": "give sb a hand",
@@ -114,7 +123,8 @@
      "vi": "giúp một tay",
      "audio": "data/audio/w1/words/w-hand.mp3",
      "ipa": "/ɡɪv ˈsʌmbɒdi ə hænd/",
-     "ipa_us": "/ɡɪv ˈsʌmbɑːdi ə hænd/"
+     "ipa_us": "/ɡɪv ˈsʌmbɑːdi ə hænd/",
+     "type": "idiom"
     },
     {
      "w": "take a deep breath",
@@ -124,7 +134,8 @@
      "vi": "hít một hơi thật sâu",
      "audio": "data/audio/w1/words/w-breath.mp3",
      "ipa": "/teɪk ə diːp breθ/",
-     "ipa_us": "/teɪk ə diːp breθ/"
+     "ipa_us": "/teɪk ə diːp breθ/",
+     "type": "chunk"
     },
     {
      "w": "get lost",
@@ -134,7 +145,8 @@
      "vi": "bị lạc",
      "audio": "data/audio/w1/words/w-lost.mp3",
      "ipa": "/ɡet lɒst/",
-     "ipa_us": "/ɡet lɔst/"
+     "ipa_us": "/ɡet lɔst/",
+     "type": "phrasal verb"
     }
    ],
    "listen": [],

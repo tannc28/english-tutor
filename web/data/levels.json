@@ -1,0 +1,597 @@
+{
+ "how_md": "Each level is a **checklist**. Your tutor marks every item from your lessons (with evidence), and you rate yourself too. **Not checked** = we haven't tested it yet. Grammar and linking items are about **understanding** them when you read or hear them – speaking and writing come later.",
+ "sources": [
+  {
+   "name": "CEFR Companion Volume (Council of Europe, 2020) – can-do descriptors",
+   "url": "https://rm.coe.int/16809ea0d4"
+  },
+  {
+   "name": "British Council / EAQUALS Core Inventory for General English",
+   "url": "https://www.eaquals.org/resources/the-core-inventory-for-general-english/"
+  },
+  {
+   "name": "CEFR-J Wordlist 1.5 & Grammar Profile (Tono Laboratory, TUFS) via Open Language Profiles",
+   "url": "https://github.com/openlanguageprofiles/olp-en-cefrj"
+  },
+  {
+   "name": "Octanove Vocabulary Profile C1 (CC BY-SA 4.0)",
+   "url": "https://github.com/openlanguageprofiles/olp-en-cefrj"
+  },
+  {
+   "name": "Cambridge English – guided learning hours (approx.)",
+   "url": "https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours"
+  }
+ ],
+ "levels": [
+  {
+   "id": "A2",
+   "name": "A2 · Elementary",
+   "hours": "~180–200",
+   "summary_md": "You can understand **simple, everyday English** when people speak slowly and clearly.",
+   "vocab": [
+    "A1",
+    "A2"
+   ],
+   "proof": [
+    "Understand a slow graded audiobook (level 2) without the text",
+    "Read a short simple email or menu without a dictionary"
+   ],
+   "sections": [
+    {
+     "key": "listening",
+     "name": "🎧 Listening",
+     "items": [
+      {
+       "id": "A2-L1",
+       "text": "Understand words and phrases about personal life, shopping, local area and work"
+      },
+      {
+       "id": "A2-L2",
+       "text": "Catch the main point of short, clear messages and announcements"
+      },
+      {
+       "id": "A2-L3",
+       "text": "Follow a slow, clear everyday conversation about familiar things"
+      }
+     ]
+    },
+    {
+     "key": "reading",
+     "name": "📖 Reading",
+     "items": [
+      {
+       "id": "A2-R1",
+       "text": "Find specific information in simple everyday texts: ads, menus, timetables"
+      },
+      {
+       "id": "A2-R2",
+       "text": "Understand short, simple personal messages and emails"
+      }
+     ]
+    },
+    {
+     "key": "grammar",
+     "name": "🧩 Grammar (understand it when you read/hear it)",
+     "items": [
+      {
+       "id": "A2-G1",
+       "text": "Past simple – regular and irregular",
+       "ex": "She **went** home and **called** her mum."
+      },
+      {
+       "id": "A2-G2",
+       "text": "Past continuous",
+       "ex": "I **was walking** when it started to rain."
+      },
+      {
+       "id": "A2-G3",
+       "text": "Present perfect – basic",
+       "ex": "I**'ve been** to London. Have you **finished**?"
+      },
+      {
+       "id": "A2-G4",
+       "text": "Future: will / going to / present continuous for plans",
+       "ex": "I**'m meeting** Tom tomorrow."
+      },
+      {
+       "id": "A2-G5",
+       "text": "Modals: can, could, should, must, have to, might",
+       "ex": "You **should** take an umbrella."
+      },
+      {
+       "id": "A2-G6",
+       "text": "Comparatives and superlatives",
+       "ex": "It's **cheaper** than… · the **best** sandwich"
+      },
+      {
+       "id": "A2-G7",
+       "text": "much / many / a few / a little",
+       "ex": "There's **a little** milk, but **not many** eggs."
+      },
+      {
+       "id": "A2-G8",
+       "text": "First conditional",
+       "ex": "**If** it rains, I**'ll** take the tram."
+      },
+      {
+       "id": "A2-G9",
+       "text": "Common phrasal verbs",
+       "ex": "get up, look for, find out, turn off"
+      }
+     ]
+    },
+    {
+     "key": "linking",
+     "name": "🔗 Linking words & chunks",
+     "items": [
+      {
+       "id": "A2-K1",
+       "text": "and, but, or, because, so, then, when",
+       "ex": "I was tired, **so** I went to bed."
+      }
+     ]
+    },
+    {
+     "key": "later",
+     "name": "🗣 Speaking & writing (later – when you want)",
+     "items": [
+      {
+       "id": "A2-S1",
+       "text": "Describe your family, work and daily routine in simple sentences",
+       "later": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "name": "B1 · Intermediate",
+   "hours": "~350–400",
+   "summary_md": "You can understand the **main points** of clear standard English about familiar things – work, free time, everyday life – and follow podcasts made for learners.",
+   "vocab": [
+    "B1"
+   ],
+   "proof": [
+    "6 Minute English (BBC): understand ~80% on the first listen, without the transcript",
+    "Read a graded reader (level 4–5) at a comfortable speed, without translating"
+   ],
+   "sections": [
+    {
+     "key": "listening",
+     "name": "🎧 Listening",
+     "items": [
+      {
+       "id": "B1-L1",
+       "text": "Understand the main points of clear standard speech on familiar topics (work, free time, daily life)"
+      },
+      {
+       "id": "B1-L2",
+       "text": "Follow the main points of podcasts/videos on topics you like when speech is fairly slow and clear",
+       "ex": "e.g. 6 Minute English, Easy English"
+      },
+      {
+       "id": "B1-L3",
+       "text": "Follow most of a conversation between two people about everyday things"
+      },
+      {
+       "id": "B1-L4",
+       "text": "Hear the small squeezed words in natural speech: I'd, you'll, it's, she's, d'you",
+       "ex": "I'd better go. · You'll get used to it."
+      },
+      {
+       "id": "B1-L5",
+       "text": "Understand simple directions, instructions and announcements"
+      }
+     ]
+    },
+    {
+     "key": "reading",
+     "name": "📖 Reading",
+     "items": [
+      {
+       "id": "B1-R1",
+       "text": "Understand texts written mostly in everyday or work language"
+      },
+      {
+       "id": "B1-R2",
+       "text": "Understand descriptions of events, feelings and wishes in stories and messages"
+      },
+      {
+       "id": "B1-R3",
+       "text": "Find and understand what you need in emails, notices and short articles"
+      },
+      {
+       "id": "B1-R4",
+       "text": "Read an easy story at normal speed without translating in your head"
+      },
+      {
+       "id": "B1-R5",
+       "text": "See the main argument of a clear text (not every detail)"
+      },
+      {
+       "id": "B1-R6",
+       "text": "Follow what it / this / that / which refers to",
+       "ex": "…sounds right. **This** is because…"
+      }
+     ]
+    },
+    {
+     "key": "grammar",
+     "name": "🧩 Grammar (understand it when you read/hear it)",
+     "items": [
+      {
+       "id": "B1-G1",
+       "text": "Present perfect vs past simple (for/since, already, yet, ever)",
+       "ex": "I**'ve lived** here **since** 2020. · I **moved** in 2020."
+      },
+      {
+       "id": "B1-G2",
+       "text": "Present perfect continuous",
+       "ex": "I**'ve been waiting** for an hour."
+      },
+      {
+       "id": "B1-G3",
+       "text": "Past perfect",
+       "ex": "When I arrived, the film **had started**."
+      },
+      {
+       "id": "B1-G4",
+       "text": "Passive – present and past",
+       "ex": "It **was built** in 1900. · English **is spoken** here."
+      },
+      {
+       "id": "B1-G5",
+       "text": "Second conditional",
+       "ex": "**If** I **had** more time, I **would** read more."
+      },
+      {
+       "id": "B1-G6",
+       "text": "Reported speech: said that / told me to / asked if",
+       "ex": "She **told me to** wait. He **asked if** I was OK."
+      },
+      {
+       "id": "B1-G7",
+       "text": "Relative clauses: who, which, that, where",
+       "ex": "the café **where** Jess works"
+      },
+      {
+       "id": "B1-G8",
+       "text": "Verb + -ing or to-infinitive",
+       "ex": "enjoy **doing** · decide **to do** · suggest **doing**"
+      },
+      {
+       "id": "B1-G9",
+       "text": "be / get used to + V-ing  vs  used to + V",
+       "ex": "I'm **used to getting up** early. · I **used to live** there."
+      },
+      {
+       "id": "B1-G10",
+       "text": "too … to / … enough to",
+       "ex": "It's **too far to** walk."
+      },
+      {
+       "id": "B1-G11",
+       "text": "Question tags",
+       "ex": "It's cold, **isn't it**?"
+      }
+     ]
+    },
+    {
+     "key": "linking",
+     "name": "🔗 Linking words & chunks",
+     "items": [
+      {
+       "id": "B1-K1",
+       "text": "although / even though / however / though – contrast",
+       "ex": "**Although** he was tired, he helped."
+      },
+      {
+       "id": "B1-K2",
+       "text": "unless / as long as / in case – conditions",
+       "ex": "I can't sleep **unless** it's dark."
+      },
+      {
+       "id": "B1-K3",
+       "text": "so that / in order to – purpose",
+       "ex": "I left early **so that** I wouldn't be late."
+      },
+      {
+       "id": "B1-K4",
+       "text": "Time & order: while, during, after that, finally, as soon as"
+      },
+      {
+       "id": "B1-K5",
+       "text": "Everyday chunks: it takes + time, spend time doing, I'd rather, had better",
+       "ex": "It **takes** 20 minutes. I'd **better** go."
+      },
+      {
+       "id": "B1-K6",
+       "text": "rather / instead / in other words",
+       "ex": "He didn't text. **Rather**, he called."
+      }
+     ]
+    },
+    {
+     "key": "later",
+     "name": "🗣 Speaking & writing (later – when you want)",
+     "items": [
+      {
+       "id": "B1-S1",
+       "text": "Tell a simple story or describe an experience",
+       "later": true
+      },
+      {
+       "id": "B1-S2",
+       "text": "Write a simple email or message about your day or opinion",
+       "later": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B2",
+   "name": "B2 · Upper-intermediate",
+   "hours": "~500–600",
+   "summary_md": "You can understand **standard English at natural speed** – podcasts, news, interviews, longer articles with opinions – about most topics, not only familiar ones.",
+   "vocab": [
+    "B2"
+   ],
+   "proof": [
+    "A normal podcast for native speakers (e.g. TED-Ed, a news podcast): ~80% on the first listen",
+    "Read a newspaper opinion article and explain the writer's view"
+   ],
+   "sections": [
+    {
+     "key": "listening",
+     "name": "🎧 Listening",
+     "items": [
+      {
+       "id": "B2-L1",
+       "text": "Understand standard speech at normal speed, on familiar and new topics"
+      },
+      {
+       "id": "B2-L2",
+       "text": "Follow a longer talk and its line of argument if the topic is fairly familiar"
+      },
+      {
+       "id": "B2-L3",
+       "text": "Understand most news, documentaries, interviews and podcasts in standard English"
+      },
+      {
+       "id": "B2-L4",
+       "text": "Follow a lively conversation between native speakers (with some effort)"
+      },
+      {
+       "id": "B2-L5",
+       "text": "Hear the speaker's attitude: doubt, irony, enthusiasm"
+      }
+     ]
+    },
+    {
+     "key": "reading",
+     "name": "📖 Reading",
+     "items": [
+      {
+       "id": "B2-R1",
+       "text": "Understand articles and reports where the writer has a point of view"
+      },
+      {
+       "id": "B2-R2",
+       "text": "Read quite independently, changing speed for different texts; dictionary only sometimes"
+      },
+      {
+       "id": "B2-R3",
+       "text": "Read modern fiction and non-fiction at a natural pace"
+      },
+      {
+       "id": "B2-R4",
+       "text": "Scan a long text quickly to find the details you need"
+      }
+     ]
+    },
+    {
+     "key": "grammar",
+     "name": "🧩 Grammar (understand it when you read/hear it)",
+     "items": [
+      {
+       "id": "B2-G1",
+       "text": "Passive in all tenses + have something done",
+       "ex": "It **has been fixed**. · I **had my hair cut**."
+      },
+      {
+       "id": "B2-G2",
+       "text": "Third and mixed conditionals",
+       "ex": "If I **had left** earlier, I **would have caught** it."
+      },
+      {
+       "id": "B2-G3",
+       "text": "wish / if only",
+       "ex": "I **wish** I **had** more time."
+      },
+      {
+       "id": "B2-G4",
+       "text": "Future continuous and future perfect",
+       "ex": "This time tomorrow I**'ll be flying**. By 6, I**'ll have finished**."
+      },
+      {
+       "id": "B2-G5",
+       "text": "Modals of deduction about the past",
+       "ex": "She **must have** forgotten. He **can't have** seen it."
+      },
+      {
+       "id": "B2-G6",
+       "text": "Non-defining relative clauses and preposition + which/whom",
+       "ex": ", **which** surprised everyone · the person **to whom** I spoke"
+      },
+      {
+       "id": "B2-G7",
+       "text": "Participle clauses",
+       "ex": "**Having finished** work, he went home."
+      },
+      {
+       "id": "B2-G8",
+       "text": "Past perfect continuous",
+       "ex": "I **had been waiting** for an hour."
+      },
+      {
+       "id": "B2-G9",
+       "text": "Reporting verbs with patterns",
+       "ex": "He **denied taking** it. She **warned me not to** go."
+      }
+     ]
+    },
+    {
+     "key": "linking",
+     "name": "🔗 Linking words & chunks",
+     "items": [
+      {
+       "id": "B2-K1",
+       "text": "whereas / while / on the other hand / nevertheless – contrast"
+      },
+      {
+       "id": "B2-K2",
+       "text": "as a result / therefore / consequently / due to – cause and result"
+      },
+      {
+       "id": "B2-K3",
+       "text": "moreover / furthermore / in addition – adding"
+      },
+      {
+       "id": "B2-K4",
+       "text": "Hedging: tend to, seem to, it is likely that, arguably"
+      },
+      {
+       "id": "B2-K5",
+       "text": "Common idioms and phrasal verbs in everyday speech",
+       "ex": "get the hang of, give it a go, run out of"
+      }
+     ]
+    },
+    {
+     "key": "later",
+     "name": "🗣 Speaking & writing (later – when you want)",
+     "items": [
+      {
+       "id": "B2-S1",
+       "text": "Explain your view on a topic, with pros and cons",
+       "later": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C1",
+   "name": "C1 · Advanced",
+   "hours": "~700–800",
+   "summary_md": "You understand **long, complex** speech and texts, even when ideas are only implied – fast conversations, different accents, idioms, style.",
+   "vocab": [
+    "C1"
+   ],
+   "proof": [
+    "A fast, unscripted podcast between native speakers (e.g. Hard Fork): ~85–90% without effort",
+    "Read a long feature article or a novel and catch the tone and irony"
+   ],
+   "sections": [
+    {
+     "key": "listening",
+     "name": "🎧 Listening",
+     "items": [
+      {
+       "id": "C1-L1",
+       "text": "Understand long speech even when it isn't clearly organised and links are only implied"
+      },
+      {
+       "id": "C1-L2",
+       "text": "Understand a wide range of idioms, slang and changes in tone"
+      },
+      {
+       "id": "C1-L3",
+       "text": "Follow fast group conversations with different accents"
+      },
+      {
+       "id": "C1-L4",
+       "text": "Watch YouTube/podcasts for native speakers without much effort"
+      }
+     ]
+    },
+    {
+     "key": "reading",
+     "name": "📖 Reading",
+     "items": [
+      {
+       "id": "C1-R1",
+       "text": "Understand long, complex texts and notice differences in style"
+      },
+      {
+       "id": "C1-R2",
+       "text": "Understand specialised articles outside your field (re-reading difficult parts)"
+      },
+      {
+       "id": "C1-R3",
+       "text": "Catch implied meaning, attitude and irony"
+      }
+     ]
+    },
+    {
+     "key": "grammar",
+     "name": "🧩 Grammar (understand it when you read/hear it)",
+     "items": [
+      {
+       "id": "C1-G1",
+       "text": "Inversion for emphasis",
+       "ex": "**Hardly had I** arrived when… · **Not only was he**…"
+      },
+      {
+       "id": "C1-G2",
+       "text": "Cleft sentences",
+       "ex": "**What I need is** sleep. · **It was** Tom **who**…"
+      },
+      {
+       "id": "C1-G3",
+       "text": "Advanced passive",
+       "ex": "He **is said to have** left."
+      },
+      {
+       "id": "C1-G4",
+       "text": "Advanced modals",
+       "ex": "You **needn't have** come. · It **may well** rain."
+      },
+      {
+       "id": "C1-G5",
+       "text": "Ellipsis and substitution",
+       "ex": "**So do I.** · I hope **so**. · **If not**, …"
+      }
+     ]
+    },
+    {
+     "key": "linking",
+     "name": "🔗 Linking words & chunks",
+     "items": [
+      {
+       "id": "C1-K1",
+       "text": "Formal linkers: albeit, hence, thereby, notwithstanding"
+      },
+      {
+       "id": "C1-K2",
+       "text": "Spoken markers: mind you, that said, having said that, as it were"
+      }
+     ]
+    },
+    {
+     "key": "later",
+     "name": "🗣 Speaking & writing (later – when you want)",
+     "items": [
+      {
+       "id": "C1-S1",
+       "text": "Speak fluently and naturally about complex topics",
+       "later": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

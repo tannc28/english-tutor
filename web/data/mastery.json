@@ -1,0 +1,218 @@
+{
+ "updated": "2026-11-12",
+ "vocab": {
+  "estimate_md": "Day 1 test: solid in the most common ~3,000 words, partly in the 5,000 band → about **4,000–5,000 word families**. Do the word check below for an exact number per level."
+ },
+ "items": {
+  "A2-L1": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-L2": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-R1": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-R2": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-G1": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-G2": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-G3": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-G4": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-G5": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-G6": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-G7": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-G8": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-G9": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-K1": {
+   "tutor": "got_it",
+   "evidence": "Day 1 assessment – no problems at this level",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "A2-L3": {
+   "tutor": "got_it",
+   "evidence": "Day 1 easy listening: 3/3 correct (but needed many replays)",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-L1": {
+   "tutor": "learning",
+   "evidence": "Day 1: easy listening 9/10, but needed ~9 plays – understanding is there, speed isn't yet",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-L2": {
+   "tutor": "learning",
+   "evidence": "Not comfortable yet – Tân: still has to strain (12/11)",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-L3": {
+   "tutor": "learning",
+   "evidence": "Day 1 dialogue: main points OK, details after replays",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-L4": {
+   "tutor": "learning",
+   "evidence": "Day 1 dictation: missed *she's* (9/10 words) – weak forms are the main gap",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-R1": {
+   "tutor": "got_it",
+   "evidence": "Day 1: B1 story 85–90%",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-R2": {
+   "tutor": "got_it",
+   "evidence": "Day 1: B1 story – feelings and events understood",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-R3": {
+   "tutor": "got_it",
+   "evidence": "Day 1 reading B1 8.5/10",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-R4": {
+   "tutor": "learning",
+   "evidence": "Understands well but slowly; still translating (Tân, 12/11)",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-R5": {
+   "tutor": "got_it",
+   "evidence": "Day 1 deep reading B1+/B2 9.5/10",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-R6": {
+   "tutor": "got_it",
+   "evidence": "Day 1: reference words (*this pattern*, *it*) correct",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-G8": {
+   "tutor": "learning",
+   "evidence": "Day 1 ❌ *suggested to take* → *suggested taking*",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-G9": {
+   "tutor": "learning",
+   "evidence": "Day 1 ❌ *used to get up* → *used to getting up*",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-K1": {
+   "tutor": "learning",
+   "evidence": "Day 1: unsure between *although* and *unless*",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-K2": {
+   "tutor": "learning",
+   "evidence": "Day 1: *unless* = if… not – confused with although",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B1-K6": {
+   "tutor": "learning",
+   "evidence": "Seen in lessons 2–3 (rather, in other words)",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B2-R1": {
+   "tutor": "learning",
+   "evidence": "Day 1 deep reading B1+/B2 9.5/10 – but slow",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B2-L1": {
+   "tutor": "not_yet",
+   "evidence": "Day 1 B2 listening ~40–50% after 8 plays",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "B2-L3": {
+   "tutor": "not_yet",
+   "evidence": "Day 1 B2 listening ~5/10",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "C1-R1": {
+   "tutor": "not_yet",
+   "evidence": "Day 1 C1 reading ~4.5/10 – missed the writer's twist",
+   "date": "2026-11-11",
+   "baseline": true
+  },
+  "C1-G1": {
+   "tutor": "got_it",
+   "evidence": "Day 1: correct *Hardly had I…*, *Not only was he…* (recognition)",
+   "date": "2026-11-11",
+   "baseline": true
+  }
+ }
+}
