@@ -1,1 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">⬅️⛪</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">Turn left at</text><text x="88.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">the church.</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">👌</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">Got it.</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">Got it. · I understand</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF3F8"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient></defs>
+<rect width="384" height="288" fill="url(#g)"/>
+<rect y="232" width="384" height="56" fill="#DCE5EE"/>
+<rect x="10" y="130" width="48" height="102" fill="#E9E4DA"/>
+<path d="M8 130 L34 100 L60 130 Z" fill="#B5785B"/>
+<rect x="28" y="72" width="12" height="28" fill="#E9E4DA"/>
+<path d="M26 72 L34 56 L42 72 Z" fill="#B5785B"/>
+<rect x="33" y="40" width="3" height="14" fill="#8B5E3C"/>
+<rect x="29" y="45" width="11" height="3" fill="#8B5E3C"/>
+<circle cx="34" cy="168" r="6" fill="#B9D7F5"/>
+<path d="M28 232 L28 206 Q34 198 40 206 L40 232 Z" fill="#8B5E3C"/>
+<ellipse cx="110" cy="236" rx="26" ry="5" fill="#000" opacity=".12"/>
+<ellipse cx="280" cy="236" rx="26" ry="5" fill="#000" opacity=".12"/>
+<path d="M90 98 Q90 74 110 74 Q130 74 130 98 Q124 86 110 86 Q96 86 90 98 Z" fill="#C0392B"/>
+<circle cx="110" cy="96" r="20" fill="#F1C7A5"/>
+<circle cx="104" cy="98" r="2.5" fill="#2B2B2B"/>
+<circle cx="116" cy="98" r="2.5" fill="#2B2B2B"/>
+<path d="M104 108 Q110 113 116 108" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<rect x="88" y="118" width="44" height="72" rx="16" fill="#F5A25D"/>
+<path d="M90 132 L68 118" stroke="#F5A25D" stroke-width="11" stroke-linecap="round"/>
+<circle cx="62" cy="116" r="7" fill="#F1C7A5"/>
+<rect x="94" y="128" width="32" height="58" rx="8" fill="#5FAF6E"/>
+<rect x="96" y="188" width="12" height="46" rx="4" fill="#3A4A6B"/>
+<rect x="112" y="188" width="12" height="46" rx="4" fill="#3A4A6B"/>
+<path d="M262 96 Q262 76 280 76 Q298 76 298 96 Q292 86 280 86 Q268 86 262 96 Z" fill="#1E1E1E"/>
+<circle cx="280" cy="100" r="20" fill="#F1C7A5"/>
+<path d="M272 100 Q274 103 276 100 M284 100 Q286 103 288 100" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M274 110 Q280 114 286 110" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<rect x="258" y="122" width="44" height="72" rx="16" fill="#7FB3D5"/>
+<rect x="266" y="190" width="12" height="44" rx="4" fill="#2F3E5C"/>
+<rect x="282" y="190" width="12" height="44" rx="4" fill="#2F3E5C"/>
+<path d="M300 140 L318 124" stroke="#7FB3D5" stroke-width="11" stroke-linecap="round"/>
+<circle cx="324" cy="116" r="8" fill="none" stroke="#F1C7A5" stroke-width="6"/>
+<circle cx="334" cy="110" r="4" fill="#F1C7A5"/>
+<circle cx="334" cy="122" r="4" fill="#F1C7A5"/>
+</svg>

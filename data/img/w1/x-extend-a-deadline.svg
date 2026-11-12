@@ -1,1 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">📅 Fri</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">deadline:</text><text x="88.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">Friday</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">📅 next Fri</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">one more week</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">extend the deadline · more time</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF3F8"/><stop offset="1" stop-color="#FFF4E6"/></linearGradient></defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<rect y="236" width="384" height="52" fill="#DCE5EC"/>
+<rect x="24" y="56" width="190" height="170" rx="10" fill="#FFFFFF" stroke="#CFD8DC" stroke-width="2"/>
+<path d="M24,66 Q24,56 34,56 H204 Q214,56 214,66 V84 H24 Z" fill="#EF5350"/>
+<rect x="70" y="48" width="6" height="18" rx="3" fill="#546E7A"/>
+<rect x="168" y="48" width="6" height="18" rx="3" fill="#546E7A"/>
+<g fill="#ECEFF1">
+<circle cx="52" cy="110" r="9"/><circle cx="96" cy="110" r="9"/><circle cx="140" cy="110" r="9"/><circle cx="184" cy="110" r="9"/>
+<circle cx="52" cy="142" r="9"/><circle cx="140" cy="142" r="9"/><circle cx="184" cy="142" r="9"/>
+<circle cx="52" cy="174" r="9"/><circle cx="96" cy="174" r="9"/><circle cx="140" cy="174" r="9"/><circle cx="184" cy="174" r="9"/>
+<circle cx="52" cy="206" r="9"/><circle cx="96" cy="206" r="9"/><circle cx="140" cy="206" r="9"/><circle cx="184" cy="206" r="9"/>
+</g>
+<circle cx="96" cy="110" r="12" fill="#FFEBEE" stroke="#E53935" stroke-width="2" stroke-dasharray="3 3"/>
+<circle cx="96" cy="142" r="12" fill="#E53935"/>
+<path d="M104,104 C140,94 140,156 106,140" stroke="#E53935" stroke-width="2.5" stroke-dasharray="4 4" fill="none" stroke-linecap="round"/>
+<polygon points="102,132 110,146 98,146" fill="#E53935"/>
+<g transform="translate(300,236)">
+<ellipse cx="0" cy="2" rx="30" ry="5" fill="#000" fill-opacity=".12"/>
+<path d="M-6,-72 L-8,0 M6,-72 L8,0" stroke="#37474F" stroke-width="11" stroke-linecap="round"/>
+<rect x="-18" y="-152" width="36" height="86" rx="14" fill="#283593"/>
+<path d="M-6,-150 L0,-130 L6,-150 Z" fill="#FFFFFF"/>
+<path d="M-16,-138 L-52,-112" stroke="#283593" stroke-width="9" stroke-linecap="round"/>
+<circle cx="-54" cy="-110" r="6" fill="#F1C7A5"/>
+<circle cx="0" cy="-172" r="21" fill="#F1C7A5"/>
+<path d="M-22,-168 Q-24,-196 0,-196 Q24,-196 22,-168 Q20,-176 14,-180 Q0,-176 -14,-180 Q-20,-176 -22,-168Z" fill="#6D4C41"/>
+<circle cx="-7" cy="-172" r="6" fill="none" stroke="#90A4AE" stroke-width="2"/>
+<circle cx="7" cy="-172" r="6" fill="none" stroke="#90A4AE" stroke-width="2"/>
+<path d="M-1,-172 H1" stroke="#90A4AE" stroke-width="2"/>
+<path d="M-6,-160 Q0,-154 6,-160" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<g>
+<path d="M342,216 L330,186 M366,216 L378,186" stroke="#AED581" stroke-width="7" stroke-linecap="round"/>
+<rect x="340" y="210" width="28" height="26" rx="9" fill="#AED581"/>
+<circle cx="354" cy="196" r="13" fill="#E0A97E"/>
+<path d="M341,194 Q341,180 354,180 Q367,180 367,194 Q360,188 354,188 Q348,188 341,194Z" fill="#1E1E1E"/>
+<circle cx="330" cy="184" r="5" fill="#E0A97E"/><circle cx="378" cy="184" r="5" fill="#E0A97E"/>
+</g>
+</svg>

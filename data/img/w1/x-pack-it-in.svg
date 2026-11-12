@@ -1,1 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">🎹😩</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">I wanted to</text><text x="88.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">stop…</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">🎹🙂</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">but I didn&#x27;t.</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">I nearly packed it in · = give up</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<rect width="384" height="288" fill="#EEF3F8"/>
+<rect x="8" y="16" width="176" height="256" rx="18" fill="#FFF4E6"/>
+<rect x="200" y="16" width="176" height="256" rx="18" fill="#E8F5EC"/>
+<rect x="191" y="16" width="2" height="256" fill="#D5DEE8"/>
+<ellipse cx="116" cy="236" rx="110" ry="4" fill="#000" opacity=".08"/>
+<rect x="16" y="96" width="80" height="138" rx="8" fill="#2F3E5C"/>
+<rect x="20" y="84" width="72" height="10" rx="3" fill="#3A4A6B"/>
+<rect x="92" y="154" width="60" height="12" rx="3" fill="#F5F5F5"/>
+<rect x="100" y="154" width="5" height="7" fill="#1E1E1E"/>
+<rect x="112" y="154" width="5" height="7" fill="#1E1E1E"/>
+<rect x="124" y="154" width="5" height="7" fill="#1E1E1E"/>
+<rect x="136" y="154" width="5" height="7" fill="#1E1E1E"/>
+<rect x="86" y="136" width="64" height="8" rx="3" fill="#3A4A6B" transform="rotate(-14 118 140)"/>
+<path d="M130 124 L120 124" stroke="#7FB3D5" stroke-width="0"/>
+<rect x="130" y="190" width="12" height="44" rx="4" fill="#2F3E5C"/>
+<rect x="150" y="190" width="12" height="44" rx="4" fill="#2F3E5C"/>
+<rect x="130" y="124" width="40" height="70" rx="14" fill="#7FB3D5"/>
+<path d="M134 140 L116 158" stroke="#7FB3D5" stroke-width="10" stroke-linecap="round"/>
+<circle cx="114" cy="160" r="6" fill="#F1C7A5"/>
+<circle cx="150" cy="104" r="18" fill="#F1C7A5"/>
+<path d="M134 100 Q134 84 150 84 Q166 84 166 100 Q160 92 150 92 Q140 92 134 100 Z" fill="#1E1E1E"/>
+<path d="M142 96 L148 100 M158 100 L164 96" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<circle cx="144" cy="106" r="2" fill="#2B2B2B"/>
+<circle cx="156" cy="106" r="2" fill="#2B2B2B"/>
+<path d="M144 118 Q150 112 156 118" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M170 92 Q174 98 170 102 Q166 98 170 92 Z" fill="#7FB3D5"/>
+<g transform="translate(192 0)">
+<rect x="16" y="96" width="80" height="138" rx="8" fill="#2F3E5C"/>
+<rect x="20" y="84" width="72" height="10" rx="3" fill="#3A4A6B"/>
+<rect x="92" y="154" width="60" height="12" rx="3" fill="#F5F5F5"/>
+<rect x="100" y="154" width="5" height="7" fill="#1E1E1E"/>
+<rect x="112" y="154" width="5" height="7" fill="#1E1E1E"/>
+<rect x="124" y="154" width="5" height="7" fill="#1E1E1E"/>
+<rect x="136" y="154" width="5" height="7" fill="#1E1E1E"/>
+<rect x="130" y="190" width="12" height="44" rx="4" fill="#2F3E5C"/>
+<rect x="150" y="190" width="12" height="44" rx="4" fill="#2F3E5C"/>
+<rect x="130" y="124" width="40" height="70" rx="14" fill="#7FB3D5"/>
+<path d="M134 140 L116 158 M150 140 L132 160" stroke="#7FB3D5" stroke-width="10" stroke-linecap="round"/>
+<circle cx="114" cy="160" r="6" fill="#F1C7A5"/>
+<circle cx="130" cy="162" r="6" fill="#F1C7A5"/>
+<circle cx="150" cy="104" r="18" fill="#F1C7A5"/>
+<path d="M134 100 Q134 84 150 84 Q166 84 166 100 Q160 92 150 92 Q140 92 134 100 Z" fill="#1E1E1E"/>
+<path d="M142 98 L152 98 M156 98 L166 98" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<circle cx="145" cy="106" r="2" fill="#2B2B2B"/>
+<circle cx="157" cy="106" r="2" fill="#2B2B2B"/>
+<path d="M146 114 Q154 120 162 114" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M120 76 L123 76 L123 98" fill="none" stroke="#E8575A" stroke-width="0"/>
+<circle cx="120" cy="64" r="5" fill="#E8575A"/>
+<rect x="123" y="44" width="3" height="22" fill="#E8575A"/>
+<circle cx="176" cy="58" r="5" fill="#2B6DE0"/>
+<rect x="179" y="38" width="3" height="22" fill="#2B6DE0"/>
+</g>
+</svg>

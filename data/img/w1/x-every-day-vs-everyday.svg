@@ -1,1 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">📅✅✅</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">every day =</text><text x="88.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">each day</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">👕☕</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">everyday =</text><text x="296.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">normal</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">every day ≠ everyday</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<rect width="384" height="288" fill="#EEF3F8"/>
+<rect x="8" y="16" width="176" height="256" rx="18" fill="#FFF4E6"/>
+<rect x="200" y="16" width="176" height="256" rx="18" fill="#E8F5EC"/>
+<rect x="191" y="16" width="2" height="256" fill="#D5DEE8"/>
+<rect x="24" y="56" width="110" height="120" rx="10" fill="#FFFFFF" stroke="#C9D3DF" stroke-width="2"/>
+<path d="M24 66 Q24 56 34 56 L124 56 Q134 56 134 66 L134 84 L24 84 Z" fill="#E8575A"/>
+<rect x="50" y="48" width="6" height="16" rx="3" fill="#5A6478"/>
+<rect x="102" y="48" width="6" height="16" rx="3" fill="#5A6478"/>
+<rect x="36" y="96" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="60" y="96" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="84" y="96" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="108" y="96" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="36" y="118" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="60" y="118" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="84" y="118" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="108" y="118" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="36" y="140" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="60" y="140" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="84" y="140" width="18" height="16" rx="3" fill="#7BC67E"/>
+<rect x="108" y="140" width="18" height="16" rx="3" fill="#7BC67E"/>
+<path d="M174 182 Q186 182 186 190 Q186 198 174 198" fill="none" stroke="#C9D3DF" stroke-width="4"/>
+<rect x="146" y="170" width="28" height="32" rx="8" fill="#FFFFFF" stroke="#C9D3DF" stroke-width="2"/>
+<rect x="148" y="172" width="24" height="6" rx="3" fill="#8B5E3C"/>
+<rect x="140" y="200" width="44" height="6" rx="3" fill="#C9D3DF"/>
+<path d="M154 160 Q150 152 156 146 Q162 140 158 132 M164 160 Q160 152 166 146" fill="none" stroke="#B9C4D2" stroke-width="3" stroke-linecap="round"/>
+<rect x="262" y="110" width="10" height="106" rx="4" fill="#C7A27C"/>
+<rect x="252" y="190" width="76" height="10" rx="5" fill="#C7A27C"/>
+<rect x="258" y="200" width="6" height="30" fill="#A88660"/>
+<rect x="318" y="200" width="6" height="30" fill="#A88660"/>
+<rect x="288" y="176" width="16" height="50" rx="4" fill="#2F4A7A"/>
+<rect x="308" y="176" width="16" height="50" rx="4" fill="#2F4A7A"/>
+<path d="M270 112 L256 128 L266 136 L270 128 L270 178 L316 178 L316 128 L320 136 L330 128 L316 112 Q293 120 270 112 Z" fill="#7FB3D5"/>
+</svg>

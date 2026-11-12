@@ -1,1 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">💡😳</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">Light on: no</text><text x="88.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">sleep</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">🌑😴</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">Dark: sleep</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">unless · = if … not</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs><radialGradient id="glow"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".9"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></radialGradient></defs>
+<rect width="384" height="288" fill="#EEF3F8"/>
+<rect x="8" y="16" width="176" height="256" rx="18" fill="#FFF4E6"/>
+<rect x="200" y="16" width="176" height="256" rx="18" fill="#2F3E5C"/>
+<rect x="191" y="16" width="2" height="256" fill="#D5DEE8"/>
+<circle cx="150" cy="100" r="50" fill="url(#glow)"/>
+<path d="M136 66 L164 66 L172 96 L128 96 Z" fill="#FFD36E"/>
+<rect x="149" y="96" width="3" height="16" fill="#9AA8B8"/>
+<rect x="130" y="112" width="40" height="8" rx="3" fill="#C7A27C"/>
+<rect x="24" y="158" width="152" height="30" rx="8" fill="#C7A27C"/>
+<rect x="30" y="188" width="8" height="14" fill="#A88660"/>
+<rect x="164" y="188" width="8" height="14" fill="#A88660"/>
+<rect x="66" y="140" width="110" height="26" rx="10" fill="#7FB3D5"/>
+<rect x="28" y="136" width="34" height="22" rx="8" fill="#FFFFFF"/>
+<circle cx="46" cy="126" r="16" fill="#F1C7A5"/>
+<path d="M31 124 Q30 108 46 108 Q62 108 61 124 Q56 116 46 116 Q36 116 31 124 Z" fill="#1E1E1E"/>
+<circle cx="40" cy="126" r="2" fill="#2B2B2B"/>
+<circle cx="52" cy="126" r="2" fill="#2B2B2B"/>
+<path d="M35 118 L44 121 M47 121 L57 118" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M40 137 Q46 133 52 137" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M80 112 L88 120 M88 112 L80 120" stroke="#E8575A" stroke-width="3" stroke-linecap="round"/>
+<g transform="translate(192 0)">
+<rect x="18" y="28" width="60" height="54" rx="6" fill="#1E2A44" stroke="#C9D3DF" stroke-width="3"/>
+<circle cx="40" cy="52" r="13" fill="#FFF2B3"/>
+<rect x="47" y="28" width="3" height="54" fill="#C9D3DF"/>
+<rect x="18" y="53" width="60" height="3" fill="#C9D3DF"/>
+<circle cx="66" cy="40" r="2" fill="#FFFFFF"/>
+<path d="M136 66 L164 66 L172 96 L128 96 Z" fill="#7D8AA0"/>
+<rect x="149" y="96" width="3" height="16" fill="#7D8AA0"/>
+<rect x="130" y="112" width="40" height="8" rx="3" fill="#C7A27C"/>
+<rect x="24" y="158" width="152" height="30" rx="8" fill="#C7A27C"/>
+<rect x="30" y="188" width="8" height="14" fill="#A88660"/>
+<rect x="164" y="188" width="8" height="14" fill="#A88660"/>
+<rect x="66" y="140" width="110" height="26" rx="10" fill="#7FB3D5"/>
+<rect x="28" y="136" width="34" height="22" rx="8" fill="#FFFFFF"/>
+<circle cx="46" cy="126" r="16" fill="#F1C7A5"/>
+<path d="M31 124 Q30 108 46 108 Q62 108 61 124 Q56 116 46 116 Q36 116 31 124 Z" fill="#1E1E1E"/>
+<path d="M36 126 Q40 130 44 126 M48 126 Q52 130 56 126" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M44 137 Q48 139 52 137" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M84 100 L96 100 L84 112 L96 112 M100 84 L108 84 L100 92 L108 92" fill="none" stroke="#C9D3DF" stroke-width="2" stroke-linejoin="round"/>
+</g>
+</svg>

@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">🤖👍</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">It sounded</text><text x="88.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">right.</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">❌</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">It was wrong.</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">However, · new sentence</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<rect width="384" height="288" fill="#EEF3F8"/>
+<rect x="8" y="16" width="176" height="256" rx="18" fill="#FFF4E6"/>
+<rect x="200" y="16" width="176" height="256" rx="18" fill="#FDEBEC"/>
+<rect x="191" y="16" width="2" height="256" fill="#D5DEE8"/>
+<ellipse cx="60" cy="210" rx="30" ry="4" fill="#000" opacity=".12"/>
+<path d="M60 84 L60 70" stroke="#7FB3D5" stroke-width="3"/>
+<circle cx="60" cy="66" r="5" fill="#E8575A"/>
+<rect x="36" y="124" width="48" height="62" rx="12" fill="#A9D3F0"/>
+<rect x="44" y="184" width="12" height="24" rx="4" fill="#7FB3D5"/>
+<rect x="68" y="184" width="12" height="24" rx="4" fill="#7FB3D5"/>
+<rect x="40" y="84" width="40" height="36" rx="10" fill="#CFE8F8"/>
+<circle cx="52" cy="100" r="4" fill="#2B2B2B"/>
+<circle cx="68" cy="100" r="4" fill="#2B2B2B"/>
+<path d="M52 110 Q60 116 68 110" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M80 140 L106 118" stroke="#A9D3F0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="110" cy="116" r="6" fill="#CFE8F8"/>
+<rect x="114" y="60" width="68" height="90" rx="10" fill="#FFFFFF" stroke="#C9D3DF" stroke-width="2"/>
+<path d="M130 104 L144 118 L168 88" fill="none" stroke="#3BAA5C" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="141" y="150" width="14" height="50" fill="#9AA8B8"/>
+<rect x="127" y="196" width="42" height="8" rx="4" fill="#9AA8B8"/>
+<rect x="232" y="60" width="116" height="90" rx="10" fill="#FFFFFF" stroke="#C9D3DF" stroke-width="2"/>
+<path d="M262 88 L316 134 M316 88 L262 134" fill="none" stroke="#E8575A" stroke-width="10" stroke-linecap="round"/>
+<rect x="282" y="150" width="14" height="50" fill="#9AA8B8"/>
+<rect x="268" y="196" width="42" height="8" rx="4" fill="#9AA8B8"/>
+</svg>

@@ -1,1 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">🚲😬</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">Day 1:</text><text x="88.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">difficult</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">🚲😎</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">Day 10: easy</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">get the hang of it · slowly learn</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF3F8"/><stop offset="1" stop-color="#FFF4E6"/></linearGradient></defs>
+<rect width="384" height="288" fill="url(#bg)"/>
+<rect y="232" width="384" height="56" fill="#DCE5EC"/>
+<rect x="190" y="0" width="2" height="288" fill="#CFD8DC"/>
+<g transform="rotate(-10 96 206)">
+<g fill="none" stroke="#37474F" stroke-width="5" stroke-linecap="round">
+<circle cx="60" cy="206" r="26"/><circle cx="132" cy="206" r="26"/>
+<path d="M60,206 L92,160 L132,206 M92,160 L86,134 M132,206 L124,130 M118,130 L132,130"/>
+</g>
+<rect x="78" y="128" width="22" height="7" rx="3" fill="#37474F"/>
+<path d="M89,126 L96,168 M89,126 L82,186" stroke="#1F2A44" stroke-width="9" stroke-linecap="round"/>
+<path d="M89,126 L100,86" stroke="#7FB3D5" stroke-width="20" stroke-linecap="round"/>
+<path d="M100,96 L124,130" stroke="#7FB3D5" stroke-width="8" stroke-linecap="round"/>
+<circle cx="106" cy="68" r="16" fill="#F1C7A5"/>
+<path d="M90,68 Q90,50 106,50 Q122,50 122,68 Q114,58 106,58 Q98,58 90,68Z" fill="#1E1E1E"/>
+<circle cx="101" cy="66" r="2" fill="#333"/><circle cx="112" cy="66" r="2" fill="#333"/>
+<path d="M101,78 Q106,74 112,78" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M140,70 Q134,80 140,86 Q146,80 140,70Z" fill="#64B5F6"/>
+</g>
+<g fill="none" stroke="#B0BEC5" stroke-width="3" stroke-linecap="round"><path d="M30,120 q-8,8 0,16"/><path d="M18,128 q-8,8 0,16"/></g>
+<g transform="translate(192 0)">
+<g fill="none" stroke="#37474F" stroke-width="5" stroke-linecap="round">
+<circle cx="60" cy="206" r="26"/><circle cx="132" cy="206" r="26"/>
+<path d="M60,206 L92,160 L132,206 M92,160 L86,134 M132,206 L124,130 M118,130 L132,130"/>
+</g>
+<rect x="78" y="128" width="22" height="7" rx="3" fill="#37474F"/>
+<path d="M89,126 L96,168 M89,126 L82,186" stroke="#1F2A44" stroke-width="9" stroke-linecap="round"/>
+<path d="M89,126 L100,86" stroke="#7FB3D5" stroke-width="20" stroke-linecap="round"/>
+<path d="M100,96 L124,130" stroke="#7FB3D5" stroke-width="8" stroke-linecap="round"/>
+<circle cx="106" cy="68" r="16" fill="#F1C7A5"/>
+<path d="M90,68 Q90,50 106,50 Q122,50 122,68 Q114,58 106,58 Q98,58 90,68Z" fill="#1E1E1E"/>
+<circle cx="101" cy="66" r="2" fill="#333"/><circle cx="112" cy="66" r="2" fill="#333"/>
+<path d="M101,76 Q106,82 112,76" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M136,52 l6,-6 M142,64 h8" stroke="#FFB300" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M200,140 h18 M198,156 h14" stroke="#B0BEC5" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg>

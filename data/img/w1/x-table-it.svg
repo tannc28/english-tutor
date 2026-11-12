@@ -1,1 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">🗂️❓</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">a hard question</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">📅➡️</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">talk on Monday</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">Let&#x27;s table it · = later</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF3F8"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient></defs>
+<rect width="384" height="288" fill="url(#g)"/>
+<rect y="232" width="384" height="56" fill="#DCE5EE"/>
+<rect x="318" y="26" width="56" height="60" rx="8" fill="#FFFFFF" stroke="#C9D3DF" stroke-width="2"/>
+<rect x="318" y="26" width="56" height="14" rx="6" fill="#E8575A"/>
+<rect x="326" y="50" width="10" height="8" rx="2" fill="#DDE6EE"/>
+<rect x="342" y="50" width="10" height="8" rx="2" fill="#DDE6EE"/>
+<rect x="358" y="50" width="10" height="8" rx="2" fill="#DDE6EE"/>
+<rect x="326" y="62" width="10" height="8" rx="2" fill="#2B6DE0"/>
+<rect x="342" y="62" width="10" height="8" rx="2" fill="#DDE6EE"/>
+<rect x="358" y="62" width="10" height="8" rx="2" fill="#DDE6EE"/>
+<path d="M76 98 Q76 76 96 76 Q116 76 116 98 Q110 88 96 88 Q82 88 76 98 Z" fill="#B7BCC6"/>
+<circle cx="96" cy="70" r="8" fill="#B7BCC6"/>
+<rect x="76" y="116" width="40" height="70" rx="14" fill="#B9A6E0"/>
+<circle cx="96" cy="100" r="19" fill="#F1C7A5"/>
+<circle cx="89" cy="102" r="5" fill="none" stroke="#6B7689" stroke-width="2"/>
+<circle cx="103" cy="102" r="5" fill="none" stroke="#6B7689" stroke-width="2"/>
+<path d="M94 102 L98 102 M90 112 Q96 116 102 112" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<circle cx="180" cy="86" r="8" fill="#6B4226"/>
+<circle cx="192" cy="80" r="9" fill="#6B4226"/>
+<circle cx="204" cy="86" r="8" fill="#6B4226"/>
+<rect x="172" y="122" width="40" height="70" rx="14" fill="#F5A25D"/>
+<circle cx="192" cy="102" r="19" fill="#F1C7A5"/>
+<circle cx="186" cy="104" r="2.5" fill="#2B2B2B"/>
+<circle cx="198" cy="104" r="2.5" fill="#2B2B2B"/>
+<path d="M186 114 Q192 118 198 114" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<path d="M270 100 Q270 82 288 82 Q306 82 306 100 Q300 90 288 90 Q276 90 270 100 Z" fill="#4A3428"/>
+<circle cx="288" cy="102" r="19" fill="#F1C7A5"/>
+<circle cx="281" cy="104" r="5" fill="none" stroke="#6B7689" stroke-width="2"/>
+<circle cx="295" cy="104" r="5" fill="none" stroke="#6B7689" stroke-width="2"/>
+<path d="M286 104 L290 104 M284 116 Q288 120 292 116" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<rect x="268" y="122" width="40" height="70" rx="14" fill="#2F3E5C"/>
+<path d="M280 124 L288 140 L296 124 Z" fill="#FFFFFF"/>
+<rect x="40" y="156" width="304" height="14" rx="7" fill="#B8C4D2"/>
+<rect x="56" y="170" width="10" height="60" fill="#9AA8B8"/>
+<rect x="318" y="170" width="10" height="60" fill="#9AA8B8"/>
+<rect x="318" y="144" width="48" height="12" rx="3" fill="#9AA8B8"/>
+<rect x="326" y="134" width="28" height="10" rx="2" fill="#FFD36E"/>
+<rect x="222" y="124" width="28" height="20" rx="2" fill="#FFD36E"/>
+<path d="M206 138 L232 140" stroke="#F5A25D" stroke-width="11" stroke-linecap="round"/>
+<circle cx="238" cy="140" r="7" fill="#F1C7A5"/>
+</svg>

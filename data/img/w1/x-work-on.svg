@@ -1,1 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="384" height="288" fill="#f6f8fb"/><rect x="14" y="22" width="148" height="200" rx="18" fill="#fff4e0" stroke="#d6dbe4" stroke-width="2"/><text x="88.0" y="114" font-size="50" text-anchor="middle">👨‍💻</text><text x="88.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">Tom at his</text><text x="88.0" y="184" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">laptop</text><rect x="222" y="22" width="148" height="200" rx="18" fill="#e6f4ea" stroke="#d6dbe4" stroke-width="2"/><text x="296.0" y="114" font-size="50" text-anchor="middle">🌐🛠️</text><text x="296.0" y="162" font-size="16" font-weight="600" fill="#1c2333" text-anchor="middle">a new website</text><path d="M162.0 122 L216.0 122" stroke="#2b6de0" stroke-width="4" stroke-linecap="round"/><path d="M208.0 112 L220.0 122 L208.0 132" fill="none" stroke="#2b6de0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="238" width="304" height="38" rx="19" fill="#2b6de0"/><text x="192.0" y="263" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">He&#x27;s working on a website</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF3F8"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient></defs>
+<rect width="384" height="288" fill="url(#g)"/>
+<rect y="236" width="384" height="52" fill="#DCE5EE"/>
+<ellipse cx="190" cy="238" rx="150" ry="5" fill="#000" opacity=".1"/>
+<circle cx="96" cy="90" r="9" fill="#6B4226"/>
+<circle cx="108" cy="80" r="10" fill="#6B4226"/>
+<circle cx="122" cy="86" r="9" fill="#6B4226"/>
+<circle cx="110" cy="100" r="20" fill="#F1C7A5"/>
+<circle cx="116" cy="100" r="2.5" fill="#2B2B2B"/>
+<path d="M112 110 Q118 114 122 108" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/>
+<rect x="88" y="124" width="44" height="56" rx="16" fill="#F5A25D"/>
+<path d="M124 138 L172 168" stroke="#F5A25D" stroke-width="12" stroke-linecap="round"/>
+<circle cx="176" cy="170" r="7" fill="#F1C7A5"/>
+<rect x="196" y="104" width="110" height="66" rx="6" fill="#2F3E5C"/>
+<rect x="202" y="110" width="98" height="54" rx="3" fill="#FFFFFF"/>
+<rect x="202" y="110" width="98" height="10" fill="#2B6DE0"/>
+<rect x="210" y="126" width="40" height="14" rx="3" fill="#B9D7F5"/>
+<rect x="210" y="146" width="82" height="8" rx="3" fill="#DDE6EE"/>
+<rect x="210" y="158" width="60" height="8" rx="3" fill="#FFD9A8"/>
+<rect x="186" y="168" width="128" height="8" rx="4" fill="#C9D3DF"/>
+<rect x="316" y="96" width="24" height="24" rx="2" fill="#FFE27A" transform="rotate(-8 328 108)"/>
+<rect x="322" y="126" width="20" height="20" rx="2" fill="#FFB3C6" transform="rotate(6 332 136)"/>
+<rect x="178" y="84" width="18" height="18" rx="2" fill="#B5F0C8" transform="rotate(-5 187 93)"/>
+<path d="M300 76 L300 88 M294 82 L306 82" stroke="#2B6DE0" stroke-width="3" stroke-linecap="round"/>
+<rect x="40" y="176" width="300" height="12" rx="5" fill="#B8C4D2"/>
+<rect x="56" y="188" width="10" height="48" fill="#9AA8B8"/>
+<rect x="318" y="188" width="10" height="48" fill="#9AA8B8"/>
+<rect x="330" y="152" width="18" height="24" rx="4" fill="#FFFFFF" stroke="#C9D3DF" stroke-width="2"/>
+</svg>
