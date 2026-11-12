@@ -1,32 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
-<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DDE7F0"/><stop offset="1" stop-color="#EEF3F8"/></linearGradient></defs>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C5D1DE"/><stop offset="1" stop-color="#E4ECF3"/></linearGradient>
+<linearGradient id="bld" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9DBBD3"/><stop offset="1" stop-color="#C7DCEC"/></linearGradient>
+</defs>
 <rect width="384" height="288" fill="url(#sky)"/>
-<rect x="30" y="30" width="130" height="220" rx="4" fill="#9DBBD0"/>
-<g fill="#C9DDEA">
-<rect x="40" y="48" width="36" height="20" rx="2"/><rect x="84" y="48" width="36" height="20" rx="2"/><rect x="128" y="48" width="22" height="20" rx="2"/>
-<rect x="40" y="82" width="36" height="20" rx="2"/><rect x="84" y="82" width="36" height="20" rx="2"/><rect x="128" y="82" width="22" height="20" rx="2"/>
-<rect x="40" y="116" width="36" height="20" rx="2"/><rect x="84" y="116" width="36" height="20" rx="2"/><rect x="128" y="116" width="22" height="20" rx="2"/>
-<rect x="40" y="150" width="36" height="20" rx="2"/><rect x="84" y="150" width="36" height="20" rx="2"/><rect x="128" y="150" width="22" height="20" rx="2"/>
-</g>
-<rect x="55" y="206" width="90" height="44" rx="3" fill="#2F5D7C"/>
-<rect x="75" y="222" width="50" height="28" fill="#CFE6F2"/>
-<rect x="0" y="250" width="384" height="38" fill="#C9D3DC"/>
-<g stroke="#7FA7C9" stroke-width="1.5" opacity=".7" stroke-linecap="round">
-<line x1="190" y1="20" x2="184" y2="36"/><line x1="216" y1="10" x2="210" y2="26"/><line x1="240" y1="30" x2="234" y2="46"/>
-<line x1="262" y1="6" x2="256" y2="22"/><line x1="350" y1="20" x2="344" y2="36"/><line x1="370" y1="60" x2="364" y2="76"/>
-<line x1="200" y1="70" x2="194" y2="86"/><line x1="340" y1="110" x2="334" y2="126"/><line x1="172" y1="110" x2="166" y2="126"/>
-</g>
-<ellipse cx="270" cy="252" rx="20" ry="4" fill="#000" opacity=".12"/>
-<rect x="261" y="200" width="8" height="50" rx="3" fill="#2E3B55"/>
-<rect x="271" y="200" width="8" height="50" rx="3" fill="#2E3B55"/>
-<rect x="256" y="144" width="28" height="58" rx="12" fill="#7FB3D5"/>
-<rect x="282" y="148" width="7" height="40" rx="3.5" fill="#7FB3D5"/>
-<circle cx="285.5" cy="190" r="4.5" fill="#F1C7A5"/>
-<rect x="242" y="148" width="7" height="40" rx="3.5" fill="#7FB3D5"/>
-<circle cx="245.5" cy="190" r="4.5" fill="#F1C7A5"/>
-<circle cx="270" cy="130" r="15" fill="#F1C7A5"/>
-<path d="M255 132 Q254 116 270 116 Q286 116 285 132 Q280 124 270 124 Q260 124 255 132Z" fill="#1E1E1E"/>
-<path d="M254 116 Q256 110 262 112" fill="none" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"/>
-<circle cx="262" cy="146" r="2.5" fill="#7FB3D5"/>
-<circle cx="279" cy="150" r="2.5" fill="#7FB3D5"/>
+<ellipse cx="60" cy="26" rx="56" ry="14" fill="#B0BFCE"/><ellipse cx="320" cy="34" rx="60" ry="15" fill="#B0BFCE"/>
+<!-- side buildings -->
+<rect x="0" y="90" width="64" height="150" fill="#B5614A"/><rect x="326" y="80" width="58" height="160" fill="#A4543F"/>
+<g fill="#F6E7B8" opacity="0.6"><rect x="10" y="104" width="14" height="20"/><rect x="36" y="104" width="14" height="20"/><rect x="10" y="140" width="14" height="20"/><rect x="36" y="140" width="14" height="20"/><rect x="338" y="96" width="14" height="20"/><rect x="360" y="96" width="14" height="20"/></g>
+<!-- glass tower -->
+<rect x="84" y="14" width="216" height="226" fill="url(#bld)" stroke="#6F8CA6" stroke-width="2"/>
+<g stroke="#7A98B3" stroke-width="2"><path d="M138 14 V240 M192 14 V240 M246 14 V240"/><path d="M84 56 H300 M84 98 H300 M84 140 H300 M84 182 H300"/></g>
+<g fill="#fff" opacity="0.35"><path d="M92 20 l30 0 l-40 80z"/><path d="M200 60 l40 0 l-50 100z"/></g>
+<g fill="#FFE9A8" opacity="0.75"><rect x="146" y="64" width="38" height="26"/><rect x="254" y="106" width="38" height="26"/><rect x="92" y="148" width="38" height="26"/><rect x="200" y="22" width="38" height="26"/></g>
+<!-- entrance -->
+<rect x="156" y="186" width="72" height="54" fill="#E4F1FA" stroke="#5E7A94" stroke-width="3"/>
+<line x1="192" y1="186" x2="192" y2="240" stroke="#5E7A94" stroke-width="3"/>
+<rect x="148" y="176" width="88" height="10" fill="#4A5A78"/>
+<!-- ground -->
+<rect y="240" width="384" height="48" fill="#98A2AE"/>
+<rect y="240" width="384" height="6" fill="#C0C6CE"/>
+<ellipse cx="250" cy="266" rx="46" ry="7" fill="#B6C4D2"/>
+<ellipse cx="120" cy="276" rx="32" ry="5" fill="#B6C4D2"/>
+<!-- Nam shadow -->
+<ellipse cx="260" cy="272" rx="40" ry="7" fill="#5D6672" opacity="0.4"/>
+<!-- legs -->
+<rect x="244" y="212" width="14" height="56" fill="#1F2D4D"/><rect x="264" y="212" width="14" height="56" fill="#1F2D4D"/>
+<ellipse cx="248" cy="268" rx="12" ry="5" fill="#2B2B33"/><ellipse cx="274" cy="268" rx="12" ry="5" fill="#2B2B33"/>
+<!-- torso wet shirt -->
+<rect x="232" y="148" width="58" height="72" rx="18" fill="#7FB3D5"/>
+<path d="M240 170 q20 10 42 0 M238 196 q22 8 46 0" stroke="#5E94B8" stroke-width="3" fill="none" opacity="0.6"/>
+<!-- arms -->
+<path d="M236 160 q-18 24 -8 50" stroke="#7FB3D5" stroke-width="13" stroke-linecap="round" fill="none"/>
+<path d="M286 160 q18 24 8 50" stroke="#7FB3D5" stroke-width="13" stroke-linecap="round" fill="none"/>
+<circle cx="228" cy="214" r="6" fill="#F1C7A5"/><circle cx="294" cy="214" r="6" fill="#F1C7A5"/>
+<!-- neck head -->
+<rect x="253" y="132" width="16" height="18" fill="#F1C7A5"/>
+<circle cx="261" cy="112" r="26" fill="#F1C7A5" stroke="#C9976F" stroke-width="1.5"/>
+<!-- wet hair -->
+<path d="M235 110 C232 78 290 76 287 110 C280 98 264 94 250 98 C244 100 238 104 235 110Z" fill="#14161C"/>
+<path d="M240 104 l-3 14 M284 104 l3 14 M252 98 l-2 10" stroke="#14161C" stroke-width="4" stroke-linecap="round"/>
+<!-- face -->
+<ellipse cx="252" cy="116" rx="2.6" ry="3.2" fill="#14161C"/><ellipse cx="271" cy="116" rx="2.6" ry="3.2" fill="#14161C"/>
+<path d="M246 108 q6 -4 11 -1 M267 107 q6 -3 11 1" stroke="#14161C" stroke-width="1.8" fill="none"/>
+<path d="M254 130 q8 -6 14 0" stroke="#A8654A" stroke-width="2" fill="none"/>
+<!-- drips -->
+<g fill="#7FA6C6"><path d="M244 122 q-3 7 0 8 q3 -1 0 -8z"/><path d="M282 124 q-3 7 0 8 q3 -1 0 -8z"/><path d="M262 78 q-3 7 0 8 q3 -1 0 -8z"/></g>
+<!-- rain -->
+<g stroke="#6F93B3" stroke-width="2" stroke-linecap="round" opacity="0.8"><path d="M20 20 l-5 14 M70 50 l-5 14 M110 10 l-5 14 M160 64 l-5 14 M210 20 l-5 14 M300 40 l-5 14 M350 22 l-5 14 M40 110 l-5 14 M90 180 l-5 14 M310 130 l-5 14 M200 150 l-5 14 M170 100 l-5 14 M340 180 l-5 14 M30 190 l-5 14 M210 220 l-5 14 M330 230 l-5 14 M60 250 l-5 14 M130 240 l-5 14 M370 90 l-5 14"/></g>
 </svg>

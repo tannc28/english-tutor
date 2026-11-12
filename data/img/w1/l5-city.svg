@@ -1,54 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 288" width="384" height="288">
-<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D6ECF7"/><stop offset="1" stop-color="#FFF4E6"/></linearGradient></defs>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFE8F7"/><stop offset="1" stop-color="#EEF6FB"/></linearGradient>
+<radialGradient id="sun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFF3B8"/><stop offset="1" stop-color="#FFF3B8" stop-opacity="0"/></radialGradient>
+</defs>
 <rect width="384" height="288" fill="url(#sky)"/>
-<circle cx="330" cy="50" r="26" fill="#FFD86B"/>
-<rect x="0" y="60" width="90" height="120" fill="#D98B73"/>
-<rect x="96" y="70" width="90" height="110" fill="#E8A58C"/>
-<rect x="192" y="60" width="90" height="120" fill="#D98B73"/>
-<rect x="288" y="70" width="96" height="110" fill="#E8A58C"/>
-<g fill="#FFFFFF" opacity=".85">
-<rect x="10" y="80" width="18" height="22"/><rect x="40" y="80" width="18" height="22"/><rect x="66" y="80" width="18" height="22"/>
-<rect x="110" y="90" width="18" height="22"/><rect x="140" y="90" width="18" height="22"/><rect x="164" y="90" width="18" height="22"/>
-<rect x="206" y="80" width="18" height="22"/><rect x="236" y="80" width="18" height="22"/><rect x="262" y="80" width="18" height="22"/>
-<rect x="302" y="90" width="18" height="22"/><rect x="332" y="90" width="18" height="22"/><rect x="358" y="90" width="18" height="22"/>
-</g>
-<rect x="0" y="176" width="384" height="16" fill="#7BC47F" opacity=".5"/>
-<g fill="#5FA868">
-<circle cx="30" cy="180" r="2"/>
-</g>
-<!-- shop awnings -->
-<path d="M0 192 L384 192 L384 200 L0 200Z" fill="#2E8B57" opacity=".8"/>
-<rect x="0" y="200" width="384" height="22" fill="#BFE3C9"/>
-<line x1="0" y1="211" x2="384" y2="211" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10 8"/>
-<rect x="0" y="222" width="384" height="28" fill="#E6E2DA"/>
-<rect x="0" y="250" width="384" height="38" fill="#D8D0C2"/>
+<circle cx="320" cy="40" r="50" fill="url(#sun)"/><circle cx="320" cy="40" r="15" fill="#FFE08A"/>
+<ellipse cx="80" cy="36" rx="40" ry="10" fill="#fff"/><ellipse cx="110" cy="30" rx="26" ry="9" fill="#fff"/>
+<!-- buildings left/right -->
+<rect x="0" y="70" width="96" height="120" fill="#C98A6B"/><rect x="288" y="62" width="96" height="128" fill="#BC6B52"/>
+<rect x="100" y="96" width="70" height="94" fill="#E7C9A0"/><rect x="214" y="92" width="70" height="98" fill="#A4543F"/>
+<g fill="#F6EBC8"><rect x="10" y="84" width="16" height="22"/><rect x="38" y="84" width="16" height="22"/><rect x="66" y="84" width="16" height="22"/><rect x="304" y="78" width="16" height="22"/><rect x="334" y="78" width="16" height="22"/><rect x="362" y="78" width="14" height="22"/><rect x="230" y="108" width="16" height="22"/><rect x="256" y="108" width="16" height="22"/></g>
+<!-- shopfronts -->
+<rect x="0" y="146" width="96" height="44" fill="#F4B860"/><rect x="0" y="146" width="96" height="10" fill="#E8956B"/>
+<path d="M0 156 q8 8 16 0 q8 8 16 0 q8 8 16 0 q8 8 16 0 q8 8 16 0 q8 8 16 0z" fill="#E8956B"/>
+<rect x="10" y="162" width="76" height="28" fill="#CFE8F7"/>
+<rect x="288" y="146" width="96" height="44" fill="#7FB3D5"/>
+<path d="M288 150 h96 l-6 12 h-84z" fill="#5FA877"/>
+<rect x="298" y="166" width="76" height="24" fill="#E4F1FA"/>
+<rect x="100" y="150" width="70" height="40" fill="#9CCB9C"/><rect x="110" y="164" width="50" height="26" fill="#E4F1FA"/>
+<!-- cafe tables -->
+<circle cx="132" cy="196" r="1" fill="none"/>
+<!-- street -->
+<rect y="190" width="384" height="98" fill="#E5DCCD"/>
+<rect y="190" width="384" height="6" fill="#D6CAB6"/>
+<!-- bike lane green strips -->
+<path d="M0 222 H384 L384 250 H0z" fill="#9CCB9C" opacity="0.65"/>
+<path d="M0 236 H384" stroke="#fff" stroke-width="3" stroke-dasharray="14 10"/>
 <!-- trees -->
-<rect x="150" y="150" width="6" height="40" fill="#8B5E3C"/>
-<circle cx="153" cy="140" r="20" fill="#7BC47F"/>
-<rect x="360" y="150" width="6" height="40" fill="#8B5E3C"/>
-<circle cx="363" cy="140" r="20" fill="#7BC47F"/>
-<!-- bike in bike lane -->
-<circle cx="50" cy="214" r="9" fill="none" stroke="#4A5A4F" stroke-width="2.5"/>
-<circle cx="84" cy="214" r="9" fill="none" stroke="#4A5A4F" stroke-width="2.5"/>
-<path d="M50 214 L62 200 L76 200 L84 214 M62 200 L58 214" fill="none" stroke="#4A5A4F" stroke-width="2.5"/>
-<ellipse cx="70" cy="226" rx="34" ry="3" fill="#000" opacity=".1"/>
-<!-- Nam walking -->
-<ellipse cx="120" cy="252" rx="20" ry="4" fill="#000" opacity=".12"/>
-<rect x="111" y="200" width="8" height="50" rx="3" fill="#2E3B55"/>
-<rect x="121" y="200" width="8" height="50" rx="3" fill="#2E3B55"/>
-<rect x="106" y="144" width="28" height="58" rx="12" fill="#7FB3D5"/>
-<rect x="134" y="148" width="7" height="40" rx="3.5" fill="#7FB3D5"/>
-<circle cx="137.5" cy="190" r="4.5" fill="#F1C7A5"/>
-<circle cx="120" cy="130" r="15" fill="#F1C7A5"/>
-<path d="M105 132 Q104 116 120 116 Q136 116 135 132 Q130 124 120 124 Q110 124 105 132Z" fill="#1E1E1E"/>
-<!-- Jess walking, green apron -->
-<ellipse cx="260" cy="252" rx="20" ry="4" fill="#000" opacity=".12"/>
-<rect x="251" y="200" width="8" height="50" rx="3" fill="#3B4A5C"/>
-<rect x="261" y="200" width="8" height="50" rx="3" fill="#3B4A5C"/>
-<rect x="246" y="144" width="28" height="58" rx="12" fill="#F4E4D0"/>
-<rect x="248" y="162" width="24" height="40" rx="3" fill="#2E8B57"/>
-<rect x="274" y="148" width="7" height="40" rx="3.5" fill="#F4E4D0"/>
-<circle cx="277.5" cy="190" r="4.5" fill="#F1C7A5"/>
-<circle cx="260" cy="130" r="15" fill="#F1C7A5"/>
-<path d="M245 134 Q244 116 260 116 Q276 116 275 134 L277 146 Q272 130 260 124 Q248 128 245 146Z" fill="#C0392B"/>
+<g><rect x="168" y="150" width="8" height="46" fill="#8A6A4A"/><circle cx="172" cy="136" r="26" fill="#6FB07F"/><circle cx="156" cy="148" r="16" fill="#5FA877"/><circle cx="190" cy="148" r="16" fill="#7CC08C"/></g>
+<g><rect x="300" y="170" width="6" height="26" fill="#8A6A4A"/><circle cx="303" cy="160" r="16" fill="#6FB07F"/></g>
+<g><rect x="60" y="170" width="6" height="26" fill="#8A6A4A"/><circle cx="63" cy="160" r="16" fill="#7CC08C"/></g>
+<!-- pedestrians -->
+<g><ellipse cx="236" cy="212" rx="14" ry="3" fill="#B5A890" opacity="0.6"/>
+<rect x="228" y="190" width="16" height="22" rx="7" fill="#E8956B"/><rect x="230" y="208" width="5" height="12" fill="#3A4A6B"/><rect x="237" y="208" width="5" height="12" fill="#3A4A6B"/>
+<circle cx="236" cy="184" r="8" fill="#F1C7A5"/><path d="M228 182 c0 -10 16 -10 16 0 c-5 -3 -11 -3 -16 0z" fill="#6B3E26"/></g>
+<g><ellipse cx="270" cy="212" rx="14" ry="3" fill="#B5A890" opacity="0.6"/>
+<rect x="262" y="190" width="16" height="22" rx="7" fill="#7FB3D5"/><rect x="264" y="208" width="5" height="12" fill="#1F2D4D"/><rect x="271" y="208" width="5" height="12" fill="#1F2D4D"/>
+<circle cx="270" cy="184" r="8" fill="#F1C7A5"/><path d="M262 183 c0 -11 16 -11 16 0 c-5 -3 -11 -3 -16 0z" fill="#14161C"/></g>
+<g><ellipse cx="30" cy="212" rx="14" ry="3" fill="#B5A890" opacity="0.6"/>
+<rect x="22" y="190" width="16" height="22" rx="7" fill="#B49BD6"/><rect x="24" y="208" width="5" height="12" fill="#4A5A78"/><rect x="31" y="208" width="5" height="12" fill="#4A5A78"/>
+<circle cx="30" cy="184" r="8" fill="#F1C7A5"/><path d="M21 184 c0 -12 18 -12 18 0 c-6 -4 -12 -4 -18 0z" fill="#9A9AA5"/></g>
+<!-- cyclists -->
+<g>
+<circle cx="110" cy="260" r="14" fill="none" stroke="#3A4252" stroke-width="3"/><circle cx="150" cy="260" r="14" fill="none" stroke="#3A4252" stroke-width="3"/>
+<path d="M110 260 L126 240 L146 240 L150 260 M126 240 L132 260 L110 260 M146 240 L142 232" stroke="#E0535A" stroke-width="3" fill="none"/>
+<rect x="124" y="214" width="14" height="26" rx="6" fill="#F4B860"/>
+<path d="M136 224 L146 236" stroke="#F4B860" stroke-width="6" stroke-linecap="round"/>
+<circle cx="132" cy="206" r="8" fill="#F1C7A5"/><path d="M124 205 c0 -10 16 -10 16 0z" fill="#C8432E"/>
+</g>
+<g>
+<circle cx="300" cy="262" r="12" fill="none" stroke="#3A4252" stroke-width="3"/><circle cx="334" cy="262" r="12" fill="none" stroke="#3A4252" stroke-width="3"/>
+<path d="M300 262 L314 244 L330 244 L334 262 M314 244 L318 262 L300 262" stroke="#2F7D6E" stroke-width="3" fill="none"/>
+<rect x="310" y="222" width="14" height="24" rx="6" fill="#7FB3D5"/>
+<path d="M322 230 L330 242" stroke="#7FB3D5" stroke-width="6" stroke-linecap="round"/>
+<circle cx="316" cy="214" r="8" fill="#F1C7A5"/><path d="M308 213 c0 -10 16 -10 16 0z" fill="#14161C"/>
+</g>
+<!-- planters / flowers -->
+<g><rect x="196" y="190" width="26" height="12" rx="3" fill="#E8956B"/><circle cx="204" cy="186" r="5" fill="#E0535A"/><circle cx="214" cy="184" r="5" fill="#F4B860"/><circle cx="209" cy="180" r="5" fill="#fff"/></g>
+<!-- sidewalk strip -->
+<rect y="268" width="384" height="20" fill="#D6CAB6" opacity="0.8"/>
 </svg>
