@@ -6,14 +6,14 @@
 /* Layout: study desk. Header + phase track on top; lesson shelf (left, horizontal strip on phones) and the open workbook (right).
    Lessons are steps in a sequence, so parts carry real step numbers. Type colors encode lesson kind. */
 :root{
-  /* Giao diện sáng "Ấm, giấy" (Tân chọn B, 12/11): nền kem, nhấn cam đất – hợp tông ảnh minh hoạ */
-  --bg:#f6f1e9; --surface:#fffdf9; --sunk:#f4ede2; --ink:#2a2219; --ink-2:#5e5446; --ink-3:#8c8172; --line:#e9e0d2;
-  --accent:#c8552a; --accent-soft:#fbe8dd; --on-accent:#ffffff;
-  --walk:#0d8577; --main:#c8552a; --weekly:#b06a12; --sunday:#c03a68;
+  /* Giao diện sáng: nền xanh xám, nhấn xanh dương (Tân chọn giữ bản gốc, 12/11) */
+  --bg:#eef1f5; --surface:#ffffff; --sunk:#f5f7fa; --ink:#141a26; --ink-2:#4a5468; --ink-3:#7a8497; --line:#dde2ea;
+  --accent:#2449d8; --accent-soft:#e7ecfd; --on-accent:#ffffff;
+  --walk:#0d8577; --main:#2449d8; --weekly:#b06a12; --sunday:#c03a68;
   --marker:#fff0a6; --marker-ink:#3b3000;
   --ok:#17794a; --ok-soft:#e2f4ea; --warn:#9a5a00; --warn-soft:#fdf1dc; --bad:#b4261f; --bad-soft:#fce6e4;
   --paper:#fffdf7; --paper-line:#efe8d6;
-  --shadow:0 1px 2px rgba(60,40,20,.04),0 6px 20px rgba(60,40,20,.05);
+  --shadow:0 1px 2px rgba(20,26,38,.05),0 6px 24px rgba(20,26,38,.06);
   --f-ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-read:"Literata",Georgia,"Times New Roman",serif;
   --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -421,7 +421,7 @@ table.days td.num{font-variant-numeric:tabular-nums;font-family:var(--f-mono);wh
 table.days tr[data-id]{cursor:pointer}
 table.days tr[data-id]:hover td{background:var(--sunk)}
 /* Chart (2 series: Đọc = blue, Nghe = orange; validated light+dark) */
-:root{--s-read:#3b5bdb;--s-listen:#d9480f}
+:root{--s-read:#2449d8;--s-listen:#d9480f}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--s-read:#6a84ee;--s-listen:#de6a28}}
 :root[data-theme="dark"]{--s-read:#6a84ee;--s-listen:#de6a28}
 .chart{position:relative;width:100%}
