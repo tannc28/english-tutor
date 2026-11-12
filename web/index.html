@@ -734,6 +734,7 @@ body{font-size:14.5px}
 }
 @media (max-width:520px){.wk-mini{grid-template-columns:64px minmax(0,1fr)}.wk-thumb{width:64px;height:64px}.wk-why{-webkit-line-clamp:2}}
     .pace-in{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)} .pace-in input{width:64px;padding:4px 6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:15px;font-weight:600}
+.work ul{margin:4px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:.9rem}.work{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
   table.fcst td{vertical-align:top;font-size:13px;line-height:1.4} table.fcst td .note{font-size:12px;margin-top:2px} table.fcst th{white-space:nowrap;text-align:left;vertical-align:bottom}
 </style>
 <script>
@@ -1174,7 +1175,8 @@ body{font-size:14.5px}
           <div class="md">${md(grade.summary_md)}</div>
           ${grade.answers_md?`<details><summary>Answers & corrections</summary><div class="md">${md(grade.answers_md)}</div></details>`:""}
           ${grade.next_md?`<div class="md">${md(grade.next_md)}</div>`:""}
-        </section>` : ""}
+          ${workHtml(l, sub)}
+        </section>` : (sub ? `<section class="card grade" aria-label="Your study record"><span class="label">Submitted · waiting for your tutor</span>${workHtml(l, sub)}</section>` : "")}
       ${(l.parts||[]).map((p,pi) => `
         <section class="card part ${p.learn?"learn":""} ${p.practice?"practice":""}" id="part-${pi}">
           <span class="step" aria-hidden="true">${pi+1}</span>
@@ -1289,6 +1291,20 @@ body{font-size:14.5px}
   // Lượt đọc lại tự nhận: đã thấy cuối đoạn văn rồi quay lên thấy đầu đoạn → lượt mới. Nộp bài → chốt lượt cuối.
   const isReadPart = p => !p.listen && /(^|\n)>\s/.test(p.md || "");
   const passageWords = p => (String(p.md||"").split("\n").filter(x => /^>\s?/.test(x)).join(" ").replace(/[*_>#`|]/g," ").match(/[A-Za-z0-9'’]+/g) || []).length;
+  // Kết quả "How you worked" (Tân 12/11: chấm xong nêu rõ đọc bao lâu, mấy lượt, tốc độ; nghe mấy lượt, dòng nào nghe lại) – lấy từ log tự ghi
+  function workHtml(l, sub){
+    const lg = sub && sub.log; if (!lg) return "";
+    const mm = ms => { const t = Math.round(ms/1000); return Math.floor(t/60) + ":" + String(t%60).padStart(2,"0"); };
+    const rows = [];
+    Object.entries(lg.read || {}).forEach(([pi, r]) => { const rs = r.reads || []; if (!rs.length) return;
+      rows.push(`<li>📖 <b>Reading</b> (${r.words} words): ${rs.length} read${rs.length>1?"s":""} – ${rs.map((x,i) => `#${i+1} <b>${mm(x.ms)}</b> · ${x.wpm} wpm`).join(" → ")}${rs.length>1 && rs[1].wpm > rs[0].wpm ? ` <span class="note">(2nd read ${Math.round((rs[1].wpm/rs[0].wpm-1)*100)}% faster)</span>` : ""} <span class="note">· B2 target 180 wpm</span></li>`); });
+    Object.entries(lg.listen || {}).forEach(([pi, r]) => { const p = (l.parts||[])[pi] || {};
+      const hard = Object.entries(r.segIdx || {}).sort((a,b) => b[1]-a[1]).slice(0,3).map(([i,c]) => `“${esc(String(p.listen?.[i]?.text||"").slice(0,70))}${String(p.listen?.[i]?.text||"").length>70?"…":""}” ×${c}`);
+      rows.push(`<li>🎧 <b>Listening</b>: played ${r.plays||0}×${r.segs?`, replayed lines ${r.segs}×`:""}${r.revealAt!=null?" · opened the transcript":" · never opened the transcript"}${hard.length?`<div class="note">Lines you replayed most: ${hard.join(" · ")}</div>`:""}</li>`); });
+    const act = Object.values(lg.parts || {}).reduce((a,x) => a + (x.ms||0), 0);
+    if (act) rows.push(`<li>⏱ <b>Active time</b> in this lesson: ${Math.round(act/60000)} min${(lg.sessions||[]).length>1?` over ${lg.sessions.length} sittings`:""}</li>`);
+    return rows.length ? `<div class="work"><span class="label">How you worked (recorded automatically)</span><ul>${rows.join("")}</ul></div>` : "";
+  }
   function readerHtml(pi){ return `<i class="rt" data-pi="${pi}" hidden></i>`; }
   let rtAll = [], rtInput = Date.now();
   ["scroll","pointerdown","keydown","touchmove"].forEach(e => document.addEventListener(e, () => { rtInput = Date.now(); }, {passive:true, capture:true}));

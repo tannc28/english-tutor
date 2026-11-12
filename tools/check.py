@@ -48,6 +48,11 @@ def main():
             warn.append(f'lessons.json: {gid} thiếu strain/chỉ số sau khi chấm')
         if not os.path.exists(D('submissions', gid + '.json')):
             err.append(f'thiếu bản chép data/submissions/{gid}.json')
+        sub = J(D('submissions', gid + '.json')) if os.path.exists(D('submissions', gid + '.json')) else {}
+        if any((r or {}).get('reads') for r in ((sub.get('log') or {}).get('read') or {}).values()):
+            txt = json.dumps(g, ensure_ascii=False)
+            if 'wpm' not in txt:
+                warn.append(f'grades/{gid}: có số đo đọc (log.read) nhưng nhận xét chưa nêu – Tân 12/11: nói rõ đọc bao lâu, mấy lượt, tốc độ wpm so với mốc')
         if not (L.get(gid, {}).get('micro')) and not g.get('tg'):
             warn.append(f'grades/{gid}: thiếu tg (tin Telegram)')
     if last and p_upd and last[1] > p_upd:
