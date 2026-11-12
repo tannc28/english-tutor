@@ -105,7 +105,8 @@
      "type": "short",
      "placeholder": "VD: 80"
     }
-   ]
+   ],
+   "audio": "data/audio/2026-11-11-main/p0.mp3"
   },
   {
    "kind": "Đọc rộng · truyện dài kỳ",
@@ -232,7 +233,8 @@
      "type": "short",
      "placeholder": "VD: 80"
     }
-   ]
+   ],
+   "audio": "data/audio/2026-11-11-main/p3.mp3"
   },
   {
    "kind": "Đọc · C1",
@@ -335,7 +337,8 @@
      "type": "short",
      "placeholder": "VD: 60"
     }
-   ]
+   ],
+   "audio": "data/audio/2026-11-11-main/p5.mp3"
   },
   {
    "kind": "Từ vựng",

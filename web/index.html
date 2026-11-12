@@ -215,6 +215,7 @@ button.ghost{font:inherit;font-weight:500;padding:9px 16px;border-radius:10px;bo
 .grade details{border:1px solid var(--line);border-radius:10px;padding:12px 16px;background:var(--sunk)}
 .grade summary{cursor:pointer;font-weight:600}
 
+.pl-au{width:100%;height:40px}
 .player{margin-top:14px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--sunk);display:flex;flex-direction:column;gap:10px;align-items:flex-start}
 .pl-row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
 .pl-rate{font-size:.86rem;color:var(--ink-2);display:flex;gap:6px;align-items:center}
@@ -752,9 +753,10 @@ table.days tr.next td{background:var(--accent-soft)}
       <div class="pl-row">
         <button class="primary pl-play" type="button">▶ Listen</button>
         <button class="ghost pl-stop" type="button" hidden>■ Stop</button>
-        <label class="pl-rate">Speed <select class="pl-sel">${[0.8,0.9,1,1.1].map(r=>`<option value="${r}" ${r==(p.rate||0.9)?"selected":""}>${r}×</option>`).join("")}</select></label>
+        <label class="pl-rate">Speed <select class="pl-sel">${[0.75,0.85,1,1.1].map(r=>`<option value="${r}" ${r==(p.rate||0.85)?"selected":""}>${r}×</option>`).join("")}</select></label>
         <span class="note pl-n">Played ${n}×</span>
       </div>
+      ${p.audio?`<audio class="pl-au" preload="none" src="${esc(p.audio)}" controls></audio>`:""}
       <div class="note pl-msg" hidden></div>
       <button class="ghost pl-tx" type="button">${open?"Hide transcript":"Show transcript"}</button>
       <div class="md transcript" ${open?"":"hidden"}>${lines}</div>
@@ -765,6 +767,19 @@ table.days tr.next td{background:var(--accent-soft)}
       const key = box.dataset.key, p = (l.parts||[])[Number(box.dataset.pi)];
       const play = box.querySelector(".pl-play"), stop = box.querySelector(".pl-stop"), msg = box.querySelector(".pl-msg");
       box.querySelector(".pl-tx").addEventListener("click", e => { if (!reveal[key]) actListen(box.dataset.pi, "reveal"); reveal[key] = !reveal[key]; box.querySelector(".transcript").hidden = !reveal[key]; e.target.textContent = reveal[key]?"Hide transcript":"Show transcript"; });
+      const au = box.querySelector(".pl-au"), sel = box.querySelector(".pl-sel");
+      if (au){
+        // File MP3 (Piper TTS) – phát được trên iPhone/app Claude điện thoại; có tua + chỉnh tốc độ
+        const setRate = () => { au.playbackRate = Number(sel.value)||0.85; try { au.preservesPitch = true; } catch {} };
+        sel.addEventListener("change", setRate);
+        au.addEventListener("play", () => { setRate(); actListen(box.dataset.pi, "play", au.playbackRate); play.hidden = true; stop.hidden = false; });
+        au.addEventListener("pause", () => { play.hidden = false; stop.hidden = true; });
+        au.addEventListener("ended", () => { plays[key] = (plays[key]||0)+1; store.set("plays", plays); box.querySelector(".pl-n").textContent = `Played ${plays[key]}×`; });
+        au.addEventListener("error", () => { msg.hidden = false; msg.textContent = "Couldn't load the audio file. Please reload the page."; });
+        play.addEventListener("click", () => { setRate(); au.play().catch(() => {}); });
+        stop.addEventListener("click", () => au.pause());
+        return;
+      }
       play.addEventListener("click", () => {
         const rate = Number(box.querySelector(".pl-sel").value)||0.9;
         actListen(box.dataset.pi, "play", rate);

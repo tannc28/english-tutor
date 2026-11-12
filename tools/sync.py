@@ -111,6 +111,11 @@ def main():
         for fn in sorted(os.listdir(D(sub))):
             if fn.endswith(".json"):
                 files[f"data/{sub}/{fn}"] = f"data/{sub}/{fn}"
+    adir = D("audio")
+    if os.path.isdir(adir):
+        for lid in sorted(os.listdir(adir)):
+            for fn in sorted(os.listdir(os.path.join(adir, lid))):
+                if fn.endswith(".mp3"): files[f"data/audio/{lid}/{fn}"] = f"data/audio/{lid}/{fn}"
     with open(os.path.join(ROOT, "web", "publish_files.json"), "w", encoding="utf-8") as f:
         json.dump(files, f, ensure_ascii=False, indent=1)
     print(f"OK – {len(days)} ngày, {len(graded)} đã chấm. Progress Log đã sinh lại. {len(files)} file cần xuất bản (web/publish_files.json).")

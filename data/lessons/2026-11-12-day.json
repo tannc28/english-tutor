@@ -115,7 +115,8 @@
      "type": "short",
      "placeholder": "e.g. 75"
     }
-   ]
+   ],
+   "audio": "data/audio/2026-11-12-day/p0.mp3"
   },
   {
    "kind": "Listening · morning",
@@ -186,7 +187,8 @@
      "type": "short",
      "placeholder": "e.g. 75"
     }
-   ]
+   ],
+   "audio": "data/audio/2026-11-12-day/p1.mp3"
   },
   {
    "kind": "Reading · evening",
