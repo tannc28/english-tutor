@@ -45,7 +45,16 @@
    ],
    "rate": 1,
    "questions": [],
-   "audio": "data/audio/2026-11-12-morning/p0.mp3"
+   "audio": "data/audio/2026-11-12-morning/p0.mp3",
+   "marks": [
+    0.0,
+    2.23,
+    4.71,
+    6.59,
+    8.68,
+    11.42,
+    13.57
+   ]
   },
   {
    "kind": "② Try it",
@@ -240,7 +249,21 @@
      "placeholder": "e.g. 75"
     }
    ],
-   "audio": "data/audio/2026-11-12-morning/p2.mp3"
+   "audio": "data/audio/2026-11-12-morning/p2.mp3",
+   "marks": [
+    0.0,
+    2.3,
+    5.94,
+    14.24,
+    19.6,
+    28.09,
+    34.55,
+    37.97,
+    47.77,
+    51.66,
+    59.69,
+    64.94
+   ]
   },
   {
    "kind": "④ Listen",
@@ -312,7 +335,10 @@
      "placeholder": "e.g. 75"
     }
    ],
-   "audio": "data/audio/2026-11-12-morning/p3.mp3"
+   "audio": "data/audio/2026-11-12-morning/p3.mp3",
+   "marks": [
+    0.0
+   ]
   }
  ]
 }

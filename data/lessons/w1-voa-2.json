@@ -124,7 +124,26 @@
      "placeholder": "e.g. 70"
     }
    ],
-   "transcript_open": true
+   "transcript_open": true,
+   "marks": [
+    0.0,
+    6.92,
+    36.89,
+    47.49,
+    64.62,
+    82.23,
+    103.76,
+    120.97,
+    132.07,
+    136.44,
+    150.34,
+    155.74,
+    171.72,
+    182.28,
+    184.31,
+    197.94,
+    205.43
+   ]
   }
  ],
  "credit": "Audio and text: VOA Learning English (public domain)."

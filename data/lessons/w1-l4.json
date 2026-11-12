@@ -46,7 +46,16 @@
      "text": "Could you give me a hand with this box? It's heavier than it looks."
     }
    ],
-   "questions": []
+   "questions": [],
+   "marks": [
+    0.0,
+    2.06,
+    4.45,
+    7.14,
+    9.61,
+    12.77,
+    15.94
+   ]
   },
   {
    "kind": "② Listen & read",
@@ -104,6 +113,16 @@
      "type": "text",
      "placeholder": "e.g. What does 'that kind of thing' mean?"
     }
+   ],
+   "marks": [
+    0.0,
+    7.15,
+    11.75,
+    17.53,
+    26.07,
+    32.17,
+    41.14,
+    45.9
    ]
   },
   {
@@ -197,6 +216,23 @@
      "type": "text",
      "placeholder": "optional"
     }
+   ],
+   "marks": [
+    0.0,
+    13.84,
+    16.72,
+    19.42,
+    24.74,
+    38.77,
+    42.53,
+    44.58,
+    46.89,
+    54.32,
+    60.96,
+    68.36,
+    70.34,
+    72.17,
+    78.16
    ]
   },
   {

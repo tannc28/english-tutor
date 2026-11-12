@@ -106,7 +106,20 @@
      "placeholder": "VD: 80"
     }
    ],
-   "audio": "data/audio/2026-11-11-main/p0.mp3"
+   "audio": "data/audio/2026-11-11-main/p0.mp3",
+   "marks": [
+    0.0,
+    3.86,
+    11.95,
+    17.73,
+    23.95,
+    27.47,
+    35.55,
+    41.36,
+    47.82,
+    52.3,
+    57.31
+   ]
   },
   {
    "kind": "Đọc rộng · truyện dài kỳ",
@@ -234,7 +247,10 @@
      "placeholder": "VD: 80"
     }
    ],
-   "audio": "data/audio/2026-11-11-main/p3.mp3"
+   "audio": "data/audio/2026-11-11-main/p3.mp3",
+   "marks": [
+    0.0
+   ]
   },
   {
    "kind": "Đọc · C1",
@@ -338,7 +354,10 @@
      "placeholder": "VD: 60"
     }
    ],
-   "audio": "data/audio/2026-11-11-main/p5.mp3"
+   "audio": "data/audio/2026-11-11-main/p5.mp3",
+   "marks": [
+    0.0
+   ]
   },
   {
    "kind": "Từ vựng",

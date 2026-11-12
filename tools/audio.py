@@ -28,17 +28,24 @@ def pcm(text, vname):
     buf.seek(0)
     with wave.open(buf) as r: return r.getframerate(), r.readframes(r.getnframes())
 
-def render(lid):
+def render(lid, marks_only=False):
+    """marks = giây bắt đầu của từng dòng listen → web cho bấm nghe lại đúng đoạn đó.
+    marks_only: chỉ đo lại mốc thời gian (tổng hợp lại để đo, không ghi MP3)."""
     path = os.path.join(ROOT, "data", "lessons", lid + ".json"); L = json.load(open(path))
     out = os.path.join(ROOT, "data", "audio", lid); os.makedirs(out, exist_ok=True)
     for pi, p in enumerate(L.get("parts", [])):
-        if not p.get("listen") or p.get("keep_audio"): continue   # bài nghe thật (VOA…) giữ audio gốc
-        rate, chunks = None, []
+        if not p.get("listen") or p.get("keep_audio"): continue   # bài nghe thật (VOA…) giữ audio gốc – mốc do voa_marks.py
+        rate, chunks, marks, pos = None, [], [], 0
         for x in p["listen"]:
+            marks.append(round(pos / (rate or 22050), 2) if rate else 0.0)
             for para in [s for s in str(x["text"]).split("\n\n") if s.strip()]:
                 sr, data = pcm(para.strip(), VOICE.get(x.get("voice"), VOICE["buttery"]))
                 rate = rate or sr
-                chunks.append(data + b"\0\0" * int(sr * (0.7 if len(p["listen"]) > 1 else 0.5)))
+                c = data + b"\0\0" * int(sr * (0.7 if len(p["listen"]) > 1 else 0.5))
+                chunks.append(c); pos += len(c) // 2
+        p["marks"] = marks
+        if marks_only:
+            print(f"{lid} part {pi+1}: {len(marks)} marks"); continue
         wav = os.path.join(out, f"p{pi}.wav"); mp3 = os.path.join(out, f"p{pi}.mp3")
         with wave.open(wav, "wb") as w:
             w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(b"".join(chunks))
@@ -75,5 +82,6 @@ def render_words(no, force=False):
 if __name__ == "__main__":
     ids = sys.argv[1:]
     if ids[:1] == ["--words"]: render_words(int(ids[1]), "--force" in ids); sys.exit()
+    mo = "--marks" in ids; ids = [i for i in ids if i != "--marks"]
     if ids == ["--all"]: ids = [f[:-5] for f in sorted(os.listdir(os.path.join(ROOT, "data", "lessons"))) if f.endswith(".json")]
-    for i in ids: render(i)
+    for i in ids: render(i, mo)

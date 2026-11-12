@@ -25,7 +25,12 @@
    ],
    "rate": 1,
    "questions": [],
-   "audio": "data/audio/w1-l5/p0.mp3"
+   "audio": "data/audio/w1-l5/p0.mp3",
+   "marks": [
+    0.0,
+    8.62,
+    14.96
+   ]
   },
   {
    "kind": "② Try it",
@@ -224,7 +229,18 @@
      "placeholder": "e.g. 75"
     }
    ],
-   "audio": "data/audio/w1-l5/p2.mp3"
+   "audio": "data/audio/w1-l5/p2.mp3",
+   "marks": [
+    0.0,
+    8.17,
+    14.97,
+    18.63,
+    27.03,
+    31.9,
+    40.28,
+    43.7,
+    51.92
+   ]
   },
   {
    "kind": "④ Listen",
@@ -281,7 +297,10 @@
      "placeholder": "e.g. 75"
     }
    ],
-   "audio": "data/audio/w1-l5/p3.mp3"
+   "audio": "data/audio/w1-l5/p3.mp3",
+   "marks": [
+    0.0
+   ]
   }
  ]
 }

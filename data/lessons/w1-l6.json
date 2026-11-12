@@ -233,7 +233,19 @@
      "placeholder": "e.g. 75"
     }
    ],
-   "audio": "data/audio/w1-l6/p2.mp3"
+   "audio": "data/audio/w1-l6/p2.mp3",
+   "marks": [
+    0.0,
+    5.05,
+    12.15,
+    15.93,
+    26.79,
+    33.24,
+    41.92,
+    49.13,
+    55.05,
+    65.83
+   ]
   },
   {
    "kind": "④ Listen again",

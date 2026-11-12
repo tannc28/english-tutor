@@ -391,6 +391,15 @@ a.rv-row:hover{border-color:var(--accent)}
 .pl-sel{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 .transcript{width:100%;padding:14px 18px;background:var(--paper);border:1px solid var(--paper-line);border-radius:10px;font-family:var(--f-read);line-height:1.8}
 .transcript p{margin:.4em 0}
+.transcript .tseg{cursor:pointer;border-radius:8px;padding:3px 6px 3px 30px;margin:.25em -6px;position:relative;transition:background .15s}
+.transcript .tseg:hover{background:var(--accent-soft)}
+.transcript .tseg.on{background:var(--marker);color:var(--marker-ink)}
+.seg-b{position:absolute;left:6px;top:.35em;font-size:.72rem;color:var(--accent);opacity:.75;font-family:var(--f-ui)}
+.src-h{display:none}
+@media (min-width:1100px){.split .src-h{display:block;position:sticky;top:0;z-index:3;background:var(--surface);padding:6px 0 8px;margin-bottom:6px;border-bottom:1px solid var(--line);font-weight:700;font-size:.95rem}
+.split .src-h .kind{font-size:.7rem}
+.part:has(.split .src-h) > .kind,.part:has(.split .src-h) > h3{display:none}
+.split .src .player .pl-row{position:sticky;top:42px;z-index:2;background:inherit;padding:4px 0}}
 /* Tabs */
 .tabs{display:flex;gap:6px;margin-top:16px;padding:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px;width:max-content;max-width:100%;overflow-x:auto}
 .tab{padding:8px 14px;border-radius:9px;color:var(--ink-2);text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}
@@ -869,6 +878,7 @@ table.days tr.next td{background:var(--accent-soft)}
   function actListen(pi, kind, rate){
     if (!act) return; actPoke();
     const r = act.listen[pi] = act.listen[pi] || {plays:0, rates:[]};
+    if (kind === "segment") r.segs = (r.segs||0) + 1;   // số lần nghe lại 1 đoạn
     if (kind === "play"){ r.plays++; r.rates.push(rate); if (r.rates.length > 10) r.rates.shift(); }
     if (kind === "reveal" && r.revealAt == null){
       r.revealAt = nowS();
@@ -1001,7 +1011,7 @@ table.days tr.next td{background:var(--accent-soft)}
           ${p.kind?`<span class="kind">${esc(p.kind)}</span>`:""}
           <h3>${esc(p.title||"")}</h3>
           <div class="${isSplit(p) ? "split" : ""}">
-            <div class="src ${p.listen ? "src-listen" : "src-read"}" data-pi="${pi}"><div class="md">${md(p.md)}</div>
+            <div class="src ${p.listen ? "src-listen" : "src-read"}" data-pi="${pi}">${isSplit(p) ? `<div class="src-h"><span class="kind">${esc(p.kind||"")}</span> ${esc(p.title||"")}</div>` : ""}<div class="md">${md(p.md)}</div>
             ${Array.isArray(p.listen) && p.listen.length ? playerHtml(l.id, pi, p) : ""}</div>
             ${(p.questions||[]).length ? `<div class="qs">${p.questions.map(q => `
               <div class="q" id="qb-${esc(q.id)}">
@@ -1079,7 +1089,10 @@ table.days tr.next td{background:var(--accent-soft)}
     const key = id+"#"+pi, n = plays[key]||0;
     if (reveal[key] === undefined && p.transcript_open) reveal[key] = true;   // nghe kèm lời ngay từ đầu (input-first)
     const open = !!reveal[key];
-    const lines = p.listen.map(x => `<p>${x.who?`<b>${esc(x.who)}:</b> `:""}${esc(x.text)}</p>`).join("");
+    const segOk = p.audio && Array.isArray(p.marks) && p.marks.length === p.listen.length;
+    const lines = p.listen.map((x,i) => segOk
+      ? `<p class="tseg" data-i="${i}" title="Tap to hear this part again"><span class="seg-b" aria-hidden="true">▶</span>${x.who?`<b>${esc(x.who)}:</b> `:""}${esc(x.text)}</p>`
+      : `<p>${x.who?`<b>${esc(x.who)}:</b> `:""}${esc(x.text)}</p>`).join("");
     if (p.audio) return `<div class="player compact" data-key="${esc(key)}" data-pi="${pi}">
       <div class="pl-row"><audio class="pl-au" preload="none" src="${esc(p.audio)}" controls></audio>
         <select class="pl-sel" aria-label="Speed">${[0.75,0.85,1,1.1].map(r=>`<option value="${r}" ${r==(p.rate||1)?"selected":""}>${r}×</option>`).join("")}</select></div>
@@ -1117,6 +1130,27 @@ table.days tr.next td{background:var(--accent-soft)}
         au.addEventListener("error", () => { msg.hidden = false; msg.textContent = "Couldn't load the audio file. Please reload the page."; });
         play.addEventListener("click", () => { setRate(); au.play().catch(() => {}); });
         stop.addEventListener("click", () => au.pause());
+        // Bấm 1 dòng trong transcript → nghe lại đúng đoạn đó rồi dừng; dòng đang đọc được tô sáng (Tân 12/11)
+        const segs = [...box.querySelectorAll(".tseg")], mk = p.marks || [];
+        if (segs.length){
+          let segEnd = null, curI = -1;
+          const tx = box.querySelector(".transcript");
+          const mark = i => { if (i === curI) return; segs[curI]?.classList.remove("on"); curI = i; const el = segs[i]; if (!el) return; el.classList.add("on");
+            if (tx && tx.scrollHeight > tx.clientHeight + 4){ const top = el.offsetTop - tx.offsetTop; if (top < tx.scrollTop || top > tx.scrollTop + tx.clientHeight - 40) tx.scrollTo({top: Math.max(0, top - 40), behavior:"smooth"}); } };
+          au.addEventListener("timeupdate", () => {
+            const t = au.currentTime; let i = 0; while (i + 1 < mk.length && mk[i+1] <= t + 0.05) i++; mark(i);
+            if (segEnd != null && t >= segEnd){ au.pause(); segEnd = null; }
+          });
+          au.addEventListener("pause", () => { if (au.currentTime < 0.1){ segs[curI]?.classList.remove("on"); curI = -1; } });
+          segs.forEach(el => el.addEventListener("click", () => {
+            if (String(window.getSelection?.() || "").trim()) return;   // đang bôi đen chữ thì không phát
+            const i = Number(el.dataset.i); setRate();
+            const t0 = Math.max(0, (mk[i] || 0) - 0.15); segEnd = mk[i+1] != null ? mk[i+1] : null;
+            const go = () => { au.currentTime = t0; };
+            if (au.readyState >= 1) go(); else { au.preload = "auto"; au.addEventListener("loadedmetadata", go, {once:true}); au.load?.(); }
+            actListen(box.dataset.pi, "segment", au.playbackRate); au.play().catch(() => {});
+          }));
+        }
         return;
       }
       play.addEventListener("click", () => {
