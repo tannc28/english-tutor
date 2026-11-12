@@ -193,7 +193,7 @@ SVG dự phòng phải render ra PNG rồi tự xem lại và sửa (tối đa 3
 |---|---|
 | `sync.py` | Kiểm tra `data/`, gom `library.json`, sinh Progress Log, danh sách file publish |
 | `flux.py` | Vẽ minh hoạ FLUX trên Cloudflare: `flux.py "<cảnh>" out.webp -n 2 --cast nam,linh` hoặc `--batch jobs.json`. Thất bại thì exit 2, chuyển sang SVG dự phòng |
-| `audio.py` | Piper TTS → MP3 cho bài (`<id>`) và từ (`--words <N>`). Cài lại trong container mới: `bash tools/audio_setup.sh` |
+| `audio.py` | Piper TTS → MP3 cho bài (`<id>`) và từ (`--words <N>`, `--force` để làm lại). **Giọng Mỹ mặc định** (từ: en_US-lessac, câu ví dụ: en_US-ryan). IPA hiện US trước, UK sau. Cài lại trong container mới: `bash tools/audio_setup.sh` |
 | `voa.py` | Lấy bài VOA Learning English: `list <zone>`, `get <url> <id>`. Chỉ dùng bài VOA tự viết |
 | `ipa.py` | IPA kiểu từ điển (UK/US), tách âm tiết và dấu trọng âm, dạng yếu |
 | `tg.py`, `notify.py`, `render_card.js` | Telegram: tin, thẻ lỗi, quiz, thẻ từ, báo cáo tuần (render ảnh bằng Playwright) |
