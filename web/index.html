@@ -644,6 +644,31 @@ body.in-lesson .wrap,.book{padding-bottom:calc(var(--tbb,64px) + 28px)}
 @media (max-width:880px){#list{flex-direction:column;overflow:auto;max-height:45vh}#list .item.lrow{min-width:0}}
 body.list-mode #list{max-height:none}
 body.list-mode #list .item.lrow{padding:11px 10px}
+
+/* ---- App bar: logo + tên web + tab chính + level/streak (Tân 12/11: như một web học thật) ---- */
+.appbar{position:sticky;top:0;z-index:30;display:flex!important;align-items:center;gap:18px;margin:0 -16px 10px;padding:10px 16px;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex:none}
+.logo-i{width:36px;height:36px;flex:none;filter:drop-shadow(0 2px 6px rgba(36,73,216,.25))}
+.logo-t{font-size:1.08rem;font-weight:600;letter-spacing:-.01em;white-space:nowrap}.logo-t b{color:var(--accent);font-weight:800}
+.appbar nav.tabs.main3{display:flex;width:auto;margin:0 auto;gap:4px;padding:4px;border-radius:12px;background:var(--sunk);border:1px solid var(--line);box-shadow:none}
+.appbar nav.tabs.main3 .tab{padding:7px 16px;border-radius:9px;font-size:.92rem;font-weight:600;color:var(--ink-2);background:none}
+.appbar nav.tabs.main3 .tab[aria-current="page"]{background:var(--surface);color:var(--accent);box-shadow:0 1px 3px rgba(20,26,38,.12)}
+.ab-r{display:flex;align-items:center;gap:8px;flex:none}
+.ab-chip{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font:600 .82rem var(--f-ui);color:var(--ink);text-decoration:none;white-space:nowrap}
+a.ab-chip{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))}
+.appbar .theme-btn{width:34px;height:34px;padding:0;justify-content:center;font-size:1rem}
+.track{display:none!important}
+.wrap{padding-top:0!important}
+body.focus .appbar{display:none!important}
+@media (max-width:1100px){
+  .appbar{margin:0 -16px 8px;padding:8px 16px;-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--bg)}
+  .appbar nav.tabs.main3{margin:0;padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px));border-radius:0;background:var(--surface);border:0;border-top:1px solid var(--line)}
+  .appbar nav.tabs.main3 .tab{padding:6px 4px 4px}
+  .appbar nav.tabs.main3 .tab[aria-current="page"]{box-shadow:none;background:var(--accent-soft)}
+  .ab-r{margin-left:auto}
+}
+@media (max-width:440px){.appbar{gap:8px}.logo{gap:8px}.logo-i{width:32px;height:32px}.logo-t{font-size:.95rem}.ab-r{gap:5px}.ab-chip{padding:3px 8px;font-size:.78rem}.appbar .theme-btn{width:30px;height:30px}}
+@media (max-width:370px){.logo-c{display:none}}
 </style>
 <script>
 /* Giao diện sáng/tối – mặc định SÁNG (Tân 12/11), lựa chọn lưu trên máy */
@@ -651,25 +676,27 @@ body.list-mode #list .item.lrow{padding:11px 10px}
 </script>
 
 <div class="wrap">
-  <header class="top">
-    <div class="brand">
-      <div class="label">B1 → C1 · General English · Comprehensible Input · Tutor: Claude</div>
-      <div class="brand-h"><h1>Tân's English Class</h1><button type="button" id="theme-btn" class="theme-btn" aria-label="Switch light / dark mode"></button></div>
+  <header class="top appbar">
+    <a class="logo" href="#" aria-label="Tân's English Class – home">
+      <svg class="logo-i" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b5bdb"/><stop offset="1" stop-color="#2449d8"/></linearGradient></defs>
+        <rect width="40" height="40" rx="11" fill="url(#lg)"/>
+        <path d="M9 13.5c3.6-1.6 7.2-1.6 10.4.6v15c-3.2-2.2-6.8-2.2-10.4-.6z" fill="#fff"/>
+        <path d="M31 13.5c-3.6-1.6-7.2-1.6-10.4.6v15c3.2-2.2 6.8-2.2 10.4-.6z" fill="#dbe4ff"/>
+        <path d="M26 8.2a5 5 0 0 1 0 6.6M29 6a8.6 8.6 0 0 1 0 11" stroke="#ffd43b" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      <span class="logo-t">Tân's <b>English</b> <span class="logo-c">Class</span></span>
+    </a>
+    <nav class="tabs main3" aria-label="Sections">
+      <a href="#" class="tab" data-group="learn">📅<span class="tl3"> Learn</span></a>
+      <a href="#on-tap" class="tab" data-group="review">🧠<span class="tl3"> Review</span></a>
+      <a href="#level" class="tab" data-group="progress">📈<span class="tl3"> Progress</span></a>
+    </nav>
+    <div class="ab-r">
+      <a class="ab-chip" href="#level" title="Your level now (estimate) – details in Progress"><span id="lvl-chip">B1</span></a>
+      <span class="ab-chip" title="Days in a row"><span aria-hidden="true">🔥</span> <span id="s-streak">0</span><span id="s-streak-u" hidden>days</span></span>
+      <button type="button" id="theme-btn" class="theme-btn" aria-label="Switch light / dark mode"></button>
     </div>
-    <div class="stats">
-      <div class="stat"><span class="label">Week</span><b id="s-week">1</b></div>
-      <div class="stat"><span class="label">Streak</span><b><span id="s-streak">0</span> <span id="s-streak-u">days</span></b></div>
-      <div class="stat"><span class="label">Graded</span><b id="s-done">0</b></div>
-    </div>
+    <div hidden><b id="s-week">1</b><b id="s-done">0</b><span id="cefr-now"></span><div class="segs cefr" id="cefr"></div></div>
   </header>
-
-  <section class="track" aria-label="CEFR journey"><div class="ph"><span class="nm"><b>Road to C1</b> – <span id="cefr-now">current level: waiting for Day 1 assessment</span></span><div class="segs cefr" id="cefr"></div></div></section>
-
-  <nav class="tabs main3" aria-label="Sections">
-    <a href="#" class="tab" data-group="learn">📅<span class="tl3"> Learn</span></a>
-    <a href="#on-tap" class="tab" data-group="review">🧠<span class="tl3"> Review</span></a>
-    <a href="#level" class="tab" data-group="progress">📈<span class="tl3"> Progress</span></a>
-  </nav>
   <nav class="subtabs" id="subtabs" aria-label="Subsections"></nav>
 
   <section id="view-profile" class="view" hidden></section>
@@ -692,7 +719,7 @@ body.list-mode #list .item.lrow{padding:11px 10px}
 
 <script>
 (function(){ const b = document.getElementById("theme-btn"); if (!b) return;
-  const show = () => { const d = document.documentElement.dataset.theme === "dark"; b.textContent = d ? "☀️ Light" : "🌙 Dark"; b.title = d ? "Switch to light mode" : "Switch to dark mode"; };
+  const show = () => { const d = document.documentElement.dataset.theme === "dark"; b.textContent = d ? "☀️" : "🌙"; b.title = d ? "Switch to light mode" : "Switch to dark mode"; };
   b.addEventListener("click", () => { const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark"; document.documentElement.dataset.theme = t; try { localStorage.setItem("theme", t); } catch {} show(); });
   show(); })();
 </script>
@@ -736,7 +763,7 @@ body.list-mode #list .item.lrow{padding:11px 10px}
   function renderTrack(){
     const cur = String(profile?.cefr?.overall || "").trim(), ci = LEVELS.indexOf(cur);
     $("#cefr").innerHTML = LEVELS.map((lv,i) => `<span class="seg ${ci>=0 && i<ci?"done":i===ci?"now":""}">${lv}</span>`).join("");
-    if (cur) $("#cefr-now").textContent = `current level (estimate): ${cur}`;
+    if (cur){ $("#cefr-now").textContent = `current level (estimate): ${cur}`; const lc = $("#lvl-chip"); if (lc) lc.textContent = cur; }
   }
 
   async function loadBody(id){
@@ -860,7 +887,7 @@ body.list-mode #list .item.lrow{padding:11px 10px}
   function setPref(k, on, cls){ prefs[k] = on; store.set("prefs", prefs); document.body.classList.toggle(cls, on); }
   let tocObs = null;
   function bindToc(){
-    const tb = document.querySelector(".toolbar"); if (tb){ document.documentElement.style.setProperty("--tbh", "0px"); document.documentElement.style.setProperty("--tbb", tb.offsetHeight + "px"); }
+    const tb = document.querySelector(".toolbar"); if (tb){ const ab = document.querySelector(".appbar"); document.documentElement.style.setProperty("--tbh", (ab && getComputedStyle(ab).display !== "none" ? ab.offsetHeight : 0) + "px"); document.documentElement.style.setProperty("--tbb", tb.offsetHeight + "px"); }
     $("#tg-shelf")?.addEventListener("click", e => { const off = !document.body.classList.contains("shelf-off"); setPref("shelfOff", off, "shelf-off"); if (!off) setPref("focus", false, "focus"); syncToggles(); });
     $("#tg-focus")?.addEventListener("click", () => { setPref("focus", !document.body.classList.contains("focus"), "focus"); syncToggles(); });
     document.querySelectorAll(".toc a[data-go]").forEach(a => a.addEventListener("click", ev => { ev.preventDefault(); document.getElementById(a.dataset.go)?.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"}); }));
