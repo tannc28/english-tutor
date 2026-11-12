@@ -31,7 +31,7 @@ flowchart LR
     T -- "làm bài, Nộp" --> UI --> DB
     UI -- "Send to Claude: 📥 Nộp bài" --> G
     G -- "đọc bài nộp" --> DB
-    G -- "thông báo + trả lời" --> T
+    G -- "Telegram: chấm xong, tuần mới, đổi lịch" --> T
 ```
 
 | Thành phần | Vai trò |
@@ -140,6 +140,7 @@ CLAUDE.md                  ← quy tắc bắt buộc cho gia sư
 README.md                  ← file này
 data/                      ← NGUỒN DỮ LIỆU DUY NHẤT
 tools/audio.py, illustrate.py ← MP3 (Piper) và minh hoạ (SD-Turbo)
+tools/notify.py            ← gửi Telegram cho Tân (bot @CtanEnglishTutorBot)
 tools/sync.py              ← kiểm tra data/, sinh Progress Log, danh sách file publish
 tools/speech/              ← chấm phát âm
 tutor/00_TUTOR_GUIDE.md    ← phương pháp, khung bài, cách chấm

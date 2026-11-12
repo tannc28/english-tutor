@@ -26,6 +26,11 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Cuối tuần: Weekly Test + Talk Time (T7), nhắc học (CN). Không dồn bài khi Tân lỡ.
 - Không sao chép nguyên văn nội dung có bản quyền vào repo; lưu link + câu hỏi + tóm tắt.
 
+## Thông báo cho Tân: TELEGRAM (Tân yêu cầu 12/11)
+- Mọi tin quan trọng gửi qua bot **@CtanEnglishTutorBot**: `python3 tools/notify.py "<HTML ngắn>"` – khi **chấm xong** (điểm + 1–2 ý chính + link bài), **ra tuần mới**, **xử lý xin nghỉ / đổi lịch**, **nhắc nhẹ** (2 ngày không học). Tiếng Việt, ngắn, có link `#<id>`.
+- Token **không bao giờ** vào repo: biến môi trường `TELEGRAM_BOT_TOKEN` (Tân đặt trong cài đặt environment) hoặc `/root/.telegram_token`. Chat id ở `profile.notify.telegram_chat_id`. Không có token → PushNotification + báo Tân.
+- Job sáng đọc tin Tân nhắn bot (`tools/notify.py --inbox`): xin nghỉ, góp ý → xử lý như Quy trình XIN NGHỈ.
+
 ## Chọn model (Tân yêu cầu 12/11)
 - Việc cần **suy nghĩ sâu** – soạn bài, lên kế hoạch tuần, chấm bài, phân tích hồ sơ/nhật ký, quyết định thích ứng – **bắt buộc dùng Opus** (phiên chính chạy Opus; subagent làm việc này phải đặt `model: "opus"`).
 - Việc **máy móc** – vẽ ảnh, tạo audio, kiểm tra link, chép file – có thể giao subagent model nhẹ (sonnet/haiku) để nhanh và tiết kiệm.

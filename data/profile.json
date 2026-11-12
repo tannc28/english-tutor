@@ -318,5 +318,8 @@
   "listening": "A2+",
   "reading": "B1",
   "note_md": "**Comfortable level** = you understand straight away, without strain or translating. Lessons are built at this level (that's real *comprehensible input*). The *with effort* level is only what you can manage in a test. We move up one small step when 2–3 lessons in a row feel **😌 relaxed** and you understand ≥ 90%."
+ },
+ "notify": {
+  "telegram_chat_id": 1270488169
  }
 }
