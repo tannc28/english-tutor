@@ -50,6 +50,36 @@
    "history": [],
    "poll_id": "6316692287233459044",
    "sent": "2026-11-12"
+  },
+  {
+   "id": "2026-11-12-morning-q0",
+   "lesson": "2026-11-12-morning",
+   "q": "\"It's been a long day.\" Here it's = …",
+   "options": [
+    "it is",
+    "it has",
+    "it was"
+   ],
+   "answer": 1,
+   "why": "It's + been → it HAS been (hiện tại hoàn thành).",
+   "due": "2026-11-13",
+   "step": 0,
+   "history": []
+  },
+  {
+   "id": "2026-11-12-morning-q1",
+   "lesson": "2026-11-12-morning",
+   "q": "\"I'd better go now.\" Here I'd = …",
+   "options": [
+    "I would",
+    "I had",
+    "I did"
+   ],
+   "answer": 1,
+   "why": "had better → I'd better = I HAD better.",
+   "due": "2026-11-13",
+   "step": 0,
+   "history": []
   }
  ],
  "words": {
