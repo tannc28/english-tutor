@@ -2,7 +2,7 @@
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
  "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
- "updatedAt": "2026-11-12T17:54:52.010618+00:00",
+ "updatedAt": "2026-11-12T18:05:29.751672+00:00",
  "week": 1,
  "streak": 2,
  "focus_now": "INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.",
@@ -141,6 +141,10 @@
   {
    "date": "2026-11-12",
    "text": "Gia sư đề xuất (Tân chưa phản đối thì áp dụng từ 13/11, KHÔNG thêm việc cho Tân): (1) Đọc-kèm-nghe (Chang & Millett 2014/2015): bài đọc lượt 2 = đọc lại khi nghe audio chính bài đó (đã có audio) – luyện tai nối âm với chữ đã hiểu. (2) Đọc lưu loát (Nation; Chung & Nation 2006): mỗi ngày 1 bài đọc rất dễ (≥98% từ quen, ~300 từ) chỉ để đọc nhanh – đo wpm ngầm, mục tiêu 100→180. (3) Bài âm hôm sau soạn từ đúng các dòng Tân nghe lại nhiều nhất (log segIdx) – giải mã bottom-up (Field 2008). Chờ Tân đồng ý: (4) bài test vốn từ 15'/tháng (VST, Nation & Beglar 2007) để dự báo C1 có số thật."
+  },
+  {
+   "date": "2026-11-12",
+   "text": "Tân chọn đề xuất 6, 9, 10, 11, 12: 🎧 Play today (nghe cả ngày khi đi đường), 🧑‍🏫 lời nhắn mỗi ngày, 💬 Ask mọi lúc, ✉️ thư tuần (CN), 💌 góp ý tuần 1 chạm. KHÔNG chọn: chọn-ý-chính thay % hiểu, sáng nghe lại bài tối, bậc thang giọng tự nhiên, bài đo 2 tuần, chủ đề theo sở thích, chạm-từ-xem-nghĩa, tự mở bài kế."
   }
  ],
  "story": {

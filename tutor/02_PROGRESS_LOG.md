@@ -7,7 +7,7 @@
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
 - Tuần: 1 · Streak: 2 ngày · Đã chấm: 4/22 bài
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
-- Cập nhật hồ sơ: 2026-11-12T17:54:52.010618+00:00
+- Cập nhật hồ sơ: 2026-11-12T18:05:29.751672+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -69,6 +69,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-12 | Tân: chia mỗi ngày thành NHIỀU BÀI NHỎ 5–15' (mỗi bài 1 kỹ năng, nộp ngay để gia sư nắm tiến độ liên tục, không bài nào chờ bài nào), ngày nào cũng có cả đọc lẫn nghe, tổng 2–3 giờ; bài nghe 45' là dư – tối đa ~25'. Cơ sở: microlearning, 'small wins'/progress principle (Amabile), giảm ngưỡng bắt đầu, phản hồi ngay. Ngày 13/11: 14 bài nhỏ (6 đọc, 8 nghe, ~2 giờ). Bài nhỏ: feedback 1 chạm, chấm nhẹ, không Telegram từng bài – tóm tắt cả ngày vào sáng hôm sau. |
 | 2026-11-12 | Tân: bỏ mở sẵn transcript – mặc định ẨN để luyện tai ('tôi rất muốn được luyện tai'). Vòng nghe: không lời ×2 → mở lời đối chiếu + bấm dòng nghe lại → ẩn, nghe lần cuối. |
 | 2026-11-12 | Gia sư đề xuất (Tân chưa phản đối thì áp dụng từ 13/11, KHÔNG thêm việc cho Tân): (1) Đọc-kèm-nghe (Chang & Millett 2014/2015): bài đọc lượt 2 = đọc lại khi nghe audio chính bài đó (đã có audio) – luyện tai nối âm với chữ đã hiểu. (2) Đọc lưu loát (Nation; Chung & Nation 2006): mỗi ngày 1 bài đọc rất dễ (≥98% từ quen, ~300 từ) chỉ để đọc nhanh – đo wpm ngầm, mục tiêu 100→180. (3) Bài âm hôm sau soạn từ đúng các dòng Tân nghe lại nhiều nhất (log segIdx) – giải mã bottom-up (Field 2008). Chờ Tân đồng ý: (4) bài test vốn từ 15'/tháng (VST, Nation & Beglar 2007) để dự báo C1 có số thật. |
+| 2026-11-12 | Tân chọn đề xuất 6, 9, 10, 11, 12: 🎧 Play today (nghe cả ngày khi đi đường), 🧑‍🏫 lời nhắn mỗi ngày, 💬 Ask mọi lúc, ✉️ thư tuần (CN), 💌 góp ý tuần 1 chạm. KHÔNG chọn: chọn-ý-chính thay % hiểu, sáng nghe lại bài tối, bậc thang giọng tự nhiên, bài đo 2 tuần, chủ đề theo sở thích, chạm-từ-xem-nghĩa, tự mở bài kế. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
