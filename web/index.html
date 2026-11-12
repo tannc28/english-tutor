@@ -887,7 +887,10 @@ table.days tr.next td{background:var(--accent-soft)}
   document.addEventListener("pointerdown", actPoke, {passive:true});
   setInterval(() => { if (actDirty && actLesson && !subs[actLesson.id]){ actDirty = false; saveLocal(actLesson); if (saveState.k !== "saving") cloudSave(actLesson); } }, 60000);
 
-  function saveLocal(l){ const d = {...collect(l), log:act, savedAt:new Date().toISOString()}; store.set("draft:"+l.id, d); return d; }
+  function saveLocal(l){
+    // Chỉ lưu khi trang đang hiện đúng bài này – tránh chép feedback/câu trả lời của bài trước sang bài sau (lỗi Tân báo 12/11)
+    if (document.getElementById("part-fb")?.dataset.lid !== l.id) return store.get("draft:"+l.id) || {answers:{}, feedback:{}};
+    const d = {...collect(l), log:act, savedAt:new Date().toISOString()}; store.set("draft:"+l.id, d); return d; }
   function scheduleCloud(l){ pendingL = l; setSave("dirty"); clearTimeout(cloudTimer); cloudTimer = setTimeout(() => cloudSave(l), 2000); }
   async function cloudSave(l, manual){
     clearTimeout(cloudTimer);
@@ -1008,7 +1011,7 @@ table.days tr.next td{background:var(--accent-soft)}
               </div>`).join("")}</div>` : ""}
           </div>
         </section>`).join("")}
-      <section class="fb" id="part-fb" aria-labelledby="fb-h">
+      <section class="fb" id="part-fb" data-lid="${esc(l.id)}" aria-labelledby="fb-h">
         <h3 id="fb-h">📝 Your feedback</h3>
         <div class="fl"><span>How hard was this lesson?</span>
           <div class="scale" role="radiogroup" aria-label="Difficulty">${[1,2,3,4,5].map(n=>`<label><input type="radio" name="fb-diff" id="fb-diff-${n}" value="${n}" ${fb.difficulty==n?"checked":""} ${locked?"disabled":""}><span>${n}</span></label>`).join("")}</div>

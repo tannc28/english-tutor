@@ -5,9 +5,9 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: Chỉ INPUT (nghe + đọc) – input-first: nạp nhiều, giải thích nhiều, rất ít kiểm tra. Output/phát âm chỉ khi Tân muốn.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 2/10 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 3/10 bài
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
-- Cập nhật hồ sơ: 2026-11-12T22:10:00+07:00
+- Cập nhật hồ sơ: 2026-11-12T22:50:00+07:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -18,7 +18,7 @@
 | Từ vựng | B1+ | ~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt |
 | Ngữ pháp & từ nối | B1+ | 9/12; đúng cả đảo ngữ C1, trượt cụm B1 (be used to/suggest + V-ing) và although/unless |
 
-**Điểm mạnh:** Đọc hiểu tốt tới B2: nắm ý chính, quy chiếu (this/it), tách câu dài đúng; Đoán nghĩa từ ngữ cảnh rất tốt (seized upon, reluctantly, evade); Nhận biết cấu trúc khó (đảo ngữ Hardly/Not only, quá khứ hoàn thành); Trung thực, tự nhận biết rõ mình hiểu/không hiểu (metacognition tốt) – dữ liệu rất chuẩn; Tiếp xúc tiếng Anh hằng ngày qua công việc (chat với Claude bằng tiếng Anh)
+**Điểm mạnh:** Đọc hiểu tốt tới B2: nắm ý chính, quy chiếu (this/it), tách câu dài đúng; Đoán nghĩa từ ngữ cảnh rất tốt (seized upon, reluctantly, evade); Nhận biết cấu trúc khó (đảo ngữ Hardly/Not only, quá khứ hoàn thành); Trung thực, tự nhận biết rõ mình hiểu/không hiểu (metacognition tốt) – dữ liệu rất chuẩn; Tiếp xúc tiếng Anh hằng ngày qua công việc (chat với Claude bằng tiếng Anh); Từ nối tương phản/điều kiện (although/unless/rather/yet/however) đã chắc khi đọc (12/11)
 **Sở thích:** AI & công nghệ (thích nhất, tin AI); Tâm lý; Ẩm thực; Khoa học; Thể thao
 
 **Cần cải thiện & kế hoạch:**
@@ -64,19 +64,20 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 | 2026-11-12 | Chuyển sang KẾ HOẠCH THEO TUẦN (Tân yêu cầu): mỗi tuần 1 chủ đề + truyện chung, ~6 bài làm lúc rảnh theo thứ tự tuỳ ý, word wall có hình, bài nghe tự do theo chủ đề; minh hoạ bằng hình (Tân học nhanh qua ngữ cảnh + hình ảnh). Tân tự đánh giá nghe thật ra ~A2+ (vẫn căng não) → tách 'mức thoải mái' (soạn bài) và 'mức làm bài'; thêm câu 'căng não đến mức nào' vào feedback để theo dõi stress, tăng dần không áp lực. |
 | 2026-11-12 | Chấm Ngày 2 sáng: 17/17 đúng, nghe lần đầu ~80%, đọc lời 100%, 🙂. Tân góp ý: giai đoạn này cần NẠP INPUT tối đa + giải thích + learn nhiều, ít làm bài kiểm tra (cả nghe lẫn đọc). → Đổi khung bài: input-first – mỗi bài = Learn (giải thích, ví dụ, chunk) → Input lớn nhiều vòng (nghe kèm lời → nghe lại → nghe không lời; đọc rộng có chú giải) có giải thích từng đoạn → chỉ 1–2 câu tự kiểm tra nhẹ (đáp án hiện ngay) + cảm nhận/%; bỏ chuỗi câu hỏi dài; quiz ôn chuyển sang Telegram. Cơ sở: Krashen (CI), extensive listening (Renandya & Farrell 2011), listening-while-reading (Chang & Millett 2014). |
 | 2026-11-12 | Tân: giai đoạn này chưa ổn định, đang cùng tìm phương án → SOẠN BÀI THEO NGÀY: job 05:55 mỗi sáng soạn lại/soạn mới bài của hôm nay (và nhìn trước ngày mai) theo khung input-first + feedback mới nhất; job tuần chỉ chọn chủ đề, truyện, từ, lịch khung – không soạn sẵn cả 6 bài. Bài tuần 1 chưa làm sẽ được viết lại từng ngày. |
+| 2026-11-12 | Chấm Ngày 2 tối: đọc 11/11, từ nối 8/8, đọc lần đầu 95–99%, ~100 từ/phút, 😌, khó 1/5, mất ~25' (không phải 60'). Nâng mức ĐỌC thoải mái B1 → B1+ (đọc 😌 + ≥90% liên tiếp). Tân muốn: đọc nhiều hơn có gia sư dẫn dắt, ít trả lời; vẫn cần tương tác → thêm ô '💬 Ask me' (tuỳ chọn, tiếng Việt OK) cuối mỗi phần input; gia sư trả lời khi chấm. Sửa lỗi web: ô feedback bị chép từ bài trước. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
 |---|---|---|---|---|
 | A2 | 15/15 | 0 | 0 | 0 |
-| B1 | 7/28 | 9 | 0 | 12 |
+| B1 | 10/28 | 6 | 0 | 12 |
 | B2 | 0/23 | 1 | 2 | 20 |
 | C1 | 1/14 | 0 | 1 | 12 |
 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 2/10 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 3/10 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -86,7 +87,7 @@ Tân **đọc giỏi hơn mình nghĩ** (~B2) và **nghe yếu hơn đọc khá 
 |---|---|---|---|---|---|---|---|---|---|
 | T1 · B1 | 2026-11-11 | Starting point – full assessment | graded | 60% | 88% | 3 | 90 | – | Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k |
 | T1 · B2 | 2026-11-12 | Small words you can't hear + Hope Street | graded | 80% | 100% | 2 | 25 | – | 17/17 · dictation exact · nghe lần đầu ~80% · Tân: muốn ít test, nhiều input + giải thích |
-| T1 · B3 | – | Linking words + The Café & AI chatbots | open | – | – | – | – | – |  |
+| T1 · B3 | 2026-11-12 | Linking words + The Café & AI chatbots | graded | – | 97% | 1 | 28 | – | 11/11 đọc + 8/8 từ nối · đọc ~100 wpm · 😌 → nâng đọc B1+ · muốn đọc nhiều có dẫn dắt, ít câu hỏi, vẫn tương tác |
 | T1 · B4 | – | First day at work – listen & read | open | – | – | – | – | – |  |
 | T1 · B5 | – | Getting around – directions & the tram | open | – | – | – | – | – |  |
 | T1 · B6 | – | Weekend review – the story so far | open | – | – | – | – | – |  |

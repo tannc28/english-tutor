@@ -136,9 +136,8 @@
   },
   "B1-R4": {
    "tutor": "learning",
-   "evidence": "Understands well but slowly; still translating (Tân, 12/11)",
-   "date": "2026-11-11",
-   "baseline": true
+   "evidence": "Day 2 evening: easy story 1st read 4 min (~100 wpm), 95% – faster, still some translating",
+   "date": "2026-11-12"
   },
   "B1-R5": {
    "tutor": "got_it",
@@ -153,10 +152,9 @@
    "baseline": true
   },
   "B1-G8": {
-   "tutor": "learning",
-   "evidence": "Day 1 ❌ *suggested to take* → *suggested taking*",
-   "date": "2026-11-11",
-   "baseline": true
+   "tutor": "got_it",
+   "evidence": "Day 2 evening: *suggested listening to* ✓",
+   "date": "2026-11-12"
   },
   "B1-G9": {
    "tutor": "got_it",
@@ -164,16 +162,14 @@
    "date": "2026-11-12"
   },
   "B1-K1": {
-   "tutor": "learning",
-   "evidence": "Day 1: unsure between *although* and *unless*",
-   "date": "2026-11-11",
-   "baseline": true
+   "tutor": "got_it",
+   "evidence": "Day 2 evening: although / however / yet 5/5 in reading checks + story",
+   "date": "2026-11-12"
   },
   "B1-K2": {
-   "tutor": "learning",
-   "evidence": "Day 1: *unless* = if… not – confused with although",
-   "date": "2026-11-11",
-   "baseline": true
+   "tutor": "got_it",
+   "evidence": "Day 2 evening: *unless* = if… not, chose correctly (fixed Day 1 confusion)",
+   "date": "2026-11-12"
   },
   "B1-K6": {
    "tutor": "got_it",
@@ -182,9 +178,8 @@
   },
   "B2-R1": {
    "tutor": "learning",
-   "evidence": "Day 1 deep reading B1+/B2 9.5/10 – but slow",
-   "date": "2026-11-11",
-   "baseline": true
+   "evidence": "Day 2 evening: B1+/B2 article 99% understood, 6/6, felt easy",
+   "date": "2026-11-12"
   },
   "B2-L1": {
    "tutor": "not_yet",

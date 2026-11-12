@@ -2,7 +2,7 @@
   "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
   "name": "Tân",
   "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
-  "updatedAt": "2026-11-12T22:10:00+07:00",
+  "updatedAt": "2026-11-12T22:50:00+07:00",
   "week": 1,
   "streak": 2,
   "focus_now": "Chỉ INPUT (nghe + đọc) – input-first: nạp nhiều, giải thích nhiều, rất ít kiểm tra. Output/phát âm chỉ khi Tân muốn.",
@@ -26,7 +26,8 @@
     "Đoán nghĩa từ ngữ cảnh rất tốt (seized upon, reluctantly, evade)",
     "Nhận biết cấu trúc khó (đảo ngữ Hardly/Not only, quá khứ hoàn thành)",
     "Trung thực, tự nhận biết rõ mình hiểu/không hiểu (metacognition tốt) – dữ liệu rất chuẩn",
-    "Tiếp xúc tiếng Anh hằng ngày qua công việc (chat với Claude bằng tiếng Anh)"
+    "Tiếp xúc tiếng Anh hằng ngày qua công việc (chat với Claude bằng tiếng Anh)",
+    "Từ nối tương phản/điều kiện (although/unless/rather/yet/however) đã chắc khi đọc (12/11)"
   ],
   "weaknesses": [
     {
@@ -120,6 +121,10 @@
     {
       "date": "2026-11-12",
       "text": "Tân: giai đoạn này chưa ổn định, đang cùng tìm phương án → SOẠN BÀI THEO NGÀY: job 05:55 mỗi sáng soạn lại/soạn mới bài của hôm nay (và nhìn trước ngày mai) theo khung input-first + feedback mới nhất; job tuần chỉ chọn chủ đề, truyện, từ, lịch khung – không soạn sẵn cả 6 bài. Bài tuần 1 chưa làm sẽ được viết lại từng ngày."
+    },
+    {
+      "date": "2026-11-12",
+      "text": "Chấm Ngày 2 tối: đọc 11/11, từ nối 8/8, đọc lần đầu 95–99%, ~100 từ/phút, 😌, khó 1/5, mất ~25' (không phải 60'). Nâng mức ĐỌC thoải mái B1 → B1+ (đọc 😌 + ≥90% liên tiếp). Tân muốn: đọc nhiều hơn có gia sư dẫn dắt, ít trả lời; vẫn cần tương tác → thêm ô '💬 Ask me' (tuỳ chọn, tiếng Việt OK) cuối mỗi phần input; gia sư trả lời khi chấm. Sửa lỗi web: ô feedback bị chép từ bài trước."
     }
   ],
   "story": {
@@ -332,7 +337,7 @@
   },
   "input_level": {
     "listening": "A2+",
-    "reading": "B1",
+    "reading": "B1+",
     "note_md": "**Comfortable level** = you understand straight away, without strain or translating. Lessons are built at this level (that's real *comprehensible input*). The *with effort* level is only what you can manage in a test. We move up one small step when 2–3 lessons in a row feel **😌 relaxed** and you understand ≥ 90%."
   },
   "notify": {

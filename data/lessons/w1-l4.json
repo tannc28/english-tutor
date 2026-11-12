@@ -1,5 +1,5 @@
 {
- "intro_md": "**Week 1 · Lesson 4 – First day at work (~45 min). Almost all input – very few answers.** 🎧📖\n\nToday you **listen and read a lot** – the same story, many times, with the words in front of you. Only **2 tiny checks** at the end.\n\n| Part | What | Time |\n|---|---|---|\n| ① Learn | 9 work chunks + *what to do when you miss a word* | 5 min |\n| ② Listen & read | Meeting the team – 4 rounds, with notes for every line | 15 min |\n| ③ Listen & read | Hope Street Ep. 3 – the whole story as audio + text | 20 min |\n| ✓ | 2 quick self-checks + how it felt | 3 min |\n\n💡 **No pressure:** there is nothing to write until the end. Just keep your eyes and ears on the English.",
+ "intro_md": "**Week 1 · Lesson 4 – First day at work (~45 min). Almost all input – very few answers.** 🎧📖\n\nToday you **listen and read a lot** – the same story, many times, with the words in front of you. Only **2 tiny checks** at the end – and a **💬 Ask me** box after each part if you want to ask me something.\n\n| Part | What | Time |\n|---|---|---|\n| ① Learn | 9 work chunks + *what to do when you miss a word* | 5 min |\n| ② Listen & read | Meeting the team – 4 rounds, with notes for every line | 15 min |\n| ③ Listen & read | Hope Street Ep. 3 – the whole story as audio + text | 20 min |\n| ✓ | 2 quick self-checks + how it felt | 3 min |\n\n💡 **No pressure:** there is nothing to write until the end. Just keep your eyes and ears on the English.",
  "parts": [
   {
    "kind": "① Learn",
@@ -97,7 +97,14 @@
     }
    ],
    "audio": "data/audio/w1-l4/p1.mp3",
-   "questions": []
+   "questions": [
+    {
+     "id": "ask1",
+     "q": "💬 **Ask me** (optional): any line or word that is still unclear? Vietnamese is OK.",
+     "type": "text",
+     "placeholder": "e.g. What does 'that kind of thing' mean?"
+    }
+   ]
   },
   {
    "kind": "③ Listen & read",
@@ -183,7 +190,14 @@
     }
    ],
    "audio": "data/audio/w1-l4/p2.mp3",
-   "questions": []
+   "questions": [
+    {
+     "id": "ask2",
+     "q": "💬 **Ask me** (optional): anything in the story you want me to explain?",
+     "type": "text",
+     "placeholder": "optional"
+    }
+   ]
   },
   {
    "kind": "✓ Check",
@@ -227,7 +241,7 @@
     },
     {
      "id": "u2",
-     "q": "Which part was the most useful for you: listening with the words, the notes, or listening without the words? (Vietnamese is OK.)",
+     "q": "Which helped most: listening with the words, the notes, or listening without the words? (optional, Vietnamese OK)",
      "type": "text",
      "placeholder": "optional"
     }

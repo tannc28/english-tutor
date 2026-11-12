@@ -1,0 +1,92 @@
+{
+ "score": "Reading (story) 5/5 · Reading (AI article, B1+/B2) 6/6 · Quick checks 8/8 · First read 95–99% · 😌 relaxed",
+ "gradedAt": "2026-11-12T22:50:00+07:00",
+ "summary_md": "**Very strong – everything right, and it felt easy (😌, difficulty 1/5).**\n\n- **Story:** first read in **4 minutes** (~100 words/min) and **95%** understood.\n- **AI article (a step above your comfortable level):** main idea, *yet = but*, *Rather* and *in other words* – all right, **99%** understood.\n- **Linking words:** 8/8 – *although / unless / rather / however / yet* are no longer a problem in reading.\n\n**So:** reading at this level is now comfortable → I'm moving your **reading input up one small step (B1 → B1+)**. Listening stays where it is for now.\n\n**Your question – *\"He felt a little bit at home\"*:** **feel at home** = feel comfortable and relaxed, *like in your own home* (🇻🇳 *cảm thấy như ở nhà, thấy thoải mái, thân quen*). *A little bit* = a small amount. So: on his second day, in the café, Nam started to feel **a little** comfortable in his new city.",
+ "answers_md": "**3 things to keep:**\n1. **feel at home** = feel comfortable, like in your own home.\n2. **Read in chunks of meaning:** keep *who + did what* together – *Although Claire said not to worry* is one chunk.\n3. **Rather, …** = *not that – this instead*: a chatbot doesn't look up facts; **rather**, it predicts words.",
+ "next_md": "**Từ bài sau:** đọc nhiều hơn và có gia sư dẫn dắt (chú giải từng đoạn, giải thích chỗ hay), mức đọc nâng nhẹ lên **B1+**; rất ít câu hỏi. Để mình và Tân vẫn tương tác: cuối mỗi phần có ô **💬 Ask me** (tuỳ chọn, tiếng Việt cũng được) – Tân hỏi chỗ nào chưa hiểu, mình trả lời khi chấm, như câu *feel at home* hôm nay.",
+ "items": {
+  "te8": {
+   "verdict": "partial",
+   "note_md": "Close! Better: **Although Claire said not to worry / he didn't want to be late / on his first day.** Keep *Claire said not to worry* together – who + what she said is one idea. Your split *Although Claire / said not to worry* breaks one idea into two."
+  },
+  "h0": {
+   "verdict": "correct",
+   "note_md": "4 minutes for ~400 words ≈ **100 words/min** on a first read – good. Goal: 130–150 with easy stories."
+  },
+  "h1": {
+   "verdict": "correct",
+   "note_md": "Right – she works **behind the counter** at the café on the corner. (Small word: she isn't a *waiter*; she makes and sells coffee – a café worker / barista.)"
+  },
+  "h2": {
+   "verdict": "correct",
+   "note_md": "Right."
+  },
+  "h3": {
+   "verdict": "correct",
+   "note_md": "Right – the *although* sentence."
+  },
+  "h4": {
+   "verdict": "correct",
+   "note_md": "Right sentence. **feel at home** = feel comfortable, like in your own home (🇻🇳 *cảm thấy như ở nhà*). See my answer at the top."
+  },
+  "h5": {
+   "verdict": "correct",
+   "note_md": "Right – **the rain** and **people offering him coffee**. It's funny because *everyone* keeps offering him coffee – Jess, then Claire, two times in a short time. (Grammar tip: *he **met** this two days in a row*.)"
+  },
+  "a1": {
+   "verdict": "correct",
+   "note_md": "Right – the main idea."
+  },
+  "a2": {
+   "verdict": "correct",
+   "note_md": "Right – *it* = a chatbot giving a confident but wrong answer, which people call a **hallucination**. The word comes **after** *it* – good reading."
+  },
+  "a3": {
+   "verdict": "correct",
+   "note_md": "Right – *yet* = but."
+  },
+  "a4": {
+   "verdict": "correct",
+   "note_md": "Right – it does **not** look up facts in a list like a search engine; **rather**, it predicts words."
+  },
+  "a5": {
+   "verdict": "correct",
+   "note_md": "Right."
+  },
+  "a6": {
+   "verdict": "correct",
+   "note_md": "Right – for anything important, **check the answer yourself**."
+  }
+ },
+ "tg": {
+  "score": "Đọc 11/11 · từ nối 8/8 · đọc lần đầu 95–99% · 😌 dễ",
+  "win": "Đọc ~100 từ/phút, hiểu cả bài AI B1+/B2; từ nối không còn là vấn đề",
+  "fix": "Nâng mức đọc lên B1+; đọc nhiều hơn có dẫn dắt, có ô 💬 Ask me để hỏi"
+ },
+ "cards": [
+  {
+   "q": "Chunk it: Although Claire said not to worry he didn't want to be late",
+   "yours": "Although Claire / said not to worry / he didn't …",
+   "right": "Although Claire said not to worry / he didn't want to be late / …",
+   "tip": "Giữ 'ai + làm gì' trong 1 cụm: Claire said not to worry là 1 ý."
+  },
+  {
+   "q": "He felt a little bit at home.",
+   "yours": "(chưa rõ nghĩa)",
+   "right": "feel at home = thấy thoải mái, như ở nhà",
+   "tip": "a little bit = một chút → Nam bắt đầu thấy quen thuộc với thành phố mới."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "\"After a week in the new office, I started to feel at home.\" = …",
+   "options": [
+    "I wanted to go home",
+    "I felt comfortable there",
+    "I worked from home"
+   ],
+   "answer": 1,
+   "why": "feel at home = feel comfortable, like in your own home."
+  }
+ ]
+}
