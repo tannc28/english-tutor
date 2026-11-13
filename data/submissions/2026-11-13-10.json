@@ -1,0 +1,95 @@
+{
+  "answers": {
+    "chk": "Your brain has no shortcuts yet, so every small decision takes effort.",
+    "r2": "Almost nothing is automatic yet – no shortcuts",
+    "r3": "after two or three weeks",
+    "u1": "95-100"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Dễ thôi",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-10",
+  "log": {
+    "listen": {},
+    "parts": {
+      "0": {
+        "ms": 105000
+      },
+      "1": {
+        "ms": 45000
+      },
+      "fb": {
+        "ms": 135000
+      }
+    },
+    "q": {
+      "chk": {
+        "changes": [],
+        "edits": 1,
+        "first": 1138,
+        "last": "Your brain has no shortcuts yet, so every small decision takes effort.",
+        "ms": 10000
+      },
+      "r2": {
+        "changes": [],
+        "edits": 1,
+        "first": 1145,
+        "last": "Almost nothing is automatic yet – no shortcuts",
+        "ms": 15000
+      },
+      "r3": {
+        "changes": [],
+        "edits": 1,
+        "first": 1160,
+        "last": "after two or three weeks",
+        "ms": 0
+      },
+      "u1": {
+        "edits": 18,
+        "first": 1161,
+        "ms": 20000
+      }
+    },
+    "read": {
+      "0": {
+        "cur": null,
+        "reads": [
+          {
+            "at": "2026-11-13T09:56:42.112Z",
+            "auto": 0,
+            "ms": 236000,
+            "wpm": 58
+          }
+        ],
+        "words": 227
+      }
+    },
+    "sessions": [
+      {
+        "app": "Claude app",
+        "at": "2026-11-13T09:56:40.543Z",
+        "e": 135,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 0,
+        "vw": 1918
+      },
+      {
+        "app": "Claude app",
+        "at": "2026-11-13T10:13:49.239Z",
+        "e": 1183,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 1029,
+        "vw": 1918
+      }
+    ],
+    "t0": 1794563800543,
+    "v": 1
+  },
+  "submittedAt": "2026-11-13T10:16:23.068Z"
+}

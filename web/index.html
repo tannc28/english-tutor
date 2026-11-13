@@ -1494,7 +1494,9 @@ body{font-size:14.5px}
     rtFinalize();
     const rec = {lessonId:l.id, ...data, log:act, submittedAt:new Date().toISOString()};
     const diag = {at:new Date().toISOString()};
-    const savePromise = db.doc("submissions/"+l.id).set(rec);
+    // Tân 13/11 (bài 10 lỡ chấm): ghi inbox + notify "pending" NGAY cùng bài nộp, trước khi báo gia sư – đóng trang sớm vẫn không mất
+    diag.pending = true; rec.notify = diag;
+    const savePromise = Promise.all([db.doc("submissions/"+l.id).set(rec), db.doc("inbox/"+l.id).set({lessonId:l.id, submittedAt:rec.submittedAt})]);
     // Báo gia sư: ƯU TIÊN bắn trigger chấm bài trong phiên mới (Tân 13/11, rẻ hơn); không được thì mới dùng Send to Claude
     let sentPromise = (async () => {
       const mcp = await claude.use("mcp"); diag.mcp = !!mcp;
@@ -1522,13 +1524,12 @@ body{font-size:14.5px}
     }
     subs[l.id] = rec; delete $("#main").dataset.editing;
     try { db.doc("drafts/"+l.id).delete(); } catch {}
-    try { db.doc("inbox/"+l.id).set({lessonId:l.id, submittedAt:rec.submittedAt}); } catch {}
     renderList(); renderLesson();
     const m2 = $("#msg");
     m2.innerHTML = '<div class="banner ok">Submitted. Notifying your tutor…</div>';
     const text = summaryText(l, data);
     let notified = await sentPromise, reason = notified ? "" : ({not_in_manifest:"Claude Code Remote not allowed for this page", approval_required:"press Allow", server_not_connected:"Claude Code Remote not connected", blocked_by_policy:"blocked by your organization"}[diag.code] || diag.code || "the page can't reach the tutor yet");
-    diag.ok = notified;
+    diag.ok = notified; delete diag.pending;
     try { await db.doc("submissions/"+l.id).update({notify:diag}); } catch {}
     if (notified) m2.innerHTML = '<div class="banner ok">Submitted and your tutor has been notified. Results will appear at the top when graded (usually about a minute).</div>';
     else {

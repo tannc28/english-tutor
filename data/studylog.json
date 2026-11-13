@@ -320,6 +320,22 @@
    "title": "Hope Street Ep. 3 (2/2): listen",
    "kind": "Listening",
    "device": "computer"
+  },
+  {
+   "start": "2026-11-13T16:56+07:00",
+   "min": 2.2,
+   "lesson": "2026-11-13-10",
+   "title": "Why is the first week at a new job so tiring?",
+   "kind": "Reading",
+   "device": "computer"
+  },
+  {
+   "start": "2026-11-13T17:13+07:00",
+   "min": 2.5,
+   "lesson": "2026-11-13-10",
+   "title": "Why is the first week at a new job so tiring?",
+   "kind": "Reading",
+   "device": "computer"
   }
  ],
  "days": {
@@ -431,7 +447,7 @@
    ]
   },
   "2026-11-13": {
-   "min": 62.8,
+   "min": 67.5,
    "blocks": [
     {
      "start": "2026-11-13T00:02+07:00",
@@ -492,6 +508,22 @@
      "min": 2.6,
      "lessons": [
       "Hope Street Ep. 3 (2/2): listen"
+     ]
+    },
+    {
+     "start": "2026-11-13T16:56+07:00",
+     "end": "2026-11-13T16:58+07:00",
+     "min": 2.2,
+     "lessons": [
+      "Why is the first week at a new job so tiring?"
+     ]
+    },
+    {
+     "start": "2026-11-13T17:13+07:00",
+     "end": "2026-11-13T17:15+07:00",
+     "min": 2.5,
+     "lessons": [
+      "Why is the first week at a new job so tiring?"
      ]
     }
    ]
@@ -555,6 +587,18 @@
    "words": 107,
    "sec": 88,
    "wpm": 73,
+   "pauses": 0,
+   "left_page": 0
+  },
+  {
+   "at": "2026-11-13T09:56:42.112Z",
+   "lesson": "2026-11-13-10",
+   "title": "Why is the first week at a new job so tiring?",
+   "part": 0,
+   "pass": 1,
+   "words": 227,
+   "sec": 236,
+   "wpm": 58,
    "pauses": 0,
    "left_page": 0
   }
