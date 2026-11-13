@@ -5,9 +5,9 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 15/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 16/22 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
-- Cập nhật hồ sơ: 2026-11-13T11:20:55.654242+00:00
+- Cập nhật hồ sơ: 2026-11-13T22:45:00+07:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -48,6 +48,8 @@
 
 Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài B1+/B2 hiểu 99% mà thấy dễ), từ nối và các lỗi ngữ pháp của Ngày 1 đã sửa được hết. **Điểm nghẽn duy nhất là tai:** nghe lần đầu ~60–80%, có lời thì ~95–100% – nghĩa là từ đã biết, tai chỉ chưa quen âm thật (dạng yếu, nối âm). Tân rất rõ mình cần gì – *nạp input, ít quiz, luyện tai* – và mình đã đổi cách dạy theo đúng hướng đó.
 
+**Cách Tân học từ (13/11):** hiểu từ **bản chất** – cần **nghĩa đen/hình ảnh trước** (vd *spread yourself too thin* = ít bơ phết lên quá nhiều bánh) rồi mới nghĩa bóng; học nhanh qua hình minh hoạ. Bài dài thì sẵn sàng làm nhiều câu hỏi hơn.
+
 **Đang tập trung:** **Luyện tai bằng thật nhiều input nghe vừa sức.** Mỗi ngày ~10–14 bài nhỏ (5–15'), sáng ~40', tối ~2 giờ, ngày nào cũng có cả đọc và nghe. Bài nghe: **lời ẩn mặc định** → nghe 2 vòng → mở lời đối chiếu, **bấm dòng chưa nghe ra để nghe lại** → nghe lần cuối. Đọc trước, rồi nghe **phần tiếp / hội thoại mới cùng chủ đề** (narrow listening – không nghe lại y bài đọc, Tân 13/11). Cuối bài: Quick check 1–3 câu chọn (đáp án hiện ngay) + % hiểu + 💬 Ask me.
 
 ### Nhật ký quyết định (vì sao bài lại như vậy)
@@ -78,6 +80,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-13 | Tân: KHÔNG làm chậm giọng – 'vẫn thấy thú vị, khó thì luyện nhiều sẽ quen, phải cố gắng'. → bỏ chỉnh tốc độ TTS (giữ tốc độ gốc), chỉ giữ chia 1 câu/dòng để bấm nghe lại đúng câu. Thử thách vừa phải (🙂) là được, không hạ mức vì 1 bài khó. |
 | 2026-11-13 | Chấm 08: 100% sau khi đã đọc, 😌; câu chủ ngữ dài nghe lại 6×; Tân: 'hiểu hết nhưng chưa êm tai'. → bài sáng hôm sau mở đầu bằng nghe lại tập vừa học (lặp lại để quen âm) trước tập mới; nhắc dùng Play today. |
 | 2026-11-13 | Tân (chấm 14): 'listen gióng y reading thì dễ đoán quá – soạn bài khác, tương tự hoặc phần kế tiếp ở dạng listen, không 1-1'. → BỎ kiểu bài 🎧 = đọc lại y nguyên bài 📖. Bài nghe sau bài đọc = NARROW LISTENING: cùng chủ đề/nhân vật/cụm từ nhưng NỘI DUNG MỚI (phần tiếp, hội thoại, góc nhìn khác). Bài -11 (bài báo dạng audio) đã viết lại thành hội thoại Nam–Claire. Nghe lại y nguyên chỉ ở Play today. check.py chặn bài nghe trùng >50% câu với bài đọc. |
+| 2026-11-13 | Tân (chấm w1-voa-2): 'giải thích từ hơi ít, hơi bề mặt – muốn hiểu NGHĨA ĐEN/hình ảnh trước rồi mới nghĩa trừu tượng; học tốt qua bản chất + illustration'. Bài dài thì nhiều câu hỏi cũng được. → Mọi bảng Learn có cột '🖼️ Picture it (literal)' → 'So it means…' (nguồn gốc thật, không bịa), kèm hình khi có; bài nghe/đọc dài (≥3') được 3 câu chọn. VOA 3, 4 đã sửa. check.py cảnh báo bảng Learn thiếu cột nghĩa đen. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
@@ -90,7 +93,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 15/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 16/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -114,7 +117,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B106 | 2026-11-13 | Hope Street Ep. 3 (1/2): listen | graded | 70% | – | 3 | 12 | – | ~70% nghe, 100% có lời · dòng dẫn chuyện dài nghe lại 12× · 🙂 → chia câu, giọng về ~160 wpm |
 | T1 · B107 | 2026-11-13 | Hope Street Ep. 3 (2/2): A heavy box | graded | – | 100% | 1 | 4 | – | 3/3 · 100% · 😌 · hỏi: đọc chậm có ảnh hưởng nghe? |
 | T1 · B108 | 2026-11-13 | Hope Street Ep. 3 (2/2): listen | graded | 100% | – | 2 | 8 | – | 100% (đã đọc trước) · dòng 1 (chủ ngữ dài) nghe lại 6× · 😌 · tai chưa êm → nghe lại nhiều lần |
-| T1 · B109 | – | VOA: Sometimes we 'spread ourselves too thin' | open | – | – | – | – | – |  |
+| T1 · B109 | 2026-11-13 | VOA: Sometimes we 'spread ourselves too thin' | graded | 90% | – | – | 10 | – | VOA 2/2 · 90% · 🙂 · Tân: giải thích nghĩa đen → nghĩa bóng + hình; bài dài thêm câu hỏi OK |
 | T1 · B110 | 2026-11-13 | Why is the first week at a new job so tiring? | graded | – | 97% | 1 | 20 | – | 3/3 · 95–100% · 😌 'Dễ thôi' · 1 lượt 3'56" ≈ 58 wpm (gồm xem bảng từ + trả lời) → bài B1+ đã dễ, sắp nâng nhẹ |
 | T1 · B111 | – | Listen: Nam and Claire's Friday chat | open | – | – | – | – | – |  |
 | T1 · B112 | – | Sound focus: you'll · I've · it's · I'd | open | – | – | – | – | – |  |

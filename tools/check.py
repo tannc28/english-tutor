@@ -34,6 +34,16 @@ def main():
     W = J(D('weeks.json'))['weeks']
     M = J(D('mastery.json'))
 
+    # Tân 13/11 (chấm w1-voa-2): giải thích từ phải có NGHĨA ĐEN/hình ảnh trước rồi mới nghĩa bóng
+    for lid, l in L.items():
+        if l.get('status') == 'graded' or not os.path.exists(D('lessons', lid + '.json')):
+            continue
+        for p in J(D('lessons', lid + '.json')).get('parts', []):
+            md = p.get('md') or ''
+            if re.search(r'^\|\s*(Expression|Word|Chunk|Phrase)\s*\|', md, re.M | re.I) and not re.search(r'literal|Picture it|nghĩa đen', md, re.I):
+                warn.append(f'{lid}: bảng từ/cụm thiếu cột nghĩa đen ("🖼️ Picture it (literal)") – Tân 13/11: hiểu bản chất + hình ảnh trước, rồi mới nghĩa bóng')
+                break
+
     # 1) Chấm xong phải cập nhật bài + Progress
     grades = {os.path.basename(f)[:-5]: J(f) for f in glob.glob(D('grades', '*.json'))}
     p_upd = ts(P.get('updatedAt'))

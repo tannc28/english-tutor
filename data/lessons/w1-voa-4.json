@@ -5,7 +5,7 @@
    "kind": "① Before you listen",
    "learn": true,
    "title": "Key expressions – Ask a Teacher: Remaining, Remainder and Rest of",
-   "md": "Learn these first – you'll hear every one of them.\n\n| Expression | Meaning |\n|---|---|\n| **the rest of the …** <span class=\"ipa\">/ðə rest əv ðə/</span> | what is left (most common) |\n| **the remaining + noun** <span class=\"ipa\">/ðə rɪˈmeɪnɪŋ naʊn/</span> | the things that are left: *the remaining countries* |\n| **the remainder of the …** <span class=\"ipa\">/ðə rɪˈmeɪndə əv ðə/</span> | = the rest of the (more formal) |\n| **quantifier** <span class=\"ipa\">/ˈkwɒntɪˌfaɪə/</span> | a word for amount: *some, many, the rest of* |\n\n🔮 **Predict:** Which sounds right to you: *the rest countries* or *the rest of the countries*?",
+   "md": "Learn these first – you'll hear every one of them.\n\n| Expression | 🖼️ Picture it (literal) | So it means… |\n|---|---|---|\n| **the rest of the …** <span class=\"ipa\">/ðə rest əv ðə/</span> | \"Rest\" = what stays behind after the others have gone. Picture a table: some plates are taken, the rest stay. | What is left (most common). · 🇻🇳 phần còn lại |\n| **the remaining + noun** <span class=\"ipa\">/ðə rɪˈmeɪnɪŋ naʊn/</span> | re- + a \"stay\" idea: remain = stay behind. Remain**ing** = still staying. The -ing makes it an adjective before a noun. | The things that are left: *the remaining countries*. · 🇻🇳 những cái còn lại |\n| **the remainder of the …** <span class=\"ipa\">/ðə rɪˈmeɪndə əv ðə/</span> | The remainder = the part that stays behind (also the number left after dividing in maths). | = the rest of the (more formal). · 🇻🇳 phần còn lại (trang trọng hơn) |\n| **quantifier** <span class=\"ipa\">/ˈkwɒntɪˌfaɪə/</span> | From \"quantity\" = how much. A quantifier is a word that tells you how much. | A word for amount: *some, many, the rest of*. · 🇻🇳 từ chỉ số lượng |\n\n🔮 **Predict:** Which sounds right to you: *the rest countries* or *the rest of the countries*?",
    "questions": []
   },
   {
@@ -103,6 +103,48 @@
    "keep_audio": true,
    "rate": 1,
    "questions": [
+    {
+     "id": "l1",
+     "q": "What is Ann's question about?",
+     "type": "choice",
+     "options": [
+      "How to divide numbers",
+      "The difference between remaining, remainder and rest",
+      "How to spell “remain”"
+     ],
+     "check": {
+      "answer": "The difference between remaining, remainder and rest",
+      "why": "*I don't really understand the difference between “remaining,” “remainder” and “rest”* – she asks about similar words."
+     }
+    },
+    {
+     "id": "l2",
+     "q": "Which is correct before “countries”?",
+     "type": "choice",
+     "options": [
+      "the rest of the countries",
+      "the rest countries",
+      "the remain countries"
+     ],
+     "check": {
+      "answer": "the rest of the countries",
+      "why": "*you need to use four words: “the rest of the.”* – it works like “the remaining”."
+     }
+    },
+    {
+     "id": "l3",
+     "q": "Which one do people use more in spoken English?",
+     "type": "choice",
+     "options": [
+      "the remainder of the",
+      "the rest of the",
+      "the remaining of the"
+     ],
+     "check": {
+      "answer": "the rest of the",
+      "why": "*we use the quantifier “the rest of the” much more often, especially in spoken English* – so “the rest of the”."
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand on the **first** listen + read? Write a number, e.g. 80",

@@ -69,7 +69,7 @@ def send_photos(paths, caption=""):
 def graded(lid):
     g = load(D("grades", lid + ".json")); m = lesson_meta(lid); tg = g.get("tg") or {}
     nxt, plan = next_lesson()
-    nx = f'<a href="{CLASS}#{nxt["id"]}">{E(nxt["title"])}</a>' + (f" ({dt.date.fromisoformat(plan[nxt["id"]]).strftime('%a %d/%m')})" if nxt and nxt["id"] in plan else "") if nxt else "hết bài tuần này 🎉"
+    nx = f'<a href="{CLASS}#{nxt["id"]}">{E(nxt["title"])}</a>' + (" (" + dt.date.fromisoformat(plan[nxt["id"]]).strftime('%a %d/%m') + ")" if nxt and nxt["id"] in plan else "") if nxt else "hết bài tuần này 🎉"
     msg = (f'✅ <b>Đã chấm: {E(m.get("title", lid))}</b>\n'
            f'📊 {E(tg.get("score") or g.get("score", ""))}\n'
            f'👍 {E(tg.get("win", ""))}\n'

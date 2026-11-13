@@ -1,0 +1,68 @@
+{
+  "answers": {
+    "ask1": "Religious tôi k hiểu lắm\nRehearsal nữa",
+    "l1": "try to do too many things, so nothing goes well",
+    "l2": "extend the deadline",
+    "u1": "90 (nói chung tôi k hiểu hết full, nhưng tôi nghe chậm thì vẫn hiểu được mọi thứ qua context)"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Tôi thấy bạn giải thích từ vựng hơi ít và hơi bề mặt, tôi thì muốn hiểu tại sao lại có nó theo nghĩa đen trước ấy, rồi cái sau mới là cái trừu tượng mà\n\nVí dụ:\nSpread yourself too thin có nghĩa là cơ thể mình bị cắt ra thành nhiều mảnh và mỗi mảnh làm một việc chẳng hạn thì sẽ không thể làm hết được, sau khi tôi hiểu kiểu này rồi thì tôi sẽ hiểu bản chất hơn sau đó giải nghĩa tôi cũng hiểu luôn. Cơ bản bạn có thể hiểu rằng tôi là mội người rất muốn hiểu từ bản chất và học giỏi hơn qua illustration và hình ảnh, đề xuất sau biết sửa lại cho tôi\n\nVới bài dài thế này bạn cho nhiều câu hỏi cũng được nhé thoải mái tôi sẽ cố dành nhiều thời gian hoặc sắp xếp thời gian làm những bài dài thế này",
+    "minutes": "",
+    "strain": "some"
+  },
+  "lessonId": "w1-voa-2",
+  "log": {
+    "listen": {},
+    "parts": {
+      "0": {
+        "ms": 5000
+      },
+      "1": {
+        "ms": 5000
+      }
+    },
+    "q": {},
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-12T10:40:35.344Z",
+        "e": 370,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 0,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-12T10:46:46.471Z",
+        "e": 581,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 371,
+        "vw": 430
+      },
+      {
+        "app": "Claude app",
+        "at": "2026-11-13T09:56:32.574Z",
+        "e": 83762,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 83757,
+        "vw": 1918
+      }
+    ],
+    "t0": 1794480035344,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T15:31:21.379Z",
+    "mcp": true,
+    "ok": true,
+    "pending": true,
+    "result": "{\"trigger\":{\"id\":\"trig_01LnYbESeN8FTXP7EM3qJD7w\",\"name\":\"English – Chấm bài nộp (phiên mới)\",\"cron_expression\":\"\",\"enabled\":true,\"created_at\":\"2026-11-13T09:31:15.752801Z\",\"updated_at\":\"2026-11-13T11:28:29.706411Z\",\"persist_session\":false,\"mcp_connections\":[{\"connector_uuid\":\"6ba9f48b-7288-4418-a670",
+    "via": "fire_trigger"
+  },
+  "submittedAt": "2026-11-13T15:31:21.379Z"
+}

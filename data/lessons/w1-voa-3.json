@@ -5,7 +5,7 @@
    "kind": "① Before you listen",
    "learn": true,
    "title": "Key expressions – 'Kicking Off' a New Year",
-   "md": "Learn these first – you'll hear every one of them.\n\n| Expression | Meaning |\n|---|---|\n| **kick off (sth)** <span class=\"ipa\">/kɪk ɒf/</span> | start something (an event, a project, a year) |\n| **a resolution** <span class=\"ipa\">/ə ˌrezəˈluːʃən/</span> | a promise to yourself to reach a goal |\n| **punt (sth)** <span class=\"ipa\">/pʌnt/</span> | give a task to someone else / wait to decide |\n| **table it** <span class=\"ipa\">/ˈteɪbəl ɪt/</span> | wait until later to think about it |\n| **move the goalposts** <span class=\"ipa\">/muːv ðə ˈɡəʊlpəʊsts/</span> | change the rules or the goal, so success is harder |\n| **a moving target** <span class=\"ipa\">/ə ˈmuːvɪŋ ˈtɑːɡɪt/</span> | a goal that changes all the time |\n\n🔮 **Predict:** This week is your **new start** in English. How would *you* “kick off” something new?",
+   "md": "Learn these first – you'll hear every one of them.\n\n| Expression | 🖼️ Picture it (literal) | So it means… |\n|---|---|---|\n| **kick off (sth)** <span class=\"ipa\">/kɪk ɒf/</span> | In football, the game starts with the first kick of the ball. | Start something (an event, a project, a year). · 🇻🇳 bắt đầu, khởi động |\n| **a resolution** <span class=\"ipa\">/ə ˌrezəˈluːʃən/</span> | It comes from \"resolve\" = decide firmly. A resolution is something you have decided firmly to do. | A promise to yourself to reach a goal. · 🇻🇳 lời hứa/quyết tâm với bản thân |\n| **punt (sth)** <span class=\"ipa\">/pʌnt/</span> | In American football, when your team can't move forward, you kick the ball far away to the other team. Now it is their problem. | Give a task to someone else, or wait to decide. · 🇻🇳 đẩy việc cho người khác / hoãn quyết định |\n| **table it** <span class=\"ipa\">/ˈteɪbəl ɪt/</span> | (US meaning) You put a paper down on the table and leave it there for later. | Wait until later to think about it. · 🇻🇳 để lại sau, gác lại |\n| **move the goalposts** <span class=\"ipa\">/muːv ðə ˈɡəʊlpəʊsts/</span> | You are kicking the ball at the goal – and someone moves the goal while you kick. You can never score. | Change the rules or the goal, so success is harder. · 🇻🇳 thay đổi luật chơi/mục tiêu giữa chừng |\n| **a moving target** <span class=\"ipa\">/ə ˈmuːvɪŋ ˈtɑːɡɪt/</span> | A target that keeps moving is very hard to hit. | A goal that changes all the time. · 🇻🇳 mục tiêu cứ thay đổi liên tục |\n\n🔮 **Predict:** This week is your **new start** in English. How would *you* “kick off” something new?",
    "questions": []
   },
   {
@@ -108,6 +108,48 @@
    "keep_audio": true,
    "rate": 1,
    "questions": [
+    {
+     "id": "l1",
+     "q": "What does “kick off the new year” mean?",
+     "type": "choice",
+     "options": [
+      "End the year with a big party",
+      "Start the year with a goal",
+      "Kick a ball on January 1"
+     ],
+     "check": {
+      "answer": "Start the year with a goal",
+      "why": "*people often like to “kick off” the new year with a resolution* – kick off = start."
+     }
+    },
+    {
+     "id": "l2",
+     "q": "You are not sure about a trip. What can you do?",
+     "type": "choice",
+     "options": [
+      "Move the goalposts",
+      "Kick off the trip",
+      "Table the decision"
+     ],
+     "check": {
+      "answer": "Table the decision",
+      "why": "*I can punt the decision until later… to table it* – wait until later."
+     }
+    },
+    {
+     "id": "l3",
+     "q": "The boss changes 10,000 followers to 20,000. What is the problem?",
+     "type": "choice",
+     "options": [
+      "The goal changed, so it is harder",
+      "The boss gave the job to someone else",
+      "The month ended too early"
+     ],
+     "check": {
+      "answer": "The goal changed, so it is harder",
+      "why": "*your boss has moved the goalpost* – the goal changed, so success is harder."
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand on the **first** listen + read? Write a number, e.g. 80",
