@@ -1,0 +1,245 @@
+{
+ "intro_md": "🎧 **10 min.** Optional warm-up (2 min): play yesterday's [Friday chat](#2026-11-13-11) once. Then today's sound: **words that join**. Learn it first, then hear it in a new café conversation.",
+ "parts": [
+  {
+   "kind": "🎧 Learn",
+   "title": "Words that join",
+   "learn": true,
+   "rate": 1,
+   "md": "When a word ends in a **consonant sound** and the next word starts with a **vowel sound**, they **join** – like one long word. You don't hear the gap, so the words seem to disappear.\n\n| You read | You hear | Sounds like |\n|---|---|---|\n| take it easy | take‿it‿easy | /teɪkɪˈtiːzi/ – \"tay-kih-TEE-zee\" |\n| pick it up | pick‿it‿up | /pɪkɪˈtʌp/ – \"pih-kih-TUP\" |\n| a lot of | a lot‿of | /əˈlɑːtəv/ – \"uh-LOT-uv\" |\n| come in | come‿in | /kʌˈmɪn/ – \"kuh-MIN\" |\n| get up | get‿up | /ɡɛˈtʌp/ – \"geh-TUP\" |\n| used to | used to | /ˈjuːstə/ – \"YOOS-tuh\" (the *d* disappears!) |\n\n💡 **Why?** The last sound of the first word moves to the start of the next word: *pick‿it‿up* → \"pi-ki-tup\". Don't look for the gaps – listen for the **music**.\n\n👂 **Listen:** first **slow** (word by word), then **natural** (joined). Tap any line to hear it again, and **whisper along** with the natural one. The last sentence is natural only.",
+   "listen": [
+    {
+     "who": "Full",
+     "voice": "us_f",
+     "text": "Take. It. Easy. It's Sunday."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_f",
+     "text": "Take it easy, it's Sunday."
+    },
+    {
+     "who": "Full",
+     "voice": "us_m",
+     "text": "Please. Pick. It. Up. For me."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_m",
+     "text": "Please pick it up for me."
+    },
+    {
+     "who": "Full",
+     "voice": "us_f",
+     "text": "We. Have. A. Lot. Of. Time."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_f",
+     "text": "We have a lot of time."
+    },
+    {
+     "who": "Full",
+     "voice": "us_m",
+     "text": "Come. In. The. Door. Is. Open."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_m",
+     "text": "Come in, the door is open."
+    },
+    {
+     "who": "Full",
+     "voice": "us_f",
+     "text": "Get. Up. It's. Already. Eight."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_f",
+     "text": "Get up, it's already eight."
+    },
+    {
+     "who": "Natural",
+     "voice": "us_f",
+     "text": "We used to play football here every Sunday."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    3.12,
+    5.44,
+    7.39,
+    9.15,
+    13.4,
+    15.32,
+    17.18,
+    19.47,
+    22.76,
+    25.21
+   ],
+   "audio": "data/audio/2026-11-14-01/p0.mp3"
+  },
+  {
+   "kind": "🎧 Listen",
+   "title": "Saturday at Jess's café",
+   "rate": 1,
+   "md": "![Saturday at the café](data/img/w1/d14-cafe-morning.webp)\n\nNow the joined sounds in a **real conversation**. It's Saturday, 9 am – Nam walks into the café. Try to catch: *come‿in · used to · a lot‿of · pick‿up · take away*.\n\n**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
+   "listen": [
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Morning, Nam! Come in, come in. You're up early for a Saturday."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I woke up at six. I'm still not used to getting up in the dark."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "That's the Manchester winter. It gets dark at four, and light again at eight."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "At home it's always warm. I'm used to wearing a T-shirt all year!"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Ha! So what are you doing today? Anything fun?"
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Not yet. It's my first free weekend, and I don't know the city."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Go to the Saturday market on Station Road. It's amazing."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Really? What do they sell?"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Cheap fruit, a lot of vegetables, and there's a man who sells old bikes."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "And the dumplings are the best I've ever had. Buy a hot bag for lunch."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "That sounds perfect. Can I have a coffee to take away, please?"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Sure. Anything to eat with it?"
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "A cheese scone, please. It looks great."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Here you go. That's four pounds twenty."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Thanks. How do I get to Station Road from here?"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Take the tram, it's easy. Pick up a map at the tram stop – they're free."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Great, thank you, Jess. See you later!"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Have fun! And don't spend all your money on bikes."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    4.57,
+    8.29,
+    13.23,
+    17.0,
+    20.88,
+    24.28,
+    28.08,
+    29.91,
+    34.7,
+    38.91,
+    42.26,
+    44.72,
+    47.4,
+    50.39,
+    53.27,
+    58.29,
+    61.22
+   ],
+   "audio": "data/audio/2026-11-14-01/p1.mp3"
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "l1",
+     "q": "Why is Nam up early?",
+     "type": "choice",
+     "options": [
+      "He wants to go to work",
+      "He isn't used to the dark mornings",
+      "He is going to the market with Jess"
+     ],
+     "check": {
+      "answer": "He isn't used to the dark mornings",
+      "why": "Nam says: *I'm still not used to getting up in the dark.*"
+     }
+    },
+    {
+     "id": "l2",
+     "q": "What does Jess tell Nam to get at the tram stop?",
+     "type": "choice",
+     "options": [
+      "A map",
+      "A bike",
+      "A coffee"
+     ],
+     "check": {
+      "answer": "A map",
+      "why": "Jess says: *Pick up a map at the tram stop – they're free.*"
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

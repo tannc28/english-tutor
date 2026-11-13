@@ -1,0 +1,66 @@
+{
+ "intro_md": "📖 **9 min.** Margaret invites Nam for tea this evening. Before you hear her talk (next lesson), read where her story begins. Learn the 4 chunks, then read once without going back.",
+ "parts": [
+  {
+   "kind": "📖 Read",
+   "title": "Margaret's story (1/2): Hope Street, 1985",
+   "md": "**Learn first – 4 chunks you will meet in the story:**\n\n| Phrase | 🖼️ Picture it (literal) | So it means… |\n|---|---|---|\n| ***back then*** | You look back over your shoulder at an old time that is behind you. | in that past time (not now) – *Phones were huge back then.* |\n| ***make friends*** | Like making a cup of tea or a cake: step by step, you *build* friendship with your hands. | start to know people and like them – *It's easy to make friends at a dance class.* |\n| ***feel at home*** | You sit in your own house, shoes off, on your own sofa – nothing feels strange. | feel relaxed and comfortable, even in a new place – *After a week, the hotel felt like home.* |\n| ***these days*** | The days on the calendar that are close to you right now. | now, at this time in life – *These days, I walk to work.* |\n\n![Hope Street in 1985](data/img/w1/d14-1985.webp)\n\n> In 1985, Margaret was twenty-two. She had just come from Dublin to work as a nurse at a big hospital in Manchester, and she knew nobody. Her room at 1 Hope Street was small and cold, and the old bed made a loud noise every time she turned over.\n>\n> Hope Street looked very different back then. Where the café is now, there was a little corner shop. Mr Khan sold sweets, newspapers and tea, and he always had the radio on. In the evenings, children played football in the road, and nobody worried about cars. Margaret watched them from her window and felt a bit lonely.\n>\n> She worked long hours, and at first she hardly spoke to anyone. She was tired, she missed her mother's cooking, and she was not sure she wanted to stay.\n>\n> Then, one Saturday, someone knocked on her door. It was Mrs Hughes from Flat 2. She was seventy and had lived on the street all her life.\n>\n> **Mrs Hughes:** You look like you need a cup of tea, love.\n>\n> **Margaret:** I do. Thank you.\n>\n> That was the start. Mrs Hughes showed her the best bakery, told her which bus was always late, and even gave her a thick blue blanket for the winter. She also took her to meet the neighbours, one door at a time.\n>\n> Little by little, Margaret began to make friends. By December, she was playing cards on Thursdays and eating Sunday dinner with the family next door. The street no longer felt strange. For the first time since Dublin, she felt at home.\n>\n> These days, Margaret is the one who knocks on new doors.",
+   "questions": []
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "r1",
+     "q": "Why did Margaret feel lonely at first?",
+     "type": "choice",
+     "options": [
+      "She knew nobody in the city",
+      "She didn't like her job",
+      "Her room was too big"
+     ],
+     "check": {
+      "answer": "She knew nobody in the city",
+      "why": "*She had just come from Dublin … and she knew nobody.*"
+     }
+    },
+    {
+     "id": "r2",
+     "q": "What was where the café is now?",
+     "type": "choice",
+     "options": [
+      "A hospital",
+      "A little corner shop",
+      "A bakery"
+     ],
+     "check": {
+      "answer": "A little corner shop",
+      "why": "*Where the café is now, there was a little corner shop.*"
+     }
+    },
+    {
+     "id": "r3",
+     "q": "Who is \"she\" in: *\"She was seventy and had lived on the street all her life\"*?",
+     "type": "choice",
+     "options": [
+      "Margaret",
+      "Mrs Hughes",
+      "Mr Khan's wife"
+     ],
+     "check": {
+      "answer": "Mrs Hughes",
+      "why": "The sentence comes right after *It was Mrs Hughes from Flat 2.*"
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

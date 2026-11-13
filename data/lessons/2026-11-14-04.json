@@ -1,0 +1,66 @@
+{
+ "intro_md": "📖 **9 min.** A short magazine article – a little harder than the story. Read once without going back. Don't stop for new words: the notes are at the bottom.",
+ "parts": [
+  {
+   "kind": "📖 Read",
+   "title": "Why a short walk helps your brain",
+   "md": "![A walk in the park](data/img/w1/d14-walk.webp)\n\n> Most of us sit too much. We sit at desks, in cars and on sofas, and by the afternoon we often feel tired and stressed. It turns out that one of the simplest answers is also one of the cheapest: a short walk.\n>\n> Researchers have studied walking for years, and the results are fairly clear. A walk of ten to twenty minutes can improve your mood and help you focus. In a well-known study from Stanford University in 2014, people were asked to think of new uses for everyday objects. They came up with more creative ideas while they were walking than while they were sitting down. The effect lasted for a short time afterwards, which means a walk before a hard task may help too.\n>\n> Walking outside seems to bring extra benefits. On top of that, several studies suggest that time in a green place, such as a park, lowers stress more than time on a busy street. Even looking at trees for a few minutes can help you feel calmer.\n>\n> However, you don't need to be an athlete, and you don't need a lot of free time. Most experts say the main thing is to walk regularly. Leave your phone in your pocket if you can, and try to notice what is around you: the sky, the sounds, the people passing by.\n>\n> So next time you feel stuck on a problem, don't make another cup of coffee. Stand up, put on your shoes and go outside. Your brain may thank you for it.\n\n**Words you may not know**\n- *come up with* = think of an idea\n- *stuck* = not able to go forward or find an answer\n- *athlete* = a person who is very good at sport",
+   "questions": []
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "r1",
+     "q": "What did people do better while walking in the Stanford study?",
+     "type": "choice",
+     "options": [
+      "They slept longer",
+      "They had more creative ideas",
+      "They worked faster"
+     ],
+     "check": {
+      "answer": "They had more creative ideas",
+      "why": "*They came up with more creative ideas while they were walking.*"
+     }
+    },
+    {
+     "id": "r2",
+     "q": "*\"…which means a walk before a hard task may help too.\"* What does *which* refer to?",
+     "type": "choice",
+     "options": [
+      "The study from Stanford",
+      "The park and the trees",
+      "The effect lasting a short time after the walk"
+     ],
+     "check": {
+      "answer": "The effect lasting a short time after the walk",
+      "why": "*The effect lasted for a short time afterwards, **which means** …* – *which* = that whole idea."
+     }
+    },
+    {
+     "id": "r3",
+     "q": "What do experts say is the main thing?",
+     "type": "choice",
+     "options": [
+      "Walk regularly",
+      "Walk for two hours",
+      "Walk with a friend"
+     ],
+     "check": {
+      "answer": "Walk regularly",
+      "why": "*Most experts say the main thing is to walk regularly.*"
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

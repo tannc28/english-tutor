@@ -1,0 +1,66 @@
+{
+ "intro_md": "📖 **9 min.** An email from Nam's little sister, Linh, in Hanoi. Look at the four chunks, then read the email once without going back.",
+ "parts": [
+  {
+   "kind": "📖 Read",
+   "title": "An email from Linh",
+   "md": "**Four chunks you'll meet in this email:**\n\n| Phrase | 🖼️ Picture it (literal) | So it means… |\n|---|---|---|\n| *to be honest* | You open a door and show someone the whole room – nothing is hidden. | I'll tell you the real truth now. |\n| *lose your voice* | You shout all day. Then you open your mouth, and only air comes out – the voice has \"gone\". | You can't speak (or only whisper) because your throat is tired or ill. |\n| *can't wait to* | A child stands at the door, jumping up and down, and can't stay still while waiting. | You are very excited to do something. |\n| *take care of yourself* | You hold a cup that can break, and you look after it gently. | Look after your health and don't get too tired. |\n\n👉 *To be honest, I don't like coffee. · He lost his voice at the football match. · I can't wait to see the sea. · Take care of yourself this winter.*\n\n![Linh's classroom](data/img/w1/d14-linh.webp)\n\n> **From:** Linh · **To:** Nam · **Subject:** Hello from Hanoi!\n>\n> Hi Nam,\n>\n> How are you? I'm writing this email in English because it's good practice for me. As you know, I started my new job on Monday. I'm a teacher at a primary school now!\n>\n> To be honest, I was very nervous before my first lesson. I have 35 children in my class, and they are all eight years old. When I walked in, they were all shouting, so I just stood there for a minute. Then I clapped my hands, and a small girl at the front said, \"Teacher, you look scared!\" Everyone laughed, and I laughed too.\n>\n> The children are lovely, but they never stop talking. By Wednesday I had lost my voice, so I taught with a whiteboard and lots of drawings. Yesterday the children said my drawings look like potatoes. Maybe they are right.\n>\n> Now some news from home. Mum asks every day, \"Is Nam eating properly?\" Please send her a photo of your dinner. Dad says hello and wants to know if you have bought a warm coat yet.\n>\n> And I have a big question: does it really rain every day in Manchester? My students think England is always grey, and I want to tell them the truth!\n>\n> I can't wait to visit you one day. Maybe next summer, if I save enough money. Until then, take care of yourself, eat some vegetables and sleep enough.\n>\n> Lots of love,\n> Linh\n>\n> P.S. Please write back soon. I miss you!",
+   "questions": []
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "r1",
+     "q": "Why is Linh writing to Nam in English?",
+     "type": "choice",
+     "options": [
+      "It is good practice for her",
+      "Nam can't read Vietnamese",
+      "Her teacher asked her to"
+     ],
+     "check": {
+      "answer": "It is good practice for her",
+      "why": "*I'm writing this email in English because it's good practice for me.*"
+     }
+    },
+    {
+     "id": "r2",
+     "q": "What happened to Linh by Wednesday?",
+     "type": "choice",
+     "options": [
+      "She lost her voice",
+      "She lost her job",
+      "She got ill at home"
+     ],
+     "check": {
+      "answer": "She lost her voice",
+      "why": "*By Wednesday I had lost my voice.*"
+     }
+    },
+    {
+     "id": "r3",
+     "q": "*\"Maybe they are right.\"* Who is *they*?",
+     "type": "choice",
+     "options": [
+      "Her mum and dad",
+      "The children in her class",
+      "Her new colleagues"
+     ],
+     "check": {
+      "answer": "The children in her class",
+      "why": "*the children said my drawings look like potatoes. Maybe **they** are right.*"
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "intro_md": "📖 **8 min.** A different kind of reading: the **noticeboard** in Jess's café. Six short notices – read once, fast, and find the facts.",
+ "parts": [
+  {
+   "kind": "📖 Read",
+   "title": "The café noticeboard",
+   "md": "**Four useful phrases for notices** (read them first – then look for them in the text):\n\n| Phrase | 🖼️ Picture it (literal) | So it means… |\n|---|---|---|\n| *for sale* | a price label hanging on a bike in a shop window | someone wants to sell it |\n| *in good condition* | a shiny old chair with no cracks and no marks | not broken, still works well |\n| *get in touch* | your hand reaches out and touches someone's arm | contact the person (call or write) |\n| *must go* | a big box in a small room, and a sign: \"Out by Friday\" | has to be taken away soon |\n\n💡 *Examples:* The old piano is **for sale**. · My watch is **in good condition**. · Please **get in touch** if you have questions. · These boxes **must go** today.\n\n📖 **Read once, fast, without going back.** You don't need every word – just find the facts.\n\n![The café noticeboard](data/img/w1/d14-noticeboard.webp)\n\n> **1. BIKE FOR SALE**\n>\n> Blue city bike, three years old, in good condition. New lights and a basket. I'm moving house, so I need to sell it soon. £60. Please ask for Dave and leave your phone number at the counter.\n>\n> **2. LOST CAT**\n>\n> Our grey cat, Smokey, has been missing since Tuesday. He is very friendly and has a small white spot on his nose. If you see him near Hope Street or the park, please get in touch with the café. There is a reward!\n>\n> **3. TALK TO ME – CONVERSATION CLUB**\n>\n> Do you speak Spanish and want to practise English? Or the other way round? Come and chat with us every Thursday at 7 pm in the back room of the café. It's free, and there is tea and cake. Everyone is welcome.\n>\n> **4. ROOM TO RENT**\n>\n> A small, sunny room in a shared house, five minutes from the tram stop. Two other people live there, and they are quiet and tidy. £450 a month, and the bills are included. Please come and see it on Saturday afternoon.\n>\n> **5. YOGA IN THE CHURCH HALL**\n>\n> Gentle yoga for beginners every Monday at 6.30 pm. Bring a towel or your own mat. The first class is free, so just try it. No need to book, but please arrive ten minutes early.\n>\n> **6. FREE SOFA – MUST GO BY SUNDAY**\n>\n> A big green sofa, very comfortable, with a few small marks. It is too big for our new flat, so it must go by Sunday. You have to carry it yourself. Please call Priya if you want it.",
+   "questions": []
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "r1",
+     "q": "How much is the blue bike?",
+     "type": "choice",
+     "options": [
+      "£50",
+      "£60",
+      "£450"
+     ],
+     "check": {
+      "answer": "£60",
+      "why": "Notice 1: *£60.*"
+     }
+    },
+    {
+     "id": "r2",
+     "q": "When is the conversation club?",
+     "type": "choice",
+     "options": [
+      "Every Thursday at 7 pm",
+      "Every Monday at 6.30 pm",
+      "On Sunday afternoon"
+     ],
+     "check": {
+      "answer": "Every Thursday at 7 pm",
+      "why": "Notice 3: *every Thursday at 7 pm.*"
+     }
+    },
+    {
+     "id": "r3",
+     "q": "Why must the sofa go by Sunday?",
+     "type": "choice",
+     "options": [
+      "It is broken",
+      "It is too big for the new flat",
+      "Nobody likes the colour"
+     ],
+     "check": {
+      "answer": "It is too big for the new flat",
+      "why": "Notice 6: *It is too big for our new flat, so it must go by Sunday.* Here **it** = the sofa."
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

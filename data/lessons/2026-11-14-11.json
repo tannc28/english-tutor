@@ -1,0 +1,196 @@
+{
+ "intro_md": "🎧 **10 min.** New listening, not the story again: Margaret and Nam talk over tea. You will hear how she met Peter and the advice she gives Nam. The words are hidden at first.",
+ "parts": [
+  {
+   "kind": "🎧 Listen + read",
+   "title": "Over tea: Margaret and Nam",
+   "rate": 1,
+   "md": "![Tea with Margaret](data/img/w1/d14-tea.webp)\n\n**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
+   "listen": [
+    {
+     "who": "Narrator",
+     "voice": "us_f",
+     "text": "On Saturday evening, Nam knocks on Margaret's door."
+    },
+    {
+     "who": "Narrator",
+     "voice": "us_f",
+     "text": "She has made tea and put out some biscuits."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Come in, dear. Sit by the window, that chair is the most comfortable."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Thank you for inviting me. I bought a bike today, by the way. It's outside."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "A bike! Peter would have loved that. He was always fixing them."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Peter was your husband, right? I saw his photo in the hall."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Yes. We met because of a bike, actually. Mine had a flat tyre outside the hospital."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "He walked past in a muddy coat and said, give me five minutes."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "And he fixed it?"
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "He did. Then he asked if he could buy me a coffee. I said no, and then I said yes."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "How long were you together?"
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Forty years. He died six years ago, in the spring."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I'm so sorry, Margaret."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Thank you, dear. Some days are hard, but this street looks after me."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Did you ever think about moving somewhere quieter?"
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Never. Everyone I love lives within five minutes of this door."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Now, let me give you some advice. In your first year, say yes to every invitation."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Even when you're tired. Especially when you're tired."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I'll try. My sister Linh would agree with you, I think."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "Tell me about her."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "She's a teacher now, and she's brave and very funny. You would like her."
+    },
+    {
+     "who": "Margaret",
+     "voice": "glassy",
+     "text": "I'd love to meet her one day. Bring her to tea."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "She'd like that. Now, who wants the last biscuit?"
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    3.79,
+    6.75,
+    12.22,
+    16.33,
+    21.95,
+    25.81,
+    32.95,
+    37.44,
+    38.97,
+    45.2,
+    47.0,
+    51.58,
+    53.91,
+    59.18,
+    62.04,
+    66.76,
+    73.07,
+    77.38,
+    80.78,
+    82.57,
+    86.68,
+    90.62
+   ],
+   "audio": "data/audio/2026-11-14-11/p0.mp3"
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "l1",
+     "q": "How did Margaret meet Peter?",
+     "type": "choice",
+     "options": [
+      "He worked at the hospital",
+      "He fixed her bike",
+      "He sold her a bike"
+     ],
+     "check": {
+      "answer": "He fixed her bike",
+      "why": "*We met because of a bike … He walked past … and said, give me five minutes.*"
+     }
+    },
+    {
+     "id": "l2",
+     "q": "What is Margaret's advice for Nam?",
+     "type": "choice",
+     "options": [
+      "Say yes to every invitation",
+      "Move somewhere quieter",
+      "Buy a better bike"
+     ],
+     "check": {
+      "answer": "Say yes to every invitation",
+      "why": "*In your first year, say yes to every invitation.*"
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,172 @@
+{
+ "intro_md": "🎧 **10 min.** Small words like *to, for, of, and, can* almost disappear in speech. Learn how they sound, then hear them in Jess's story of how her café began.",
+ "parts": [
+  {
+   "kind": "🎧 Listen",
+   "title": "Jess's story: how the café began",
+   "rate": 1,
+   "md": "![Jess's story](data/img/w1/d14-jess-story.webp)\n\n**Small words get weak.** In natural speech, little words like *to, for, of, and, can* are **not stressed**. Their vowel becomes a short, lazy sound /ə/ (\"uh\"). You read the full word, but you **hear** this:\n\n| You read | You hear | Example |\n|---|---|---|\n| *to* | /tə/ – \"tuh\" | *I want **to** go home.* → \"I want-tuh go home.\" |\n| *for* | /fə/ – \"fuh\" | *A gift **for** Anna.* → \"A gift-fuh Anna.\" |\n| *of* | /ə/ before a consonant, /əv/ before a vowel | *A piece **of** cake* → \"a piece-uh cake\" · *One **of** us* → \"one-uv us\" |\n| *and* | /ən/ – \"un\" | *Salt **and** pepper* → \"salt-un pepper\" |\n| *can* | /kən/ – \"kun\" (but *can't* is strong: /kænt/) | *I **can** swim.* → \"I kun swim.\" |\n\n💡 The **important** words (nouns, verbs) are strong and clear. The small words between them are weak. So don't wait for them – **catch the strong words first**, and the small ones fill in by themselves.\n\n👂 **Challenge:** in the chat below, Jess tells a story. Listen for the weak *to, for, of, and, can* – you will hear \"tuh, fuh, uh, un, kun\".\n\n**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
+   "listen": [
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Hi, Jess! I'm back from the market, and look – I bought a bike!"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Wow, nice! Blue is a lovely colour. Sit down, and I'll make you a tea."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Thanks. Can I ask you something? How did you start this café?"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Ha, it's a long story. I worked in an office for six years."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "I hated it. I sat at a desk all day and looked at a screen."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "So what changed?"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "One Sunday I found my grandma's old recipe book in a box."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "I made her scones and cakes for my friends, and they loved them."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "One friend said, \"You can sell these!\" And I started to dream."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Did you leave your job straight away?"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "No, I waited a year and saved money. Then I asked the bank for a loan."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Four years ago, I opened the door for the first time."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Was it busy?"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Not at all! In the first month, only ten customers came each day."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Some days I cried in the kitchen and wanted to give up."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "But you didn't."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "No. Slowly, people told their friends, and now I have regulars."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Mr Patel comes every morning, and Margaret brings her own cup."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "That's a great story, Jess. You must be proud."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    3.94,
+    8.95,
+    12.33,
+    16.94,
+    21.0,
+    22.74,
+    26.99,
+    31.31,
+    35.43,
+    37.71,
+    42.48,
+    45.88,
+    47.2,
+    52.27,
+    55.74,
+    57.16,
+    61.97,
+    66.24
+   ],
+   "audio": "data/audio/2026-11-14-09/p0.mp3"
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "l1",
+     "q": "What gave Jess the idea for the café?",
+     "type": "choice",
+     "options": [
+      "A job advert",
+      "Her grandma's recipe book",
+      "A holiday in Spain"
+     ],
+     "check": {
+      "answer": "Her grandma's recipe book",
+      "why": "Jess says: *I found my grandma's old recipe book in a box.*"
+     }
+    },
+    {
+     "id": "l2",
+     "q": "How many customers came each day in the first month?",
+     "type": "choice",
+     "options": [
+      "About ten",
+      "About fifty",
+      "About a hundred"
+     ],
+     "check": {
+      "answer": "About ten",
+      "why": "Jess says: *only ten customers came each day.*"
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

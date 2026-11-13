@@ -1,0 +1,66 @@
+{
+ "intro_md": "📖 **10 min.** Hope Street, Episode 4 (part 1). Learn 5 chunks, then read the story once without going back.",
+ "parts": [
+  {
+   "kind": "📖 Read",
+   "title": "Hope Street – Episode 4 (1/2): Saturday with Margaret",
+   "md": "**Five useful chunks for today's story:**\n\n| Phrase | 🖼️ Picture it (literal) | So it means… |\n|---|---|---|\n| *show someone around* | You walk next to a person and point **around** you: \"that room, that shop, that door\". | give a new person a tour of a place – *\"My cousin showed me around her school.\"* |\n| *on the way* | You are walking along a road, and the trip is still **in progress**. | during the trip to somewhere – *\"I bought milk on the way to work.\"* |\n| *keep an eye on* | You hold one **eye** on a thing and don't look away. | watch it so nothing bad happens – *\"Can you keep an eye on my bag?\"* |\n| *it's not far* | You can almost touch the place – the distance is small. | it's close – *\"Don't worry, it's not far from here.\"* |\n| *just in case* | The sky is blue, but you still put an umbrella in your bag – rain *might* come (*in case* = if it happens). | to be safe, because something might happen – *\"Take an umbrella, just in case.\"* |\n\n📖 **Now read once, without going back.**\n\n![Margaret and Nam on Hope Street](data/img/w1/d14-margaret-walk.webp)\n\n> On Saturday morning, Nam was leaving the flat when he met Margaret on the front steps. She was wearing a green coat and carrying a big bag.\n>\n> **Margaret:** Good morning, Nam! Are you busy today?\n>\n> **Nam:** Not really. It's my first free weekend.\n>\n> **Margaret:** Then come with me. I'm going into town, and I'd love to show you around. You can't live in Manchester and never use the tram!\n>\n> Nam laughed and said yes. They walked down Hope Street together. It was cold, but the sky was blue.\n>\n> On the way, Margaret pointed at everything. \"That's the post office. It opens at nine, even on Saturdays. And that little shop sells the best bread in the street – go early, because it sells out by ten. The library is behind it. It's free, and the chairs are very comfortable.\"\n>\n> Nam tried to remember it all. \"Is the tram stop far?\"\n>\n> \"No, it's not far. Ten minutes, maybe less,\" said Margaret. \"I walk slowly, but I get there.\"\n>\n> Then she stopped and looked a little shy.\n>\n> **Margaret:** Can I ask you something? Next weekend I'm visiting my son in Leeds. Could you keep an eye on Biscuit for me? He's my cat. He's very quiet. You only need to give him food and water.\n>\n> **Nam:** Of course. I'd be happy to.\n>\n> **Margaret:** Thank you! I'll leave you a key, just in case. He sometimes hides under the sofa, and then you can't find him.\n>\n> Nam smiled. A cat, a key, a new friend. Maybe this city was starting to feel like home.\n>\n> At the end of the road, Margaret pointed ahead. \"There it is. The tram stop.\"",
+   "questions": []
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "r1",
+     "q": "Margaret says: *\"It's free, and the chairs are very comfortable.\"* What is **it**?",
+     "type": "choice",
+     "options": [
+      "The post office",
+      "The bread shop",
+      "The library"
+     ],
+     "check": {
+      "answer": "The library",
+      "why": "*The library is behind it. **It's free…*** – it = the library."
+     }
+    },
+    {
+     "id": "r2",
+     "q": "Why should Nam go early to the bread shop?",
+     "type": "choice",
+     "options": [
+      "The bread sells out by ten",
+      "The shop closes at nine",
+      "Margaret will be there"
+     ],
+     "check": {
+      "answer": "The bread sells out by ten",
+      "why": "*Go early, because it sells out by ten.*"
+     }
+    },
+    {
+     "id": "r3",
+     "q": "What does Margaret ask Nam to do next weekend?",
+     "type": "choice",
+     "options": [
+      "Show her the tram",
+      "Look after her cat",
+      "Visit her son in Leeds"
+     ],
+     "check": {
+      "answer": "Look after her cat",
+      "why": "*Could you keep an eye on Biscuit for me? He's my cat.*"
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

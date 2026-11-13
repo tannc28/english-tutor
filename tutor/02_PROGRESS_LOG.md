@@ -5,7 +5,7 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 18/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 18/32 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
 - Cập nhật hồ sơ: 2026-11-13T23:10:00+07:00
 
@@ -84,6 +84,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-13 | Tân (chấm 14): 'listen gióng y reading thì dễ đoán quá – soạn bài khác, tương tự hoặc phần kế tiếp ở dạng listen, không 1-1'. → BỎ kiểu bài 🎧 = đọc lại y nguyên bài 📖. Bài nghe sau bài đọc = NARROW LISTENING: cùng chủ đề/nhân vật/cụm từ nhưng NỘI DUNG MỚI (phần tiếp, hội thoại, góc nhìn khác). Bài -11 (bài báo dạng audio) đã viết lại thành hội thoại Nam–Claire. Nghe lại y nguyên chỉ ở Play today. check.py chặn bài nghe trùng >50% câu với bài đọc. |
 | 2026-11-13 | Tân (chấm w1-voa-2): 'giải thích từ hơi ít, hơi bề mặt – muốn hiểu NGHĨA ĐEN/hình ảnh trước rồi mới nghĩa trừu tượng; học tốt qua bản chất + illustration'. Bài dài thì nhiều câu hỏi cũng được. → Mọi bảng Learn có cột '🖼️ Picture it (literal)' → 'So it means…' (nguồn gốc thật, không bịa), kèm hình khi có; bài nghe/đọc dài (≥3') được 3 câu chọn. VOA 3, 4 đã sửa. check.py cảnh báo bảng Learn thiếu cột nghĩa đen. |
 | 2026-11-13 | Tân (chấm -12): 'bị lặp lại nhiều quá – 1 topic mà cứ lặp lại, rút kinh nghiệm, nên TƯƠNG TỰ thôi'. Kiểm tra: 13/13 bài ngày 13/11 cùng 1 chủ đề (tuần đầu đi làm của Nam); 'get the hang of' 5 bài, 'it takes a while' 4 bài; bài -12 lặp câu Learn trong hội thoại. → Narrow = cùng chủ đề/từ, KHÔNG lặp nguyên câu: mỗi cụm chỉ ở bài dạy + ≤1 bài ôn (câu + tình huống mới); mỗi ngày 2–3 chủ đề/bối cảnh khác nhau (Hope Street là 1 mạch, bài khác đời thường khác); câu ví dụ Learn khác câu input. check.py chặn: cụm 4 từ ở ≥4 bài/ngày, input lặp ≥60% cụm bài khác trong tuần, input lặp câu Learn. |
+| 2026-11-14 | Soạn T7 14/11 (11 bài, ~107' + VOA): 4 bối cảnh khác nhau (Hope Street tập 4 + chuyện Margaret · đi bộ & não/Sam · bảng tin quán + gọi mua xe đạp · email Linh) để tránh lặp. Bước nâng ĐỌC: bài 04 là bài báo B2-lite không có bảng từ trước (chỉ chú thích 3 từ cuối bài) – đo wpm + % hiểu. Bước nâng NGHE B1+: tập 4 phần 2 dài hơn (24 dòng, ~1'40") + giọng Anh của Margaret. Âm: nối phụ âm→nguyên âm (take‿it‿easy, used to /juːstə/ – dòng Tân nghe lại 13/11) và dạng yếu to/for/of/and/can. Mở đầu ngày: nghe lại Friday chat (tuỳ chọn). |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
@@ -96,7 +97,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 18/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 18/32 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -107,7 +108,6 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B1 | 2026-11-11 | Starting point – full assessment | graded | 60% | 88% | 3 | 90 | – | Đánh giá đầu vào: B1+ tổng thể · đọc ~B2 (chậm) · nghe ~B1 (điểm nghẽn: giải mã âm) · từ vựng ~4–5k |
 | T1 · B2 | 2026-11-12 | Small words you can't hear + Hope Street | graded | 80% | 100% | 2 | 25 | – | 17/17 · dictation exact · nghe lần đầu ~80% · Tân: muốn ít test, nhiều input + giải thích |
 | T1 · B3 | 2026-11-12 | Linking words + The Café & AI chatbots | graded | – | 97% | 1 | 28 | – | 11/11 đọc + 8/8 từ nối · đọc ~100 wpm · 😌 → nâng đọc B1+ · muốn đọc nhiều có dẫn dắt, ít câu hỏi, vẫn tương tác |
-| T1 · B5 | – | Getting around – directions & the tram | open | – | – | – | – | – |  |
 | T1 · B6 | – | Weekend review – the story so far | open | – | – | – | – | – |  |
 | T1 · B7 | 2026-11-12 | 'Watching the Grass Grow' Is Not Fun | graded | 60% | 95% | 3 | 10 | – | VOA 4/4 · nghe 60% / có lời 95% · Tân: dạy nhiều, đừng quiz nhiều |
 | T1 · B9 | – | 'Kicking Off' a New Year | open | – | – | – | – | – |  |
@@ -126,6 +126,17 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B112 | 2026-11-13 | Sound focus: you'll · I've · it's · I'd | graded | 90% | – | 1 | 6 | – | 2/2 · nghe 90% (có lời 100%) · 😌 · 14 lượt; nghe lại nhiều nhất: I'd better (3×), she's been… she's already (2×) · Tân: lặp chủ đề/cụm quá nhiều |
 | T1 · B113 | 2026-11-13 | Nam's message home | graded | – | 100% | 1 | 7 | – | 3/3 · 100% · 😌 · đọc 2 lượt ≈ 95 wpm/lượt (log 1 lượt 39 wpm – bài ngắn không cuộn nên lượt 2 không ghi) · lơ đễnh ~45s → bài đã quá dễ |
 | T1 · B114 | 2026-11-13 | Listen: Nam's message home | graded | 90% | – | 1 | 5 | – | 2/2 · 90% · 😌 · 8 lượt, mở lời sau 135s, nghe lại dòng 7 (neighbours/Margaret) 2× · đã đọc trước nên 90% không phải điểm nghe lần đầu · Tân: nghe y bài đọc = dễ đoán → đổi cách soạn |
+| T1 · B201 | – | Words that join + Saturday café | open | – | – | – | – | – |  |
+| T1 · B202 | – | Hope Street Ep. 4 (1/2): Margaret | open | – | – | – | – | – |  |
+| T1 · B203 | – | Ep. 4 (2/2): On the tram | open | – | – | – | – | – |  |
+| T1 · B204 | – | Why a short walk helps your brain | open | – | – | – | – | – |  |
+| T1 · B205 | – | Sam's new habit | open | – | – | – | – | – |  |
+| T1 · B206 | – | The café noticeboard | open | – | – | – | – | – |  |
+| T1 · B207 | – | Phone call: the blue bike | open | – | – | – | – | – |  |
+| T1 · B208 | – | An email from Linh | open | – | – | – | – | – |  |
+| T1 · B209 | – | Jess's story: how the café began | open | – | – | – | – | – |  |
+| T1 · B210 | – | Margaret's story (1/2): 1985 | open | – | – | – | – | – |  |
+| T1 · B211 | – | Margaret's story (2/2): over tea | open | – | – | – | – | – |  |
 
 ## Truyện dài kỳ: Hope Street
 - Nhân vật: Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà); Jess (quán cà phê đầu phố, tóc đỏ ngắn); Claire (quản lý của Nam, kính xám)

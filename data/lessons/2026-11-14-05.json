@@ -1,0 +1,160 @@
+{
+ "intro_md": "🎧 **9 min. New listening – not the article.** It's Saturday morning in the café. Sam started a new habit two months ago. Listen first; the words are hidden.",
+ "parts": [
+  {
+   "kind": "🎧 Listen + read",
+   "title": "Sam's new habit",
+   "rate": 1,
+   "md": "![Sam walks to work](data/img/w1/d14-sam-walk.webp)\n\n**Two small phrases – same words, different jobs:**\n\n- **used to + verb** = a habit in the past that has stopped. 👉 *My dad **used to smoke**, but he stopped.* (He doesn't smoke now.) Sounds like **\"yoostə\"**.\n- **be used to + -ing** = it's normal for you now, so it isn't hard. 👉 *I'm **used to getting up** early.* (It was hard before. Now it's easy.)\n\n💡 Quick test: is there a verb with **-ing** after *to*? Then it's *be used to* – \"normal now\". Listen for both in the chat.\n\n**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
+   "listen": [
+    {
+     "who": "Ben",
+     "voice": "rounded",
+     "text": "Morning, Sam. You look very awake for a Saturday."
+    },
+    {
+     "who": "Sam",
+     "voice": "us_f",
+     "text": "I've just walked here. It's about forty minutes from my flat."
+    },
+    {
+     "who": "Ben",
+     "voice": "rounded",
+     "text": "Forty minutes? You used to take the bus, didn't you?"
+    },
+    {
+     "who": "Sam",
+     "voice": "us_f",
+     "text": "I did, but two months ago I decided to try walking to work."
+    },
+    {
+     "who": "Ben",
+     "voice": "rounded",
+     "text": "What made you change?"
+    },
+    {
+     "who": "Sam",
+     "voice": "us_f",
+     "text": "The bus was always full, and I arrived at the office already annoyed."
+    },
+    {
+     "who": "Sam",
+     "voice": "us_f",
+     "text": "Now I'm in a better mood before I even sit down at my desk."
+    },
+    {
+     "who": "Ben",
+     "voice": "rounded",
+     "text": "Do you sleep any better?"
+    },
+    {
+     "who": "Sam",
+     "voice": "us_f",
+     "text": "Much better, actually. I fall asleep in ten minutes now."
+    },
+    {
+     "who": "Sam",
+     "voice": "us_f",
+     "text": "And I get my best ideas on the way. Yesterday I solved a problem in the park."
+    },
+    {
+     "who": "Ben",
+     "voice": "rounded",
+     "text": "That's interesting. What about the money?"
+    },
+    {
+     "who": "Sam",
+     "voice": "us_f",
+     "text": "I save about forty pounds a month, so that's nice."
+    },
+    {
+     "who": "Ben",
+     "voice": "rounded",
+     "text": "And the rain? This is Manchester, after all."
+    },
+    {
+     "who": "Sam",
+     "voice": "us_f",
+     "text": "That's the only problem. I'm used to walking in the rain now, but my shoes aren't."
+    },
+    {
+     "who": "Ben",
+     "voice": "rounded",
+     "text": "I used to cycle every day, but I stopped after I hurt my knee."
+    },
+    {
+     "who": "Sam",
+     "voice": "us_f",
+     "text": "Why don't you walk with me one morning?"
+    },
+    {
+     "who": "Ben",
+     "voice": "rounded",
+     "text": "Maybe. I'll bring a bigger umbrella."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    4.26,
+    8.3,
+    12.29,
+    16.61,
+    18.69,
+    23.32,
+    27.31,
+    29.43,
+    34.05,
+    39.25,
+    42.38,
+    46.13,
+    49.88,
+    54.94,
+    60.13,
+    62.7
+   ],
+   "audio": "data/audio/2026-11-14-05/p0.mp3"
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "l1",
+     "q": "Why did Sam stop taking the bus?",
+     "type": "choice",
+     "options": [
+      "It was too expensive",
+      "It was always full",
+      "It was always late"
+     ],
+     "check": {
+      "answer": "It was always full",
+      "why": "Sam says: *The bus was always full, and I arrived at the office already annoyed.*"
+     }
+    },
+    {
+     "id": "l2",
+     "q": "What is the only problem with walking?",
+     "type": "choice",
+     "options": [
+      "The rain",
+      "Her shoes are new",
+      "It takes too long"
+     ],
+     "check": {
+      "answer": "The rain",
+      "why": "Sam says: *That's the only problem* – she is used to the rain, but her shoes aren't."
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "intro_md": "🎧 **10 min.** Nam sees the bike notice (you read it earlier) and **phones Dave**. Learn five phone chunks, then hear them in a real call. Everything you hear is new.",
+ "parts": [
+  {
+   "kind": "🎧 Listen",
+   "title": "Phone call: the blue bike",
+   "rate": 1,
+   "md": "![Nam calls Dave](data/img/w1/d14-bike-call.webp)\n\n**Five phone chunks** (you will hear them in the call):\n\n| Phrase | 🖼️ Picture it (literal) | So it means… |\n|---|---|---|\n| *Is it still available?* | a hand holds a shop door – is anything left inside? | Can I still buy it? Has nobody taken it? |\n| *How much are you asking for it?* | a seller holds up a price card and you ask about the number | What is the price? |\n| *Can I come and have a look?* | you walk to the door and look closely with your eyes | Can I visit and see it? |\n| *come round* | you walk **round** the corner and arrive at a friend's front door | visit someone at their home |\n| *I'll take it* | your hand picks the thing up from the shelf | I decide to buy it |\n\n💡 *Examples:* Is the **flat** still available? · How much are you asking for the **piano**? · Can I come and have a look **tomorrow**? · Come round **for tea** on Friday. · It's perfect – I'll take it.\n\n**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
+   "listen": [
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Hello, is that Dave? I'm calling about the blue bike on the café noticeboard."
+    },
+    {
+     "who": "Dave",
+     "voice": "rounded",
+     "text": "Oh, yes, hello. That's right."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Is it still available?"
+    },
+    {
+     "who": "Dave",
+     "voice": "rounded",
+     "text": "It is, yes. Nobody's phoned today, so you're the first."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Great. How much are you asking for it?"
+    },
+    {
+     "who": "Dave",
+     "voice": "rounded",
+     "text": "Sixty pounds. It's a good bike. I've looked after it well."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Is everything working? I don't know much about bikes."
+    },
+    {
+     "who": "Dave",
+     "voice": "rounded",
+     "text": "The brakes are brand new, and the tyres are fine."
+    },
+    {
+     "who": "Dave",
+     "voice": "rounded",
+     "text": "But I should tell you, the bell is broken. It only makes a little noise."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "That's okay. Fifty pounds would be better for me, because of the bell."
+    },
+    {
+     "who": "Dave",
+     "voice": "rounded",
+     "text": "Hmm. All right, fifty. But only if you come today."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Can I come and have a look at four o'clock?"
+    },
+    {
+     "who": "Dave",
+     "voice": "rounded",
+     "text": "Yes, four is fine. Come round to number twelve, Church Lane."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Twelve, Church Lane. How will I know which house it is?"
+    },
+    {
+     "who": "Dave",
+     "voice": "rounded",
+     "text": "It's the one with the green door. You can't miss it."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Perfect. If it's as good as you say, I'll take it. See you at four!"
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    4.22,
+    7.7,
+    9.41,
+    14.4,
+    16.67,
+    21.94,
+    24.98,
+    28.91,
+    34.24,
+    38.05,
+    42.87,
+    45.42,
+    50.6,
+    53.96,
+    58.41
+   ],
+   "audio": "data/audio/2026-11-14-07/p0.mp3"
+  },
+  {
+   "kind": "✓ Done",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
+   "questions": [
+    {
+     "id": "l1",
+     "q": "What is wrong with the bike?",
+     "type": "choice",
+     "options": [
+      "The brakes",
+      "The bell",
+      "The tyres"
+     ],
+     "check": {
+      "answer": "The bell",
+      "why": "Dave says: *the bell is broken.*"
+     }
+    },
+    {
+     "id": "l2",
+     "q": "How will Nam know Dave's house?",
+     "type": "choice",
+     "options": [
+      "It has a green door",
+      "It is next to the church",
+      "It has a blue bike outside"
+     ],
+     "check": {
+      "answer": "It has a green door",
+      "why": "Dave says: *It's the one with the green door.*"
+     }
+    },
+    {
+     "id": "u1",
+     "q": "How much did you understand? Write a number, e.g. 80",
+     "type": "short",
+     "placeholder": "e.g. 80"
+    }
+   ]
+  }
+ ]
+}
