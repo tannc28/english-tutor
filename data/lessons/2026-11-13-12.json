@@ -190,9 +190,37 @@
   },
   {
    "kind": "✓ Done",
-   "title": "How was it?",
-   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
    "questions": [
+    {
+     "id": "l1",
+     "q": "*\"It's been popular all week.\"* Here **it's** = …",
+     "type": "choice",
+     "options": [
+      "it has",
+      "it is",
+      "it was"
+     ],
+     "check": {
+      "answer": "it has",
+      "why": "**been** after it's → it **has** been."
+     }
+    },
+    {
+     "id": "l2",
+     "q": "*\"I'd better write them down.\"* Here **I'd** = …",
+     "type": "choice",
+     "options": [
+      "I had",
+      "I would",
+      "I did"
+     ],
+     "check": {
+      "answer": "I had",
+      "why": "**better** after I'd → I **had** better."
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",

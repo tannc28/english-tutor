@@ -104,6 +104,34 @@
    "rate": 1,
    "questions": [
     {
+     "id": "l1",
+     "q": "*\"Spread yourself too thin\"* means you…",
+     "type": "choice",
+     "options": [
+      "try to do too many things, so nothing goes well",
+      "eat too little",
+      "work only on one project"
+     ],
+     "check": {
+      "answer": "try to do too many things, so nothing goes well",
+      "why": "*We have taken on too much. We are pushed to the limit.*"
+     }
+    },
+    {
+     "id": "l2",
+     "q": "What will the teacher do first for the students?",
+     "type": "choice",
+     "options": [
+      "extend the deadline",
+      "fail them",
+      "cancel the play"
+     ],
+     "check": {
+      "answer": "extend the deadline",
+      "why": "*First I'll extend the deadline.*"
+     }
+    },
+    {
      "id": "u1",
      "q": "How much did you understand on the **first** listen + read? Write a number, e.g. 80",
      "type": "short",

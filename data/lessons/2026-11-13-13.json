@@ -9,9 +9,51 @@
   },
   {
    "kind": "✓ Done",
-   "title": "How was it?",
-   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
    "questions": [
+    {
+     "id": "r1",
+     "q": "Why did Claire tell Nam not to worry about being late?",
+     "type": "choice",
+     "options": [
+      "The trains are terrible",
+      "Nam lives far away",
+      "The office opens late"
+     ],
+     "check": {
+      "answer": "The trains are terrible",
+      "why": "*…because the trains here are terrible.*"
+     }
+    },
+    {
+     "id": "r2",
+     "q": "Who makes Nam feel at home at the café?",
+     "type": "choice",
+     "options": [
+      "Jess – she remembers his order",
+      "Tom",
+      "Margaret"
+     ],
+     "check": {
+      "answer": "Jess – she remembers his order",
+      "why": "*Jess, who works there, already remembers my order.*"
+     }
+    },
+    {
+     "id": "r3",
+     "q": "When will Nam call his mum?",
+     "type": "choice",
+     "options": [
+      "on Sunday",
+      "tonight",
+      "next week"
+     ],
+     "check": {
+      "answer": "on Sunday",
+      "why": "*I'll call you on Sunday.*"
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",

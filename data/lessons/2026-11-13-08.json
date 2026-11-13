@@ -51,9 +51,37 @@
   },
   {
    "kind": "✓ Done",
-   "title": "How was it?",
-   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
    "questions": [
+    {
+     "id": "l1",
+     "q": "What is in the big box?",
+     "type": "choice",
+     "options": [
+      "a new TV",
+      "books",
+      "a sofa"
+     ],
+     "check": {
+      "answer": "a new TV",
+      "why": "*It's a new TV, and it's heavier than it looks.*"
+     }
+    },
+    {
+     "id": "l2",
+     "q": "How many people on Hope Street does Nam know now?",
+     "type": "choice",
+     "options": [
+      "four",
+      "two",
+      "six"
+     ],
+     "check": {
+      "answer": "four",
+      "why": "*He already knew four people on Hope Street.*"
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",

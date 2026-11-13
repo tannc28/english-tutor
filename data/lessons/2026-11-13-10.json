@@ -24,9 +24,37 @@
   },
   {
    "kind": "✓ Done",
-   "title": "How was it?",
-   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
    "questions": [
+    {
+     "id": "r2",
+     "q": "Why does the first week use so much energy?",
+     "type": "choice",
+     "options": [
+      "Almost nothing is automatic yet – no shortcuts",
+      "The work is physically hard",
+      "People are not friendly"
+     ],
+     "check": {
+      "answer": "Almost nothing is automatic yet – no shortcuts",
+      "why": "*When you do it for the first time, there are no shortcuts.*"
+     }
+    },
+    {
+     "id": "r3",
+     "q": "When does it usually get easier?",
+     "type": "choice",
+     "options": [
+      "after two or three weeks",
+      "after a few months",
+      "it never gets easier"
+     ],
+     "check": {
+      "answer": "after two or three weeks",
+      "why": "*After two or three weeks, many things become routine.*"
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",

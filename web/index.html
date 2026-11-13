@@ -776,7 +776,7 @@ body{font-size:14.5px}
 }
 @media (min-width:1200px){
   .md.rd{max-width:none;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);column-gap:28px;align-items:start;grid-auto-flow:row dense}
-  .md.rd>*{grid-column:1}.md.rd>blockquote{grid-row:span 40;margin-top:0}
+  .md.rd{grid-template-rows:auto auto 1fr}.md.rd>*{grid-column:1}.md.rd>blockquote{grid-row:1 / 4;margin-top:0}
   .md.rd>p:has(>img),.md.rd>.tbl,.md.rd>h3,.md.rd>h4{grid-column:2}
   .md.rd>p:has(>img) img{width:100%;max-width:none}
 }
@@ -1379,7 +1379,9 @@ body{font-size:14.5px}
       const vh = innerHeight, idle = now - rtInput > 150000;
       items.forEach(({r, bq}) => { const q = bq(); if (!q.length) return;
         const top = q[0].getBoundingClientRect(), end = q[q.length-1].getBoundingClientRect();
-        const onScreen = top.top < vh * 0.85 && end.bottom > vh * 0.15;
+        // chỉ tính khi đoạn văn chiếm GIỮA màn hình và không đang gõ câu trả lời/feedback (13/11: lần đầu đo ra 26 wpm vì đoạn văn còn hiện khi Tân trả lời)
+        const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "");
+        const onScreen = !typing && top.top < vh * 0.5 && end.bottom > vh * 0.45;
         if (!onScreen || idle) return;
         if (!r.cur) r.cur = {at:new Date().toISOString(), acc:0};
         if (wasHidden) r.cur.auto = (r.cur.auto||0) + 1;

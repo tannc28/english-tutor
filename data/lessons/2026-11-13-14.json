@@ -45,9 +45,37 @@
   },
   {
    "kind": "✓ Done",
-   "title": "How was it?",
-   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
    "questions": [
+    {
+     "id": "l1",
+     "q": "How much of what Tom says does Nam understand?",
+     "type": "choice",
+     "options": [
+      "about half",
+      "almost everything",
+      "very little"
+     ],
+     "check": {
+      "answer": "about half",
+      "why": "*I understand about half of what he says!*"
+     }
+    },
+    {
+     "id": "l2",
+     "q": "Where does Margaret live?",
+     "type": "choice",
+     "options": [
+      "downstairs",
+      "in Flat 3",
+      "above the café"
+     ],
+     "check": {
+      "answer": "downstairs",
+      "why": "*Margaret lives downstairs* – Mr Patel is in Flat 3."
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",

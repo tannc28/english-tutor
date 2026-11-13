@@ -51,9 +51,37 @@
   },
   {
    "kind": "✓ Done",
-   "title": "How was it?",
-   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
    "questions": [
+    {
+     "id": "l1",
+     "q": "*\"You are 'on' all day\"* – what does it mean?",
+     "type": "choice",
+     "options": [
+      "You try hard all day to make a good impression",
+      "You work late every day",
+      "You are always online"
+     ],
+     "check": {
+      "answer": "You try hard all day to make a good impression",
+      "why": "Listen, smile, try not to make mistakes – all day. **In other words**, you are 'on'."
+     }
+    },
+    {
+     "id": "l2",
+     "q": "If you feel exhausted after your first week, it means…",
+     "type": "choice",
+     "options": [
+      "your brain is working hard to learn",
+      "the job is wrong for you",
+      "you need a different manager"
+     ],
+     "check": {
+      "answer": "your brain is working hard to learn",
+      "why": "*It doesn't mean the job is wrong for you. It means your brain is working hard…*"
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",

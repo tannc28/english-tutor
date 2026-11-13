@@ -20,6 +20,34 @@
    "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
    "questions": [
     {
+     "id": "r1",
+     "q": "Why did Nam leave the café quickly?",
+     "type": "choice",
+     "options": [
+      "He didn't want to be late on his first day",
+      "Jess asked him to go",
+      "It started to rain"
+     ],
+     "check": {
+      "answer": "He didn't want to be late on his first day",
+      "why": "*Although Claire said not to worry, he didn't want to be late on his first day.*"
+     }
+    },
+    {
+     "id": "r2",
+     "q": "How does Jess know about the heating?",
+     "type": "choice",
+     "options": [
+      "Everyone on the street knows about it",
+      "Nam told her",
+      "She lives in his building"
+     ],
+     "check": {
+      "answer": "Everyone on the street knows about it",
+      "why": "*Everyone knows about the heating* – and Margaret tells everyone everything."
+     }
+    },
+    {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",
      "type": "short",

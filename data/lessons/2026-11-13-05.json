@@ -9,9 +9,51 @@
   },
   {
    "kind": "✓ Done",
-   "title": "How was it?",
-   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
    "questions": [
+    {
+     "id": "r1",
+     "q": "Why did Nam smile and nod at lunch?",
+     "type": "choice",
+     "options": [
+      "He didn't want to ask Tom to repeat everything",
+      "He agreed with everything Tom said",
+      "He was very hungry"
+     ],
+     "check": {
+      "answer": "He didn't want to ask Tom to repeat everything",
+      "why": "*Rather than asking him to repeat everything* = **instead of** asking."
+     }
+    },
+    {
+     "id": "r2",
+     "q": "How many names did Nam still remember at four o'clock?",
+     "type": "choice",
+     "options": [
+      "two",
+      "six",
+      "eight"
+     ],
+     "check": {
+      "answer": "two",
+      "why": "He met **eight** and forgot **six** → 8 − 6 = 2."
+     }
+    },
+    {
+     "id": "r3",
+     "q": "*\"In other words, go home and rest!\"* – what does Claire mean?",
+     "type": "choice",
+     "options": [
+      "The first week is hard, so feeling tired is normal",
+      "Nam did a bad job today",
+      "Claire wants to go home early"
+     ],
+     "check": {
+      "answer": "The first week is hard, so feeling tired is normal",
+      "why": "**In other words** repeats the idea more simply: *the first week is always the hardest* → rest."
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",

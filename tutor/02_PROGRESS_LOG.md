@@ -5,9 +5,9 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 6/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 7/22 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
-- Cập nhật hồ sơ: 2026-11-13T05:36:32.132618+00:00
+- Cập nhật hồ sơ: 2026-11-13T05:48:51.273235+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -72,6 +72,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-12 | Tân chọn đề xuất 6, 9, 10, 11, 12: 🎧 Play today (nghe cả ngày khi đi đường), 🧑‍🏫 lời nhắn mỗi ngày, 💬 Ask mọi lúc, ✉️ thư tuần (CN), 💌 góp ý tuần 1 chạm. KHÔNG chọn: chọn-ý-chính thay % hiểu, sáng nghe lại bài tối, bậc thang giọng tự nhiên, bài đo 2 tuần, chủ đề theo sở thích, chạm-từ-xem-nghĩa, tự mở bài kế. |
 | 2026-11-13 | Tân (sau bài 01): bài chỉ có Learn (danh sách cụm + vài câu ngắn) là THỪA, quá dễ – 'learn phải đi kèm bài'. → KHÔNG soạn bài Learn đứng riêng nữa: cụm/từ mới (≤5–6) đặt thành 1 khung ngắn ở đầu chính bài nghe/đọc thật dùng chúng ngay. Câu ngắn rời 1× = 100% → mức nghe câu ngắn đã thoải mái; tăng độ dài/tốc độ thật (hội thoại). |
 | 2026-11-13 | Chấm 13/11-02: hội thoại văn phòng tốc độ nhanh 90% lần đầu → 100% ở 1×, 😌 (2 bài nghe liền 😌 ≥90%) → NÂNG mức nghe thoải mái A2+ → B1. Tân: 'muốn nghe story nhiều hơn và dài hơn' → từ 14/11 bài nghe chủ yếu là tập Hope Street 8–15', nhiều người nói, tốc độ tự nhiên; âm/cụm chỉ là khung nhỏ trong bài truyện. |
+| 2026-11-13 | Tân (sau bài 03): muốn có câu hỏi để tự kiểm tra – bài đọc ~3 câu, bài nghe 1–2 câu ngắn. → thay quy tắc 'không quiz': mỗi bài có Quick check (câu chọn, đáp án + giải thích hiện ngay) ở cuối + % hiểu + Ask me. Đã thêm vào mọi bài còn lại 13/11. Đồng hồ đọc ngầm đo sai (đếm cả lúc viết feedback) → chỉ đếm khi đoạn văn ở giữa màn hình và không đang gõ. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
@@ -84,7 +85,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 6/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 7/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -102,7 +103,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B10 | – | Ask a Teacher: Remaining, Remainder and Rest of | open | – | – | – | – | – |  |
 | T1 · B101 | 2026-11-13 | Work chunks you will hear today | graded | 100% | – | 1 | 5 | – | 100% ở 1× (13 lượt) · 😌 · Tân: bài Learn tách riêng thừa – gộp vào bài nghe/đọc thật |
 | T1 · B102 | 2026-11-13 | Meeting the team | graded | 90% | – | 1 | 10 | – | nghe lần đầu 90% → 100% ở 1× · 😌 · 2 bài nghe liền 😌 ≥90% → nâng nghe A2+ → B1 · Tân muốn nghe truyện dài hơn |
-| T1 · B103 | – | Linking words: how ideas connect | open | – | – | – | – | – |  |
+| T1 · B103 | 2026-11-13 | Linking words: how ideas connect | graded | – | 100% | 1 | 6 | – | 100% · check đúng · ~90 wpm (đồng hồ ngầm đo sai 26 wpm → đã sửa) · Tân muốn bài đọc ~3 câu hỏi, nghe 1–2 câu |
 | T1 · B104 | – | Fast re-read: The Café on the Corner | open | – | – | – | – | – |  |
 | T1 · B105 | – | Hope Street Ep. 3 (1/2): Lunch with Tom | open | – | – | – | – | – |  |
 | T1 · B106 | – | Hope Street Ep. 3 (1/2): listen | open | – | – | – | – | – |  |

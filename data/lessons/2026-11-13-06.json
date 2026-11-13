@@ -69,9 +69,37 @@
   },
   {
    "kind": "✓ Done",
-   "title": "How was it?",
-   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
    "questions": [
+    {
+     "id": "l1",
+     "q": "How long has Nam been in Manchester?",
+     "type": "choice",
+     "options": [
+      "two days",
+      "two weeks",
+      "a month"
+     ],
+     "check": {
+      "answer": "two days",
+      "why": "*Two days. I'm still getting used to the weather.*"
+     }
+    },
+    {
+     "id": "l2",
+     "q": "How long did it take Nam just to log in?",
+     "type": "choice",
+     "options": [
+      "twenty minutes",
+      "an hour",
+      "five minutes"
+     ],
+     "check": {
+      "answer": "twenty minutes",
+      "why": "*An hour* is how long he spent on the laptop; **twenty minutes** just to log in."
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",

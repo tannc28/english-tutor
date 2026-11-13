@@ -264,6 +264,14 @@
    "title": "Meeting the team",
    "kind": "Listening",
    "device": "computer"
+  },
+  {
+   "start": "2026-11-13T12:40+07:00",
+   "min": 6.2,
+   "lesson": "2026-11-13-03",
+   "title": "Linking words: how ideas connect",
+   "kind": "Reading",
+   "device": "computer"
   }
  ],
  "days": {
@@ -375,7 +383,7 @@
    ]
   },
   "2026-11-13": {
-   "min": 23.2,
+   "min": 29.4,
    "blocks": [
     {
      "start": "2026-11-13T00:02+07:00",
@@ -403,16 +411,30 @@
     },
     {
      "start": "2026-11-13T12:05+07:00",
-     "end": "2026-11-13T12:35+07:00",
-     "min": 11.4,
+     "end": "2026-11-13T12:46+07:00",
+     "min": 17.6,
      "lessons": [
       "Work chunks you will hear today",
-      "Meeting the team"
+      "Meeting the team",
+      "Linking words: how ideas connect"
      ]
     }
    ]
   }
  },
- "reads": [],
+ "reads": [
+  {
+   "at": "2026-11-13T05:40:53.407Z",
+   "lesson": "2026-11-13-03",
+   "title": "Linking words: how ideas connect",
+   "part": 1,
+   "pass": 1,
+   "words": 160,
+   "sec": 374,
+   "wpm": 26,
+   "pauses": 0,
+   "left_page": 0
+  }
+ ],
  "hard_lines": []
 }

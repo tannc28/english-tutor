@@ -2,7 +2,7 @@
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
  "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
- "updatedAt": "2026-11-13T05:36:32.132618+00:00",
+ "updatedAt": "2026-11-13T05:48:51.273235+00:00",
  "week": 1,
  "streak": 2,
  "focus_now": "INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.",
@@ -153,6 +153,10 @@
   {
    "date": "2026-11-13",
    "text": "Chấm 13/11-02: hội thoại văn phòng tốc độ nhanh 90% lần đầu → 100% ở 1×, 😌 (2 bài nghe liền 😌 ≥90%) → NÂNG mức nghe thoải mái A2+ → B1. Tân: 'muốn nghe story nhiều hơn và dài hơn' → từ 14/11 bài nghe chủ yếu là tập Hope Street 8–15', nhiều người nói, tốc độ tự nhiên; âm/cụm chỉ là khung nhỏ trong bài truyện."
+  },
+  {
+   "date": "2026-11-13",
+   "text": "Tân (sau bài 03): muốn có câu hỏi để tự kiểm tra – bài đọc ~3 câu, bài nghe 1–2 câu ngắn. → thay quy tắc 'không quiz': mỗi bài có Quick check (câu chọn, đáp án + giải thích hiện ngay) ở cuối + % hiểu + Ask me. Đã thêm vào mọi bài còn lại 13/11. Đồng hồ đọc ngầm đo sai (đếm cả lúc viết feedback) → chỉ đếm khi đoạn văn ở giữa màn hình và không đang gõ."
   }
  ],
  "story": {

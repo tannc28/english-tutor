@@ -9,9 +9,51 @@
   },
   {
    "kind": "✓ Done",
-   "title": "How was it?",
-   "md": "No quiz. Tell me how much you understood – and ask me anything in the box below. Then 📤 **Submit** and go to the next small lesson.",
+   "title": "Quick check + how was it?",
+   "md": "A few quick questions – tap an answer, you see right away if it's right. Then tell me how much you understood, ask me anything below, and 📤 **Submit**.",
    "questions": [
+    {
+     "id": "r1",
+     "q": "Who is Mr Patel?",
+     "type": "choice",
+     "options": [
+      "Nam's neighbour in Flat 3",
+      "Nam's new manager",
+      "Margaret's son"
+     ],
+     "check": {
+      "answer": "Nam's neighbour in Flat 3",
+      "why": "*I'm Raj Patel, Flat 3.* – he lives in Nam's building."
+     }
+    },
+    {
+     "id": "r2",
+     "q": "Why do they both laugh at *\"Of course she has\"*?",
+     "type": "choice",
+     "options": [
+      "Margaret knows everyone and tells everyone everything",
+      "The box falls down",
+      "Mr Patel says Nam's name wrong"
+     ],
+     "check": {
+      "answer": "Margaret knows everyone and tells everyone everything",
+      "why": "*Of course she has* = no surprise – Margaret talks to everyone."
+     }
+    },
+    {
+     "id": "r3",
+     "q": "*\"Even though he was tired, Nam picked up the box.\"* means…",
+     "type": "choice",
+     "options": [
+      "He was tired, but he still helped",
+      "He didn't help because he was tired",
+      "He helped, and after that he felt tired"
+     ],
+     "check": {
+      "answer": "He was tired, but he still helped",
+      "why": "**Even though** = a surprise: tired → but still helped."
+     }
+    },
     {
      "id": "u1",
      "q": "How much did you understand? Write a number, e.g. 80",

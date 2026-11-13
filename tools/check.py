@@ -120,7 +120,11 @@ def main():
                 if not inp and not l['id'].startswith('w1-voa') and l.get('status') != 'graded':
                     warn.append(f'{l["id"]}: không có input thật (đoạn đọc ">" hoặc bài nghe ≥400 ký tự) – Tân 13/11: bài chỉ Learn là thừa, gộp vào bài nghe/đọc thật')
                 if qn > 1:
-                    warn.append(f'{l["id"]}: {qn} câu hỏi tự luận – Tân không muốn quiz (chỉ % hiểu + Ask me)')
+                    warn.append(f'{l["id"]}: {qn} câu hỏi tự luận – chỉ % hiểu + Ask me là tự luận; còn lại là câu chọn có đáp án ngay')
+                nc = len([q for p in body.get('parts', []) for q in p.get('questions', []) if q.get('check')])
+                lim = 3 if l.get('kind') == 'Reading' else 2
+                if l.get('status') != 'graded' and (nc == 0 or nc > lim + 1):
+                    warn.append(f'{l["id"]}: {nc} câu check – Tân 13/11: bài đọc ~3 câu ngắn, bài nghe 1–2 câu (chọn, có đáp án ngay)')
                 if l.get('cover') and not os.path.exists(os.path.join(ROOT, l['cover'])):
                     err.append(f'{l["id"]}: ảnh bìa không tồn tại {l["cover"]}')
 

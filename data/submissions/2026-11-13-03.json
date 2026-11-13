@@ -1,0 +1,78 @@
+{
+  "answers": {
+    "chk": "try to remember every name",
+    "u1": "100% bài này dễ, reading vẫn thoải mái đói với tôi"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Bài này thì dễ thôi, với lại tôi thấy bạn có thể thêm 3 câu hỏi cũng đuọc vì reading thì cũng nên có câu hỏi để hiều mà đúng khong, listening chắc cũng cho tầm 1 2 câu ngắn cho quen dần",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-03",
+  "log": {
+    "listen": {},
+    "parts": {
+      "0": {
+        "ms": 90000
+      },
+      "1": {
+        "ms": 105000
+      },
+      "fb": {
+        "ms": 175000
+      }
+    },
+    "q": {
+      "chk": {
+        "changes": [],
+        "edits": 1,
+        "first": 280,
+        "last": "try to remember every name",
+        "ms": 15000
+      },
+      "u1": {
+        "edits": 64,
+        "first": 297,
+        "ms": 75000
+      }
+    },
+    "read": {
+      "1": {
+        "cur": null,
+        "reads": [
+          {
+            "at": "2026-11-13T05:40:53.407Z",
+            "auto": 0,
+            "ms": 374000,
+            "wpm": 26
+          }
+        ],
+        "words": 160
+      }
+    },
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:40:52.021Z",
+        "e": 375,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 0,
+        "vw": 2218
+      }
+    ],
+    "t0": 1794548452021,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T05:47:06.728Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "95f8ce23-65be-43a1-aed5-602808b8f31d",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-13T05:47:06.728Z"
+}
