@@ -5,15 +5,15 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 5/22 bài
-- Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
-- Cập nhật hồ sơ: 2026-11-13T05:22:21.788132+00:00
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 6/22 bài
+- Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
+- Cập nhật hồ sơ: 2026-11-13T05:36:32.132618+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
 |---|---|---|
 | Tổng thể | B1+ | Đánh giá đầu vào 11/11: đọc kéo lên, nghe kéo xuống |
-| Nghe | A2+ (comfortable) · B1 (with effort) | 12/11: easy story ~80% first listen, real VOA ~60% first listen, ~95% with transcript → ears are the bottleneck, words are known |
+| Nghe | B1 (comfortable) · B1+ (with effort) | 13/11: fast office dialogue 90% first listen → 100% at 1×, relaxed (2 in a row) → comfortable level raised A2+ → B1 · 12/11: real VOA ~60% first listen |
 | Đọc | B1+ (comfortable) · B2 (with effort) | 12/11: story B1 95% at ~100 words/min, B1+/B2 article 99% and felt easy → comfortable level raised to B1+ |
 | Từ vựng | B1+ | ~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt |
 | Ngữ pháp & từ nối | B1+ → B2 (linking words solid) | Day 1 mistakes now fixed: be/get used to + V-ing, suggest + V-ing, although vs unless (12/11) |
@@ -23,8 +23,8 @@
 
 **Cần cải thiện & kế hoạch:**
 - [Nghe – mất mạch] **Lỡ 1 từ hoặc 1 đoạn là ảnh hưởng cả phần sau; mẫu câu cơ bản vẫn phải nghĩ, chưa thành phản xạ** – dấu hiệu: Ngày 2 sáng: nghe lần đầu ~80%, đọc lời 100%; Tân tự nhận (feedback 12/11); phần Learn audio nghe 10 lần → Nghe không lời trước rồi đối chiếu lời, bấm nghe lại đúng đoạn khó; đọc trước rồi nghe cùng nội dung, đoạn ngắn có giải thích; luyện 'lỡ từ vẫn nghe tiếp' (đoán từ câu sau)
-- [Nghe (mức thoải mái)] **Nghe B1 vẫn phải căng não – mức thoải mái thật ~A2+** – dấu hiệu: Tân tự nhận 12/11: Ngày 1 làm được nhưng phải tập trung cao → Input nghe ở A2+/B1- , 1×, lặp 3 vòng; chỉ nâng khi feedback 'relaxed' + ≥90% hiểu 2–3 bài liền
-- [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's' → Nghe dễ A2+/B1 tốc độ tự nhiên: 2 vòng không lời → đối chiếu lời, bấm nghe lại từng dòng → nghe lại; bài dạy âm (dạng yếu/nối âm)
+- [Nghe (mức thoải mái)] **Nghe tiếng thật (VOA, người bản xứ) vẫn căng – lần đầu ~60%; truyện/hội thoại B1 đã thoải mái (13/11: 90% → 100% ở 1×)** – dấu hiệu: Tân tự nhận 12/11: Ngày 1 làm được nhưng phải tập trung cao → Input nghe chính = truyện Hope Street B1 dài 8–15', 1×, 2 vòng không lời → đối chiếu → nghe lại; VOA mỗi ngày để kéo tai lên mức thật
+- [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's' → Truyện B1 tốc độ tự nhiên: 2 vòng không lời → đối chiếu lời, bấm nghe lại từng dòng → nghe lại; âm khó (dạng yếu/nối âm) dạy ngay trong bài truyện
 - [Đọc] **Đọc còn hơi chậm (~100 từ/phút) – đã thoải mái ở B1+** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Đọc lại nhanh truyện cũ (đo thời gian), đọc rộng B1+ mỗi ngày; mục tiêu 130–150 từ/phút
 - [Từ nối & cụm] **(Đã cải thiện 12/11: từ nối 8/8, be used to/suggest + V-ing đúng) – tiếp tục gặp lại trong input** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
 - [Xử lý / phản xạ] **Hiểu được nhưng chậm: phải nghĩ/dịch sang tiếng Việt, chưa tự động** – dấu hiệu: Tân tự nhận 12/11; Ngày 1 đọc ~88% nhưng mất nhiều thời gian → Lặp lại cùng input ở tốc độ tự nhiên (3 vòng), fluency reading có ghi thời gian, đọc theo cụm, nhiều input dễ (≥98%) để luyện tự động hoá
@@ -71,6 +71,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-12 | Gia sư đề xuất (Tân chưa phản đối thì áp dụng từ 13/11, KHÔNG thêm việc cho Tân): (1) Đọc-kèm-nghe (Chang & Millett 2014/2015): bài đọc lượt 2 = đọc lại khi nghe audio chính bài đó (đã có audio) – luyện tai nối âm với chữ đã hiểu. (2) Đọc lưu loát (Nation; Chung & Nation 2006): mỗi ngày 1 bài đọc rất dễ (≥98% từ quen, ~300 từ) chỉ để đọc nhanh – đo wpm ngầm, mục tiêu 100→180. (3) Bài âm hôm sau soạn từ đúng các dòng Tân nghe lại nhiều nhất (log segIdx) – giải mã bottom-up (Field 2008). Chờ Tân đồng ý: (4) bài test vốn từ 15'/tháng (VST, Nation & Beglar 2007) để dự báo C1 có số thật. |
 | 2026-11-12 | Tân chọn đề xuất 6, 9, 10, 11, 12: 🎧 Play today (nghe cả ngày khi đi đường), 🧑‍🏫 lời nhắn mỗi ngày, 💬 Ask mọi lúc, ✉️ thư tuần (CN), 💌 góp ý tuần 1 chạm. KHÔNG chọn: chọn-ý-chính thay % hiểu, sáng nghe lại bài tối, bậc thang giọng tự nhiên, bài đo 2 tuần, chủ đề theo sở thích, chạm-từ-xem-nghĩa, tự mở bài kế. |
 | 2026-11-13 | Tân (sau bài 01): bài chỉ có Learn (danh sách cụm + vài câu ngắn) là THỪA, quá dễ – 'learn phải đi kèm bài'. → KHÔNG soạn bài Learn đứng riêng nữa: cụm/từ mới (≤5–6) đặt thành 1 khung ngắn ở đầu chính bài nghe/đọc thật dùng chúng ngay. Câu ngắn rời 1× = 100% → mức nghe câu ngắn đã thoải mái; tăng độ dài/tốc độ thật (hội thoại). |
+| 2026-11-13 | Chấm 13/11-02: hội thoại văn phòng tốc độ nhanh 90% lần đầu → 100% ở 1×, 😌 (2 bài nghe liền 😌 ≥90%) → NÂNG mức nghe thoải mái A2+ → B1. Tân: 'muốn nghe story nhiều hơn và dài hơn' → từ 14/11 bài nghe chủ yếu là tập Hope Street 8–15', nhiều người nói, tốc độ tự nhiên; âm/cụm chỉ là khung nhỏ trong bài truyện. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
@@ -83,7 +84,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 5/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 6/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -100,7 +101,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B9 | – | 'Kicking Off' a New Year | open | – | – | – | – | – |  |
 | T1 · B10 | – | Ask a Teacher: Remaining, Remainder and Rest of | open | – | – | – | – | – |  |
 | T1 · B101 | 2026-11-13 | Work chunks you will hear today | graded | 100% | – | 1 | 5 | – | 100% ở 1× (13 lượt) · 😌 · Tân: bài Learn tách riêng thừa – gộp vào bài nghe/đọc thật |
-| T1 · B102 | – | Meeting the team | open | – | – | – | – | – |  |
+| T1 · B102 | 2026-11-13 | Meeting the team | graded | 90% | – | 1 | 10 | – | nghe lần đầu 90% → 100% ở 1× · 😌 · 2 bài nghe liền 😌 ≥90% → nâng nghe A2+ → B1 · Tân muốn nghe truyện dài hơn |
 | T1 · B103 | – | Linking words: how ideas connect | open | – | – | – | – | – |  |
 | T1 · B104 | – | Fast re-read: The Café on the Corner | open | – | – | – | – | – |  |
 | T1 · B105 | – | Hope Street Ep. 3 (1/2): Lunch with Tom | open | – | – | – | – | – |  |

@@ -178,6 +178,22 @@
    "device": "computer"
   },
   {
+   "start": "2026-11-12T23:43+07:00",
+   "min": 0.7,
+   "lesson": "2026-11-13-02",
+   "title": "Meeting the team",
+   "kind": "Listening",
+   "device": "computer"
+  },
+  {
+   "start": "2026-11-13T00:02+07:00",
+   "min": 6.5,
+   "lesson": "2026-11-13-02",
+   "title": "Meeting the team",
+   "kind": "Listening",
+   "device": "computer"
+  },
+  {
    "start": "2026-11-13T10:01+07:00",
    "min": 3.2,
    "lesson": "2026-11-13-01",
@@ -224,6 +240,30 @@
    "title": "Work chunks you will hear today",
    "kind": "Listening",
    "device": "computer"
+  },
+  {
+   "start": "2026-11-13T12:23+07:00",
+   "min": 1.2,
+   "lesson": "2026-11-13-02",
+   "title": "Meeting the team",
+   "kind": "Listening",
+   "device": "computer"
+  },
+  {
+   "start": "2026-11-13T12:24+07:00",
+   "min": 1.5,
+   "lesson": "2026-11-13-02",
+   "title": "Meeting the team",
+   "kind": "Listening",
+   "device": "computer"
+  },
+  {
+   "start": "2026-11-13T12:31+07:00",
+   "min": 4.2,
+   "lesson": "2026-11-13-02",
+   "title": "Meeting the team",
+   "kind": "Listening",
+   "device": "computer"
   }
  ],
  "days": {
@@ -265,7 +305,7 @@
    ]
   },
   "2026-11-12": {
-   "min": 62.4,
+   "min": 63.1,
    "blocks": [
     {
      "start": "2026-11-12T10:12+07:00",
@@ -323,12 +363,28 @@
      "lessons": [
       "'Watching the Grass Grow' Is Not Fun"
      ]
+    },
+    {
+     "start": "2026-11-12T23:43+07:00",
+     "end": "2026-11-12T23:43+07:00",
+     "min": 0.7,
+     "lessons": [
+      "Meeting the team"
+     ]
     }
    ]
   },
   "2026-11-13": {
-   "min": 9.8,
+   "min": 23.2,
    "blocks": [
+    {
+     "start": "2026-11-13T00:02+07:00",
+     "end": "2026-11-13T00:08+07:00",
+     "min": 6.5,
+     "lessons": [
+      "Meeting the team"
+     ]
+    },
     {
      "start": "2026-11-13T10:01+07:00",
      "end": "2026-11-13T10:04+07:00",
@@ -347,10 +403,11 @@
     },
     {
      "start": "2026-11-13T12:05+07:00",
-     "end": "2026-11-13T12:18+07:00",
-     "min": 4.5,
+     "end": "2026-11-13T12:35+07:00",
+     "min": 11.4,
      "lessons": [
-      "Work chunks you will hear today"
+      "Work chunks you will hear today",
+      "Meeting the team"
      ]
     }
    ]

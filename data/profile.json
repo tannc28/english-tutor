@@ -2,25 +2,25 @@
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
  "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
- "updatedAt": "2026-11-13T05:22:21.788132+00:00",
+ "updatedAt": "2026-11-13T05:36:32.132618+00:00",
  "week": 1,
  "streak": 2,
  "focus_now": "INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.",
  "cefr": {
   "overall": "B1+",
-  "listening": "A2+ (comfortable) · B1 (with effort)",
+  "listening": "B1 (comfortable) · B1+ (with effort)",
   "reading": "B1+ (comfortable) · B2 (with effort)",
   "vocab": "B1+",
   "grammar": "B1+ → B2 (linking words solid)"
  },
  "levels": {
   "overall": "Đánh giá đầu vào 11/11: đọc kéo lên, nghe kéo xuống",
-  "listening": "12/11: easy story ~80% first listen, real VOA ~60% first listen, ~95% with transcript → ears are the bottleneck, words are known",
+  "listening": "13/11: fast office dialogue 90% first listen → 100% at 1×, relaxed (2 in a row) → comfortable level raised A2+ → B1 · 12/11: real VOA ~60% first listen",
   "reading": "12/11: story B1 95% at ~100 words/min, B1+/B2 article 99% and felt easy → comfortable level raised to B1+",
   "vocab": "~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt",
   "grammar": "Day 1 mistakes now fixed: be/get used to + V-ing, suggest + V-ing, although vs unless (12/11)"
  },
- "comprehension_target": "Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.",
+ "comprehension_target": "Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.",
  "strengths": [
   "Đọc hiểu tốt tới B2: nắm ý chính, quy chiếu (this/it), tách câu dài đúng",
   "Đoán nghĩa từ ngữ cảnh rất tốt (seized upon, reluctantly, evade)",
@@ -38,15 +38,15 @@
   },
   {
    "area": "Nghe (mức thoải mái)",
-   "detail": "Nghe B1 vẫn phải căng não – mức thoải mái thật ~A2+",
+   "detail": "Nghe tiếng thật (VOA, người bản xứ) vẫn căng – lần đầu ~60%; truyện/hội thoại B1 đã thoải mái (13/11: 90% → 100% ở 1×)",
    "evidence": "Tân tự nhận 12/11: Ngày 1 làm được nhưng phải tập trung cao",
-   "plan": "Input nghe ở A2+/B1- , 1×, lặp 3 vòng; chỉ nâng khi feedback 'relaxed' + ≥90% hiểu 2–3 bài liền"
+   "plan": "Input nghe chính = truyện Hope Street B1 dài 8–15', 1×, 2 vòng không lời → đối chiếu → nghe lại; VOA mỗi ngày để kéo tai lên mức thật"
   },
   {
    "area": "Nghe",
    "detail": "Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)",
    "evidence": "B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's'",
-   "plan": "Nghe dễ A2+/B1 tốc độ tự nhiên: 2 vòng không lời → đối chiếu lời, bấm nghe lại từng dòng → nghe lại; bài dạy âm (dạng yếu/nối âm)"
+   "plan": "Truyện B1 tốc độ tự nhiên: 2 vòng không lời → đối chiếu lời, bấm nghe lại từng dòng → nghe lại; âm khó (dạng yếu/nối âm) dạy ngay trong bài truyện"
   },
   {
    "area": "Đọc",
@@ -149,6 +149,10 @@
   {
    "date": "2026-11-13",
    "text": "Tân (sau bài 01): bài chỉ có Learn (danh sách cụm + vài câu ngắn) là THỪA, quá dễ – 'learn phải đi kèm bài'. → KHÔNG soạn bài Learn đứng riêng nữa: cụm/từ mới (≤5–6) đặt thành 1 khung ngắn ở đầu chính bài nghe/đọc thật dùng chúng ngay. Câu ngắn rời 1× = 100% → mức nghe câu ngắn đã thoải mái; tăng độ dài/tốc độ thật (hội thoại)."
+  },
+  {
+   "date": "2026-11-13",
+   "text": "Chấm 13/11-02: hội thoại văn phòng tốc độ nhanh 90% lần đầu → 100% ở 1×, 😌 (2 bài nghe liền 😌 ≥90%) → NÂNG mức nghe thoải mái A2+ → B1. Tân: 'muốn nghe story nhiều hơn và dài hơn' → từ 14/11 bài nghe chủ yếu là tập Hope Street 8–15', nhiều người nói, tốc độ tự nhiên; âm/cụm chỉ là khung nhỏ trong bài truyện."
   }
  ],
  "story": {
@@ -350,7 +354,7 @@
   "flex": "Tân sẽ báo ngày bận (→ bài ngắn ~30–40', không dồn) hoặc ngày rảnh (→ thêm phần/bài dài hơn). Ghi vào profile.decisions khi điều chỉnh."
  },
  "input_level": {
-  "listening": "A2+",
+  "listening": "B1",
   "reading": "B1+",
   "note_md": "**Comfortable level** = you understand straight away, without strain or translating. Lessons are built at this level (that's real *comprehensible input*). The *with effort* level is only what you can manage in a test. We move up one small step when 2–3 lessons in a row feel **😌 relaxed** and you understand ≥ 90%."
  },
@@ -374,11 +378,11 @@
   "skills": [
    {
     "skill": "🎧 Listening",
-    "now": "A2+ comfortable · B1 with effort",
-    "evidence": "13/11: short work sentences 100% at 1× · 12/11: easy story 80% first listen · real VOA 60% · 95% with transcript",
+    "now": "B1 comfortable · B1+ with effort",
+    "evidence": "13/11: fast office dialogue 90% first listen → 100% at 1× · 12/11: easy story 80% · real VOA 60% first listen",
     "b2": "News / VOA at normal speed: ≥ 90% on the first listen, no transcript",
     "c1": "Native podcasts, films and fast talk: ≥ 90% without subtitles",
-    "gap": "+30 points on first-listen real speech (60% → 90%)"
+    "gap": "+30 points on first-listen REAL speech (VOA 60% → 90%)"
    },
    {
     "skill": "📖 Reading",

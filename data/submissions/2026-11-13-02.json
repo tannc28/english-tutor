@@ -1,0 +1,134 @@
+{
+  "answers": {
+    "u1": "Lúc đầu thì 90, nghe một lúc thì hiểu hết 100%"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Bài này cũng đơn giản so với tôi, tôi vẫn muốn được nghe bài story hơn nhiều và có thể dài hơn chút, tuy nhiên bạn là giao viên bạn có quyền ra bài thế nào cũng được miễn tôi học tốt nhé. tôi tôn trọng bạn",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-02",
+  "log": {
+    "listen": {
+      "0": {
+        "answeredBeforeReveal": "0/0",
+        "plays": 26,
+        "rates": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 46103
+      }
+    },
+    "parts": {
+      "0": {
+        "ms": 60000
+      },
+      "fb": {
+        "ms": 800000
+      }
+    },
+    "q": {
+      "u1": {
+        "edits": 73,
+        "first": 46248,
+        "ms": 105000
+      }
+    },
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-12T16:43:18.326Z",
+        "e": 45,
+        "kind": "computer",
+        "os": "macOS",
+        "s": 0,
+        "vw": 1638
+      },
+      {
+        "app": "Claude app",
+        "at": "2026-11-12T17:02:48.391Z",
+        "e": 1585,
+        "kind": "computer",
+        "os": "macOS",
+        "s": 1170,
+        "vw": 696
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:23:21.532Z",
+        "e": 45613,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 45603,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:23:31.951Z",
+        "e": 45689,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 45614,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:24:49.063Z",
+        "e": 45697,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 45691,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:24:59.381Z",
+        "e": 45796,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 45701,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:31:17.841Z",
+        "e": 46080,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 46080,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:31:20.324Z",
+        "e": 46353,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 46082,
+        "vw": 2218
+      }
+    ],
+    "t0": 1794501798326,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T05:35:51.383Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "2250a9ba-dde8-428b-b014-2576118e77c8",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-13T05:35:51.383Z"
+}
