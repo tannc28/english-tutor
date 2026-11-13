@@ -11,6 +11,12 @@ Dùng:
   python3 tools/notify.py --result <lessonId> "<caption HTML ngắn>"   # ảnh dài bài đã chấm + caption (CÁCH CHÍNH khi chấm xong)
   python3 tools/notify.py --file <path> "<caption>"            # gửi file
   python3 tools/notify.py --inbox                                   # in tin Tân nhắn cho bot (job sáng đọc: xin nghỉ, góp ý…)
+TIN TRẠNG THÁI 1 TIN DUY NHẤT (Tân 13/11: "đang làm gì nhắn trước, xong thì cập nhật lại chính tin đó"):
+  python3 tools/notify.py --start <key> "Đang chấm bài <b>…</b>"    # gửi "⏳ …", nhớ message_id theo key
+  python3 tools/notify.py --step  <key> "Soạn xong 3/6 bài"         # thêm 1 dòng tiến độ vào CHÍNH tin đó
+  python3 tools/notify.py --done  <key> "Kết quả …"                 # ⏳→✅ + kết quả, sửa CHÍNH tin đó
+  python3 tools/notify.py --fail  <key> "Lỗi … – cần Tân …"         # ⏳→⚠️
+  key: grade-<lessonId> · morning-<YYYY-MM-DD> · weekly-<N> · leave-<date> … (tg.py graded tự --done grade-<id>)
 Khi nào gửi: chấm xong 1 bài · ra kế hoạch tuần mới · xử lý xin nghỉ / đổi lịch · nhắc nhẹ khi 2 ngày không học.
 """
 import json, os, sys, urllib.request, urllib.parse
@@ -110,6 +116,38 @@ def send_result(lid, caption):
 def send(text):
     r = api("sendMessage", chat_id=chat_id(), text=text, parse_mode="HTML", disable_web_page_preview="true")
     print("sent" if r.get("ok") else r)
+    return (r.get("result") or {}).get("message_id")
+
+# ---- Tin trạng thái: 1 tin, sửa dần (start → step… → done/fail)
+STATUS = os.path.join(os.environ.get("TMPDIR", "/tmp"), "tg_status.json")
+def _st():
+    try: return json.load(open(STATUS))
+    except Exception: return {}
+def _render(e, icon):
+    return f"{icon} {e['title']}" + "".join(f"\n{x}" for x in e["lines"])
+def _edit(e, icon):
+    text = _render(e, icon)[:4000]
+    try:
+        r = api("editMessageText", chat_id=chat_id(), message_id=e["mid"], text=text, parse_mode="HTML", disable_web_page_preview="true")
+        if r.get("ok"): print("edited"); return True
+    except Exception as ex: print("edit failed:", ex)
+    return False
+def status_start(key, title):
+    S = _st(); mid = send("⏳ " + title)
+    S[key] = {"mid": mid, "title": title, "lines": []}; json.dump(S, open(STATUS, "w"), ensure_ascii=False)
+    return mid
+def status_step(key, line):
+    S = _st(); e = S.get(key)
+    if not e: return status_start(key, line)
+    e["lines"].append("• " + line); json.dump(S, open(STATUS, "w"), ensure_ascii=False); _edit(e, "⏳")
+def status_end(key, text, icon="✅", title=None):
+    """Sửa tin trạng thái thành kết quả; không có tin nào theo key (hoặc sửa lỗi) → gửi tin mới."""
+    S = _st(); e = S.get(key)
+    if e:
+        if title: e["title"] = title
+        e["lines"].append(text); 
+        if _edit(e, icon): S.pop(key); json.dump(S, open(STATUS, "w"), ensure_ascii=False); return True
+    send(f"{icon} {title + chr(10) if title else ''}{text}"); return False
 
 if __name__ == "__main__":
     a = sys.argv[1:]
@@ -117,6 +155,10 @@ if __name__ == "__main__":
     elif a == ["--inbox"]: inbox()
     elif a[:1] == ["--file"]: send_file(a[1], " ".join(a[2:]))
     elif a[:1] == ["--result"]: send_result(a[1], " ".join(a[2:]))
+    elif a[:1] == ["--start"]: status_start(a[1], " ".join(a[2:]))
+    elif a[:1] == ["--step"]: status_step(a[1], " ".join(a[2:]))
+    elif a[:1] == ["--done"]: status_end(a[1], " ".join(a[2:]))
+    elif a[:1] == ["--fail"]: status_end(a[1], " ".join(a[2:]), icon="⚠️")
     elif a[:1] == ["--md"]: send(md2html(sys.stdin.read() if len(a) == 1 else " ".join(a[1:])))
     elif a: send(" ".join(a))
     else: print(__doc__)

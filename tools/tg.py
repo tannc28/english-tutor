@@ -76,7 +76,8 @@ def graded(lid):
            f'🔧 {E(tg.get("fix", ""))}\n'
            f'➡️ Tiếp theo: {nx}\n'
            f'<a href="{CLASS}#{lid}">Xem chi tiết trên web</a>')
-    notify.send(msg)
+    # có tin "⏳ Đang chấm…" (notify.py --start grade-<id>) → sửa chính tin đó thành kết quả; không có thì gửi mới
+    notify.status_end(f"grade-{lid}", msg.split("\n", 1)[1], title=msg.split("\n", 1)[0].replace("✅ ", ""))
     g["tg_sent"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")   # check.py: bài đã chấm phải có tg_sent (Tân 13/11)
     save(D("grades", lid + ".json"), g)
     cards = (g.get("cards") or [])[:3]
