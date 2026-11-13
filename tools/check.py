@@ -57,6 +57,8 @@ def main():
             err.append(f'grades/{gid}: Tân hỏi qua nút 💬 Ask ({len(sub["log"]["asks"])} câu) nhưng grade chưa có asks_md trả lời')
         if not (L.get(gid, {}).get('micro')) and not g.get('tg'):
             warn.append(f'grades/{gid}: thiếu tg (tin Telegram)')
+        if str(g.get('gradedAt', '')) >= '2026-11-13T17:30' and not g.get('tg_sent'):
+            err.append(f'grades/{gid}: chấm xong chưa báo Telegram – Tân 13/11: mỗi bài chấm xong phải báo → thêm tg {{score, win, fix}} rồi python3 tools/tg.py graded {gid}')
     if last and p_upd and last[1] > p_upd:
         err.append(f'Progress chưa cập nhật sau khi chấm {last[0]}: profile.updatedAt ({P.get("updatedAt")}) cũ hơn grade – '
                    'cập nhật cefr/levels, teacher_md, focus_md, coach, weaknesses, strengths, streak rồi đổi updatedAt')

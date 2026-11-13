@@ -77,6 +77,8 @@ def graded(lid):
            f'➡️ Tiếp theo: {nx}\n'
            f'<a href="{CLASS}#{lid}">Xem chi tiết trên web</a>')
     notify.send(msg)
+    g["tg_sent"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")   # check.py: bài đã chấm phải có tg_sent (Tân 13/11)
+    save(D("grades", lid + ".json"), g)
     cards = (g.get("cards") or [])[:3]
     if cards:
         outs = []
