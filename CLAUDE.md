@@ -80,7 +80,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 — chỉ hiển thị `data/`. **3 tab chính** (Tân 12/11: ít tab): 📅 **Learn** (This week · Lessons · Listening library) · 🧠 **Review** · 📈 **Progress** (Levels · Stats · Profile). Làm bài: bài đọc/nghe dài + câu hỏi → máy tính chia 2 cột (bài ghim trái), điện thoại có nút 📖 Text mở bảng trượt, trình phát MP3 ghim khi cuộn. DB của trang chỉ nhận bài nộp.
 - Bài nộp đến phiên dưới dạng comment "📥 Nộp bài <id>" (Send to Claude): chấm → trả lời + resolve thread.
 - **Job chạy PHIÊN MỚI mỗi lần (Tân 13/11 – rẻ hơn ~4–5× vì không đọc lại cả cuộc trò chuyện dài):** job sáng `trig_01HK6Ae3eS2Jeukjw9Qzyspc`, job tuần `trig_012AgWbp8MgggTtjQgFFB4hX`, chấm bài `trig_01LnYbESeN8FTXP7EM3qJD7w` (web bấm Submit → fire_trigger; dự phòng Send to Claude). Mọi quy tắc phải nằm trong repo (phiên mới chỉ biết repo). Lỗi / thiếu token / thiếu connector / thay đổi quan trọng → **báo Tân qua Telegram** (Tân 13/11). Môi trường có setup script cài Piper.
-- Lịch (**tạm thời soạn THEO NGÀY** – Tân 12/11, đến khi khung bài ổn định: job 05:55 viết bài của hôm nay theo feedback mới nhất): **job tuần (CN 17:43)** lên kế hoạch tuần (chủ đề, truyện, từ, lịch khung) · **job hằng ngày 05:55** chấm bài tồn, điều chỉnh bài chưa làm theo feedback, cập nhật lịch, nhắc nhẹ · 1 job chấm dự phòng.
+- Lịch (**tạm thời soạn THEO NGÀY** – Tân 12/11, đến khi khung bài ổn định: job 00:00 viết bài của ngày mới theo feedback mới nhất): **job tuần (CN 17:43)** lên kế hoạch tuần (chủ đề, truyện, từ, lịch khung) · **job hằng ngày 00:00 (Tân 13/11: dời từ 05:55)** chấm bài tồn, điều chỉnh bài chưa làm theo feedback, cập nhật lịch, nhắc nhẹ · 1 job chấm dự phòng.
 
 ## Cấu trúc thư mục
 ```

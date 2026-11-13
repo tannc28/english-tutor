@@ -22,7 +22,7 @@ File này mô tả **toàn bộ kiến trúc**: các phần của hệ thống, 
 
 ```mermaid
 flowchart LR
-    J["⏰ Job tuần (CN 17:43)<br/>+ job sáng 05:55"] -- đánh thức --> G
+    J["⏰ Job tuần (CN 17:43)<br/>+ job ngày 00:00"] -- đánh thức --> G
     subgraph Phien["🧠 Phiên Claude Code chính"]
         G["Gia sư (Opus)<br/>soạn · chấm · cập nhật hồ sơ"]
         SA["Subagent<br/>Sonnet / Haiku"]
@@ -205,10 +205,10 @@ SVG dự phòng phải render ra PNG rồi tự xem lại và sửa (tối đa 3
 | Job | Giờ (VN) | Việc | ID |
 |---|---|---|---|
 | Kế hoạch tuần | **Chủ nhật 17:43** | Đánh giá tuần, soạn đủ bài tuần tới (bài, VOA, từ, ngữ pháp, minh hoạ, audio), báo cáo tuần trên Telegram | `trig_01Hgbchk6sjSmgewKbfhLLyh` |
-| Theo dõi hằng ngày | **05:55 mỗi ngày** | Quiz ôn + thẻ từ Telegram, đọc tin bot, chấm bài tồn, xử lý xin nghỉ, chỉnh bài chưa làm, cập nhật Google Calendar, nhắc nhẹ | `trig_0135HZukAJdhjKZqe96UoqAF` |
+| Theo dõi hằng ngày | **00:00 mỗi ngày** (Tân 13/11) | Quiz ôn + thẻ từ Telegram, đọc tin bot, chấm bài tồn, xử lý xin nghỉ, chỉnh bài chưa làm, cập nhật Google Calendar, nhắc nhẹ | `trig_01HK6Ae3eS2Jeukjw9Qzyspc` |
 | Chấm dự phòng | khi trang gọi | Chấm nếu Send to Claude không gửi được | `trig_01AN7RrytvZ5BmXiymy5Ym5M` |
 
-Giờ lẻ (05:55, 17:43) là cố ý: lịch đặt đúng giờ chẵn hay bị dồn tải nên dễ trễ.
+Giờ lẻ (17:43) là cố ý; job ngày đặt 00:00 theo Tân: lịch đặt đúng giờ chẵn hay bị dồn tải nên dễ trễ.
 
 ## 9. Bí mật và quyền riêng tư
 

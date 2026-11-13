@@ -52,7 +52,7 @@ Link: https://claude.ai/artifact/LX12NEhBjqgC3qv5bvqAC2 (riêng tư, chỉ Tân 
 6. `python3 tools/sync.py` → commit + push `main` → `Artifact publish web/index.html` với `files` = `web/publish_files.json`.
 7. Telegram: `weeks[N].next_focus` (1 câu) → `python3 tools/tg.py weekly <N>` (ảnh báo cáo tuần vừa xong) → `tools/notify.py`: chủ đề tuần mới + lịch Thứ 2 + link.
 
-## Job hằng ngày 05:55 – theo dõi nhẹ nhàng
+## Job hằng ngày 00:00 – theo dõi nhẹ nhàng
 1. `git pull`; `ArtifactData list inbox` → chấm bài tồn.
 2. Xem `days`: Tân lỡ nhiều → dàn lại lịch các ngày còn lại (vẫn ≤2 bài/ngày, có thể bỏ bớt bài phụ). Điều chỉnh **bài chưa làm** của tuần theo feedback mới nhất (😵 → hạ độ khó/độ dài; 😌 + ≥90% liền → nâng nhẹ). Tân làm hết bài tuần → thêm 1–2 bài bonus cùng chủ đề.
 3. Cập nhật lịch hôm nay: gợi ý bài kế tiếp (link `#<id>`) cho buổi sáng/tối.
