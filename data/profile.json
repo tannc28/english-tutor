@@ -2,7 +2,7 @@
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
  "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
- "updatedAt": "2026-11-13T08:39:53.225148+00:00",
+ "updatedAt": "2026-11-13T09:21:43.722349+00:00",
  "week": 1,
  "streak": 2,
  "focus_now": "INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.",
@@ -169,6 +169,10 @@
   {
    "date": "2026-11-13",
    "text": "Tân: KHÔNG làm chậm giọng – 'vẫn thấy thú vị, khó thì luyện nhiều sẽ quen, phải cố gắng'. → bỏ chỉnh tốc độ TTS (giữ tốc độ gốc), chỉ giữ chia 1 câu/dòng để bấm nghe lại đúng câu. Thử thách vừa phải (🙂) là được, không hạ mức vì 1 bài khó."
+  },
+  {
+   "date": "2026-11-13",
+   "text": "Chấm 08: 100% sau khi đã đọc, 😌; câu chủ ngữ dài nghe lại 6×; Tân: 'hiểu hết nhưng chưa êm tai'. → bài sáng hôm sau mở đầu bằng nghe lại tập vừa học (lặp lại để quen âm) trước tập mới; nhắc dùng Play today."
   }
  ],
  "story": {

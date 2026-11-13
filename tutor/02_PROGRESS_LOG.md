@@ -5,9 +5,9 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 11/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 12/22 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
-- Cập nhật hồ sơ: 2026-11-13T08:39:53.225148+00:00
+- Cập nhật hồ sơ: 2026-11-13T09:21:43.722349+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -76,6 +76,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-13 | Tân: cảm thấy vẫn đọc từng từ, chưa theo cụm. Giải thích: mắt ai cũng dừng ở hầu hết các từ; đọc theo cụm = nhận diện từ tự động, đến từ đọc nhiều bài dễ + đọc lại + đọc kèm nghe. Tốc độ đang lên: 100 → 121–124 wpm. Giữ: đọc kèm nghe ở lượt 2, 1 bài đọc lưu loát rất dễ/ngày. |
 | 2026-11-13 | Chấm 06/07: nghe truyện ~70% (dòng dẫn chuyện dài 4 câu nghe lại 12×), Tân thấy dẫn chuyện nhanh; hỏi đọc chậm có ảnh hưởng nghe. → (1) mỗi dòng listen = 1 câu (≤ ~110 ký tự) để bấm nghe lại đúng câu; (2) chuẩn hoá giọng TTS về ~160 wpm (SCALE trong audio.py: lessac 1.25, ryan 1.4); (3) giữ mức nghe B1 nhưng truyện có dẫn chuyện dài là 'B1 with effort' – tăng dần độ dài; đọc kèm nghe luyện cả hai. |
 | 2026-11-13 | Tân: KHÔNG làm chậm giọng – 'vẫn thấy thú vị, khó thì luyện nhiều sẽ quen, phải cố gắng'. → bỏ chỉnh tốc độ TTS (giữ tốc độ gốc), chỉ giữ chia 1 câu/dòng để bấm nghe lại đúng câu. Thử thách vừa phải (🙂) là được, không hạ mức vì 1 bài khó. |
+| 2026-11-13 | Chấm 08: 100% sau khi đã đọc, 😌; câu chủ ngữ dài nghe lại 6×; Tân: 'hiểu hết nhưng chưa êm tai'. → bài sáng hôm sau mở đầu bằng nghe lại tập vừa học (lặp lại để quen âm) trước tập mới; nhắc dùng Play today. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
@@ -88,7 +89,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 11/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 12/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -111,7 +112,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B105 | 2026-11-13 | Hope Street Ep. 3 (1/2): Lunch with Tom | graded | – | 99% | 2 | 5 | – | 3/3 · 99% · bài mới đọc lần đầu ~124 wpm · 🙂 · Tân: vẫn đọc từng từ → giải thích + đọc kèm nghe |
 | T1 · B106 | 2026-11-13 | Hope Street Ep. 3 (1/2): listen | graded | 70% | – | 3 | 12 | – | ~70% nghe, 100% có lời · dòng dẫn chuyện dài nghe lại 12× · 🙂 → chia câu, giọng về ~160 wpm |
 | T1 · B107 | 2026-11-13 | Hope Street Ep. 3 (2/2): A heavy box | graded | – | 100% | 1 | 4 | – | 3/3 · 100% · 😌 · hỏi: đọc chậm có ảnh hưởng nghe? |
-| T1 · B108 | – | Hope Street Ep. 3 (2/2): listen | open | – | – | – | – | – |  |
+| T1 · B108 | 2026-11-13 | Hope Street Ep. 3 (2/2): listen | graded | 100% | – | 2 | 8 | – | 100% (đã đọc trước) · dòng 1 (chủ ngữ dài) nghe lại 6× · 😌 · tai chưa êm → nghe lại nhiều lần |
 | T1 · B109 | – | VOA: Sometimes we 'spread ourselves too thin' | open | – | – | – | – | – |  |
 | T1 · B110 | – | Why is the first week at a new job so tiring? | open | – | – | – | – | – |  |
 | T1 · B111 | – | Listen: why the first week is so tiring | open | – | – | – | – | – |  |

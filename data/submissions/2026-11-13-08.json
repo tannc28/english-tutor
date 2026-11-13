@@ -1,0 +1,99 @@
+{
+  "answers": {
+    "l1": "a new TV",
+    "l2": "four",
+    "u1": "Vì tôi có học bài trước rồi nên nghe cái tôi hiểu hết nhé, tuy nhiên vẫn chưa êm tai lắm"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-08",
+  "log": {
+    "listen": {
+      "0": {
+        "answeredBeforeReveal": "0/0",
+        "plays": 16,
+        "rates": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 153,
+        "segIdx": {
+          "0": 6,
+          "4": 1,
+          "5": 1
+        },
+        "segs": 8
+      }
+    },
+    "parts": {
+      "fb": {
+        "ms": 360000
+      }
+    },
+    "q": {
+      "l1": {
+        "changes": [],
+        "edits": 1,
+        "first": 3095,
+        "last": "a new TV",
+        "ms": 5000
+      },
+      "l2": {
+        "changes": [],
+        "edits": 1,
+        "first": 3100,
+        "last": "four",
+        "ms": 5000
+      },
+      "u1": {
+        "edits": 113,
+        "first": 5,
+        "ms": 225000
+      }
+    },
+    "sessions": [
+      {
+        "app": "Claude app",
+        "at": "2026-11-13T08:28:51.816Z",
+        "e": 205,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 0,
+        "vw": 1918
+      },
+      {
+        "app": "Claude app",
+        "at": "2026-11-13T09:18:17.383Z",
+        "e": 3127,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 2966,
+        "vw": 2272
+      }
+    ],
+    "t0": 1794558531816,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T09:20:59.292Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "a3fc3eef-8141-42f1-b970-942fafb540b1",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-13T09:20:59.292Z"
+}

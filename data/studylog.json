@@ -304,6 +304,22 @@
    "title": "Hope Street Ep. 3 (2/2): A heavy box",
    "kind": "Reading",
    "device": "computer"
+  },
+  {
+   "start": "2026-11-13T15:28+07:00",
+   "min": 3.4,
+   "lesson": "2026-11-13-08",
+   "title": "Hope Street Ep. 3 (2/2): listen",
+   "kind": "Listening",
+   "device": "computer"
+  },
+  {
+   "start": "2026-11-13T16:18+07:00",
+   "min": 2.6,
+   "lesson": "2026-11-13-08",
+   "title": "Hope Street Ep. 3 (2/2): listen",
+   "kind": "Listening",
+   "device": "computer"
   }
  ],
  "days": {
@@ -415,7 +431,7 @@
    ]
   },
   "2026-11-13": {
-   "min": 56.8,
+   "min": 62.8,
    "blocks": [
     {
      "start": "2026-11-13T00:02+07:00",
@@ -462,11 +478,20 @@
     },
     {
      "start": "2026-11-13T15:11+07:00",
-     "end": "2026-11-13T15:28+07:00",
-     "min": 16.4,
+     "end": "2026-11-13T15:31+07:00",
+     "min": 19.8,
      "lessons": [
       "Hope Street Ep. 3 (1/2): listen",
-      "Hope Street Ep. 3 (2/2): A heavy box"
+      "Hope Street Ep. 3 (2/2): A heavy box",
+      "Hope Street Ep. 3 (2/2): listen"
+     ]
+    },
+    {
+     "start": "2026-11-13T16:18+07:00",
+     "end": "2026-11-13T16:20+07:00",
+     "min": 2.6,
+     "lessons": [
+      "Hope Street Ep. 3 (2/2): listen"
      ]
     }
    ]
@@ -535,6 +560,24 @@
   }
  ],
  "hard_lines": [
+  {
+   "lesson": "2026-11-13-08",
+   "part": 0,
+   "line": 0,
+   "replays": 6
+  },
+  {
+   "lesson": "2026-11-13-08",
+   "part": 0,
+   "line": 4,
+   "replays": 1
+  },
+  {
+   "lesson": "2026-11-13-08",
+   "part": 0,
+   "line": 5,
+   "replays": 1
+  },
   {
    "lesson": "2026-11-13-06",
    "part": 0,
