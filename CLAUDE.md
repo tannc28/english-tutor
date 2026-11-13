@@ -50,6 +50,12 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Job sáng đọc tin Tân nhắn bot (`tools/notify.py --inbox`): xin nghỉ, góp ý → xử lý như Quy trình XIN NGHỈ.
 
 ## Chọn model (Tân yêu cầu 12/11 – có benchmark 12/11, xem `session/MODEL_BENCHMARK.md`)
+- **Opus = người điều phối (Tân 13/11):** tự quyết việc nào giao model nào theo bảng dưới; mỗi lần giao ghi rõ model. Gặp **loại việc mới** hoặc thấy **chất lượng tụt** → tự chạy benchmark nhỏ (cùng đề cho 2 model, chấm từng cặp, đo thời gian/token) rồi cập nhật bảng + `session/MODEL_BENCHMARK.md`. Định kỳ **mỗi tháng** (job CN đầu tháng) benchmark lại 1–2 việc chính – model mới/cập nhật có thể đổi kết quả. check.py nhắc khi benchmark cũ hơn 30 ngày.
+  | Việc | Model |
+  |---|---|
+  | Lên lịch ngày/tuần, nâng/hạ mức, chấm bài có góp ý/câu hỏi, thư tuần, lời nhắn, hồ sơ/dự báo | **Opus** |
+  | Viết truyện/bài đọc/hội thoại, chú giải, câu hỏi check, thẻ từ, SVG quan trọng (theo kế hoạch Opus, Opus duyệt) | **Sonnet** |
+  | SVG thẻ từ đơn giản, định dạng/chép/kiểm tra file, link, tin Telegram | **Haiku** |
 - **KẾT HỢP (Tân chọn 13/11, sau benchmark Sonnet vs Opus – `session/MODEL_BENCHMARK.md`):**
   - **Opus (phiên chính) = phán đoán:** lên lịch ngày/tuần (đọc dữ liệu, bài còn dở, xung đột luật), quyết định nâng/hạ mức, chấm bài có góp ý/câu hỏi của Tân, thư tuần, lời nhắn ngày, cập nhật hồ sơ/dự báo. Opus viết **bản kế hoạch chi tiết** cho từng bài (mục tiêu, mức, độ dài, cụm từ, ý câu hỏi, lý do).
   - **Sonnet (subagent `model: "sonnet"`) = viết nội dung theo kế hoạch:** truyện/bài đọc/hội thoại, chú giải, câu hỏi check, thẻ từ – chạy song song nhiều bài cho nhanh; Opus **duyệt nhanh** (đúng nghĩa, đúng mức, đúng luật 1 câu/dòng, số liệu) trước khi dùng. Benchmark: Sonnet viết ~ngang Opus, nhanh 1,5–2×, rẻ ~5×; nhưng hay sót bối cảnh/đọc sai số liệu → không giao phán đoán.

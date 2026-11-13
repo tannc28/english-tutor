@@ -137,6 +137,15 @@ def main():
     if not os.path.exists(ok) or os.path.getmtime(wi) > os.path.getmtime(ok) + 1:
         err.append('web/index.html đã đổi nhưng chưa qua `node tools/ui_check.js` (mồ côi, tràn ngang, khoảng trống) – chạy rồi xem ảnh cả desktop lẫn điện thoại')
 
+    # 3c) Benchmark model định kỳ (Tân 13/11: Opus điều phối, thỉnh thoảng tự benchmark để giao việc đúng)
+    bm = os.path.join(ROOT, 'session', 'MODEL_BENCHMARK.md')
+    if os.path.exists(bm):
+        ds = re.findall(r'\((\d{1,2})/(\d{1,2})/(\d{4})', open(bm).read())
+        if ds:
+            lastd = max(dt.date(int(y), int(m), int(d)) for d, m, y in ds)
+            if (dt.datetime.now(TZ).date() - lastd).days > 30:
+                warn.append(f'Benchmark model cũ ({lastd}) > 30 ngày – chạy lại benchmark nhỏ (Opus vs Sonnet vs Haiku) cho 1–2 việc chính, cập nhật bảng trong CLAUDE.md')
+
     # 4) Từ mới phải đủ để vào thư viện Review
     for x in J(D('words.json')).get('words', []):
         if not x.get('def') or not x.get('ex'):
