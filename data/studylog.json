@@ -280,6 +280,14 @@
    "title": "Fast re-read: The Café on the Corner",
    "kind": "Reading",
    "device": "phone"
+  },
+  {
+   "start": "2026-11-13T13:22+07:00",
+   "min": 7.1,
+   "lesson": "2026-11-13-05",
+   "title": "Hope Street Ep. 3 (1/2): Lunch with Tom",
+   "kind": "Reading",
+   "device": "phone"
   }
  ],
  "days": {
@@ -391,7 +399,7 @@
    ]
   },
   "2026-11-13": {
-   "min": 33.3,
+   "min": 40.4,
    "blocks": [
     {
      "start": "2026-11-13T00:02+07:00",
@@ -429,10 +437,11 @@
     },
     {
      "start": "2026-11-13T13:14+07:00",
-     "end": "2026-11-13T13:17+07:00",
-     "min": 3.9,
+     "end": "2026-11-13T13:29+07:00",
+     "min": 11.0,
      "lessons": [
-      "Fast re-read: The Café on the Corner"
+      "Fast re-read: The Café on the Corner",
+      "Hope Street Ep. 3 (1/2): Lunch with Tom"
      ]
     }
    ]
@@ -460,6 +469,30 @@
    "words": 344,
    "sec": 171,
    "wpm": 121,
+   "pauses": 0,
+   "left_page": 0
+  },
+  {
+   "at": "2026-11-13T06:22:45.172Z",
+   "lesson": "2026-11-13-05",
+   "title": "Hope Street Ep. 3 (1/2): Lunch with Tom",
+   "part": 0,
+   "pass": 1,
+   "words": 158,
+   "sec": 76,
+   "wpm": 124,
+   "pauses": 0,
+   "left_page": 0
+  },
+  {
+   "at": "2026-11-13T06:24:02.484Z",
+   "lesson": "2026-11-13-05",
+   "title": "Hope Street Ep. 3 (1/2): Lunch with Tom",
+   "part": 0,
+   "pass": 2,
+   "words": 158,
+   "sec": 158,
+   "wpm": 60,
    "pauses": 0,
    "left_page": 0
   }

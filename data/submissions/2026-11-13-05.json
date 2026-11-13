@@ -1,0 +1,100 @@
+{
+  "answers": {
+    "r1": "He didn't want to ask Tom to repeat everything",
+    "r2": "two",
+    "r3": "The first week is hard, so feeling tired is normal",
+    "u1": "99, tuy nhiên vẫn đọc hơi chậm thì phải"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Oke nhưng có vẻ tôi vẫn đang có thói quen đọc word by word nhiều hơn là cụm, do mắt tôi k đọc được nhiều cụm hay là tâm lý học ai cũng thế nhỉ",
+    "minutes": "",
+    "strain": "some"
+  },
+  "lessonId": "2026-11-13-05",
+  "log": {
+    "listen": {},
+    "parts": {
+      "0": {
+        "ms": 185000
+      },
+      "1": {
+        "ms": 135000
+      },
+      "fb": {
+        "ms": 105000
+      }
+    },
+    "q": {
+      "r1": {
+        "changes": [],
+        "edits": 1,
+        "first": 313,
+        "last": "He didn't want to ask Tom to repeat everything",
+        "ms": 10000
+      },
+      "r2": {
+        "changes": [],
+        "edits": 1,
+        "first": 324,
+        "last": "two",
+        "ms": 10000
+      },
+      "r3": {
+        "changes": [],
+        "edits": 1,
+        "first": 333,
+        "last": "The first week is hard, so feeling tired is normal",
+        "ms": 0
+      },
+      "u1": {
+        "edits": 82,
+        "first": 335,
+        "ms": 95000
+      }
+    },
+    "read": {
+      "0": {
+        "cur": null,
+        "reads": [
+          {
+            "at": "2026-11-13T06:22:45.172Z",
+            "auto": 0,
+            "ms": 76303,
+            "wpm": 124
+          },
+          {
+            "at": "2026-11-13T06:24:02.484Z",
+            "auto": 0,
+            "ms": 157627,
+            "wpm": 60
+          }
+        ],
+        "words": 158
+      }
+    },
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-13T06:22:38.855Z",
+        "e": 428,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 0,
+        "vw": 430
+      }
+    ],
+    "t0": 1794550958855,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T06:29:46.699Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "591a1592-de48-491f-b7ec-f5495bdee8da",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-13T06:29:46.699Z"
+}
