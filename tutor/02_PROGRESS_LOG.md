@@ -5,16 +5,16 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 13/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 14/22 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
-- Cập nhật hồ sơ: 2026-11-13T10:39:11.903801+00:00
+- Cập nhật hồ sơ: 2026-11-13T10:57:21.326137+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
 |---|---|---|
 | Tổng thể | B1+ | Đánh giá đầu vào 11/11: đọc kéo lên, nghe kéo xuống |
 | Nghe | B1 (comfortable) · B1+ (with effort) | 13/11: story with long narration ~70% by ear (100% with text), 🙂 – narrator lines were 4 sentences long + TTS fast (~170 wpm) · fast office dialogue 90%→100% 😌 · real VOA ~60% first listen |
-| Đọc | B1+ (comfortable) · B2 (with effort) | 13/11: B1+ article 3/3, 95–100%, 😌 'easy' (1 read, 58 wpm incl. glossary) · new story first read 124 wpm, 99% (🙂) · re-read 121 wpm · 12/11 first read ~100 wpm · B1+/B2 article 99% |
+| Đọc | B1+ (comfortable) · B2 (with effort) | 13/11: Nam's message (recap, all week-1 chunks) 3/3, 100%, 😌, 2 reads ≈ 95 wpm each · B1+ article 3/3, 95–100%, 😌 (58 wpm incl. glossary) · new story first read 124 wpm, 99% · re-read 121 wpm · 12/11 ~100 wpm |
 | Từ vựng | B1+ | ~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt |
 | Ngữ pháp & từ nối | B1+ → B2 (linking words solid) | Day 1 mistakes now fixed: be/get used to + V-ing, suggest + V-ing, although vs unless (12/11) |
 
@@ -89,7 +89,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 13/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 14/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -117,7 +117,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B110 | 2026-11-13 | Why is the first week at a new job so tiring? | graded | – | 97% | 1 | 20 | – | 3/3 · 95–100% · 😌 'Dễ thôi' · 1 lượt 3'56" ≈ 58 wpm (gồm xem bảng từ + trả lời) → bài B1+ đã dễ, sắp nâng nhẹ |
 | T1 · B111 | – | Listen: why the first week is so tiring | open | – | – | – | – | – |  |
 | T1 · B112 | – | Sound focus: you'll · I've · it's · I'd | open | – | – | – | – | – |  |
-| T1 · B113 | – | Nam's message home | open | – | – | – | – | – |  |
+| T1 · B113 | 2026-11-13 | Nam's message home | graded | – | 100% | 1 | 7 | – | 3/3 · 100% · 😌 · đọc 2 lượt ≈ 95 wpm/lượt (log 1 lượt 39 wpm – bài ngắn không cuộn nên lượt 2 không ghi) · lơ đễnh ~45s → bài đã quá dễ |
 | T1 · B114 | – | Listen: Nam's message home | open | – | – | – | – | – |  |
 
 ## Truyện dài kỳ: Hope Street

@@ -1,0 +1,31 @@
+{
+ "score": "📖 Nam's message home · 3/3 · 100% · 😌 relaxed",
+ "gradedAt": "2026-11-13T17:57:21+07:00",
+ "summary_md": "**3/3, 100%, 😌 – \"hiểu hết ngay lần đầu\".** The log shows **one read of 4 min 9 s for 161 words = 39 wpm** – but that's not your speed. You told me you read it **twice** and drifted off for about **45 s**. The text is short, so it fits on one screen: you never scrolled to the end and back, so the page couldn't see your 2nd read. Real numbers: (249 s − 45 s) for 2 × 161 words ≈ **95 wpm per read** – still about half of the B2 mark (**180 wpm**). All 3 answers right on the first tap, no changes.\n\nThe text had all 11 chunks of the week (*getting used to, get the hang of, feel at home…*) and none stopped you – the week's chunks are now **yours on the page**. Next: the 🎧 listen to this same message (2026-11-13-14) – now your ear only has to catch the sounds.",
+ "asks_md": "**\"Dễ, có lơ đễnh ~45s, đọc lại 2 lần cho quen\"** – thanks, this is really useful data. Losing focus for a moment on an easy text is normal; it usually means the text is *too easy to hold attention*, not that something is wrong. Two tips: (1) on an easy text, make the 2nd read a **fast read** – eyes keep moving, never go back, try to finish in ~1 minute; (2) if your mind drifts, don't restart – just go on from the line you are on. 🇻🇳 Bài dễ mà vẫn lơ đễnh là dấu hiệu bài đã *quá* dễ → mình sẽ cho bài đọc nhích lên một chút (bài báo B2 ngắn) để giữ tập trung. Lượt đọc lại hôm nay trang không ghi được vì đoạn văn ngắn nằm gọn một màn hình – không sao, Tân ghi chú như hôm nay là mình hiểu.",
+ "items": {
+  "r1": {
+   "verdict": "correct",
+   "note_md": "Right – *because the trains here are terrible*."
+  },
+  "r2": {
+   "verdict": "correct",
+   "note_md": "Right – *Jess, who works there, already remembers my order.* (**who** = Jess)"
+  },
+  "r3": {
+   "verdict": "correct",
+   "note_md": "Right."
+  },
+  "u1": {
+   "verdict": "correct",
+   "note_md": "100% – matches 3/3."
+  }
+ },
+ "verdict": "done",
+ "tg": {
+  "score": "3/3 · hiểu 100% · 😌 \"hiểu hết ngay lần đầu\"",
+  "win": "Đủ 11 cụm của tuần trong bài mà không vấp cụm nào – cụm tuần 1 đã là của Tân",
+  "fix": "2 lượt ≈ 95 wpm/lượt (mốc B2 180) · lượt 2 đọc lướt, không quay lại; bài đọc sẽ nhích lên B2"
+ },
+ "tg_sent": "2026-11-13T10:57:27+00:00"
+}

@@ -1,0 +1,91 @@
+{
+  "answers": {
+    "r1": "The trains are terrible",
+    "r2": "Jess – she remembers his order",
+    "r3": "on Sunday",
+    "u1": "100"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Dễ, tôi có lơ đễnh tầm 45s, đọc lại 2 lân cho quen, nhưng cái này tôi hiểu hết ngay lần đâu luôn",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-13",
+  "log": {
+    "listen": {},
+    "parts": {
+      "1": {
+        "ms": 245000
+      },
+      "fb": {
+        "ms": 170000
+      }
+    },
+    "q": {
+      "r1": {
+        "changes": [],
+        "edits": 1,
+        "first": 256,
+        "last": "The trains are terrible",
+        "ms": 5000
+      },
+      "r2": {
+        "changes": [],
+        "edits": 1,
+        "first": 263,
+        "last": "Jess – she remembers his order",
+        "ms": 10000
+      },
+      "r3": {
+        "changes": [],
+        "edits": 1,
+        "first": 271,
+        "last": "on Sunday",
+        "ms": 0
+      },
+      "u1": {
+        "edits": 17,
+        "first": 273,
+        "ms": 145000
+      }
+    },
+    "read": {
+      "0": {
+        "cur": null,
+        "reads": [
+          {
+            "at": "2026-11-13T10:49:25.533Z",
+            "auto": 0,
+            "ms": 249000,
+            "wpm": 39
+          }
+        ],
+        "words": 161
+      }
+    },
+    "sessions": [
+      {
+        "app": "Claude app",
+        "at": "2026-11-13T10:49:24.228Z",
+        "e": 416,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 0,
+        "vw": 1600
+      }
+    ],
+    "t0": 1794566964228,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T10:56:19.931Z",
+    "mcp": true,
+    "ok": true,
+    "pending": true,
+    "result": "{\"trigger\":{\"id\":\"trig_01LnYbESeN8FTXP7EM3qJD7w\",\"name\":\"English – Chấm bài nộp (phiên mới)\",\"cron_expression\":\"\",\"enabled\":true,\"created_at\":\"2026-11-13T09:31:15.752801Z\",\"updated_at\":\"2026-11-13T10:45:00.933814Z\",\"persist_session\":false,\"mcp_connections\":[{\"connector_uuid\":\"6ba9f48b-7288-4418-a670",
+    "via": "fire_trigger"
+  },
+  "submittedAt": "2026-11-13T10:56:19.931Z"
+}

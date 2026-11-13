@@ -2,7 +2,7 @@
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
  "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
- "updatedAt": "2026-11-13T10:39:11.903801+00:00",
+ "updatedAt": "2026-11-13T10:57:21.326137+00:00",
  "week": 1,
  "streak": 2,
  "focus_now": "INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.",
@@ -16,7 +16,7 @@
  "levels": {
   "overall": "Đánh giá đầu vào 11/11: đọc kéo lên, nghe kéo xuống",
   "listening": "13/11: story with long narration ~70% by ear (100% with text), 🙂 – narrator lines were 4 sentences long + TTS fast (~170 wpm) · fast office dialogue 90%→100% 😌 · real VOA ~60% first listen",
-  "reading": "13/11: B1+ article 3/3, 95–100%, 😌 'easy' (1 read, 58 wpm incl. glossary) · new story first read 124 wpm, 99% (🙂) · re-read 121 wpm · 12/11 first read ~100 wpm · B1+/B2 article 99%",
+  "reading": "13/11: Nam's message (recap, all week-1 chunks) 3/3, 100%, 😌, 2 reads ≈ 95 wpm each · B1+ article 3/3, 95–100%, 😌 (58 wpm incl. glossary) · new story first read 124 wpm, 99% · re-read 121 wpm · 12/11 ~100 wpm",
   "vocab": "~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt",
   "grammar": "Day 1 mistakes now fixed: be/get used to + V-ing, suggest + V-ing, although vs unless (12/11)"
  },
@@ -376,7 +376,8 @@
  "input_level": {
   "listening": "B1",
   "reading": "B1+",
-  "note_md": "**Comfortable level** = you understand straight away, without strain or translating. Lessons are built at this level (that's real *comprehensible input*). The *with effort* level is only what you can manage in a test. We move up one small step when 2–3 lessons in a row feel **😌 relaxed** and you understand ≥ 90%."
+  "note_md": "**Comfortable level** = you understand straight away, without strain or translating. Lessons are built at this level (that's real *comprehensible input*). The *with effort* level is only what you can manage in a test. We move up one small step when 2–3 lessons in a row feel **😌 relaxed** and you understand ≥ 90%.",
+  "reading_next": "3 lessons in a row 😌 ≥ 95% (13/11: -07, -10, -13) → next reading step: short B2 articles without the word table"
  },
  "notify": {
   "telegram_chat_id": 1270488169
@@ -407,7 +408,7 @@
    {
     "skill": "📖 Reading",
     "now": "B1+ comfortable · B2 with effort",
-    "evidence": "13/11: new story 124 wpm 99% · re-read 121 wpm · 12/11: ~100 wpm · B1+/B2 article 99%",
+    "evidence": "13/11: 3 reading lessons in a row 😌 ≥ 95% (story, B1+ article, recap message ~95 wpm) · new story 124 wpm 99% · re-read 121 wpm",
     "b2": "B2 articles ≥ 95% at ≥ 180 words/min, no going back",
     "c1": "Ordinary novels and long opinion pieces ≥ 95% at ≥ 220 words/min",
     "gap": "Understanding is there – speed: ~100–120 → 180+ words/min"

@@ -336,6 +336,14 @@
    "title": "Why is the first week at a new job so tiring?",
    "kind": "Reading",
    "device": "computer"
+  },
+  {
+   "start": "2026-11-13T17:49+07:00",
+   "min": 6.9,
+   "lesson": "2026-11-13-13",
+   "title": "Nam's message home",
+   "kind": "Reading",
+   "device": "computer"
   }
  ],
  "days": {
@@ -447,7 +455,7 @@
    ]
   },
   "2026-11-13": {
-   "min": 67.5,
+   "min": 74.4,
    "blocks": [
     {
      "start": "2026-11-13T00:02+07:00",
@@ -525,6 +533,14 @@
      "lessons": [
       "Why is the first week at a new job so tiring?"
      ]
+    },
+    {
+     "start": "2026-11-13T17:49+07:00",
+     "end": "2026-11-13T17:55+07:00",
+     "min": 6.9,
+     "lessons": [
+      "Nam's message home"
+     ]
     }
    ]
   }
@@ -599,6 +615,18 @@
    "words": 227,
    "sec": 236,
    "wpm": 58,
+   "pauses": 0,
+   "left_page": 0
+  },
+  {
+   "at": "2026-11-13T10:49:25.533Z",
+   "lesson": "2026-11-13-13",
+   "title": "Nam's message home",
+   "part": 0,
+   "pass": 1,
+   "words": 161,
+   "sec": 249,
+   "wpm": 39,
    "pauses": 0,
    "left_page": 0
   }
