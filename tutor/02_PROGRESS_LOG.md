@@ -7,7 +7,7 @@
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
 - Tuần: 1 · Streak: 2 ngày · Đã chấm: 11/22 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
-- Cập nhật hồ sơ: 2026-11-13T08:35:51.954013+00:00
+- Cập nhật hồ sơ: 2026-11-13T08:39:53.225148+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -75,6 +75,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-13 | Tân (sau bài 03): muốn có câu hỏi để tự kiểm tra – bài đọc ~3 câu, bài nghe 1–2 câu ngắn. → thay quy tắc 'không quiz': mỗi bài có Quick check (câu chọn, đáp án + giải thích hiện ngay) ở cuối + % hiểu + Ask me. Đã thêm vào mọi bài còn lại 13/11. Đồng hồ đọc ngầm đo sai (đếm cả lúc viết feedback) → chỉ đếm khi đoạn văn ở giữa màn hình và không đang gõ. |
 | 2026-11-13 | Tân: cảm thấy vẫn đọc từng từ, chưa theo cụm. Giải thích: mắt ai cũng dừng ở hầu hết các từ; đọc theo cụm = nhận diện từ tự động, đến từ đọc nhiều bài dễ + đọc lại + đọc kèm nghe. Tốc độ đang lên: 100 → 121–124 wpm. Giữ: đọc kèm nghe ở lượt 2, 1 bài đọc lưu loát rất dễ/ngày. |
 | 2026-11-13 | Chấm 06/07: nghe truyện ~70% (dòng dẫn chuyện dài 4 câu nghe lại 12×), Tân thấy dẫn chuyện nhanh; hỏi đọc chậm có ảnh hưởng nghe. → (1) mỗi dòng listen = 1 câu (≤ ~110 ký tự) để bấm nghe lại đúng câu; (2) chuẩn hoá giọng TTS về ~160 wpm (SCALE trong audio.py: lessac 1.25, ryan 1.4); (3) giữ mức nghe B1 nhưng truyện có dẫn chuyện dài là 'B1 with effort' – tăng dần độ dài; đọc kèm nghe luyện cả hai. |
+| 2026-11-13 | Tân: KHÔNG làm chậm giọng – 'vẫn thấy thú vị, khó thì luyện nhiều sẽ quen, phải cố gắng'. → bỏ chỉnh tốc độ TTS (giữ tốc độ gốc), chỉ giữ chia 1 câu/dòng để bấm nghe lại đúng câu. Thử thách vừa phải (🙂) là được, không hạ mức vì 1 bài khó. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |

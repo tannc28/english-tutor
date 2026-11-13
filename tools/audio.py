@@ -15,7 +15,7 @@ PIPER = os.environ.get("PIPER_DIR", "/root/piper")
 VOICE = {"rounded": "en_GB-alan-medium", "glassy": "en_GB-alba-medium", "buttery": "en_US-lessac-medium", "airy": "en_US-lessac-medium",
          "us_f": "en_US-lessac-medium", "us_m": "en_US-ryan-medium"}
 # Tốc độ: chuẩn hoá mọi giọng về nhịp nói TỰ NHIÊN (~210–235 từ/phút khi đang nói, ~150–165 tính cả nghỉ) – 13/11: ryan mặc định ~290 wpm, nhanh hơn người thật
-SCALE = {"en_US-lessac-medium": 1.25, "en_US-ryan-medium": 1.4, "en_GB-alba-medium": 1.05, "en_GB-alan-medium": 1.0}
+SCALE = {}  # Tân 13/11: GIỮ tốc độ gốc của giọng (thử thách, luyện nhiều sẽ quen) – không làm chậm
 # Mặc định giọng MỸ (Tân chọn 12/11): từ = us_f, câu ví dụ = us_m; bài không ghi voice → buttery (Mỹ).
 _cache = {}
 
