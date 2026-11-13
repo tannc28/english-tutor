@@ -5,16 +5,16 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 7/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 8/22 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
-- Cập nhật hồ sơ: 2026-11-13T05:48:51.273235+00:00
+- Cập nhật hồ sơ: 2026-11-13T06:19:03.545980+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
 |---|---|---|
 | Tổng thể | B1+ | Đánh giá đầu vào 11/11: đọc kéo lên, nghe kéo xuống |
 | Nghe | B1 (comfortable) · B1+ (with effort) | 13/11: fast office dialogue 90% first listen → 100% at 1×, relaxed (2 in a row) → comfortable level raised A2+ → B1 · 12/11: real VOA ~60% first listen |
-| Đọc | B1+ (comfortable) · B2 (with effort) | 12/11: story B1 95% at ~100 words/min, B1+/B2 article 99% and felt easy → comfortable level raised to B1+ |
+| Đọc | B1+ (comfortable) · B2 (with effort) | 13/11: fast re-read 344 words in 2:51 ≈ 121 wpm (12/11 first read ~100 wpm), 100%, relaxed · linking-words text 100% · 12/11: B1+/B2 article 99% |
 | Từ vựng | B1+ | ~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt |
 | Ngữ pháp & từ nối | B1+ → B2 (linking words solid) | Day 1 mistakes now fixed: be/get used to + V-ing, suggest + V-ing, although vs unless (12/11) |
 
@@ -85,7 +85,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 7/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 8/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -104,7 +104,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B101 | 2026-11-13 | Work chunks you will hear today | graded | 100% | – | 1 | 5 | – | 100% ở 1× (13 lượt) · 😌 · Tân: bài Learn tách riêng thừa – gộp vào bài nghe/đọc thật |
 | T1 · B102 | 2026-11-13 | Meeting the team | graded | 90% | – | 1 | 10 | – | nghe lần đầu 90% → 100% ở 1× · 😌 · 2 bài nghe liền 😌 ≥90% → nâng nghe A2+ → B1 · Tân muốn nghe truyện dài hơn |
 | T1 · B103 | 2026-11-13 | Linking words: how ideas connect | graded | – | 100% | 1 | 6 | – | 100% · check đúng · ~90 wpm (đồng hồ ngầm đo sai 26 wpm → đã sửa) · Tân muốn bài đọc ~3 câu hỏi, nghe 1–2 câu |
-| T1 · B104 | – | Fast re-read: The Café on the Corner | open | – | – | – | – | – |  |
+| T1 · B104 | 2026-11-13 | Fast re-read: The Café on the Corner | graded | – | 100% | 1 | 4 | – | đọc lại 344 từ trong 2:51 ≈ 121 wpm (lần đầu 12/11 ~100) · 2/2 · 😌 |
 | T1 · B105 | – | Hope Street Ep. 3 (1/2): Lunch with Tom | open | – | – | – | – | – |  |
 | T1 · B106 | – | Hope Street Ep. 3 (1/2): listen | open | – | – | – | – | – |  |
 | T1 · B107 | – | Hope Street Ep. 3 (2/2): A heavy box | open | – | – | – | – | – |  |

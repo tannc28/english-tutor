@@ -1,0 +1,92 @@
+{
+  "answers": {
+    "r1": "He didn't want to be late on his first day",
+    "r2": "Everyone on the street knows about it",
+    "t": "4 hoặc 5 gì đó tôi quên đêm",
+    "u1": "100"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-04",
+  "log": {
+    "listen": {},
+    "parts": {
+      "0": {
+        "ms": 125000
+      },
+      "1": {
+        "ms": 95000
+      },
+      "fb": {
+        "ms": 15000
+      }
+    },
+    "q": {
+      "r1": {
+        "changes": [],
+        "edits": 1,
+        "first": 227,
+        "last": "He didn't want to be late on his first day",
+        "ms": 5000
+      },
+      "r2": {
+        "changes": [],
+        "edits": 1,
+        "first": 231,
+        "last": "Everyone on the street knows about it",
+        "ms": 0
+      },
+      "t": {
+        "edits": 48,
+        "first": 202,
+        "ms": 25000
+      },
+      "u1": {
+        "edits": 3,
+        "first": 232,
+        "ms": 5000
+      }
+    },
+    "read": {
+      "0": {
+        "cur": null,
+        "reads": [
+          {
+            "at": "2026-11-13T06:14:29.566Z",
+            "auto": 0,
+            "ms": 170664,
+            "wpm": 121
+          }
+        ],
+        "words": 344
+      }
+    },
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-13T06:14:25.562Z",
+        "e": 240,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 0,
+        "vw": 430
+      }
+    ],
+    "t0": 1794550465562,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T06:18:25.192Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "48962804-90b4-454e-a13c-fb9ce2d870dc",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-13T06:18:25.192Z"
+}

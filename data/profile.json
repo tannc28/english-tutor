@@ -2,7 +2,7 @@
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
  "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
- "updatedAt": "2026-11-13T05:48:51.273235+00:00",
+ "updatedAt": "2026-11-13T06:19:03.545980+00:00",
  "week": 1,
  "streak": 2,
  "focus_now": "INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.",
@@ -16,7 +16,7 @@
  "levels": {
   "overall": "Đánh giá đầu vào 11/11: đọc kéo lên, nghe kéo xuống",
   "listening": "13/11: fast office dialogue 90% first listen → 100% at 1×, relaxed (2 in a row) → comfortable level raised A2+ → B1 · 12/11: real VOA ~60% first listen",
-  "reading": "12/11: story B1 95% at ~100 words/min, B1+/B2 article 99% and felt easy → comfortable level raised to B1+",
+  "reading": "13/11: fast re-read 344 words in 2:51 ≈ 121 wpm (12/11 first read ~100 wpm), 100%, relaxed · linking-words text 100% · 12/11: B1+/B2 article 99%",
   "vocab": "~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt",
   "grammar": "Day 1 mistakes now fixed: be/get used to + V-ing, suggest + V-ing, although vs unless (12/11)"
  },
@@ -391,10 +391,10 @@
    {
     "skill": "📖 Reading",
     "now": "B1+ comfortable · B2 with effort",
-    "evidence": "12/11: B1 story 95% at ~100 wpm · B1+/B2 article 99%, felt easy",
+    "evidence": "13/11: re-read 121 wpm, 100% · 12/11: B1 story 95% at ~100 wpm · B1+/B2 article 99%",
     "b2": "B2 articles ≥ 95% at ≥ 180 words/min, no going back",
     "c1": "Ordinary novels and long opinion pieces ≥ 95% at ≥ 220 words/min",
-    "gap": "Understanding is there – speed: ~100 → 180+ words/min"
+    "gap": "Understanding is there – speed: ~100–120 → 180+ words/min"
    },
    {
     "skill": "🔤 Vocabulary",

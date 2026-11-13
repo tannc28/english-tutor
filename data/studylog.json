@@ -272,6 +272,14 @@
    "title": "Linking words: how ideas connect",
    "kind": "Reading",
    "device": "computer"
+  },
+  {
+   "start": "2026-11-13T13:14+07:00",
+   "min": 3.9,
+   "lesson": "2026-11-13-04",
+   "title": "Fast re-read: The Café on the Corner",
+   "kind": "Reading",
+   "device": "phone"
   }
  ],
  "days": {
@@ -383,7 +391,7 @@
    ]
   },
   "2026-11-13": {
-   "min": 29.4,
+   "min": 33.3,
    "blocks": [
     {
      "start": "2026-11-13T00:02+07:00",
@@ -418,6 +426,14 @@
       "Meeting the team",
       "Linking words: how ideas connect"
      ]
+    },
+    {
+     "start": "2026-11-13T13:14+07:00",
+     "end": "2026-11-13T13:17+07:00",
+     "min": 3.9,
+     "lessons": [
+      "Fast re-read: The Café on the Corner"
+     ]
     }
    ]
   }
@@ -432,6 +448,18 @@
    "words": 160,
    "sec": 374,
    "wpm": 26,
+   "pauses": 0,
+   "left_page": 0
+  },
+  {
+   "at": "2026-11-13T06:14:29.566Z",
+   "lesson": "2026-11-13-04",
+   "title": "Fast re-read: The Café on the Corner",
+   "part": 0,
+   "pass": 1,
+   "words": 344,
+   "sec": 171,
+   "wpm": 121,
    "pauses": 0,
    "left_page": 0
   }
