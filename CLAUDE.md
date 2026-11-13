@@ -50,6 +50,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Job sáng đọc tin Tân nhắn bot (`tools/notify.py --inbox`): xin nghỉ, góp ý → xử lý như Quy trình XIN NGHỈ.
 
 ## Chọn model (Tân yêu cầu 12/11 – có benchmark 12/11, xem `session/MODEL_BENCHMARK.md`)
+- **KHÔNG dùng Fable/Mythos (Tân 13/11: quá đắt) – Opus là model cao nhất của lớp.** Theo dõi model mới: `data/models_seen.json` (model đang dùng, ngày kiểm/benchmark). **Job Chủ nhật** so với danh sách model mới nhất (system prompt mục Environment + skill `claude-api` bảng Current Models): ra **Opus/Sonnet/Haiku mới** → benchmark lại ngay (cùng đề, chấm từng cặp, đo giá/tốc độ) rồi đổi model đang dùng nếu tốt hơn hoặc rẻ hơn mà chất lượng giữ.
 - **Opus = người điều phối (Tân 13/11):** tự quyết việc nào giao model nào theo bảng dưới; mỗi lần giao ghi rõ model. Gặp **loại việc mới** hoặc thấy **chất lượng tụt** → tự chạy benchmark nhỏ (cùng đề cho 2 model, chấm từng cặp, đo thời gian/token) rồi cập nhật bảng + `session/MODEL_BENCHMARK.md`. Định kỳ **mỗi tháng** (job CN đầu tháng) benchmark lại 1–2 việc chính – model mới/cập nhật có thể đổi kết quả. check.py nhắc khi benchmark cũ hơn 30 ngày.
   | Việc | Model |
   |---|---|
@@ -64,7 +65,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - **Haiku:** vẽ SVG thẻ từ dự phòng, việc máy móc (định dạng tin Telegram, chép/kiểm tra file, kiểm tra link). **Không** giao Haiku soạn nghĩa từ/ngữ pháp (benchmark: 2/12 thẻ từ sai nghĩa, trong đó *unless* bị định nghĩa ngược).
 
 ## Công cụ có sẵn
-- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone; **giọng Mỹ mặc định** – Tân chọn 12/11: từ = en_US-lessac, câu ví dụ = en_US-ryan; GIỮ tốc độ gốc, KHÔNG làm chậm – Tân 13/11 'khó thì luyện nhiều sẽ quen'; mỗi dòng listen = 1 câu để bấm nghe lại đúng câu) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · `tools/flux.py` (minh hoạ FLUX trên Cloudflare, nhân vật cố định `data/flux_cast.json`; dự phòng SVG Sonnet/Haiku – web/README "Minh hoạ"); không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`.
+- `tools/cost.py` (chi phí AI tương đương giá API theo ngày/model → `data/costs.json`, tab Progress › Stats; sync.py tự chạy) · `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone; **giọng Mỹ mặc định** – Tân chọn 12/11: từ = en_US-lessac, câu ví dụ = en_US-ryan; GIỮ tốc độ gốc, KHÔNG làm chậm – Tân 13/11 'khó thì luyện nhiều sẽ quen'; mỗi dòng listen = 1 câu để bấm nghe lại đúng câu) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · `tools/flux.py` (minh hoạ FLUX trên Cloudflare, nhân vật cố định `data/flux_cast.json`; dự phòng SVG Sonnet/Haiku – web/README "Minh hoạ"); không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`.
 
 ## Quyền với repo (Tân cho phép 11/11/2026)
 - Claude có **toàn quyền** trên repo này: được commit và **push thẳng lên `main`**, không cần tạo nhánh riêng hay PR.

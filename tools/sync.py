@@ -89,6 +89,12 @@ def build_studylog():
     return out
 
 
+def build_costs():
+    """Chi phí AI theo ngày → data/costs.json (tools/cost.py)."""
+    import subprocess
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cost.py')], check=False)
+
+
 def main():
     days = load(D("lessons.json"))["lessons"]
     weeks = load(D("weeks.json"))["weeks"]
@@ -226,7 +232,7 @@ def main():
         json.dump(lib, f, ensure_ascii=False, indent=1)
 
     # ---- Danh sách file xuất bản kèm web (không có keys/)
-    files = {f"data/{n}": f"data/{n}" for n in ("weeks.json", "lessons.json", "profile.json", "resources.json", "levels.json", "mastery.json", "library.json", "studylog.json")}
+    files = {f"data/{n}": f"data/{n}" for n in ("weeks.json", "lessons.json", "profile.json", "resources.json", "levels.json", "mastery.json", "library.json", "studylog.json", "costs.json")}
     for fn in sorted(os.listdir(D("vocab"))):
         if fn.endswith(".json"): files[f"data/vocab/{fn}"] = f"data/vocab/{fn}"
     for sub in ("lessons", "grades", "submissions"):
@@ -244,7 +250,7 @@ def main():
     print(f"OK – {len(weeks)} tuần, {len(days)} bài, {len(graded)} đã chấm. Progress Log đã sinh lại. {len(files)} file cần xuất bản (web/publish_files.json).")
 
 if __name__ == "__main__":
-    build_studylog()
+    build_studylog(); build_costs()
     main()
     # Tự soát sổ gia sư (Tân 12/11: "đây là cuốn sổ của bạn, phải tự biết cần thêm gì")
     import subprocess

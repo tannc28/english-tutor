@@ -781,6 +781,8 @@ body{font-size:14.5px}
   .md.rd>p:has(>img) img{width:100%;max-width:none}
 }
 @media (max-width:640px){.card .tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}.card .tiles .tile b{font-size:1.15rem}}
+@media (max-width:640px){.cost-t th:last-child,.cost-t td:last-child{display:none}}
+.cv-tabs{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:6px}.cv-tabs .legend{margin-left:auto}
   table.fcst td{vertical-align:top;font-size:13px;line-height:1.4} table.fcst td .note{font-size:12px;margin-top:2px} table.fcst th{white-space:nowrap;text-align:left;vertical-align:bottom}
 </style>
 <script>
@@ -1604,10 +1606,50 @@ body{font-size:14.5px}
   let paceChoice = (() => { try { const v = +localStorage.getItem("paceH"); return v > 0 ? v : null; } catch(e){ return null; } })();
   function paceSpan(r0, r1, pw){ const w = h => { const d = new Date(); d.setDate(d.getDate() + Math.round(h/pw*7)); return d.toLocaleDateString("en-GB",{month:"short",year:"numeric"}); }; const a = w(r0), b = w(r1); return a===b ? a : a+" – "+b; }
   function weekKey(d){ const t = new Date(d+"T12:00:00"); const day = (t.getDay()+6)%7; t.setDate(t.getDate()-day); return t.toISOString().slice(0,10); }
-  let SL = null, slWeek = null;   // giờ học thật (data/studylog.json – sync.py tính từ log bài nộp)
+  let SL = null, slWeek = null, CO = null, costView = "day";   // CO = data/costs.json (tools/cost.py)
+  // Chi phi lop hoc (Tan 13/11): theo ngay / tuan / thang, theo model, chi phi moi gio hoc that
+  function costHtml(studyH){
+    if (!CO || !CO.days) return "";
+    const days = CO.days, keys = Object.keys(days).sort(), vnd = CO.vnd_per_usd || 26000, t = todayStr();
+    const $f = u => "$" + (u >= 100 ? u.toFixed(0) : u.toFixed(2)), vf = u => "≈ " + Math.round(u * vnd / 1000).toLocaleString("en-GB") + "k đ";
+    const sum = fn => keys.filter(fn).reduce((a, k) => a + days[k].usd, 0);
+    const wk0 = weekKey(t), mo = t.slice(0, 7);
+    const today = sum(k => k === t), week = sum(k => weekKey(k) === wk0), month = sum(k => k.slice(0, 7) === mo), all = sum(() => true);
+    const grp = costView === "week" ? k => weekKey(k) : costView === "month" ? k => k.slice(0, 7) : k => k;
+    const G = {}; keys.forEach(k => { const g = grp(k); G[g] = G[g] || {usd: 0, by: {}}; G[g].usd += days[k].usd; Object.entries(days[k].by || {}).forEach(([m, b]) => { G[g].by[m] = (G[g].by[m] || 0) + b.usd; }); });
+    const gk = Object.keys(G).sort().slice(-14), mx = Math.max(...gk.map(k => G[k].usd), 0.01);
+    const COL = {opus: "var(--accent)", sonnet: "var(--s-listen)", haiku: "#16a34a"};
+    const W = 720, H = 190, L = 44, B = 26, T = 14, iw = W - L - 10, ih = H - T - B, bw = Math.min(42, iw / Math.max(gk.length, 1) - 8);
+    let g = [0, mx / 2, mx].map(v => `<line class="grid" x1="${L}" x2="${W - 10}" y1="${T + ih - v / mx * ih}" y2="${T + ih - v / mx * ih}"/><text class="axis" x="${L - 6}" y="${T + ih - v / mx * ih + 4}" text-anchor="end">$${v.toFixed(v < 10 ? 1 : 0)}</text>`).join("");
+    gk.forEach((k, i) => { const cx = L + (i + 0.5) * iw / gk.length; let y = T + ih;
+      ["haiku", "sonnet", "opus"].forEach(m => { const u = G[k].by[m] || 0; if (!u) return; const h = u / mx * ih; y -= h;
+        g += `<rect x="${cx - bw / 2}" y="${y}" width="${bw}" height="${h}" fill="${COL[m]}" rx="2"><title>${esc(k)} · ${m}: $${u.toFixed(2)}</title></rect>`; });
+      g += `<text class="dlab" x="${cx}" y="${y - 5}" text-anchor="middle">${$f(G[k].usd)}</text><text class="axis" x="${cx}" y="${H - 8}" text-anchor="middle">${costView === "month" ? k.slice(5, 7) + "/" + k.slice(2, 4) : k.slice(8, 10) + "/" + k.slice(5, 7)}</text>`; });
+    const byM = {}; keys.forEach(k => Object.entries(days[k].by || {}).forEach(([m, b]) => { const r = byM[m] = byM[m] || {usd: 0, calls: 0}; r.usd += b.usd; r.calls += b.calls || 0; }));
+    const perH = studyH > 0.2 ? all / studyH : null;
+    return `<section class="card sec">
+      <span class="label">💸 What the class costs – AI, at API prices <span class="note">· updated ${esc((CO.updated || "").replace("T", " "))}</span></span>
+      <div class="tiles">
+        <div class="tile"><span class="label">Today</span><b>${$f(today)}</b><span class="sub">${vf(today)}</span></div>
+        <div class="tile"><span class="label">This week</span><b>${$f(week)}</b><span class="sub">${vf(week)}</span></div>
+        <div class="tile"><span class="label">This month</span><b>${$f(month)}</b><span class="sub">${vf(month)}</span></div>
+        <div class="tile"><span class="label">All time</span><b>${$f(all)}</b><span class="sub">${vf(all)}${perH ? ` · ${$f(perH)} per hour you studied` : ""}</span></div>
+      </div>
+      <div class="st-grid"><div>
+        <div class="cv-tabs">${[["day", "Day"], ["week", "Week"], ["month", "Month"]].map(([k, t2]) => `<button type="button" class="tbtn cv-b" data-cv="${k}" aria-pressed="${k === costView}">${t2}</button>`).join("")}
+          <span class="legend">${Object.keys(byM).map(m => `<span><i style="background:${COL[m] || "var(--ink-3)"}"></i>${m}</span>`).join("")}</span></div>
+        <div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="AI cost per ${costView}">${g}</svg></div></div>
+        <div><table class="days fcst cost-t"><thead><tr><th>Model</th><th>Cost</th><th>Share</th><th>Calls</th><th>Used for</th></tr></thead><tbody>
+          ${Object.entries(byM).sort((a, b) => b[1].usd - a[1].usd).map(([m, r]) => `<tr><td><b>${m}</b></td><td class="num">${$f(r.usd)}</td><td class="num">${Math.round(r.usd / all * 100)}%</td><td class="num">${r.calls}</td><td>${({opus: "planning, grading, decisions, building the web", sonnet: "writing lessons & content (Opus checks)", haiku: "simple pictures, file checks"})[m] || ""}</td></tr>`).join("")}
+        </tbody></table>
+        <p class="note">API-equivalent cost of every AI call for this class (your tutor + helpers), at public API prices. On a Claude subscription your real bill is the plan fee – this shows what the class is worth and where it goes. Images (Cloudflare FLUX) and Telegram are free. The first days include building the whole web app.</p></div></div>
+    </section>`;
+  }
+  document.addEventListener("click", ev => { const b = ev.target.closest?.(".cv-b"); if (!b) return; costView = b.dataset.cv; renderProgress(); });   // giờ học thật (data/studylog.json – sync.py tính từ log bài nộp)
   function renderProgress(){
     const v = $("#view-progress"), P = profile || {}, coach = P.coach || {};
     if (SL === null){ SL = false; getJSON("data/studylog.json").then(r => { SL = r; renderProgress(); }).catch(() => {}); }
+    if (CO === null){ CO = false; getJSON("data/costs.json").then(r => { CO = r; renderProgress(); }).catch(() => {}); }
     const rows = stats.slice().sort((a,b)=>String(a.date).localeCompare(String(b.date)));
     const avg = k => { const a = rows.map(r=>r[k]).filter(x=>x!=null&&x!==""); return a.length ? a.reduce((s,x)=>s+ +x,0)/a.length : null; };
     const recent = k => { const a = rows.slice(-5).map(r=>r[k]).filter(x=>x!=null&&x!==""); return a.length ? a.reduce((s,x)=>s+ +x,0)/a.length : null; };
@@ -1681,6 +1723,7 @@ body{font-size:14.5px}
               <p class="note">Real study time = active time inside lessons (measured automatically), plus any extra minutes you write in the feedback.</p></div>`; })() : ""}</div>
           <p class="note">Current target: <b>${target} h/week</b>${coach.target_why?` – ${inline(coach.target_why)}`:""}. Your real pace so far: <b>${realPace!=null?realPace.toFixed(1)+" h/week":"–"}</b> (${totalH.toFixed(1)} h in ${spanDays} day${spanDays===1?"":"s"}).</p>
         </section>
+        ${costHtml(totalH)}
         <div class="duo"><section class="card sec">
           <span class="label">Weak spots & plan</span>
           ${weak.length ? `<div class="weak">${weak.map(w=>`<div class="weak-item">${w.area?`<span class="pill">${esc(w.area)}</span>`:""}<div><b>${inline(w.detail||"")}</b>${w.evidence?`<p class="note">Evidence: ${inline(w.evidence)}</p>`:""}${w.plan?`<p>→ ${inline(w.plan)}</p>`:""}</div></div>`).join("")}</div>` : `<p class="note">None yet.</p>`}

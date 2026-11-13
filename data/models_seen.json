@@ -1,0 +1,28 @@
+{
+ "_note": "Model lớp đang dùng (Tân 13/11: KHÔNG dùng Fable/Mythos – quá đắt; Opus là cao nhất). Job CN so với danh sách model mới nhất (system prompt 'Environment' + skill claude-api bảng 'Current Models'); có Opus/Sonnet/Haiku mới → benchmark lại rồi cập nhật file này + CLAUDE.md.",
+ "checked": "2026-11-13",
+ "benchmarked": "2026-11-13",
+ "use": {
+  "opus": "claude-opus-5-5",
+  "sonnet": "claude-sonnet-5-5",
+  "haiku": "claude-haiku-5-5"
+ },
+ "price_usd_per_mtok": {
+  "claude-opus-5-5": [
+   4,
+   20
+  ],
+  "claude-sonnet-5-5": [
+   2,
+   10
+  ],
+  "claude-haiku-5-5": [
+   0.1,
+   0.5
+  ]
+ },
+ "excluded": [
+  "claude-fable-*",
+  "claude-mythos-*"
+ ]
+}

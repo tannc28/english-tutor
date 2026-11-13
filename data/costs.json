@@ -1,0 +1,103 @@
+{
+ "_note": "Sinh bởi tools/cost.py – chi phí AI tương đương giá API (USD), theo ngày giờ VN. FLUX/Telegram miễn phí.",
+ "updated": "2026-11-13T15:53+07:00",
+ "vnd_per_usd": 26000,
+ "rates_usd_per_mtok": {
+  "opus": {
+   "input": 4.0,
+   "output": 20.0,
+   "cache_read": 0.2
+  },
+  "sonnet": {
+   "input": 2.0,
+   "output": 10.0,
+   "cache_read": 0.1
+  },
+  "haiku": {
+   "input": 0.1,
+   "output": 0.5,
+   "cache_read": 0.01
+  },
+  "fable": {
+   "input": 8.0,
+   "output": 40.0,
+   "cache_read": 0.2
+  }
+ },
+ "days": {
+  "2026-11-11": {
+   "usd": 56.985,
+   "by": {
+    "opus": {
+     "usd": 56.977,
+     "in": 803,
+     "out": 440490,
+     "cache_read": 183883964,
+     "cache_write": 1423374,
+     "calls": 365
+    },
+    "haiku": {
+     "usd": 0.008,
+     "in": 17,
+     "out": 7742,
+     "cache_read": 65694,
+     "cache_write": 29767,
+     "calls": 6
+    }
+   },
+   "calls": 371
+  },
+  "2026-11-12": {
+   "usd": 116.532,
+   "by": {
+    "opus": {
+     "usd": 114.128,
+     "in": 1581,
+     "out": 740643,
+     "cache_read": 354814888,
+     "cache_write": 3543183,
+     "calls": 747
+    },
+    "sonnet": {
+     "usd": 2.109,
+     "in": 42,
+     "out": 95005,
+     "cache_read": 1181995,
+     "cache_write": 416290,
+     "calls": 21
+    },
+    "haiku": {
+     "usd": 0.296,
+     "in": 84,
+     "out": 338256,
+     "cache_read": 2618485,
+     "cache_write": 803183,
+     "calls": 42
+    }
+   },
+   "calls": 810
+  },
+  "2026-11-13": {
+   "usd": 54.945,
+   "by": {
+    "opus": {
+     "usd": 54.201,
+     "in": 739,
+     "out": 266498,
+     "cache_read": 153667985,
+     "cache_write": 2360078,
+     "calls": 358
+    },
+    "sonnet": {
+     "usd": 0.744,
+     "in": 18,
+     "out": 9700,
+     "cache_read": 438088,
+     "cache_write": 241404,
+     "calls": 9
+    }
+   },
+   "calls": 367
+  }
+ }
+}

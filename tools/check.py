@@ -146,6 +146,13 @@ def main():
             if (dt.datetime.now(TZ).date() - lastd).days > 30:
                 warn.append(f'Benchmark model cũ ({lastd}) > 30 ngày – chạy lại benchmark nhỏ (Opus vs Sonnet vs Haiku) cho 1–2 việc chính, cập nhật bảng trong CLAUDE.md')
 
+    # 3d) Theo dõi model mới (Tân 13/11): kiểm tra mỗi tuần
+    ms = D('models_seen.json')
+    if os.path.exists(ms):
+        chk = str(J(ms).get('checked', ''))
+        if chk and (dt.datetime.now(TZ).date() - dt.date.fromisoformat(chk)).days > 8:
+            warn.append(f'models_seen.json: lần kiểm model mới {chk} > 8 ngày – xem có Opus/Sonnet/Haiku mới không (không dùng Fable), có thì benchmark lại')
+
     # 4) Từ mới phải đủ để vào thư viện Review
     for x in J(D('words.json')).get('words', []):
         if not x.get('def') or not x.get('ex'):
