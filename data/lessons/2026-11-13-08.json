@@ -36,17 +36,29 @@
     {
      "who": "",
      "voice": "us_f",
-     "text": "Even though he was tired, Nam picked up the other end of the box. Two days in Manchester, and he already knew four people on Hope Street. That felt like a good start."
+     "text": "Even though he was tired, Nam picked up the other end of the box."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "Two days in Manchester, and he already knew four people on Hope Street."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "That felt like a good start."
     }
    ],
    "questions": [],
    "marks": [
     0.0,
-    6.6,
-    14.0,
-    16.01,
-    17.72,
-    23.68
+    7.63,
+    14.96,
+    17.38,
+    19.48,
+    25.57,
+    30.26,
+    35.28
    ]
   },
   {

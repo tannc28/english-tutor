@@ -1,0 +1,21 @@
+{
+ "score": "🎧 Hope Street Ep. 3 (1/2) · 2/2 · ~70% by ear (100% with text) · 🙂 some effort",
+ "gradedAt": "2026-11-13T15:35:51+07:00",
+ "summary_md": "**2/2, ~70% by ear, 100% with the text, 🙂.** You played it 22 times at 1× and replayed lines 17×. The line you replayed most (**12×**) was the **first narrator line** – 4 sentences in one block (*At one o'clock, Tom took Nam to lunch… It seemed to work.*). Next: line 5 (*The afternoon was harder…*, 3×). So the hard part is exactly what you said: **long narration**, not the dialogue.",
+ "asks_md": "**You're right about the narration – and I found two problems on my side:**\n1. **Lines were too long.** One tap replayed 4 sentences at once. → I've split every narrator line into **one sentence per line** in today's remaining listening lessons (08, 11, 14), so you can replay exactly the sentence you missed.\n2. **The voices were a bit fast.** I measured them: narrator ~170 wpm, Nam's voice even faster. Real audiobooks are ~150–160. → I've set all voices to a **natural ~160 wpm** and re-recorded 08, 11, 12, 14.\n\n**\"I need more reading input to understand fast\"** – yes, and you're doing it: reading speed is already 100 → 121–124 wpm this week. Listening and reading grow together (see my answer in lesson 07).",
+ "items": {
+  "l1": {
+   "verdict": "correct",
+   "note_md": "Right."
+  },
+  "l2": {
+   "verdict": "correct",
+   "note_md": "Right – 20 min to log in (an hour on the laptop)."
+  },
+  "u1": {
+   "verdict": "correct",
+   "note_md": "~70% by ear, 100% with text – honest and useful."
+  }
+ },
+ "verdict": "done"
+}

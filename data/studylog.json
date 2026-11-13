@@ -288,6 +288,22 @@
    "title": "Hope Street Ep. 3 (1/2): Lunch with Tom",
    "kind": "Reading",
    "device": "phone"
+  },
+  {
+   "start": "2026-11-13T15:11+07:00",
+   "min": 12.6,
+   "lesson": "2026-11-13-06",
+   "title": "Hope Street Ep. 3 (1/2): listen",
+   "kind": "Listening",
+   "device": "computer"
+  },
+  {
+   "start": "2026-11-13T15:25+07:00",
+   "min": 3.8,
+   "lesson": "2026-11-13-07",
+   "title": "Hope Street Ep. 3 (2/2): A heavy box",
+   "kind": "Reading",
+   "device": "computer"
   }
  ],
  "days": {
@@ -399,7 +415,7 @@
    ]
   },
   "2026-11-13": {
-   "min": 40.4,
+   "min": 56.8,
    "blocks": [
     {
      "start": "2026-11-13T00:02+07:00",
@@ -442,6 +458,15 @@
      "lessons": [
       "Fast re-read: The Café on the Corner",
       "Hope Street Ep. 3 (1/2): Lunch with Tom"
+     ]
+    },
+    {
+     "start": "2026-11-13T15:11+07:00",
+     "end": "2026-11-13T15:28+07:00",
+     "min": 16.4,
+     "lessons": [
+      "Hope Street Ep. 3 (1/2): listen",
+      "Hope Street Ep. 3 (2/2): A heavy box"
      ]
     }
    ]
@@ -495,7 +520,44 @@
    "wpm": 60,
    "pauses": 0,
    "left_page": 0
+  },
+  {
+   "at": "2026-11-13T08:25:01.066Z",
+   "lesson": "2026-11-13-07",
+   "title": "Hope Street Ep. 3 (2/2): A heavy box",
+   "part": 0,
+   "pass": 1,
+   "words": 107,
+   "sec": 88,
+   "wpm": 73,
+   "pauses": 0,
+   "left_page": 0
   }
  ],
- "hard_lines": []
+ "hard_lines": [
+  {
+   "lesson": "2026-11-13-06",
+   "part": 0,
+   "line": 0,
+   "replays": 12
+  },
+  {
+   "lesson": "2026-11-13-06",
+   "part": 0,
+   "line": 4,
+   "replays": 3
+  },
+  {
+   "lesson": "2026-11-13-06",
+   "part": 0,
+   "line": 3,
+   "replays": 1
+  },
+  {
+   "lesson": "2026-11-13-06",
+   "part": 0,
+   "line": 7,
+   "replays": 1
+  }
+ ]
 }

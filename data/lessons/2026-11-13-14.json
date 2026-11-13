@@ -11,36 +11,78 @@
     {
      "who": "Nam",
      "voice": "us_m",
-     "text": "Hi Mum, sorry I didn't call this week. It's been really busy! Don't worry, I'm fine. The job is good, although I'm still getting used to everything."
+     "text": "Hi Mum, sorry I didn't call this week. It's been really busy!"
     },
     {
      "who": "Nam",
      "voice": "us_m",
-     "text": "My manager, Claire, is very kind. On my first day she told me not to worry about being late, because the trains here are terrible. Most days it rains, but people don't seem to care."
+     "text": "Don't worry, I'm fine. The job is good, although I'm still getting used to everything."
     },
     {
      "who": "Nam",
      "voice": "us_m",
-     "text": "My colleague Tom talks very fast. I understand about half of what he says! He showed me around the office, and he says it takes a while to get the hang of everything."
+     "text": "My manager, Claire, is very kind. On my first day she told me not to worry about being late, because the trains here are terrible."
     },
     {
      "who": "Nam",
      "voice": "us_m",
-     "text": "I also met my neighbours. Margaret lives downstairs and knows everyone on the street. Mr Patel lives in Flat 3. I helped him carry a TV up the stairs. It was heavier than it looked!"
+     "text": "Most days it rains, but people don't seem to care."
     },
     {
      "who": "Nam",
      "voice": "us_m",
-     "text": "There's a little café on the corner. Jess, who works there, already remembers my order. In other words, I'm starting to feel at home. I'll call you on Sunday. Love, Nam."
+     "text": "My colleague Tom talks very fast. I understand about half of what he says!"
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "He showed me around the office, and he says it takes a while to get the hang of everything."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I also met my neighbours. Margaret lives downstairs and knows everyone on the street."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Mr Patel lives in Flat 3. I helped him carry a TV up the stairs."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "It was heavier than it looked!"
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "There's a little café on the corner. Jess, who works there, already remembers my order."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "In other words, I'm starting to feel at home."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I'll call you on Sunday. Love, Nam."
     }
    ],
    "questions": [],
    "marks": [
     0.0,
-    7.78,
-    17.44,
-    25.82,
-    35.62
+    4.65,
+    10.52,
+    19.75,
+    23.31,
+    28.72,
+    34.22,
+    40.3,
+    45.84,
+    48.03,
+    54.23,
+    57.68
    ]
   },
   {

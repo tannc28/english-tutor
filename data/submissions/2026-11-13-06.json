@@ -1,0 +1,91 @@
+{
+  "answers": {
+    "l1": "two days",
+    "l2": "twenty minutes",
+    "u1": "Về hiểu thì tôi hiểu hết 100% nhưng mà nghe chắc chỉ hiểu dược 70% thôi do phần dẫn chuyện là chính (Nhưng mà đối với tôi phần dẫn chuyệnvẫn nghe hơi yêu, cảm giác vẫn hơi nhanh, vì bản chất để tôi đọc và hiểu được chỗ dẫn chuyện kia cũng lâu đấy, có vể tôi cũng phải rèn luyện thêm khả năng đọc nhanh hơn nữa)"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "- Khá oke tuy nhiên cảm thấy input ở phần đọc tôi vẫn chưa đủ để hiểu nhanh, chắc phải input nhiều hơn nữa",
+    "minutes": "",
+    "strain": "some"
+  },
+  "lessonId": "2026-11-13-06",
+  "log": {
+    "listen": {
+      "0": {
+        "answeredBeforeReveal": "0/0",
+        "plays": 22,
+        "rates": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 186,
+        "segIdx": {
+          "0": 12,
+          "3": 1,
+          "4": 3,
+          "7": 1
+        },
+        "segs": 17
+      }
+    },
+    "parts": {
+      "fb": {
+        "ms": 755000
+      }
+    },
+    "q": {
+      "l1": {
+        "changes": [],
+        "edits": 1,
+        "first": 646,
+        "last": "two days",
+        "ms": 5000
+      },
+      "l2": {
+        "changes": [],
+        "edits": 1,
+        "first": 650,
+        "last": "twenty minutes",
+        "ms": 0
+      },
+      "u1": {
+        "edits": 529,
+        "first": 651,
+        "ms": 175000
+      }
+    },
+    "sessions": [
+      {
+        "app": "Claude app",
+        "at": "2026-11-13T08:11:09.458Z",
+        "e": 826,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 0,
+        "vw": 1918
+      }
+    ],
+    "t0": 1794557469458,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T08:24:55.144Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "87b0795c-70fa-481b-b315-ff82a43beba3",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-13T08:24:55.144Z"
+}

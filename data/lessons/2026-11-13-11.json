@@ -11,42 +11,108 @@
     {
      "who": "",
      "voice": "us_f",
-     "text": "Why is the first week at a new job so tiring? You sit at a desk most of the day, so it seems strange to feel so tired in the evening."
+     "text": "Why is the first week at a new job so tiring?"
     },
     {
      "who": "",
      "voice": "us_f",
-     "text": "The answer is in your brain. In a new place, almost nothing is automatic. You have to think about everything: where the kitchen is, how the printer works, what your manager wants, and, of course, everyone's name."
+     "text": "You sit at a desk most of the day, so it seems strange to feel so tired in the evening."
     },
     {
      "who": "",
      "voice": "us_f",
-     "text": "Scientists say that learning new information uses a lot of energy. When you do something for the hundredth time, your brain uses shortcuts. When you do it for the first time, there are no shortcuts. Every small decision takes effort."
+     "text": "The answer is in your brain. In a new place, almost nothing is automatic."
     },
     {
      "who": "",
      "voice": "us_f",
-     "text": "There is also the social side. You want to make a good impression, so you listen carefully, smile a lot and try not to make mistakes. In other words, you are \"on\" all day. That is tiring even for very confident people."
+     "text": "You have to think about everything: where the kitchen is, how the printer works, what your manager wants, and, of course, everyone's name."
     },
     {
      "who": "",
      "voice": "us_f",
-     "text": "The good news is that it gets easier, and quite quickly. After two or three weeks, many things become routine. You no longer need to think about the way to the office or how to log in. Your brain can relax a little."
+     "text": "Scientists say that learning new information uses a lot of energy."
     },
     {
      "who": "",
      "voice": "us_f",
-     "text": "So if you feel exhausted after your first week, don't worry. It doesn't mean the job is wrong for you. It means your brain is working hard to get the hang of something new."
+     "text": "When you do something for the hundredth time, your brain uses shortcuts."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "When you do it for the first time, there are no shortcuts."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "Every small decision takes effort."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "There is also the social side. You want to make a good impression, so you listen carefully, smile a lot and try not to make mistakes."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "In other words, you are \"on\" all day. That is tiring even for very confident people."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "The good news is that it gets easier, and quite quickly."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "After two or three weeks, many things become routine."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "You no longer need to think about the way to the office or how to log in."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "Your brain can relax a little."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "So if you feel exhausted after your first week, don't worry."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "It doesn't mean the job is wrong for you."
+    },
+    {
+     "who": "",
+     "voice": "us_f",
+     "text": "It means your brain is working hard to get the hang of something new."
     }
    ],
    "questions": [],
    "marks": [
     0.0,
-    8.16,
-    20.34,
-    33.92,
-    46.48,
-    58.31
+    4.01,
+    10.08,
+    15.98,
+    25.06,
+    29.8,
+    35.22,
+    39.45,
+    42.49,
+    51.75,
+    58.09,
+    62.6,
+    67.08,
+    71.68,
+    74.19,
+    78.94,
+    82.09
    ]
   },
   {

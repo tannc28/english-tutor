@@ -14,6 +14,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PIPER = os.environ.get("PIPER_DIR", "/root/piper")
 VOICE = {"rounded": "en_GB-alan-medium", "glassy": "en_GB-alba-medium", "buttery": "en_US-lessac-medium", "airy": "en_US-lessac-medium",
          "us_f": "en_US-lessac-medium", "us_m": "en_US-ryan-medium"}
+# Tốc độ: chuẩn hoá mọi giọng về nhịp nói TỰ NHIÊN (~210–235 từ/phút khi đang nói, ~150–165 tính cả nghỉ) – 13/11: ryan mặc định ~290 wpm, nhanh hơn người thật
+SCALE = {"en_US-lessac-medium": 1.25, "en_US-ryan-medium": 1.4, "en_GB-alba-medium": 1.05, "en_GB-alan-medium": 1.0}
 # Mặc định giọng MỸ (Tân chọn 12/11): từ = us_f, câu ví dụ = us_m; bài không ghi voice → buttery (Mỹ).
 _cache = {}
 
@@ -24,7 +26,8 @@ def voice(name):
 
 def pcm(text, vname):
     v = voice(vname); buf = io.BytesIO()
-    with wave.open(buf, "wb") as w: v.synthesize_wav(text, w)
+    from piper import SynthesisConfig
+    with wave.open(buf, "wb") as w: v.synthesize_wav(text, w, syn_config=SynthesisConfig(length_scale=SCALE.get(vname, 1.0)))
     buf.seek(0)
     with wave.open(buf) as r: return r.getframerate(), r.readframes(r.getnframes())
 

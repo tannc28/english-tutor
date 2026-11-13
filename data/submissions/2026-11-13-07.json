@@ -1,0 +1,91 @@
+{
+  "answers": {
+    "r1": "Nam's neighbour in Flat 3",
+    "r2": "Margaret knows everyone and tells everyone everything",
+    "r3": "He was tired, but he still helped",
+    "u1": "100"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Vẫn khá nhẹ nhàng với tôi, tôi đang cố gắng làm quen dần với các chunk và đọc theo cụm từ để hiểu nhanh hơn, một phần do reading của tôii chậm quá làm ảnh hưởng cả phần nghe nhỉ?",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-07",
+  "log": {
+    "listen": {},
+    "parts": {
+      "1": {
+        "ms": 10000
+      },
+      "fb": {
+        "ms": 215000
+      }
+    },
+    "q": {
+      "r1": {
+        "changes": [],
+        "edits": 1,
+        "first": 145,
+        "last": "Nam's neighbour in Flat 3",
+        "ms": 5000
+      },
+      "r2": {
+        "changes": [],
+        "edits": 1,
+        "first": 155,
+        "last": "Margaret knows everyone and tells everyone everything",
+        "ms": 20000
+      },
+      "r3": {
+        "changes": [],
+        "edits": 1,
+        "first": 174,
+        "last": "He was tired, but he still helped",
+        "ms": 5000
+      },
+      "u1": {
+        "edits": 3,
+        "first": 5,
+        "ms": 195000
+      }
+    },
+    "read": {
+      "0": {
+        "cur": null,
+        "reads": [
+          {
+            "at": "2026-11-13T08:25:01.066Z",
+            "auto": 0,
+            "ms": 88000,
+            "wpm": 73
+          }
+        ],
+        "words": 107
+      }
+    },
+    "sessions": [
+      {
+        "app": "Claude app",
+        "at": "2026-11-13T08:25:00.065Z",
+        "e": 230,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 0,
+        "vw": 1918
+      }
+    ],
+    "t0": 1794558300065,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T08:28:49.968Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "84c82ba1-a667-40af-ba78-062751acdfb1",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-13T08:28:49.968Z"
+}

@@ -2,7 +2,7 @@
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
  "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
- "updatedAt": "2026-11-13T06:30:37.189906+00:00",
+ "updatedAt": "2026-11-13T08:35:51.954013+00:00",
  "week": 1,
  "streak": 2,
  "focus_now": "INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.",
@@ -15,7 +15,7 @@
  },
  "levels": {
   "overall": "Đánh giá đầu vào 11/11: đọc kéo lên, nghe kéo xuống",
-  "listening": "13/11: fast office dialogue 90% first listen → 100% at 1×, relaxed (2 in a row) → comfortable level raised A2+ → B1 · 12/11: real VOA ~60% first listen",
+  "listening": "13/11: story with long narration ~70% by ear (100% with text), 🙂 – narrator lines were 4 sentences long + TTS fast (~170 wpm) · fast office dialogue 90%→100% 😌 · real VOA ~60% first listen",
   "reading": "13/11: new story first read 124 wpm, 99% (🙂) · re-read 121 wpm · 12/11 first read ~100 wpm · B1+/B2 article 99%",
   "vocab": "~4–5k họ từ: chắc nhóm 3k, nửa vời 5k, chưa có 8k+; đoán từ ngữ cảnh tốt",
   "grammar": "Day 1 mistakes now fixed: be/get used to + V-ing, suggest + V-ing, although vs unless (12/11)"
@@ -161,6 +161,10 @@
   {
    "date": "2026-11-13",
    "text": "Tân: cảm thấy vẫn đọc từng từ, chưa theo cụm. Giải thích: mắt ai cũng dừng ở hầu hết các từ; đọc theo cụm = nhận diện từ tự động, đến từ đọc nhiều bài dễ + đọc lại + đọc kèm nghe. Tốc độ đang lên: 100 → 121–124 wpm. Giữ: đọc kèm nghe ở lượt 2, 1 bài đọc lưu loát rất dễ/ngày."
+  },
+  {
+   "date": "2026-11-13",
+   "text": "Chấm 06/07: nghe truyện ~70% (dòng dẫn chuyện dài 4 câu nghe lại 12×), Tân thấy dẫn chuyện nhanh; hỏi đọc chậm có ảnh hưởng nghe. → (1) mỗi dòng listen = 1 câu (≤ ~110 ký tự) để bấm nghe lại đúng câu; (2) chuẩn hoá giọng TTS về ~160 wpm (SCALE trong audio.py: lessac 1.25, ryan 1.4); (3) giữ mức nghe B1 nhưng truyện có dẫn chuyện dài là 'B1 with effort' – tăng dần độ dài; đọc kèm nghe luyện cả hai."
   }
  ],
  "story": {
@@ -387,7 +391,7 @@
    {
     "skill": "🎧 Listening",
     "now": "B1 comfortable · B1+ with effort",
-    "evidence": "13/11: fast office dialogue 90% first listen → 100% at 1× · 12/11: easy story 80% · real VOA 60% first listen",
+    "evidence": "13/11: dialogue 90% first listen · story narration ~70% by ear · 12/11: real VOA 60% first listen · ~95% with transcript",
     "b2": "News / VOA at normal speed: ≥ 90% on the first listen, no transcript",
     "c1": "Native podcasts, films and fast talk: ≥ 90% without subtitles",
     "gap": "+30 points on first-listen REAL speech (VOA 60% → 90%)"

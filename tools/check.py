@@ -110,6 +110,10 @@ def main():
                 for p in body.get('parts', []):
                     if p.get('transcript_open'):
                         err.append(f'{l["id"]}: transcript_open – lời phải ẩn mặc định để luyện tai')
+                    if p.get('listen') and not p.get('keep_audio') and l.get('status') != 'graded':
+                        longl = [i for i, x in enumerate(p['listen']) if len(str(x.get('text', ''))) > 160]
+                        if longl:
+                            warn.append(f'{l["id"]}: dòng nghe {longl} dài >160 ký tự – Tân 13/11: mỗi dòng 1 câu để bấm nghe lại đúng câu')
                     if p.get('listen'):
                         if not p.get('audio') or not os.path.exists(os.path.join(ROOT, p['audio'])):
                             err.append(f'{l["id"]}: phần nghe chưa có audio (tools/audio.py)')

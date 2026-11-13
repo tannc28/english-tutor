@@ -56,7 +56,7 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - **Haiku:** vẽ SVG thẻ từ dự phòng, việc máy móc (định dạng tin Telegram, chép/kiểm tra file, kiểm tra link). **Không** giao Haiku soạn nghĩa từ/ngữ pháp (benchmark: 2/12 thẻ từ sai nghĩa, trong đó *unless* bị định nghĩa ngược).
 
 ## Công cụ có sẵn
-- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone; **giọng Mỹ mặc định** – Tân chọn 12/11: từ = en_US-lessac, câu ví dụ = en_US-ryan) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · `tools/flux.py` (minh hoạ FLUX trên Cloudflare, nhân vật cố định `data/flux_cast.json`; dự phòng SVG Sonnet/Haiku – web/README "Minh hoạ"); không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`.
+- `tools/audio.py` (Piper TTS → MP3, nghe được trên iPhone; **giọng Mỹ mặc định** – Tân chọn 12/11: từ = en_US-lessac, câu ví dụ = en_US-ryan; tốc độ chuẩn hoá ~160 wpm qua `SCALE` – 13/11; mỗi dòng listen = 1 câu để bấm nghe lại đúng câu) · `tools/voa.py` (bài nghe thật VOA) · `tools/ipa.py` (IPA kiểu từ điển) · `tools/flux.py` (minh hoạ FLUX trên Cloudflare, nhân vật cố định `data/flux_cast.json`; dự phòng SVG Sonnet/Haiku – web/README "Minh hoạ"); không dùng emoji ghép hình · `tools/sync.py`. Cài lại khi container mới: `bash tools/audio_setup.sh`.
 
 ## Quyền với repo (Tân cho phép 11/11/2026)
 - Claude có **toàn quyền** trên repo này: được commit và **push thẳng lên `main`**, không cần tạo nhánh riêng hay PR.
