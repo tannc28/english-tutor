@@ -368,6 +368,22 @@
    "title": "Listen: Nam and Claire's Friday chat",
    "kind": "Listening",
    "device": "phone"
+  },
+  {
+   "start": "2026-11-13T22:46+07:00",
+   "min": 3.2,
+   "lesson": "2026-11-13-12",
+   "title": "Sound focus: you'll · I've · it's · I'd",
+   "kind": "Listening",
+   "device": "phone"
+  },
+  {
+   "start": "2026-11-13T22:49+07:00",
+   "min": 2.5,
+   "lesson": "2026-11-13-12",
+   "title": "Sound focus: you'll · I've · it's · I'd",
+   "kind": "Listening",
+   "device": "phone"
   }
  ],
  "days": {
@@ -479,7 +495,7 @@
    ]
   },
   "2026-11-13": {
-   "min": 83.2,
+   "min": 88.9,
    "blocks": [
     {
      "start": "2026-11-13T00:02+07:00",
@@ -580,6 +596,14 @@
      "min": 3.8,
      "lessons": [
       "Listen: Nam and Claire's Friday chat"
+     ]
+    },
+    {
+     "start": "2026-11-13T22:46+07:00",
+     "end": "2026-11-13T22:51+07:00",
+     "min": 5.7,
+     "lessons": [
+      "Sound focus: you'll · I've · it's · I'd"
      ]
     }
    ]
@@ -718,6 +742,60 @@
    "lesson": "2026-11-13-06",
    "part": 0,
    "line": 7,
+   "replays": 1
+  },
+  {
+   "lesson": "2026-11-13-12",
+   "part": 0,
+   "line": 13,
+   "replays": 3
+  },
+  {
+   "lesson": "2026-11-13-12",
+   "part": 0,
+   "line": 0,
+   "replays": 2
+  },
+  {
+   "lesson": "2026-11-13-12",
+   "part": 0,
+   "line": 14,
+   "replays": 2
+  },
+  {
+   "lesson": "2026-11-13-12",
+   "part": 0,
+   "line": 11,
+   "replays": 1
+  },
+  {
+   "lesson": "2026-11-13-12",
+   "part": 0,
+   "line": 15,
+   "replays": 1
+  },
+  {
+   "lesson": "2026-11-13-12",
+   "part": 1,
+   "line": 0,
+   "replays": 1
+  },
+  {
+   "lesson": "2026-11-13-12",
+   "part": 1,
+   "line": 1,
+   "replays": 1
+  },
+  {
+   "lesson": "2026-11-13-12",
+   "part": 1,
+   "line": 3,
+   "replays": 1
+  },
+  {
+   "lesson": "2026-11-13-12",
+   "part": 1,
+   "line": 5,
    "replays": 1
   },
   {

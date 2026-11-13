@@ -1,0 +1,125 @@
+{
+  "answers": {
+    "l1": "it has",
+    "l2": "I had",
+    "u1": "90 (mở ra thì 100)"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Bị lặp lại nhiều quá sao 1 topic mà cứ bị lặp lại như vậy rút kinh nghiêm sâu sắc ở những bài sau, nên tương tự thôi",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-12",
+  "log": {
+    "listen": {
+      "0": {
+        "answeredBeforeReveal": "0/0",
+        "plays": 9,
+        "rates": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 70,
+        "segIdx": {
+          "0": 2,
+          "11": 1,
+          "13": 3,
+          "14": 2,
+          "15": 1
+        },
+        "segs": 9
+      },
+      "1": {
+        "answeredBeforeReveal": "0/0",
+        "plays": 5,
+        "rates": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 196,
+        "segIdx": {
+          "0": 1,
+          "1": 1,
+          "3": 1,
+          "5": 1
+        },
+        "segs": 4
+      }
+    },
+    "parts": {
+      "1": {
+        "ms": 140000
+      },
+      "2": {
+        "ms": 125000
+      },
+      "fb": {
+        "ms": 75000
+      }
+    },
+    "q": {
+      "l1": {
+        "changes": [],
+        "edits": 1,
+        "first": 284,
+        "last": "it has",
+        "ms": 5000
+      },
+      "l2": {
+        "changes": [],
+        "edits": 1,
+        "first": 290,
+        "last": "I had",
+        "ms": 5000
+      },
+      "u1": {
+        "edits": 24,
+        "first": 292,
+        "ms": 55000
+      }
+    },
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-13T15:46:01.665Z",
+        "e": 193,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 0,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T15:49:17.102Z",
+        "e": 348,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 195,
+        "vw": 430
+      }
+    ],
+    "t0": 1794584761665,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T15:51:49.303Z",
+    "mcp": true,
+    "ok": true,
+    "pending": true,
+    "result": "{\"trigger\":{\"id\":\"trig_01LnYbESeN8FTXP7EM3qJD7w\",\"name\":\"English – Chấm bài nộp (phiên mới)\",\"cron_expression\":\"\",\"enabled\":true,\"created_at\":\"2026-11-13T09:31:15.752801Z\",\"updated_at\":\"2026-11-13T11:28:29.706411Z\",\"persist_session\":false,\"mcp_connections\":[{\"connector_uuid\":\"6ba9f48b-7288-4418-a670",
+    "via": "fire_trigger"
+  },
+  "submittedAt": "2026-11-13T15:51:49.303Z"
+}

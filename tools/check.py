@@ -123,6 +123,46 @@ def main():
                     dup = sum(1 for s in sents if s in rtxt)
                     if dup / len(sents) > 0.5:
                         err.append(f'{l["id"]}: {dup}/{len(sents)} câu nghe trùng y bài đọc trong tuần – Tân 13/11: "dễ đoán quá" → viết nội dung MỚI cùng chủ đề (phần tiếp/hội thoại)')
+            # Tân 13/11 (chấm -12): "1 topic mà cứ bị lặp lại – nên TƯƠNG TỰ thôi" → không tái dùng nguyên câu/cụm dài
+            # của bài khác trong tuần, và câu ví dụ phần Learn không được xuất hiện lại y nguyên trong phần Input.
+            def grams(t, n=4):
+                w = norm(t).split()
+                return {' '.join(w[i:i + n]) for i in range(len(w) - n + 1)}
+            def lines_of(lid):
+                out = []
+                for p in J(D('lessons', lid + '.json')).get('parts', []):
+                    out += [(bool(p.get('learn')), s.get('text', '')) for s in (p.get('listen') or [])]
+                    quote = ' '.join(ln.lstrip('> ') for ln in (p.get('md') or '').splitlines() if ln.startswith('>'))  # chỉ đoạn đọc (blockquote), bỏ hướng dẫn
+                    out += [(bool(p.get('learn')), x) for x in re.split(r'(?<=[.!?])\s+', re.sub(r'[*_#|`]', ' ', quote))]
+                return [(lr, t) for lr, t in out if len(t.split()) >= 6]
+            wk = [x['id'] for x in L.values() if x.get('week') == w.get('no') and os.path.exists(D('lessons', x['id'] + '.json'))]
+            for l in ls:
+                if l.get('status') == 'graded' or not os.path.exists(D('lessons', l['id'] + '.json')):
+                    continue
+                other = set()
+                for o in wk:
+                    if o != l['id']:
+                        for _, t in lines_of(o):
+                            other |= grams(t)
+                mine = lines_of(l['id'])
+                learn_g = set().union(*[grams(t) for lr, t in mine if lr]) if any(lr for lr, _ in mine) else set()
+                inp = [t for lr, t in mine if not lr]
+                rec = [t for t in inp if grams(t) and len(grams(t) & other) / len(grams(t)) >= 0.6]
+                echo = [t for t in inp if grams(t) and len(grams(t) & learn_g) / len(grams(t)) >= 0.5]
+                if len(inp) >= 5 and len(rec) / len(inp) > 0.25:
+                    err.append(f'{l["id"]}: {len(rec)}/{len(inp)} câu input lặp gần nguyên văn bài khác trong tuần (vd "{rec[0][:60]}") – Tân 13/11: "cứ bị lặp lại, nên tương tự thôi" → cùng chủ đề nhưng câu MỚI')
+                if len(echo) >= 3:
+                    err.append(f'{l["id"]}: {len(echo)} câu input lặp lại câu ví dụ của phần Learn (vd "{echo[0][:60]}") – ví dụ Learn và input phải khác nhau (Tân 13/11)')
+            # Cùng ngày: 1 cụm dài (4 từ) xuất hiện ở ≥4 bài = lặp quá (13/11: "get the hang of" 5 bài, "so far so good" 4 bài)
+            seen = {}
+            for l in ls:
+                if os.path.exists(D('lessons', l['id'] + '.json')):
+                    for g in set().union(set(), *[grams(t) for _, t in lines_of(l['id'])]):
+                        seen.setdefault(g, set()).add(l['id'])
+            open_ids = {l['id'] for l in ls if l.get('status') != 'graded'}
+            over = sorted(g for g, ids in seen.items() if len(ids) >= 4 and ids & open_ids)
+            if over:
+                err.append(f'{ds}: cụm lặp ở ≥4 bài trong ngày: {over[:5]} – Tân 13/11: "1 topic cứ bị lặp lại" → mỗi cụm chỉ ở bài dạy + 1 bài ôn; ngày có 2–3 chủ đề/bối cảnh khác nhau')
             for l in ls:
                 if len(l.get('title', '')) > 48:
                     warn.append(f'{l["id"]}: tên bài dài ({len(l["title"])} ký tự) – nên 3–6 từ')

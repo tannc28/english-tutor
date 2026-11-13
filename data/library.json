@@ -1131,6 +1131,14 @@
    "tip": "a little bit = một chút → Nam bắt đầu thấy quen thuộc với thành phố mới.",
    "lesson": "2026-11-12-evening",
    "date": "2026-11-12"
+  },
+  {
+   "q": "Why can't I hear *I'd* in \"I'd better go home\"?",
+   "yours": "Nghe thành \"I better go home\"",
+   "right": "I'd better = I had better",
+   "tip": "d trước b/l không bật hơi – chỉ là nhịp ngắt rất nhỏ sau I",
+   "lesson": "2026-11-13-12",
+   "date": "2026-11-13"
   }
  ],
  "generated": "auto – tools/sync.py"

@@ -140,6 +140,36 @@
    "due": "2026-11-14",
    "step": 0,
    "history": []
+  },
+  {
+   "id": "2026-11-13-12-q0",
+   "lesson": "2026-11-13-12",
+   "q": "\"I'd love a coffee.\" Here I'd = …",
+   "options": [
+    "I had",
+    "I would",
+    "I did"
+   ],
+   "answer": "I would",
+   "why": "love sau I'd → I would love.",
+   "due": "2026-11-14",
+   "step": 0,
+   "history": []
+  },
+  {
+   "id": "2026-11-13-12-q1",
+   "lesson": "2026-11-13-12",
+   "q": "\"She's already got lost twice.\" Here she's = …",
+   "options": [
+    "she is",
+    "she has",
+    "she was"
+   ],
+   "answer": "she has",
+   "why": "got (V3) sau she's → she has got lost.",
+   "due": "2026-11-14",
+   "step": 0,
+   "history": []
   }
  ],
  "words": {

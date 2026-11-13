@@ -5,9 +5,9 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 17/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 18/22 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
-- Cập nhật hồ sơ: 2026-11-13T22:55:00+07:00
+- Cập nhật hồ sơ: 2026-11-13T23:10:00+07:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -24,7 +24,7 @@
 **Cần cải thiện & kế hoạch:**
 - [Nghe – mất mạch] **Lỡ 1 từ hoặc 1 đoạn là ảnh hưởng cả phần sau; mẫu câu cơ bản vẫn phải nghĩ, chưa thành phản xạ** – dấu hiệu: Ngày 2 sáng: nghe lần đầu ~80%, đọc lời 100%; Tân tự nhận (feedback 12/11); phần Learn audio nghe 10 lần → Nghe không lời trước rồi đối chiếu lời, bấm nghe lại đúng đoạn khó; đọc trước rồi nghe cùng nội dung, đoạn ngắn có giải thích; luyện 'lỡ từ vẫn nghe tiếp' (đoán từ câu sau)
 - [Nghe (mức thoải mái)] **Nghe tiếng thật (VOA, người bản xứ) vẫn căng – lần đầu ~60%; truyện/hội thoại B1 đã thoải mái (13/11: 90% → 100% ở 1×)** – dấu hiệu: Tân tự nhận 12/11: Ngày 1 làm được nhưng phải tập trung cao → Input nghe chính = truyện Hope Street B1 dài 8–15', 1×, 2 vòng không lời → đối chiếu → nghe lại; VOA mỗi ngày để kéo tai lên mức thật
-- [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's' → Truyện B1 tốc độ tự nhiên: 2 vòng không lời → đối chiếu lời, bấm nghe lại từng dòng → nghe lại; âm khó (dạng yếu/nối âm) dạy ngay trong bài truyện
+- [Nghe] **Giải mã âm: biết từ nhưng không nhận ra khi nói tự nhiên (nối âm, dạng yếu như she's, 's)** – dấu hiệu: B2: nghe 40–50% vs đọc lời 90–95%; nghe bài dễ 9 lần; mở lời khi 0/4, 0/6; chính tả thiếu 'she's'; 13/11 -12: I'd better/I'd love nghe lại nhiều nhất (d không bật trước phụ âm) → Truyện B1 tốc độ tự nhiên: 2 vòng không lời → đối chiếu lời, bấm nghe lại từng dòng → nghe lại; âm khó (dạng yếu/nối âm) dạy ngay trong bài truyện
 - [Đọc] **Đọc còn hơi chậm (~100 từ/phút) – đã thoải mái ở B1+** – dấu hiệu: Tự báo 'phải đọc lâu mới hiểu hết'; ~6 phút cho đoạn 250 từ → Đọc lại nhanh truyện cũ (đo thời gian), đọc rộng B1+ mỗi ngày; mục tiêu 130–150 từ/phút
 - [Từ nối & cụm] **(Đã cải thiện 12/11: từ nối 8/8, be used to/suggest + V-ing đúng) – tiếp tục gặp lại trong input** – dấu hiệu: g5 although→unless (phân vân); g7 be used to get; g8 suggest to take; c1 lỡ 'cú lật' (Rather, None of this means) → Lồng although/however/yet/rather và be used to/suggest + V-ing vào bài đọc, lặp lại nhiều ngày
 - [Xử lý / phản xạ] **Hiểu được nhưng chậm: phải nghĩ/dịch sang tiếng Việt, chưa tự động** – dấu hiệu: Tân tự nhận 12/11; Ngày 1 đọc ~88% nhưng mất nhiều thời gian → Lặp lại cùng input ở tốc độ tự nhiên (3 vòng), fluency reading có ghi thời gian, đọc theo cụm, nhiều input dễ (≥98%) để luyện tự động hoá
@@ -51,6 +51,8 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 **Cách Tân học từ (13/11):** hiểu từ **bản chất** – cần **nghĩa đen/hình ảnh trước** (vd *spread yourself too thin* = ít bơ phết lên quá nhiều bánh) rồi mới nghĩa bóng; học nhanh qua hình minh hoạ. Bài dài thì sẵn sàng làm nhiều câu hỏi hơn.
 
 **Đang tập trung:** **Luyện tai bằng thật nhiều input nghe vừa sức.** Mỗi ngày ~10–14 bài nhỏ (5–15'), sáng ~40', tối ~2 giờ, ngày nào cũng có cả đọc và nghe. Bài nghe: **lời ẩn mặc định** → nghe 2 vòng → mở lời đối chiếu, **bấm dòng chưa nghe ra để nghe lại** → nghe lần cuối. Đọc trước, rồi nghe **phần tiếp / hội thoại mới cùng chủ đề** (narrow listening – không nghe lại y bài đọc, Tân 13/11). Cuối bài: Quick check 1–3 câu chọn (đáp án hiện ngay) + % hiểu + 💬 Ask me.
+
+**Đa dạng, không lặp (Tân 13/11):** cùng chủ đề nhưng câu MỚI – mỗi cụm chỉ ở bài dạy + ≤1 bài ôn; mỗi ngày 2–3 chủ đề/bối cảnh khác nhau.
 
 ### Nhật ký quyết định (vì sao bài lại như vậy)
 | Ngày | Quyết định |
@@ -81,6 +83,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-13 | Chấm 08: 100% sau khi đã đọc, 😌; câu chủ ngữ dài nghe lại 6×; Tân: 'hiểu hết nhưng chưa êm tai'. → bài sáng hôm sau mở đầu bằng nghe lại tập vừa học (lặp lại để quen âm) trước tập mới; nhắc dùng Play today. |
 | 2026-11-13 | Tân (chấm 14): 'listen gióng y reading thì dễ đoán quá – soạn bài khác, tương tự hoặc phần kế tiếp ở dạng listen, không 1-1'. → BỎ kiểu bài 🎧 = đọc lại y nguyên bài 📖. Bài nghe sau bài đọc = NARROW LISTENING: cùng chủ đề/nhân vật/cụm từ nhưng NỘI DUNG MỚI (phần tiếp, hội thoại, góc nhìn khác). Bài -11 (bài báo dạng audio) đã viết lại thành hội thoại Nam–Claire. Nghe lại y nguyên chỉ ở Play today. check.py chặn bài nghe trùng >50% câu với bài đọc. |
 | 2026-11-13 | Tân (chấm w1-voa-2): 'giải thích từ hơi ít, hơi bề mặt – muốn hiểu NGHĨA ĐEN/hình ảnh trước rồi mới nghĩa trừu tượng; học tốt qua bản chất + illustration'. Bài dài thì nhiều câu hỏi cũng được. → Mọi bảng Learn có cột '🖼️ Picture it (literal)' → 'So it means…' (nguồn gốc thật, không bịa), kèm hình khi có; bài nghe/đọc dài (≥3') được 3 câu chọn. VOA 3, 4 đã sửa. check.py cảnh báo bảng Learn thiếu cột nghĩa đen. |
+| 2026-11-13 | Tân (chấm -12): 'bị lặp lại nhiều quá – 1 topic mà cứ lặp lại, rút kinh nghiệm, nên TƯƠNG TỰ thôi'. Kiểm tra: 13/13 bài ngày 13/11 cùng 1 chủ đề (tuần đầu đi làm của Nam); 'get the hang of' 5 bài, 'it takes a while' 4 bài; bài -12 lặp câu Learn trong hội thoại. → Narrow = cùng chủ đề/từ, KHÔNG lặp nguyên câu: mỗi cụm chỉ ở bài dạy + ≤1 bài ôn (câu + tình huống mới); mỗi ngày 2–3 chủ đề/bối cảnh khác nhau (Hope Street là 1 mạch, bài khác đời thường khác); câu ví dụ Learn khác câu input. check.py chặn: cụm 4 từ ở ≥4 bài/ngày, input lặp ≥60% cụm bài khác trong tuần, input lặp câu Learn. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
@@ -93,7 +96,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 17/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 18/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -120,7 +123,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B109 | 2026-11-13 | VOA: Sometimes we 'spread ourselves too thin' | graded | 90% | – | – | 10 | – | VOA 2/2 · 90% · 🙂 · Tân: giải thích nghĩa đen → nghĩa bóng + hình; bài dài thêm câu hỏi OK |
 | T1 · B110 | 2026-11-13 | Why is the first week at a new job so tiring? | graded | – | 97% | 1 | 20 | – | 3/3 · 95–100% · 😌 'Dễ thôi' · 1 lượt 3'56" ≈ 58 wpm (gồm xem bảng từ + trả lời) → bài B1+ đã dễ, sắp nâng nhẹ |
 | T1 · B111 | 2026-11-13 | Listen: Nam and Claire's Friday chat | graded | 88% | – | 1 | 5 | – | 2/2 · nghe 85–90% (hội thoại mới) · 😌 · 10 lượt, mở lời sau 136s · nghe lại dòng 8/15/16/17 (buddy, I'll, get used to, take it easy) |
-| T1 · B112 | – | Sound focus: you'll · I've · it's · I'd | open | – | – | – | – | – |  |
+| T1 · B112 | 2026-11-13 | Sound focus: you'll · I've · it's · I'd | graded | 90% | – | 1 | 6 | – | 2/2 · nghe 90% (có lời 100%) · 😌 · 14 lượt; nghe lại nhiều nhất: I'd better (3×), she's been… she's already (2×) · Tân: lặp chủ đề/cụm quá nhiều |
 | T1 · B113 | 2026-11-13 | Nam's message home | graded | – | 100% | 1 | 7 | – | 3/3 · 100% · 😌 · đọc 2 lượt ≈ 95 wpm/lượt (log 1 lượt 39 wpm – bài ngắn không cuộn nên lượt 2 không ghi) · lơ đễnh ~45s → bài đã quá dễ |
 | T1 · B114 | 2026-11-13 | Listen: Nam's message home | graded | 90% | – | 1 | 5 | – | 2/2 · 90% · 😌 · 8 lượt, mở lời sau 135s, nghe lại dòng 7 (neighbours/Margaret) 2× · đã đọc trước nên 90% không phải điểm nghe lần đầu · Tân: nghe y bài đọc = dễ đoán → đổi cách soạn |
 

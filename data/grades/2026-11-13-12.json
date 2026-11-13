@@ -1,0 +1,57 @@
+{
+ "score": "🎧 Sound focus (it's · I'd · you'll) · 2/2 · 90% (100% with words) · 😌 relaxed",
+ "gradedAt": "2026-11-13T23:10:00+07:00",
+ "summary_md": "**2/2, 90% by ear, 😌 relaxed.** About 6 minutes in all (Learn 2′20″, dialogue 2′05″).\n\n**Learn part:** 9 plays, words opened after 70 s. The line you replayed most: **#13 *I'd better go home*** (3×), then **#14 *She's been here two days, and she's already got lost twice*** (2×). \n\n**Dialogue:** listened twice without the words (opened after ~3 min – right plan), then tapped lines 1, 2, 4, 6 once each: *How's it going?* · *it's been a long day. I've met…* · ***I'd** better write them down* · ***I'd** love him to slow down*.\n\n👂 **The pattern is clear: *I'd* is your hardest sound.** Why: /aɪd/ + a consonant (*b, l*) → the **d is not released**, so *I'd better* sounds almost like \"**I better**\" and *I'd love* like \"**I love**\". 🇻🇳 Âm /d/ chỉ là một nhịp ngắt rất nhỏ, không bật hơi – tai bạn phải bắt **nhịp ngắt** đó, chứ không phải âm /d/. *She's been… she's already* is two *she **has*** in one fast line – your ear caught it after 2 replays. Both quiz answers right (*been* → has, *better* → had) → the grammar trick works.",
+ "asks_md": "**\"Bị lặp lại nhiều quá – 1 topic mà cứ bị lặp lại, nên tương tự thôi\"** – You're right, and it's my mistake. 🇻🇳 Mình đã kiểm tra lại cả 13 bài hôm nay: **tất cả** đều về tuần đầu đi làm của Nam, và nhiều cụm bị dùng y nguyên ở nhiều bài: *get the hang of* (5 bài), *it takes a while* (4 bài), *I'm still getting used to* (4 bài), *you'll get used to* (3 bài). Riêng bài này, đoạn hội thoại còn lặp lại gần nguyên câu ví dụ của phần Learn (*long day, get used to it, we've all been…*) → nghe là đoán được, tai không phải làm việc.\n\n**Narrow input** (cùng chủ đề) giúp từ quay lại tự nhiên – nhưng mình đã làm quá tay: lặp **nguyên câu**, không phải lặp **chủ đề**. Từ mai mình đổi:\n- Mỗi cụm mới chỉ xuất hiện ở **bài dạy + tối đa 1 bài ôn**, và bài ôn dùng **câu mới, tình huống mới**.\n- Mỗi ngày có **2–3 chủ đề/bối cảnh khác nhau** (truyện Hope Street chỉ là 1 mạch, các bài khác chủ đề đời thường khác).\n- Câu ví dụ phần Learn **khác hẳn** câu trong bài nghe/đọc.\n- `check.py` giờ tự chặn: cụm 4 từ lặp ở ≥4 bài trong ngày, bài lặp gần nguyên văn bài khác, hoặc input lặp câu Learn → mình không thể nộp bài như vậy nữa.",
+ "items": {
+  "l1": {
+   "verdict": "correct",
+   "note_md": "Right – *been* after *it's* → it **has** been."
+  },
+  "l2": {
+   "verdict": "correct",
+   "note_md": "Right – *better* after *I'd* → I **had** better."
+  },
+  "u1": {
+   "verdict": "correct",
+   "note_md": "90% by ear, 100% with the words – matches 2/2 and the lines you replayed."
+  }
+ },
+ "verdict": "done",
+ "tg": {
+  "score": "2/2 · nghe 90% (có lời 100%) · 😌 · ~6′, 14 lượt nghe",
+  "win": "Bắt đúng mẹo it's/I'd nhờ từ sau (been → has, better → had)",
+  "fix": "I'd + phụ âm (I'd better/love): d không bật → nghe ra nhịp ngắt nhỏ"
+ },
+ "cards": [
+  {
+   "q": "Why can't I hear *I'd* in \"I'd better go home\"?",
+   "yours": "Nghe thành \"I better go home\"",
+   "right": "I'd better = I had better",
+   "tip": "d trước b/l không bật hơi – chỉ là nhịp ngắt rất nhỏ sau I"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "\"I'd love a coffee.\" Here I'd = …",
+   "options": [
+    "I had",
+    "I would",
+    "I did"
+   ],
+   "answer": "I would",
+   "why": "love sau I'd → I would love."
+  },
+  {
+   "q": "\"She's already got lost twice.\" Here she's = …",
+   "options": [
+    "she is",
+    "she has",
+    "she was"
+   ],
+   "answer": "she has",
+   "why": "got (V3) sau she's → she has got lost."
+  }
+ ],
+ "tg_sent": "2026-11-13T15:54:09+00:00"
+}
