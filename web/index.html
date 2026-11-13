@@ -1403,7 +1403,13 @@ body{font-size:14.5px}
         au.addEventListener("play", () => { setRate(); actListen(box.dataset.pi, "play", au.playbackRate); if (!compact){ play.hidden = true; stop.hidden = false; } });
         au.addEventListener("pause", () => { if (!compact){ play.hidden = false; stop.hidden = true; } });
         au.addEventListener("ended", () => { plays[key] = (plays[key]||0)+1; store.set("plays", plays); box.querySelector(".pl-n").textContent = `Played ${plays[key]}×`; });
-        au.addEventListener("error", () => { msg.hidden = false; msg.textContent = "Couldn't load the audio file. Please reload the page."; });
+        // Lỗi tải audio (Tân 13/11): thường do trang mở lâu / web vừa cập nhật → tự thử lại 2 lần, rồi mới hiện nút tải lại trang
+        let auTry = 0;
+        au.addEventListener("error", () => {
+          if (auTry < 2 && p.audio){ auTry++; const t = au.currentTime || 0, wasPlaying = !au.paused; au.src = p.audio + (p.audio.includes("?") ? "&" : "?") + "r=" + Date.now(); au.load();
+            au.addEventListener("loadedmetadata", () => { try { au.currentTime = t; } catch {} if (wasPlaying || auTry) au.play().catch(() => {}); msg.hidden = true; }, {once:true}); return; }
+          msg.hidden = false; msg.innerHTML = `Couldn't load the audio (the page was open for a long time or was just updated). <button type="button" class="linkbtn">↻ Reload page</button>`;
+          msg.querySelector("button").onclick = () => location.reload(); });
         play.addEventListener("click", () => { setRate(); au.play().catch(() => {}); });
         stop.addEventListener("click", () => au.pause());
         // Bấm 1 dòng trong transcript → nghe lại đúng đoạn đó rồi dừng; dòng đang đọc được tô sáng (Tân 12/11)
