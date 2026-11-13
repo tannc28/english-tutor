@@ -745,6 +745,17 @@ body{font-size:14.5px}
 .letter summary{display:flex;gap:8px;align-items:center;cursor:pointer;list-style:none}.letter .md{margin-top:6px}
 .wfb-r{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.wfb-b{font-size:1.2rem;padding:4px 10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer}.wfb-b.on{border-color:var(--accent);background:var(--accent-soft)}.wfb-t{flex:1;min-width:180px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
 .asks-r{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+/* Tối ưu không gian (Tân 13/11): câu hỏi xếp lưới nhiều cột trên màn rộng; đáp án ngắn xếp cạnh nhau */
+.opts > .unsure-row,.opts > .other-note{grid-column:1/-1}
+.opts.short{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+@media (min-width:900px){
+  .qs{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:12px;align-items:start}
+  .qs > .q:has(textarea),.qs > .q:has(.rec),.qs > .q:has(.opts.long){grid-column:1/-1}
+  .opts.mid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  .opts.long{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .q{padding:10px 12px;gap:6px}
+  .opt{padding:7px 10px}
+}
   table.fcst td{vertical-align:top;font-size:13px;line-height:1.4} table.fcst td .note{font-size:12px;margin-top:2px} table.fcst th{white-space:nowrap;text-align:left;vertical-align:bottom}
 </style>
 <script>
@@ -901,7 +912,8 @@ body{font-size:14.5px}
     if (q.type === "choice" && Array.isArray(q.options)){
       const isOther = typeof val === "string" && /^(Khác|Unsure): /.test(val);
       const note = isOther ? val.replace(/^(Khác|Unsure): /,"") : "";
-      return `<div class="opts" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}
+      const mx = Math.max(...q.options.map(o => String(o).length)); const oc = mx <= 18 ? "short" : mx <= 38 ? "mid" : "long";
+      return `<div class="opts ${oc}" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}
         ${dis && !isOther ? "" : `<div class="unsure-row">
           <span class="unsure-hint">Can't choose?</span>
           <label class="unsure"><input type="radio" name="${id}" id="${id}-other" value="__other" ${isOther?"checked":""} ${dis}><span>🤔 I'm not sure</span></label>
