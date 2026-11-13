@@ -176,6 +176,54 @@
    "title": "'Watching the Grass Grow' Is Not Fun",
    "kind": "Listening",
    "device": "computer"
+  },
+  {
+   "start": "2026-11-13T10:01+07:00",
+   "min": 3.2,
+   "lesson": "2026-11-13-01",
+   "title": "Work chunks you will hear today",
+   "kind": "Listening",
+   "device": "phone"
+  },
+  {
+   "start": "2026-11-13T10:17+07:00",
+   "min": 2.1,
+   "lesson": "2026-11-13-01",
+   "title": "Work chunks you will hear today",
+   "kind": "Listening",
+   "device": "phone"
+  },
+  {
+   "start": "2026-11-13T12:05+07:00",
+   "min": 0.7,
+   "lesson": "2026-11-13-01",
+   "title": "Work chunks you will hear today",
+   "kind": "Listening",
+   "device": "computer"
+  },
+  {
+   "start": "2026-11-13T12:09+07:00",
+   "min": 2.0,
+   "lesson": "2026-11-13-01",
+   "title": "Work chunks you will hear today",
+   "kind": "Listening",
+   "device": "computer"
+  },
+  {
+   "start": "2026-11-13T12:13+07:00",
+   "min": 0.8,
+   "lesson": "2026-11-13-01",
+   "title": "Work chunks you will hear today",
+   "kind": "Listening",
+   "device": "computer"
+  },
+  {
+   "start": "2026-11-13T12:17+07:00",
+   "min": 1.0,
+   "lesson": "2026-11-13-01",
+   "title": "Work chunks you will hear today",
+   "kind": "Listening",
+   "device": "computer"
   }
  ],
  "days": {
@@ -274,6 +322,35 @@
      "min": 9.2,
      "lessons": [
       "'Watching the Grass Grow' Is Not Fun"
+     ]
+    }
+   ]
+  },
+  "2026-11-13": {
+   "min": 9.8,
+   "blocks": [
+    {
+     "start": "2026-11-13T10:01+07:00",
+     "end": "2026-11-13T10:04+07:00",
+     "min": 3.2,
+     "lessons": [
+      "Work chunks you will hear today"
+     ]
+    },
+    {
+     "start": "2026-11-13T10:17+07:00",
+     "end": "2026-11-13T10:19+07:00",
+     "min": 2.1,
+     "lessons": [
+      "Work chunks you will hear today"
+     ]
+    },
+    {
+     "start": "2026-11-13T12:05+07:00",
+     "end": "2026-11-13T12:18+07:00",
+     "min": 4.5,
+     "lessons": [
+      "Work chunks you will hear today"
      ]
     }
    ]

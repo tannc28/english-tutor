@@ -116,6 +116,9 @@ def main():
                         elif len(p.get('marks') or []) != len(p['listen']):
                             err.append(f'{l["id"]}: thiếu/lệch marks (tools/marks.py) – không bấm nghe lại từng dòng được')
                     qn += len([q for q in p.get('questions', []) if not q.get('check') and q['id'] not in ('u1', 't', 'ask')])
+                inp = [p for p in body.get('parts', []) if (p.get('listen') and sum(len(str(x.get('text', ''))) for x in p['listen']) >= 400) or (not p.get('listen') and re.search(r'(^|\n)>\s', p.get('md', '')))]
+                if not inp and not l['id'].startswith('w1-voa') and l.get('status') != 'graded':
+                    warn.append(f'{l["id"]}: không có input thật (đoạn đọc ">" hoặc bài nghe ≥400 ký tự) – Tân 13/11: bài chỉ Learn là thừa, gộp vào bài nghe/đọc thật')
                 if qn > 1:
                     warn.append(f'{l["id"]}: {qn} câu hỏi tự luận – Tân không muốn quiz (chỉ % hiểu + Ask me)')
                 if l.get('cover') and not os.path.exists(os.path.join(ROOT, l['cover'])):

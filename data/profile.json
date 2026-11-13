@@ -2,7 +2,7 @@
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
  "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
- "updatedAt": "2026-11-12T18:05:29.751672+00:00",
+ "updatedAt": "2026-11-13T05:22:21.788132+00:00",
  "week": 1,
  "streak": 2,
  "focus_now": "INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.",
@@ -145,6 +145,10 @@
   {
    "date": "2026-11-12",
    "text": "Tân chọn đề xuất 6, 9, 10, 11, 12: 🎧 Play today (nghe cả ngày khi đi đường), 🧑‍🏫 lời nhắn mỗi ngày, 💬 Ask mọi lúc, ✉️ thư tuần (CN), 💌 góp ý tuần 1 chạm. KHÔNG chọn: chọn-ý-chính thay % hiểu, sáng nghe lại bài tối, bậc thang giọng tự nhiên, bài đo 2 tuần, chủ đề theo sở thích, chạm-từ-xem-nghĩa, tự mở bài kế."
+  },
+  {
+   "date": "2026-11-13",
+   "text": "Tân (sau bài 01): bài chỉ có Learn (danh sách cụm + vài câu ngắn) là THỪA, quá dễ – 'learn phải đi kèm bài'. → KHÔNG soạn bài Learn đứng riêng nữa: cụm/từ mới (≤5–6) đặt thành 1 khung ngắn ở đầu chính bài nghe/đọc thật dùng chúng ngay. Câu ngắn rời 1× = 100% → mức nghe câu ngắn đã thoải mái; tăng độ dài/tốc độ thật (hội thoại)."
   }
  ],
  "story": {
@@ -364,14 +368,14 @@
   "note": "Token Cloudflare (Workers AI) do proxy gắn vào api.cloudflare.com – mỗi lúc chỉ 1 token; tài khoản đang dùng = cf_account. Free 10.000 neuron/ngày/tài khoản."
  },
  "forecast": {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "baseline_date": "2026-11-11",
   "bottleneck_md": "**Your bottleneck is listening.** You already know the words (reading B1+, ~4–5k word families) but your ears hear only ~60% of real speech the first time. So the road to C1 = first let your ears **catch up with your eyes**, then grow both together. Your C1 date depends almost only on listening hours.",
   "skills": [
    {
     "skill": "🎧 Listening",
     "now": "A2+ comfortable · B1 with effort",
-    "evidence": "12/11: easy story 80% first listen · real VOA 60% first listen · 95% with transcript",
+    "evidence": "13/11: short work sentences 100% at 1× · 12/11: easy story 80% first listen · real VOA 60% · 95% with transcript",
     "b2": "News / VOA at normal speed: ≥ 90% on the first listen, no transcript",
     "c1": "Native podcasts, films and fast talk: ≥ 90% without subtitles",
     "gap": "+30 points on first-listen real speech (60% → 90%)"

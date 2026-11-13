@@ -5,9 +5,9 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 4/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 5/22 bài
 - Mức hiểu mục tiêu: Nghe: bài A2+/B1 tốc độ 0.85× (hiểu ≥80% sau 2 lần nghe). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có gloss.
-- Cập nhật hồ sơ: 2026-11-12T18:05:29.751672+00:00
+- Cập nhật hồ sơ: 2026-11-13T05:22:21.788132+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -70,6 +70,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-12 | Tân: bỏ mở sẵn transcript – mặc định ẨN để luyện tai ('tôi rất muốn được luyện tai'). Vòng nghe: không lời ×2 → mở lời đối chiếu + bấm dòng nghe lại → ẩn, nghe lần cuối. |
 | 2026-11-12 | Gia sư đề xuất (Tân chưa phản đối thì áp dụng từ 13/11, KHÔNG thêm việc cho Tân): (1) Đọc-kèm-nghe (Chang & Millett 2014/2015): bài đọc lượt 2 = đọc lại khi nghe audio chính bài đó (đã có audio) – luyện tai nối âm với chữ đã hiểu. (2) Đọc lưu loát (Nation; Chung & Nation 2006): mỗi ngày 1 bài đọc rất dễ (≥98% từ quen, ~300 từ) chỉ để đọc nhanh – đo wpm ngầm, mục tiêu 100→180. (3) Bài âm hôm sau soạn từ đúng các dòng Tân nghe lại nhiều nhất (log segIdx) – giải mã bottom-up (Field 2008). Chờ Tân đồng ý: (4) bài test vốn từ 15'/tháng (VST, Nation & Beglar 2007) để dự báo C1 có số thật. |
 | 2026-11-12 | Tân chọn đề xuất 6, 9, 10, 11, 12: 🎧 Play today (nghe cả ngày khi đi đường), 🧑‍🏫 lời nhắn mỗi ngày, 💬 Ask mọi lúc, ✉️ thư tuần (CN), 💌 góp ý tuần 1 chạm. KHÔNG chọn: chọn-ý-chính thay % hiểu, sáng nghe lại bài tối, bậc thang giọng tự nhiên, bài đo 2 tuần, chủ đề theo sở thích, chạm-từ-xem-nghĩa, tự mở bài kế. |
+| 2026-11-13 | Tân (sau bài 01): bài chỉ có Learn (danh sách cụm + vài câu ngắn) là THỪA, quá dễ – 'learn phải đi kèm bài'. → KHÔNG soạn bài Learn đứng riêng nữa: cụm/từ mới (≤5–6) đặt thành 1 khung ngắn ở đầu chính bài nghe/đọc thật dùng chúng ngay. Câu ngắn rời 1× = 100% → mức nghe câu ngắn đã thoải mái; tăng độ dài/tốc độ thật (hội thoại). |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
@@ -82,7 +83,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 4/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 5/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -98,7 +99,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B7 | 2026-11-12 | 'Watching the Grass Grow' Is Not Fun | graded | 60% | 95% | 3 | 10 | – | VOA 4/4 · nghe 60% / có lời 95% · Tân: dạy nhiều, đừng quiz nhiều |
 | T1 · B9 | – | 'Kicking Off' a New Year | open | – | – | – | – | – |  |
 | T1 · B10 | – | Ask a Teacher: Remaining, Remainder and Rest of | open | – | – | – | – | – |  |
-| T1 · B101 | – | Work chunks you will hear today | open | – | – | – | – | – |  |
+| T1 · B101 | 2026-11-13 | Work chunks you will hear today | graded | 100% | – | 1 | 5 | – | 100% ở 1× (13 lượt) · 😌 · Tân: bài Learn tách riêng thừa – gộp vào bài nghe/đọc thật |
 | T1 · B102 | – | Meeting the team | open | – | – | – | – | – |  |
 | T1 · B103 | – | Linking words: how ideas connect | open | – | – | – | – | – |  |
 | T1 · B104 | – | Fast re-read: The Café on the Corner | open | – | – | – | – | – |  |

@@ -1,0 +1,183 @@
+{
+  "answers": {
+    "u1": "100"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Dễ quá với caí này có phải là 1 bài nghe đâu? tại sao lại có những cái bài kiểu này nhỉ chả giúp ích được gì cho tôi nhiều hay nó chỉ là learn thôi? learn phải đi kèm bài nữa thì mới có ứng dụng chứ, mỗi lớn thấy nó bị thừa thãi",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-01",
+  "log": {
+    "listen": {
+      "0": {
+        "answeredBeforeReveal": "0/0",
+        "plays": 13,
+        "rates": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 44488,
+        "segs": 1
+      }
+    },
+    "parts": {
+      "0": {
+        "ms": 10000
+      },
+      "1": {
+        "ms": 75000
+      },
+      "fb": {
+        "ms": 600000
+      }
+    },
+    "q": {
+      "u1": {
+        "edits": 3,
+        "first": 44492,
+        "ms": 10000
+      }
+    },
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-12T16:58:15.114Z",
+        "e": 30,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 0,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T03:01:42.813Z",
+        "e": 36649,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 36208,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T03:09:06.183Z",
+        "e": 36651,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 36651,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T03:17:57.516Z",
+        "e": 37470,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 37182,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:05:54.759Z",
+        "e": 43754,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 43660,
+        "vw": 1915
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:08:26.850Z",
+        "e": 43858,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 43812,
+        "vw": 1915
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:09:15.085Z",
+        "e": 44128,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 43860,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:13:46.322Z",
+        "e": 44246,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 44131,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:16:11.924Z",
+        "e": 44296,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 44277,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:16:32.244Z",
+        "e": 44312,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 44297,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:16:49.623Z",
+        "e": 44362,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 44315,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:17:43.785Z",
+        "e": 44502,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 44369,
+        "vw": 2218
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T05:19:57.375Z",
+        "e": 44565,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 44502,
+        "vw": 2218
+      }
+    ],
+    "t0": 1794502695114,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T05:21:00.509Z",
+    "canSend": "available",
+    "comments": true,
+    "ok": true,
+    "thread": "1d398e22-2180-4985-bdb0-26992c8ec3b1",
+    "via": "comments"
+  },
+  "submittedAt": "2026-11-13T05:21:00.509Z"
+}

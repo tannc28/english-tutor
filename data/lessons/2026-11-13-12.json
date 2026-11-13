@@ -1,5 +1,5 @@
 {
- "intro_md": "🎧 **10 min. A listening lesson about sounds.** Why you can't hear small words – and how to start hearing them.",
+ "intro_md": "🎧 **12 min. A listening lesson about sounds.** Why you can't hear small words – learn the squeezed sounds, then **hear them in a real conversation** straight away.",
  "parts": [
   {
    "kind": "🎧 Learn",
@@ -93,22 +93,100 @@
    "questions": [],
    "marks": [
     0.0,
-    1.79,
-    3.74,
-    5.97,
-    8.16,
-    10.1,
-    11.79,
-    13.74,
-    15.55,
-    17.62,
-    19.49,
-    21.38,
-    23.24,
-    25.46,
-    27.24,
-    31.0
+    1.82,
+    3.66,
+    5.87,
+    8.0,
+    9.9,
+    11.65,
+    13.58,
+    15.4,
+    17.37,
+    19.24,
+    21.17,
+    23.05,
+    25.09,
+    27.05,
+    30.9
    ]
+  },
+  {
+   "kind": "🎧 Listen",
+   "title": "Real talk: Nam and Jess after work",
+   "rate": 1,
+   "md": "Now the same small sounds in a **real conversation** at normal speed – Nam stops at Jess's café after his first day.\n\nTrain your ears – the words are hidden at first:\n1. 👂 **Listen without the words** – twice. Count the squeezed sounds you catch: *it's · I'd · you'll · I've · he's · we've*.\n2. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n3. 👂 **Hide it** and listen one last time – the squeezed words should now jump out.",
+   "listen": [
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Hey, Nam! You look tired. How's it going?"
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "So far so good, but it's been a long day. I've met about ten people."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Ten! I'd forget all their names."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I already have. Well, most of them. I'd better write them down tonight."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Don't worry. You'll learn them in a week. It's always like that."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I hope so. Tom's really nice, but he talks so fast. I'd love him to slow down a bit."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "Ha! He's from Manchester. That's just how he talks. You'll get used to it."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I'm sure I will. Anyway, I'd love a coffee. What's good today?"
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "The flat white. It's been popular all week. Sit down – I'll bring it over."
+    },
+    {
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Thanks, Jess. You've been really kind since I arrived."
+    },
+    {
+     "who": "Jess",
+     "voice": "us_f",
+     "text": "That's what neighbours are for. We've all been new somewhere."
+    }
+   ],
+   "questions": [],
+   "marks": [
+    0.0,
+    3.63,
+    7.7,
+    10.6,
+    14.62,
+    18.73,
+    24.0,
+    29.38,
+    33.53,
+    38.57,
+    42.2
+   ],
+   "audio": "data/audio/2026-11-13-12/p1.mp3"
   },
   {
    "kind": "✓ Done",
