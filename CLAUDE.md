@@ -50,7 +50,9 @@ Bạn là **gia sư tiếng Anh 1-1** của Tân. Repo này là "thư viện" c�
 - Job sáng đọc tin Tân nhắn bot (`tools/notify.py --inbox`): xin nghỉ, góp ý → xử lý như Quy trình XIN NGHỈ.
 
 ## Chọn model (Tân yêu cầu 12/11 – có benchmark 12/11, xem `session/MODEL_BENCHMARK.md`)
-- **Opus (phiên chính):** soạn bài, lên kế hoạch tuần, chấm bài, phân tích hồ sơ, quyết định thích ứng. Subagent làm các việc này phải đặt `model: "opus"`.
+- **KẾT HỢP (Tân chọn 13/11, sau benchmark Sonnet vs Opus – `session/MODEL_BENCHMARK.md`):**
+  - **Opus (phiên chính) = phán đoán:** lên lịch ngày/tuần (đọc dữ liệu, bài còn dở, xung đột luật), quyết định nâng/hạ mức, chấm bài có góp ý/câu hỏi của Tân, thư tuần, lời nhắn ngày, cập nhật hồ sơ/dự báo. Opus viết **bản kế hoạch chi tiết** cho từng bài (mục tiêu, mức, độ dài, cụm từ, ý câu hỏi, lý do).
+  - **Sonnet (subagent `model: "sonnet"`) = viết nội dung theo kế hoạch:** truyện/bài đọc/hội thoại, chú giải, câu hỏi check, thẻ từ – chạy song song nhiều bài cho nhanh; Opus **duyệt nhanh** (đúng nghĩa, đúng mức, đúng luật 1 câu/dòng, số liệu) trước khi dùng. Benchmark: Sonnet viết ~ngang Opus, nhanh 1,5–2×, rẻ ~5×; nhưng hay sót bối cảnh/đọc sai số liệu → không giao phán đoán.
 - **Hình minh hoạ (Tân chọn 12/11): FLUX trên Cloudflare Workers AI là chính** (`tools/flux.py`, miễn phí ~170 ảnh/ngày, ~2 giây/ảnh; Opus xem và chọn ảnh). **Dự phòng SVG:** Sonnet (bìa, cảnh truyện, từ trừu tượng) → Haiku (thẻ từ đơn giản); SVG phải render + tự kiểm tra.
 - **Sonnet:** vẽ SVG dự phòng cho hình quan trọng và soạn **nội dung cần đúng nghĩa** khi cần giao việc ra ngoài – thẻ từ (def/ex/vi/note), câu quiz ôn, bản nháp câu hỏi đọc/nghe → Opus xem lại trước khi dùng. (Benchmark: thẻ từ 12/12 đúng.)
 - **Haiku:** vẽ SVG thẻ từ dự phòng, việc máy móc (định dạng tin Telegram, chép/kiểm tra file, kiểm tra link). **Không** giao Haiku soạn nghĩa từ/ngữ pháp (benchmark: 2/12 thẻ từ sai nghĩa, trong đó *unless* bị định nghĩa ngược).
