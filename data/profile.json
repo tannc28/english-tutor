@@ -386,7 +386,7 @@
   "reading": "B1+",
   "note_md": "**Comfortable level** = you understand straight away, without strain or translating. Lessons are built at this level (that's real *comprehensible input*). The *with effort* level is only what you can manage in a test. We move up one small step when 2–3 lessons in a row feel **😌 relaxed** and you understand ≥ 90%.",
   "reading_next": "3 lessons in a row 😌 ≥ 95% (13/11: -07, -10, -13) → next reading step: short B2 articles without the word table",
-  "listening_next": "2 new B1 dialogues 😌 (13/11: -14 90%, -11 85–90%) → one more 😌 ≥ 90% → listening B1 → B1+ (longer dialogues, slightly faster)"
+  "listening_next": "New B1 dialogue 😌 85–90% (13/11 -11) → 2 more NEW dialogues 😌 ≥ 90% → listening B1 → B1+ (longer dialogues, slightly faster)"
  },
  "notify": {
   "telegram_chat_id": 1270488169
@@ -409,7 +409,7 @@
    {
     "skill": "🎧 Listening",
     "now": "B1 comfortable · B1+ with effort",
-    "evidence": "13/11 eve: 2 NEW dialogues 90% + 85–90% first listen, both 😌 (hard: weak forms at the end of long lines – I'll, get used to, take it easy) · 13/11: dialogue 90% first listen · story narration ~70% by ear · 12/11: real VOA 60% first listen · ~95% with transcript",
+    "evidence": "13/11 eve: NEW dialogue (not read before) 85–90% first listen, 😌 (hard: weak forms at the end of long lines – I'll, get used to, take it easy) · 13/11: dialogue 90% first listen · story narration ~70% by ear · 12/11: real VOA 60% first listen · ~95% with transcript",
     "b2": "News / VOA at normal speed: ≥ 90% on the first listen, no transcript",
     "c1": "Native podcasts, films and fast talk: ≥ 90% without subtitles",
     "gap": "+30 points on first-listen REAL speech (VOA 60% → 90%)"
