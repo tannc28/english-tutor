@@ -842,7 +842,7 @@ body{font-size:14.5px}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
 <script>
 (() => {
-  const TRIGGER_ID = "trig_01AN7RrytvZ5BmXiymy5Ym5M";
+  const TRIGGER_ID = "trig_01LnYbESeN8FTXP7EM3qJD7w";   // Tân 13/11: chấm bài trong PHIÊN MỚI mỗi lần (rẻ hơn ~4–5×)
   const TYPE_LABEL = {day:"Daily lesson", walk:"Walk Pack", main:"Main lesson", weekly:"Weekly review", sunday:"Sunday", test:"Test"};
   const SLOT_LABEL = {morning:"🌅 Morning", evening:"🌙 Evening", weekend:"☀️ Weekend", review:"🔁 Review"};
   const SLOT_ORDER = {morning:1, evening:2, weekend:3, review:4};
@@ -1495,8 +1495,14 @@ body{font-size:14.5px}
     const rec = {lessonId:l.id, ...data, log:act, submittedAt:new Date().toISOString()};
     const diag = {at:new Date().toISOString()};
     const savePromise = db.doc("submissions/"+l.id).set(rec);
-    // Báo gia sư ngay trong cú bấm (Send to Claude cần thao tác gần đây của người xem)
+    // Báo gia sư: ƯU TIÊN bắn trigger chấm bài trong phiên mới (Tân 13/11, rẻ hơn); không được thì mới dùng Send to Claude
     let sentPromise = (async () => {
+      const mcp = await claude.use("mcp"); diag.mcp = !!mcp;
+      if (mcp){
+        try { diag.via = "fire_trigger"; const r = await mcp.callTool("Claude Code Remote", "fire_trigger", {trigger_id:TRIGGER_ID, text:`📥 Submitted ${l.id}`});
+          diag.result = JSON.stringify(r?.payload ?? r ?? null).slice(0,300); return true; }
+        catch(e){ diag.code = e?.code||""; diag.message = String(e?.message||e||"").slice(0,500); }
+      }
       const c = await claude.use("comments");
       diag.comments = !!c;
       if (!c) return false;
@@ -1504,9 +1510,9 @@ body{font-size:14.5px}
       if (st !== "available") return false;
       const anchor = await c.anchorFor(document.querySelector(".hero"));
       const r = await c.sendToClaude({anchor, text:`📥 Submitted ${l.id} – please grade (answers in submissions/${l.id})`});
-      diag.thread = r?.threadId || ""; return true;
+      diag.via = "comments"; diag.thread = r?.threadId || ""; return true;
     })().catch(e => { diag.cCode = e?.code||""; diag.cMsg = String(e?.message||e||"").slice(0,300); return false; });
-    sentPromise = Promise.race([sentPromise, new Promise(r => setTimeout(() => { diag.cTimeout = true; r(false); }, 8000))]);
+    sentPromise = Promise.race([sentPromise, new Promise(r => setTimeout(() => { diag.cTimeout = true; r(false); }, 15000))]);
     try {
       await savePromise;
     } catch(e){
@@ -1521,21 +1527,7 @@ body{font-size:14.5px}
     const m2 = $("#msg");
     m2.innerHTML = '<div class="banner ok">Submitted. Notifying your tutor…</div>';
     const text = summaryText(l, data);
-    let notified = await sentPromise, reason = "";
-    diag.via = notified ? "comments" : "";
-    if (!notified) try {
-      const mcp = await claude.use("mcp");
-      diag.mcp = !!mcp;
-      if (mcp){
-        diag.via = "fire_trigger";
-        const r = await mcp.callTool("Claude Code Remote", "fire_trigger", {trigger_id:TRIGGER_ID, text});
-        diag.result = JSON.stringify(r?.payload ?? r ?? null).slice(0,300); notified = true;
-      }
-      else reason = "the page can't reach the tutor yet";
-    } catch(e){
-      diag.code = e?.code||""; diag.message = String(e?.message||e||"").slice(0,800);
-      reason = {not_in_manifest:"Claude Code Remote not allowed for this page", approval_required:"press Allow", server_not_connected:"Claude Code Remote not connected", blocked_by_policy:"blocked by your organization"}[e?.code] || (e?.code||"unknown error");
-    }
+    let notified = await sentPromise, reason = notified ? "" : ({not_in_manifest:"Claude Code Remote not allowed for this page", approval_required:"press Allow", server_not_connected:"Claude Code Remote not connected", blocked_by_policy:"blocked by your organization"}[diag.code] || diag.code || "the page can't reach the tutor yet");
     diag.ok = notified;
     try { await db.doc("submissions/"+l.id).update({notify:diag}); } catch {}
     if (notified) m2.innerHTML = '<div class="banner ok">Submitted and your tutor has been notified. Results will appear at the top when graded (usually about a minute).</div>';
