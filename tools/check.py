@@ -121,6 +121,11 @@ def main():
                 if l.get('cover') and not os.path.exists(os.path.join(ROOT, l['cover'])):
                     err.append(f'{l["id"]}: ảnh bìa không tồn tại {l["cover"]}')
 
+    # 3b) Giao diện: sửa web/index.html thì phải chạy tools/ui_check.js (Tân 13/11: bố cục chướng mắt, khoảng trống – phải tự biết)
+    wi, ok = os.path.join(ROOT, 'web', 'index.html'), os.path.join(ROOT, 'web', '.ui_ok')
+    if not os.path.exists(ok) or os.path.getmtime(wi) > os.path.getmtime(ok) + 1:
+        err.append('web/index.html đã đổi nhưng chưa qua `node tools/ui_check.js` (mồ côi, tràn ngang, khoảng trống) – chạy rồi xem ảnh cả desktop lẫn điện thoại')
+
     # 4) Từ mới phải đủ để vào thư viện Review
     for x in J(D('words.json')).get('words', []):
         if not x.get('def') or not x.get('ex'):

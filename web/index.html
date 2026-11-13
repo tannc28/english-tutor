@@ -747,15 +747,40 @@ body{font-size:14.5px}
 .asks-r{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
 /* Tối ưu không gian (Tân 13/11): câu hỏi xếp lưới nhiều cột trên màn rộng; đáp án ngắn xếp cạnh nhau */
 .opts > .unsure-row,.opts > .other-note{grid-column:1/-1}
-.opts.short{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+.opts{grid-template-columns:repeat(var(--ocm,1),minmax(0,1fr))}
 @media (min-width:900px){
   .qs{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:12px;align-items:start}
-  .qs > .q:has(textarea),.qs > .q:has(.rec),.qs > .q:has(.opts.long){grid-column:1/-1}
-  .opts.mid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
-  .opts.long{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .qs > .q:has(textarea),.qs > .q:has(.rec){grid-column:1/-1}
+  .opts{grid-template-columns:repeat(var(--ocd,1),minmax(0,1fr))}
   .q{padding:10px 12px;gap:6px}
   .opt{padding:7px 10px}
 }
+/* ==== Tận dụng không gian màn rộng (Tân 13/11) ==== */
+.lib-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(440px,100%),1fr));gap:8px}
+@media (min-width:1100px){
+  .md.cols{max-width:none;column-width:30em;column-gap:40px}.md.cols>*{break-inside:avoid}
+  .letter .md{max-width:none;column-width:30em;column-gap:40px}.letter .md>*{break-inside:avoid}
+  .wk-road{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));overflow:visible}
+  .st-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+  .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+  .lv-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
+  .bookcol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}.bookcol>*{grid-column:1/-1}
+  .bookcol>.part-done{grid-column:1}.bookcol>.part-done + .fb{grid-column:2;margin:0}
+}
+@media (min-width:1300px){
+  .part .src > .md:not(.rd){max-width:none;column-width:30em;column-gap:36px}
+  .part .src > .md:not(.rd) > *{break-inside:avoid}
+  .split .src > .md{column-width:auto;columns:1}
+  .bookcol>.fb:not(.part-done + .fb){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;align-items:start}
+  .bookcol>.fb:not(.part-done + .fb)>h3{grid-column:1/-1}
+}
+@media (min-width:1200px){
+  .md.rd{max-width:none;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);column-gap:28px;align-items:start;grid-auto-flow:row dense}
+  .md.rd>*{grid-column:1}.md.rd>blockquote{grid-row:span 40;margin-top:0}
+  .md.rd>p:has(>img),.md.rd>.tbl,.md.rd>h3,.md.rd>h4{grid-column:2}
+  .md.rd>p:has(>img) img{width:100%;max-width:none}
+}
+@media (max-width:640px){.card .tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}.card .tiles .tile b{font-size:1.15rem}}
   table.fcst td{vertical-align:top;font-size:13px;line-height:1.4} table.fcst td .note{font-size:12px;margin-top:2px} table.fcst th{white-space:nowrap;text-align:left;vertical-align:bottom}
 </style>
 <script>
@@ -912,8 +937,11 @@ body{font-size:14.5px}
     if (q.type === "choice" && Array.isArray(q.options)){
       const isOther = typeof val === "string" && /^(Khác|Unsure): /.test(val);
       const note = isOther ? val.replace(/^(Khác|Unsure): /,"") : "";
-      const mx = Math.max(...q.options.map(o => String(o).length)); const oc = mx <= 18 ? "short" : mx <= 38 ? "mid" : "long";
-      return `<div class="opts ${oc}" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}
+      const mx = Math.max(...q.options.map(o => String(o).length)), n = q.options.length; const oc = mx <= 18 ? "short" : mx <= 38 ? "mid" : "long";
+      // số cột chia hết số đáp án → không bao giờ có hàng lẻ mồ côi (Tân 13/11)
+      const cd = oc === "short" ? (n % 3 === 0 ? 3 : n % 2 === 0 ? 2 : n <= 3 ? n : 1) : oc === "mid" ? (n % 2 === 0 ? 2 : 1) : 1;
+      const cm = oc === "short" ? (n % 2 === 0 ? 2 : (n === 3 && mx <= 12) ? 3 : 1) : 1;
+      return `<div class="opts ${oc}" style="--ocd:${cd};--ocm:${cm}" role="radiogroup">${q.options.map((o,i)=>`<label class="opt"><input type="radio" name="${id}" id="${id}-${i}" value="${esc(o)}" ${val===o?"checked":""} ${dis}><span>${esc(o)}</span></label>`).join("")}
         ${dis && !isOther ? "" : `<div class="unsure-row">
           <span class="unsure-hint">Can't choose?</span>
           <label class="unsure"><input type="radio" name="${id}" id="${id}-other" value="__other" ${isOther?"checked":""} ${dis}><span>🤔 I'm not sure</span></label>
@@ -1201,12 +1229,12 @@ body{font-size:14.5px}
           ${workHtml(l, sub)}
         </section>` : (sub ? `<section class="card grade" aria-label="Your study record"><span class="label">Submitted · waiting for your tutor</span>${workHtml(l, sub)}</section>` : "")}
       ${(l.parts||[]).map((p,pi) => `
-        <section class="card part ${p.learn?"learn":""} ${p.practice?"practice":""}" id="part-${pi}">
+        <section class="card part ${p.learn?"learn":""} ${p.practice?"practice":""} ${/Done/.test(p.kind||"") && !p.listen && (p.questions||[]).length <= 2 ? "part-done" : ""}" id="part-${pi}">
           <span class="step" aria-hidden="true">${pi+1}</span>
           ${p.kind?`<span class="kind">${esc(p.kind)}</span>`:""}
           <h3>${esc(p.title||"")}</h3>
           <div class="${isSplit(p) ? "split" : ""}">
-            <div class="src ${p.listen ? "src-listen" : "src-read"}" data-pi="${pi}">${isSplit(p) ? `<div class="src-h"><span class="kind">${esc(p.kind||"")}</span> ${esc(p.title||"")}</div>` : ""}${isReadPart(p) ? readerHtml(pi) : ""}<div class="md">${md(p.md)}</div>
+            <div class="src ${p.listen ? "src-listen" : "src-read"}" data-pi="${pi}">${isSplit(p) ? `<div class="src-h"><span class="kind">${esc(p.kind||"")}</span> ${esc(p.title||"")}</div>` : ""}${isReadPart(p) ? readerHtml(pi) : ""}<div class="md${isReadPart(p) ? " rd" : ""}">${md(p.md)}</div>
             ${Array.isArray(p.listen) && p.listen.length ? playerHtml(l.id, pi, p) : ""}</div>
             ${(p.questions||[]).length ? `<div class="qs">${p.questions.map(q => `
               <div class="q" id="qb-${esc(q.id)}">
@@ -1528,7 +1556,7 @@ body{font-size:14.5px}
         <div class="tiles">${lv("overall","Overall (estimate)")}${lv("listening","Listening")}${lv("reading","Reading")}${lv("vocab","Vocabulary")}${lv("grammar","Grammar & linking")}</div>
       ${p.input_level ? `<div class="inlv"><span class="label">Comfortable input level – lessons are built here</span><div class="inlv-r"><span>🎧 Listening <b>${esc(p.input_level.listening||"–")}</b></span><span>📖 Reading <b>${esc(p.input_level.reading||"–")}</b></span></div>${p.input_level.note_md?`<div class="md note">${md(p.input_level.note_md)}</div>`:""}</div>` : ""}
       </section>
-      ${p.teacher_md ? `<section class="card sec"><span class="label">Tutor's comments</span><div class="md">${md(p.teacher_md)}</div></section>` : ""}
+      ${p.teacher_md ? `<section class="card sec"><span class="label">Tutor's comments</span><div class="md cols">${md(p.teacher_md)}</div></section>` : ""}
       <div class="cols">
         <section class="card sec"><span class="label">Strengths</span>${li(p.strengths)}</section>
         <section class="card sec"><span class="label">To improve</span>${li(p.weaknesses)}</section>
@@ -1627,7 +1655,7 @@ body{font-size:14.5px}
     v.innerHTML = `
       <section class="card sec">
         <span class="label">Where you are now</span>
-        ${coach.summary_md ? `<div class="md">${md(coach.summary_md)}</div>` : `<p class="note">Your tutor will write a summary after grading Day 1.</p>`}
+        ${coach.summary_md ? `<div class="md cols">${md(coach.summary_md)}</div>` : `<p class="note">Your tutor will write a summary after grading Day 1.</p>`}
         <div class="tiles">
           <div class="tile"><span class="label">Overall level</span><b>${esc(cur||"B1?")}</b><span class="sub">${cur?"tutor's estimate":"self-assessed, waiting for Day 1"}</span></div>
           <div class="tile"><span class="label">Studied</span><b>${studiedDays} day${studiedDays===1?"":"s"}</b><span class="sub">${totalH.toFixed(1)} h real study time</span></div>
@@ -1644,17 +1672,24 @@ body{font-size:14.5px}
       </section>
         <section class="card sec">
           <span class="label">Study time per week</span>
-          ${wkBars}
+          <div class="st-grid"><div>${wkBars}</div>
           ${SD ? (() => { const k = slWeek || wk[wk.length-1]; const ds = Object.entries(SD).filter(([d]) => weekKey(d) === k).sort();
             return `<div class="sl-days"><span class="label">When you studied · week of ${esc(fmtDate(k))} <span class="note">(tap a bar to see another week)</span></span>${ds.length ? ds.map(([d,x]) => `<div class="sl-day"><b>${esc(new Date(d+"T12:00:00").toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"}))}</b><span class="mono">${Math.round(x.min)} min</span>
               <div class="sl-blocks">${x.blocks.map(b => `<span class="sl-b" title="${esc(b.lessons.join(" · "))}"><span class="mono">${esc(b.start.slice(11,16))}–${esc(b.end.slice(11,16))}</span> · ${Math.round(b.min)}′ · ${esc(b.lessons.join(", "))}</span>`).join("")}</div></div>`).join("") : `<p class="note">No study sessions logged this week yet.</p>`}
-              <p class="note">Real study time = active time inside lessons (measured automatically), plus any extra minutes you write in the feedback.</p></div>`; })() : ""}
+              <p class="note">Real study time = active time inside lessons (measured automatically), plus any extra minutes you write in the feedback.</p></div>`; })() : ""}</div>
           <p class="note">Current target: <b>${target} h/week</b>${coach.target_why?` – ${inline(coach.target_why)}`:""}. Your real pace so far: <b>${realPace!=null?realPace.toFixed(1)+" h/week":"–"}</b> (${totalH.toFixed(1)} h in ${spanDays} day${spanDays===1?"":"s"}).</p>
         </section>
-        <section class="card sec">
+        <div class="duo"><section class="card sec">
           <span class="label">Weak spots & plan</span>
           ${weak.length ? `<div class="weak">${weak.map(w=>`<div class="weak-item">${w.area?`<span class="pill">${esc(w.area)}</span>`:""}<div><b>${inline(w.detail||"")}</b>${w.evidence?`<p class="note">Evidence: ${inline(w.evidence)}</p>`:""}${w.plan?`<p>→ ${inline(w.plan)}</p>`:""}</div></div>`).join("")}</div>` : `<p class="note">None yet.</p>`}
         </section>
+<section class="card sec">
+        <span class="label">Comprehension by day (tutor's assessment)</span>
+        ${ch ? `<div class="legend"><span><i style="background:var(--s-read)"></i>Reading</span><span><i style="background:var(--s-listen)"></i>Listening</span></div>
+          <div class="chart" id="chart">${ch.svg}<div class="tip" id="tip" hidden></div></div>
+          <p class="note">Comprehensible Input target: understand about 90–98% of extensive reading/listening. Lower → your tutor eases the level; higher and too easy → it goes up.</p>`
+          : `<p class="note">The chart appears once your first lesson is graded.</p>`}
+      </section></div>
       ${FC ? (() => {
         const ph = FC.phases || [], done = totalH;
         let acc = [0,0], left = [0,0];
@@ -1683,13 +1718,7 @@ body{font-size:14.5px}
         </tbody></table></div>
         <p class="note">${inline(FC.method_md||"")}</p>
       </section>`; })() : ""}
-      <section class="card sec">
-        <span class="label">Comprehension by day (tutor's assessment)</span>
-        ${ch ? `<div class="legend"><span><i style="background:var(--s-read)"></i>Reading</span><span><i style="background:var(--s-listen)"></i>Listening</span></div>
-          <div class="chart" id="chart">${ch.svg}<div class="tip" id="tip" hidden></div></div>
-          <p class="note">Comprehensible Input target: understand about 90–98% of extensive reading/listening. Lower → your tutor eases the level; higher and too easy → it goes up.</p>`
-          : `<p class="note">The chart appears once your first lesson is graded.</p>`}
-      </section>
+
       <section class="card sec">
         <span class="label">Day-by-day assessment</span>
         ${rows.length ? `<div class="tblwrap"><table class="days"><thead><tr><th>Day</th><th>Lesson</th><th>Listening</th><th>Reading</th><th>Difficulty</th><th>Minutes (lesson + extra)</th><th>Tutor's note</th></tr></thead><tbody>
@@ -1725,7 +1754,7 @@ body{font-size:14.5px}
     v.innerHTML = `<section class="card sec"><span class="label">Listening – planned and tracked by your tutor</span>
         <h2 style="margin:4px 0">🎧 ${done}/${ls.length} listening lessons done</h2>
         <p class="note">Short real-English audio (VOA Learning English – slower than normal, clear). Each one: learn the key expressions → listen 3 times → answer → 📤 Submit. Everything stays here on this page.</p></section>
-      <section class="card sec"><div class="rv-list">${ls.map(l => { const st = statusOf(l), p = planOf[l.id];
+      <section class="card sec"><div class="rv-list lib-grid">${ls.map(l => { const st = statusOf(l), p = planOf[l.id];
         return `<a class="rv-row" href="#${esc(l.id)}"><span class="rv-noimg">${DONE(st)?"✅":"🎧"}</span><span><b>${esc(l.title)}</b><span class="note">Week ${esc(l.week)}${p?` · ${esc(fmtDate(p.ds))}`:""} · ~${esc(l.minutes)} min · ${STATUS_LABEL[st]}</span></span><span class="td-go">${DONE(st)?"Review":"Start ▶"}</span></a>`; }).join("") || `<p class="note">Listening lessons appear here every week.</p>`}</div></section>`;
   }
 
@@ -2013,14 +2042,14 @@ body{font-size:14.5px}
           <b>${esc(l.id)}</b><span class="bar"><i style="width:${stats[i].pct}%"></i></span><span class="note mono">${stats[i].got_it}/${stats[i].n} ✅</span>${l.id===target.id?`<span class="pill submitted">working on</span>`:""}</button>`).join("")}</div>
         <p class="note">Comfortable level now: 🎧 Listening <b>${esc(il.listening||"–")}</b> · 📖 Reading <b>${esc(il.reading||"–")}</b>. ${md(LV.how_md).replace(/^<p>|<\/p>$/g,"")}</p>
       </section>
-      <section class="card sec lv-head">
+      <div class="duo"><section class="card sec lv-head">
         <h2>${esc(L.name)}</h2>
         <div class="md">${md(L.summary_md)}</div>
         <div class="lv-counts"><span>✅ ${S.got_it} got it</span><span>🌱 ${S.learning} learning</span><span>⬜ ${S.not_yet} not yet</span><span>· ${S.unknown} not checked</span><span class="note">≈ ${esc(L.hours)} study hours from zero</span></div>
         <div class="bar lv-bar"><i style="width:${S.pct}%"></i></div>
         <div class="lv-proof"><span class="label">How we'll know you're there</span><ul>${(L.proof||[]).map(p=>`<li>${inline(p)}</li>`).join("")}</ul></div>
       </section>
-      <section class="card sec" id="lv-vocab"></section>
+      <section class="card sec" id="lv-vocab"></section></div>
       ${L.sections.map(sec => `<section class="card sec lv-sec ${sec.key==="later"?"later":""}"><span class="label">${esc(sec.name)}</span>
         <div class="lv-items">${sec.items.map(it => { const m = MA.items[it.id] || {}, t = m.tutor || "unknown", me = SC.items[it.id] || "";
           return `<div class="lv-it">
