@@ -5,9 +5,9 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 14/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 15/22 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
-- Cập nhật hồ sơ: 2026-11-13T10:57:21.326137+00:00
+- Cập nhật hồ sơ: 2026-11-13T11:20:55.654242+00:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -38,7 +38,7 @@
 **Gia sư khuyên:**
 - **Nghe không lời trước** – Mỗi bài nghe: 2 vòng không lời → mở lời đối chiếu → nghe lại lần cuối không lời.
 - **Bấm dòng nào chưa nghe ra** – Trong transcript, bấm ▶ ở dòng đó (nghe 2–3 lần, thì thầm theo). Mình theo dõi số lần bấm để biết chỗ nào tai còn khó.
-- **Đọc trước – nghe sau cùng nội dung** – Làm bài 📖 trước, ngay sau đó làm bài 🎧 của cùng câu chuyện/bài báo.
+- **Đọc trước – nghe phần tiếp theo** – Làm bài 📖 trước, rồi bài 🎧 cùng nhân vật/chủ đề nhưng chuyện mới (hội thoại, cuộc gọi, phần tiếp).
 - **Lỡ một từ – cứ nghe tiếp** – Giữ ý chính (ai, ở đâu, chuyện gì), bỏ qua từ lỡ; câu sau thường giải thích.
 - **Hỏi mình bất cứ lúc nào** – Ô 💬 Ask me cuối mỗi bài – tiếng Việt cũng được. Mình trả lời khi chấm.
 
@@ -48,7 +48,7 @@
 
 Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài B1+/B2 hiểu 99% mà thấy dễ), từ nối và các lỗi ngữ pháp của Ngày 1 đã sửa được hết. **Điểm nghẽn duy nhất là tai:** nghe lần đầu ~60–80%, có lời thì ~95–100% – nghĩa là từ đã biết, tai chỉ chưa quen âm thật (dạng yếu, nối âm). Tân rất rõ mình cần gì – *nạp input, ít quiz, luyện tai* – và mình đã đổi cách dạy theo đúng hướng đó.
 
-**Đang tập trung:** **Luyện tai bằng thật nhiều input nghe vừa sức.** Mỗi ngày ~10–14 bài nhỏ (5–15'), sáng ~40', tối ~2 giờ, ngày nào cũng có cả đọc và nghe. Bài nghe: **lời ẩn mặc định** → nghe 2 vòng → mở lời đối chiếu, **bấm dòng chưa nghe ra để nghe lại** → nghe lần cuối. Đọc trước rồi nghe cùng nội dung để tai bắt kịp mắt. Không quiz – chỉ % hiểu + 💬 Ask me.
+**Đang tập trung:** **Luyện tai bằng thật nhiều input nghe vừa sức.** Mỗi ngày ~10–14 bài nhỏ (5–15'), sáng ~40', tối ~2 giờ, ngày nào cũng có cả đọc và nghe. Bài nghe: **lời ẩn mặc định** → nghe 2 vòng → mở lời đối chiếu, **bấm dòng chưa nghe ra để nghe lại** → nghe lần cuối. Đọc trước, rồi nghe **phần tiếp / hội thoại mới cùng chủ đề** (narrow listening – không nghe lại y bài đọc, Tân 13/11). Cuối bài: Quick check 1–3 câu chọn (đáp án hiện ngay) + % hiểu + 💬 Ask me.
 
 ### Nhật ký quyết định (vì sao bài lại như vậy)
 | Ngày | Quyết định |
@@ -77,6 +77,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | 2026-11-13 | Chấm 06/07: nghe truyện ~70% (dòng dẫn chuyện dài 4 câu nghe lại 12×), Tân thấy dẫn chuyện nhanh; hỏi đọc chậm có ảnh hưởng nghe. → (1) mỗi dòng listen = 1 câu (≤ ~110 ký tự) để bấm nghe lại đúng câu; (2) chuẩn hoá giọng TTS về ~160 wpm (SCALE trong audio.py: lessac 1.25, ryan 1.4); (3) giữ mức nghe B1 nhưng truyện có dẫn chuyện dài là 'B1 with effort' – tăng dần độ dài; đọc kèm nghe luyện cả hai. |
 | 2026-11-13 | Tân: KHÔNG làm chậm giọng – 'vẫn thấy thú vị, khó thì luyện nhiều sẽ quen, phải cố gắng'. → bỏ chỉnh tốc độ TTS (giữ tốc độ gốc), chỉ giữ chia 1 câu/dòng để bấm nghe lại đúng câu. Thử thách vừa phải (🙂) là được, không hạ mức vì 1 bài khó. |
 | 2026-11-13 | Chấm 08: 100% sau khi đã đọc, 😌; câu chủ ngữ dài nghe lại 6×; Tân: 'hiểu hết nhưng chưa êm tai'. → bài sáng hôm sau mở đầu bằng nghe lại tập vừa học (lặp lại để quen âm) trước tập mới; nhắc dùng Play today. |
+| 2026-11-13 | Tân (chấm 14): 'listen gióng y reading thì dễ đoán quá – soạn bài khác, tương tự hoặc phần kế tiếp ở dạng listen, không 1-1'. → BỎ kiểu bài 🎧 = đọc lại y nguyên bài 📖. Bài nghe sau bài đọc = NARROW LISTENING: cùng chủ đề/nhân vật/cụm từ nhưng NỘI DUNG MỚI (phần tiếp, hội thoại, góc nhìn khác). Bài -11 (bài báo dạng audio) đã viết lại thành hội thoại Nam–Claire. Nghe lại y nguyên chỉ ở Play today. check.py chặn bài nghe trùng >50% câu với bài đọc. |
 
 ## Checklist trình độ (data/levels.json + data/mastery.json)
 | Level | ✅ Got it | 🌱 Learning | ⬜ Not yet | Chưa kiểm tra |
@@ -89,7 +90,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 14/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 15/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -115,10 +116,10 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B108 | 2026-11-13 | Hope Street Ep. 3 (2/2): listen | graded | 100% | – | 2 | 8 | – | 100% (đã đọc trước) · dòng 1 (chủ ngữ dài) nghe lại 6× · 😌 · tai chưa êm → nghe lại nhiều lần |
 | T1 · B109 | – | VOA: Sometimes we 'spread ourselves too thin' | open | – | – | – | – | – |  |
 | T1 · B110 | 2026-11-13 | Why is the first week at a new job so tiring? | graded | – | 97% | 1 | 20 | – | 3/3 · 95–100% · 😌 'Dễ thôi' · 1 lượt 3'56" ≈ 58 wpm (gồm xem bảng từ + trả lời) → bài B1+ đã dễ, sắp nâng nhẹ |
-| T1 · B111 | – | Listen: why the first week is so tiring | open | – | – | – | – | – |  |
+| T1 · B111 | – | Listen: Nam and Claire's Friday chat | open | – | – | – | – | – |  |
 | T1 · B112 | – | Sound focus: you'll · I've · it's · I'd | open | – | – | – | – | – |  |
 | T1 · B113 | 2026-11-13 | Nam's message home | graded | – | 100% | 1 | 7 | – | 3/3 · 100% · 😌 · đọc 2 lượt ≈ 95 wpm/lượt (log 1 lượt 39 wpm – bài ngắn không cuộn nên lượt 2 không ghi) · lơ đễnh ~45s → bài đã quá dễ |
-| T1 · B114 | – | Listen: Nam's message home | open | – | – | – | – | – |  |
+| T1 · B114 | 2026-11-13 | Listen: Nam's message home | graded | 90% | – | 1 | 5 | – | 2/2 · 90% · 😌 · 8 lượt, mở lời sau 135s, nghe lại dòng 7 (neighbours/Margaret) 2× · đã đọc trước nên 90% không phải điểm nghe lần đầu · Tân: nghe y bài đọc = dễ đoán → đổi cách soạn |
 
 ## Truyện dài kỳ: Hope Street
 - Nhân vật: Nam (chuyển tới Manchester làm ở công ty thiết kế), Margaret (Flat 1, 60+ tuổi), Mr Patel (chủ nhà); Jess (quán cà phê đầu phố, tóc đỏ ngắn); Claire (quản lý của Nam, kính xám)

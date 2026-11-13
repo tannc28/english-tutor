@@ -1,0 +1,86 @@
+{
+  "answers": {
+    "l1": "about half",
+    "l2": "downstairs",
+    "u1": "90% (Cơ bản tôi thấy bạn thiết kế listen gióng reading thé này khong hay lắm  tôi đọc xong reading là hiểu hết rồi  không nên bạn soạn bài khác đi thì hay hơn hoặc tương tự hơạc kế tiếp nhưng ở dạng listen ấy, không nên 1-1 lis và read như thế dễ đoán quá)"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "Dễ quá do read và listen như nhau, tôi đã học bài reading trước rồi nên nghe cái này chả thấy có gì cả",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-14",
+  "log": {
+    "listen": {
+      "0": {
+        "answeredBeforeReveal": "0/0",
+        "plays": 8,
+        "rates": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 135,
+        "segIdx": {
+          "6": 2
+        },
+        "segs": 2
+      }
+    },
+    "parts": {
+      "fb": {
+        "ms": 300000
+      }
+    },
+    "q": {
+      "l1": {
+        "changes": [],
+        "edits": 1,
+        "first": 210,
+        "last": "about half",
+        "ms": 0
+      },
+      "l2": {
+        "changes": [],
+        "edits": 1,
+        "first": 213,
+        "last": "downstairs",
+        "ms": 0
+      },
+      "u1": {
+        "edits": 332,
+        "first": 214,
+        "ms": 100000
+      }
+    },
+    "sessions": [
+      {
+        "app": "Claude app",
+        "at": "2026-11-13T11:13:42.861Z",
+        "e": 315,
+        "kind": "computer",
+        "os": "Linux",
+        "s": 0,
+        "vw": 1918
+      }
+    ],
+    "t0": 1794568422861,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T11:18:57.750Z",
+    "mcp": true,
+    "ok": true,
+    "pending": true,
+    "result": "{\"trigger\":{\"id\":\"trig_01LnYbESeN8FTXP7EM3qJD7w\",\"name\":\"English – Chấm bài nộp (phiên mới)\",\"cron_expression\":\"\",\"enabled\":true,\"created_at\":\"2026-11-13T09:31:15.752801Z\",\"updated_at\":\"2026-11-13T11:02:38.427064Z\",\"persist_session\":false,\"mcp_connections\":[{\"connector_uuid\":\"6ba9f48b-7288-4418-a670",
+    "via": "fire_trigger"
+  },
+  "submittedAt": "2026-11-13T11:18:57.750Z"
+}

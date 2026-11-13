@@ -2,7 +2,7 @@
  "_note": "Hồ sơ học sinh = Learner model. NGUỒN DUY NHẤT; tutor/02_PROGRESS_LOG.md được sinh tự động từ file này + days.json (python3 tools/sync.py).",
  "name": "Tân",
  "goal": "Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.",
- "updatedAt": "2026-11-13T10:57:21.326137+00:00",
+ "updatedAt": "2026-11-13T11:20:55.654242+00:00",
  "week": 1,
  "streak": 2,
  "focus_now": "INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.",
@@ -76,7 +76,7 @@
  ],
  "habits": "Làm việc cả ngày, chat với Claude bằng tiếng Anh để code (nhiều chỗ chưa hiểu; gấp thì chuyển tiếng Việt). Thời gian rảnh hay lướt TikTok/FB; muốn chuyển sang podcast/YouTube tiếng Anh. Input thêm ngoài bài ngày 11/11: 0 phút. **Không thích phim/series** – chỉ YouTube và podcast.",
  "teacher_md": "Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài B1+/B2 hiểu 99% mà thấy dễ), từ nối và các lỗi ngữ pháp của Ngày 1 đã sửa được hết. **Điểm nghẽn duy nhất là tai:** nghe lần đầu ~60–80%, có lời thì ~95–100% – nghĩa là từ đã biết, tai chỉ chưa quen âm thật (dạng yếu, nối âm). Tân rất rõ mình cần gì – *nạp input, ít quiz, luyện tai* – và mình đã đổi cách dạy theo đúng hướng đó.",
- "focus_md": "**Luyện tai bằng thật nhiều input nghe vừa sức.** Mỗi ngày ~10–14 bài nhỏ (5–15'), sáng ~40', tối ~2 giờ, ngày nào cũng có cả đọc và nghe. Bài nghe: **lời ẩn mặc định** → nghe 2 vòng → mở lời đối chiếu, **bấm dòng chưa nghe ra để nghe lại** → nghe lần cuối. Đọc trước rồi nghe cùng nội dung để tai bắt kịp mắt. Không quiz – chỉ % hiểu + 💬 Ask me.",
+ "focus_md": "**Luyện tai bằng thật nhiều input nghe vừa sức.** Mỗi ngày ~10–14 bài nhỏ (5–15'), sáng ~40', tối ~2 giờ, ngày nào cũng có cả đọc và nghe. Bài nghe: **lời ẩn mặc định** → nghe 2 vòng → mở lời đối chiếu, **bấm dòng chưa nghe ra để nghe lại** → nghe lần cuối. Đọc trước, rồi nghe **phần tiếp / hội thoại mới cùng chủ đề** (narrow listening – không nghe lại y bài đọc, Tân 13/11). Cuối bài: Quick check 1–3 câu chọn (đáp án hiện ngay) + % hiểu + 💬 Ask me.",
  "decisions": [
   {
    "date": "2026-11-11",
@@ -173,6 +173,10 @@
   {
    "date": "2026-11-13",
    "text": "Chấm 08: 100% sau khi đã đọc, 😌; câu chủ ngữ dài nghe lại 6×; Tân: 'hiểu hết nhưng chưa êm tai'. → bài sáng hôm sau mở đầu bằng nghe lại tập vừa học (lặp lại để quen âm) trước tập mới; nhắc dùng Play today."
+  },
+  {
+   "date": "2026-11-13",
+   "text": "Tân (chấm 14): 'listen gióng y reading thì dễ đoán quá – soạn bài khác, tương tự hoặc phần kế tiếp ở dạng listen, không 1-1'. → BỎ kiểu bài 🎧 = đọc lại y nguyên bài 📖. Bài nghe sau bài đọc = NARROW LISTENING: cùng chủ đề/nhân vật/cụm từ nhưng NỘI DUNG MỚI (phần tiếp, hội thoại, góc nhìn khác). Bài -11 (bài báo dạng audio) đã viết lại thành hội thoại Nam–Claire. Nghe lại y nguyên chỉ ở Play today. check.py chặn bài nghe trùng >50% câu với bài đọc."
   }
  ],
  "story": {
@@ -308,9 +312,9 @@
     "how": "Trong transcript, bấm ▶ ở dòng đó (nghe 2–3 lần, thì thầm theo). Mình theo dõi số lần bấm để biết chỗ nào tai còn khó."
    },
    {
-    "title": "Đọc trước – nghe sau cùng nội dung",
-    "why": "Khi đã biết nghĩa, tai chỉ cần tập trung bắt âm (dạng yếu you'll / I've / it's, nối âm).",
-    "how": "Làm bài 📖 trước, ngay sau đó làm bài 🎧 của cùng câu chuyện/bài báo."
+    "title": "Đọc trước – nghe phần tiếp theo",
+    "why": "Biết chủ đề + cụm từ giúp tai bắt âm dễ hơn, nhưng nội dung phải MỚI – nghe lại y bài đọc thì não đoán thay tai (Tân 13/11).",
+    "how": "Làm bài 📖 trước, rồi bài 🎧 cùng nhân vật/chủ đề nhưng chuyện mới (hội thoại, cuộc gọi, phần tiếp)."
    },
    {
     "title": "Lỡ một từ – cứ nghe tiếp",
@@ -400,7 +404,7 @@
    {
     "skill": "🎧 Listening",
     "now": "B1 comfortable · B1+ with effort",
-    "evidence": "13/11: dialogue 90% first listen · story narration ~70% by ear · 12/11: real VOA 60% first listen · ~95% with transcript",
+    "evidence": "13/11: replay of a read text 90% (not first-listen) · dialogue 90% first listen · story narration ~70% by ear · 12/11: real VOA 60% first listen · ~95% with transcript",
     "b2": "News / VOA at normal speed: ≥ 90% on the first listen, no transcript",
     "c1": "Native podcasts, films and fast talk: ≥ 90% without subtitles",
     "gap": "+30 points on first-listen REAL speech (VOA 60% → 90%)"

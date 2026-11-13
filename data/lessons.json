@@ -374,8 +374,8 @@
    "order": 111,
    "kind": "Listening",
    "type": "day",
-   "title": "Listen: why the first week is so tiring",
-   "minutes": 10,
+   "title": "Listen: Nam and Claire's Friday chat",
+   "minutes": 8,
    "status": "open",
    "cover": "data/img/w1/d5-tired.webp",
    "date": null,
@@ -437,17 +437,18 @@
    "type": "day",
    "title": "Listen: Nam's message home",
    "minutes": 6,
-   "status": "open",
+   "status": "graded",
    "cover": "data/img/w1/d5-message.webp",
-   "date": null,
+   "date": "2026-11-13",
    "micro": true,
    "slot": "evening",
-   "listenPct": null,
+   "listenPct": 90,
    "readPct": null,
-   "difficulty": null,
-   "minutesActual": null,
-   "extraMinutes": null,
-   "note": ""
+   "difficulty": 1,
+   "minutesActual": 5,
+   "extraMinutes": 0,
+   "note": "2/2 · 90% · 😌 · 8 lượt, mở lời sau 135s, nghe lại dòng 7 (neighbours/Margaret) 2× · đã đọc trước nên 90% không phải điểm nghe lần đầu · Tân: nghe y bài đọc = dễ đoán → đổi cách soạn",
+   "strain": "relaxed"
   }
  ]
 }

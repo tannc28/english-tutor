@@ -98,6 +98,21 @@ def main():
             mins = sum(int(l.get('minutes') or 0) for l in ls)
             if mins < 90:
                 warn.append(f'{ds}: tổng ~{mins} phút – Tân muốn ~2–3 giờ/ngày')
+            # Tân 13/11: bài nghe KHÔNG được là bài đọc đọc lại y nguyên ("dễ đoán quá") → narrow listening, nội dung mới
+            norm = lambda s: re.sub(r'[^a-z ]', '', s.lower()).strip()
+            rtxt = ''
+            for x in L.values():
+                if x.get('week') == w.get('no') and x.get('kind') == 'Reading' and os.path.exists(D('lessons', x['id'] + '.json')):
+                    rtxt += ' ' + ' '.join(norm(p.get('md') or '') for p in J(D('lessons', x['id'] + '.json')).get('parts', []))
+            rtxt = ' '.join(rtxt.split())
+            for l in ls:
+                if l.get('kind') != 'Listening' or l.get('status') == 'graded' or not os.path.exists(D('lessons', l['id'] + '.json')):
+                    continue
+                sents = [' '.join(norm(s['text']).split()) for p in J(D('lessons', l['id'] + '.json')).get('parts', []) for s in (p.get('listen') or []) if len(s.get('text', '')) > 40]
+                if len(sents) >= 4:
+                    dup = sum(1 for s in sents if s in rtxt)
+                    if dup / len(sents) > 0.5:
+                        err.append(f'{l["id"]}: {dup}/{len(sents)} câu nghe trùng y bài đọc trong tuần – Tân 13/11: "dễ đoán quá" → viết nội dung MỚI cùng chủ đề (phần tiếp/hội thoại)')
             for l in ls:
                 if len(l.get('title', '')) > 48:
                     warn.append(f'{l["id"]}: tên bài dài ({len(l["title"])} ký tự) – nên 3–6 từ')

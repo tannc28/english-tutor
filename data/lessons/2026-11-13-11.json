@@ -1,119 +1,125 @@
 {
- "intro_md": "🎧 **10 min.** The article you just read, as audio. Reading first, then listening to the same text = the fastest way for your ears to catch up with your eyes.",
+ "intro_md": "🎧 **8 min. New listening – not the article again.** It's Friday afternoon: Nam has a short *end-of-week* chat with his manager, Claire. You know the topic (why the first week is tiring), but **everything you hear is new** – Claire gives Nam 3 tips for week 2. Listen first; the words are hidden.",
  "parts": [
   {
    "kind": "🎧 Listen + read",
-   "title": "The article – audio",
+   "title": "Friday chat: Nam and Claire",
    "rate": 1,
-   "audio": "data/audio/2026-11-13-11/p0.mp3",
    "md": "**Train your ears – the words are hidden at first:**\n1. 👂 **Listen without the words.** Just follow. Missed a word? Keep going – the next sentence often explains it.\n2. 👂 **Listen again**, still without the words. You'll catch more.\n3. 📄 **Show transcript** – listen + read. **Tap any line** you missed to hear just that part again.\n4. 👂 **Hide it** and listen one last time.",
    "listen": [
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "Why is the first week at a new job so tiring?"
+     "text": "Hi Nam, come in and sit down. How was your first week?"
     },
     {
-     "who": "",
-     "voice": "us_f",
-     "text": "You sit at a desk most of the day, so it seems strange to feel so tired in the evening."
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Honestly, I'm exhausted, but so far so good."
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "The answer is in your brain. In a new place, almost nothing is automatic."
+     "text": "That's completely normal, so please don't worry."
     },
     {
-     "who": "",
-     "voice": "us_f",
-     "text": "You have to think about everything: where the kitchen is, how the printer works, what your manager wants, and, of course, everyone's name."
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "In the meeting on Wednesday, I just nodded, but I didn't understand half of it."
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "Scientists say that learning new information uses a lot of energy."
+     "text": "Thanks for telling me, that's very honest."
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "When you do something for the hundredth time, your brain uses shortcuts."
+     "text": "Next time, just ask Tom to explain it again after the meeting."
     },
     {
-     "who": "",
-     "voice": "us_f",
-     "text": "When you do it for the first time, there are no shortcuts."
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "Okay, I will. He talks very fast, though."
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "Every small decision takes effort."
+     "text": "Well, Tom will be your buddy for the next two weeks."
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "There is also the social side. You want to make a good impression, so you listen carefully, smile a lot and try not to make mistakes."
+     "text": "You can ask him anything, even small questions."
     },
     {
-     "who": "",
-     "voice": "us_f",
-     "text": "In other words, you are \"on\" all day. That is tiring even for very confident people."
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "That's great, thank you. Do you have any tips for next week?"
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "The good news is that it gets easier, and quite quickly."
+     "text": "Yes, three. First, write down each person's name with one small detail."
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "After two or three weeks, many things become routine."
+     "text": "For example, \"Sara, from Leeds, has two cats\". It helps you remember people."
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "You no longer need to think about the way to the office or how to log in."
+     "text": "Second, prepare one or two questions for Monday's team meeting."
     },
     {
-     "who": "",
-     "voice": "us_f",
-     "text": "Your brain can relax a little."
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "That's a good idea. It'll help me make a good impression."
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "So if you feel exhausted after your first week, don't worry."
+     "text": "Exactly. Third, take a real lunch break and walk outside for twenty minutes."
     },
     {
-     "who": "",
-     "voice": "us_f",
-     "text": "It doesn't mean the job is wrong for you."
+     "who": "Nam",
+     "voice": "us_m",
+     "text": "I usually eat at my desk, so I'll try that."
     },
     {
-     "who": "",
+     "who": "Claire",
      "voice": "us_f",
-     "text": "It means your brain is working hard to get the hang of something new."
+     "text": "Good. You'll get used to everything soon, so take it easy this weekend."
+    },
+    {
+     "who": "Claire",
+     "voice": "us_f",
+     "text": "Let's meet again next Friday at four and talk about week two."
     }
    ],
    "questions": [],
    "marks": [
     0.0,
-    3.41,
-    8.97,
-    14.27,
-    22.27,
-    26.59,
-    31.06,
-    34.91,
-    37.64,
-    45.97,
-    51.05,
-    54.79,
-    58.48,
-    62.79,
-    64.94,
-    68.95,
-    71.86
-   ]
+    4.0,
+    7.37,
+    10.78,
+    15.04,
+    18.2,
+    22.8,
+    26.07,
+    29.49,
+    32.93,
+    36.04,
+    41.06,
+    46.44,
+    50.64,
+    53.62,
+    58.85,
+    61.64,
+    66.54
+   ],
+   "audio": "data/audio/2026-11-13-11/p0.mp3"
   },
   {
    "kind": "✓ Done",
@@ -122,30 +128,30 @@
    "questions": [
     {
      "id": "l1",
-     "q": "*\"You are 'on' all day\"* – what does it mean?",
+     "q": "What will Tom do for Nam?",
      "type": "choice",
      "options": [
-      "You try hard all day to make a good impression",
-      "You work late every day",
-      "You are always online"
+      "Be his buddy for two weeks",
+      "Run the Monday meeting",
+      "Take him to lunch every day"
      ],
      "check": {
-      "answer": "You try hard all day to make a good impression",
-      "why": "Listen, smile, try not to make mistakes – all day. **In other words**, you are 'on'."
+      "answer": "Be his buddy for two weeks",
+      "why": "Claire says: *Tom will be your buddy for the next two weeks.*"
      }
     },
     {
      "id": "l2",
-     "q": "If you feel exhausted after your first week, it means…",
+     "q": "What is Claire's tip about lunch?",
      "type": "choice",
      "options": [
-      "your brain is working hard to learn",
-      "the job is wrong for you",
-      "you need a different manager"
+      "Eat quickly at your desk",
+      "Take a break and walk outside",
+      "Have lunch with Tom"
      ],
      "check": {
-      "answer": "your brain is working hard to learn",
-      "why": "*It doesn't mean the job is wrong for you. It means your brain is working hard…*"
+      "answer": "Take a break and walk outside",
+      "why": "Claire says: *Take a real lunch break and walk outside for twenty minutes.*"
      }
     },
     {
