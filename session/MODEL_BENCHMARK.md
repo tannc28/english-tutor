@@ -22,3 +22,16 @@ Cùng đề, cùng file đầu vào (`scratchpad/bench`), gia sư (Opus) chấm 
 | Chất lượng (gia sư chấm từng cặp) | thắng 1/8 (*unless* tương phản ngày/đêm rõ hơn) | **thắng 6/8**, hoà 1 (*tram*): bố cục tự nhiên, nhiều chi tiết, đúng cảnh hơn (*overwhelmed*, *spread yourself too thin*, ảnh bìa Manchester, Mr Patel bê TV) |
 
 Cả hai đều đúng nghĩa ở mức dùng được; *move the goalposts* cả hai còn yếu.
+
+## Sonnet vs Opus cho việc của lớp (13/11/2026, cùng đề, chạy song song, gia sư chấm)
+
+| Việc | Sonnet | Opus | Nhận xét |
+|---|---|---|---|
+| A · Chấm bài 06 (nghe, Tân hỏi về dẫn chuyện) | Đúng 2/2, đọc log đúng (dòng 1 nghe lại 12×), trả lời có cơ sở, giữ B1 đúng luật. Gợi ý *shadowing* (= nói, lệch quy tắc chỉ-input) | Như Sonnet + **tự tính tốc độ dẫn chuyện 180–197 wpm so với đọc 124** → lý giải sắc hơn; nhận lỗi thiết kế bài. Xưng "bạn" (lệch quy tắc mình–Tân) | Gần ngang; Opus sâu hơn một bậc |
+| B · Soạn bài đọc Ep. 4 (B1+, 3 câu check) | 236 từ, tự nhiên, đúng mức, 3 câu đúng; 1 dòng chú giải lủng củng (*Give it a week*) | 269 từ, tự nhiên hơn, cụm in đậm trong bài, chú giải chuẩn, có tiếng Việt chỗ khó | Cả hai dùng được; Opus nhỉnh hơn chút |
+| C · Lên lịch thứ Bảy (10 bài + lý do + lời nhắn) | Đủ luật, lý do bám dữ liệu; **1 lỗi đọc số liệu** (so 121 đọc lại với 124 bài mới → "chưa tiến bộ", thực ra +20%); không xét bài 13/11 còn dở | Đủ luật, **tự phát hiện bài 13/11 còn dở + xung đột Weekly Test với góp ý của Tân**, xử lý hợp lý | Opus rõ hơn ở phán đoán |
+| Thời gian | 29–37 s / việc | 33–77 s / việc | Sonnet nhanh ~1,5–2× |
+| Token | ~80k / việc | ~81–89k / việc | gần bằng |
+| Chi phí (giá API) | ~1/5 Opus | 1× | theo bảng giá hiện hành |
+
+**Kết luận:** Sonnet đủ tốt cho việc *viết nội dung theo khuôn* (truyện, câu hỏi, chú giải, chấm bài nhỏ chỉ có câu chọn). Opus vẫn cần cho việc *phán đoán thích ứng* (lên lịch ngày/tuần, quyết định nâng/hạ mức, trả lời góp ý của Tân, thư tuần) – nơi Sonnet hay sót bối cảnh/đọc sai số liệu.
