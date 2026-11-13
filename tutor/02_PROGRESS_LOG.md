@@ -5,9 +5,9 @@
 ## Trạng thái hiện tại
 - Mục tiêu: Tiếng Anh phổ thông B1 → C1 (Comprehensible Input). **Mốc gần: B2 vào khoảng giữa tháng 2/2027 (3 tháng).** IT là phụ cho tới C1.
 - Trọng tâm: INPUT – luyện tai là ưu tiên số 1 (nghe không lời trước, đối chiếu sau); đọc B1+ hằng ngày. Bài nhỏ, không quiz.
-- Tuần: 1 · Streak: 2 ngày · Đã chấm: 16/22 bài
+- Tuần: 1 · Streak: 2 ngày · Đã chấm: 17/22 bài
 - Mức hiểu mục tiêu: Nghe: truyện/hội thoại B1 tốc độ tự nhiên 1× (lần đầu ≥85%, sau 2–3 vòng ~100%). Đọc rộng: B1+ (~95–98%). Đọc kỹ: B2 có chú giải.
-- Cập nhật hồ sơ: 2026-11-13T22:45:00+07:00
+- Cập nhật hồ sơ: 2026-11-13T22:55:00+07:00
 
 ## Learner model (hồ sơ – nguồn quyết định bài kế tiếp)
 | Kỹ năng | CEFR ước lượng | Ghi chú |
@@ -93,7 +93,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 ## Kế hoạch theo tuần
 | Tuần | Ngày | Chủ đề | Trạng thái | Bài |
 |---|---|---|---|---|
-| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 16/22 đã chấm |
+| 1 | 2026-11-09 → 2026-11-15 | A New Start | current | 17/22 đã chấm |
 | 2 | 2026-11-16 → 2026-11-22 | Food & Eating Out | planned | 0/0 đã chấm |
 | 3 | 2026-11-23 → 2026-11-29 | Mind & Feelings | planned | 0/0 đã chấm |
 | 4 | 2026-11-30 → 2026-12-06 | Tech in Everyday Life | planned | 0/0 đã chấm |
@@ -119,7 +119,7 @@ Sau 2 ngày: **đọc đã thoải mái ở B1+** (đọc ~100 từ/phút, bài 
 | T1 · B108 | 2026-11-13 | Hope Street Ep. 3 (2/2): listen | graded | 100% | – | 2 | 8 | – | 100% (đã đọc trước) · dòng 1 (chủ ngữ dài) nghe lại 6× · 😌 · tai chưa êm → nghe lại nhiều lần |
 | T1 · B109 | 2026-11-13 | VOA: Sometimes we 'spread ourselves too thin' | graded | 90% | – | – | 10 | – | VOA 2/2 · 90% · 🙂 · Tân: giải thích nghĩa đen → nghĩa bóng + hình; bài dài thêm câu hỏi OK |
 | T1 · B110 | 2026-11-13 | Why is the first week at a new job so tiring? | graded | – | 97% | 1 | 20 | – | 3/3 · 95–100% · 😌 'Dễ thôi' · 1 lượt 3'56" ≈ 58 wpm (gồm xem bảng từ + trả lời) → bài B1+ đã dễ, sắp nâng nhẹ |
-| T1 · B111 | – | Listen: Nam and Claire's Friday chat | open | – | – | – | – | – |  |
+| T1 · B111 | 2026-11-13 | Listen: Nam and Claire's Friday chat | graded | 88% | – | 1 | 5 | – | 2/2 · nghe 85–90% (hội thoại mới) · 😌 · 10 lượt, mở lời sau 136s · nghe lại dòng 8/15/16/17 (buddy, I'll, get used to, take it easy) |
 | T1 · B112 | – | Sound focus: you'll · I've · it's · I'd | open | – | – | – | – | – |  |
 | T1 · B113 | 2026-11-13 | Nam's message home | graded | – | 100% | 1 | 7 | – | 3/3 · 100% · 😌 · đọc 2 lượt ≈ 95 wpm/lượt (log 1 lượt 39 wpm – bài ngắn không cuộn nên lượt 2 không ghi) · lơ đễnh ~45s → bài đã quá dễ |
 | T1 · B114 | 2026-11-13 | Listen: Nam's message home | graded | 90% | – | 1 | 5 | – | 2/2 · 90% · 😌 · 8 lượt, mở lời sau 135s, nghe lại dòng 7 (neighbours/Margaret) 2× · đã đọc trước nên 90% không phải điểm nghe lần đầu · Tân: nghe y bài đọc = dễ đoán → đổi cách soạn |

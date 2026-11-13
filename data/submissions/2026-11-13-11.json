@@ -1,0 +1,124 @@
+{
+  "answers": {
+    "l1": "Be his buddy for two weeks",
+    "l2": "Take a break and walk outside",
+    "u1": "85-90 (Đọc thêm script thì hiểu hết 100%)"
+  },
+  "feedback": {
+    "difficulty": null,
+    "extra": "",
+    "hardest": "",
+    "minutes": "",
+    "strain": "relaxed"
+  },
+  "lessonId": "2026-11-13-11",
+  "log": {
+    "listen": {
+      "0": {
+        "answeredBeforeReveal": "0/0",
+        "plays": 10,
+        "rates": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "revealAt": 136,
+        "segIdx": {
+          "7": 1,
+          "14": 1,
+          "15": 1,
+          "16": 1
+        },
+        "segs": 4
+      }
+    },
+    "parts": {
+      "0": {
+        "ms": 5000
+      },
+      "1": {
+        "ms": 185000
+      },
+      "fb": {
+        "ms": 40000
+      }
+    },
+    "q": {
+      "l1": {
+        "changes": [],
+        "edits": 1,
+        "first": 257,
+        "last": "Be his buddy for two weeks",
+        "ms": 10000
+      },
+      "l2": {
+        "changes": [],
+        "edits": 1,
+        "first": 268,
+        "last": "Take a break and walk outside",
+        "ms": 5000
+      },
+      "u1": {
+        "edits": 62,
+        "first": 270,
+        "ms": 30000
+      }
+    },
+    "sessions": [
+      {
+        "app": "browser",
+        "at": "2026-11-13T15:32:01.983Z",
+        "e": 5,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 0,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T15:32:08.576Z",
+        "e": 7,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 7,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T15:32:58.253Z",
+        "e": 177,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 56,
+        "vw": 430
+      },
+      {
+        "app": "browser",
+        "at": "2026-11-13T15:35:00.172Z",
+        "e": 302,
+        "kind": "phone",
+        "os": "iOS",
+        "s": 178,
+        "vw": 430
+      }
+    ],
+    "t0": 1794583921983,
+    "v": 1
+  },
+  "notify": {
+    "at": "2026-11-13T15:37:03.707Z",
+    "mcp": true,
+    "ok": true,
+    "pending": true,
+    "result": "{\"trigger\":{\"id\":\"trig_01LnYbESeN8FTXP7EM3qJD7w\",\"name\":\"English – Chấm bài nộp (phiên mới)\",\"cron_expression\":\"\",\"enabled\":true,\"created_at\":\"2026-11-13T09:31:15.752801Z\",\"updated_at\":\"2026-11-13T11:28:29.706411Z\",\"persist_session\":false,\"mcp_connections\":[{\"connector_uuid\":\"6ba9f48b-7288-4418-a670",
+    "via": "fire_trigger"
+  },
+  "submittedAt": "2026-11-13T15:37:03.707Z"
+}

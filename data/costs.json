@@ -1,6 +1,6 @@
 {
  "_note": "Sinh bởi tools/cost.py – chi phí AI tương đương giá API (USD), theo ngày giờ VN. FLUX/Telegram miễn phí.",
- "updated": "2026-11-13T22:34+07:00",
+ "updated": "2026-11-13T22:39+07:00",
  "vnd_per_usd": 26000,
  "rates_usd_per_mtok": {
   "opus": {
